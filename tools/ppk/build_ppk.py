@@ -31,11 +31,11 @@ PATH = '/materialy/programma-proizvodstvennogo-kontrolya-haccp/'
 URL = DOMAIN + PATH
 DATE = '2026-11-06'
 
-TITLE = 'Программа производственного контроля по ХАССП: дезинсекция и дератизация — ПЕСТКОНТРОЛЬ Центр'
-DESC = ('Что вписать о дезинсекции и дератизации в программу производственного контроля по ХАССП: '
-        'новые СанПиН с 1 сентября 2026 года, образец раздела, документы для проверки. '
-        'Подготовим раздел под ваш объект в Москве и МО.')
-OG_TITLE = 'Программа производственного контроля по ХАССП: раздел пест-контроля и образец'
+TITLE = 'Программа производственного контроля по ХАССП: образец PDF и Word — ПЕСТКОНТРОЛЬ Центр'
+DESC = ('Образец программы производственного контроля для пищевого производства: 27 страниц, ККТ, '
+        'лабораторный контроль, медосмотры, формы учёта — PDF и Word. Что вписать о дезинсекции и '
+        'дератизации по СанПиН 2026 года.')
+OG_TITLE = 'Образец программы производственного контроля по ХАССП и раздел пест-контроля'
 HEADLINE = 'Программа производственного контроля по ХАССП: раздел пест-контроля'
 OG_ALT = ('Инженер по качеству и специалист по пест-контролю сверяют раздел программы '
           'производственного контроля и схему точек контроля')
@@ -47,6 +47,12 @@ FAQ = [
      'СанПиН 2.3/2.4.4282-26. Для магазина производственный контроль обязателен по п. 3 СП 2.3.6.4281-26, '
      'а процедуры ХАССП ТР ТС 021/2011 требует от изготовителей пищевой продукции: если в магазине есть '
      'кулинария или пекарня, это уже производство.'),
+    ('Где взять образец программы производственного контроля для пищевого производства?',
+     'На этой странице — бесплатный образец ППК на 27 страниц для хлебопекарного и кондитерского производства: '
+     'PDF и шаблон Word. В нём все пункты раздела 3 СП 1.1.1058-01, лабораторный контроль сырья, продукции, '
+     'смывов и воды, 4 критические контрольные точки ХАССП, медосмотры и гигиеническая подготовка по должностям, '
+     'раздел о дезинсекции и дератизации, аварийные ситуации и 19 форм учёта. Реквизиты в образце условные: '
+     'программу адаптируют под свой объект, утверждает её руководитель.'),
     ('Нужно ли включать дезинсекцию и дератизацию в программу производственного контроля?',
      'Да. ТР ТС 021/2011 требует выбрать способы, установить периодичность и проводить дезинсекцию '
      'и дератизацию (ст. 10 ч. 3 п. 10), а также определить меры против проникновения грызунов, насекомых '
@@ -229,6 +235,13 @@ def ld_json():
          'author': {'@type': 'Organization', 'name': 'Методический отдел ПЕСТКОНТРОЛЬ Центр', 'url': DOMAIN + '/'},
          'publisher': org,
          'citation': [{'@type': 'Legislation', 'name': n, 'url': u} for n, u in CITATIONS]},
+        {'@type': 'DigitalDocument', 'name': 'Образец программы производственного контроля для пищевого производства (PDF, 27 страниц)',
+         'encodingFormat': 'application/pdf', 'url': URL + 'obrazets-programmy-proizvodstvennogo-kontrolya.pdf',
+         'inLanguage': 'ru-RU', 'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр'}},
+        {'@type': 'DigitalDocument', 'name': 'Шаблон программы производственного контроля в Word (DOCX)',
+         'encodingFormat': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+         'url': URL + 'shablon-programmy-proizvodstvennogo-kontrolya.docx',
+         'inLanguage': 'ru-RU', 'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр'}},
         {'@type': 'Service', 'name': 'Подготовка раздела «Дезинсекция и дератизация» для программы производственного контроля',
          'serviceType': 'Пест-контроль по ХАССП и программа производственного контроля',
          'provider': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': DOMAIN + '/', 'telephone': '+7-495-104-35-70'},
@@ -243,7 +256,8 @@ CHECK_SVG = ('<svg aria-hidden="true" focusable="false" class="lucide lucide-cir
              'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" '
              'stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>')
 
-PAGE_JS = r"""(function(){var f=document.getElementById('form');if(!f)return;f.addEventListener('submit',function(){var e=f.elements,s=e.service.value||'не выбрано',a=e.address.value.trim()||'не указан';e.msg.value='Задача: '+s+'\nАдрес объекта: '+a+'\nСтраница: Программа производственного контроля по ХАССП (/materialy/programma-proizvodstvennogo-kontrolya-haccp/)';});})();
+PAGE_JS = r"""document.addEventListener('click',function(e){var a=e.target.closest('[data-dl]');if(!a)return;try{if(window.ym)ym(113675622,'reachGoal','ppk_'+a.getAttribute('data-dl'))}catch(_){}});
+(function(){var f=document.getElementById('form');if(!f)return;f.addEventListener('submit',function(){var e=f.elements,s=e.service.value||'не выбрано',a=e.address.value.trim()||'не указан';e.msg.value='Задача: '+s+'\nАдрес объекта: '+a+'\nСтраница: Программа производственного контроля по ХАССП (/materialy/programma-proizvodstvennogo-kontrolya-haccp/)';});})();
 /* «Скопировать текст» образца раздела */
 document.addEventListener('click',function(ev){var b=ev.target.closest('[data-copy]');if(!b)return;var el=document.querySelector(b.getAttribute('data-copy'));if(!el)return;var t=[].map.call(el.querySelectorAll('h3,li'),function(n){return n.tagName==='LI'?n.children[0].textContent+' '+n.children[1].textContent:n.textContent}).join('\n\n').replace(/\u00a0/g,' ').trim(),l=b.querySelector('.btn-t'),o=l.textContent;function ok(){l.textContent='Текст скопирован';setTimeout(function(){l.textContent=o},2400)}function alt(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(x){}document.body.removeChild(a)}if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(ok,alt);else alt()});"""
 
@@ -267,6 +281,8 @@ def main():
     s = sub1(r'<meta property="og:image" content="[^"]*">', f'<meta property="og:image" content="{DOMAIN}/img/ppk-og.jpg">', s)
     s = sub1(r'<meta property="og:image:alt" content="[^"]*">', f'<meta property="og:image:alt" content="{H.escape(OG_ALT)}">', s)
     s = s.replace('programma-hero', 'ppk-hero')  # предзагрузка фото первого экрана (в каркасе — только в <head>)
+    # значок вкладки: пробелы в data-URI кодируем, чтобы адрес был валидным для валидатора W3C
+    s = re.sub(r'(<link rel="icon" href=")(data:[^"]*)(")', lambda m: m.group(1) + m.group(2).replace(' ', '%20') + m.group(3), s, count=1)
 
     # ---------- <main> ----------
     main_html = (SRC / 'main.html').read_text(encoding='utf-8')
@@ -278,6 +294,8 @@ def main():
                   r'<option>Обновить ППК под санитарные правила 2026 года</option><option>Подготовиться к проверке или аудиту ХАССП</option>'
                   r'<option>Проверить документы прежнего подрядчика</option>\2', form, flags=re.S)
     form = form.replace('<span class="btn-t">Получить программу</span>', '<span class="btn-t">Получить раздел для ППК</span>')
+    # autocomplete="street-address" допустим только для многострочного поля; для однострочного — address-line1
+    form = form.replace('autocomplete="street-address"', 'autocomplete="address-line1"')
     assert 'Заявка на раздел для ППК' in form and 'Получить раздел для ППК' in form and 'Обновить ППК' in form
 
     main_html = main_html.replace('<!--FAQ-->', faq_html())
@@ -292,6 +310,9 @@ def main():
 
     # кнопка в шапке
     s = s.replace('<span class="btn-t">Заказать программу</span>', '<span class="btn-t">Бесплатный выезд</span>', 1)
+    # кнопка мобильного меню — то же предложение, что в шапке (в каркасе — «Заказать разработку программы»)
+    s = s.replace('<a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Заказать разработку программы</span></a>\n</nav>',
+                  '<a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Бесплатный выезд</span></a>\n</nav>', 1)
 
     # ---------- скрипты страницы: защита предпросмотра остаётся, остальное — своё ----------
     m = re.search(r'(<script>\n\(function\(\)\{if\(/\^\(www\\\.\)\?xn----[^\n]*\n)(.*?)(</script>)', s, re.S)

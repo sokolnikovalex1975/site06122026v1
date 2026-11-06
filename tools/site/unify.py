@@ -141,7 +141,7 @@ CARD = {
     'sklady': ('Отрасль', 'Пест-контроль для складов и логистики',
                'Схема точек по зонам склада, визиты без остановки приёмки и отгрузки, журнал и отчёт для аудитов.'),
     'ppk': ('Материал', 'Программа производственного контроля по ХАССП',
-            'Что вписать о дезинсекции и дератизации в ППК, правила 2026 года и образец раздела.'),
+            'Полный образец ППК для пищевого производства (PDF и Word) и раздел о дезинсекции и дератизации по правилам 2026 года.'),
     'san': ('Услуга', 'Санитарный аудит (СЭС-аудит)',
             'Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.'),
 }
@@ -313,7 +313,7 @@ def strip_html(label, items):
         return f'<div class="strip-item">{ICONS[ico]}<b>{tp(b)}</b> {tp(rest)}</div>'
     row = '\n      '.join(one(it) for it in items)
     return (
-        f'\n<div class="strip" aria-label="{label}">\n'
+        f'\n<div class="strip" role="group" aria-label="{label}">\n'
         '  <div class="strip-track" id="stripTrack">\n'
         f'    <div class="strip-set">\n      {row}\n    </div>\n'
         f'    <div class="strip-set" aria-hidden="true">\n      {row}\n    </div>\n'
@@ -494,13 +494,13 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
             {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': SITE},
             {'@type': 'ListItem', 'position': 2, 'name': 'Материалы', 'item': SITE + 'materialy/'}]},
         {'@type': 'CollectionPage', 'name': 'Материалы о пест-контроле для предприятий', 'url': SITE + 'materialy/', 'inLanguage': 'ru-RU',
-         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка, раздел пест-контроля в программе производственного контроля по ХАССП.',
+         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка, образец программы производственного контроля по ХАССП (PDF и Word) и её раздел пест-контроля.',
          'isPartOf': {'@type': 'WebSite', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE},
          'mainEntity': {'@type': 'ItemList', 'itemListElement': [
              {'@type': 'ListItem', 'position': 1, 'url': SITE + 'materialy/programma-pest-kontrolya/', 'name': 'Программа пест-контроля на предприятии: образец PDF, шаблон Word и пример заполнения'},
              {'@type': 'ListItem', 'position': 2, 'url': SITE + 'materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'name': 'Пест-менеджмент или разовая обработка'},
              {'@type': 'ListItem', 'position': 3, 'url': SITE + 'materialy/zhurnal-pest-kontrolya/', 'name': 'Журнал пест-контроля: образец заполнения, бланк и шаблон'},
-             {'@type': 'ListItem', 'position': 4, 'url': SITE + 'materialy/programma-proizvodstvennogo-kontrolya-haccp/', 'name': 'Программа производственного контроля по ХАССП: раздел пест-контроля'}]},
+             {'@type': 'ListItem', 'position': 4, 'url': SITE + 'materialy/programma-proizvodstvennogo-kontrolya-haccp/', 'name': 'Программа производственного контроля по ХАССП: образец и раздел пест-контроля'}]},
          'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE, 'telephone': '+7-495-104-35-70', 'email': 'b2b@pestcontrol-center.ru'}},
     ]}, ensure_ascii=False) + '</script>'
 

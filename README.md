@@ -10,21 +10,14 @@
 «Магазины и торговые сети» (13:11 МСК), «Очистка и дезинфекция вентиляции» (13:17 МСК), «Пест-контроль для складов и логистики»
 (13:59 МСК, вместе с исправлением п. 111 на дератизации) «Санитарный аудит (СЭС-аудит)» (14:14 МСК), «Рестораны и кафе» (14:25 МСК, `tools/deploy/MANIFEST-2026-11-06-rest.sha256`) и ссылка на рестораны со страницы
 санитарного аудита (14:30 МСК, `tools/deploy/MANIFEST-2026-11-06-san2.sha256`), «Гостиницы и отели» (14:35 МСК,
-`tools/deploy/MANIFEST-2026-11-06-gost.sha256`), исправление страницы дезинсекции (14:49 МСК, `tools/deploy/MANIFEST-2026-11-06-dez.sha256`)
-и портрет автора со ссылкой на гостиницы на странице санитарного аудита (14:51 МСК, `tools/deploy/MANIFEST-2026-11-06-san3.sha256`).
+`tools/deploy/MANIFEST-2026-11-06-gost.sha256`), исправление страницы дезинсекции (14:49 МСК, `tools/deploy/MANIFEST-2026-11-06-dez.sha256`),
+портрет автора со ссылкой на гостиницы на странице санитарного аудита (14:51 МСК, `tools/deploy/MANIFEST-2026-11-06-san3.sha256`)
+и «Программа производственного контроля по ХАССП» с полным образцом ППК (14:52 МСК, `tools/deploy/MANIFEST-2026-11-06-ppk.sha256`).
 Перед выкладкой сверяйте суммы заменяемых файлов с сайтом по HTTPS.
 Что выложено, копия прежних файлов и откат — в `CHANGES.md`.
 
 Превью на GitHub Pages — для проверки правок: все страницы закрыты от индексации (`noindex, nofollow`), формы на превью заявки
 не отправляют, счётчиков нет.
-
-**Только в превью (на Timeweb не выложено) на 06.11.2026, 14:35 МСК:**
-`/materialy/programma-proizvodstvennogo-kontrolya-haccp/` и ссылки на неё. При выкладке из `main` они попадут на сайт
-вместе с меню — выкладывать только после отдельного решения по каждой странице.
-
-**Только в превью (на Timeweb не выложено):** страница «Программа производственного контроля по ХАССП»
-`/materialy/programma-proizvodstvennogo-kontrolya-haccp/` (06.11.2026), пункт «Материалы» в меню и подвале,
-карточка «Материал 04» в разделе «Материалы» и ссылка со страницы «Программа пест-контроля».
 
 ## Страницы
 
@@ -45,7 +38,7 @@
 | `/materialy/programma-pest-kontrolya/` | Программа пест-контроля: образец PDF, шаблон Word |
 | `/materialy/zhurnal-pest-kontrolya/` | Журнал пест-контроля: образец заполнения и шаблон (PDF) |
 | `/materialy/pest-menedzhment-ili-razovaya-obrabotka/` | Пест-менеджмент или разовая обработка |
-| `/materialy/programma-proizvodstvennogo-kontrolya-haccp/` | Программа производственного контроля по ХАССП: раздел пест-контроля (только в превью) |
+| `/materialy/programma-proizvodstvennogo-kontrolya-haccp/` | Программа производственного контроля по ХАССП: образец ППК (PDF, Word) и раздел пест-контроля (на сайте с 06.11.2026) |
 | `/privacy/` | Политика конфиденциальности |
 | `/soglasie/` | Согласие на обработку персональных данных |
 
@@ -115,7 +108,7 @@ python3 tools/site/build_site.py
 Нужны Python 3 и Node.js (`npx esbuild`).
 
 Исходники для правок: `style.css`, `app.js`, HTML страниц. Генераторы отдельных страниц (`tools/food/`, `tools/dezinsektsiya/`, `tools/farma/`,
-`tools/magaziny-i-torgovye-seti/`, `tools/zhurnal/`, `tools/build_programma.py`) — после них снова запустите `tools/site/build_site.py`.
+`tools/magaziny-i-torgovye-seti/`, `tools/zhurnal/`, `tools/build_programma.py`, `tools/ppk/build_ppk.py`) — после них снова запустите `tools/site/build_site.py`.
 Страницы гостиниц, санитарного аудита и складов (`tools/sklady/assemble.py`) `build_site.py` собирает сам.
 
 Страница «Пест-контроль для складов и логистики»: текст и разметка — `tools/sklady/main.html`, свои стили — `extra.css`, скрипт
@@ -174,6 +167,24 @@ python3 tools/site/build_prod.py      # → dist/timeweb/ (в репозитор
 | `tools/qa/` | Проверки (сдвиги вёрстки, ожидание подмены номера, Radist) |
 | `tools/deploy/` | Выкладка по FTP с резервной копией и откатом (`run_all.sh`, запуск на Mac), конфиги выкладок 06.11.2026 (сайт целиком и фармацевтическая страница) и `MANIFEST-…sha256`; копии прежних файлов — `backup/` |
 | `CHANGES.md` | История правок |
+
+## Страница «Программа производственного контроля по ХАССП» (`/materialy/programma-proizvodstvennogo-kontrolya-haccp/`)
+
+Добавлена 06.11.2026, на пестконтроль-центр.рф выложена в 14:52 МСК вместе с полным образцом ППК (см. `CHANGES.md`).
+
+- Страница: `tools/ppk/main.html` (текст и блоки), `tools/ppk/page.css` (стили собственных блоков `k-*`), `tools/ppk/build_ppk.py`
+  (каркас — страница «Программа пест-контроля»; заголовки, вопросы → HTML и FAQPage, TechArticle, два DigitalDocument — PDF и DOCX,
+  Service, BreadcrumbList; цели Метрики `ppk_obrazets` и `ppk_shablon` по клику на ссылки с `data-dl`).
+  Сборка: `python3 tools/ppk/build_ppk.py && python3 tools/site/build_site.py && python3 tools/site/build_prod.py`.
+- Образец ППК (вымышленный хлебозавод ООО «Северный каравай» с кремовым цехом, 4 ККТ, 19 форм учёта, план-схема точек):
+  `tools/ppk/sample/` — `content.py` (весь текст; `**жирный**`, `⟦значение⟧` — данные для замены: синие в PDF, жёлтые в Word),
+  `render_html.py` (вёрстка страниц, план-схема и блок-схема в SVG), `render_pdf.mjs` (Chromium → PDF), `build_docx.py` (Word),
+  `build_sample.py` (два прохода для номеров страниц в содержании, метаданные, превью `img/ppk-sample-p{1,11,20}-{240,360,720}.webp`).
+  Сборка: `python3 tools/ppk/sample/build_sample.py` → `materialy/programma-proizvodstvennogo-kontrolya-haccp/obrazets-programmy-proizvodstvennogo-kontrolya.pdf`
+  (27 страниц) и `shablon-programmy-proizvodstvennogo-kontrolya.docx`. Нужны шрифт Inter 4.1 (TTF в `~/.fonts`,
+  https://github.com/rsms/inter/releases/tag/v4.1), Node + playwright (Chromium), PyMuPDF, python-docx, Pillow.
+  Скрипт предупредит, если таблица ККТ уйдёт со страницы 11 или план-схема — со страницы 20: тогда поправьте ссылки `#page=`,
+  превью и диапазоны страниц в блоке «Что внутри образца ППК» в `tools/ppk/main.html`.
 
 ## Страница «Гостиницы» (`/gostinitsy/`)
 

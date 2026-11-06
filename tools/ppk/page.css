@@ -12,6 +12,11 @@
 .k-ref{display:block;font-size:13px;line-height:1.5;color:var(--t3)}
 .k-facts .k-ref{padding-top:5px}
 
+/* Полный образец ППК (компонент .p-obr из «Программы пест-контроля») */
+.k-obr .p-obr-list li{grid-template-columns:78px minmax(0,1fr)}
+.k-obr .p-obr-list li b{white-space:nowrap}
+@media (max-width:600px){.k-obr .p-obr-list li{grid-template-columns:72px minmax(0,1fr);gap:8px;font-size:13.5px}.k-obr .p-obr-list li b{font-size:11px}}
+
 /* Нормы 2026 */
 .k-norms td:nth-child(2) s{color:var(--t3);text-decoration-color:rgba(255,100,103,.55)}
 .k-norms td:nth-child(3){color:var(--t1);font-weight:500}
