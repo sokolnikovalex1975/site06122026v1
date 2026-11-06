@@ -1,0 +1,83 @@
+/* ===== Очистка и дезинфекция вентиляции: блоки страницы ===== */
+.v-hero h1{font-size:clamp(40px,3.75vw,74px)}
+.v-nums{margin-bottom:28px}
+.v-nums .f-num{display:block}
+.v-freq td:nth-child(3){white-space:normal;min-width:150px}
+.v-freq td:nth-child(4){font-size:14.5px;color:var(--t3)}
+.v-parts .dz-lbl{color:var(--t3);letter-spacing:.12em}
+.v-swap-r{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);grid-template-areas:"img head" "img ticks"}
+.v-card-acc{border-color:rgba(124,134,255,.35)}
+.d-cols2 .d-ticks{margin:14px 0 0;gap:10px;color:var(--t2);line-height:1.55}
+
+/* схема воздуховода: до работ → после очистки → после дезинфекции */
+.v-duct{margin:clamp(28px,3vw,44px) 0 0;background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(18px,2vw,30px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);grid-template-areas:"top top" "art cap" "art leg";column-gap:clamp(22px,3vw,48px);row-gap:18px;align-items:start}
+.v-duct-top{grid-area:top;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px}
+.v-duct-k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}
+.v-seg{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.02)}
+.v-seg button{appearance:none;border:0;background:transparent;color:var(--t2);font:inherit;font-size:14px;line-height:1.2;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}
+.v-seg button:hover{color:var(--t1)}
+.v-seg button[aria-pressed="true"]{background:#fff;color:#09090b}
+.v-seg button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.v-duct-art{grid-area:art;border-radius:calc(var(--r) - 4px);overflow:hidden;background:#0b0d12;border:1px solid var(--line2);aspect-ratio:720/400}
+.v-duct-art svg{display:block;width:100%;height:100%}
+.v-duct figcaption{grid-area:cap;color:var(--t2);line-height:1.6;min-height:7.5em;align-self:end}
+.v-duct figcaption [data-cap]{display:block}
+.v-duct figcaption [data-cap][hidden]{display:none}
+.v-legend{grid-area:leg;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;font-size:14px;color:var(--t3)}
+.v-legend li{display:flex;align-items:center;gap:10px}
+.v-legend i{width:12px;height:12px;border-radius:50%;flex:0 0 auto}
+.v-duct .v-dust,.v-duct .v-grease,.v-duct .v-germs,.v-duct .v-ok,.v-duct .v-shine{transition:opacity .7s ease}
+.v-duct .v-ok,.v-duct .v-shine{opacity:0}
+.v-duct[data-state="clean"] .v-dust,.v-duct[data-state="clean"] .v-grease,.v-duct[data-state="dez"] .v-dust,.v-duct[data-state="dez"] .v-grease,.v-duct[data-state="dez"] .v-germs{opacity:0}
+.v-duct[data-state="clean"] .v-shine{opacity:.6}
+.v-duct[data-state="dez"] .v-shine,.v-duct[data-state="dez"] .v-ok{opacity:1}
+
+/* пример записи в журнале — как лист документа */
+.v-jr{margin:0;background:#f5f5f2;color:#1c1d22;border-radius:var(--r);padding:clamp(18px,1.6vw,26px);box-shadow:0 30px 80px -30px rgba(0,0,0,.7);font-size:13.5px;line-height:1.45}
+.v-jr-h{border-bottom:1px solid #d6d6cf;padding-bottom:12px;margin-bottom:6px}
+.v-jr-h b{display:block;font-weight:600;font-size:14px;line-height:1.35;color:#111}
+.v-jr-h span{display:block;margin-top:6px;font-size:12px;color:#5d5f68}
+.v-jr-rows{margin:0}
+.v-jr-rows div{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:10px;padding:8px 0;border-bottom:1px dashed #d6d6cf}
+.v-jr-rows dt{color:#5d5f68}
+.v-jr-rows dd{margin:0;color:#111;font-weight:500}
+.v-jr figcaption{margin-top:10px;font-size:12px;color:#6b6d75}
+#dokumenty .d-split{grid-template-columns:minmax(0,1fr) minmax(0,440px)}
+
+/* типы объектов */
+.v-inds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.v-ind{padding:clamp(20px,1.8vw,28px);display:flex;flex-direction:column;gap:10px}
+.v-ind svg{width:26px;height:26px;color:var(--acc)}
+.v-ind h3{font-size:clamp(17px,1.15vw,20px);font-weight:500;letter-spacing:-.01em;margin:6px 0 0;line-height:1.3}
+.v-ind p{margin:0;color:var(--t2);line-height:1.55;font-size:15px}
+.v-ind a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}
+.v-pest{margin-top:16px;border-color:rgba(124,134,255,.35)}
+.v-pest a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}
+.v-pest a:hover,.v-ind a:hover{color:var(--acc)}
+
+.v-steps{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}
+
+@media (max-width:1180px){
+.v-inds{grid-template-columns:repeat(2,minmax(0,1fr))}
+.v-duct{grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "art" "cap" "leg"}
+.v-duct figcaption{min-height:0}
+.v-legend{grid-template-columns:repeat(4,max-content)}
+#dokumenty .d-split{grid-template-columns:minmax(0,1fr) minmax(0,380px)}
+}
+@media (max-width:860px){
+.v-hero h1{font-size:clamp(28px,8vw,40px)}
+.v-swap-r{grid-template-areas:"head" "img" "ticks";grid-template-columns:minmax(0,1fr)}
+.v-steps{grid-template-columns:minmax(0,1fr)}
+#dokumenty .d-split{grid-template-columns:minmax(0,1fr)}
+.v-freq td:nth-child(3){min-width:0}
+.v-legend{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+.v-inds{grid-template-columns:minmax(0,1fr)}
+.v-seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;border-radius:14px}
+.v-seg button{padding:9px 6px;font-size:13px;border-radius:10px}
+.v-jr-rows div{grid-template-columns:minmax(0,1fr);gap:2px}
+}
+@media (prefers-reduced-motion:reduce){
+.v-duct .v-dust,.v-duct .v-grease,.v-duct .v-germs,.v-duct .v-ok,.v-duct .v-shine{transition:none}
+}

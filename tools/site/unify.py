@@ -106,6 +106,7 @@ URL = {
     'seti': 'magaziny-i-torgovye-seti/',
     'mat': 'materialy/', 'prog': 'materialy/programma-pest-kontrolya/',
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
+    'vent': 'ochistka-dezinfektsiya-ventilyatsii/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -125,6 +126,8 @@ CARD = {
              'Образец заполнения и шаблон в PDF: 9 разделов на 10 листах — точки контроля, ловушки, предписания.'),
     'pm': ('Материал', 'Пест-менеджмент или разовая обработка',
            'Чем системный контроль по IPM отличается от обработок по вызову и когда хватит одного выезда.'),
+    'vent': ('Услуга', 'Очистка и дезинфекция вентиляции',
+             'Воздуховоды, кухонные вытяжки и кондиционеры: видео до и после, акт по п. 43 ППР, журнал по МР 3.5.0396-25.'),
 }
 
 STRIP_LABELS = {}
@@ -140,6 +143,17 @@ PAGES = {
             ('lucide-notebook-pen', 'Журнал и акт', 'после каждого визита'),
             ('lucide-file-badge', 'СанПиН 3.3686-21', 'и ХАССП'),
             ('lucide-clock', 'Ночной выезд', 'без наценки'),
+        ])),
+    'ochistka-dezinfektsiya-ventilyatsii/index.html': dict(key='vent', root='../', related=['dezins', 'food', 'dogovor', 'derat'], strip=(
+        'Коротко об очистке и дезинфекции вентиляции', [
+            ('lucide-scan-search', 'Видео до и после', 'по каждому участку'),
+            ('lucide-file-badge', 'Акт по п. 43 ППР', 'для пожарной проверки'),
+            ('lucide-notebook-pen', 'Журнал', 'по МР 3.5.0396-25'),
+            ('lucide-spray-can', 'Дезсредства с СГР', 'и режимом для вентиляции'),
+            ('lucide-utensils', 'Кухонные вытяжки', 'зонты, фильтры, короба'),
+            ('lucide-flask-conical', 'Смывы', 'на легионеллы и микрофлору'),
+            ('lucide-clock', 'Ночью и в выходные', 'без остановки смены'),
+            ('lucide-shield-check', 'Лицензия', 'Роспотребнадзора'),
         ])),
     'dogovor-deratizatsiya-dezinsektsiya/index.html': dict(key='dogovor', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
         'Коротко о договоре', [
@@ -429,6 +443,10 @@ def page_specific(rel, s):
         s = s.replace('<a href="../">Главная</a><span aria-hidden="true">→</span><a href="./">Услуги</a><span aria-hidden="true">→</span>',
                       '<a href="../">Главная</a><span aria-hidden="true">→</span>')
     if rel == 'dezinsektsiya/index.html':
+        # перелинковка: дезинфекция вентиляции — отдельная страница услуги
+        if 'href="../ochistka-dezinfektsiya-ventilyatsii/" style' not in s:
+            s = s.replace('поверхностях пищеблоков, в системах вентиляции, холодильных',
+                          'поверхностях пищеблоков, <a href="../ochistka-dezinfektsiya-ventilyatsii/" style="color:inherit;border-bottom:1px solid var(--line2)">в системах вентиляции</a>, холодильных')
         # номер МР уточнён на странице журнала: «МР 3.5.2.0373-25» не существует (0373-25 — МР 1.2 о косметике);
         # для дезинсекции основа — СанПиН 3.3686-21
         s = s.replace('Определение и нормативы · СанПиН 3.3686-21 и МР 3.5.2.0373-25', 'Определение и нормативы · СанПиН 3.3686-21')
