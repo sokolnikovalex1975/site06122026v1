@@ -2,6 +2,7 @@
 """Общее меню сайта site06122026v1 (06.11.2026): шапка, мобильное меню и подвал на всех страницах.
 
     Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
+    (в «Услугах» с 06.11.2026 — очистка и дезинфекция вентиляции)
 
 В меню — только готовые страницы сайта. Отрасли без своей страницы ведут к карточке отрасли на главной
 (якоря #otrasl-…), у пищевых и фармацевтических производств, магазинов и торговых сетей — свои страницы. «Контакты» — только в подвале.
@@ -23,6 +24,7 @@ from typo import typo  # неразрывный пробел после коро
 USLUGI = [
     ('deratizatsiya', 'Дератизация для организаций'),
     ('dezinsektsiya', 'Дезинсекция для организаций'),
+    ('ochistka-dezinfektsiya-ventilyatsii', 'Очистка и дезинфекция вентиляции'),
     ('dogovor-deratizatsiya-dezinsektsiya', 'Договор на обслуживание'),
 ]
 # Отрасли — в порядке блока «Отрасли» на главной. Адрес со знаком # — карточка отрасли на главной (своей страницы пока нет)
@@ -36,6 +38,7 @@ INDUSTRIES = [
 ]
 DOGOVOR = 'dogovor-deratizatsiya-dezinsektsiya'
 DERAT = 'deratizatsiya'
+VENT = 'ochistka-dezinfektsiya-ventilyatsii'
 MATERIALS = [  # слова через дефис не переносим (класс nw, как в остальных текстах сайта)
     ('materialy/programma-pest-kontrolya', 'Программа <span class="nw">пест-контроля</span>'),
     ('materialy/zhurnal-pest-kontrolya', 'Журнал <span class="nw">пест-контроля</span>'),
@@ -54,6 +57,7 @@ PAGES = [
     ('index.html', '', ''),
     (DERAT + '/index.html', '../', DERAT),
     ('dezinsektsiya/index.html', '../', 'dezinsektsiya'),
+    (VENT + '/index.html', '../', VENT),
     (DOGOVOR + '/index.html', '../', DOGOVOR),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
     ('magaziny-i-torgovye-seti/index.html', '../', 'magaziny-i-torgovye-seti'),
@@ -99,7 +103,7 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur in (DERAT, 'dezinsektsiya')
+    in_usl = cur in (DERAT, 'dezinsektsiya', VENT)
     in_ind = any(s == cur for s, _ in INDUSTRIES)
     in_mat = cur.startswith('materialy')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
