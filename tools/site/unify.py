@@ -105,6 +105,7 @@ URL = {
     'dogovor': 'dogovor-deratizatsiya-dezinsektsiya/', 'food': 'pishchevoe-proizvodstvo/',
     'mat': 'materialy/', 'prog': 'materialy/programma-pest-kontrolya/',
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
+    'farma': 'farmatsevticheskie-proizvodstva/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -122,6 +123,8 @@ CARD = {
              'Образец заполнения и шаблон в PDF: 9 разделов на 10 листах — точки контроля, ловушки, предписания.'),
     'pm': ('Материал', 'Пест-менеджмент или разовая обработка',
            'Чем системный контроль по IPM отличается от обработок по вызову и когда хватит одного выезда.'),
+    'farma': ('Отрасль', 'Пест-контроль фармацевтического производства',
+              'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
 }
 
 STRIP_LABELS = {}
@@ -159,6 +162,17 @@ PAGES = {
             ('lucide-notebook-pen', 'Журнал и акты', 'для Роспотребнадзора'),
             ('lucide-file-badge', 'ХАССП', 'аудиты сертификации и сетей'),
             ('lucide-clock', 'Срочные выезды', '24/7'),
+        ])),
+    'farmatsevticheskie-proizvodstva/index.html': dict(key='farma', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
+        'Коротко о пест-контроле на фармпроизводстве', [
+            ('lucide-crosshair', 'IPM', 'по Правилам GMP ЕАЭС'),
+            ('lucide-scan-search', 'Бесплатное обследование', 'площадки'),
+            ('lucide-ban', 'Без яда', 'внутри здания'),
+            ('lucide-shield-check', 'Шесть контуров', 'от периметра до чистых зон'),
+            ('lucide-chart-line', 'Тренды', 'и уровни действия'),
+            ('lucide-notebook-pen', 'Отчёты', 'для инспекции и аудита'),
+            ('lucide-pill', 'ТЛФ, стерильные, АФС', 'и фитопрепараты'),
+            ('lucide-clock', 'Выезд за 3 часа', 'по сигналу'),
         ])),
     'materialy/index.html': dict(key='mat', root='../', related=['derat', 'dezins', 'dogovor', 'food'], strip=(
         'Документы и практика IPM', [
@@ -537,6 +551,12 @@ def process_home():
         b = s.find('</article>', a)
         assert a > 0 and s[b - 6:b] == '</div>', 'карточка пищевых производств'
         s = s[:b - 6] + f'<a class="ind-more" href="pishchevoe-proizvodstvo/">Подробнее об обслуживании производств{ARR}</a>' + s[b - 6:]
+    # карточка фармацевтических производств ведёт на отраслевую страницу
+    if 'class="ind-more" href="farmatsevticheskie-proizvodstva/"' not in s:
+        a = s.find('id="otrasl-farma"')
+        b = s.find('</article>', a)
+        assert a > 0 and s[b - 6:b] == '</div>', 'карточка фармацевтических производств'
+        s = s[:b - 6] + f'<a class="ind-more" href="farmatsevticheskie-proizvodstva/">Подробнее о <span class="nw">пест-контроле</span> по GMP{ARR}</a>' + s[b - 6:]
     # ссылки «Подробнее» в блоках главной
     adds = [
         ('podhod', more_html('Подробнее', [('materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'Пест-менеджмент или разовая обработка')])),
