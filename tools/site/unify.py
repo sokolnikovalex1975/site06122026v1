@@ -108,6 +108,7 @@ URL = {
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
     'vent': 'ochistka-dezinfektsiya-ventilyatsii/',
     'farma': 'farmatsevticheskie-proizvodstva/',
+    'ppk': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -133,6 +134,8 @@ CARD = {
              'Воздуховоды, кухонные вытяжки и кондиционеры: видео до и после, акт по п. 43 ППР, журнал по МР 3.5.0396-25.'),
     'farma': ('Отрасль', 'Пест-контроль фармацевтического производства',
               'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
+    'ppk': ('Материал', 'Программа производственного контроля по ХАССП',
+            'Что вписать о дезинсекции и дератизации в ППК, правила 2026 года и образец раздела.'),
 }
 
 STRIP_LABELS = {}
@@ -258,6 +261,17 @@ PAGES = {
             ('lucide-shield-check', 'Предписания', 'и сигнальный лист персонала'),
             ('lucide-file-badge', 'СанПиН 3.3686-21', 'и ХАССП'),
             ('lucide-crosshair', 'ISO 22000', 'и FSSC 22000'),
+        ])),
+    'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html': dict(key='ppk', root='../../', related=['prog', 'zhur', 'food', 'dogovor'], strip=(
+        'Коротко о программе производственного контроля', [
+            ('lucide-file-signature', 'ППК', '— в произвольной форме, утверждает руководитель'),
+            ('lucide-shield-check', 'Дезинсекция и дератизация', '— процедура ХАССП'),
+            ('lucide-file-badge', 'ТР ТС 021/2011', 'ст. 10 и 11'),
+            ('lucide-scan-search', 'Насекомые', '— обследования не реже 2 раз в месяц'),
+            ('lucide-activity', 'Грызуны', '— ежемесячная оценка'),
+            ('lucide-clipboard-check', 'С 1 сентября 2026', '— новые санитарные правила'),
+            ('lucide-notebook-pen', 'Образец раздела', 'для ППК'),
+            ('lucide-list-checks', 'Подтверждение', '— договор и акты'),
         ])),
 }
 
@@ -449,12 +463,13 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
             {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': SITE},
             {'@type': 'ListItem', 'position': 2, 'name': 'Материалы', 'item': SITE + 'materialy/'}]},
         {'@type': 'CollectionPage', 'name': 'Материалы о пест-контроле для предприятий', 'url': SITE + 'materialy/', 'inLanguage': 'ru-RU',
-         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка.',
+         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка, раздел пест-контроля в программе производственного контроля по ХАССП.',
          'isPartOf': {'@type': 'WebSite', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE},
          'mainEntity': {'@type': 'ItemList', 'itemListElement': [
              {'@type': 'ListItem', 'position': 1, 'url': SITE + 'materialy/programma-pest-kontrolya/', 'name': 'Программа пест-контроля на предприятии: образец PDF, шаблон Word и пример заполнения'},
              {'@type': 'ListItem', 'position': 2, 'url': SITE + 'materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'name': 'Пест-менеджмент или разовая обработка'},
-             {'@type': 'ListItem', 'position': 3, 'url': SITE + 'materialy/zhurnal-pest-kontrolya/', 'name': 'Журнал пест-контроля: образец заполнения, бланк и шаблон'}]},
+             {'@type': 'ListItem', 'position': 3, 'url': SITE + 'materialy/zhurnal-pest-kontrolya/', 'name': 'Журнал пест-контроля: образец заполнения, бланк и шаблон'},
+             {'@type': 'ListItem', 'position': 4, 'url': SITE + 'materialy/programma-proizvodstvennogo-kontrolya-haccp/', 'name': 'Программа производственного контроля по ХАССП: раздел пест-контроля'}]},
          'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE, 'telephone': '+7-495-104-35-70', 'email': 'b2b@pestcontrol-center.ru'}},
     ]}, ensure_ascii=False) + '</script>'
 

@@ -28,6 +28,7 @@ SITEMAP = [  # адрес, приоритет
     ('pishchevoe-proizvodstvo/', '0.8'), ('magaziny-i-torgovye-seti/', '0.8'), ('gostinitsy/', '0.8'), ('farmatsevticheskie-proizvodstva/', '0.8'),
     ('materialy/', '0.6'), ('materialy/programma-pest-kontrolya/', '0.7'),
     ('materialy/zhurnal-pest-kontrolya/', '0.7'), ('materialy/pest-menedzhment-ili-razovaya-obrabotka/', '0.7'),
+    ('materialy/programma-proizvodstvennogo-kontrolya-haccp/', '0.7'),
 ]
 
 
