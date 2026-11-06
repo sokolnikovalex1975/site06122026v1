@@ -53,6 +53,10 @@ python3 tools/site/build_prod.py     # версия для Timeweb со счёт
 меню (`tools/menu/apply_menu.py`: «Нормативная база» — первый пункт «Материалов» в шапке и мобильном меню; в подвале ещё
 «Проверочные листы 2026»), крошки на телефоне скрыты (`mobile_crumbs.py`), `sitemap.xml` (20 адресов).
 
+Ссылки на раздел с других страниц: карточки 05 и 06 на `/materialy/`, блок «Нормативная база» на `/sanitarnyy-audit/`,
+строка «Что спросит инспектор о вредителях» в `tools/restorany/main.html`, `tools/magaziny-i-torgovye-seti/main.html`
+(после правки — `assemble.py` этих страниц) и `tools/gostinitsy/main.html`.
+
 ## Разметка для поиска и ИИ-ответов
 
 - Хаб: `Organization`, `BreadcrumbList`, `WebPage` с `ItemList` из 16 документов (`Legislation`: номер, дата, действует или нет, срок, ссылка), `FAQPage` (9 вопросов).
