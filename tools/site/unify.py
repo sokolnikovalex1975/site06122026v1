@@ -69,6 +69,13 @@ SCRIPTS_RE = re.compile(
     r'<script src="\1vendor/ScrollTrigger\.min\.js" defer></script>\n'
     r'<script src="\1vendor/lenis\.min\.js" defer></script>\n'
     r'<script src="\1app\.min\.js\?v=[^"]*" defer></script>')
+FOOD_FORM_JS = (
+    "<script>/* Форма: вид производства, ближайшая проверка, комментарий и страница — в поле msg, которое читает send.php */\n"
+    "document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,"
+    "p=e.production.value||'не выбран',i=e.inspection.value||'не выбрана',c=e.comment.value.trim();"
+    "e.msg.value='Вид производства: '+p+'\\nБлижайшая проверка: '+i+(c?'\\nКомментарий: '+c:'')"
+    "+'\\nСтраница: Пест-контроль на пищевом производстве (/pishchevoe-proizvodstvo/)';},true);</script>"
+)
 HEAD_SCRIPT_RE = re.compile(
     r"<script>\s*(?:/\*[^*]*\*/\s*)?(?:document\.documentElement\.className\+=' js anim-fail no-intro';"
     r"|document\.documentElement\.classList\.add\('js'\);.*?4000\);"
@@ -423,10 +430,22 @@ def page_specific(rel, s):
         s = re.sub(r' · Опубликован в[\s\xa0]превью</span>', '</span>', s)
         s = re.sub(r'Материал 04 · В[\s\xa0]плане</span>', 'Материал 04 · Готовится</span>', s)
         s = re.sub(r'образец таблицы мероприятий по([\s\xa0])5([\s\xa0])зонам', r'образец таблицы мероприятий по\g<1>6\g<2>зонам', s)
+        # заявка с раздела подписывалась как со страницы программы (раздел собран из её шаблона)
+        s = s.replace("\\nСтраница: Программа пест-контроля (/materialy/programma-pest-kontrolya/)'",
+                      "\\nСтраница: Материалы о пест-контроле (/materialy/)'")
         # карточки материалов — H3 сразу после H1; невидимый H2 восстанавливает порядок заголовков (доступность, Lighthouse)
         if '<h2 class="sr-only">' not in s:
             s, n = re.subn(r'\n(    <div class="p-secs" style="margin-top:36px")', '\n    <h2 class="sr-only">Материалы и образцы документов</h2>\n\\1', s, count=1)
             assert n == 1, 'materialy: нет списка материалов'
+    if rel == 'pishchevoe-proizvodstvo/index.html' and 'name="comment"' not in s:
+        # send.php читает только name, company, phone, email, type и msg: вид производства и ближайшая проверка
+        # терялись. Комментарий посетителя — отдельное поле, в msg перед отправкой собирается всё вместе
+        s, n = re.subn(r'<textarea id="f-msg" name="msg"', '<textarea id="f-msg" name="comment"', s, count=1)
+        assert n == 1, 'food: нет поля комментария'
+        s, n = re.subn(r'(<input type="hidden" name="page" value="[^"]*">)', r'\1\n<input type="hidden" name="msg" value="">', s, count=1)
+        assert n == 1, 'food: нет поля page'
+        s, n = re.subn(r'\n</body>', lambda m: '\n' + FOOD_FORM_JS + '\n</body>', s, count=1)
+        assert n == 1
     if rel == 'materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html':
         if 'class="cta-bg' not in s:
             s = s.replace('<section class="cta" id="zayavka">\n', '<section class="cta" id="zayavka"><div class="cta-bg f-lazy" aria-hidden="true"></div>\n', 1)

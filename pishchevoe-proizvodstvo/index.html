@@ -401,10 +401,11 @@
 <div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>
 <div class="field full"><label class="sr-only" for="f-prod">Вид производства</label><select id="f-prod" name="production"><option value="" selected>Вид производства</option><option>Мясное</option><option>Молочное</option><option>Хлебобулочное</option><option>Кондитерское</option><option>Другое</option></select></div>
 <div class="field full"><label class="sr-only" for="f-insp">Ближайшая проверка</label><select id="f-insp" name="inspection"><option value="" selected>Ближайшая проверка</option><option>Роспотребнадзор</option><option>Сертификация</option><option>Аудит торговой сети</option><option>Не планируется</option></select></div>
-<div class="field full"><label class="sr-only" for="f-msg">Комментарий</label><textarea id="f-msg" name="msg" placeholder="Комментарий: вредители, площадь, сроки"></textarea></div>
+<div class="field full"><label class="sr-only" for="f-msg">Комментарий</label><textarea id="f-msg" name="comment" placeholder="Комментарий: вредители, площадь, сроки"></textarea></div>
 <div class="field" hidden><input type="hidden" name="email" value=""></div>
 <div class="field" hidden><input type="hidden" name="type" value="Пищевое производство"></div>
 <input type="hidden" name="page" value="Пест-контроль на пищевом производстве">
+<input type="hidden" name="msg" value="">
 </div>
         <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Заказать обследование</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>
         <p class="legal">Нажимая кнопку, вы даёте <a href="../soglasie/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаете, что ознакомились с <a href="../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
@@ -461,5 +462,7 @@ document.addEventListener('change',function(e){if(!e.target.closest('.f-check-li
     else requestAnimationFrame(function () { setTimeout(go, 0); });
   })('../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261106s2']);
 </script>
+<script>/* Форма: вид производства, ближайшая проверка, комментарий и страница — в поле msg, которое читает send.php */
+document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,p=e.production.value||'не выбран',i=e.inspection.value||'не выбрана',c=e.comment.value.trim();e.msg.value='Вид производства: '+p+'\nБлижайшая проверка: '+i+(c?'\nКомментарий: '+c:'')+'\nСтраница: Пест-контроль на пищевом производстве (/pishchevoe-proizvodstvo/)';},true);</script>
 </body>
 </html>
