@@ -1,0 +1,88 @@
+<!-- Вставляется в index.php на сервере одним блоком перед </body> (с 28.10.2026).
+     Метрика и UIS загружаются после первого действия посетителя (касание, прокрутка, мышь, клавиатура)
+     или через 5 с после загрузки страницы: тяжёлые скрипты UIS (~280 КБ) и Вебвизор не мешают первому экрану.
+     Очередь ym() создаётся сразу, поэтому цели из app.js не теряются: они уходят, когда счётчик загрузится.
+     Визит, его длительность и отсчёт 15 с для «неотказа» Метрика ведёт с загрузки счётчика, а не с открытия страницы.
+     Отдельный блок UIS в <head> больше не нужен.
+     Ожидание подмены номера (с 29.10.2026): если номер телефона нажали до того, как UIS обработал визит,
+     набор откладывается до ответа UIS, но не дольше 0,8 с на iPhone и iPad и 1 с на остальных устройствах.
+     Затем открывается набор номера, который к этому моменту стоит в ссылке (подменный или основной).
+     Готовность UIS — команда очереди UIS waitForTrackViewAndRun: UIS выполняет её сразу после подмены номеров.
+     Таймеры ставятся из обработчика касания и не длиннее 1 с, поэтому браузер считает набор действием посетителя
+     (в Safari без этого появляется предупреждение об автоматическом вызове). Ждём только один раз за просмотр:
+     если UIS не загрузился (блокировщик, сеть), следующие касания открывают набор сразу.
+     Radist (с 29.10.2026, как на агерис.рф/audit): код заявки в ссылках Telegram и MAX. Код («ro» и 10 символов)
+     создаётся сразу при открытии страницы в том же формате и в той же записи sessionStorage (radistVisit),
+     что и у скрипта Radist, и сразу подставляется в ссылки: в Telegram — в готовый текст сообщения, в MAX — параметром start.
+     Поэтому код есть в ссылке даже при нажатии до загрузки скрипта. Сам скрипт track.radist.me/tracker.min.js
+     загружается вместе с Метрикой и UIS, берёт тот же код и передаёт в Radist данные визита
+     (адрес страницы, источник перехода, метки utm, yclid, идентификатор посетителя Метрики). -->
+<!-- Yandex.Metrika counter + UIS + Radist: загружаются после первого действия посетителя (касание, прокрутка, мышь, клавиатура) или через 5 с после загрузки страницы -->
+<script type="text/javascript">
+    (function (w, d) {
+        w.ym = w.ym || function () { (w.ym.a = w.ym.a || []).push(arguments); };
+        w.ym.l = 1 * new Date();
+        ym(113675622, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        var done = false, ready = false, wait = null, ev = ['pointerdown', 'touchstart', 'keydown', 'scroll', 'wheel', 'mousemove'];
+        w.__cs = w.__cs || [];
+        w.__cs.push(['waitForTrackViewAndRun', function () { ready = true; }]);
+        // Radist: код заявки в ссылках Telegram и MAX — сразу, скрипт Radist загрузится вместе со счётчиками
+        var rmsg = 'Здравствуйте! Пишу с сайта пестконтроль-центр.рф. Номер заявки: {radist_tracker}';
+        w.radist_tracker = w.radist_tracker || function () { (w.radist_tracker.a = w.radist_tracker.a || []).push(arguments); };
+        w.radist_tracker.l = 1 * new Date();
+        w.radist_tracker({ message: rmsg, whatsapp_enabled: true, tgbot_enabled: true, tg_enabled: true, max_enabled: true, vk_enabled: true });
+        (function () {
+            var id = null, abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', s = 'ro', i, txt;
+            try {
+                id = sessionStorage.getItem('radistVisit');
+                if (!id || id.length !== 12) {
+                    for (i = 0; i < 10; i++) s += abc.charAt(Math.floor(Math.random() * abc.length));
+                    sessionStorage.setItem('radistVisit', s);
+                    id = sessionStorage.getItem('radistVisit');
+                }
+            } catch (e) { id = null; }
+            if (!id || id.length !== 12) return;
+            txt = encodeURIComponent(rmsg.replace(/{radist_tracker}/g, id));
+            [].forEach.call(d.querySelectorAll('a[href*="//t.me/"], a[href*="//max.ru/"]'), function (a) {
+                try {
+                    var u = new URL(a.href), n = u.pathname.split('/')[1] || '';
+                    if (u.host === 'max.ru') a.href = 'https://max.ru/' + u.pathname.substring(1) + '?start=' + id;
+                    else if (u.host === 't.me' && !/bot$/i.test(n)) a.href = 'https://t.me' + u.pathname + '?text=' + txt;
+                } catch (e) {}
+            });
+        })();
+        function add(src) { var k = d.createElement('script'); k.async = true; k.src = src; d.head.appendChild(k); return k; }
+        function load() {
+            if (done) return; done = true;
+            ev.forEach(function (e) { w.removeEventListener(e, load, true); });
+            add('https://mc.yandex.ru/metrika/tag.js?id=113675622');
+            var p = d.createElement('link'); p.rel = 'preconnect'; p.href = 'https://tracker.comagic.ru'; d.head.appendChild(p);
+            add('https://app.uiscom.ru/static/cs.min.js?k=ICWycQx6m3NSBe3WlCeDAdAKMTmNhMHC').onerror = function () { ready = true; };
+            add('https://track.radist.me/tracker.min.js');
+        }
+        ev.forEach(function (e) { w.addEventListener(e, load, { capture: true, passive: true }); });
+        function later() { setTimeout(load, 5000); }
+        if (d.readyState === 'complete') later(); else w.addEventListener('load', later);
+        // Ожидание подмены номера при первом касании: набор откладывается до ответа UIS, максимум 0,8–1 с
+        d.addEventListener('click', function (e) {
+            if (ready) return;
+            var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+            if (!a || e.button || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+            e.preventDefault();
+            if (wait) return;
+            load();
+            var href = a.getAttribute('href'), op = a.style.opacity, max = 'GestureEvent' in w ? 800 : 1000, t;
+            function go() {
+                for (var i = 0; i < wait.length; i++) clearTimeout(wait[i]);
+                wait = null; ready = true; a.style.opacity = op;
+                w.location.href = a.href;
+            }
+            function check(last) { return function () { if (wait && (last || ready || a.getAttribute('href') !== href)) go(); }; }
+            wait = [];
+            a.style.opacity = '.6';
+            for (t = 50; t <= max; t += 50) wait.push(setTimeout(check(t === max), t));
+        }, true);
+    })(window, document);
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113675622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
