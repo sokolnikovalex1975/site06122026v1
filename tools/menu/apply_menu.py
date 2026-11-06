@@ -2,9 +2,10 @@
 """Общее меню сайта site06122026v1 (06.11.2026): шапка, мобильное меню и подвал на всех страницах.
 
     Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
+    (в «Услугах» с 06.11.2026 — очистка и дезинфекция вентиляции)
 
 В меню — только готовые страницы сайта. Отрасли без своей страницы ведут к карточке отрасли на главной
-(якоря #otrasl-…), страницы пищевых и фармацевтических производств — отдельные. «Контакты» — только в подвале.
+(якоря #otrasl-…), у пищевых и фармацевтических производств, магазинов и торговых сетей, гостиниц — свои страницы. «Контакты» — только в подвале.
 Ссылки — обычные <a href> прямо в HTML. С внутренних страниц якоря ведут на главную (../#podhod).
 Телефон, ссылки Telegram/MAX, кнопки заявки и блок счётчиков не меняются.
 Страницы документов (политика, согласие) получают ту же шапку и тот же подвал.
@@ -23,19 +24,21 @@ from typo import typo  # неразрывный пробел после коро
 USLUGI = [
     ('deratizatsiya', 'Дератизация для организаций'),
     ('dezinsektsiya', 'Дезинсекция для организаций'),
+    ('ochistka-dezinfektsiya-ventilyatsii', 'Очистка и дезинфекция вентиляции'),
     ('dogovor-deratizatsiya-dezinsektsiya', 'Договор на обслуживание'),
 ]
 # Отрасли — в порядке блока «Отрасли» на главной. Адрес со знаком # — карточка отрасли на главной (своей страницы пока нет)
 INDUSTRIES = [
     ('pishchevoe-proizvodstvo', 'Пищевые производства'),
-    ('#otrasl-seti', 'Магазины и торговые сети'),
+    ('magaziny-i-torgovye-seti', 'Магазины и торговые сети'),
     ('#otrasl-restorany', 'Рестораны и кафе'),
     ('#otrasl-sklady', 'Склады и логистика'),
     ('farmatsevticheskie-proizvodstva', 'Фармацевтические производства'),
-    ('#otrasl-gostinitsy', 'Гостиницы и отели'),
+    ('gostinitsy', 'Гостиницы и отели'),
 ]
 DOGOVOR = 'dogovor-deratizatsiya-dezinsektsiya'
 DERAT = 'deratizatsiya'
+VENT = 'ochistka-dezinfektsiya-ventilyatsii'
 MATERIALS = [  # слова через дефис не переносим (класс nw, как в остальных текстах сайта)
     ('materialy/programma-pest-kontrolya', 'Программа <span class="nw">пест-контроля</span>'),
     ('materialy/zhurnal-pest-kontrolya', 'Журнал <span class="nw">пест-контроля</span>'),
@@ -54,8 +57,11 @@ PAGES = [
     ('index.html', '', ''),
     (DERAT + '/index.html', '../', DERAT),
     ('dezinsektsiya/index.html', '../', 'dezinsektsiya'),
+    (VENT + '/index.html', '../', VENT),
     (DOGOVOR + '/index.html', '../', DOGOVOR),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
+    ('magaziny-i-torgovye-seti/index.html', '../', 'magaziny-i-torgovye-seti'),
+    ('gostinitsy/index.html', '../', 'gostinitsy'),
     ('farmatsevticheskie-proizvodstva/index.html', '../', 'farmatsevticheskie-proizvodstva'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html', '../../', 'materialy/pest-menedzhment-ili-razovaya-obrabotka'),
     ('materialy/index.html', '../', 'materialy'),
@@ -98,7 +104,7 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur in (DERAT, 'dezinsektsiya')
+    in_usl = cur in (DERAT, 'dezinsektsiya', VENT)
     in_ind = any(s == cur for s, _ in INDUSTRIES)
     in_mat = cur.startswith('materialy')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾

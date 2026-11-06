@@ -1,0 +1,53 @@
+<svg viewBox="0 0 960 600" role="img" aria-labelledby="plan-t plan-d">
+  <title id="plan-t">Разрез гостиницы: шесть зон риска, точки контроля и путь белья из номера</title>
+  <desc id="plan-d">Номерной фонд на трёх этажах, лобби, ресторан и кухня на первом этаже, в подвале бельевая, склад и мусорокамера; снаружи контейнерная площадка и кровля. Номер с сигналом и соседние номера слева, справа, сверху и снизу выделены.</desc>
+  <defs><marker id="g-arw" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7c86ff"/></marker></defs>
+  <g class="z z6" data-z="6"><rect class="zf" x="8" y="8" width="944" height="584" rx="22" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-dasharray="7 9"/></g>
+  <rect x="36" y="424" width="888" height="128" fill="rgba(255,255,255,.018)"/>
+  <path d="M36 424H924" stroke="rgba(255,255,255,.32)" stroke-width="2"/>
+  <rect x="150" y="104" width="640" height="400" rx="4" fill="#0d0d10"/>
+  <g class="z" data-z="1"><rect class="zf" x="150" y="104" width="640" height="240"/></g>
+  <g class="z" data-z="3"><rect class="zf" x="470" y="344" width="320" height="80"/></g>
+  <g class="z" data-z="2"><rect class="zf" x="150" y="424" width="200" height="80"/></g>
+  <g class="z" data-z="4"><rect class="zf" x="350" y="424" width="200" height="80"/></g>
+  <g class="z" data-z="5"><rect class="zf" x="550" y="424" width="240" height="80"/></g>
+  <rect class="g-adj" x="283" y="189" width="118" height="70" rx="5"/>
+  <rect class="g-adj" x="539" y="189" width="118" height="70" rx="5"/>
+  <rect class="g-adj" x="411" y="109" width="118" height="70" rx="5"/>
+  <rect class="g-adj" x="411" y="269" width="118" height="70" rx="5"/>
+  <rect class="g-hot" x="411" y="189" width="118" height="70" rx="5"/>
+  <g fill="none" stroke="rgba(255,255,255,.26)" stroke-width="2.5" stroke-linecap="round">
+    <path d="M150 104H790V504H150Z"/>
+    <path d="M150 184H790M150 264H790M150 344H790M150 424H790"/>
+    <path d="M278 104V344 M406 104V344 M534 104V344 M662 104V344 M470 344V424 M350 424V504 M550 424V504"/>
+  </g>
+  <path d="M140 104H800" stroke="rgba(255,255,255,.42)" stroke-width="4" stroke-linecap="round"/>
+  <g fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.16)" stroke-width="1.5"><rect x="574" y="78" width="60" height="26" rx="3"/><path d="M586 78V104M598 78V104M610 78V104M622 78V104"/></g>
+  <g fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.2)" stroke-width="1.4"><rect x="194" y="160" width="62" height="13" rx="3"/><rect x="256" y="142" width="6" height="31" rx="2"/><rect x="242" y="153" width="12" height="7" rx="2"/><rect x="322" y="160" width="62" height="13" rx="3"/><rect x="384" y="142" width="6" height="31" rx="2"/><rect x="370" y="153" width="12" height="7" rx="2"/><rect x="450" y="160" width="62" height="13" rx="3"/><rect x="512" y="142" width="6" height="31" rx="2"/><rect x="498" y="153" width="12" height="7" rx="2"/><rect x="578" y="160" width="62" height="13" rx="3"/><rect x="640" y="142" width="6" height="31" rx="2"/><rect x="626" y="153" width="12" height="7" rx="2"/><rect x="706" y="160" width="62" height="13" rx="3"/><rect x="768" y="142" width="6" height="31" rx="2"/><rect x="754" y="153" width="12" height="7" rx="2"/><rect x="194" y="240" width="62" height="13" rx="3"/><rect x="256" y="222" width="6" height="31" rx="2"/><rect x="242" y="233" width="12" height="7" rx="2"/><rect x="322" y="240" width="62" height="13" rx="3"/><rect x="384" y="222" width="6" height="31" rx="2"/><rect x="370" y="233" width="12" height="7" rx="2"/><rect x="450" y="240" width="62" height="13" rx="3"/><rect x="512" y="222" width="6" height="31" rx="2"/><rect x="498" y="233" width="12" height="7" rx="2"/><rect x="578" y="240" width="62" height="13" rx="3"/><rect x="640" y="222" width="6" height="31" rx="2"/><rect x="626" y="233" width="12" height="7" rx="2"/><rect x="706" y="240" width="62" height="13" rx="3"/><rect x="768" y="222" width="6" height="31" rx="2"/><rect x="754" y="233" width="12" height="7" rx="2"/><rect x="194" y="320" width="62" height="13" rx="3"/><rect x="256" y="302" width="6" height="31" rx="2"/><rect x="242" y="313" width="12" height="7" rx="2"/><rect x="322" y="320" width="62" height="13" rx="3"/><rect x="384" y="302" width="6" height="31" rx="2"/><rect x="370" y="313" width="12" height="7" rx="2"/><rect x="450" y="320" width="62" height="13" rx="3"/><rect x="512" y="302" width="6" height="31" rx="2"/><rect x="498" y="313" width="12" height="7" rx="2"/><rect x="578" y="320" width="62" height="13" rx="3"/><rect x="640" y="302" width="6" height="31" rx="2"/><rect x="626" y="313" width="12" height="7" rx="2"/><rect x="706" y="320" width="62" height="13" rx="3"/><rect x="768" y="302" width="6" height="31" rx="2"/><rect x="754" y="313" width="12" height="7" rx="2"/></g>
+  <g fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.16)" stroke-width="1.5">
+    <rect x="226" y="392" width="92" height="22" rx="4"/><rect x="352" y="372" width="34" height="42" rx="4"/><rect x="396" y="372" width="34" height="42" rx="4"/>
+    <circle cx="524" cy="404" r="11"/><circle cx="566" cy="404" r="11"/><circle cx="608" cy="404" r="11"/>
+    <rect x="660" y="384" width="54" height="30" rx="4"/><rect x="722" y="384" width="54" height="30" rx="4"/><rect x="674" y="352" width="66" height="12" rx="4"/>
+  </g>
+  <g fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.16)" stroke-width="1.5">
+    <rect x="230" y="466" width="30" height="30" rx="4"/><rect x="268" y="466" width="30" height="30" rx="4"/><rect x="306" y="466" width="30" height="30" rx="4"/>
+    <circle cx="245" cy="481" r="8"/><circle cx="283" cy="481" r="8"/><circle cx="321" cy="481" r="8"/>
+    <rect x="418" y="466" width="54" height="30" rx="3"/><rect x="480" y="466" width="54" height="30" rx="3"/><path d="M418 481H472M480 481H534"/>
+    <rect x="618" y="468" width="34" height="28" rx="3"/><rect x="658" y="468" width="34" height="28" rx="3"/><path d="M752 434V496M766 434V496"/>
+  </g>
+  <g fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.22)" stroke-width="1.5"><rect x="842" y="396" width="34" height="28" rx="3"/><rect x="882" y="396" width="34" height="28" rx="3"/><path d="M840 396H878M880 396H918"/></g>
+  <g fill="rgba(255,255,255,.34)"><path d="M690 90c4-6 12-7 16-2l7-3-3 6c2 4 0 7-5 7h-10c-4 0-6-3-5-8z"/><path d="M728 88c4-6 12-7 16-2l7-3-3 6c2 4 0 7-5 7h-10c-4 0-6-3-5-8z"/><path d="M764 91c4-6 12-7 16-2l7-3-3 6c2 4 0 7-5 7h-10c-4 0-6-3-5-8z"/></g>
+  <path d="M454 214H166V488H210" fill="none" stroke="#7c86ff" stroke-width="2.5" stroke-dasharray="9 8" marker-end="url(#g-arw)" opacity=".85"/>
+  <g fill="#fdc700" stroke="#09090b" stroke-width="2"><rect x="60" y="408" width="13" height="13" rx="2"/><rect x="116" y="408" width="13" height="13" rx="2"/><rect x="804" y="408" width="13" height="13" rx="2"/><rect x="924" y="408" width="13" height="13" rx="2"/><rect x="60" y="516" width="13" height="13" rx="2"/><rect x="924" y="516" width="13" height="13" rx="2"/></g>
+  <g fill="#7c86ff"><circle cx="486" cy="414" r="6"/><circle cx="776" cy="414" r="6"/><circle cx="340" cy="492" r="6"/><circle cx="366" cy="492" r="6"/><circle cx="540" cy="492" r="6"/><circle cx="566" cy="492" r="6"/><circle cx="776" cy="492" r="6"/></g>
+  <g fill="#c4b5fd"><rect x="752" y="354" width="22" height="8" rx="4"/></g>
+  <g class="lbl"><text x="208" y="136">Номера</text><text x="184" y="368">Лобби</text><text x="540" y="370">Ресторан и кухня</text><text x="230" y="455">Бельевая</text><text x="418" y="455">Склад</text><text x="618" y="455">Мусорокамера</text><text x="200" y="94">Кровля</text><text x="830" y="386">Контейнеры</text><text x="40" y="578">Территория</text></g>
+  <g class="bdgs">
+    <g class="bdg" data-z="1"><circle cx="182" cy="132" r="22"/><text x="182" y="133">1</text></g>
+    <g class="bdg" data-z="2"><circle cx="198" cy="450" r="22"/><text x="198" y="451">2</text></g>
+    <g class="bdg" data-z="3"><circle cx="504" cy="368" r="22"/><text x="504" y="369">3</text></g>
+    <g class="bdg" data-z="4"><circle cx="386" cy="450" r="22"/><text x="386" y="451">4</text></g>
+    <g class="bdg" data-z="5"><circle cx="586" cy="450" r="22"/><text x="586" y="451">5</text></g>
+    <g class="bdg" data-z="6"><circle cx="50" cy="50" r="22"/><text x="50" y="51">6</text></g>
+  </g>
+</svg>

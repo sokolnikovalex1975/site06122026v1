@@ -1,0 +1,64 @@
+/* ===== Страница «Пест-контроль гостиниц и отелей» (/gostinitsy/): дополнения к стилям отраслевой страницы ===== */
+.g-page .f-hero .f-hero-img{object-position:60% 50%}
+.g-short{margin:0 0 clamp(28px,3vw,44px);padding:clamp(18px,1.6vw,26px) clamp(20px,2vw,30px);border:1px solid var(--line2);border-left:2px solid var(--acc);border-radius:var(--r);background:var(--card);color:var(--t2);line-height:1.65;max-width:1000px;font-size:clamp(16px,1.05vw,19px)}
+.g-short b{color:var(--t1);font-weight:500}
+.g-upd{display:block;margin-top:10px;font-size:13px;color:var(--t3)}
+.g-check-h{font-size:clamp(22px,1.8vw,32px);line-height:1.15;font-weight:300;letter-spacing:-.03em;margin:clamp(44px,4.4vw,72px) 0 10px}
+.g-check-src{color:var(--t3);font-size:14px;line-height:1.6;margin:0 0 18px;max-width:900px}
+.g-check-src a,.g-risk a,.g-steps a,.g-note a{color:var(--t2);border-bottom:1px solid var(--line2);transition:color .25s,border-color .25s}
+.g-check-src a:hover,.g-risk a:hover,.g-steps a:hover,.g-note a:hover{color:var(--t1);border-color:var(--acc)}
+.g-qn{display:inline-flex;align-items:center;justify-content:center;min-width:56px;height:30px;padding:0 10px;border-radius:999px;border:1px solid rgba(124,134,255,.5);color:var(--acc);font-size:14px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.d-table.g-ql td:nth-child(2){color:var(--t1)}
+.g-ql small{display:block;color:var(--t3);font-size:13px;margin-top:4px}
+@media (min-width:761px){.d-table.g-ql td:first-child{width:96px}.d-table.g-ql td:nth-child(2){width:46%}}
+/* схема: номер с сигналом и соседние номера */
+.f-plan .g-hot{fill:rgba(253,199,0,.1);stroke:#fdc700;stroke-width:2}
+.f-plan .g-adj{fill:none;stroke:#7c86ff;stroke-width:1.6;stroke-dasharray:6 6}
+@media (prefers-reduced-motion:no-preference){.f-plan .g-hot{animation:g-pulse 2.6s ease-in-out infinite}@keyframes g-pulse{0%,100%{opacity:1}50%{opacity:.5}}}
+.lg-hot{width:15px;height:11px;border-radius:3px;border:2px solid var(--yel);background:rgba(253,199,0,.12)}
+.lg-adj{width:15px;height:11px;border-radius:3px;border:1.6px dashed var(--acc)}
+/* протокол при жалобе гостя */
+.g-proto{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(28px,4vw,80px);align-items:start}
+.g-proto-side{position:sticky;top:110px;display:grid;gap:16px}
+.g-photo{position:relative;margin:0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);background:#0d0d10;aspect-ratio:900/542}
+.g-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.g-photo-43{aspect-ratio:4/3}
+.g-risk{padding:clamp(20px,1.8vw,30px)}
+.g-risk h3,.g-do h3{font-size:clamp(18px,1.25vw,22px);font-weight:400;letter-spacing:-.02em;margin:0 0 10px}
+.g-risk p,.g-do p{margin:0;color:var(--t2);line-height:1.6}
+.g-steps{list-style:none;margin:0;padding:0;counter-reset:gs;border-top:1px solid var(--line)}
+.g-steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.g-steps li::before{counter-increment:gs;content:counter(gs,decimal-leading-zero);grid-row:1/span 3;color:var(--t3);font-size:14px;padding-top:2px;font-variant-numeric:tabular-nums}
+.g-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:0 0 8px}
+.g-when{color:var(--acc);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.g-who{color:var(--t3);font-size:13px}
+.g-who::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--t3);margin:0 10px 2px 0;vertical-align:middle}
+.g-steps h3{font-size:clamp(18px,1.3vw,22px);font-weight:400;letter-spacing:-.02em;line-height:1.3;margin:0 0 8px}
+.g-steps p{margin:0;color:var(--t2);line-height:1.6}
+.g-steps li.g-alert .g-when{color:var(--yel)}
+/* сервис без огласки */
+.g-quiet{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.g-ic{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:rgba(124,134,255,.12);border:1px solid rgba(124,134,255,.28);color:var(--acc);margin:0 0 20px}
+.g-ic svg{width:22px;height:22px}
+.g-quiet .d-card h3{font-size:clamp(18px,1.3vw,22px)}
+/* обучение горничных */
+.g-train{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,80px);align-items:start}
+.g-train .d-strong{margin:0 0 26px;line-height:1.55;color:var(--t1)}
+.g-sub{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);font-weight:500;margin:0 0 6px}
+.g-signs{list-style:none;margin:0 0 22px;padding:0;counter-reset:sg;border-top:1px solid var(--line)}
+.g-signs li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line);color:var(--t2);line-height:1.55}
+.g-signs li::before{counter-increment:sg;content:counter(sg);width:28px;height:28px;border-radius:50%;border:1.4px solid var(--acc);color:var(--acc);display:flex;align-items:center;justify-content:center;font-size:13px}
+.g-signs b{color:var(--t1);font-weight:500}
+.g-do{padding:clamp(18px,1.6vw,26px);border-left:2px solid var(--yel)}
+/* форматы гостиниц: 2 × 2 */
+.inds.g-inds{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g-inds .ind-img{aspect-ratio:900/420}
+.g-note{color:var(--t2);margin:24px 0 0;line-height:1.6}
+@media (max-width:1100px){.g-proto,.g-train{grid-template-columns:minmax(0,1fr)}.g-proto-side{position:static}.g-proto-side .g-photo{max-width:760px}.g-quiet{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.inds.g-inds{grid-template-columns:minmax(0,1fr)}.g-inds .ind-img{aspect-ratio:556/300}}
+@media (max-width:600px){.g-quiet{grid-template-columns:minmax(0,1fr)}.g-steps li{grid-template-columns:34px minmax(0,1fr);column-gap:12px}.g-short{font-size:16px}}
+/* фон блока заявки — коридор гостиницы ночью (ленивая загрузка — как у остальных фонов) */
+.g-page .cta-bg{background-image:url(../img/gost-cta.webp);filter:grayscale(.25) brightness(.42)}
+@media (max-width:760px){.g-page .cta-bg{background-image:url(../img/gost-cta-m.webp)}}
+/* узкие экраны 320–374 px: колонка первого экрана не шире экрана, длинная кнопка переносится на две строки */
+@media (max-width:374px){.g-page .f-hero .wrap{grid-template-columns:minmax(0,1fr)}.g-page .hero-ctas .btn{white-space:normal;text-align:center;line-height:1.25;height:auto;min-height:56px;padding:12px 22px}}

@@ -26,7 +26,9 @@ OUT = ROOT / 'dist' / 'timeweb'
 COUNTERS_MARK = '<!-- Yandex.Metrika counter + UIS + Radist'
 PAGES = [
     'index.html', 'deratizatsiya/index.html', 'dezinsektsiya/index.html', 'dogovor-deratizatsiya-dezinsektsiya/index.html',
-    'pishchevoe-proizvodstvo/index.html', 'farmatsevticheskie-proizvodstva/index.html', 'materialy/index.html', 'materialy/programma-pest-kontrolya/index.html',
+    'ochistka-dezinfektsiya-ventilyatsii/index.html',
+    'pishchevoe-proizvodstvo/index.html', 'magaziny-i-torgovye-seti/index.html', 'gostinitsy/index.html', 'farmatsevticheskie-proizvodstva/index.html',
+    'materialy/index.html', 'materialy/programma-pest-kontrolya/index.html',
     'materialy/zhurnal-pest-kontrolya/index.html', 'materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html',
 ]
 LEGAL = ['privacy/index.html', 'soglasie/index.html']

@@ -1,0 +1,212 @@
+#!/usr/bin/env python3
+"""Страница «Очистка и дезинфекция вентиляции» (/ochistka-dezinfektsiya-ventilyatsii/).
+
+Оболочка (head, шапка, меню, подвал, плавающие кнопки, подключение скриптов) берётся из готовой страницы
+дезинсекции — так у новой страницы те же стили, меню, телефон и форма, что и у остальных.
+Заменяются: мета-теги, предзагрузка фото первого экрана, структурированные данные, стили страницы,
+содержимое <main> (tools/ventilyatsiya/main.html) и скрипт страницы (tools/ventilyatsiya/page.js).
+
+Бегущую строку, «Смотрите также», атрибуты анимаций и меню добавляют общие скрипты сайта
+(tools/site/unify.py и tools/menu/apply_menu.py) — запускайте после этого скрипта tools/site/build_site.py.
+
+Запуск из корня репозитория: python3 tools/ventilyatsiya/build_page.py
+"""
+import html
+import json
+import pathlib
+import re
+import sys
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
+HERE = pathlib.Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / 'tools' / 'legal'))
+from typo import typo  # noqa: E402  неразрывные пробелы, как в остальных текстах сайта
+
+SLUG = 'ochistka-dezinfektsiya-ventilyatsii'
+SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
+URL = SITE + SLUG + '/'
+TITLE = 'Очистка и дезинфекция вентиляции в Москве и МО — ПЕСТКОНТРОЛЬ Центр'
+DESC = ('Очистка воздуховодов, кухонных вытяжек и дезинфекция вентиляции для организаций в Москве и МО: '
+        'видео до и после, акт по п. 43 ППР, журнал по МР 3.5.0396-25. Осмотр и смета — 0 ₽.')
+OG_TITLE = 'Очистка и дезинфекция вентиляции для организаций в Москве и области'
+OG_ALT = 'Специалист ПЕСТКОНТРОЛЬ Центр очищает прямоугольный воздуховод щёточной машиной через ревизионный люк'
+
+ICONS = json.loads((ROOT / 'tools' / 'site' / 'icons.json').read_text(encoding='utf-8'))
+_SVG = ('<svg aria-hidden="true" focusable="false" class="lucide lucide-{n}" xmlns="http://www.w3.org/2000/svg" '
+        'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" '
+        'stroke-linejoin="round" > {p} </svg>')
+ICONS.update({  # иконки Lucide, которых нет в icons.json
+    'lucide-building': _SVG.format(n='building-2', p=(
+        '<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" /> <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" /> '
+        '<path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" /> <path d="M10 6h4" /> <path d="M10 10h4" /> '
+        '<path d="M10 14h4" /> <path d="M10 18h4" />')),
+    'lucide-graduation-cap': _SVG.format(n='graduation-cap', p=(
+        '<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> '
+        '<path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />')),
+})
+
+SANPIN = 'http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773&amp;rdk=0'
+PPR = 'https://www.consultant.ru/document/cons_doc_LAW_363263/'
+SP = 'http://publication.pravo.gov.ru/document/0001202606020088'
+MR = 'https://www.consultant.ru/document/cons_doc_LAW_541253/'
+LIC = 'https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211'
+
+
+def a(href, text):
+    return f'<a href="{href}" target="_blank" rel="noopener noreferrer">{text}</a>'
+
+
+# Вопросы: (вопрос, ответ в HTML). В разметку FAQPage идёт тот же текст без тегов.
+FAQ = [
+    ('Как часто нужно чистить и дезинфицировать вентиляцию в организации?',
+     'Не реже 1 раза в год. Очистку вентиляционных камер, циклонов, фильтров и воздуховодов от горючих отходов и отложений '
+     f'с составлением акта требует {a(PPR, "п. 43 Правил противопожарного режима")}, профилактическую дезинфекцию '
+     f'централизованных систем вентиляции и кондиционирования — {a(SANPIN, "п. 132 СанПиН 3.3686-21")}. В медицинских '
+     f'организациях сплит-системы чистят и дезинфицируют не реже 1 раза в 3 месяца ({a(SP, "пп. 22 п. 24 СП 2.1.4284-26")}). '
+     'Кухонные вытяжки при ежедневной жарке мы советуем чистить каждые 3–6 месяцев.'),
+    ('Какие документы нужны для пожарной проверки и Роспотребнадзора?',
+     'Акт очистки вентиляционных систем от горючих отходов и отложений (п. 43 ППР), акт выполненных работ по дезинфекции, '
+     'журнал учёта работ по очистке и дезинфекции систем вентиляции и кондиционирования (рекомендуемая форма — приложение 3 '
+     f'к {a(MR, "МР 3.5.0396-25")}), договор с подрядчиком, копии его лицензии и свидетельства о госрегистрации дезсредства. '
+     'Для централизованных систем кондиционирования и увлажнения нужны ещё протоколы исследований на легионеллы.'),
+    ('Нужна ли лицензия на дезинфекцию вентиляции?',
+     'Если работы выполняет подрядчик — да: с 1 марта 2025 года деятельность по оказанию услуг дезинфекции, дезинсекции '
+     'и дератизации подлежит обязательному лицензированию (Федеральный закон № 194-ФЗ). Профилактическую дезинфекцию '
+     'может проводить и персонал самой организации (п. 3.2 МР 3.5.0396-25), если сотрудники прошли специальную подготовку, '
+     'медосмотр и вакцинацию (п. 3.3). У ООО «Центр дезинфекционных услуг» действующая лицензия Роспотребнадзора '
+     f'№ Л064-00111-77/01942445 — проверить запись можно в {a(LIC, "реестре Роспотребнадзора")}.'),
+    ('Чем очистка вентиляции отличается от дезинфекции?',
+     'Очистка механически удаляет пыль, жир и горючие отложения, а дезинфекция уничтожает микроорганизмы на уже очищенных '
+     'поверхностях. Поэтому порядок всегда один: подготовка, очистка, дезинфекция и оценка эффективности — так алгоритм '
+     'работ описан в приложении 1 к МР 3.5.0396-25. Дезинфекция без очистки не убирает ни горючие отложения, ни питательную '
+     'среду для микробов.'),
+    ('Можно ли чистить вентиляцию без остановки ресторана или производства?',
+     'Объект может работать, но очищаемая система на время работ выключается, а включает её после полной просушки '
+     'ответственный специалист объекта (п. 3.15 МР 3.5.0396-25). Поэтому кухни '
+     'обслуживаем ночью или в санитарный день, а производства, торговые и бизнес-центры — по участкам, в окна между сменами.'),
+    ('Сколько стоит очистка и дезинфекция вентиляции?',
+     'Ориентиры: очистка воздуховодов от пыли — от 100 ₽ за погонный метр, жировая очистка кухонной вытяжки — от 136 ₽ '
+     'за погонный метр, дезинфекция — от 45 ₽ за погонный метр, очистка радиального вентилятора — от 2 400 ₽. Точную '
+     'смету даём после бесплатного осмотра: она зависит от длины и сечения коробов, вида отложений, доступа и числа '
+     'вентиляторов и установок.'),
+    ('Как проверить, что вентиляцию действительно очистили?',
+     'Сравнить видео до и после на тех же участках, осмотреть решётки, зонты и рабочие колёса вентиляторов, а для '
+     'медицинских организаций, гостиниц и офисов с центральным кондиционированием — получить протокол лабораторного '
+     'исследования смывов. Если результат неудовлетворительный, очистку и дезинфекцию повторяют (п. 4.3 МР 3.5.0396-25).'),
+    ('Можно ли мыть воздуховоды водой или химией?',
+     'Внутренние поверхности воздуховодов чистят без воды и концентрированных кислотных и щелочных растворов. Исключение — '
+     'кухонные вытяжные системы: при полной разборке или после герметизации короба и остановке приготовления пищи '
+     'допускаются моющие средства, вода и пар (п. 3.11 МР 3.5.0396-25). Выжигать жировые отложения в воздуховодах '
+     'запрещено (п. 41 «г» ППР).'),
+    ('Как часто проводится обследование технического состояния вентиляции?',
+     'Перед вводом здания или помещения в эксплуатацию или его реконструкцией, затем через 2 года после ввода и далее не реже '
+     f'1 раза в 10 лет, с инструментальными замерами объёмов вытяжки ({a(SP, "п. 8 СП 2.1.4284-26")}, действует '
+     'с 1 сентября 2026 года вместо СП 2.1.3678-20). Обследование не заменяет очистку и дезинфекцию: у этих работ своя '
+     'периодичность.'),
+    ('Работаете ли вы с НДС и через ЭДО?',
+     'Да, мы работаем как с НДС, так и без НДС (УСН). Договоры, акты выполненных работ и УПД направляем через системы '
+     'электронного документооборота (ЭДО) или на бумажном носителе.'),
+]
+
+
+def plain(h):
+    return html.unescape(re.sub(r'<[^>]+>', '', h)).replace('\xa0', ' ')
+
+
+def faq_items(lo, hi):
+    out = []
+    for i in range(lo, hi + 1):
+        q, ans = FAQ[i]
+        n = i + 1
+        first = i == 0
+        out.append(
+            f'        <div class="card qa{" open" if first else ""}"><button aria-expanded="{"true" if first else "false"}" '
+            f'aria-controls="a{n}" id="q{n}">{q}<span class="pm"></span></button><div class="ans" id="a{n}" role="region" '
+            f'aria-labelledby="q{n}"{" style=\"height:auto\"" if first else ""}><div><p>{ans}</p></div></div></div>')
+    return '\n'.join(out)
+
+
+def provider_from(shell):
+    for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', shell, re.S):
+        d = json.loads(m.group(1))
+        for g in d.get('@graph', [d]):
+            if g.get('@type') == 'Service' and 'provider' in g:
+                return g['provider']
+    raise SystemExit('в оболочке нет Service.provider')
+
+
+def ld_json(provider):
+    graph = [
+        {'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': SITE},
+            {'@type': 'ListItem', 'position': 2, 'name': 'Очистка и дезинфекция вентиляции', 'item': URL}]},
+        {'@type': 'Service', '@id': URL + '#service', 'name': 'Очистка и дезинфекция вентиляции для организаций',
+         'serviceType': 'Очистка и дезинфекция систем вентиляции и кондиционирования воздуха', 'url': URL,
+         'description': ('Очистка воздуховодов, вентиляторов, приточных установок и кухонных вытяжек от пыли, жира и горючих '
+                         'отложений и дезинфекция систем вентиляции и кондиционирования для организаций в Москве и Московской '
+                         'области: видеоинспекция до и после, акт очистки по п. 43 ППР, запись в журнал по МР 3.5.0396-25.'),
+         'areaServed': [{'@type': 'City', 'name': 'Москва'}, {'@type': 'AdministrativeArea', 'name': 'Московская область'}],
+         'audience': {'@type': 'BusinessAudience', 'name': 'Юридические лица и ИП'},
+         'provider': provider,
+         'offers': {'@type': 'AggregateOffer', 'priceCurrency': 'RUB', 'lowPrice': '45', 'highPrice': '2400', 'offerCount': '7',
+                    'description': 'Ориентиры: очистка воздуховодов от 100 ₽ за м. п., жировая очистка от 136 ₽ за м. п., '
+                                   'дезинфекция от 45 ₽ за м. п.; осмотр и смета — 0 ₽'}},
+        {'@type': 'FAQPage', 'mainEntity': [
+            {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': plain(ans)}} for q, ans in FAQ]},
+    ]
+    return ('<script type="application/ld+json">'
+            + json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False) + '</script>')
+
+
+def sub1(pat, rep, s, flags=re.S):
+    out, n = re.subn(pat, lambda m: rep, s, count=1, flags=flags)
+    assert n == 1, pat
+    return out
+
+
+def main():
+    shell = (ROOT / 'dezinsektsiya' / 'index.html').read_text(encoding='utf-8')
+    s = shell
+    # --- head
+    s = sub1(r'<title>.*?</title>', f'<title>{TITLE}</title>', s)
+    s = sub1(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{DESC}">', s)
+    s = sub1(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{URL}">', s)
+    s = sub1(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{URL}">', s)
+    s = sub1(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{OG_TITLE}">', s)
+    s = sub1(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{DESC}">', s)
+    s = sub1(r'<meta property="og:image" content="[^"]*">', f'<meta property="og:image" content="{SITE}img/vent-og.jpg">', s)
+    s = sub1(r'<meta property="og:image:alt" content="[^"]*">', f'<meta property="og:image:alt" content="{OG_ALT}">', s)
+    s = s.replace('../img/dez-hero-1440.webp 1440w, ../img/dez-hero.webp 1920w', '../img/vent-hero-1440.webp 1440w, ../img/vent-hero.webp 1920w')
+    s = s.replace('../img/dez-hero-mob-760.webp 760w, ../img/dez-hero-mob.webp 1024w', '../img/vent-hero-mob-760.webp 760w, ../img/vent-hero-mob.webp 1024w')
+    s = sub1(r'<script type="application/ld\+json">.*?</script>', ld_json(provider_from(shell)), s)
+    # стили: общие блоки страниц услуг (как у дезинсекции) + блоки этой страницы
+    extra = (HERE / 'extra.css').read_text(encoding='utf-8')
+    extra = re.sub(r'/\*.*?\*/', '', extra, flags=re.S)
+    extra = re.sub(r'\s*\n\s*', '', extra)
+    m = re.search(r'<style>(.*?)</style>', s, re.S)
+    s = s[:m.end(1)] + '\n' + extra + '\n' + s[m.end(1):]
+    # --- main
+    main = (HERE / 'main.html').read_text(encoding='utf-8')
+    main = main.replace('{{faq:0-4}}', faq_items(0, 4)).replace('{{faq:5-9}}', faq_items(5, 9))
+    main = re.sub(r'\{\{ico:([a-z0-9-]+)\}\}', lambda mm: ICONS[mm.group(1)], main)
+    assert '{{' not in main, 'остались заготовки в main.html'
+    # телефон оставляем в том же виде, что и на других страницах (подмена номера колл-трекинга UIS)
+    main = main.replace('+7 (495) 104-35-70', '\u2063PHONE\u2063')
+    main = typo(main).replace('\u2063PHONE\u2063', '+7 (495) 104-35-70')
+    # шифры документов и номер лицензии не разрываем переносом по дефису: «СП 2.1.4284-26», «Л064-00111-77/01942445»
+    code = re.compile(r'(?<![\w.])((?:\d+(?:\.\d+)+(?:/\d+(?:\.\d+)+)?-\d{2})|Л064-00111-77/01942445|[Пп]ест-контрол\w*)(?![\w-])')
+    parts = re.split(r'(<[^>]+>)', main)
+    main = ''.join(p if p.startswith('<') else code.sub(r'<span class="nw">\1</span>', p) for p in parts)
+    s = sub1(r'<main id="main" tabindex="-1">.*?</main>', main.strip(), s)
+    # --- скрипт страницы (самопроверка, схема, форма)
+    js = (HERE / 'page.js').read_text(encoding='utf-8').strip()
+    s = sub1(r'<script>\n/\* Предпросмотр: вне рабочего домена.*?</script>', '<script>\n' + js + '\n</script>', s)
+    # меню и подвал перестроит apply_menu.py (текущая страница — эта)
+    out = ROOT / SLUG / 'index.html'
+    out.parent.mkdir(exist_ok=True)
+    out.write_text(s, encoding='utf-8')
+    print('ok', out.relative_to(ROOT), len(s), 'байт')
+
+
+if __name__ == '__main__':
+    main()
