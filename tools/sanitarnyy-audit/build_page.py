@@ -37,8 +37,8 @@ DESC = ('Санитарный аудит (СЭС-аудит) в Москве и 
         'смывы и пробы воздуха, акт с реестром нарушений и планом устранения. От 9 000 ₽.')
 OG_ALT = 'Санитарный врач проверяет температуру в холодильнике на кухне ресторана'
 DATE = '2026-11-06'
-AUTHOR = {'@type': 'Person', 'name': 'Марианна Семерина', 'jobTitle': 'Санитарный врач',
-          'image': SITE + 'img/san-author-480.webp'}  # иллюстрированный портрет, не фотография
+AUTHOR = {'@type': 'Person', 'name': 'Марианна Семерина', 'jobTitle': 'Санитарный врач'}
+# фото в карточке автора иллюстративное (сгенерировано), поэтому image у Person не указываем
 
 LICENSE_URL = 'https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211'
 CGON_PPK = ('https://cgon.rospotrebnadzor.ru/biznesu/profilaktika-nadzor-uslsugi/profilakticheskie-meropriatiya/'

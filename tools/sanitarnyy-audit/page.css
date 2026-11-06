@@ -100,6 +100,7 @@
 .sa-author-name{font-size:clamp(20px,1.5vw,26px);color:var(--t1);letter-spacing:-.02em;margin-bottom:4px!important}
 .sa-author-role{color:var(--t2);margin-bottom:4px!important}
 .sa-author-date{color:var(--t3);font-size:14px}
+.sa-author-note{color:var(--t3);font-size:13px;margin-top:6px!important}
 .sa-principles{list-style:none;padding:0;margin:0;border-top:1px solid var(--line2)}
 .sa-principles li{padding:18px 0;border-bottom:1px solid var(--line2);color:var(--t2);line-height:1.6}
 .sa-principles b{color:var(--t1);font-weight:500}
