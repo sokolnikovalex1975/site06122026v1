@@ -31,6 +31,7 @@ PAGES = [
     'materialy/index.html', 'materialy/programma-pest-kontrolya/index.html',
     'materialy/zhurnal-pest-kontrolya/index.html', 'materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html',
     'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html',
+    'normativnaya-baza/index.html', 'normativnaya-baza/proverochnye-listy/index.html',
 ]
 LEGAL = ['privacy/index.html', 'soglasie/index.html']
 STATIC = ['style.css', 'legal.css', 'app.min.js', 'vendor', 'fonts', 'img']

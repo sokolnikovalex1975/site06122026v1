@@ -1,0 +1,173 @@
+/* Раздел «Нормативная база»: /normativnaya-baza/ и /normativnaya-baza/proverochnye-listy/ (класс nb-page) */
+/* первый экран без фото: тёмный фон, как в разделе «Материалы» */
+.nb-hero{position:relative;padding:clamp(120px,10vw,190px) 0 clamp(56px,6vw,96px);background:radial-gradient(1100px 620px at 82% 8%,rgba(97,95,255,.15),transparent 64%),radial-gradient(900px 520px at 4% 100%,rgba(124,134,255,.06),transparent 60%)}
+.nb-hero-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.7fr);gap:clamp(28px,4vw,80px);align-items:end}
+.nb-hero h1{font-size:clamp(40px,4.4vw,82px);margin:0 0 clamp(22px,2vw,34px)}
+.nb-hero h1 .ln{display:block;padding:0 .08em .08em 0;margin-bottom:-.08em}
+.nb-hero h1 .ln>span{display:inline-block}
+.nb-hero .eyebrow{margin-bottom:clamp(20px,1.8vw,30px)}
+.nb-hero p.lead{font-size:clamp(16px,1.08vw,20px);line-height:1.62;color:#c4c4cc;max-width:900px;margin:0 0 30px}
+.nb-byline{font-size:14px;line-height:1.5;color:var(--t3);margin:-12px 0 28px}
+.nb-check{padding:clamp(22px,2vw,32px)}
+.nb-check-k{font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:var(--acc);margin:0 0 10px}
+.nb-check ul{list-style:none;padding:0;margin:0}
+.nb-check li{display:flex;flex-direction:column;gap:4px;padding:14px 0;border-top:1px solid var(--line2)}
+.nb-check li:last-child{padding-bottom:0}
+.nb-check li span{font-size:13px;color:var(--t3)}
+.nb-check li b{font-weight:500;color:var(--t1);font-size:clamp(15px,1.05vw,18px);line-height:1.4}
+.nb-toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(36px,3.4vw,56px)}
+.nb-toc a{display:inline-block;padding:9px 16px;border:1px solid var(--line2);border-radius:999px;font-size:14px;color:var(--t2);transition:border-color .2s,color .2s}
+.nb-toc a:hover,.nb-toc a:focus-visible{border-color:var(--acc);color:var(--t1)}
+
+/* ссылки в тексте */
+.nb-page .nb-tbl td a,.nb-after a,.nb-dl a,.nb-fact a,.nb-errs a,.nb-q-note a,.nb-food a,.nb-base a,.nb-five a,.nb-lic a,.nb-page .cta .sub a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+.nb-page .nb-tbl td a:hover,.nb-after a:hover,.nb-dl a:hover,.nb-fact a:hover,.nb-errs a:hover,.nb-q-note a:hover,.nb-food a:hover,.nb-base a:hover,.nb-five a:hover,.nb-lic a:hover,.nb-page .cta .sub a:hover{border-color:var(--t1)}
+.nb-lic{margin-top:8px}
+.nb-lic a{text-decoration:none}
+
+/* пять главных пунктов */
+.nb-five{list-style:none;counter-reset:nb;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.nb-five li{counter-increment:nb;position:relative;padding:clamp(24px,2.2vw,34px) clamp(22px,2vw,32px) clamp(24px,2.2vw,34px) clamp(60px,4.4vw,82px);color:var(--t2);line-height:1.62}
+.nb-five li::before{content:"0" counter(nb);position:absolute;left:clamp(22px,2vw,32px);top:clamp(27px,2.4vw,38px);color:var(--acc);font-size:14px;font-weight:500}
+.nb-five li b{display:block;color:var(--t1);font-weight:500;font-size:clamp(17px,1.2vw,21px);line-height:1.35;margin-bottom:10px}
+.nb-five li:last-child:nth-child(odd){grid-column:1/-1}
+
+/* таблицы: до 900 px — карточки */
+.nb-h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;line-height:1.3;color:var(--t1);margin:clamp(48px,4vw,72px) 0 6px}
+.nb-h3:first-of-type{margin-top:0}
+.nb-doc{color:var(--acc);font-weight:500}
+.nb-date{color:var(--t1)}
+.nb-val{color:var(--t1);font-weight:500}
+.nb-old s{text-decoration-color:rgba(255,100,103,.75);text-decoration-thickness:1.5px}
+.nb-after{margin:22px 0 0;color:var(--t2);line-height:1.62;max-width:1000px}
+@media (min-width:901px){
+  .nb-docs td:nth-child(1){width:30%}
+  .nb-docs td:nth-child(3){width:15%}
+  .nb-docs td:nth-child(4){width:15%}
+  .nb-docs.nb-3 td:nth-child(3){width:22%}
+  .nb-freq td:nth-child(2){width:24%}
+  .nb-freq td:nth-child(3),.nb-freq td:nth-child(3){width:9%;white-space:nowrap}
+  .nb-freq2 td:nth-child(2){width:28%}
+  .nb-old td:nth-child(1){width:46%}
+  .nb-old td:nth-child(3){width:26%}
+  .nb-obj td:nth-child(1){width:22%}
+  .nb-obj td:nth-child(3){width:30%}
+  .nb-forms td:nth-child(1){width:20%}
+  .nb-forms td:nth-child(2){width:13%;white-space:nowrap}
+  .nb-forms td:nth-child(3){width:16%}
+  .nb-answers td:nth-child(1){width:28%}
+  .nb-answers td:nth-child(3){width:22%}
+}
+@media (max-width:900px){
+  .nb-tbl thead{display:none}
+  .nb-tbl,.nb-tbl tbody,.nb-tbl tr,.nb-tbl td{display:block;width:100%}
+  .nb-tbl tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}
+  .nb-tbl td{border:0;padding:10px 0}
+  .nb-tbl td+td{border-top:1px solid var(--line)}
+  .nb-tbl td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}
+}
+
+/* хроника изменений */
+.nb-tl{list-style:none;padding:0;margin:0;position:relative;max-width:1240px}
+.nb-tl::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:var(--line2)}
+.nb-tl li{position:relative;display:grid;grid-template-columns:minmax(120px,.2fr) minmax(0,1fr) minmax(0,.78fr);gap:clamp(14px,2vw,40px);padding:0 0 clamp(28px,2.4vw,40px) 42px}
+.nb-tl li:last-child{padding-bottom:0}
+.nb-tl li::before{content:"";position:absolute;left:0;top:5px;width:15px;height:15px;border-radius:50%;border:2px solid var(--acc);background:#09090b;box-sizing:border-box}
+.nb-tl-d{color:var(--acc);font-weight:500;font-size:clamp(16px,1.12vw,20px);line-height:1.3;white-space:nowrap}
+.nb-tl-w{color:var(--t1);line-height:1.6}
+.nb-tl-a{color:var(--t2);line-height:1.6;font-size:15px}
+.nb-tl-k{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:4px}
+.nb-tl li.is-past::before{border-color:#52525b;background:#52525b}
+.nb-tl li.is-past .nb-tl-d{color:var(--t3)}
+.nb-tl li.is-past .nb-tl-w{color:var(--t2)}
+.nb-tl a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45)}
+@media (max-width:760px){.nb-tl li{grid-template-columns:minmax(0,1fr);gap:6px;padding-left:34px}}
+
+/* разборы и образцы */
+.nb-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.nb-link{display:flex;flex-direction:column;gap:12px;padding:clamp(22px,2vw,32px);min-height:190px;color:var(--t1)}
+.nb-link-k{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.nb-link b{font-weight:400;font-size:clamp(18px,1.3vw,23px);line-height:1.32;letter-spacing:-.01em}
+.nb-link-go{margin-top:auto;color:var(--t2);font-size:15px;transition:color .25s}
+.nb-link:hover .nb-link-go,.nb-link:focus-visible .nb-link-go{color:var(--t1)}
+
+/* автор */
+.nb-author-wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(24px,3vw,56px);align-items:center}
+.nb-author{display:flex;gap:20px;align-items:center;padding:clamp(24px,2.4vw,36px)}
+.nb-avatar{flex:none;display:block;width:112px;height:112px;border-radius:50%;object-fit:cover;background:#18181b;border:1px solid rgba(124,134,255,.4)}
+.nb-author p{margin:0}
+.nb-author-name{font-size:clamp(20px,1.5vw,26px);color:var(--t1);letter-spacing:-.02em;margin-bottom:4px!important}
+.nb-author-role{color:var(--t2);margin-bottom:4px!important}
+.nb-author-date{color:var(--t3);font-size:14px}
+.nb-author-note{color:var(--t3);font-size:13px;margin-top:6px!important}
+.nb-author-text{color:#c4c4cc;font-size:clamp(16px,1.08vw,19px);line-height:1.65;margin:0;max-width:760px}
+
+/* источники — свёрнутый список */
+.nb-page #istochniki{padding:clamp(48px,4.6vw,84px) 0}
+.nb-src{border:1.4px solid var(--line);border-radius:var(--r);background:var(--card)}
+.nb-src summary{list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:clamp(22px,2vw,32px) calc(clamp(22px,2vw,32px) + 48px) clamp(22px,2vw,32px) clamp(22px,2vw,32px);position:relative;border-radius:var(--r)}
+.nb-src summary::-webkit-details-marker{display:none}
+.nb-src summary .eyebrow{margin:0}
+.nb-src-t{font-size:clamp(20px,1.5vw,26px);font-weight:300;letter-spacing:-.02em;line-height:1.3;color:var(--t1)}
+.nb-src summary::after{content:"+";position:absolute;right:clamp(22px,2vw,32px);top:50%;width:32px;height:32px;margin-top:-16px;border:1px solid var(--line2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--t2);font-size:18px;line-height:1;transition:border-color .25s}
+.nb-src summary:hover::after{border-color:var(--acc)}
+.nb-src[open] summary::after{content:"−"}
+.nb-base{list-style:none;padding:0 clamp(22px,2vw,32px) clamp(18px,1.6vw,26px);margin:0}
+.nb-base li{position:relative;padding:13px 0 13px 28px;border-top:1px solid var(--line2);color:var(--t2);line-height:1.6;font-size:15px}
+.nb-base li::before{content:"§";position:absolute;left:3px;top:13px;color:var(--acc)}
+
+/* проверочные листы: изменения, пять вопросов, пищевые производства, шаги, ошибки */
+.nb-grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.nb-fact{padding:clamp(22px,2.2vw,34px);color:var(--t2);line-height:1.65}
+.nb-fact b{display:block;color:var(--t1);font-weight:500;font-size:clamp(17px,1.2vw,21px);margin-bottom:8px}
+.nb-qs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.nb-q{padding:clamp(24px,2.4vw,40px)}
+.nb-q-wide{grid-column:1/-1}
+.nb-q h3{display:flex;gap:16px;align-items:baseline;font-size:clamp(21px,1.6vw,28px);font-weight:400;letter-spacing:-.02em;line-height:1.25;margin:0 0 20px;color:var(--t1)}
+.nb-q-n{font-size:14px;font-weight:500;letter-spacing:0;color:var(--acc);flex-shrink:0}
+.nb-quote{margin:0 0 22px;padding:18px 20px;border-left:2px solid var(--acc);background:rgba(124,134,255,.06);border-radius:0 10px 10px 0;color:var(--t1);line-height:1.6;font-size:clamp(15px,1.02vw,17px)}
+.nb-quote-k{display:block;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-bottom:8px}
+.nb-dl{display:grid;grid-template-columns:minmax(120px,.3fr) minmax(0,1fr);margin:0}
+.nb-dl dt{color:var(--t3);font-size:14px;line-height:1.5;padding:12px 16px 12px 0;border-top:1px solid var(--line2)}
+.nb-dl dd{margin:0;color:var(--t2);line-height:1.6;padding:12px 0;border-top:1px solid var(--line2)}
+.nb-q-wide .nb-dl{grid-template-columns:minmax(140px,.16fr) minmax(0,1fr)}
+.nb-q .nb-tbl{margin:12px 0 18px}
+.nb-q-note{color:var(--t2);line-height:1.62;margin:0 0 8px;max-width:1160px}
+.nb-food{margin-top:clamp(28px,2.6vw,44px);padding:clamp(24px,2.4vw,40px)}
+.nb-food h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;line-height:1.3;margin:0 0 12px;color:var(--t1)}
+.nb-food p{margin:0;color:var(--t2);line-height:1.65;max-width:1200px}
+.nb-page .nb-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 18px}
+.nb-errs{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,3vw,56px);max-width:1440px}
+.nb-errs li{position:relative;padding:16px 0 16px 34px;border-top:1px solid var(--line2);color:var(--t2);line-height:1.6}
+.nb-errs li::before,.nb-errs li::after{content:"";position:absolute;left:3px;top:27px;width:14px;height:2px;background:var(--red);transform:rotate(45deg)}
+.nb-errs li::after{transform:rotate(-45deg)}
+
+@media (max-width:1100px){
+  .nb-hero-grid{grid-template-columns:minmax(0,1fr);align-items:start}
+  .nb-check{max-width:620px}
+  .nb-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .nb-qs,.nb-author-wrap{grid-template-columns:minmax(0,1fr)}
+  .nb-page .nb-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .nb-hero{padding:100px 0 48px}
+  .nb-five,.nb-grid2,.nb-errs{grid-template-columns:minmax(0,1fr)}
+  .nb-toc{gap:6px}
+  .nb-toc a{padding:8px 13px;font-size:13px}
+  .nb-check li b{font-size:15px}
+}
+@media (max-width:600px){
+  .nb-links{grid-template-columns:minmax(0,1fr)}
+  .nb-link{min-height:0}
+  .nb-page .nb-steps{grid-template-columns:minmax(0,1fr)}
+  .nb-dl,.nb-q-wide .nb-dl{grid-template-columns:minmax(0,1fr)}
+  .nb-dl dt{padding-bottom:2px}
+  .nb-dl dd{border-top:0;padding-top:2px}
+  .nb-avatar{width:80px;height:80px}
+  .nb-author{align-items:flex-start}
+  .nb-five li{padding-left:22px;padding-top:56px}
+  .nb-five li::before{top:24px}
+  .nb-q h3{flex-direction:column;gap:6px}
+}

@@ -43,11 +43,15 @@ DERAT = 'deratizatsiya'
 VENT = 'ochistka-dezinfektsiya-ventilyatsii'
 SAN = 'sanitarnyy-audit'
 MATERIALS = [  # слова через дефис не переносим (класс nw, как в остальных текстах сайта)
+    ('normativnaya-baza', 'Нормативная база'),  # раздел «Нормативная база» (tools/normativnaya-baza)
     ('materialy/programma-pest-kontrolya', 'Программа <span class="nw">пест-контроля</span>'),
     ('materialy/zhurnal-pest-kontrolya', 'Журнал <span class="nw">пест-контроля</span>'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka', '<span class="nw">Пест-менеджмент</span> или разовая обработка'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp', 'Программа производственного контроля по ХАССП'),
 ]
+FOOTER_MAT_EXTRA = {  # в подвале под пунктом — ещё одна ссылка (в шапке её нет)
+    'normativnaya-baza': ('normativnaya-baza/proverochnye-listy', 'Проверочные листы 2026'),
+}
 SERVICE = [  # блоки главной
     ('etapy', 'Этапы работы'), ('vrediteli', 'Вредители'),
     ('dokumenty', 'Документы для проверок'), ('usloviya', 'Цена'), ('voprosy', 'Вопросы'),
@@ -76,6 +80,8 @@ PAGES = [
     ('materialy/programma-pest-kontrolya/index.html', '../../', 'materialy/programma-pest-kontrolya'),
     ('materialy/zhurnal-pest-kontrolya/index.html', '../../', 'materialy/zhurnal-pest-kontrolya'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html', '../../', 'materialy/programma-proizvodstvennogo-kontrolya-haccp'),
+    ('normativnaya-baza/index.html', '../', 'normativnaya-baza'),
+    ('normativnaya-baza/proverochnye-listy/index.html', '../../', 'normativnaya-baza/proverochnye-listy'),
 ]
 LEGAL = [('privacy/index.html', '../', 'privacy'), ('soglasie/index.html', '../', 'soglasie')]
 
@@ -115,7 +121,7 @@ def build(root, cur, cta_mobile):
     home = root == ''
     in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', VENT, SAN)
     in_ind = any(s == cur for s, _ in INDUSTRIES)
-    in_mat = cur.startswith('materialy')
+    in_mat = cur.startswith('materialy') or cur.startswith('normativnaya-baza')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
     usl_items = ''.join(page_link(root, cur, s, one(t) + ARR) for s, t in USLUGI)
     usl_items += anchor(root, 'podhod', '<span>Пест-контроль по системе IPM</span>' + ARR, 'nav-dd-all')
@@ -155,7 +161,9 @@ def build(root, cur, cta_mobile):
               + li(anchor(root, 'podhod', wrap('<span class="nw">Пест-контроль</span> по системе IPM')))
               + ''.join(li(anchor(root, s, t)) for s, t in SERVICE))
     ft_ind = ''.join(li(page_link(root, cur, s, t)) for s, t in INDUSTRIES)
-    ft_mat = ''.join(li(page_link(root, cur, s, wrap(t))) for s, t in MATERIALS) + li(page_link(root, cur, 'materialy', 'Все материалы'))
+    ft_mat = ''.join(li(page_link(root, cur, s, wrap(t)))
+                     + (li(page_link(root, cur, *FOOTER_MAT_EXTRA[s][:1], wrap(FOOTER_MAT_EXTRA[s][1]))) if s in FOOTER_MAT_EXTRA else '')
+                     for s, t in MATERIALS) + li(page_link(root, cur, 'materialy', 'Все материалы'))
     cols = (f'<div><h4>Услуги</h4><ul>{ft_srv}</ul></div>\n'
             f'      <div><h4>Отрасли</h4><ul>{ft_ind}</ul></div>\n'
             f'      <div><h4>Материалы</h4><ul>{ft_mat}</ul></div>')

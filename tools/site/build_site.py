@@ -7,6 +7,7 @@
   0. tools/gostinitsy/build_page.py — страница «Пест-контроль гостиниц и отелей» из своих исходников;
      tools/sanitarnyy-audit/build_page.py — страница «Санитарный аудит (СЭС-аудит)» из своих исходников;
      tools/dezinfektsiya/build_page.py — страница «Дезинфекция для организаций» из своих исходников;
+     tools/normativnaya-baza/build_pages.py — раздел «Нормативная база» (хаб и «Проверочные листы 2026»);
   1. tools/site/unify.py        — анимации и заголовки в стиле главной, бегущая строка, «Смотрите также», ссылки «Подробнее»;
   2. tools/site/legal_pages.py  — шапка и подвал сайта на страницах политики и согласия;
   3. tools/menu/apply_menu.py   — одинаковые шапка, мобильное меню и подвал на всех страницах;
@@ -32,6 +33,7 @@ SITEMAP = [  # адрес, приоритет
     ('materialy/', '0.6'), ('materialy/programma-pest-kontrolya/', '0.7'),
     ('materialy/zhurnal-pest-kontrolya/', '0.7'), ('materialy/pest-menedzhment-ili-razovaya-obrabotka/', '0.7'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/', '0.7'),
+    ('normativnaya-baza/', '0.7'), ('normativnaya-baza/proverochnye-listy/', '0.7'),
 ]
 
 
@@ -46,6 +48,7 @@ def main():
     run('tools/sanitarnyy-audit/build_page.py')  # санитарный аудит — из своих исходников (tools/sanitarnyy-audit)
     run('tools/sklady/assemble.py')  # страница складов и логистики — из своих исходников (tools/sklady)
     run('tools/dezinfektsiya/build_page.py')  # дезинфекция для организаций — из своих исходников (tools/dezinfektsiya)
+    run('tools/normativnaya-baza/build_pages.py')  # нормативная база и проверочные листы (tools/normativnaya-baza)
     run('tools/site/unify.py')
     run('tools/site/legal_pages.py')
     run('tools/menu/apply_menu.py')
