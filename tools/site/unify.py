@@ -108,6 +108,8 @@ URL = {
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
     'vent': 'ochistka-dezinfektsiya-ventilyatsii/',
     'farma': 'farmatsevticheskie-proizvodstva/',
+    'ppk': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',
+    'rest': 'restorany-i-kafe/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -123,6 +125,8 @@ CARD = {
              'Ночные визиты без закрытия зала, журнал и схема точек в каждом магазине, сводный отчёт по сети.'),
     'hotel': ('Отрасль', 'Пест-контроль гостиниц и отелей',
               'Осмотры номерного фонда, протокол при жалобе гостя на клопов и журнал по проверочному листу Роспотребнадзора.'),
+    'rest': ('Отрасль', 'Пест-контроль ресторанов и кафе',
+             'Визиты после закрытия, гели и ловушки на кухне, журнал и акты по СанПиН для заведений и сетей.'),
     'prog': ('Материал', 'Программа пест-контроля',
              'Образец в PDF и шаблон Word: 7 разделов, оценка пест-риска по зонам и план мероприятий.'),
     'zhur': ('Материал', 'Журнал пест-контроля',
@@ -133,6 +137,8 @@ CARD = {
              'Воздуховоды, кухонные вытяжки и кондиционеры: видео до и после, акт по п. 43 ППР, журнал по МР 3.5.0396-25.'),
     'farma': ('Отрасль', 'Пест-контроль фармацевтического производства',
               'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
+    'ppk': ('Материал', 'Программа производственного контроля по ХАССП',
+            'Что вписать о дезинсекции и дератизации в ППК, правила 2026 года и образец раздела.'),
 }
 
 STRIP_LABELS = {}
@@ -215,6 +221,17 @@ PAGES = {
             ('lucide-pill', 'ТЛФ, стерильные, АФС', 'и фитопрепараты'),
             ('lucide-clock', 'Выезд за 3 часа', 'по сигналу'),
         ])),
+    'restorany-i-kafe/index.html': dict(key='rest', root='../', related=['dezins', 'derat', 'dogovor', 'zhur'], strip=(
+        'Коротко о пест-контроле ресторанов', [
+            ('lucide-clock', 'После закрытия', 'визиты ночью и до открытия'),
+            ('lucide-map-pinned', 'Точки контроля', 'на кухне, в баре и на складе'),
+            ('lucide-ban', 'Без распыления', 'там, где открытый продукт'),
+            ('lucide-notebook-pen', 'Журнал и акт', 'после каждого визита'),
+            ('lucide-file-badge', 'СанПиН 2.3/2.4.4282-26', 'и СанПиН 3.3686-21'),
+            ('lucide-utensils', 'Рестораны, кафе, бары', 'столовые и фуд-корты'),
+            ('lucide-scan-search', 'Бесплатное обследование', 'и расчёт'),
+            ('lucide-shield-check', 'Сети', '— общий график и сводный отчёт'),
+        ])),
     'materialy/index.html': dict(key='mat', root='../', related=['derat', 'dezins', 'dogovor', 'food'], strip=(
         'Документы и практика IPM', [
             ('lucide-file-signature', 'Программа', 'пест-контроля — образец PDF и шаблон Word'),
@@ -258,6 +275,17 @@ PAGES = {
             ('lucide-shield-check', 'Предписания', 'и сигнальный лист персонала'),
             ('lucide-file-badge', 'СанПиН 3.3686-21', 'и ХАССП'),
             ('lucide-crosshair', 'ISO 22000', 'и FSSC 22000'),
+        ])),
+    'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html': dict(key='ppk', root='../../', related=['prog', 'zhur', 'food', 'dogovor'], strip=(
+        'Коротко о программе производственного контроля', [
+            ('lucide-file-signature', 'ППК', '— в произвольной форме, утверждает руководитель'),
+            ('lucide-shield-check', 'Дезинсекция и дератизация', '— процедура ХАССП'),
+            ('lucide-file-badge', 'ТР ТС 021/2011', 'ст. 10 и 11'),
+            ('lucide-scan-search', 'Насекомые', '— обследования не реже 2 раз в месяц'),
+            ('lucide-activity', 'Грызуны', '— ежемесячная оценка'),
+            ('lucide-clipboard-check', 'С 1 сентября 2026', '— новые санитарные правила'),
+            ('lucide-notebook-pen', 'Образец раздела', 'для ППК'),
+            ('lucide-list-checks', 'Подтверждение', '— договор и акты'),
         ])),
 }
 
@@ -449,12 +477,13 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
             {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': SITE},
             {'@type': 'ListItem', 'position': 2, 'name': 'Материалы', 'item': SITE + 'materialy/'}]},
         {'@type': 'CollectionPage', 'name': 'Материалы о пест-контроле для предприятий', 'url': SITE + 'materialy/', 'inLanguage': 'ru-RU',
-         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка.',
+         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка, раздел пест-контроля в программе производственного контроля по ХАССП.',
          'isPartOf': {'@type': 'WebSite', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE},
          'mainEntity': {'@type': 'ItemList', 'itemListElement': [
              {'@type': 'ListItem', 'position': 1, 'url': SITE + 'materialy/programma-pest-kontrolya/', 'name': 'Программа пест-контроля на предприятии: образец PDF, шаблон Word и пример заполнения'},
              {'@type': 'ListItem', 'position': 2, 'url': SITE + 'materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'name': 'Пест-менеджмент или разовая обработка'},
-             {'@type': 'ListItem', 'position': 3, 'url': SITE + 'materialy/zhurnal-pest-kontrolya/', 'name': 'Журнал пест-контроля: образец заполнения, бланк и шаблон'}]},
+             {'@type': 'ListItem', 'position': 3, 'url': SITE + 'materialy/zhurnal-pest-kontrolya/', 'name': 'Журнал пест-контроля: образец заполнения, бланк и шаблон'},
+             {'@type': 'ListItem', 'position': 4, 'url': SITE + 'materialy/programma-proizvodstvennogo-kontrolya-haccp/', 'name': 'Программа производственного контроля по ХАССП: раздел пест-контроля'}]},
          'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE, 'telephone': '+7-495-104-35-70', 'email': 'b2b@pestcontrol-center.ru'}},
     ]}, ensure_ascii=False) + '</script>'
 
@@ -488,6 +517,9 @@ def page_specific(rel, s):
         # номер МР уточнён на странице журнала: «МР 3.5.2.0373-25» не существует (0373-25 — МР 1.2 о косметике);
         # для дезинсекции основа — СанПиН 3.3686-21
         s = s.replace('Определение и нормативы · СанПиН 3.3686-21 и МР 3.5.2.0373-25', 'Определение и нормативы · СанПиН 3.3686-21')
+    if rel in ('dezinsektsiya/index.html', 'dogovor-deratizatsiya-dezinsektsiya/index.html'):
+        # отраслевая карточка общепита — на страницу «Рестораны и кафе» (раньше вела к блоку «Отрасли» на главной)
+        s = re.sub(r'<a href="\.\./#otrasli">(Рестораны(?:,| и)[^<]*)</a>', r'<a href="../restorany-i-kafe/">\1</a>', s)
     if rel == 'dogovor-deratizatsiya-dezinsektsiya/index.html':
         s = s.replace('<div class="d-kind-b"><h3>Дезинсекция</h3>',
                       '<div class="d-kind-b"><h3><a href="../dezinsektsiya/" style="color:inherit;border-bottom:1px solid var(--line2)">Дезинсекция</a></h3>')
@@ -624,6 +656,12 @@ def process_home():
     if 'href="farmatsevticheskie-proizvodstva/"' not in s[a:b]:
         assert a > 0 and s[b - 6:b] == '</div>', 'карточка фармацевтических производств'
         s = s[:b - 6] + f'<a class="ind-more" href="farmatsevticheskie-proizvodstva/">Подробнее о <span class="nw">пест-контроле</span> по GMP{ARR}</a>' + s[b - 6:]
+    # карточка ресторанов ведёт на страницу «Рестораны и кафе»
+    a = s.find('id="otrasl-restorany"')
+    b = s.find('</article>', a)
+    if 'href="restorany-i-kafe/"' not in s[a:b]:
+        assert a > 0 and s[b - 6:b] == '</div>', 'карточка ресторанов'
+        s = s[:b - 6] + f'<a class="ind-more" href="restorany-i-kafe/">Подробнее об обслуживании ресторанов{ARR}</a>' + s[b - 6:]
     # ссылки «Подробнее» в блоках главной
     adds = [
         ('podhod', more_html('Подробнее', [('materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'Пест-менеджмент или разовая обработка')])),

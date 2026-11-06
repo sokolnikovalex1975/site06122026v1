@@ -1,0 +1,54 @@
+
+/* ===== Рестораны и кафе: дополнения к стилям пищевой страницы ===== */
+.f-hero .f-hero-img{object-position:62% 50%}
+.cta-bg{background-image:url(../img/rest-cta.webp);filter:grayscale(.15) brightness(.5)}
+.r-qa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(28px,4.4vw,96px);align-items:start}
+.r-qa .head{margin-bottom:clamp(22px,2vw,34px)}
+.r-def{margin:0;color:var(--t2);font-size:clamp(17px,1.2vw,21px);line-height:1.65;max-width:640px}
+.r-def b{color:var(--t1);font-weight:500}
+.r-facts{margin:0;border-top:1px solid var(--line2)}
+.r-facts>div{display:grid;grid-template-columns:minmax(120px,.32fr) minmax(0,1fr);gap:8px 28px;padding:20px 0;border-bottom:1px solid var(--line2)}
+.r-facts dt{color:var(--acc);font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding-top:4px}
+.r-facts dd{margin:0;color:var(--t1);font-size:clamp(16px,1.08vw,19px);line-height:1.55}
+.d-cards.r-cards4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.f-req.r-cards4 .f-num{font-size:clamp(26px,2vw,38px)}
+.lg-gel{width:9px;height:9px;background:var(--grn);transform:rotate(45deg);margin:0 1px}
+.f-plan .z7.on .zf{fill:rgba(124,134,255,.05);stroke:#7c86ff}
+.r-visit{display:grid;gap:clamp(24px,2.4vw,40px)}
+.r-tabs{display:inline-flex;width:fit-content;max-width:100%;padding:5px;border:1.4px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.02)}
+.r-tabs button{appearance:none;-webkit-appearance:none;border:0;background:transparent;color:var(--t2);font:inherit;font-size:15px;font-weight:500;padding:12px 22px;border-radius:999px;cursor:pointer;transition:background .3s,color .3s;white-space:nowrap}
+.r-tabs button:hover{color:var(--t1)}
+.r-tabs button[aria-selected="true"]{background:var(--acc2);color:#fff}
+.r-tabs button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.r-steps{list-style:none;counter-reset:rs;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.r-panel[hidden]{display:none}
+.r-panel:focus{outline:none}
+.r-panel:focus-visible{outline:2px solid var(--acc);outline-offset:6px;border-radius:6px}
+.r-steps li{position:relative;border-top:2px solid var(--line2);padding-top:20px;line-height:1.55}
+.r-steps li::before{counter-increment:rs;content:"0" counter(rs);display:block;color:var(--acc);font-size:14px;margin-bottom:12px}
+.r-steps li::after{content:"";position:absolute;left:0;top:-2px;height:2px;width:0;background:var(--acc);transition:width .9s var(--ease)}
+.r-in>.r-steps li::after{width:100%}
+.r-in>.r-steps li:nth-child(2)::after{transition-delay:.15s}
+.r-in>.r-steps li:nth-child(3)::after{transition-delay:.3s}
+.r-in>.r-steps li:nth-child(4)::after{transition-delay:.45s}
+.r-steps-fire li::before{color:var(--yel)}
+.r-steps-fire li::after{background:var(--yel)}
+.r-steps b{display:block;font-weight:500;font-size:clamp(17px,1.15vw,20px);margin-bottom:8px}
+.r-steps span{color:var(--t2)}
+.r-docs td:nth-child(3){white-space:nowrap}
+.r-link{color:var(--t1);border-bottom:1px solid var(--line2);transition:border-color .3s,color .3s}
+.r-link:hover,.r-link:focus-visible{color:var(--acc);border-color:var(--acc)}
+.r-prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:clamp(36px,3.4vw,60px)}
+.r-price{display:flex;flex-direction:column}
+.r-price h3{font-size:clamp(18px,1.2vw,22px);font-weight:500;margin:0 0 18px}
+.r-price .r-sum{margin:0 0 18px;color:var(--t1);font-size:clamp(36px,3vw,56px);font-weight:300;letter-spacing:-.04em;line-height:1}
+.r-price .r-sum span,.r-price .r-sum small{font-size:15px;letter-spacing:0;color:var(--t3);font-weight:400}
+.r-price .r-sum span{margin-right:4px}
+.r-price .r-sum.r-sum-t{font-size:clamp(24px,1.9vw,34px);letter-spacing:-.025em;line-height:1.15}
+.r-price-main{border-top:2px solid rgba(124,134,255,.6)}
+.r-price-more .f-pricecard p{color:var(--t2);line-height:1.6;margin:0 0 26px}
+@media (max-width:1100px){.r-qa{grid-template-columns:minmax(0,1fr)}.d-cards.r-cards4,.r-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.r-prices{grid-template-columns:minmax(0,1fr)}.r-price .r-sum{font-size:clamp(34px,6vw,48px)}}
+@media (max-width:760px){.cta-bg{background-image:url(../img/rest-cta-m.webp)}.r-docs td:nth-child(3){white-space:normal}}
+@media (max-width:600px){.d-cards.r-cards4,.r-steps{grid-template-columns:minmax(0,1fr)}.r-facts>div{grid-template-columns:minmax(0,1fr);gap:6px;padding:16px 0}.r-tabs{display:flex;width:100%}.r-tabs button{flex:1;padding:12px 10px;font-size:14px;white-space:normal;line-height:1.25}}
+/* узкие телефоны (320–420 px): колонка первого экрана не шире экрана, длинная кнопка переносится на две строки */
+@media (max-width:420px){.f-hero .wrap{grid-template-columns:minmax(0,1fr)}.f-hero .hero-ctas .btn{white-space:normal;padding:0 18px}.f-hero .hero-ctas .btn-t{white-space:normal;text-align:center}}

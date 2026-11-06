@@ -31,7 +31,7 @@ USLUGI = [
 INDUSTRIES = [
     ('pishchevoe-proizvodstvo', 'Пищевые производства'),
     ('magaziny-i-torgovye-seti', 'Магазины и торговые сети'),
-    ('#otrasl-restorany', 'Рестораны и кафе'),
+    ('restorany-i-kafe', 'Рестораны и кафе'),
     ('#otrasl-sklady', 'Склады и логистика'),
     ('farmatsevticheskie-proizvodstva', 'Фармацевтические производства'),
     ('gostinitsy', 'Гостиницы и отели'),
@@ -43,6 +43,7 @@ MATERIALS = [  # слова через дефис не переносим (кл�
     ('materialy/programma-pest-kontrolya', 'Программа <span class="nw">пест-контроля</span>'),
     ('materialy/zhurnal-pest-kontrolya', 'Журнал <span class="nw">пест-контроля</span>'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka', '<span class="nw">Пест-менеджмент</span> или разовая обработка'),
+    ('materialy/programma-proizvodstvennogo-kontrolya-haccp', 'Программа производственного контроля по ХАССП'),
 ]
 SERVICE = [  # блоки главной
     ('etapy', 'Этапы работы'), ('vrediteli', 'Вредители'),
@@ -60,6 +61,7 @@ PAGES = [
     (VENT + '/index.html', '../', VENT),
     (DOGOVOR + '/index.html', '../', DOGOVOR),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
+    ('restorany-i-kafe/index.html', '../', 'restorany-i-kafe'),
     ('magaziny-i-torgovye-seti/index.html', '../', 'magaziny-i-torgovye-seti'),
     ('gostinitsy/index.html', '../', 'gostinitsy'),
     ('farmatsevticheskie-proizvodstva/index.html', '../', 'farmatsevticheskie-proizvodstva'),
@@ -67,6 +69,7 @@ PAGES = [
     ('materialy/index.html', '../', 'materialy'),
     ('materialy/programma-pest-kontrolya/index.html', '../../', 'materialy/programma-pest-kontrolya'),
     ('materialy/zhurnal-pest-kontrolya/index.html', '../../', 'materialy/zhurnal-pest-kontrolya'),
+    ('materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html', '../../', 'materialy/programma-proizvodstvennogo-kontrolya-haccp'),
 ]
 LEGAL = [('privacy/index.html', '../', 'privacy'), ('soglasie/index.html', '../', 'soglasie')]
 
@@ -169,7 +172,7 @@ def main():
         s = sub1(r'<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">.*?</nav>', mm, s)
         s = sub1(r'<div><h4>(?:Объекты|Отрасли|Услуги)</h4>.*?(?=\n\s*<div><h4>Контакты</h4>)', cols, s)
         # нижняя строка подвала: ссылка на согласие рядом с политикой
-        if 'Согласие на обработку данных</a>' not in s:
+        if not re.search('Согласие на[ \u00a0]обработку данных</a>', s):  # с неразрывным пробелом тоже
             s, n = re.subn(r'(<div class="fb">.*?<a href="((?:\.\./)*)privacy/">Политика конфиденциальности</a>)',
                            lambda m: m.group(1) + f'<a href="{m.group(2)}soglasie/">Согласие на обработку данных</a>',
                            s, count=1, flags=re.S)
