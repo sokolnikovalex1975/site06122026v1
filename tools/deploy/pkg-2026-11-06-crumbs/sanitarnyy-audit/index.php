@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Санитарный аудит (СЭС-аудит) в Москве и МО — ПЕСТКОНТРОЛЬ Центр</title>
+<meta name="description" content="Санитарный аудит (СЭС-аудит) в Москве и области по СанПиН 2026 года и проверочным листам Роспотребнадзора: смывы и пробы воздуха, акт с реестром нарушений и планом устранения. От 9 000 ₽.">
+<link rel="canonical" href="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ПЕСТКОНТРОЛЬ Центр">
+<meta property="og:url" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/">
+<meta property="og:title" content="Санитарный аудит (СЭС-аудит) предприятия в Москве и области">
+<meta property="og:description" content="Санитарный аудит (СЭС-аудит) в Москве и области по СанПиН 2026 года и проверочным листам Роспотребнадзора: смывы и пробы воздуха, акт с реестром нарушений и планом устранения. От 9 000 ₽.">
+<meta property="og:image" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/san-og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Санитарный врач проверяет температуру в холодильнике на кухне ресторана">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2309090b' stroke='%237c86ff' stroke-width='2'/%3E%3Cpath d='M16 7l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10v-5z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" href="../fonts/inter-ru-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" media="(min-width:761px)" imagesrcset="../img/san-hero-1440.webp 1440w, ../img/san-hero.webp 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(max-width:760px)" imagesrcset="../img/san-hero-mob-760.webp 760w, ../img/san-hero-mob.webp 1024w" imagesizes="100vw" fetchpriority="high">
+<script>
+  /* начальные состояния анимаций — только при работающем JS; страховка — через 4 с всё показывается.
+     Заставка — один раз за посещение: при переходе по ссылке с якорем и между страницами сайта её нет */
+  (function (d) {
+    d.classList.add('js');
+    try { if (location.hash || sessionStorage.getItem('pc-intro')) d.classList.add('no-intro'); else sessionStorage.setItem('pc-intro', '1'); }
+    catch (e) { if (location.hash) d.classList.add('no-intro'); }
+    setTimeout(function () { if (!d.classList.contains('anim-ready')) d.classList.add('anim-fail'); }, 4000);
+  })(document.documentElement);
+</script>
+<link rel="stylesheet" href="../style.css?v=20261106s2">
+<style>.d-page .s{padding:clamp(64px,7vw,128px) 0;border-top:1px solid var(--line)}.d-crumbs{padding-top:calc(clamp(68px,6vw,115px) + 20px);font-size:14px;color:var(--t3);display:flex;flex-wrap:wrap;gap:8px}.d-crumbs a{color:var(--t2)}.d-crumbs a:hover{color:var(--t1)}.d-hero{padding:clamp(28px,3vw,56px) 0 clamp(64px,7vw,128px)}.d-hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,4vw,80px);align-items:center}.d-hero h1{font-size:clamp(34px,4.2vw,80px);line-height:1.05;letter-spacing:-.045em;font-weight:300;margin:18px 0 0}.d-ticks{list-style:none;padding:0;margin:28px 0 34px;display:grid;gap:12px}.d-ticks li{position:relative;padding-left:30px;line-height:1.5}.d-ticks li::before{content:"";position:absolute;left:2px;top:.42em;width:13px;height:7px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}.d-btns{display:flex;flex-wrap:wrap;gap:12px}.ph-img{aspect-ratio:4/3;border:1.5px dashed var(--line2);border-radius:var(--r);display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;color:var(--t3);font-size:14px;line-height:1.5;background:rgba(255,255,255,.02)}.ph-doc{aspect-ratio:3/4;max-width:340px}.d-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.d-card{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(22px,2vw,34px)}.d-card h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;margin:0 0 12px}.d-card p{color:var(--t2);line-height:1.6;margin:0}.d-note{color:var(--t2);margin:24px 0 0;line-height:1.6}.d-strong{color:var(--t1);font-size:clamp(18px,1.3vw,22px)}.d-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:clamp(28px,4vw,80px);align-items:start}.d-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,80px);align-items:start}.d-two .head{margin-bottom:0}.d-two .d-ticks{margin:0}.d-terms{list-style:none;counter-reset:t;padding:0;margin:0;border-top:1px solid var(--line2)}.d-terms li{display:grid;grid-template-columns:44px minmax(0,.42fr) minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line2);line-height:1.55}.d-terms li::before{counter-increment:t;content:counter(t,decimal-leading-zero);color:var(--t3)}.d-terms b{font-weight:500}.d-terms span{color:var(--t2)}.d-doc{display:grid;gap:16px;justify-items:start}.d-small{font-size:14px;color:var(--t3);margin:0}.d-steps{list-style:none;counter-reset:st;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}.d-steps li{border-top:2px solid var(--line2);padding-top:18px;line-height:1.55}.d-steps li::before{counter-increment:st;content:"0" counter(st);display:block;color:var(--acc);font-size:14px;margin-bottom:12px}.d-steps b{display:block;font-weight:500;margin-bottom:8px}.d-steps span{color:var(--t2)}.d-table{width:100%;border-collapse:collapse;line-height:1.5}.d-table th,.d-table td{text-align:left;vertical-align:top;padding:16px 20px 16px 0;border-bottom:1px solid var(--line2)}.d-table th{color:var(--t3);font-weight:400;font-size:14px}.d-table td{color:var(--t2)}.d-table td:first-child{color:var(--t1)}.d-vs td:first-child{color:var(--t2)}.d-vs th:last-child,.d-vs td:last-child{color:var(--t1);background:rgba(124,134,255,.07);padding-left:20px}.d-cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}.d-chips{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}.d-chips a{display:inline-block;padding:12px 18px;border:1px solid var(--line2);border-radius:999px;color:var(--t1);transition:border-color .2s}.d-chips a:hover{border-color:var(--acc)}.tbd{background:rgba(255,209,102,.14);color:#ffd166;border-radius:4px;padding:0 .2em}.d-page .cta .sub{margin-bottom:30px}@media (max-width:1100px){.d-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:860px){.d-hero .wrap,.d-split,.d-two,.d-cols2,.d-cards{grid-template-columns:minmax(0,1fr)}.d-terms li{grid-template-columns:36px minmax(0,1fr);gap:6px 12px}.d-terms span{grid-column:2}.ph-doc{display:none}}@media (max-width:600px){.d-steps{grid-template-columns:minmax(0,1fr)}.d-table thead{display:none}.d-table,.d-table tbody,.d-table tr,.d-table td{display:block;width:100%}.d-table tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.d-table td{border:0;padding:10px 0}.d-table td+td{border-top:1px solid var(--line)}.d-table td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}.d-vs td:last-child{background:none;padding-left:0}.d-page .form .btn-lg{padding:0 16px}}.hdr .nav a{white-space:nowrap}.f-lazy:not(.bg-in){background-image:none!important}
+.f-hero .hero-media{overflow:hidden}.f-hero .hero-media::after{content:"";position:absolute;inset:0 0 auto;height:200px;background:linear-gradient(180deg,rgba(9,9,11,.72),rgba(9,9,11,0));pointer-events:none}.f-hero .f-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:64% 50%;filter:saturate(.95)}.f-hero::before{background:linear-gradient(90deg,rgba(9,9,11,.92) 0%,rgba(9,9,11,.84) 40%,rgba(9,9,11,.32) 58%,rgba(9,9,11,0) 74%)}.f-hero::after{height:22%}.f-hero p.lead{max-width:600px}.f-crumbs{display:flex;flex-wrap:wrap;gap:8px;font-size:14px;color:var(--t3);margin:0 0 26px}.f-crumbs a{color:var(--t2)}.f-crumbs a:hover{color:var(--t1)}.f-urgent{margin:22px 0 0;color:var(--t2);font-size:15px}.f-urgent::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--grn);margin-right:10px;vertical-align:middle}
+.f-checks{position:relative;padding:clamp(28px,3vw,56px) 0 clamp(56px,6vw,110px)}.f-check.panel{max-width:none}.f-check-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,80px);padding:clamp(24px,3vw,52px)}.f-check-t{font-size:clamp(28px,2.6vw,48px);line-height:1.08;letter-spacing:-.04em;font-weight:300;margin:0}.f-check-res{margin:22px 0 10px;color:var(--t2);font-size:15px}.f-check-res b{font-size:clamp(40px,3.4vw,64px);font-weight:300;letter-spacing:-.04em;color:var(--acc);margin-right:6px;line-height:1;transition:color .3s}.f-check-res.full b{color:var(--grn)}.f-check-note{color:var(--t2);line-height:1.6;margin:0 0 28px;max-width:440px}.f-check-list{list-style:none;margin:0;padding:0;display:grid;align-content:center;border-top:1px solid var(--line)}.f-check-list li{border-bottom:1px solid var(--line)}.f-check-list label{display:flex;gap:18px;align-items:center;padding:18px 4px;cursor:pointer;font-size:clamp(16px,1.15vw,20px);line-height:1.4;color:var(--t2);transition:color .25s}.f-check-list label:hover{color:var(--t1)}.f-check-list input{appearance:none;-webkit-appearance:none;flex:none;width:26px;height:26px;margin:0;border-radius:8px;border:1.4px solid var(--line2);background:rgba(255,255,255,.03) center/14px no-repeat;cursor:pointer;transition:background-color .25s,border-color .25s}.f-check-list input:checked{background-color:var(--acc2);border-color:var(--acc);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}.f-check-list input:focus-visible{outline:2px solid var(--acc);outline-offset:3px}.f-check-list input:checked+span{color:var(--t1)}
+.d-card .f-num{font-size:clamp(28px,2.4vw,44px);line-height:1.05;letter-spacing:-.035em;font-weight:300;color:var(--acc);margin:0 0 16px}.f-req .d-card{border-top:2px solid rgba(124,134,255,.45)}
+.f-zmap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(20px,2.4vw,44px);align-items:start}.f-plan{margin:0;padding:clamp(14px,1.4vw,26px)}.f-plan svg{display:block;width:100%;height:auto}.f-plan svg *{pointer-events:none}.f-plan .zf,.f-plan .bdg{pointer-events:all}.f-plan .zf{fill:transparent;transition:fill .3s,stroke .3s}.f-plan .z.on .zf{fill:rgba(124,134,255,.14)}.f-plan .z6.on .zf{fill:rgba(124,134,255,.05);stroke:#7c86ff}.f-plan .bdg circle{fill:#09090b;stroke:#7c86ff;stroke-width:2;transition:fill .3s}.f-plan .bdg text{fill:#7c86ff;font:500 22px Inter,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central;transition:fill .3s}.f-plan .bdg.on circle{fill:#7c86ff}.f-plan .bdg.on text{fill:#fff}.f-plan .lbl text{fill:#84848e;font:400 15px Inter,system-ui,sans-serif}.f-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 4px 2px;font-size:13px;color:var(--t3)}.f-legend span{display:inline-flex;align-items:center;gap:9px}.f-legend i{flex:none;display:inline-block}.lg-st{width:11px;height:11px;border-radius:2px;background:var(--yel)}.lg-tr{width:11px;height:11px;border-radius:50%;background:var(--acc)}.lg-uv{width:20px;height:7px;border-radius:4px;background:#c4b5fd;box-shadow:0 0 8px rgba(167,139,250,.9)}.lg-fl{width:24px;border-top:2px dashed var(--acc)}.f-zlist{list-style:none;padding:0;margin:0;display:grid;gap:10px;counter-reset:zl}.f-zlist li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:2px 14px;align-items:start;padding:15px 18px;border:1.4px solid var(--line);border-radius:var(--r);background:var(--card);transition:border-color .3s,background .3s;outline:none;cursor:default}.f-zlist li::before{counter-increment:zl;content:counter(zl);grid-row:1/span 2;width:34px;height:34px;border-radius:50%;border:1.4px solid var(--acc);color:var(--acc);display:flex;align-items:center;justify-content:center;font-size:15px;transition:background .3s,color .3s}.f-zlist b{font-weight:500;font-size:clamp(16px,1.05vw,19px);line-height:1.3}.f-zlist span{color:var(--t2);font-size:clamp(14px,.9vw,16px);line-height:1.5}.f-zlist li.on,.f-zlist li:hover,.f-zlist li:focus-visible{border-color:rgba(124,134,255,.6);background:rgba(124,134,255,.08)}.f-zlist li.on::before{background:var(--acc);color:#fff}
+.f-steps4{grid-template-columns:repeat(4,minmax(0,1fr))}.d-steps li.f-alert{border-top-color:var(--yel)}.d-steps li.f-alert::before{color:var(--yel)}
+.inds.f-inds{grid-template-columns:repeat(6,minmax(0,1fr))}.inds.f-inds>*{grid-column:span 2}.inds.f-inds>:nth-child(n+4){grid-column:span 3}.inds.f-inds>:nth-child(n+4) .ind-img{aspect-ratio:834/275}
+.f-lbl{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:4px 0 8px}.f-mb{margin:0 0 4px}.f-pricecard .f-price{margin:22px 0 26px;color:var(--t2);line-height:1.6}.f-pricecard .f-price b{display:block;color:var(--t1);font-weight:400;font-size:clamp(20px,1.6vw,28px);letter-spacing:-.02em;line-height:1.25;margin-bottom:6px}.d-card .btn{max-width:100%;white-space:normal;text-align:center;line-height:1.25}
+@media (max-width:1100px){.f-steps4{grid-template-columns:repeat(2,minmax(0,1fr))}.f-zmap,.f-check-in{grid-template-columns:minmax(0,1fr)}.inds.f-inds{grid-template-columns:repeat(2,minmax(0,1fr))}.inds.f-inds>*,.inds.f-inds>:nth-child(n+4){grid-column:auto}.inds.f-inds>:nth-child(n+4) .ind-img{aspect-ratio:556/275}.inds.f-inds>:last-child{grid-column:1/-1}.inds.f-inds>:last-child .ind-img{aspect-ratio:834/275}}
+@media (max-width:900px){.hdr{background:rgba(0,0,0,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--line)}.f-hero{display:block;min-height:0;padding:68px 0 clamp(44px,8vw,72px)}.f-hero::before,.f-hero::after{display:none}.f-hero .hero-media{position:relative;inset:auto;width:100%;aspect-ratio:16/9}.f-hero .hero-media::after{height:100%;background:linear-gradient(180deg,rgba(0,0,0,0) 62%,#000 100%)}.f-hero .f-hero-img{object-position:70% 50%;filter:none}.f-hero .wrap{margin-top:-24px}.f-hero p.lead{max-width:760px}}@media (max-width:760px){.f-hero .hero-media{aspect-ratio:4/3}.f-hero .f-hero-img{object-position:50% 50%}.f-crumbs{font-size:13px;margin-bottom:18px}.inds.f-inds{grid-template-columns:minmax(0,1fr)}.inds.f-inds>:last-child{grid-column:auto}.inds.f-inds>:last-child .ind-img{aspect-ratio:556/275}}
+@media (max-width:600px){.f-steps4{grid-template-columns:minmax(0,1fr)}.d-btns .btn,.d-card .btn,.f-check .btn{width:100%;white-space:normal;text-align:center;line-height:1.25}.d-page .btn-lg{padding:0 16px}.f-plan .lbl{display:none}.f-check-in{padding:24px 20px}.f-check-list label{padding:15px 2px;gap:14px}.f-zlist li{padding:14px}}
+@media (max-width:400px){.hdr .wrap{gap:10px}.hdr-right{gap:8px}.logo{gap:8px}.logo-mark{width:34px;height:34px}.logo-name{font-size:15px}.phone i,.burger{width:40px;height:40px}}@media (max-width:340px){.logo-sub{display:none}}
+/* ===== Страница «Санитарный аудит (СЭС-аудит)» (/sanitarnyy-audit/): дополнения к стилям отраслевой страницы ===== */
+.sa-page .f-hero .f-hero-img{object-position:66% 50%}
+.sa-hero-list{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px;max-width:640px}
+.sa-hero-list li{position:relative;padding-left:28px;color:#c4c4cc;line-height:1.5;font-size:clamp(15px,.95vw,18px)}
+.sa-hero-list li::before{content:"";position:absolute;left:2px;top:.45em;width:12px;height:6px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}
+.sa-trust{display:grid;gap:4px;margin:28px 0 0;font-size:14px;line-height:1.5;color:#a1a1aa;max-width:700px}
+.sa-trust a,.sa-upd a,.sa-src a,.sa-principles a,.sa-short a{color:var(--t2);border-bottom:1px solid var(--line2);transition:color .25s,border-color .25s}
+.sa-trust a{color:#c4c4cc;white-space:nowrap}
+.sa-principles a{white-space:nowrap}
+.sa-trust a:hover,.sa-upd a:hover,.sa-src a:hover,.sa-principles a:hover,.sa-short a:hover{color:var(--t1);border-color:var(--acc)}
+
+/* определение и «коротко» */
+.sa-def{margin:0 0 clamp(28px,3vw,44px);padding:clamp(18px,1.6vw,26px) clamp(20px,2vw,30px);border:1px solid var(--line2);border-left:2px solid var(--acc);border-radius:var(--r);background:var(--card);color:var(--t2);line-height:1.65;max-width:1100px;font-size:clamp(16px,1.05vw,19px)}
+.sa-def b{color:var(--t1);font-weight:500}
+.d-table.sa-short{max-width:1100px}
+.sa-short th{width:240px;color:var(--t3);font-size:15px}
+.d-table.sa-short td,.d-table.sa-short td:first-child{color:#c4c4cc}
+.sa-upd{margin:20px 0 0;font-size:14px;line-height:1.6;color:var(--t3)}
+
+/* нормы 2026 */
+.sa-doc{color:var(--acc);font-weight:500;white-space:nowrap}
+@media (min-width:901px){.sa-norms th:nth-child(1){width:17%}.sa-norms th:nth-child(2){width:15%}.sa-norms th:nth-child(3){width:17%}}
+.sa-h3{font-size:clamp(24px,2vw,36px);line-height:1.15;font-weight:300;letter-spacing:-.03em;margin:clamp(52px,4.6vw,84px) 0 clamp(20px,1.8vw,28px)}
+.sa-page .f-req{margin-top:0}
+
+/* лабораторные исследования */
+.sa-lab{margin-top:clamp(56px,5vw,96px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,3.2vw,60px);align-items:center}
+.sa-lab-text .sa-h3{margin-top:0}
+.sa-lab-text>p{color:var(--t2);line-height:1.65;margin:0;max-width:620px}
+.sa-lab-text .d-ticks{margin:24px 0 0}
+.sa-lab-text .d-ticks li{color:#c4c4cc}
+.sa-lab-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.sa-photo{margin:0}
+.sa-photo img{display:block;width:100%;height:auto;aspect-ratio:900/542;object-fit:cover;border-radius:var(--r);border:1px solid var(--line2);background:#18181b}
+.sa-photo figcaption{margin-top:10px;font-size:13px;line-height:1.45;color:var(--t3)}
+
+/* типовые нарушения */
+.sa-viol{margin-top:clamp(52px,4.6vw,84px);padding:clamp(24px,2.4vw,40px)}
+.sa-viol .sa-h3{margin:0 0 10px}
+.sa-src{margin:0 0 6px;font-size:14px;line-height:1.6;color:var(--t3);max-width:900px}
+.sa-viol ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 44px}
+.sa-viol li{position:relative;padding-left:22px;color:var(--t2);line-height:1.55}
+.sa-viol li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--red)}
+
+/* что вы получите */
+.sa-docs{list-style:none;counter-reset:sd;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.sa-docs li{background:var(--card);border:1px solid var(--line2);border-top:2px solid rgba(124,134,255,.45);border-radius:var(--r);padding:clamp(20px,1.8vw,28px);line-height:1.5}
+.sa-docs li::before{counter-increment:sd;content:"0" counter(sd);display:block;color:var(--acc);font-size:14px;margin-bottom:14px}
+.sa-docs b{display:block;font-weight:500;line-height:1.3;margin-bottom:8px;font-size:clamp(16px,1.1vw,19px)}
+.sa-docs span{color:var(--t2);font-size:15px;line-height:1.55}
+.sa-reg{font-size:15px;margin-top:18px}
+.sa-reg td:first-child{color:var(--t3);width:34px}
+.sa-reg td:nth-child(2){color:var(--t1)}
+.sa-risk{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid;font-size:13px;line-height:1.5;white-space:nowrap}
+.sa-hi{color:var(--red);border-color:rgba(255,100,103,.45);background:rgba(255,100,103,.08)}
+.sa-mid{color:var(--yel);border-color:rgba(253,199,0,.4);background:rgba(253,199,0,.06)}
+@media (min-width:901px){.sa-reg th:nth-child(4){width:15%}.sa-reg th:nth-child(5){width:96px}.sa-reg th:nth-child(7){width:84px}}
+
+/* штрафы */
+@media (min-width:901px){.sa-fines th:nth-child(1){width:15%}.sa-fines th:nth-child(3){width:24%}.sa-fines th:nth-child(4){width:20%}}
+.sa-fines td:nth-child(3){color:var(--t1)}
+
+/* когда придёт Роспотребнадзор */
+.sa-when{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sa-when .d-card{border-top:2px solid rgba(124,134,255,.45)}
+.sa-when .d-card h3{font-size:clamp(19px,1.35vw,24px);line-height:1.25}
+.sa-when .d-card p{font-size:15px}
+
+/* сравнение */
+.sa-cmp th[scope=row]{color:var(--t1);font-weight:500;font-size:15px;width:15%}
+.sa-cmp thead th:nth-child(2){color:var(--acc)}
+.sa-cmp td:nth-child(2){color:var(--t1);background:rgba(124,134,255,.06)}
+.d-table.sa-cmp td:first-child{color:var(--t2)}
+@media (min-width:901px){.sa-cmp thead th:nth-child(2),.sa-cmp td:nth-child(2){padding-left:16px;padding-right:16px}}
+
+/* отрасли */
+.sa-inds .d-card{display:flex;flex-direction:column}
+.sa-ico{margin:0 0 18px;color:var(--acc);line-height:0}
+.sa-ico svg{width:28px;height:28px;stroke-width:1.6}
+.sa-more{align-self:flex-start;margin-top:auto;padding-top:18px;color:var(--t1);font-size:15px;line-height:1.4}
+.sa-more span{border-bottom:1px solid var(--line2);transition:border-color .25s}
+.sa-more:hover span{border-color:var(--acc)}
+
+/* стоимость */
+.sa-price{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,3vw,56px);align-items:start}
+.sa-ptable th:last-child,.sa-ptable td:last-child{text-align:right;padding-right:0}
+.d-table.sa-ptable td:last-child{color:var(--t1);font-size:clamp(16px,1.1vw,19px)}
+.d-table.sa-ptable td:first-child{color:#c4c4cc}
+.sa-pnotes{padding:clamp(24px,2.4vw,40px)}
+.sa-pnotes p{margin:0 0 18px;color:var(--t2);line-height:1.6}
+.sa-pnotes p b{display:block;color:var(--t1);font-weight:500;margin-bottom:4px}
+.sa-pnotes .sa-free{border-top:1px solid var(--line2);padding-top:18px}
+.sa-pnotes .btn{width:100%;margin-top:6px;white-space:normal;text-align:center;line-height:1.25}
+
+/* автор и принципы */
+.sa-author-wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(24px,3vw,56px);align-items:start}
+.sa-author{display:flex;gap:20px;align-items:center;padding:clamp(24px,2.4vw,36px)}
+.sa-avatar{flex:none;display:block;width:112px;height:112px;border-radius:50%;object-fit:cover;background:#18181b;border:1px solid rgba(124,134,255,.4)}
+.sa-author p{margin:0}
+.sa-author-name{font-size:clamp(20px,1.5vw,26px);color:var(--t1);letter-spacing:-.02em;margin-bottom:4px!important}
+.sa-author-role{color:var(--t2);margin-bottom:4px!important}
+.sa-author-date{color:var(--t3);font-size:14px}
+.sa-author-note{color:var(--t3);font-size:13px;margin-top:6px!important}
+.sa-principles{list-style:none;padding:0;margin:0;border-top:1px solid var(--line2)}
+.sa-principles li{padding:18px 0;border-bottom:1px solid var(--line2);color:var(--t2);line-height:1.6}
+.sa-principles b{color:var(--t1);font-weight:500}
+
+/* нормативная база */
+.sa-base{list-style:none;padding:0;margin:0;border-top:1px solid var(--line2);max-width:1200px}
+.sa-base li{position:relative;padding:14px 0 14px 30px;border-bottom:1px solid var(--line2);color:var(--t2);line-height:1.6;font-size:15px}
+.sa-base li::before{content:"§";position:absolute;left:4px;top:14px;color:var(--acc)}
+.sa-base a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+.sa-base a:hover{border-color:var(--t1)}
+
+@media (max-width:1100px){
+.sa-lab{grid-template-columns:minmax(0,1fr)}
+.sa-docs{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sa-docs li:last-child{grid-column:1/-1}
+.sa-when{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* широкие таблицы — карточками уже на планшете */
+@media (max-width:900px){
+.sa-norms thead,.sa-reg thead,.sa-cmp thead,.sa-fines thead{display:none}
+.sa-norms,.sa-norms tbody,.sa-norms tr,.sa-norms td,.sa-reg,.sa-reg tbody,.sa-reg tr,.sa-reg td,.sa-cmp,.sa-cmp tbody,.sa-cmp tr,.sa-cmp td,.sa-cmp th,.sa-fines,.sa-fines tbody,.sa-fines tr,.sa-fines td{display:block;width:100%}
+.sa-norms tr,.sa-reg tr,.sa-cmp tr,.sa-fines tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 18px;margin-bottom:12px}
+.sa-norms td,.sa-reg td,.sa-cmp td,.sa-fines td{border:0;padding:10px 0}
+.sa-norms td+td,.sa-reg td+td,.sa-cmp td+td,.sa-fines td+td{border-top:1px solid var(--line)}
+.sa-norms td::before,.sa-reg td::before,.sa-cmp td::before,.sa-fines td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}
+.sa-norms tr,.sa-fines tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
+.sa-norms td:nth-child(1),.sa-norms td:nth-child(4),.sa-fines td:nth-child(1),.sa-fines td:nth-child(2){grid-column:1/-1}
+.sa-norms td:nth-child(1),.sa-fines td:nth-child(1){font-size:17px;color:var(--t1)}
+.sa-norms td:nth-child(1)::before,.sa-fines td:nth-child(1)::before,.sa-fines td:nth-child(2)::before{content:none}
+.sa-fines td:nth-child(2){border-top:0;padding-top:0}
+.sa-reg tr{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;align-items:start}
+.sa-reg td:first-child{display:none}
+.sa-reg td:nth-child(2){grid-column:1;grid-row:1;border-top:0;font-size:17px}
+.sa-reg td:nth-child(5){grid-column:2;grid-row:1;border-top:0;padding-top:12px}
+.sa-reg td:nth-child(2)::before,.sa-reg td:nth-child(5)::before{content:none}
+.sa-reg td:nth-child(3),.sa-reg td:nth-child(4),.sa-reg td:nth-child(6),.sa-reg td:nth-child(7){grid-column:1/-1}
+.sa-cmp th[scope=row]{width:100%;border:0;padding:12px 0 8px;font-size:17px}
+.sa-cmp td:nth-child(2){background:none;border-top:1px solid var(--line)}
+.sa-cmp td:nth-child(2)::before{color:var(--acc)}
+.sa-price,.sa-author-wrap{grid-template-columns:minmax(0,1fr)}
+.sa-viol ul{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+.sa-page .f-hero .f-hero-img{object-position:50% 50%}
+.sa-trust{font-size:13px}
+}
+@media (max-width:600px){
+.sa-norms tr{grid-template-columns:minmax(0,1fr)}
+.sa-short th{display:block;width:100%;border:0;padding:12px 0 2px;font-size:13px}
+.d-table.sa-short td{padding:0 0 12px}
+.d-table.sa-short tr{padding:4px 16px}
+.sa-lab-media{grid-template-columns:minmax(0,1fr)}
+.sa-docs,.sa-when{grid-template-columns:minmax(0,1fr)}
+.sa-docs li:last-child{grid-column:auto}
+/* прайс остаётся таблицей из двух колонок */
+.d-table.sa-ptable{display:table}
+.sa-ptable thead{display:table-header-group}
+.sa-ptable tbody{display:table-row-group}
+.d-table.sa-ptable tr{display:table-row;border:0;border-radius:0;padding:0;margin:0}
+.d-table.sa-ptable th,.d-table.sa-ptable td{display:table-cell;width:auto;padding:14px 14px 14px 0;border-bottom:1px solid var(--line2)}
+.d-table.sa-ptable td+td{border-top:0}
+.d-table.sa-ptable td::before{content:none}
+.d-table.sa-ptable td:last-child{padding-right:0;font-size:16px;width:44%}
+.sa-author{align-items:flex-start}
+.sa-avatar{width:80px;height:80px}
+.sa-pnotes{padding:22px 20px}
+.sa-viol{padding:22px 20px}
+}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, {"@type": "ListItem", "position": 2, "name": "Санитарный аудит (СЭС-аудит)", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/"}]}, {"@type": "Service", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/#service", "name": "Санитарный аудит (СЭС-аудит)", "alternateName": ["СЭС-аудит", "Санитарно-эпидемиологический аудит"], "serviceType": "Санитарный аудит (СЭС-аудит) по СанПиН и проверочным листам Роспотребнадзора", "description": "Санитарный аудит (СЭС-аудит) в Москве и области по СанПиН 2026 года и проверочным листам Роспотребнадзора: смывы и пробы воздуха, акт с реестром нарушений и планом устранения. От 9 000 ₽.", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/", "provider": {"@type": "Organization", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org", "name": "ПЕСТКОНТРОЛЬ Центр", "legalName": "ООО «Центр дезинфекционных услуг»", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/", "telephone": "+7 495 104-35-70", "email": "b2b@pestcontrol-center.ru"}, "areaServed": [{"@type": "City", "name": "Москва"}, {"@type": "AdministrativeArea", "name": "Московская область"}], "audience": {"@type": "BusinessAudience", "audienceType": "Рестораны и кафе, магазины и торговые сети, пищевые и фармацевтические производства, склады, гостиницы"}, "offers": {"@type": "AggregateOffer", "priceCurrency": "RUB", "lowPrice": 9000, "description": "Стоимость зависит от вида и площади объекта; смывы и пробы воздуха входят в стоимость аудита"}}, {"@type": "WebPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/#webpage", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/", "name": "Санитарный аудит (СЭС-аудит) в Москве и МО — ПЕСТКОНТРОЛЬ Центр", "description": "Санитарный аудит (СЭС-аудит) в Москве и области по СанПиН 2026 года и проверочным листам Роспотребнадзора: смывы и пробы воздуха, акт с реестром нарушений и планом устранения. От 9 000 ₽.", "inLanguage": "ru", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "Марианна Семерина", "jobTitle": "Санитарный врач"}, "about": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/san-hero.webp", "width": 1920, "height": 1072}}, {"@type": "FAQPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/#faq", "mainEntity": [{"@type": "Question", "name": "Что такое СЭС-аудит?", "acceptedAnswer": {"@type": "Answer", "text": "Это добровольная проверка предприятия на соответствие санитарным нормам, которую проводит независимый специалист до прихода Роспотребнадзора. По итогам вы получаете акт с нарушениями и планом их устранения; штрафов и предписаний аудит не влечёт. Название осталось от санитарно-эпидемиологических станций (СЭС), функции которых сегодня выполняет Роспотребнадзор."}}, {"@type": "Question", "name": "Обязателен ли санитарный аудит?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Обязателен производственный контроль: его проводят сами предприниматели и юридические лица (ст. 11 и 32 Федерального закона № 52-ФЗ). Аудит показывает, как этот контроль работает на деле."}}, {"@type": "Question", "name": "Чем санитарный аудит отличается от проверки Роспотребнадзора?", "acceptedAnswer": {"@type": "Answer", "text": "Аудит проводит приглашённый специалист по вашему заказу, проверку — инспектор по основаниям 248-ФЗ. После аудита остаются акт и план устранения, после проверки — акт, а при нарушениях — предписание и протокол. Результаты аудита видит только заказчик."}}, {"@type": "Question", "name": "Сколько стоит санитарный аудит в Москве?", "acceptedAnswer": {"@type": "Answer", "text": "От 9 000 ₽ за кафе без кухни до 20 000 ₽ и выше за пищевое производство; смывы и пробы воздуха входят в стоимость. Точную сумму называем после короткого разговора о площади и виде деятельности."}}, {"@type": "Question", "name": "Сколько длится аудит?", "acceptedAnswer": {"@type": "Answer", "text": "Выезд занимает от 2 до 6 часов в зависимости от площади и числа зон, смену при этом не останавливаем. Акт с протоколами лабораторных исследований передаём через 3 рабочих дня."}}, {"@type": "Question", "name": "Какие документы подготовить к аудиту?", "acceptedAnswer": {"@type": "Answer", "text": "Программу производственного контроля; договоры на вывоз отходов, дезинфекцию, дезинсекцию и дератизацию, стирку санитарной одежды и лабораторные исследования; личные медицинские книжки; журналы (температура холодильников, бракераж, здоровье персонала, пест-контроль); протоколы лабораторных исследований; документы ХАССП. Если чего-то нет, это тоже результат аудита."}}, {"@type": "Question", "name": "Нужно ли менять программу производственного контроля после 1 сентября 2026 года?", "acceptedAnswer": {"@type": "Answer", "text": "Да, если она ссылается на отменённые СанПиН 2.3/2.4.3590-20, СП 2.3.6.3668-20, СП 2.1.3678-20 или СП 2.2.3670-20. С 1 сентября 2026 года действуют новые правила, и Центр гигиенического образования населения Роспотребнадзора напоминает: «Не забудьте внести изменения в программу производственного контроля»."}}, {"@type": "Question", "name": "Гарантируете, что проверка пройдёт без штрафов?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, и честный подрядчик такого не обещает: решение принимает инспектор, а проверка не ограничивается вопросами проверочного листа. Аудит снижает риск: нарушения, которые вы устранили заранее, инспектор уже не найдёт."}}, {"@type": "Question", "name": "Проверяете ли вы по проверочным листам Роспотребнадзора?", "acceptedAnswer": {"@type": "Answer", "text": "Да. С октября 2026 года действуют новые формы (приказы Роспотребнадзора от 20.07.2026 № 578 и № 580): в листе для общепита 142 вопроса, для торговли пищевой продукцией — 181. Мы проходим лист вашего вида деятельности и добавляем требования, которые инспектор вправе проверить сверх него."}}, {"@type": "Question", "name": "Делаете ли вы лабораторные исследования?", "acceptedAnswer": {"@type": "Answer", "text": "Да, смывы и пробы воздуха входят в стоимость аудита. Во время выезда отбираем смывы с рабочих поверхностей, оборудования, инвентаря и рук персонала и пробы воздуха в помещениях. Протоколы прикладываем к акту и сверяем с планом лабораторных исследований из вашей программы производственного контроля."}}, {"@type": "Question", "name": "Засчитывается ли стоимость аудита, если потом заключить договор на пест-контроль?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Если после аудита вы заключаете с нами договор на пест-контроль, стоимость аудита засчитываем в счёт оплаты обслуживания."}}, {"@type": "Question", "name": "Можно ли провести аудит сети магазинов или ресторанов?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Проверяем объекты по одному чек-листу и сводим результаты в общую таблицу, чтобы были видны нарушения, которые повторяются по всей сети."}}, {"@type": "Question", "name": "Работаете ли вы с частными лицами?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Санитарный аудит проводим для организаций и ИП в Москве и Московской области."}}]}]}</script>
+<style id="m-crumbs">/* крошки на телефоне не показываем: для SEO хватает BreadcrumbList и ссылок в HTML */@media (max-width:900px){.d-crumbs,.f-crumbs{display:none!important}}</style>
+</head>
+<body class="d-page sa-page">
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<!-- ============ INTRO ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-in">
+    <svg class="intro-mark" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linejoin="round"><path class="im-shield" pathLength="100" d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z" stroke="#fff"/><circle class="im-c" pathLength="100" cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path class="im-x" pathLength="100" d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg>
+    <div class="intro-word"><span>ПЕСТКОНТРОЛЬ</span><b>Центр</b></div>
+    <div class="intro-bar"><i></i></div>
+  </div>
+</div>
+
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+<div class="cursor" aria-hidden="true"><i class="cursor-dot"></i><i class="cursor-ring"></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span>
+      <span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <div class="nav-dd"><button class="nav-dd-btn active" type="button" aria-expanded="false" aria-controls="nav-uslugi">Услуги<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-uslugi"><a href="../dezinfektsiya/">Дезинфекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../deratizatsiya/">Дератизация для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dezinsektsiya/">Дезинсекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="./" aria-current="page"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#podhod" class="nav-dd-all"><span>Пест-контроль по системе IPM</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-otrasli">Отрасли<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-otrasli"><a href="../pishchevoe-proizvodstvo/">Пищевые производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../restorany-i-kafe/">Рестораны и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../sklady-i-logistika/">Склады и логистика<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../gostinitsy/">Гостиницы и отели<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasli" class="nav-dd-all">Все отрасли<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор</a><a href="../#podhod">Метод IPM</a><a href="../#usloviya">Цена</a><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-materialy">Материалы<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-materialy"><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/" class="nav-dd-all">Все материалы<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+    </nav>
+    <div class="hdr-right">
+      <a class="phone" href="tel:+74951043570" aria-label="Позвонить: +7 (495) 104-35-70"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></i><span>+7 (495) 104-35-70</span></a>
+      <div class="msg">
+        <a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a>
+        <a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a>
+      </div>
+      <a href="#zayavka" class="btn btn-w btn-sm" data-magnet><span class="btn-t">Бесплатный выезд</span></a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">
+  <div class="mm-group open" data-open><button class="mm-toggle" type="button" aria-expanded="true" aria-controls="mm-uslugi">Услуги<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-uslugi"><div><a href="../dezinfektsiya/">Дезинфекция для организаций</a><a href="../deratizatsiya/">Дератизация для организаций</a><a href="../dezinsektsiya/">Дезинсекция для организаций</a><a href="./" aria-current="page"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание</a><a href="../#podhod"><span class="nw">Пест-контроль</span> по системе IPM</a></div></div></div><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-otrasli">Отрасли<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-otrasli"><div><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети</a><a href="../restorany-i-kafe/">Рестораны и кафе</a><a href="../sklady-i-logistika/">Склады и логистика</a><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a><a href="../gostinitsy/">Гостиницы и отели</a><a href="../#otrasli">Все отрасли</a></div></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор <small>на дератизацию и дезинсекцию</small></a><a href="../#podhod">Метод IPM</a><a href="../#usloviya">Цена</a><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-materialy">Материалы<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-materialy"><div><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a><a href="../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a><a href="../materialy/">Все материалы</a></div></div></div>
+  <a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Заказать бесплатное обследование</span></a>
+</nav>
+
+<main id="main" tabindex="-1">
+<section class="hero f-hero" id="hero">
+  <div class="hero-media"><picture><source media="(max-width:760px)" srcset="../img/san-hero-mob-760.webp 760w, ../img/san-hero-mob.webp 1024w" sizes="100vw" width="1024" height="768"><img class="f-hero-img" src="../img/san-hero.webp" srcset="../img/san-hero-1440.webp 1440w, ../img/san-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="Санитарный врач с планшетом проверяет термометром температуру в холодильнике на кухне ресторана" fetchpriority="high" decoding="async"></picture></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <nav class="f-crumbs" aria-label="Навигационная цепочка" data-h><a href="../">Главная</a><span aria-hidden="true">→</span><span aria-current="page">Санитарный аудит (<span class="nw">СЭС-аудит</span>)</span></nav>
+      <span class="badge" data-h><span class="dot"></span>Для организаций · Москва и Московская область</span>
+      <h1><span class="ln"><span>Санитарный аудит</span></span> <span class="ln"><span><em>(<span class="nw">СЭС-аудит</span>)</em></span></span> <span class="ln"><span>предприятия</span></span></h1>
+      <p class="lead" data-h>Проверяем объект так же, как это сделает инспектор Роспотребнадзора: по проверочным листам, обновлённым в октябре 2026 года, и по новым СанПиН. В акте — что нарушено, каким пунктом это установлено и что исправить в первую очередь.</p>
+      <ul class="sa-hero-list">
+        <li>Проверочный лист вашего вида деятельности: общепит, торговля, гостиница, условия труда</li>
+        <li>Реестр нарушений с фото, пунктом нормы, уровнем риска и сроком устранения</li>
+        <li>Дератизацию и дезинсекцию проверяем глубже всего — это наша основная работа</li>
+      </ul>
+      <div class="hero-ctas" data-h>
+        <a href="#zayavka" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Рассчитать стоимость аудита</span></a>
+        <a href="tel:+74951043570" class="btn btn-o btn-lg" data-magnet><span class="btn-t">+7 (495) <span class="nw">104-35-70</span></span></a>
+      </div>
+      <p class="sa-trust"><span>Лицензия на дезинфекционную деятельность <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211" target="_blank" rel="noopener">№ Л064-00111-77/01942445</a></span><span>Смывы и пробы воздуха входят в стоимость&nbsp;· Акт через 3 рабочих дня</span></p>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-label="Коротко о санитарном аудите">
+  <div class="strip-track" id="stripTrack">
+    <div class="strip-set">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clipboard-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="m9 14 2 2 4-4" /> </svg><b>Проверочные листы</b> — приказы № 578 и № 580</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88" /> <circle cx="6" cy="14" r="3" /> </svg><b>СанПиН 2026</b> — нормы с 1 сентября 2026</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-flask-conical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /> <path d="M6.453 15h11.094" /> <path d="M8.5 2h7" /> </svg><b>Смывы и пробы воздуха</b> — в стоимости</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /> </svg><b>Реестр нарушений</b> — с фото и пунктом нормы</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Выезд 2–6 часов</b> — акт через 3 рабочих дня</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-crosshair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <line x1="22" x2="18" y1="12" y2="12" /> <line x1="6" x2="2" y1="12" y2="12" /> <line x1="12" x2="12" y1="6" y2="2" /> <line x1="12" x2="12" y1="22" y2="18" /> </svg><b><span class="nw">Пест-контроль</span></b> — проверяем глубже всего</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg><b>Лицензия</b> № Л064-00111-77/01942445</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><b>Конфиденциально</b> — результат только у заказчика</div>
+    </div>
+    <div class="strip-set" aria-hidden="true">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clipboard-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="m9 14 2 2 4-4" /> </svg><b>Проверочные листы</b> — приказы № 578 и № 580</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88" /> <circle cx="6" cy="14" r="3" /> </svg><b>СанПиН 2026</b> — нормы с 1 сентября 2026</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-flask-conical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /> <path d="M6.453 15h11.094" /> <path d="M8.5 2h7" /> </svg><b>Смывы и пробы воздуха</b> — в стоимости</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /> </svg><b>Реестр нарушений</b> — с фото и пунктом нормы</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Выезд 2–6 часов</b> — акт через 3 рабочих дня</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-crosshair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <line x1="22" x2="18" y1="12" y2="12" /> <line x1="6" x2="2" y1="12" y2="12" /> <line x1="12" x2="12" y1="6" y2="2" /> <line x1="12" x2="12" y1="22" y2="18" /> </svg><b><span class="nw">Пест-контроль</span></b> — проверяем глубже всего</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg><b>Лицензия</b> № Л064-00111-77/01942445</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><b>Конфиденциально</b> — результат только у заказчика</div>
+    </div>
+  </div>
+</div>
+
+<section class="s" id="chto-takoe">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Коротко</div><h2 data-split>Что такое санитарный аудит <em>(<span class="nw">СЭС-аудит</span>)</em></h2></div>
+    <p class="sa-def" data-fade><b>Санитарный аудит (<span class="nw">СЭС-аудит</span>)</b> — добровольная независимая проверка предприятия на соответствие <span class="nw">санитарно-эпидемиологическим</span> требованиям: СанПиН и санитарным правилам, техническим регламентам ЕАЭС и проверочным листам Роспотребнадзора. Его проводит не государственный инспектор, а приглашённый специалист, поэтому по итогам аудита не бывает штрафов и предписаний. Результат — акт с перечнем несоответствий, протоколами лабораторных исследований и планом устранения; его получает только заказчик.</p>
+    <table class="d-table sa-short" data-fade>
+      <caption class="sr-only">Санитарный аудит коротко</caption>
+      <tbody>
+        <tr><th scope="row">Кому нужен</th><td>ресторанам и кафе, магазинам и торговым сетям, пищевым производствам, складам, фармацевтическим производствам, гостиницам</td></tr>
+        <tr><th scope="row">Когда заказывают</th><td>перед проверкой или профилактическим визитом, при открытии объекта, при переходе на СанПиН 2026 года, перед аудитом торговой сети, после предписания или жалобы</td></tr>
+        <tr><th scope="row">Сколько длится</th><td>выезд от 2 до 6 часов в зависимости от площади, акт через 3 рабочих дня</td></tr>
+        <tr><th scope="row">Что вы получаете</th><td>акт аудита, протоколы лабораторных исследований, реестр несоответствий, перечень документов, план устранения</td></tr>
+        <tr><th scope="row">Сколько стоит</th><td>от 9 000 ₽, смывы и пробы воздуха входят в стоимость — подробнее в блоке <a href="#stoimost">«Стоимость»</a></td></tr>
+        <tr><th scope="row">Чем не является</th><td>не проверка Роспотребнадзора, не «заключение СЭС» и не покупка готовых журналов</td></tr>
+      </tbody>
+    </table>
+    <p class="sa-upd" data-fade>Обновлено 06.11.2026 · Нормативная база проверена на 06.11.2026 · Автор: <a href="#avtor">Марианна Семерина, санитарный врач</a></p>
+  </div>
+</section>
+
+<section class="s" id="normy-2026">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Требования 2026</div><h2 data-split>Новые СанПиН и проверочные листы <em>2026 года</em></h2><p class="sub" data-fade>С 1 сентября 2026 года шесть санитарных правил, действовавших с 2021 года, заменены новыми. Новые документы утверждены 2 июня 2026 года и действуют до 1 сентября 2032 года. Программы производственного контроля, инструкции и журналы, где остались ссылки на отменённые документы, нужно актуализировать.</p></div>
+    <table class="d-table sa-norms" data-fade>
+      <thead><tr><th scope="col">Сфера</th><th scope="col">Было до 01.09.2026</th><th scope="col">Действует с 01.09.2026</th><th scope="col">На что смотрим при аудите</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Сфера">Общественное питание</td><td data-l="Было до 01.09.2026">СанПиН <span class="nw">2.3/2.4.3590-20</span></td><td data-l="Действует с 01.09.2026"><b class="sa-doc">СанПиН <span class="nw">2.3/2.4.4282-26</span></b></td><td data-l="На что смотрим при аудите">производственный контроль на принципах ХАССП (п. 4); документы на продукцию, которую продают вне предприятия (п. 7); на раздаче — не дольше 3 часов для блюд, требующих разогревания, запрет продавать готовые блюда на следующий день и замораживать нереализованные (п. 32); сведения об аллергенах (п. 43); кейтеринг — ярлык с датой и часом изготовления и не более 3 часов в изотермической таре (п. 55)</td></tr>
+        <tr><td data-l="Сфера">Торговля пищевой продукцией, рынки</td><td data-l="Было до 01.09.2026">СП <span class="nw">2.3.6.3668-20</span></td><td data-l="Действует с 01.09.2026"><b class="sa-doc">СП <span class="nw">2.3.6.4281-26</span></b></td><td data-l="На что смотрим при аудите">раздельное хранение пищевой и непищевой продукции, запрет продажи продукции с истёкшим сроком годности, дополнительный контроль температуры в отделах готовой еды, выпечки и салатов, уборка всех помещений с дезсредствами не реже раза в месяц, медкнижки, отсутствие насекомых и грызунов</td></tr>
+        <tr><td data-l="Сфера">Эксплуатация помещений, гостиницы и услуги</td><td data-l="Было до 01.09.2026">СП <span class="nw">2.1.3678-20</span></td><td data-l="Действует с 01.09.2026"><b class="sa-doc">СП <span class="nw">2.1.4284-26</span></b></td><td data-l="На что смотрим при аудите">водоснабжение, воздухообмен, освещение, сбор отходов, уборка. Здания, введённые до 01.09.2026, эксплуатируются по своей проектной документации</td></tr>
+        <tr><td data-l="Сфера">Условия труда</td><td data-l="Было до 01.09.2026">СП <span class="nw">2.2.3670-20</span></td><td data-l="Действует с 01.09.2026"><b class="sa-doc">СП <span class="nw">2.2.4285-26</span></b></td><td data-l="На что смотрим при аудите">микроклимат, освещённость, шум и вибрация на рабочих местах</td></tr>
+      </tbody>
+    </table>
+    <p class="d-note" data-fade>Ещё два новых документа — для детских организаций (СП <span class="nw">2.4.2.4283-26</span>) и транспорта (СП <span class="nw">2.5.4286-26</span>) — к отраслям этой страницы не относятся. <b>Продолжают действовать:</b> СанПиН <span class="nw">3.3686-21</span> (профилактика инфекционных болезней, в том числе дезинфекция, дезинсекция и дератизация) — до 01.09.2027; СанПиН <span class="nw">2.1.3684-21</span> (содержание территорий, водоснабжение, отходы, эксплуатация производственных и общественных помещений) — до 01.03.2027; <span class="nw">ТР ТС 021/2011</span> «О безопасности пищевой продукции».</p>
+    <h3 class="sa-h3" data-fade>С октября 2026 года — <em>новые проверочные листы</em></h3>
+    <div class="d-cards f-req" data-group="cards">
+      <article class="d-card"><p class="f-num">142 вопроса</p><p>Проверочный лист для общественного питания — приложение № 2 к приказу Роспотребнадзора от 20.07.2026 № 580, применяется с 5 октября 2026 года.</p></article>
+      <article class="d-card"><p class="f-num">181 вопрос</p><p>Лист для торговых объектов и рынков, реализующих пищевую продукцию, — приложение № 1 к тому же приказу.</p></article>
+      <article class="d-card"><p class="f-num">Шире листа</p><p>Плановая проверка не ограничивается вопросами листа — это прямо сказано в п. 2 приказа № 580. Поэтому аудит шире <span class="nw">чек-листа</span>.</p></article>
+    </div>
+    <p class="d-note" data-fade>Гостиницы, непродовольственная торговля, условия труда и другие сферы проверяют по листам приказа Роспотребнадзора от 20.07.2026 № 578 — он применяется с 4 октября 2026 года. Прежний приказ № 808 утратил силу. Каждый вопрос листа ссылается на конкретный пункт нормы, и по этим вопросам мы строим аудит.</p>
+  </div>
+</section>
+
+<section class="s" id="razdely">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Состав аудита</div><h2 data-split>Что проверяем: <em>10 разделов</em> санитарного аудита</h2><p class="sub" data-fade>Начинаем с проверочного листа вашего вида деятельности и добавляем требования, которые инспектор вправе оценить сверх листа.</p></div>
+    <ol class="d-terms sa-terms" data-group="steps">
+      <li><b>Документы и договоры</b><span>уведомление о начале деятельности; программа производственного контроля и её ссылки на нормы 2026 года; договоры на вывоз отходов, дезинфекцию, дезинсекцию и дератизацию, стирку санитарной одежды, обслуживание вентиляции, лабораторные исследования</span></li>
+      <li><b>Персонал</b><span>личные медицинские книжки, медосмотры, гигиеническая подготовка и аттестация, прививки, санитарная одежда</span></li>
+      <li><b>Производственный контроль и ХАССП</b><span>план лабораторных исследований и его выполнение, журналы (температура холодильников, бракераж, здоровье персонала), процедуры ХАССП и корректирующие действия</span></li>
+      <li><b>Помещения и поточность</b><span>встречные потоки сырья и готовой продукции, грязной и чистой посуды; состояние стен, полов и потолков — можно ли их мыть и дезинфицировать</span></li>
+      <li><b>Оборудование и инвентарь</b><span>маркировка разделочного инвентаря, исправность холодильного оборудования, моечные ванны, раковины для мытья рук</span></li>
+      <li><b>Приёмка, хранение, сроки</b><span>сопроводительные документы, температура и влажность хранения, товарное соседство, сроки годности, маркировка</span></li>
+      <li><b>Уборка и дезинфекция</b><span>графики уборок, дезинфицирующие средства, их запас и инструкции, генеральные уборки</span></li>
+      <li><b>Инженерные системы</b><span>вентиляция, холодное и горячее водоснабжение, канализация, освещение</span></li>
+      <li><b>Отходы</b><span>контейнеры и площадка, пищевые отходы, периодичность вывоза</span></li>
+      <li><b><span class="nw">Пест-контроль</span></b><span>договор и лицензия исполнителя, схема точек контроля, журнал и акты, ежемесячная оценка на объектах особого эпидемиологического значения (п. 110 СанПиН <span class="nw">3.3686-21</span>), сетки, уплотнители и доводчики, следы грызунов и насекомых</span></li>
+    </ol>
+    <div class="sa-lab" id="laboratoriya">
+      <div class="sa-lab-text">
+        <h3 class="sa-h3" data-fade>Смывы и пробы воздуха — <em>в стоимости аудита</em></h3>
+        <p data-fade>Лабораторные исследования входят в аудит. Во время выезда отбираем смывы и пробы воздуха, набор и число проб подбираем под вид объекта и вашу программу производственного контроля. Протоколы прикладываем к акту.</p>
+        <ul class="d-ticks" data-group="ctalist">
+          <li>Смывы с рабочих поверхностей, оборудования и инвентаря</li>
+          <li>Смывы с рук персонала</li>
+          <li>Пробы воздуха в помещениях объекта</li>
+          <li>Протоколы — в составе акта, вместе с выводами по разделам</li>
+        </ul>
+      </div>
+      <div class="sa-lab-media" data-fade>
+        <figure class="sa-photo"><img src="../img/san-swab.webp" srcset="../img/san-swab-480.webp 480w, ../img/san-swab-720.webp 720w, ../img/san-swab.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 45vw, 30vw" width="900" height="542" loading="lazy" decoding="async" alt="Специалист в перчатках отбирает смыв с разделочной доски на кухне"><figcaption>Смыв с рабочей поверхности</figcaption></figure>
+        <figure class="sa-photo"><img src="../img/san-air.webp" srcset="../img/san-air-480.webp 480w, ../img/san-air-720.webp 720w, ../img/san-air.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 45vw, 30vw" width="900" height="542" loading="lazy" decoding="async" alt="Санитарный врач устанавливает чашку Петри в пробоотборник воздуха в цехе"><figcaption>Отбор пробы воздуха</figcaption></figure>
+      </div>
+    </div>
+    <div class="card sa-viol" data-fade>
+      <h3 class="sa-h3">Типовые нарушения, которые называет <em>сам Роспотребнадзор</em></h3>
+      <p class="sa-src">Общественное питание, по данным <a href="https://cgon.rospotrebnadzor.ru/biznesu/articles/tipovye-narusheniya-sanitarno-epidemiologicheskikh-trebovaniy-k-organizatsii-pitaniya-naseleniya/" target="_blank" rel="noopener">Центра гигиенического образования населения Роспотребнадзора</a></p>
+      <ul>
+        <li>продукты хранят не при той температуре, которую указал изготовитель;</li>
+        <li>не разработаны процедуры ХАССП, лабораторные исследования проводят не в полном объёме или не с той периодичностью, что в программе производственного контроля;</li>
+        <li>дефекты стен, пола и потолков, которые мешают ежедневной влажной уборке и дезинфекции;</li>
+        <li>нарушена поточность, инвентарь и оборудование не промаркированы;</li>
+        <li>у персонала нет медицинских книжек, прививок или гигиенической подготовки;</li>
+        <li>в обороте продукция с истёкшим сроком годности;</li>
+        <li>нет дезинфицирующих средств для уборки.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="kak-prohodit">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Порядок работы</div><h2 data-split>Как проходит <em>санитарный аудит</em></h2></div>
+    <ol class="d-steps sa-steps" data-group="steps">
+      <li><b>Заявка</b><span>Короткий разговор: вид деятельности, площадь, цель аудита (проверка, новые нормы, открытие, требование сети) и удобная дата. Называем стоимость.</span></li>
+      <li><b>Документы заранее</b><span>Присылаем список, сканы можно отправить почтой или в мессенджер. На объекте остаётся проверить то, чего не видно по бумагам.</span></li>
+      <li><b>Выезд</b><span>Обход по проверочному листу вашего вида деятельности: фото, замеры температуры в холодильном оборудовании, осмотр точек контроля вредителей, отбор смывов и проб воздуха, разговор с ответственным за производственный контроль. Смену не останавливаем. Выезд занимает от 2 до 6 часов.</span></li>
+      <li><b>Акт</b><span>Через 3 рабочих дня передаём акт с протоколами лабораторных исследований, реестр несоответствий, перечень документов и план устранения.</span></li>
+      <li><b>Разбор</b><span>Проходим план с руководителем по приоритетам: что сделать сразу, что за 30 дней, что в плановом порядке. Повторную сверку после устранения проводим по запросу.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="rezultat">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Результат</div><h2 data-split>Что вы получите <em>после аудита</em></h2></div>
+    <ol class="sa-docs" data-fade>
+      <li><b>Акт санитарного аудита</b><span>объект, дата, что проверяли, вывод по каждому разделу</span></li>
+      <li><b>Протоколы лабораторных исследований</b><span>результаты смывов и проб воздуха по каждой точке отбора</span></li>
+      <li><b>Реестр несоответствий</b><span>каждое нарушение с фото, ссылкой на пункт нормы, уровнем риска и сроком устранения</span></li>
+      <li><b>Перечень документов</b><span>что есть, чего не хватает, что ссылается на отменённые нормы</span></li>
+      <li><b>План устранения</b><span>что сделать сразу, за 30 дней и в плановом порядке, кто отвечает</span></li>
+    </ol>
+    <h3 class="sa-h3" data-fade>Так выглядит <em>реестр несоответствий</em></h3>
+    <p class="sa-src" data-fade>Пример формата — строки показывают, как оформлен реестр, это не данные клиента.</p>
+    <table class="d-table sa-reg" data-fade>
+      <thead><tr><th scope="col">№</th><th scope="col">Зона</th><th scope="col">Что обнаружено</th><th scope="col">Требование</th><th scope="col">Риск</th><th scope="col">Что сделать</th><th scope="col">Срок</th></tr></thead>
+      <tbody>
+        <tr><td data-l="№">1</td><td data-l="Зона">Документы</td><td data-l="Что обнаружено">Программа производственного контроля ссылается на отменённый СанПиН <span class="nw">2.3/2.4.3590-20</span></td><td data-l="Требование">СанПиН <span class="nw">2.3/2.4.4282-26</span>, п. 4</td><td data-l="Риск"><span class="sa-risk sa-mid">Средний</span></td><td data-l="Что сделать">Актуализировать программу и процедуры ХАССП</td><td data-l="Срок">30 дней</td></tr>
+        <tr><td data-l="№">2</td><td data-l="Зона">Раздача</td><td data-l="Что обнаружено">Нереализованные готовые блюда замораживают для продажи в другие дни</td><td data-l="Требование">СанПиН <span class="nw">2.3/2.4.4282-26</span>, п. 32</td><td data-l="Риск"><span class="sa-risk sa-hi">Высокий</span></td><td data-l="Что сделать">Прекратить, ввести учёт и списание остатков</td><td data-l="Срок">Сразу</td></tr>
+        <tr><td data-l="№">3</td><td data-l="Зона">Меню</td><td data-l="Что обнаружено">Нет сведений об аллергенах в готовых блюдах</td><td data-l="Требование">СанПиН <span class="nw">2.3/2.4.4282-26</span>, п. 43</td><td data-l="Риск"><span class="sa-risk sa-mid">Средний</span></td><td data-l="Что сделать">Дополнить меню и технологические карты</td><td data-l="Срок">7 дней</td></tr>
+        <tr><td data-l="№">4</td><td data-l="Зона">Склад</td><td data-l="Что обнаружено">Ежемесячной оценки численности грызунов нет, журнал не ведётся</td><td data-l="Требование">СанПиН <span class="nw">3.3686-21</span>, п. 110</td><td data-l="Риск"><span class="sa-risk sa-hi">Высокий</span></td><td data-l="Что сделать">Ввести схему точек контроля, журнал и ежемесячную оценку</td><td data-l="Срок">7 дней</td></tr>
+        <tr><td data-l="№">5</td><td data-l="Зона">Договоры</td><td data-l="Что обнаружено">Дератизацию выполняет организация без лицензии</td><td data-l="Требование">Федеральный закон № <span class="nw">99-ФЗ</span>, ст. 12, ч. 1, п. 59</td><td data-l="Риск"><span class="sa-risk sa-hi">Высокий</span></td><td data-l="Что сделать">Сменить исполнителя, проверить лицензию в реестре Роспотребнадзора</td><td data-l="Срок">Сразу</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="s" id="shtrafy">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Ответственность</div><h2 data-split>Чем грозят санитарные нарушения: <em>штрафы по КоАП</em></h2></div>
+    <table class="d-table sa-fines" data-fade>
+      <thead><tr><th scope="col">Статья КоАП</th><th scope="col">За что</th><th scope="col">Юридические лица</th><th scope="col">Должностные лица</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Статья КоАП">6.3, ч. 1</td><td data-l="За что">нарушение санитарного законодательства, невыполнение <span class="nw">санитарно-противоэпидемических</span> мероприятий</td><td data-l="Юридические лица">10 000–20 000 ₽ или приостановление деятельности до 90 суток</td><td data-l="Должностные лица">500–1 000 ₽</td></tr>
+        <tr><td data-l="Статья КоАП">6.4</td><td data-l="За что">нарушение санитарных требований к эксплуатации помещений, зданий и сооружений</td><td data-l="Юридические лица">10 000–20 000 ₽ или приостановление до 90 суток</td><td data-l="Должностные лица">1 000–2 000 ₽</td></tr>
+        <tr><td data-l="Статья КоАП">6.6</td><td data-l="За что">нарушение санитарных требований к питанию населения в ресторанах, кафе, столовых</td><td data-l="Юридические лица">30 000–50 000 ₽ или приостановление до 90 суток</td><td data-l="Должностные лица">5 000–10 000 ₽</td></tr>
+        <tr><td data-l="Статья КоАП">14.43, ч. 1</td><td data-l="За что">нарушение требований технических регламентов, в том числе <span class="nw">ТР ТС 021/2011</span></td><td data-l="Юридические лица">100 000–300 000 ₽</td><td data-l="Должностные лица">10 000–20 000 ₽</td></tr>
+        <tr><td data-l="Статья КоАП">14.43, ч. 4 — с 01.09.2026</td><td data-l="За что">продажа маркированного товара с истёкшим сроком годности после запрета из системы мониторинга</td><td data-l="Юридические лица">20 000 ₽ за каждую единицу</td><td data-l="Должностные лица">—</td></tr>
+        <tr><td data-l="Статья КоАП">19.5, ч. 1</td><td data-l="За что">невыполнение предписания в срок</td><td data-l="Юридические лица">10 000–20 000 ₽</td><td data-l="Должностные лица">1 000–2 000 ₽ или дисквалификация до 3 лет</td></tr>
+      </tbody>
+    </table>
+    <p class="d-note" data-fade>Малому и среднему бизнесу штраф за нарушение, впервые выявленное при госконтроле, могут заменить предупреждением — но только если нет вреда и угрозы вреда жизни и здоровью людей (ст. 4.1.1 и ч. 2 ст. 3.4 КоАП). КоАП РФ — по состоянию на 06.11.2026.</p>
+  </div>
+</section>
+
+<section class="s" id="proverki">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Проверки</div><h2 data-split>Когда Роспотребнадзор может прийти <em>в 2026 году</em></h2></div>
+    <div class="sa-when" data-group="cards">
+      <article class="d-card"><h3>Плановая проверка</h3><p>До 1 января 2030 года в планы включают только объекты чрезвычайно высокого и высокого риска (п. 11(3) постановления Правительства РФ № 336).</p></article>
+      <article class="d-card"><h3>Обязательный профилактический визит</h3><p>Проводится по категории риска и после уведомления о начале деятельности — не позднее чем через 6 месяцев. Отказаться нельзя, предупреждают не позднее чем за 24 часа. Инспектор вправе осмотреть объект, запросить документы и отобрать пробы. Если нарушения не устранены до конца визита, выдаёт предписание (ст. 52.1 <span class="nw">248-ФЗ</span>).</p></article>
+      <article class="d-card"><h3>Внеплановая проверка</h3><p>Основания: сведения о вреде или угрозе вреда (в том числе из обращений), индикаторы риска, истёкший срок предписания, работа без уведомления о начале деятельности, уклонение от обязательного профилактического визита (ст. 57 <span class="nw">248-ФЗ</span>).</p></article>
+      <article class="d-card"><h3>Визит по вашей заявке</h3><p>Профилактический визит можно запросить самому (ч. 3 ст. 52 <span class="nw">248-ФЗ</span>). Аудит перед ним показывает, что исправить заранее.</p></article>
+    </div>
+    <p class="d-note" data-fade>Поставщиков торговых сетей проверяют и сами сети по своим требованиям. Санитарный аудит закрывает ту же базу: документы, поточность, ХАССП, <span class="nw">пест-контроль</span>.</p>
+  </div>
+</section>
+
+<section class="s" id="raznitsa">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Сравнение</div><h2 data-split>Аудит, проверка, визит и производственный контроль — <em>в чём разница</em></h2></div>
+    <table class="d-table sa-cmp" data-fade>
+      <thead><tr><th scope="col"><span class="sr-only">Параметр</span></th><th scope="col">Санитарный аудит</th><th scope="col">Проверка Роспотребнадзора</th><th scope="col">Профилактический визит</th><th scope="col">Производственный контроль</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Кто проводит</th><td data-l="Санитарный аудит">приглашённый специалист</td><td data-l="Проверка Роспотребнадзора">инспектор</td><td data-l="Профилактический визит">инспектор</td><td data-l="Производственный контроль">само предприятие, лаборатория — по договору</td></tr>
+        <tr><th scope="row">Обязателен ли</th><td data-l="Санитарный аудит">нет, по вашему заказу</td><td data-l="Проверка Роспотребнадзора">по основаниям <span class="nw">248-ФЗ</span></td><td data-l="Профилактический визит">обязательный — по ст. 52.1 <span class="nw">248-ФЗ</span>, можно запросить самим</td><td data-l="Производственный контроль">да (ст. 11 и 32 <span class="nw">52-ФЗ</span>)</td></tr>
+        <tr><th scope="row">Что на выходе</th><td data-l="Санитарный аудит">акт, протоколы лабораторных исследований, реестр, план устранения</td><td data-l="Проверка Роспотребнадзора">акт; при нарушениях — предписание и протокол</td><td data-l="Профилактический визит">акт визита; при неустранённых нарушениях — предписание</td><td data-l="Производственный контроль">протоколы исследований, журналы</td></tr>
+        <tr><th scope="row">Штрафы</th><td data-l="Санитарный аудит">нет</td><td data-l="Проверка Роспотребнадзора">возможны</td><td data-l="Профилактический визит">за невыполнение предписания — ст. 19.5 КоАП</td><td data-l="Производственный контроль">—</td></tr>
+        <tr><th scope="row">Кто видит результат</th><td data-l="Санитарный аудит">только заказчик</td><td data-l="Проверка Роспотребнадзора">надзорный орган</td><td data-l="Профилактический визит">надзорный орган</td><td data-l="Производственный контроль">предприятие; инспектор — при проверке</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="s" id="otrasli">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Отрасли</div><h2 data-split>Санитарный аудит <em>по отраслям</em></h2></div>
+    <div class="d-cards sa-inds" data-group="cards">
+      <article class="d-card"><p class="sa-ico"><svg aria-hidden="true" focusable="false" class="lucide lucide-factory" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 16h.01" /> <path d="M16 16h.01" /> <path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" /> <path d="M8 16h.01" /> </svg></p><h3>Пищевые производства</h3><p><span class="nw">ТР ТС 021/2011</span> обязывает изготовителя разработать и поддерживать процедуры ХАССП (ст. 10). Смотрим поточность, чистые и грязные зоны, выполнение плана лабораторных исследований, <span class="nw">пест-контроль</span> в цехах.</p><a class="sa-more" href="../pishchevoe-proizvodstvo/"><span><span class="nw">Пест-контроль</span> на пищевом производстве</span> →</a></article>
+      <article class="d-card"><p class="sa-ico"><svg aria-hidden="true" focusable="false" class="lucide lucide-shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle cx="18" cy="20" r="2" /> <circle cx="8" cy="20" r="2" /> </svg></p><h3>Магазины и торговые сети</h3><p>СП <span class="nw">2.3.6.4281-26</span> и проверочный лист на 181 вопрос: сроки годности, температура хранения, раздельное хранение, уборка. Для сети — каждый объект по одному <span class="nw">чек-листу</span> и сводная таблица.</p><a class="sa-more" href="../magaziny-i-torgovye-seti/"><span><span class="nw">Пест-контроль</span> магазинов и торговых сетей</span> →</a></article>
+      <article class="d-card"><p class="sa-ico"><svg aria-hidden="true" focusable="false" class="lucide lucide-utensils" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /> <path d="M7 2v20" /> <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" /> </svg></p><h3>Рестораны и кафе</h3><p>СанПиН <span class="nw">2.3/2.4.4282-26</span> и проверочный лист на 142 вопроса: раздача, заготовочные цеха, маркировка инвентаря, аллергены, доставка и кейтеринг.</p><a class="sa-more" href="../restorany-i-kafe/"><span><span class="nw">Пест-контроль</span> ресторанов и кафе</span> →</a></article>
+      <article class="d-card"><p class="sa-ico"><svg aria-hidden="true" focusable="false" class="lucide lucide-warehouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11" /> <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z" /> <path d="M6 13h12" /> <path d="M6 17h12" /> </svg></p><h3>Склады и логистика</h3><p>Хранение пищевой продукции по <span class="nw">ТР ТС 021/2011</span>, температурный режим, товарное соседство, грызуны и птицы у рамп, условия труда.</p><a class="sa-more" href="../sklady-i-logistika/"><span><span class="nw">Пест-контроль</span> складов и логистики</span> →</a></article>
+      <article class="d-card"><p class="sa-ico"><svg aria-hidden="true" focusable="false" class="lucide lucide-pill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" /> <path d="m8.5 8.5 7 7" /> </svg></p><h3>Фармацевтические производства</h3><p>Санитарная часть: условия труда, режим уборки и дезинфекции, <span class="nw">пест-контроль</span>. Аудит по правилам GMP — отдельная процедура, в наш аудит не входит.</p><a class="sa-more" href="../farmatsevticheskie-proizvodstva/"><span><span class="nw">Пест-контроль</span> фармацевтических производств</span> →</a></article>
+      <article class="d-card"><p class="sa-ico"><svg aria-hidden="true" focusable="false" class="lucide lucide-bed-double" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" /> <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" /> <path d="M12 4v6" /> <path d="M2 18h20" /> </svg></p><h3>Гостиницы</h3><p>СП <span class="nw">2.1.4284-26</span> и проверочный лист для гостиничных услуг: уборка номеров и бельё, водоснабжение, вентиляция, клопы и тараканы, пищеблок, если он есть.</p><a class="sa-more" href="../gostinitsy/"><span><span class="nw">Пест-контроль</span> гостиниц и отелей</span> →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="stoimost">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Цена</div><h2 data-split>Сколько стоит <em>санитарный аудит</em></h2></div>
+    <div class="sa-price" data-fade>
+      <table class="d-table sa-ptable">
+        <thead><tr><th scope="col">Объект</th><th scope="col">Стоимость</th></tr></thead>
+        <tbody>
+          <tr><td data-l="Объект">Кафе, кофейня, бар без полноценной кухни</td><td data-l="Стоимость">от 9 000 ₽</td></tr>
+          <tr><td data-l="Объект">Ресторан, столовая, <span class="nw">фабрика-кухня</span></td><td data-l="Стоимость">от 15 000 ₽</td></tr>
+          <tr><td data-l="Объект">Магазин, супермаркет</td><td data-l="Стоимость">от 12 000 ₽</td></tr>
+          <tr><td data-l="Объект">Склад</td><td data-l="Стоимость">от 15 000 ₽</td></tr>
+          <tr><td data-l="Объект">Гостиница</td><td data-l="Стоимость">от 15 000 ₽</td></tr>
+          <tr><td data-l="Объект">Пищевое или фармацевтическое производство</td><td data-l="Стоимость">от 20 000 ₽</td></tr>
+          <tr><td data-l="Объект">Сеть объектов</td><td data-l="Стоимость">расчёт по количеству и типам объектов</td></tr>
+        </tbody>
+      </table>
+      <div class="card sa-pnotes">
+        <p><b>Что входит</b>выезд по Москве, работа на объекте, смывы и пробы воздуха, акт с протоколами, реестр, перечень документов, план устранения, разбор с руководителем. Стоимость выезда в Московскую область называем при расчёте.</p>
+        <p><b>От чего зависит цена</b>площадь, число цехов и зон, количество объектов, срочность.</p>
+        <p><b>Зачёт</b>если после аудита вы заключаете договор на <span class="nw">пест-контроль</span>, стоимость аудита засчитываем в счёт оплаты обслуживания.</p>
+        <p class="sa-free"><b>Бесплатно</b>только обследование <span class="nw">пест-контроля</span> (кнопка «Бесплатный аудит»): точки контроля, журналы, следы вредителей. Санитарный аудит всех разделов — платная услуга.</p>
+        <a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Рассчитать стоимость аудита</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="avtor">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Автор и принципы</div><h2 data-split>Кто подготовил материал и <em>как мы проводим аудит</em></h2></div>
+    <div class="sa-author-wrap" data-fade>
+      <div class="card sa-author">
+        <img class="sa-avatar" src="../img/san-author-photo-240.webp" srcset="../img/san-author-photo-240.webp 240w, ../img/san-author-photo-480.webp 480w" sizes="(max-width:600px) 80px, 112px" width="240" height="240" loading="lazy" decoding="async" alt="Иллюстративное фото санитарного врача, изображение сгенерировано">
+        <div><p class="sa-author-name">Марианна Семерина</p><p class="sa-author-role">Санитарный врач, автор материала</p><p class="sa-author-date">Дата обновления — 06.11.2026</p><p class="sa-author-note">Фото иллюстративное</p></div>
+      </div>
+      <ul class="sa-principles">
+        <li><b>Нормы на сегодня.</b> Проверяем по СанПиН 2026 года и проверочным листам, действующим с октября 2026 года, а не по отменённым документам.</li>
+        <li><b><span class="nw">Пест-контроль</span> изнутри.</b> Дератизация и дезинсекция — наша основная работа. Этот раздел проверяем по точкам, журналам и следам вредителей, а не только по наличию договора. Лицензия ООО «Центр дезинфекционных услуг» <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211" target="_blank" rel="noopener">№ Л064-00111-77/01942445</a>.</li>
+        <li><b>Только подтверждённые нарушения.</b> В реестр попадает то, что зафиксировано на фото, в документах или в протоколах лаборатории, со ссылкой на норму.</li>
+        <li><b>Честно о результате.</b> Аудит снижает риск, но не гарантирует итог проверки: решение принимает инспектор.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="normativnaya-baza">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Источники</div><h2 data-split>Нормативная база <em>(проверено 06.11.2026)</em></h2></div>
+    <ul class="sa-base" data-fade>
+      <li>Федеральный закон от 30.03.1999 № <span class="nw">52-ФЗ</span> «О <span class="nw">санитарно-эпидемиологическом</span> благополучии населения» — <a href="https://www.consultant.ru/document/cons_doc_LAW_22481/" target="_blank" rel="noopener">ст. 11, 32</a></li>
+      <li>Федеральный закон от 31.07.2020 № <span class="nw">248-ФЗ</span> «О государственном контроле (надзоре) и муниципальном контроле в РФ» — <a href="https://www.consultant.ru/document/cons_doc_LAW_358750/" target="_blank" rel="noopener">ст. 25, 52, 52.1, 57</a></li>
+      <li>Постановление Правительства РФ от 10.03.2022 № 336 — <a href="https://www.consultant.ru/document/cons_doc_LAW_411233/" target="_blank" rel="noopener">п. 11(3)</a></li>
+      <li>СанПиН <span class="nw">2.3/2.4.4282-26</span> (общественное питание), СП <span class="nw">2.3.6.4281-26</span> (торговля пищевой продукцией), СП <span class="nw">2.1.4284-26</span> (эксплуатация помещений и услуги), СП <span class="nw">2.2.4285-26</span> (условия труда) — постановления Главного государственного санитарного врача РФ от 02.06.2026 № 15, 17, 18, 20; действуют с 01.09.2026 до 01.09.2032 (<a href="https://cgon.rospotrebnadzor.ru/biznesu/profilaktika-nadzor-uslsugi/profilakticheskie-meropriatiya/o-prinyatii-rospotrebnadzorom-normativno-pravovykh-aktov-/" target="_blank" rel="noopener">Роспотребнадзор</a>, <a href="https://www.garant.ru/products/ipo/prime/doc/414229257/" target="_blank" rel="noopener">текст СанПиН <span class="nw">2.3/2.4.4282-26</span></a>)</li>
+      <li>СанПиН <span class="nw">3.3686-21</span> — до 01.09.2027 (<a href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773&amp;rdk=0" target="_blank" rel="noopener">текст</a>); СанПиН <span class="nw">2.1.3684-21</span> — до 01.03.2027</li>
+      <li><span class="nw">ТР ТС 021/2011</span> «О безопасности пищевой продукции» — ст. 10</li>
+      <li>Приказы Роспотребнадзора от 20.07.2026 № 578 (с 04.10.2026) и № 580 (с 05.10.2026) — проверочные листы (<a href="http://publication.pravo.gov.ru/document/0001202609240001" target="_blank" rel="noopener">официальная публикация приказа № 580</a>)</li>
+      <li>КоАП РФ — ст. 3.4, 4.1.1, <a href="https://www.consultant.ru/document/cons_doc_LAW_34661/c967eb7a901005316559be99424c3a824dc426b0/" target="_blank" rel="noopener">6.3</a>, <a href="https://www.consultant.ru/document/cons_doc_LAW_34661/0d733d8a9e018c4840564cff41afbe7d0776aa5b/" target="_blank" rel="noopener">6.4</a>, <a href="https://www.consultant.ru/document/cons_doc_LAW_34661/dceffcf2617aa8cbad91f46398ce0beab3d0ea76/" target="_blank" rel="noopener">6.6</a>, <a href="https://base.garant.ru/12125267/601dae7955872b38a17a71dad777c59b/" target="_blank" rel="noopener">14.43</a>, <a href="https://www.consultant.ru/document/cons_doc_LAW_34661/c9540220757eaa24167e7288784ad40b4c8de5db/" target="_blank" rel="noopener">19.5</a></li>
+      <li>Федеральный закон от 04.05.2011 № <span class="nw">99-ФЗ</span> — лицензирование дезинфекционной деятельности с 01.03.2025 (<a href="https://cgon.rospotrebnadzor.ru/biznesu/profilaktika-nadzor-uslsugi/nadzornie-meropriatiya/litsenzirovanie-dezinfektsionnoy-deyatelnosti/" target="_blank" rel="noopener">Роспотребнадзор</a>)</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ============ СМОТРИТЕ ТАКЖЕ (перелинковка) ============ -->
+<section class="s s-rel" id="smotrite-takzhe">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Смотрите также</div>
+      <h2 data-split>Связанные услуги <em>и материалы</em></h2>
+    </div>
+    <div class="rel-grid" data-group="cards">
+      <a class="card rel-card" href="../deratizatsiya/"><span class="rel-k">Услуга</span><span class="rel-t">Дератизация для организаций</span><span class="rel-d">Три контура защиты от крыс и мышей, контейнеры КИК и ловушки без яда в цехах, схема точек и акты.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../dezinsektsiya/"><span class="rel-k">Услуга</span><span class="rel-t">Дезинсекция для организаций</span><span class="rel-d">Контроль насекомых по IPM без остановки работы, ротация средств, журнал и акты по СанПиН.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../materialy/programma-pest-kontrolya/"><span class="rel-k">Материал</span><span class="rel-t">Программа <span class="nw">пест-контроля</span></span><span class="rel-d">Образец в PDF и шаблон Word: 7 разделов, оценка <span class="nw">пест-риска</span> по зонам и план мероприятий.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../materialy/zhurnal-pest-kontrolya/"><span class="rel-k">Материал</span><span class="rel-t">Журнал <span class="nw">пест-контроля</span></span><span class="rel-d">Образец заполнения и шаблон в PDF: 9 разделов на 10 листах — точки контроля, ловушки, предписания.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="voprosy">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Вопросы</div><h2 data-split>Вопросы <em>о санитарном аудите</em></h2></div>
+    <div class="faq">
+      <div class="faq-col" data-group="faq">
+        <div class="card qa"><button aria-expanded="false" aria-controls="a1" id="q1"><span>Что такое <span class="nw">СЭС-аудит</span>?</span><span class="pm"></span></button><div class="ans" id="a1" role="region" aria-labelledby="q1"><div><p>Это добровольная проверка предприятия на соответствие санитарным нормам, которую проводит независимый специалист до прихода Роспотребнадзора. По итогам вы получаете акт с нарушениями и планом их устранения; штрафов и предписаний аудит не влечёт. Название осталось от <span class="nw">санитарно-эпидемиологических</span> станций (СЭС), функции которых сегодня выполняет Роспотребнадзор.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a2" id="q2"><span>Обязателен ли санитарный аудит?</span><span class="pm"></span></button><div class="ans" id="a2" role="region" aria-labelledby="q2"><div><p>Нет. Обязателен производственный контроль: его проводят сами предприниматели и юридические лица (ст. 11 и 32 Федерального закона № <span class="nw">52-ФЗ</span>). Аудит показывает, как этот контроль работает на деле.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a3" id="q3"><span>Чем санитарный аудит отличается от проверки Роспотребнадзора?</span><span class="pm"></span></button><div class="ans" id="a3" role="region" aria-labelledby="q3"><div><p>Аудит проводит приглашённый специалист по вашему заказу, проверку — инспектор по основаниям <span class="nw">248-ФЗ</span>. После аудита остаются акт и план устранения, после проверки — акт, а при нарушениях — предписание и протокол. Результаты аудита видит только заказчик.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a4" id="q4"><span>Сколько стоит санитарный аудит в Москве?</span><span class="pm"></span></button><div class="ans" id="a4" role="region" aria-labelledby="q4"><div><p>От 9 000 ₽ за кафе без кухни до 20 000 ₽ и выше за пищевое производство; смывы и пробы воздуха входят в стоимость. Точную сумму называем после короткого разговора о площади и виде деятельности.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a5" id="q5"><span>Сколько длится аудит?</span><span class="pm"></span></button><div class="ans" id="a5" role="region" aria-labelledby="q5"><div><p>Выезд занимает от 2 до 6 часов в зависимости от площади и числа зон, смену при этом не останавливаем. Акт с протоколами лабораторных исследований передаём через 3 рабочих дня.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a6" id="q6"><span>Какие документы подготовить к аудиту?</span><span class="pm"></span></button><div class="ans" id="a6" role="region" aria-labelledby="q6"><div><p>Программу производственного контроля; договоры на вывоз отходов, дезинфекцию, дезинсекцию и дератизацию, стирку санитарной одежды и лабораторные исследования; личные медицинские книжки; журналы (температура холодильников, бракераж, здоровье персонала, <span class="nw">пест-контроль</span>); протоколы лабораторных исследований; документы ХАССП. Если <span class="nw">чего-то</span> нет, это тоже результат аудита.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a7" id="q7"><span>Нужно ли менять программу производственного контроля после 1 сентября 2026 года?</span><span class="pm"></span></button><div class="ans" id="a7" role="region" aria-labelledby="q7"><div><p>Да, если она ссылается на отменённые СанПиН <span class="nw">2.3/2.4.3590-20</span>, СП <span class="nw">2.3.6.3668-20</span>, СП <span class="nw">2.1.3678-20</span> или СП <span class="nw">2.2.3670-20</span>. С 1 сентября 2026 года действуют новые правила, и <a href="https://cgon.rospotrebnadzor.ru/biznesu/profilaktika-nadzor-uslsugi/profilakticheskie-meropriatiya/o-prinyatii-rospotrebnadzorom-normativno-pravovykh-aktov-/" target="_blank" rel="noopener">Центр гигиенического образования населения Роспотребнадзора</a> напоминает: «Не забудьте внести изменения в программу производственного контроля».</p></div></div></div>
+      </div>
+      <div class="faq-col" data-group="faq">
+        <div class="card qa"><button aria-expanded="false" aria-controls="a8" id="q8"><span>Гарантируете, что проверка пройдёт без штрафов?</span><span class="pm"></span></button><div class="ans" id="a8" role="region" aria-labelledby="q8"><div><p>Нет, и честный подрядчик такого не обещает: решение принимает инспектор, а проверка не ограничивается вопросами проверочного листа. Аудит снижает риск: нарушения, которые вы устранили заранее, инспектор уже не найдёт.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a9" id="q9"><span>Проверяете ли вы по проверочным листам Роспотребнадзора?</span><span class="pm"></span></button><div class="ans" id="a9" role="region" aria-labelledby="q9"><div><p>Да. С октября 2026 года действуют новые формы (приказы Роспотребнадзора от 20.07.2026 № 578 и № 580): в листе для общепита 142 вопроса, для торговли пищевой продукцией — 181. Мы проходим лист вашего вида деятельности и добавляем требования, которые инспектор вправе проверить сверх него.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a10" id="q10"><span>Делаете ли вы лабораторные исследования?</span><span class="pm"></span></button><div class="ans" id="a10" role="region" aria-labelledby="q10"><div><p>Да, смывы и пробы воздуха входят в стоимость аудита. Во время выезда отбираем смывы с рабочих поверхностей, оборудования, инвентаря и рук персонала и пробы воздуха в помещениях. Протоколы прикладываем к акту и сверяем с планом лабораторных исследований из вашей программы производственного контроля.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a11" id="q11"><span>Засчитывается ли стоимость аудита, если потом заключить договор на <span class="nw">пест-контроль</span>?</span><span class="pm"></span></button><div class="ans" id="a11" role="region" aria-labelledby="q11"><div><p>Да. Если после аудита вы заключаете с нами договор на <span class="nw">пест-контроль</span>, стоимость аудита засчитываем в счёт оплаты обслуживания.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a12" id="q12"><span>Можно ли провести аудит сети магазинов или ресторанов?</span><span class="pm"></span></button><div class="ans" id="a12" role="region" aria-labelledby="q12"><div><p>Да. Проверяем объекты по одному <span class="nw">чек-листу</span> и сводим результаты в общую таблицу, чтобы были видны нарушения, которые повторяются по всей сети.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a13" id="q13"><span>Работаете ли вы с частными лицами?</span><span class="pm"></span></button><div class="ans" id="a13" role="region" aria-labelledby="q13"><div><p>Нет. Санитарный аудит проводим для организаций и ИП в Москве и Московской области.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="zayavka"><div class="cta-bg f-lazy" aria-hidden="true" data-parallax-bg></div><div class="cta-orb" id="orb" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-eyebrow>Заявка</div>
+      <h2 data-split>Рассчитайте стоимость <em>санитарного аудита</em></h2>
+      <p class="sub" data-fade>Опишите объект — перезвоним, назовём стоимость и дату выезда.</p>
+      <ul class="cta-list" data-group="ctalist">
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Выезд по Москве и Московской области</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Смывы и пробы воздуха — в стоимости аудита</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Результаты передаём только заказчику</li>
+      </ul>
+      <div class="cta-contacts" data-fade>
+        <a class="ph" href="tel:+74951043570">+7 (495) 104-35-70</a>
+        <div class="msg">
+          <a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a>
+          <a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <form class="form" id="form" novalidate data-form>
+      <div class="fbody">
+        <h3>Расчёт санитарного аудита</h3>
+        <p class="fs">Заполнение займёт меньше минуты</p>
+        <div class="fg">
+<div class="field"><label class="sr-only" for="f-name">Ваше имя</label><input id="f-name" name="name" placeholder="Ваше имя" required autocomplete="name"><small class="ferr">Укажите имя</small></div>
+<div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>
+<div class="field full"><label class="sr-only" for="f-company">Компания</label><input id="f-company" name="company" placeholder="Компания (необязательно)" autocomplete="organization"></div>
+<div class="field full"><label class="sr-only" for="f-type">Вид объекта</label><select id="f-type" name="type" required><option value="" selected>Вид объекта</option><option>Ресторан или кафе</option><option>Магазин или торговая сеть</option><option>Пищевое производство</option><option>Склад, логистика</option><option>Фармацевтическое производство</option><option>Гостиница</option><option>Другое</option></select><small class="ferr">Выберите вид объекта</small></div>
+<div class="field full"><label class="sr-only" for="f-goal">Цель аудита</label><select id="f-goal" name="goal"><option value="" selected>Цель аудита</option><option>Подготовка к проверке или профилактическому визиту</option><option>Переход на СанПиН 2026 года</option><option>Открытие объекта</option><option>Аудит торговой сети</option><option>После предписания</option></select></div>
+<div class="field full"><label class="sr-only" for="f-addr">Адрес или район</label><input id="f-addr" name="address" placeholder="Адрес или район" autocomplete="street-address"></div>
+<div class="field full"><label class="sr-only" for="f-msg">Комментарий</label><textarea id="f-msg" name="comment" placeholder="Комментарий: площадь, число объектов, сроки"></textarea></div>
+<input type="hidden" name="msg" value="">
+<div class="field" hidden><input type="hidden" name="email" value=""></div>
+<input type="hidden" name="page" value="Санитарный аудит (СЭС-аудит)">
+</div>
+        <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Рассчитать стоимость</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>
+        <p class="legal">Нажимая кнопку, вы даёте <a href="../soglasie/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаете, что ознакомились с <a href="../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg class="ok-ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M15 27l7 7 15-16"/></svg>
+        <h3>Заявка отправлена</h3><p>Перезвоним в ближайшее рабочее время, назовём стоимость и дату выезда.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span><span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span></a>
+        <p class="d"><span class="nw">Пест-контроль</span> и <span class="nw">пест-менеджмент</span> по системе IPM для бизнеса в Москве и Московской области: бесплатный аудит, оценка <span class="nw">пест-риска</span>, мониторинг вредителей и отчётность.</p>
+      </div>
+      <div><h4>Услуги</h4><ul><li><a href="../dezinfektsiya/">Дезинфекция для организаций</a></li><li><a href="../deratizatsiya/">Дератизация для организаций</a></li><li><a href="../dezinsektsiya/">Дезинсекция для организаций</a></li><li><a href="./" aria-current="page"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a></li><li><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a></li><li><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на дератизацию и дезинсекцию</a></li><li><a href="../#podhod"><span><span class="nw">Пест-контроль</span> по системе IPM</span></a></li><li><a href="../#etapy">Этапы работы</a></li><li><a href="../#vrediteli">Вредители</a></li><li><a href="../#dokumenty">Документы для проверок</a></li><li><a href="../#usloviya">Цена</a></li><li><a href="../#voprosy">Вопросы</a></li></ul></div>
+      <div><h4>Отрасли</h4><ul><li><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a></li><li><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети</a></li><li><a href="../restorany-i-kafe/">Рестораны и кафе</a></li><li><a href="../sklady-i-logistika/">Склады и логистика</a></li><li><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a></li><li><a href="../gostinitsy/">Гостиницы и отели</a></li></ul></div>
+      <div><h4>Материалы</h4><ul><li><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a></li><li><a href="../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a></li><li><a href="../materialy/">Все материалы</a></li></ul></div>
+      <div><h4>Контакты</h4><ul><li><a href="tel:+74951043570">+7 (495) 104-35-70</a></li><li><a href="mailto:b2b@pestcontrol-center.ru">b2b@<wbr><span style="white-space:nowrap">pestcontrol-center.ru</span></a></li><li>Пн–Пт: 8:00–20:00</li><li>Срочные выезды: 24/7</li></ul>
+        <div class="msg"><a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a><a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a></div>
+      </div>
+    </div>
+    <div class="fb"><span>© 2026 ПЕСТКОНТРОЛЬ Центр</span><a href="../privacy/">Политика конфиденциальности</a><a href="../soglasie/">Согласие на обработку данных</a><span>Информация на сайте не является публичной офертой</span></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+74951043570" class="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Позвонить</a>
+  <a href="#zayavka" class="c2"><span>Обследование</span></a>
+</div>
+<div class="fab" role="group" aria-label="Написать в мессенджер">
+  <a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a>
+  <a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a>
+</div>
+
+<script>
+/* Предпросмотр: вне рабочего домена заявка не отправляется (на пестконтроль-центр.рф этот блок не срабатывает) */
+(function(){if(/^(www\.)?xn----itbbsflddbfpfdodg9d0f\.xn--p1ai$/i.test(location.hostname))return;var f=window.fetch;window.fetch=function(u){if(typeof u==='string'&&u.indexOf('send.php')>-1)return new Promise(function(r){setTimeout(function(){r(new Response('{"success":true}',{status:200,headers:{'Content-Type':'application/json'}}))},500)});return f.apply(this,arguments)};document.addEventListener('DOMContentLoaded',function(){var p=document.querySelector('.form .fs');if(p)p.textContent='Предпросмотр: заявка никуда не отправляется'})})();
+</script>
+<script>
+  /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */
+  (function (r, l) {
+    var go = function () { l.forEach(function (u) { var e = document.createElement('script'); e.src = r + u; e.async = false; document.body.appendChild(e); }); };
+    if (document.visibilityState === 'hidden' || !window.requestAnimationFrame) setTimeout(go, 0);
+    else requestAnimationFrame(function () { setTimeout(go, 0); });
+  })('../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261106s2']);
+</script>
+<script>/* Форма: цель аудита, адрес, комментарий и страница — в поле msg, которое читает send.php */
+document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,g=e.goal.value||'не выбрана',a=e.address.value.trim()||'не указан',c=e.comment.value.trim();e.msg.value='Цель: '+g+'\nАдрес: '+a+(c?'\nКомментарий: '+c:'')+'\nСтраница: Санитарный аудит (СЭС-аудит) (/sanitarnyy-audit/)';},true);</script>
+<!-- Yandex.Metrika counter + UIS + Radist: загружаются после первого действия посетителя (касание, прокрутка, мышь, клавиатура) или через 5 с после загрузки страницы -->
+<script type="text/javascript">
+    (function (w, d) {
+        w.ym = w.ym || function () { (w.ym.a = w.ym.a || []).push(arguments); };
+        w.ym.l = 1 * new Date();
+        ym(113675622, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        var done = false, ready = false, wait = null, ev = ['pointerdown', 'touchstart', 'keydown', 'scroll', 'wheel', 'mousemove'];
+        w.__cs = w.__cs || [];
+        w.__cs.push(['waitForTrackViewAndRun', function () { ready = true; }]);
+        // Radist: код заявки в ссылках Telegram и MAX — сразу, скрипт Radist загрузится вместе со счётчиками
+        var rmsg = 'Здравствуйте! Пишу с сайта пестконтроль-центр.рф. Номер заявки: {radist_tracker}';
+        w.radist_tracker = w.radist_tracker || function () { (w.radist_tracker.a = w.radist_tracker.a || []).push(arguments); };
+        w.radist_tracker.l = 1 * new Date();
+        w.radist_tracker({ message: rmsg, whatsapp_enabled: true, tgbot_enabled: true, tg_enabled: true, max_enabled: true, vk_enabled: true });
+        (function () {
+            var id = null, abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', s = 'ro', i, txt;
+            try {
+                id = sessionStorage.getItem('radistVisit');
+                if (!id || id.length !== 12) {
+                    for (i = 0; i < 10; i++) s += abc.charAt(Math.floor(Math.random() * abc.length));
+                    sessionStorage.setItem('radistVisit', s);
+                    id = sessionStorage.getItem('radistVisit');
+                }
+            } catch (e) { id = null; }
+            if (!id || id.length !== 12) return;
+            txt = encodeURIComponent(rmsg.replace(/{radist_tracker}/g, id));
+            [].forEach.call(d.querySelectorAll('a[href*="//t.me/"], a[href*="//max.ru/"]'), function (a) {
+                try {
+                    var u = new URL(a.href), n = u.pathname.split('/')[1] || '';
+                    if (u.host === 'max.ru') a.href = 'https://max.ru/' + u.pathname.substring(1) + '?start=' + id;
+                    else if (u.host === 't.me' && !/bot$/i.test(n)) a.href = 'https://t.me' + u.pathname + '?text=' + txt;
+                } catch (e) {}
+            });
+        })();
+        function add(src) { var k = d.createElement('script'); k.async = true; k.src = src; d.head.appendChild(k); return k; }
+        function load() {
+            if (done) return; done = true;
+            ev.forEach(function (e) { w.removeEventListener(e, load, true); });
+            add('https://mc.yandex.ru/metrika/tag.js?id=113675622');
+            var p = d.createElement('link'); p.rel = 'preconnect'; p.href = 'https://tracker.comagic.ru'; d.head.appendChild(p);
+            add('https://app.uiscom.ru/static/cs.min.js?k=ICWycQx6m3NSBe3WlCeDAdAKMTmNhMHC').onerror = function () { ready = true; };
+            add('https://track.radist.me/tracker.min.js');
+        }
+        ev.forEach(function (e) { w.addEventListener(e, load, { capture: true, passive: true }); });
+        function later() { setTimeout(load, 5000); }
+        if (d.readyState === 'complete') later(); else w.addEventListener('load', later);
+        // Ожидание подмены номера при первом касании: набор откладывается до ответа UIS, максимум 0,8–1 с
+        d.addEventListener('click', function (e) {
+            if (ready) return;
+            var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+            if (!a || e.button || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+            e.preventDefault();
+            if (wait) return;
+            load();
+            var href = a.getAttribute('href'), op = a.style.opacity, max = 'GestureEvent' in w ? 800 : 1000, t;
+            function go() {
+                for (var i = 0; i < wait.length; i++) clearTimeout(wait[i]);
+                wait = null; ready = true; a.style.opacity = op;
+                w.location.href = a.href;
+            }
+            function check(last) { return function () { if (wait && (last || ready || a.getAttribute('href') !== href)) go(); }; }
+            wait = [];
+            a.style.opacity = '.6';
+            for (t = 50; t <= max; t += 50) wait.push(setTimeout(check(t === max), t));
+        }, true);
+    })(window, document);
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113675622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

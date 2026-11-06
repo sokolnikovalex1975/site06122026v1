@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дезинфекция для организаций в Москве и области — ПЕСТКОНТРОЛЬ Центр</title>
+<meta name="description" content="Дезинфекция помещений для организаций в Москве и МО: плановая и внеплановая, смывы, вентиляция, СЭС-аудит, дезинсекция, дератизация и IPM. Акты и журнал.">
+<link rel="canonical" href="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ПЕСТКОНТРОЛЬ Центр">
+<meta property="og:url" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/">
+<meta property="og:title" content="Дезинфекция для организаций в Москве и области">
+<meta property="og:description" content="Дезинфекция помещений для организаций в Москве и МО: плановая и внеплановая, смывы, вентиляция, СЭС-аудит, дезинсекция, дератизация и IPM. Акты и журнал.">
+<meta property="og:image" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/dezinf-og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Дезинфектор ПЕСТКОНТРОЛЬ Центр обрабатывает холодным туманом пустой цех пищевого производства">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2309090b' stroke='%237c86ff' stroke-width='2'/%3E%3Cpath d='M16 7l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10v-5z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" href="../fonts/inter-ru-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" media="(min-width:861px)" imagesrcset="../img/dezinf-hero-1440.webp 1440w, ../img/dezinf-hero.webp 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(max-width:860px)" imagesrcset="../img/dezinf-hero-mob-760.webp 760w, ../img/dezinf-hero-mob.webp 1024w" imagesizes="100vw" fetchpriority="high">
+<script>
+  /* начальные состояния анимаций — только при работающем JS; страховка — через 4 с всё показывается.
+     Заставка — один раз за посещение: при переходе по ссылке с якорем и между страницами сайта её нет */
+  (function (d) {
+    d.classList.add('js');
+    try { if (location.hash || sessionStorage.getItem('pc-intro')) d.classList.add('no-intro'); else sessionStorage.setItem('pc-intro', '1'); }
+    catch (e) { if (location.hash) d.classList.add('no-intro'); }
+    setTimeout(function () { if (!d.classList.contains('anim-ready')) d.classList.add('anim-fail'); }, 4000);
+  })(document.documentElement);
+</script>
+<link rel="stylesheet" href="../style.css?v=20261106s2">
+<style>html{scroll-behavior:auto}.d-page .s{padding:clamp(64px,7vw,128px) 0;border-top:1px solid var(--line)}.d-crumbs{font-size:14px;color:var(--t3);display:flex;flex-wrap:wrap;gap:8px;margin:0 0 clamp(24px,2.5vw,40px)}.d-crumbs a{color:var(--t2)}.d-crumbs a:hover{color:var(--t1)}.d-hero{position:relative;overflow:hidden;padding:calc(clamp(68px,6vw,115px) + 20px) 0 clamp(64px,7vw,116px);min-height:clamp(680px,56vw,900px);display:flex;align-items:center}.d-hero .wrap{width:100%;display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);gap:clamp(28px,4vw,80px);align-items:center}.d-hero-copy>*:not(.d-hero-media){position:relative;z-index:1}.d-hero-media{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}.d-hero-media::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.84) 38%,rgba(0,0,0,.28) 54%,rgba(0,0,0,0) 66%),linear-gradient(180deg,#000 0,rgba(0,0,0,.55) 90px,rgba(0,0,0,0) 260px),linear-gradient(0deg,#000 0,rgba(0,0,0,0) 20%)}.d-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 50%}.d-hero h1{font-size:clamp(42px,4.4vw,84px);line-height:1.1;letter-spacing:-.055em;font-weight:300;margin:18px 0 0}.d-hero h1 .ln{display:block;padding:0 .08em .08em 0;margin-bottom:-.08em}.d-hero h1 .ln>span{display:inline-block}.d-ticks{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px}.d-ticks li{position:relative;padding-left:30px;line-height:1.5}.d-ticks li::before{content:"";position:absolute;left:2px;top:.42em;width:13px;height:7px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}.d-hero .sub{margin:22px 0 0}.d-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.d-btns .btn-lg{padding:0 26px}.f-checks{position:relative;padding:clamp(28px,3vw,56px) 0 clamp(56px,6vw,110px);border-top:1px solid var(--line)}.f-check.panel{max-width:none}.f-check-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,80px);padding:clamp(24px,3vw,52px)}.f-check-t{font-size:clamp(28px,2.6vw,46px);line-height:1.08;letter-spacing:-.04em;font-weight:300;margin:14px 0 0}.f-check-res{margin:22px 0 10px;color:var(--t2);font-size:15px}.f-check-res b{font-size:clamp(40px,3.4vw,64px);font-weight:300;letter-spacing:-.04em;color:var(--acc);margin-right:6px;line-height:1;transition:color .3s}.f-check-res.warn b{color:var(--yel)}.f-check-note{color:var(--t2);line-height:1.6;margin:0 0 28px;max-width:460px}.f-check-list{list-style:none;margin:0;padding:0;display:grid;align-content:center;border-top:1px solid var(--line)}.f-check-list li{border-bottom:1px solid var(--line)}.f-check-list label{display:flex;gap:18px;align-items:center;padding:18px 4px;cursor:pointer;font-size:clamp(15px,1.05vw,18px);line-height:1.45;color:var(--t2);transition:color .25s}.f-check-list label:hover{color:var(--t1)}.f-check-list input{appearance:none;-webkit-appearance:none;flex:none;width:26px;height:26px;margin:0;border-radius:8px;border:1.4px solid var(--line2);background:rgba(255,255,255,.03) center/14px no-repeat;cursor:pointer;transition:background-color .25s,border-color .25s}.f-check-list input:checked{background-color:var(--acc2);border-color:var(--acc);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}.f-check-list input:focus-visible{outline:2px solid var(--acc);outline-offset:3px}.f-check-list input:checked+span{color:var(--t1)}.d-doc-prev{display:block;width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--line2);background:#fff;box-shadow:0 18px 44px rgba(0,0,0,.45);transition:border-color .2s,transform .2s}.d-doc-prev:hover{border-color:var(--acc);transform:translateY(-2px)}.d-doc-prev img{display:block;width:100%;height:auto}.d-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.d-card{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(22px,2vw,34px)}.d-card h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;margin:0 0 12px}.d-card p{color:var(--t2);line-height:1.6;margin:0}.d-card .f-num{font-size:clamp(26px,2.2vw,42px);line-height:1.05;letter-spacing:-.035em;font-weight:300;color:var(--acc);margin:0 0 14px}.f-req .d-card{border-top:2px solid rgba(124,134,255,.45)}.dz-lbl{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0 0 10px}.d-kind{padding:0;overflow:hidden;display:flex;flex-direction:column}.d-kind-img{aspect-ratio:16/9;overflow:hidden;background:#0c0c0e;border-bottom:1px solid var(--line2)}.d-kind-img img{display:block;width:100%;height:100%;object-fit:cover}.d-kind-b{padding:clamp(22px,2vw,34px);display:flex;flex-direction:column;flex:1}.d-kind-b p{margin-bottom:14px}.d-kind-b .d-ticks{margin:auto 0 0;gap:8px;font-size:14.5px;color:var(--t2)}.d-note{color:var(--t2);margin:24px 0 0;line-height:1.6}.d-note a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}.d-note a:hover{color:var(--acc)}.d-strong{color:var(--t1);font-size:clamp(18px,1.3vw,22px)}.d-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:clamp(28px,4vw,80px);align-items:start}.d-swap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);grid-template-areas:"head img" "ticks img";grid-template-rows:auto 1fr;column-gap:clamp(28px,4vw,72px);row-gap:clamp(20px,2vw,32px);align-items:start}.d-swap .head{grid-area:head;margin-bottom:0}.d-swap .d-ticks{grid-area:ticks;margin:0}.d-swap-img{grid-area:img;align-self:center;margin:0;aspect-ratio:1200/896;border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);background:#0c0c0e}.d-swap-img img{display:block;width:100%;height:100%;object-fit:cover}.d-terms{list-style:none;counter-reset:t;padding:0;margin:0;border-top:1px solid var(--line2)}.d-terms li{display:grid;grid-template-columns:44px minmax(0,.42fr) minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line2);line-height:1.55}.d-terms li::before{counter-increment:t;content:counter(t,decimal-leading-zero);color:var(--t3)}.d-terms b{font-weight:500}.d-terms span{color:var(--t2)}.d-terms a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}.d-doc{display:grid;gap:16px;justify-items:stretch}.d-doc-h{font-size:clamp(19px,1.3vw,23px);font-weight:400;letter-spacing:-.02em;line-height:1.3;margin:0}.d-doc-btn{width:100%}.d-small{font-size:14px;color:var(--t3);margin:0}.d-steps{list-style:none;counter-reset:st;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}.d-steps-3{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:32px}.d-steps li{border-top:2px solid var(--line2);padding-top:18px;line-height:1.55}.d-steps li::before{counter-increment:st;content:"0" counter(st);display:block;color:var(--acc);font-size:14px;margin-bottom:12px}.d-steps b{display:block;font-weight:500;margin-bottom:8px}.d-steps span{color:var(--t2)}.d-table{width:100%;border-collapse:collapse;line-height:1.5}.d-table th,.d-table td{text-align:left;vertical-align:top;padding:16px 20px 16px 0;border-bottom:1px solid var(--line2)}.d-table th{color:var(--t3);font-weight:400;font-size:14px}.d-table td{color:var(--t2)}.d-table td:first-child{color:var(--t1)}.d-table .d-price{white-space:nowrap;text-align:right;padding-right:0}.d-table td.d-price{color:var(--t1);font-weight:500;font-variant-numeric:tabular-nums}.d-vs td:first-child{color:var(--t2)}.d-vs th:last-child,.d-vs td:last-child{color:var(--t1);background:rgba(124,134,255,.07);padding-left:20px}.dz-tag{display:inline-block;font-size:13px;line-height:1.35;color:var(--grn);background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.28);padding:4px 10px;border-radius:8px;font-weight:500}.dz-tag.warn{color:var(--yel);background:rgba(253,199,0,.09);border-color:rgba(253,199,0,.3)}.dz-sublbl{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:12px 0 4px}.pest-b .lvl.z{color:var(--acc);border-color:rgba(124,134,255,.32);background:rgba(124,134,255,.08);display:inline-block;margin-top:12px;white-space:normal;line-height:1.35}/* карточки насекомых: фото и название сверху, описание — под ними (без этого на телефоне текст сжимался в узкую колонку) */.pests .pest{flex-direction:column;gap:14px}.pests .pest-scan{display:none}.pest-top{display:flex;align-items:center;gap:16px}.pest-top h3{font-size:clamp(17px,1.15vw,22px);font-weight:500;letter-spacing:-.01em;line-height:1.25;margin:0}.pest-top .lat{display:block;margin:4px 0 0}.pest-b .dz-sublbl:first-child{margin-top:0}.pest-b p{margin:0}.d-cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}.d-objs{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.d-obj{display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s}.d-obj:hover{border-color:var(--acc)}.d-obj-img{aspect-ratio:900/542;overflow:hidden;background:#0c0c0e}.d-obj-img picture{display:block;width:100%;height:100%}.d-obj-img img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.85);transition:filter .5s}.d-obj:hover .d-obj-img img{filter:none}.d-obj-b{padding:clamp(18px,1.5vw,26px)}.d-obj h3{font-size:clamp(18px,1.25vw,22px);font-weight:500;letter-spacing:-.01em;line-height:1.3;margin:0 0 8px;overflow-wrap:break-word}.d-obj h3 a{color:var(--t1);text-decoration:none;outline:none}.d-obj h3 a::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}.d-obj:focus-within{outline:2px solid var(--acc);outline-offset:3px}.d-obj:has(a:focus:not(:focus-visible)){outline:none}.d-obj p{color:var(--t2);line-height:1.55;margin:0;font-size:clamp(14px,.92vw,16px)}.qa .ans a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}.qa .ans a:hover{color:var(--acc)}.qa .ans>div{visibility:hidden;transition:visibility 0s .55s}.qa.open .ans>div{visibility:visible;transition-delay:0s}.f-lazy:not(.bg-in){background-image:none!important}.d-page .cta .sub{margin-bottom:0}.d-page .cta-list{margin:28px 0 34px}@media (max-width:1180px){.d-hero{min-height:0}.d-hero .wrap{grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr)}.d-hero .btn-lg{height:52px;padding:0 22px;font-size:15px}}@media (max-width:1100px){.d-steps,.d-objs,.f-check-in{grid-template-columns:repeat(2,minmax(0,1fr))}.f-check-in{grid-template-columns:minmax(0,1fr)}}@media (max-width:860px){.hdr{background:rgba(0,0,0,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--line)}.d-hero{display:block;min-height:0;padding:calc(clamp(68px,6vw,115px) + 20px) 0 clamp(44px,7vw,64px)}.d-hero .wrap,.d-split,.d-swap,.d-cols2,.d-cards{grid-template-columns:minmax(0,1fr)}.d-swap{grid-template-areas:"head" "img" "ticks";grid-template-rows:auto}.d-hero-copy{display:flex;flex-direction:column}.d-hero .eyebrow{display:none}.d-hero h1{order:1;font-size:clamp(24px,6.8vw,30px);line-height:1.1;letter-spacing:-.055em;margin:0}.d-hero h1 .d-ln2,.d-hero h1 .ln:nth-child(3){display:inline}.d-hero-media{order:2;position:relative;inset:auto;aspect-ratio:16/9;margin:18px calc(var(--pad) * -1) 0}.d-hero-media::before{display:none}.d-hero-img{height:100%;min-height:0}.d-btns{order:3;margin-top:22px;gap:10px}.d-btns .btn{height:52px}.d-btns .d-tel-btn{display:none}.d-ticks{order:4;margin:26px 0 0}.d-hero .sub{order:5;margin:20px 0 0;font-size:16px;line-height:1.45}.d-crumbs{order:6;margin:18px 0 0;padding:0;font-size:12px;line-height:1.3;gap:6px;flex-wrap:nowrap;white-space:nowrap;letter-spacing:0;color:#8a8a93}.d-crumbs a{color:#9a9aa3}.d-terms li{grid-template-columns:36px minmax(0,1fr);gap:6px 12px}.d-terms span{grid-column:2}.d-doc{grid-template-columns:120px minmax(0,1fr);grid-template-areas:"prev h" "prev meta" "btn btn";grid-template-rows:auto 1fr auto;column-gap:18px;row-gap:10px;align-items:start}.d-doc-h{grid-area:h;font-size:18px}.d-doc-prev{grid-area:prev;border-radius:8px;box-shadow:0 10px 26px rgba(0,0,0,.45)}.d-small{grid-area:meta}.d-doc-btn{grid-area:btn;margin-top:6px}}@media (min-width:601px) and (max-width:860px){.d-kind{flex-direction:row}.d-kind-img{flex:0 0 42%;aspect-ratio:auto;min-height:220px;border-bottom:0;border-right:1px solid var(--line2)}.d-kind-b{align-self:center}}@media (max-width:600px){.d-steps,.d-steps-3{grid-template-columns:minmax(0,1fr)}.d-table thead{display:none}.d-table,.d-table tbody,.d-table tr,.d-table td{display:block;width:100%}.d-table tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.d-table td{border:0;padding:10px 0}.d-table td+td{border-top:1px solid var(--line)}.d-table td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}.d-vs td:last-child{background:none;padding-left:28px}.d-prices tr{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:14px;row-gap:6px;padding:14px 16px}.d-prices td{padding:0}.d-prices td::before{display:none}.d-prices td+td{border-top:0}.d-prices td:nth-child(2){grid-column:1/-1;grid-row:2;font-size:14px}.d-prices td.d-price{grid-column:2;grid-row:1;width:auto;text-align:right}.d-vs td{position:relative;padding:12px 0 12px 28px}.d-vs td::before{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}.d-vs td::after{content:"";position:absolute;left:1px;top:calc(12px + .25em);width:14px;height:14px}.d-vs td:first-child::after{background:linear-gradient(45deg,transparent 42%,var(--red) 42%,var(--red) 58%,transparent 58%),linear-gradient(-45deg,transparent 42%,var(--red) 42%,var(--red) 58%,transparent 58%)}.d-vs td:last-child::after{left:2px;top:calc(12px + .38em);width:13px;height:7px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}.d-objs{grid-template-columns:minmax(0,1fr);gap:12px}.d-obj{flex-direction:row;align-items:stretch}.d-obj-img{flex:0 0 104px;aspect-ratio:auto;min-height:104px}.d-obj-b{padding:14px 16px;align-self:center}.d-obj h3{font-size:17px;margin-bottom:6px}.d-obj p{font-size:14px;line-height:1.5}.f-check-in{padding:24px 20px}.f-check-list label{padding:15px 2px;gap:14px}.f-check .btn-lg,.d-btns .btn{width:100%;max-width:100%;padding:0 16px;font-size:15px}.d-page .form .btn-lg{padding:0 16px}}@media (max-width:400px){.d-page .form .btn-lg,.f-check .btn-lg,.d-btns .btn{font-size:15px;padding:0 14px}.d-doc{grid-template-columns:96px minmax(0,1fr);column-gap:14px}.d-doc-h{font-size:17px}.d-obj-img{flex-basis:88px;min-height:88px}.d-obj-b{padding:12px 14px}.d-obj h3{font-size:16px}}@media (max-width:360px){.d-doc .btn-lg,.f-check .btn-lg,.d-btns .btn{max-width:100%;padding:0 12px;font-size:14px}.d-page .form .btn-ic{display:none}}@media (max-width:340px){.d-page .ft{grid-template-columns:minmax(0,1fr)}.d-obj-img{flex-basis:76px;min-height:76px}.d-page .form .btn-lg,.f-check .btn-lg,.d-btns .btn{font-size:13.5px;padding:0 10px}.d-doc .btn-lg{font-size:14px;padding:0 14px}}
+/* Первый экран: пока он не загружен целиком (после него ещё нет следующего блока), содержимое скрыто — как на главной: иначе при постепенной загрузке текст, выровненный по центру высоты экрана, сдвигается (CLS) */
+.d-hero:not(:has(~ *)) .wrap{visibility:hidden}
+
+.dzf-tri{margin-top:clamp(36px,4vw,64px)}.dzf-tri td:last-child a,.dzf-chain a,.dzf-ind p a,.dzf-links a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}.dzf-tri td:last-child a:hover,.dzf-chain a:hover,.dzf-ind p a:hover,.dzf-links a:hover{color:var(--acc)}.dzf-upd{margin:22px 0 0;font-size:13.5px;line-height:1.5;color:var(--t3)}.dzf-svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.dzf-svc-c{display:flex;flex-direction:column;gap:10px;padding:clamp(20px,1.8vw,28px);color:inherit;text-decoration:none;transition:border-color .3s,transform .3s}.dzf-svc-c:hover{border-color:rgba(124,134,255,.45)}.dzf-svc-c svg{width:26px;height:26px;color:var(--acc)}.dzf-svc-c h3{font-size:clamp(17px,1.15vw,20px);font-weight:500;letter-spacing:-.01em;margin:6px 0 0;line-height:1.3}.dzf-svc-c p{margin:0;color:var(--t2);line-height:1.55;font-size:15px}.dzf-more{margin-top:auto;padding-top:6px;font-size:14px;color:var(--t1);display:inline-flex;align-items:center;gap:8px}.dzf-more::after{content:"→";color:var(--acc);transition:transform .3s}.dzf-svc-c:hover .dzf-more::after{transform:translateX(4px)}.dzf-why{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,72px);align-items:start}.dzf-why-t p{color:var(--t2);line-height:1.65;margin:0 0 18px;font-size:clamp(16px,1.05vw,18px)}.dzf-chain{list-style:none;margin:0;padding:0;border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:var(--card)}.dzf-chain li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:16px clamp(16px,1.6vw,24px);border-top:1px solid var(--line2);line-height:1.45;position:relative}.dzf-chain li:first-child{border-top:0;padding-top:14px;padding-bottom:14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3)}.dzf-chain li:first-child .dzf-ch-v{color:var(--acc)}.dzf-chain li b{font-weight:500;color:var(--t1)}.dzf-chain li:not(:first-child)>span{padding-left:22px;position:relative;color:var(--t2)}.dzf-chain li:not(:first-child)>span::before{content:"→";position:absolute;left:0;top:0;color:var(--acc)}.dzf-kinds td:first-child{min-width:170px}.dzf-plan{margin-top:clamp(36px,4vw,60px);padding:clamp(22px,2vw,34px);background:var(--card);border:1px solid rgba(124,134,255,.35);border-radius:var(--r);scroll-margin-top:96px}.dzf-plan h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;margin:0 0 22px}.dzf-meth{grid-template-columns:repeat(4,minmax(0,1fr))}.dzf-meth .d-card h3{font-size:clamp(18px,1.25vw,22px)}.dzf-order{margin-top:clamp(36px,4vw,60px)}.dzf-order h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;margin:0 0 22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}.dzf-steps6{grid-template-columns:repeat(6,minmax(0,1fr))}.dzf-freq td:first-child{min-width:190px}.dzf-freq td:last-child{font-size:14.5px;color:var(--t3);min-width:170px}.dzf-freq td:last-child a,.dzf-docs a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}.dzf-docs td:first-child{min-width:260px}.dzf-swap-b{grid-area:ticks}.dzf-swap-b .d-ticks{margin:0}.dzf-img169{aspect-ratio:1200/670}.dzf-btns{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}.dzf-price{font-size:15px;color:var(--t2)}.dzf-acc{border-color:rgba(124,134,255,.35)}.dzf-acc .dzf-btns{margin-top:22px}.dzf-prog{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.7fr);gap:clamp(24px,4vw,64px);align-items:center;border-color:rgba(124,134,255,.35)}.dzf-h2s{font-size:clamp(26px,2.4vw,40px);font-weight:300;letter-spacing:-.04em;line-height:1.15;margin:0 0 16px}.dzf-prog p{color:var(--t2);line-height:1.6;margin:0}.dzf-links{list-style:none;margin:0;padding:0;display:grid;gap:14px}.dzf-links li{padding-left:22px;position:relative}.dzf-links li::before{content:"→";position:absolute;left:0;color:var(--acc)}.dzf-inds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.dzf-ind{padding:clamp(20px,1.8vw,28px);display:flex;flex-direction:column;gap:10px}.dzf-ind svg{width:26px;height:26px;color:var(--acc)}.dzf-ind h3{font-size:clamp(17px,1.15vw,20px);font-weight:500;letter-spacing:-.01em;margin:6px 0 0;line-height:1.3}.dzf-ind p{margin:0;color:var(--t2);line-height:1.55;font-size:15px}.dzf-ind-cta{border-color:rgba(124,134,255,.35);justify-content:center}.dzf-ind-cta .btn{align-self:flex-start;margin-top:8px}@media (max-width:1180px){.dzf-svc,.dzf-inds{grid-template-columns:repeat(2,minmax(0,1fr))}.dzf-why{grid-template-columns:minmax(0,1fr)}.dzf-meth{grid-template-columns:repeat(2,minmax(0,1fr))}.dzf-steps6{grid-template-columns:repeat(3,minmax(0,1fr))}.dzf-prog{grid-template-columns:minmax(0,1fr)}}@media (min-width:861px){.dzf-swap-r{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);grid-template-areas:"img head" "img ticks"}}@media (max-width:860px){.dzf-chain li{grid-template-columns:minmax(0,1fr);gap:6px}.dzf-chain li:first-child{display:none}.dzf-kinds td:first-child,.dzf-freq td:first-child,.dzf-freq td:last-child,.dzf-docs td:first-child{min-width:0}}@media (max-width:600px){.dzf-svc,.dzf-inds,.dzf-meth{grid-template-columns:minmax(0,1fr)}.dzf-steps6{grid-template-columns:minmax(0,1fr)}.dzf-btns .btn{width:100%;justify-content:center}}@media (max-width:380px){.dzf-prices tr{grid-template-columns:minmax(0,1fr)}.dzf-prices td.d-price{grid-column:1;grid-row:2;text-align:left}.dzf-prices td:nth-child(2){grid-row:3}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, {"@type": "ListItem", "position": 2, "name": "Дезинфекция для организаций", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/"}]}, {"@type": "WebPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/#webpage", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/", "name": "Дезинфекция для организаций в Москве и области — ПЕСТКОНТРОЛЬ Центр", "description": "Дезинфекция помещений для организаций в Москве и МО: плановая и внеплановая, смывы, вентиляция, СЭС-аудит, дезинсекция, дератизация и IPM. Акты и журнал.", "inLanguage": "ru", "dateModified": "2026-11-06", "about": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/#service"}, "publisher": {"@type": "Organization", "name": "ПЕСТКОНТРОЛЬ Центр"}}, {"@type": "Service", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/#service", "name": "Дезинфекция для организаций", "serviceType": "Дезинфекция помещений, оборудования и воздуха; комплекс дезинфекционных услуг", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/", "description": "Профилактическая дезинфекция помещений, оборудования и воздуха — плановая и внеплановая — для организаций в Москве и Московской области по СанПиН 3.3686-21, лабораторный контроль эффективности (смывы и пробы воздуха), а также весь комплекс дезинфекционных услуг: дезинсекция, дератизация, очистка и дезинфекция вентиляции, санитарный аудит и пест-контроль по системе IPM.", "areaServed": [{"@type": "City", "name": "Москва"}, {"@type": "AdministrativeArea", "name": "Московская область"}], "audience": {"@type": "BusinessAudience", "name": "Юридические лица и ИП"}, "provider": {"@type": "Organization", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org", "name": "ПЕСТКОНТРОЛЬ Центр", "legalName": "ООО «Центр дезинфекционных услуг»", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/", "telephone": "+7 495 104-35-70", "email": "b2b@pestcontrol-center.ru"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Дезинфекционные услуги для организаций", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Профилактическая дезинфекция: плановая и внеплановая", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/#vidy"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Микробиологические смывы и лабораторный контроль", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinfektsiya/#kontrol"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Очистка и дезинфекция вентиляции", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/ochistka-dezinfektsiya-ventilyatsii/"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Дезинсекция для организаций", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinsektsiya/"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Дератизация для организаций", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/deratizatsiya/"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Санитарный аудит (СЭС-аудит)", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Пест-контроль по системе IPM", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#podhod"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Договор на обслуживание", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dogovor-deratizatsiya-dezinsektsiya/"}}]}, "offers": {"@type": "AggregateOffer", "priceCurrency": "RUB", "lowPrice": "9", "description": "Ориентиры: дезинфекция помещений от 9 ₽ за м², дезинфекция воздуховодов от 45 ₽ за м. п., микробиологические смывы от 1 400 ₽, санитарный аудит от 9 000 ₽, обслуживание по договору от 3 500 ₽ в месяц; осмотр и расчёт — 0 ₽"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое дезинфекция простыми словами?", "acceptedAnswer": {"@type": "Answer", "text": "Это уничтожение или удаление возбудителей инфекций — бактерий, вирусов, грибов и их спор — на поверхностях, оборудовании, в воздухе и вентиляции. Цель — прервать путь, по которому инфекция переходит от источника к человеку (п. 40 СанПиН 3.3686-21)."}}, {"@type": "Question", "name": "Чем дезинфекция отличается от дезинсекции и дератизации?", "acceptedAnswer": {"@type": "Answer", "text": "Дезинфекция направлена на микроорганизмы, дезинсекция — на насекомых и других членистоногих, дератизация — на грызунов. В санитарных правилах все три вида работ объединены понятием «дезинфекционная деятельность» (пп. 79–80 СанПиН 3.3686-21), а лицензия Роспотребнадзора выдаётся сразу на все три."}}, {"@type": "Question", "name": "Чем плановая дезинфекция отличается от внеплановой?", "acceptedAnswer": {"@type": "Answer", "text": "Обе — профилактическая дезинфекция (п. 80 СанПиН 3.3686-21). Плановую проводят по графику программы производственного контроля — с кратностью, которую задают санитарные правила для вашего типа объекта. Внеплановую — по санитарно-гигиеническим показаниям: при замечаниях производственного контроля или аудита (п. 3.1 МР 3.5.0353-24), неудовлетворительных смывах, после аварий и затоплений."}}, {"@type": "Question", "name": "Как часто организации нужно проводить дезинфекцию?", "acceptedAnswer": {"@type": "Answer", "text": "Кратность задаёт программа производственного контроля с учётом правил для вашего типа объекта. Например, в торговле — уборка всех помещений с дезсредствами 1 раз в месяц (п. 75 СП 2.3.6.4281-26), в гостиницах — дезинфекция заселённых номеров ежедневно и после каждого выезда (п. 84 СП 2.1.4284-26), централизованная вентиляция — не реже 1 раза в год (п. 132 СанПиН 3.3686-21)."}}, {"@type": "Question", "name": "Нужна ли подрядчику лицензия на дезинфекцию?", "acceptedAnswer": {"@type": "Answer", "text": "Да. С 1 марта 2025 года услуги по дезинфекции, дезинсекции и дератизации без лицензии Роспотребнадзора оказывать нельзя (постановление Правительства РФ от 20.03.2024 № 337). Лицензия не нужна, если организация проводит работы своими силами для собственных нужд. У ООО «Центр дезинфекционных услуг» действующая лицензия № Л064-00111-77/01942445, её можно проверить в реестре Роспотребнадзора."}}, {"@type": "Question", "name": "Можно ли проводить дезинфекцию своими силами?", "acceptedAnswer": {"@type": "Answer", "text": "Ежедневную уборку с дезсредствами ваш персонал проводит сам — для многих объектов этого прямо требуют санитарные правила. Для собственных нужд лицензия не нужна. Но полноценные дезинфекционные работы, по п. 89 СанПиН 3.3686-21, проводит персонал организаций, у которых дезинфекционная деятельность указана в учредительных документах."}}, {"@type": "Question", "name": "Нужно ли останавливать работу на время дезинфекции?", "acceptedAnswer": {"@type": "Answer", "text": "Обычно нет. Работы планируем на ночь, выходные или санитарный день. Если инструкция к средству требует отсутствия людей, заранее сообщаем время выдержки и проветривания. Ночные и выходные окна — без наценки."}}, {"@type": "Question", "name": "Какие документы выдаются после дезинфекции?", "acceptedAnswer": {"@type": "Answer", "text": "Акт выполненных работ с зонами, площадью, средством, концентрацией, способом и экспозицией; запись в журнале объекта; копии разрешительных документов и инструкций на средства; копия лицензии. При заказе лабораторного контроля — протоколы аккредитованной лаборатории."}}, {"@type": "Question", "name": "Как проверить, что дезинфекция сработала?", "acceptedAnswer": {"@type": "Answer", "text": "После каждой обработки — визуальный осмотр и контроль остатков средства после смыва. Объективно результат подтверждают лабораторные исследования: микробиологические смывы с поверхностей и оборудования, пробы воздуха, для систем кондиционирования — исследования на легионеллы. Их проводит аккредитованная лаборатория (п. 3 СП 2.1.4284-26; пп. 3.8, 12.2 МР 3.5.0353-24), протоколы прикладывают к программе производственного контроля. Смывы — от 1 400 ₽."}}, {"@type": "Question", "name": "Как часто дезинфицировать вентиляцию и кондиционеры?", "acceptedAnswer": {"@type": "Answer", "text": "Централизованные системы вентиляции и кондиционирования — не реже 1 раза в год. Централизованные системы кондиционирования и увлажнения в офисах, гостиницах, торговле, на производстве и транспорте исследуют на легионеллы не реже 2 раз в год, кроме сплит-систем и установок малой мощности без увлажнения (п. 132 СанПиН 3.3686-21). Подробнее — на странице об очистке и дезинфекции вентиляции."}}, {"@type": "Question", "name": "Какие санитарные правила изменились с 1 сентября 2026 года?", "acceptedAnswer": {"@type": "Answer", "text": "Вступили в силу шесть новых правил: СП 2.1.4284-26 (вместо СП 2.1.3678-20), СП 2.3.6.4281-26 (вместо СП 2.3.6.3668-20), СанПиН 2.3/2.4.4282-26 (вместо СанПиН 2.3/2.4.3590-20), а также СП 2.2.4285-26, СП 2.4.2.4283-26 и СП 2.5.4286-26 (сообщение Роспотребнадзора). Требования к дезинфекционной деятельности по-прежнему в СанПиН 3.3686-21."}}, {"@type": "Question", "name": "Сколько стоит дезинфекция для организаций?", "acceptedAnswer": {"@type": "Answer", "text": "Ориентиры: дезинфекция помещений — от 9 ₽ за м², дезинфекция воздуховодов — от 45 ₽ за погонный метр, микробиологические смывы — от 1 400 ₽, санитарный аудит — от 9 000 ₽, комплексное обслуживание по договору — от 3 500 ₽ в месяц. Осмотр и расчёт бесплатны, точную стоимость фиксируем в договоре."}}]}]}</script>
+<style id="m-crumbs">/* крошки на телефоне не показываем: для SEO хватает BreadcrumbList и ссылок в HTML */@media (max-width:900px){.d-crumbs,.f-crumbs{display:none!important}}</style>
+</head>
+<body class="d-page">
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<!-- ============ INTRO ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-in">
+    <svg class="intro-mark" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linejoin="round"><path class="im-shield" pathLength="100" d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z" stroke="#fff"/><circle class="im-c" pathLength="100" cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path class="im-x" pathLength="100" d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg>
+    <div class="intro-word"><span>ПЕСТКОНТРОЛЬ</span><b>Центр</b></div>
+    <div class="intro-bar"><i></i></div>
+  </div>
+</div>
+
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+<div class="cursor" aria-hidden="true"><i class="cursor-dot"></i><i class="cursor-ring"></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span>
+      <span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <div class="nav-dd"><button class="nav-dd-btn active" type="button" aria-expanded="false" aria-controls="nav-uslugi">Услуги<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-uslugi"><a href="./" aria-current="page">Дезинфекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../deratizatsiya/">Дератизация для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dezinsektsiya/">Дезинсекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#podhod" class="nav-dd-all"><span>Пест-контроль по системе IPM</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-otrasli">Отрасли<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-otrasli"><a href="../pishchevoe-proizvodstvo/">Пищевые производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../restorany-i-kafe/">Рестораны и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../sklady-i-logistika/">Склады и логистика<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../gostinitsy/">Гостиницы и отели<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasli" class="nav-dd-all">Все отрасли<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор</a><a href="../#podhod">Метод IPM</a><a href="../#usloviya">Цена</a><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-materialy">Материалы<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-materialy"><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/" class="nav-dd-all">Все материалы<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+    </nav>
+    <div class="hdr-right">
+      <a class="phone" href="tel:+74951043570" aria-label="Позвонить: +7 (495) 104-35-70"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></i><span>+7 (495) 104-35-70</span></a>
+      <div class="msg">
+        <a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a>
+        <a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a>
+      </div>
+      <a href="#zayavka" class="btn btn-w btn-sm" data-magnet><span class="btn-t">Бесплатный выезд</span></a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">
+  <div class="mm-group open" data-open><button class="mm-toggle" type="button" aria-expanded="true" aria-controls="mm-uslugi">Услуги<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-uslugi"><div><a href="./" aria-current="page">Дезинфекция для организаций</a><a href="../deratizatsiya/">Дератизация для организаций</a><a href="../dezinsektsiya/">Дезинсекция для организаций</a><a href="../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание</a><a href="../#podhod"><span class="nw">Пест-контроль</span> по системе IPM</a></div></div></div><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-otrasli">Отрасли<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-otrasli"><div><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети</a><a href="../restorany-i-kafe/">Рестораны и кафе</a><a href="../sklady-i-logistika/">Склады и логистика</a><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a><a href="../gostinitsy/">Гостиницы и отели</a><a href="../#otrasli">Все отрасли</a></div></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор <small>на дератизацию и дезинсекцию</small></a><a href="../#podhod">Метод IPM</a><a href="../#usloviya">Цена</a><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-materialy">Материалы<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-materialy"><div><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a><a href="../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a><a href="../materialy/">Все материалы</a></div></div></div>
+  <a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Заказать бесплатное обследование</span></a>
+</nav>
+
+<main id="main" tabindex="-1">
+<section class="d-hero dzf-hero" id="hero">
+  <div class="wrap">
+    <div class="d-hero-copy">
+      <nav class="d-crumbs" aria-label="Навигационная цепочка" data-h><a href="../">Главная</a><span aria-hidden="true">→</span><span aria-current="page">Дезинфекция для организаций</span></nav>
+      <div class="eyebrow">Все санитарные работы · Только&nbsp;для&nbsp;юридических&nbsp;лиц</div>
+      <h1><span class="ln d-ln1"><span>Дезинфекция</span></span> <span class="ln"><span><em>для организаций</em></span></span></h1>
+      <div class="d-hero-media"><picture><source media="(max-width:860px)" srcset="../img/dezinf-hero-mob-760.webp 760w, ../img/dezinf-hero-mob.webp 1024w" sizes="100vw" width="1024" height="576"><img class="d-hero-img" src="../img/dezinf-hero.webp" srcset="../img/dezinf-hero-1440.webp 1440w, ../img/dezinf-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="Дезинфектор в респираторе и защитных очках обрабатывает холодным туманом пустой цех пищевого производства" fetchpriority="high" decoding="async"></picture></div>
+      <ul class="d-ticks">
+        <li data-h>Плановая и внеплановая дезинфекция по <span class="nw">СанПиН 3.3686-21</span></li>
+        <li data-h>Ночные и выходные окна без наценки</li>
+        <li data-h>Срочный выезд за 3 часа по Москве и МО</li>
+      </ul>
+      <p class="sub" data-h>Обеззараживаем помещения, оборудование и воздух от бактерий, вирусов и грибов — и закрываем весь санитарный контур объекта: дезинсекция, дератизация, вентиляция, санитарный аудит и <span class="nw">пест-контроль</span> по системе IPM. По лицензии, с актом и записью в журнале после каждого выезда.</p>
+      <div class="d-btns" data-h>
+        <a href="#zayavka" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Рассчитать дезинфекцию</span></a>
+        <a href="tel:+74951043570" class="btn btn-o btn-lg d-tel-btn" data-magnet><span class="btn-t">+7 (495) 104-35-70</span></a>
+      </div>
+    </div>
+    <div aria-hidden="true"></div>
+  </div>
+</section>
+
+<div class="strip" role="group" aria-label="Коротко о дезинфекции">
+  <div class="strip-track" id="stripTrack">
+    <div class="strip-set">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-spray-can" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 3h.01" /> <path d="M7 5h.01" /> <path d="M11 7h.01" /> <path d="M3 7h.01" /> <path d="M7 9h.01" /> <path d="M3 11h.01" /> <rect width="4" height="4" x="15" y="5" /> <path d="m19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2" /> <path d="m13 14 8-2" /> <path d="m13 19 8-2" /> </svg><b>Плановая</b> и внеплановая дезинфекция</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88" /> <circle cx="6" cy="14" r="3" /> </svg><b>СанПиН 3.3686-21</b> и правила 2026 года</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg><b>Лицензия</b> Роспотребнадзора</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /> </svg><b>Акт и журнал</b> после каждого выезда</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-flask-conical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /> <path d="M6.453 15h11.094" /> <path d="M8.5 2h7" /> </svg><b>Смывы</b> через аккредитованную лабораторию</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clipboard-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="m9 14 2 2 4-4" /> </svg><b>Санитарный аудит</b> до проверки</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-crosshair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <line x1="22" x2="18" y1="12" y2="12" /> <line x1="6" x2="2" y1="12" y2="12" /> <line x1="12" x2="12" y1="6" y2="2" /> <line x1="12" x2="12" y1="22" y2="18" /> </svg><b><span class="nw">Пест-контроль</span></b> по системе IPM</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Ночью и в выходные</b> без наценки</div>
+    </div>
+    <div class="strip-set" aria-hidden="true">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-spray-can" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 3h.01" /> <path d="M7 5h.01" /> <path d="M11 7h.01" /> <path d="M3 7h.01" /> <path d="M7 9h.01" /> <path d="M3 11h.01" /> <rect width="4" height="4" x="15" y="5" /> <path d="m19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2" /> <path d="m13 14 8-2" /> <path d="m13 19 8-2" /> </svg><b>Плановая</b> и внеплановая дезинфекция</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88" /> <circle cx="6" cy="14" r="3" /> </svg><b>СанПиН 3.3686-21</b> и правила 2026 года</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg><b>Лицензия</b> Роспотребнадзора</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /> </svg><b>Акт и журнал</b> после каждого выезда</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-flask-conical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /> <path d="M6.453 15h11.094" /> <path d="M8.5 2h7" /> </svg><b>Смывы</b> через аккредитованную лабораторию</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clipboard-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="m9 14 2 2 4-4" /> </svg><b>Санитарный аудит</b> до проверки</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-crosshair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <line x1="22" x2="18" y1="12" y2="12" /> <line x1="6" x2="2" y1="12" y2="12" /> <line x1="12" x2="12" y1="6" y2="2" /> <line x1="12" x2="12" y1="22" y2="18" /> </svg><b><span class="nw">Пест-контроль</span></b> по системе IPM</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Ночью и в выходные</b> без наценки</div>
+    </div>
+  </div>
+</div>
+
+<section class="s" id="chto-takoe">
+  <div class="wrap">
+    <div class="d-swap">
+      <div class="head">
+        <div class="eyebrow" data-eyebrow><span>Определение · <span class="nw">СанПиН 3.3686-21</span></span></div>
+        <h2 data-split>Что такое <em>дезинфекция</em></h2>
+        <p class="sub" data-fade><b>Дезинфекция</b> — это уничтожение или удаление возбудителей инфекций — бактерий, вирусов, грибов и их спор — на поверхностях, оборудовании, в воздухе и системах вентиляции. Её задача — прервать путь, по которому инфекция переходит к человеку. Организации и ИП обязаны обеспечивать дезинфекционные мероприятия на своих объектах — своими силами или через специализированную организацию (<a href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773&amp;rdk=0" target="_blank" rel="noopener noreferrer">п. 88 <span class="nw">СанПиН 3.3686-21</span></a>).</p>
+      </div>
+      <figure class="d-swap-img" data-fade><img src="../img/dezinf-surfaces.webp" srcset="../img/dezinf-surfaces-720.webp 720w, ../img/dezinf-surfaces.webp 1200w" sizes="(max-width:860px) calc(100vw - 40px), (max-width:1900px) 44vw, 840px" width="1200" height="896" loading="lazy" decoding="async" alt="Специалист в перчатках и респираторе обрабатывает дезинфицирующим средством ручку стеклянной двери в пустом офисе"></figure>
+      <ul class="d-ticks" data-group="ctalist">
+        <li><b>Против кого.</b> Бактерии, вирусы, плесневые и дрожжеподобные грибы, споры. Под каждую группу у средства свой режим — концентрация и время выдержки по инструкции.</li>
+        <li><b>Где.</b> Контактные поверхности, санузлы, производственное оборудование, тара, холодильные камеры, мусоросборники, воздух и вентиляция.</li>
+        <li><b>Когда.</b> Постоянно и по графику — плановая профилактическая дезинфекция. После аварий и по замечаниям проверок — внеплановая. Результат подтверждают лабораторные смывы.</li>
+      </ul>
+    </div>
+    <table class="d-table dzf-tri" data-fade>
+      <caption class="sr-only">Чем дезинфекция отличается от дезинсекции и дератизации</caption>
+      <thead><tr><th scope="col">Работа</th><th scope="col">Против чего</th><th scope="col">Что защищаем</th><th scope="col">Подробнее</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Работа"><b>Дезинфекция</b></td><td data-l="Против чего">Бактерии, вирусы, грибы</td><td data-l="Что защищаем">Поверхности, оборудование, воздух, вентиляцию</td><td data-l="Подробнее"><a href="#vidy">Виды и методы — ниже</a></td></tr>
+        <tr><td data-l="Работа"><b>Дезинсекция</b></td><td data-l="Против чего">Тараканы, мухи, моль, муравьи, клопы и другие членистоногие</td><td data-l="Что защищаем">Продукцию, помещения, людей от насекомых-переносчиков</td><td data-l="Подробнее"><a href="../dezinsektsiya/">Дезинсекция для организаций</a></td></tr>
+        <tr><td data-l="Работа"><b>Дератизация</b></td><td data-l="Против чего">Крысы и мыши</td><td data-l="Что защищаем">Здания, склады и продукцию от грызунов</td><td data-l="Подробнее"><a href="../deratizatsiya/">Дератизация для организаций</a></td></tr>
+      </tbody>
+    </table>
+    <p class="dzf-upd" data-fade>Обновлено 06.11.2026 · Нормативная база проверена на 06.11.2026 · Материал подготовили специалисты ООО «Центр дезинфекционных услуг»</p>
+  </div>
+</section>
+
+<section class="s" id="uslugi">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Все услуги</div>
+      <h2 data-split>Все услуги дезинфекционной защиты <em>объекта</em></h2>
+      <p class="sub" data-fade>То, что по привычке называют «вызвать СЭС», — это услуги ниже. Каждую можно заказать отдельно или собрать в одну программу обслуживания — с общим договором, графиком и пакетом документов.</p>
+    </div>
+    <div class="dzf-svc" data-group="cards">
+      <a class="card dzf-svc-c" href="#vidy"><svg aria-hidden="true" focusable="false" class="lucide lucide-spray-can" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 3h.01" /> <path d="M7 5h.01" /> <path d="M11 7h.01" /> <path d="M3 7h.01" /> <path d="M7 9h.01" /> <path d="M3 11h.01" /> <rect width="4" height="4" x="15" y="5" /> <path d="m19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2" /> <path d="m13 14 8-2" /> <path d="m13 19 8-2" /> </svg><h3>Профилактическая дезинфекция</h3><p>Плановое обеззараживание контактных поверхностей, санузлов, оборудования, тары, холодильных камер и мест накопления отходов — по графику вашей программы производственного контроля.</p><span class="dzf-more">Виды дезинфекции</span></a>
+      <a class="card dzf-svc-c" href="#kontrol"><svg aria-hidden="true" focusable="false" class="lucide lucide-flask-conical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /> <path d="M6.453 15h11.094" /> <path d="M8.5 2h7" /> </svg><h3>Смывы и лабораторный контроль</h3><p>Микробиологические смывы с поверхностей и оборудования, пробы воздуха, исследования на легионеллы — через аккредитованную лабораторию. Протоколы для производственного контроля и проверок.</p><span class="dzf-more">Как контролируем</span></a>
+      <a class="card dzf-svc-c" href="../ochistka-dezinfektsiya-ventilyatsii/"><svg aria-hidden="true" focusable="false" class="lucide lucide-wind" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M12.8 19.6A2 2 0 1 0 14 16H2" /> <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" /> <path d="M9.8 4.4A2 2 0 1 1 11 8H2" /> </svg><h3>Очистка и дезинфекция вентиляции</h3><p>Воздуховоды, кухонные вытяжки, фанкойлы и сплит-системы: очистка, дезинфекция, смывы и запись в журнал по <span class="nw">МР 3.5.0396-25</span>.</p><span class="dzf-more">Страница услуги</span></a>
+      <a class="card dzf-svc-c" href="../dezinsektsiya/"><svg aria-hidden="true" focusable="false" class="lucide lucide-bug" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m8 2 1.88 1.88" /> <path d="M14.12 3.88 16 2" /> <path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1" /> <path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6" /> <path d="M12 20v-9" /> <path d="M6.53 9C4.6 8.8 3 7.1 3 5" /> <path d="M6 13H2" /> <path d="M3 21c0-2.1 1.7-3.9 3.8-4" /> <path d="M20.97 5c0 2.1-1.6 3.8-3.5 4" /> <path d="M22 13h-4" /> <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4" /> </svg><h3>Дезинсекция</h3><p>Тараканы, мухи, моль, муравьи, клопы: точки контроля, гели без остановки работы, ночные обработки и ротация средств.</p><span class="dzf-more">Страница услуги</span></a>
+      <a class="card dzf-svc-c" href="../deratizatsiya/"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg><h3>Дератизация</h3><p>Три контура защиты от крыс и мышей: контейнеры по периметру, ловушки без яда в цехах, ежемесячный учёт и схема точек.</p><span class="dzf-more">Страница услуги</span></a>
+      <a class="card dzf-svc-c" href="../sanitarnyy-audit/"><svg aria-hidden="true" focusable="false" class="lucide lucide-clipboard-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="m9 14 2 2 4-4" /> </svg><h3>Санитарный аудит (СЭС-аудит)</h3><p>Проверка объекта и документов по проверочным листам Роспотребнадзора и СанПиН 2026 года — до визита инспектора или аудитора сети.</p><span class="dzf-more">Страница услуги</span></a>
+      <a class="card dzf-svc-c" href="../#podhod"><svg aria-hidden="true" focusable="false" class="lucide lucide-crosshair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <line x1="22" x2="18" y1="12" y2="12" /> <line x1="6" x2="2" y1="12" y2="12" /> <line x1="12" x2="12" y1="6" y2="2" /> <line x1="12" x2="12" y1="22" y2="18" /> </svg><h3><span class="nw">Пест-контроль</span> по системе IPM</h3><p>Мониторинг, прогноз и устранение причин, обработки — по показаниям. Программа и журнал для ХАССП и аудитов.</p><span class="dzf-more">Как устроен IPM</span></a>
+      <a class="card dzf-svc-c" href="../dogovor-deratizatsiya-dezinsektsiya/"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-signature" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z" /> <path d="M14.487 7.858A1 1 0 0 1 14 7V2" /> <path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516" /> <path d="M8 18h1" /> </svg><h3>Договор на обслуживание</h3><p>Один договор на все виды работ: график визитов, сроки реагирования, акт после каждого выезда, цена до подписания.</p><span class="dzf-more">Условия договора</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="pochemu">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Одно слово — весь комплекс</div>
+      <h2 data-split>Почему дезинфекцией называют <em>весь комплекс работ</em></h2>
+      <p class="sub" data-fade>В санитарных правилах дезинфекционная деятельность — не только обеззараживание. В неё входят борьба с патогенными микроорганизмами, возбудителями инвазионных болезней, грызунами и их эктопаразитами, кровососущими членистоногими и другими насекомыми, имеющими медицинское значение (<a href="https://docs.cntd.ru/document/573660140/titles/6FESEN" target="_blank" rel="noopener noreferrer">п. 79 <span class="nw">СанПиН 3.3686-21</span></a>).</p>
+    </div>
+    <div class="dzf-why" data-fade>
+      <div class="dzf-why-t">
+        <p>Профилактическая дезинфекция в широком смысле включает дезинфекцию, дезинсекцию, дератизацию и дезинвазию (п. 80). Поэтому специалиста называют дезинфектором, научную область — дезинфектологией, а лицензия Роспотребнадзора выдаётся сразу на услуги по дезинфекции, дезинсекции и дератизации. Поэтому и наша компания называется «Центр дезинфекционных услуг».</p>
+        <p>Цель у всех этих работ одна — прервать механизм передачи инфекции (п. 40 <span class="nw">СанПиН 3.3686-21</span>). Возбудитель попадает к человеку разными путями, и на каждом нужен свой барьер.</p>
+      </div>
+      <ol class="dzf-chain" aria-label="Путь инфекции и где мы его разрываем">
+        <li><span class="dzf-ch-k">Путь возбудителя</span><span class="dzf-ch-v">Наш барьер</span></li>
+        <li><b>Поверхности, руки, оборудование, тара</b><span><a href="#vidy">Плановая и внеплановая дезинфекция</a></span></li>
+        <li><b>Воздух, вентиляция, кондиционеры</b><span><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a></span></li>
+        <li><b>Мухи, тараканы и другие насекомые-переносчики</b><span><a href="../dezinsektsiya/">Дезинсекция</a></span></li>
+        <li><b>Грызуны и их эктопаразиты</b><span><a href="../deratizatsiya/">Дератизация</a></span></li>
+        <li><b>Нарушения в санитарии, потоках и документах</b><span><a href="../sanitarnyy-audit/">Санитарный аудит</a></span></li>
+        <li><b>Возврат проблемы между обработками</b><span><a href="../#podhod"><span class="nw">Пест-контроль</span> по IPM: мониторинг и прогноз</a></span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="vidy">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow><span>Виды дезинфекции · п. 80 <span class="nw">СанПиН 3.3686-21</span></span></div>
+      <h2 data-split>Профилактическая дезинфекция: <em>плановая и внеплановая</em></h2>
+      <p class="sub" data-fade>Для организаций основная работа — профилактическая дезинфекция (п. 80 <span class="nw">СанПиН 3.3686-21</span>): она не даёт микроорганизмам накапливаться на поверхностях, в оборудовании и воздухе. Плановую проводят по графику программы производственного контроля, внеплановую — по санитарно-гигиеническим показаниям (п. 3.1 <span class="nw">МР 3.5.0353-24</span>).</p>
+    </div>
+    <table class="d-table dzf-kinds" data-fade>
+      <caption class="sr-only">Виды дезинфекции для организаций</caption>
+      <thead><tr><th scope="col">Вид</th><th scope="col">Когда</th><th scope="col">Что обрабатываем</th><th scope="col">Кто проводит</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Вид"><b>Плановая</b></td><td data-l="Когда">По графику программы производственного контроля — с кратностью по санитарным правилам для вашего объекта</td><td data-l="Что обрабатываем">Контактные поверхности, санузлы, оборудование, тару, камеры, мусоросборники, воздух, вентиляцию</td><td data-l="Кто проводит">Ежедневно — ваш персонал, плановые и сложные работы — специализированная организация</td></tr>
+        <tr><td data-l="Вид"><b>Генеральная в санитарный день</b></td><td data-l="Когда">На пищевом производстве — 1 раз в месяц, в общепроизводственный санитарный день (п. 3.6 <span class="nw">МР 3.5.0353-24</span>); на других объектах — по графику предприятия</td><td data-l="Что обрабатываем">Всё оборудование, помещения, инвентарь и тару</td><td data-l="Кто проводит">Персонал предприятия и специализированная организация</td></tr>
+        <tr><td data-l="Вид"><b>Внеплановая по санитарно-гигиеническим показаниям</b></td><td data-l="Когда">Замечания производственного контроля или аудита, неудовлетворительные смывы, авария, затопление стоками</td><td data-l="Что обрабатываем">Зону замечаний или аварии и прилегающие помещения</td><td data-l="Кто проводит">Специализированная организация</td></tr>
+      </tbody>
+    </table>
+    <p class="d-note" data-fade>Сам факт обработки инспектор видит по акту и журналу, а результат — по протоколам лабораторных исследований: смывам с поверхностей и пробам воздуха (<a href="#kontrol">как контролируем</a>). Порядок санитарной обработки на пищевых предприятиях — <a href="https://www.garant.ru/products/ipo/prime/doc/410334925/" target="_blank" rel="noopener noreferrer"><span class="nw">МР 3.5.0353-24</span></a>.</p>
+    <div class="dzf-plan" id="kak-rabotaem">
+      <span class="dz-lbl">По договору</span>
+      <h3 data-fade>Плановая дезинфекция: как работаем</h3>
+      <ol class="d-steps" data-group="steps">
+        <li><b>Бесплатный осмотр</b><span>Зоны, площадь, материалы поверхностей и режим работы объекта; расчёт — в течение 1 часа после осмотра.</span></li>
+        <li><b>График по правилам</b><span>Кратность по санитарным правилам для вашего типа объекта — в договор и программу производственного контроля.</span></li>
+        <li><b>Средство и режим</b><span>Под возбудителя и материал: концентрация и выдержка по инструкции, для пищевых поверхностей — со смывом, ротация средств.</span></li>
+        <li><b>Обработка в ваше окно</b><span>Ночью, в выходные или в санитарный день; время выдержки и проветривания сообщаем заранее.</span></li>
+        <li><b>Акт и контроль</b><span>Акт с зонами, средством и режимом, запись в журнале; по графику — смывы и пробы воздуха через лабораторию.</span></li>
+      </ol>
+      <p class="d-note" data-fade>Срочный выезд — в течение 3 часов по Москве и Московской области, ночные и выходные окна — без наценки.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="metody">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Методы и средства</div>
+      <h2 data-split>Чем и как <em>обеззараживаем</em></h2>
+      <p class="sub" data-fade>Режим дезинфекции подбираем под возбудитель, объект и материал. Средство, концентрацию, время выдержки и способ нанесения берём из инструкции к средству с разрешительными документами ЕАЭС (п. 84 <span class="nw">СанПиН 3.3686-21</span>). У средств разное действие — бактерицидное, вирулицидное, фунгицидное и спороцидное, — и каждое подтверждается испытаниями (<span class="nw">Р 4.2.3676-20</span>).</p>
+    </div>
+    <div class="d-cards dzf-meth" data-group="cards">
+      <article class="d-card"><span class="dz-lbl">Механический</span><h3>Сначала убрать грязь</h3><p>Сухая уборка, мойка, ополаскивание. Без этого этапа средство не достаёт до микроорганизмов, поэтому он идёт перед любой дезинфекцией.</p></article>
+      <article class="d-card"><span class="dz-lbl">Химический</span><h3>Растворы дезсредств</h3><p>Протирание, орошение, пена, аэрозоль (холодный туман) — для поверхностей, оборудования, тары, санузлов, больших объёмов складов и вентиляции.</p></article>
+      <article class="d-card"><span class="dz-lbl">Физический</span><h3>Пар, горячая вода, ультрафиолет</h3><p>Для термоустойчивых предметов и воздуха помещений — ультрафиолетовое облучение по <span class="nw">Р 3.5.1.4025-24</span>, если на объекте есть или планируются облучатели.</p></article>
+      <article class="d-card"><span class="dz-lbl">Комбинированный</span><h3>Сочетание методов</h3><p>Мойка, дезсредство и ультрафиолет вместе — на пищевых, медицинских и детских объектах, где требования к чистоте выше.</p></article>
+    </div>
+    <div class="dzf-order">
+      <h3 data-fade>Порядок санитарной обработки на пищевом объекте <span class="d-small">п. 3.2 <span class="nw">МР 3.5.0353-24</span></span></h3>
+      <ol class="d-steps dzf-steps6" data-group="steps">
+        <li><b>Сухая уборка</b><span>Сбор отходов и видимых загрязнений</span></li>
+        <li><b>Ополаскивание</b><span>Тёплая вода смывает растворимые загрязнения</span></li>
+        <li><b>Мойка</b><span>Растворы моющих средств</span></li>
+        <li><b>Ополаскивание</b><span>Удаление остатков загрязнений и моющих средств</span></li>
+        <li><b>Дезинфекция</b><span>Дезсредство по режиму инструкции</span></li>
+        <li><b>Смыв средства</b><span>Вода питьевого качества</span></li>
+      </ol>
+      <p class="d-note" data-fade>Мы встраиваемся в этот порядок: проводим этап дезинфекции в санитарный день и заранее согласуем с вашей санитарной службой средства, режим и смыв.</p>
+    </div>
+    <div class="d-cols2" data-group="cards">
+      <div class="d-card">
+        <span class="dz-lbl">Как подбираем режим</span>
+        <h3>Что учитываем — что выбираем</h3>
+        <ul class="d-ticks">
+          <li><b>Возбудитель</b> — бактерии, вирусы, грибы, споры: режим по инструкции к средству.</li>
+          <li><b>Объект</b> — поверхность, воздух, вентиляция, тара: протирание, орошение, пена или аэрозоль.</li>
+          <li><b>Материал и контакт с пищей</b> — средство, допущенное для пищевых предприятий, со смывом.</li>
+          <li><b>Люди на объекте</b> — окно работ, время выдержки и проветривания.</li>
+          <li><b>Риск устойчивости</b> — ротация средств по графику (п. 11.7 <span class="nw">МР 3.5.0353-24</span>).</li>
+        </ul>
+      </div>
+      <div class="d-card">
+        <span class="dz-lbl">Почему дезинфекция «не работает»</span>
+        <h3>Пять частых ошибок</h3>
+        <ul class="d-ticks">
+          <li>Средство наносят на грязную поверхность — без мойки оно не достаёт до микроорганизмов.</li>
+          <li>Смывают раньше, чем указано в инструкции, — не выдержана экспозиция.</li>
+          <li>Годами применяют одно и то же средство без ротации.</li>
+          <li>Забывают про вентиляцию — микроорганизмы возвращаются с воздухом.</li>
+          <li>Не записывают работы в журнал — для инспектора обработки не было.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-cols2" data-group="cards">
+      <div class="d-card" id="kontrol">
+        <h3>Лабораторный контроль</h3>
+        <p>После каждой обработки — визуальный осмотр и контроль остатков средства после смыва. Микробиологические смывы с поверхностей и оборудования, пробы воздуха и исследования на легионеллы — через аккредитованную лабораторию, с протоколом для программы производственного контроля (п. 3 <span class="nw">СП 2.1.4284-26</span>; пп. 3.8, 12.2 <span class="nw">МР 3.5.0353-24</span>). Смывы — от 1 400 ₽.</p>
+      </div>
+      <div class="d-card">
+        <h3>Безопасность</h3>
+        <p>Работаем в отсутствие персонала и посетителей там, где этого требует инструкция к средству. Время выдержки и проветривания сообщаем заранее. Средства храним и перевозим только в таре производителя с этикеткой (пп. 85, 87 <span class="nw">СанПиН 3.3686-21</span>).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="periodichnost">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Нормы на ноябрь 2026 года</div>
+      <h2 data-split>Как часто проводить дезинфекцию: <em>требования санитарных правил</em></h2>
+      <p class="sub" data-fade>Кратность дезинфекции устанавливает программа производственного контроля по правилам для вашего типа объекта. С 1 сентября 2026 года для торговли, общепита и эксплуатации помещений действуют <a href="https://www.41.rospotrebnadzor.ru/content/s-1-sentyabrya-2026-goda-vstupayut-v-silu-shest-novyh-sanitarnyh-pravil" target="_blank" rel="noopener noreferrer">новые санитарные правила</a> — в таблице уже их пункты.</p>
+    </div>
+    <table class="d-table dzf-freq" data-fade>
+      <caption class="sr-only">Периодичность дезинфекции по типам объектов</caption>
+      <thead><tr><th scope="col">Объект</th><th scope="col">Что требуют правила</th><th scope="col">Документ</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Объект"><b>Магазины и торговые объекты</b></td><td data-l="Что требуют правила">Уборка всех помещений с мойкой оборудования и инвентаря моющими и дезсредствами — 1 раз в месяц; туалеты — ежедневно с дезсредствами; территория — с дезсредствами не реже 1 раза в месяц; промывка и дезинфекция мусоросборников</td><td data-l="Документ"><a href="https://base.garant.ru/414329165/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener noreferrer"><span class="nw">СП 2.3.6.4281-26</span></a>, пп. 71, 72, 74, 75</td></tr>
+        <tr><td data-l="Объект"><b>Рестораны, кафе, столовые</b></td><td data-l="Что требуют правила">Ежедневная влажная уборка производственных помещений с моющими и дезсредствами</td><td data-l="Документ"><a href="https://klgd-4.gosuslugi.ru/netcat_files/30/50/SanPiN_2.3_2.4.4282_26.pdf" target="_blank" rel="noopener noreferrer"><span class="nw">СанПиН 2.3/2.4.4282-26</span></a>, п. 21</td></tr>
+        <tr><td data-l="Объект"><b>Пищевые производства</b></td><td data-l="Что требуют правила">Процедура уборки, мойки и дезинфекции — в системе ХАССП; методические рекомендации: плановая санобработка по графику, санитарный день с дополнительной дезинфекцией всего оборудования — 1 раз в месяц, внеплановая — по показаниям</td><td data-l="Документ"><a href="https://docs.cntd.ru/document/902320560/titles/3BOKT9Q" target="_blank" rel="noopener noreferrer">ТР ТС 021/2011</a>, ст. 10; <span class="nw">МР 3.5.0353-24</span>, пп. 3.1, 3.6</td></tr>
+        <tr><td data-l="Объект"><b>Гостиницы</b></td><td data-l="Что требуют правила">Дезинфекция заселённых номеров — ежедневно и после каждого выезда; уборка номеров с моющими и дезсредствами — не реже 1 раза в неделю</td><td data-l="Документ"><a href="http://publication.pravo.gov.ru/document/0001202606020088" target="_blank" rel="noopener noreferrer"><span class="nw">СП 2.1.4284-26</span></a>, пп. 84, 85</td></tr>
+        <tr><td data-l="Объект"><b>Плавательные бассейны</b></td><td data-l="Что требуют правила">Уборка с профилактическим ремонтом и последующей дезинфекцией — не реже 1 раза в месяц</td><td data-l="Документ"><span class="nw">СП 2.1.4284-26</span>, п. 73</td></tr>
+        <tr><td data-l="Объект"><b>Салоны красоты</b></td><td data-l="Что требуют правила">Ежедневная профилактическая дезинфекция, включая дезинсекцию и дератизацию</td><td data-l="Документ"><span class="nw">СП 2.1.4284-26</span>, п. 99</td></tr>
+        <tr><td data-l="Объект"><b>Прачечные</b></td><td data-l="Что требуют правила">Еженедельная дезинфекция</td><td data-l="Документ"><span class="nw">СП 2.1.4284-26</span>, п. 100</td></tr>
+        <tr><td data-l="Объект"><b>Медицинские организации</b></td><td data-l="Что требуют правила">Уборка с обработкой стен, полов и оборудования моющими и дезсредствами: помещения классов чистоты А и Б — не реже 1 раза в неделю, В и Г — не реже 1 раза в месяц</td><td data-l="Документ"><span class="nw">СП 2.1.4284-26</span>, п. 44</td></tr>
+        <tr><td data-l="Объект"><b>Централизованная вентиляция и кондиционирование — все объекты</b></td><td data-l="Что требуют правила">Профилактическая дезинфекция — не реже 1 раза в год</td><td data-l="Документ"><a href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773&amp;rdk=0" target="_blank" rel="noopener noreferrer"><span class="nw">СанПиН 3.3686-21</span></a>, п. 132</td></tr>
+        <tr><td data-l="Объект"><b>Транспорт для пищевых продуктов</b></td><td data-l="Что требуют правила">Подлежит дезинфекции</td><td data-l="Документ"><span class="nw">СанПиН 3.3686-21</span>, п. 131</td></tr>
+      </tbody>
+    </table>
+    <p class="d-note" data-fade>Ежедневную уборку с дезсредствами обычно ведёт ваш персонал. Мы берём на себя работы, для которых нужны лицензия, оборудование и документы: плановые обработки, санитарные дни, эпидпоказания, вентиляцию и контроль эффективности.</p>
+  </div>
+</section>
+
+<section class="s" id="ventilyatsiya">
+  <div class="wrap">
+    <div class="d-swap dzf-swap-r">
+      <div class="head">
+        <div class="eyebrow" data-eyebrow><span>Вентиляция · п. 132 <span class="nw">СанПиН 3.3686-21</span></span></div>
+        <h2 data-split>Очистка и дезинфекция <em>вентиляции</em></h2>
+        <p class="sub" data-fade>Централизованные системы вентиляции и кондиционирования дезинфицируют не реже 1 раза в год. Централизованные системы кондиционирования и увлажнения в офисах, гостиницах, торговле, на производстве, в медицинских и образовательных организациях и на транспорте исследуют на легионеллы не реже 2 раз в год, кроме сплит-систем и установок малой мощности без увлажнения.</p>
+      </div>
+      <figure class="d-swap-img dzf-img169" data-fade><img src="../img/vent-disinfection.webp" srcset="../img/vent-disinfection-720.webp 720w, ../img/vent-disinfection.webp 1200w" sizes="(max-width:860px) calc(100vw - 40px), (max-width:1900px) 44vw, 840px" width="1200" height="670" loading="lazy" decoding="async" alt="Дезинфекция воздуховода: специалист распыляет средство аэрозолем через ревизионный люк"></figure>
+      <div class="dzf-swap-b">
+        <ul class="d-ticks" data-group="ctalist">
+          <li><b>Сначала очистка, потом дезинфекция.</b> Порядок задаёт <a href="https://www.consultant.ru/document/cons_doc_LAW_541253/" target="_blank" rel="noopener noreferrer"><span class="nw">МР 3.5.0396-25</span></a>: подготовка, очистка, дезинфекция и оценка эффективности.</li>
+          <li><b>Средства широкого спектра</b>, которые разрушают биоплёнку и препятствуют её образованию.</li>
+          <li><b>Документы:</b> акт, запись в журнал учёта работ по очистке и дезинфекции, протокол лаборатории.</li>
+        </ul>
+        <div class="d-btns dzf-btns" data-fade><a href="../ochistka-dezinfektsiya-ventilyatsii/" class="btn btn-o btn-lg"><span class="btn-t">Подробнее о вентиляции</span></a><span class="dzf-price">от 45 ₽ за м. п.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="audit">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Санитарный аудит</div>
+      <h2 data-split>Санитарный аудит: <em>проверяем объект до инспектора</em></h2>
+      <p class="sub" data-fade>Санитарный аудит — добровольная проверка объекта и документов по тем же проверочным листам, которые Роспотребнадзор применяет на плановых проверках. Если программа производственного контроля ещё ссылается на правила, заменённые 1 сентября 2026 года, это первое, что стоит обновить.</p>
+    </div>
+    <div class="d-cols2" data-group="cards">
+      <div class="d-card">
+        <span class="dz-lbl">Что проверяем</span>
+        <h3>Объект и документы</h3>
+        <ul class="d-ticks">
+          <li>Программу производственного контроля и лабораторные исследования</li>
+          <li>Договоры, акты и журналы по дезинфекции, дезинсекции, дератизации и вентиляции</li>
+          <li>Дезсредства: разрешительные документы, инструкции, хранение</li>
+          <li>Санитарное состояние помещений, потоки, отходы, защиту от вредителей</li>
+        </ul>
+      </div>
+      <div class="d-card dzf-acc">
+        <span class="dz-lbl">Что вы получаете</span>
+        <h3>Акт и план устранения</h3>
+        <ul class="d-ticks">
+          <li>Каждое несоответствие — с фото и пунктом правил</li>
+          <li>Смывы и пробы воздуха — входят в стоимость аудита</li>
+          <li>План работ по приоритетам и помощь с исправлением</li>
+        </ul>
+        <div class="d-btns dzf-btns"><a href="../sanitarnyy-audit/" class="btn btn-o btn-lg"><span class="btn-t">Подробнее об аудите</span></a><span class="dzf-price">от 9 000 ₽</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="programma">
+  <div class="wrap">
+    <div class="d-card dzf-prog">
+      <div>
+        <span class="dz-lbl">Одна программа и один договор</span>
+        <h2 class="dzf-h2s" data-split><span class="nw">Пест-контроль</span> по IPM: <em>все работы в одной программе</em></h2>
+        <p data-fade>Когда объекту нужны и дезинфекция, и защита от вредителей, удобнее вести всё в одной программе. Так устроен <span class="nw">пест-контроль</span> по системе IPM: осмотр точек контроля, учёт, прогноз и устранение причин, а обработки — по показаниям. В программу добавляем профилактическую дезинфекцию и обслуживание вентиляции по графику — с одним договором, едиными актами и ежемесячным отчётом.</p>
+      </div>
+      <ul class="dzf-links" data-fade>
+        <li><a href="../#podhod"><span class="nw">Пест-контроль</span> для бизнеса</a></li>
+        <li><a href="../materialy/programma-pest-kontrolya/">Образец программы <span class="nw">пест-контроля</span></a></li>
+        <li><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="dokumenty">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Отчётность</div>
+      <h2 data-split>Документы по дезинфекции — <em>для Роспотребнадзора и аудиторов</em></h2>
+      <p class="sub" data-fade>После каждого выезда — акт и запись в журнале. При старте — договор, копия лицензии и документы на средства.</p>
+    </div>
+    <ol class="d-terms" data-group="steps">
+      <li><b>Договор и график работ</b><span>При заключении: виды работ, адреса, кратность, сроки реагирования.</span></li>
+      <li><b>Акт выполненных работ</b><span>После каждого выезда: дата, зоны и площадь, вид дезинфекции, средство, концентрация, способ, экспозиция, исполнитель.</span></li>
+      <li><b>Запись в журнале объекта</b><span>После каждого выезда — в журнале дезинфекции, <span class="nw">пест-контроля</span> или вентиляции.</span></li>
+      <li><b>Копии разрешительных документов и инструкций на средства</b><span>При старте и при смене средства — подтверждают, что средство разрешено и применяется по инструкции.</span></li>
+      <li><b>Копия лицензии</b><span>Лицензия Роспотребнадзора на услуги по дезинфекции, дезинсекции и дератизации: № <span class="nw">Л064-00111-77/01942445</span>. Запись можно проверить в <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211" target="_blank" rel="noopener noreferrer">реестре Роспотребнадзора</a>.</span></li>
+      <li><b>Протоколы лаборатории</b><span>Если заказан лабораторный контроль: смывы с поверхностей, воздух, легионеллы.</span></li>
+      <li><b>Закрывающие документы</b><span>Ежемесячно: счёт и УПД — с НДС и без НДС, на бумаге или через ЭДО.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="otrasli">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Для кого</div>
+      <h2 data-split>Дезинфекция <em>под ваш тип объекта</em></h2>
+    </div>
+    <div class="dzf-inds" data-group="cards">
+      <article class="card dzf-ind"><svg aria-hidden="true" focusable="false" class="lucide lucide-factory" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 16h.01" /> <path d="M16 16h.01" /> <path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" /> <path d="M8 16h.01" /> </svg><h3>Пищевые производства</h3><p>Санитарные дни и внеплановые обработки по <span class="nw">МР 3.5.0353-24</span>, средства для пищевых поверхностей со смывом, смывы на эффективность, процедура ХАССП. <a href="../pishchevoe-proizvodstvo/"><span class="nw">Пест-контроль</span> на производстве</a></p></article>
+      <article class="card dzf-ind"><svg aria-hidden="true" focusable="false" class="lucide lucide-shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle cx="18" cy="20" r="2" /> <circle cx="8" cy="20" r="2" /> </svg><h3>Торговые сети</h3><p>Ежемесячные обработки по <span class="nw">СП 2.3.6.4281-26</span>, холодильные камеры после хранения отходов, мусоросборники и площадки, сводный отчёт по магазинам. <a href="../magaziny-i-torgovye-seti/"><span class="nw">Пест-контроль</span> магазинов</a></p></article>
+      <article class="card dzf-ind"><svg aria-hidden="true" focusable="false" class="lucide lucide-utensils" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /> <path d="M7 2v20" /> <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" /> </svg><h3>Рестораны и кафе</h3><p>Ночные окна, кухня и моечные, жировая очистка вытяжек, смывы с поверхностей и инвентаря по программе производственного контроля. <a href="../restorany-i-kafe/"><span class="nw">Пест-контроль</span> ресторанов</a></p></article>
+      <article class="card dzf-ind"><svg aria-hidden="true" focusable="false" class="lucide lucide-warehouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11" /> <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z" /> <path d="M6 13h12" /> <path d="M6 17h12" /> </svg><h3>Склады и логистика</h3><p>Большие объёмы — холодным туманом, зоны приёмки и возвратов, обработка после протечек и затопления, транспорт для пищевых продуктов. <a href="../sklady-i-logistika/"><span class="nw">Пест-контроль</span> складов</a></p></article>
+      <article class="card dzf-ind"><svg aria-hidden="true" focusable="false" class="lucide lucide-pill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" /> <path d="m8.5 8.5 7 7" /> </svg><h3>Фармацевтика</h3><p>Складские и вспомогательные зоны, вентиляция, работа по вашим СОП и согласованному перечню средств. <a href="../farmatsevticheskie-proizvodstva/"><span class="nw">Пест-контроль</span> фармпроизводств</a></p></article>
+      <article class="card dzf-ind"><svg aria-hidden="true" focusable="false" class="lucide lucide-bed-double" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" /> <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" /> <path d="M12 4v6" /> <path d="M2 18h20" /> </svg><h3>Гостиницы</h3><p>Номера и общественные зоны по графику, вентиляция и контроль легионелл, плавательные бассейны. <a href="../gostinitsy/"><span class="nw">Пест-контроль</span> гостиниц</a></p></article>
+      <article class="card dzf-ind"><svg aria-hidden="true" focusable="false" class="lucide lucide-building-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" /> <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" /> <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" /> <path d="M10 6h4" /> <path d="M10 10h4" /> <path d="M10 14h4" /> <path d="M10 18h4" /> </svg><h3>Офисы и бизнес-центры</h3><p>Профилактическая дезинфекция в сезон ОРВИ и гриппа, санузлы и зоны питания, кондиционирование и контроль легионелл.</p></article>
+      <article class="card dzf-ind dzf-ind-cta"><h3>Другой объект?</h3><p>Школы, медицинские центры, спортивные и жилые комплексы — подберём состав работ после бесплатного осмотра.</p><a href="#zayavka" class="btn btn-w btn-sm"><span class="btn-t">Обсудить объект</span></a></article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="stoimost">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Стоимость и расчёт</div>
+      <h2 data-split>Сколько стоит дезинфекция <em>для организаций</em></h2>
+      <p class="sub" data-fade>Цена зависит от площади и зон, вида дезинфекции, режима и метода, кратности и окна работ. Обследование и расчёт — бесплатно, расчёт или проект договора присылаем в течение 1 часа после осмотра.</p>
+    </div>
+    <table class="d-table d-prices dzf-prices" data-fade>
+      <caption class="sr-only">Ориентиры стоимости дезинфекции и смежных работ для организаций</caption>
+      <thead><tr><th scope="col">Работа</th><th scope="col">Что входит</th><th scope="col" class="d-price">Ориентир</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Работа">Осмотр объекта и расчёт</td><td data-l="Что входит">Выезд специалиста, оценка зон и площади, расчёт и окно работ</td><td data-l="Ориентир" class="d-price">0 ₽</td></tr>
+        <tr><td data-l="Работа">Дезинфекция помещений</td><td data-l="Что входит">Плановая или внеплановая, средство с СГР по режиму, акт и запись в журнале</td><td data-l="Ориентир" class="d-price">от 9 ₽ за м²</td></tr>
+        <tr><td data-l="Работа">Дезинфекция воздуховодов</td><td data-l="Что входит">Средство по режиму для вентиляции, расчёт расхода в журнале</td><td data-l="Ориентир" class="d-price">от 45 ₽ за м. п.</td></tr>
+        <tr><td data-l="Работа">Очистка воздуховодов от пыли</td><td data-l="Что входит">Щёточные машины, промышленный пылесос, видео до и после</td><td data-l="Ориентир" class="d-price">от 100 ₽ за м. п.</td></tr>
+        <tr><td data-l="Работа">Жировая очистка кухонной вытяжки</td><td data-l="Что входит">Зонты, жироулавливающие фильтры, короба до вентилятора</td><td data-l="Ориентир" class="d-price">от 136 ₽ за м. п.</td></tr>
+        <tr><td data-l="Работа">Очистка и дезинфекция сплит-системы</td><td data-l="Что входит">Фильтры, теплообменник, дренаж, дезинфекция испарителя</td><td data-l="Ориентир" class="d-price">от 1 600 ₽</td></tr>
+        <tr><td data-l="Работа">Микробиологические смывы</td><td data-l="Что входит">Отбор проб и протокол аккредитованной лаборатории</td><td data-l="Ориентир" class="d-price">от 1 400 ₽</td></tr>
+        <tr><td data-l="Работа">Санитарный аудит</td><td data-l="Что входит">Проверка по проверочным листам, смывы и пробы воздуха, акт с реестром нарушений</td><td data-l="Ориентир" class="d-price">от 9 000 ₽</td></tr>
+        <tr><td data-l="Работа">Комплексное обслуживание по договору</td><td data-l="Что входит">Дезинсекция, дератизация и дезинфекция по графику, акты и журнал</td><td data-l="Ориентир" class="d-price">от 3 500 ₽ в месяц</td></tr>
+      </tbody>
+    </table>
+    <p class="d-note" data-fade>Без доплат за ночные и выходные окна. Работаем с юрлицами и ИП по безналичному расчёту, с НДС и без НДС.</p>
+  </div>
+</section>
+
+
+<!-- ============ СМОТРИТЕ ТАКЖЕ (перелинковка) ============ -->
+<section class="s s-rel" id="smotrite-takzhe">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Смотрите также</div>
+      <h2 data-split>Связанные услуги <em>и материалы</em></h2>
+    </div>
+    <div class="rel-grid" data-group="cards">
+      <a class="card rel-card" href="../ochistka-dezinfektsiya-ventilyatsii/"><span class="rel-k">Услуга</span><span class="rel-t">Очистка и дезинфекция вентиляции</span><span class="rel-d">Воздуховоды, кухонные вытяжки и кондиционеры: видео до и после, акт по п. 43 ППР, журнал по МР 3.5.0396-25.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../sanitarnyy-audit/"><span class="rel-k">Услуга</span><span class="rel-t">Санитарный аудит (<span class="nw">СЭС-аудит</span>)</span><span class="rel-d">Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../dezinsektsiya/"><span class="rel-k">Услуга</span><span class="rel-t">Дезинсекция для организаций</span><span class="rel-d">Контроль насекомых по IPM без остановки работы, ротация средств, журнал и акты по СанПиН.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../deratizatsiya/"><span class="rel-k">Услуга</span><span class="rel-t">Дератизация для организаций</span><span class="rel-d">Три контура защиты от крыс и мышей, контейнеры КИК и ловушки без яда в цехах, схема точек и акты.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="voprosy">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Вопросы и ответы</div>
+      <h2 data-split>Вопросы о дезинфекции <em>для организаций</em></h2>
+    </div>
+    <div class="faq">
+      <div class="faq-col" data-group="faq">
+        <div class="card qa open"><button aria-expanded="true" aria-controls="a1" id="q1">Что такое дезинфекция простыми словами?<span class="pm"></span></button><div class="ans" id="a1" role="region" aria-labelledby="q1" style="height:auto"><div><p>Это уничтожение или удаление возбудителей инфекций — бактерий, вирусов, грибов и их спор — на поверхностях, оборудовании, в воздухе и вентиляции. Цель — прервать путь, по которому инфекция переходит от источника к человеку (п. 40 <a href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773&amp;rdk=0" target="_blank" rel="noopener noreferrer"><span class="nw">СанПиН 3.3686-21</span></a>).</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a2" id="q2">Чем дезинфекция отличается от дезинсекции и дератизации?<span class="pm"></span></button><div class="ans" id="a2" role="region" aria-labelledby="q2"><div><p>Дезинфекция направлена на микроорганизмы, дезинсекция — на насекомых и других членистоногих, дератизация — на грызунов. В санитарных правилах все три вида работ объединены понятием «дезинфекционная деятельность» (<a href="https://docs.cntd.ru/document/573660140/titles/6FESEN" target="_blank" rel="noopener noreferrer">пп. 79–80 <span class="nw">СанПиН 3.3686-21</span></a>), а лицензия Роспотребнадзора выдаётся сразу на все три.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a3" id="q3">Чем плановая дезинфекция отличается от внеплановой?<span class="pm"></span></button><div class="ans" id="a3" role="region" aria-labelledby="q3"><div><p>Обе — профилактическая дезинфекция (п. 80 <span class="nw">СанПиН 3.3686-21</span>). Плановую проводят по графику программы производственного контроля — с кратностью, которую задают санитарные правила для вашего типа объекта. Внеплановую — по санитарно-гигиеническим показаниям: при замечаниях производственного контроля или аудита (п. 3.1 <a href="https://www.garant.ru/products/ipo/prime/doc/410334925/" target="_blank" rel="noopener noreferrer"><span class="nw">МР 3.5.0353-24</span></a>), неудовлетворительных смывах, после аварий и затоплений.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a4" id="q4">Как часто организации нужно проводить дезинфекцию?<span class="pm"></span></button><div class="ans" id="a4" role="region" aria-labelledby="q4"><div><p>Кратность задаёт программа производственного контроля с учётом правил для вашего типа объекта. Например, в торговле — уборка всех помещений с дезсредствами 1 раз в месяц (п. 75 <a href="https://base.garant.ru/414329165/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener noreferrer"><span class="nw">СП 2.3.6.4281-26</span></a>), в гостиницах — дезинфекция заселённых номеров ежедневно и после каждого выезда (п. 84 <a href="http://publication.pravo.gov.ru/document/0001202606020088" target="_blank" rel="noopener noreferrer"><span class="nw">СП 2.1.4284-26</span></a>), централизованная вентиляция — не реже 1 раза в год (п. 132 <span class="nw">СанПиН 3.3686-21</span>).</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a5" id="q5">Нужна ли подрядчику лицензия на дезинфекцию?<span class="pm"></span></button><div class="ans" id="a5" role="region" aria-labelledby="q5"><div><p>Да. С 1 марта 2025 года услуги по дезинфекции, дезинсекции и дератизации без лицензии Роспотребнадзора оказывать нельзя (<a href="https://39.rospotrebnadzor.ru/content/ob-utverzhdenii-polozheniya-o-licenzirovanii-deyatelnosti-po-okazaniyu-uslug-po-dezinfekcii" target="_blank" rel="noopener noreferrer">постановление Правительства РФ от 20.03.2024 № 337</a>). Лицензия не нужна, если организация проводит работы своими силами для собственных нужд. У ООО «Центр дезинфекционных услуг» действующая лицензия № <span class="nw">Л064-00111-77/01942445</span>, её можно проверить в <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211" target="_blank" rel="noopener noreferrer">реестре Роспотребнадзора</a>.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a6" id="q6">Можно ли проводить дезинфекцию своими силами?<span class="pm"></span></button><div class="ans" id="a6" role="region" aria-labelledby="q6"><div><p>Ежедневную уборку с дезсредствами ваш персонал проводит сам — для многих объектов этого прямо требуют санитарные правила. Для собственных нужд лицензия не нужна. Но полноценные дезинфекционные работы, по п. 89 <span class="nw">СанПиН 3.3686-21</span>, проводит персонал организаций, у которых дезинфекционная деятельность указана в учредительных документах.</p></div></div></div>
+      </div>
+      <div class="faq-col" data-group="faq">
+        <div class="card qa"><button aria-expanded="false" aria-controls="a7" id="q7">Нужно ли останавливать работу на время дезинфекции?<span class="pm"></span></button><div class="ans" id="a7" role="region" aria-labelledby="q7"><div><p>Обычно нет. Работы планируем на ночь, выходные или санитарный день. Если инструкция к средству требует отсутствия людей, заранее сообщаем время выдержки и проветривания. Ночные и выходные окна — без наценки.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a8" id="q8">Какие документы выдаются после дезинфекции?<span class="pm"></span></button><div class="ans" id="a8" role="region" aria-labelledby="q8"><div><p>Акт выполненных работ с зонами, площадью, средством, концентрацией, способом и экспозицией; запись в журнале объекта; копии разрешительных документов и инструкций на средства; копия лицензии. При заказе лабораторного контроля — протоколы аккредитованной лаборатории.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a9" id="q9">Как проверить, что дезинфекция сработала?<span class="pm"></span></button><div class="ans" id="a9" role="region" aria-labelledby="q9"><div><p>После каждой обработки — визуальный осмотр и контроль остатков средства после смыва. Объективно результат подтверждают лабораторные исследования: микробиологические смывы с поверхностей и оборудования, пробы воздуха, для систем кондиционирования — исследования на легионеллы. Их проводит аккредитованная лаборатория (п. 3 <a href="http://publication.pravo.gov.ru/document/0001202606020088" target="_blank" rel="noopener noreferrer"><span class="nw">СП 2.1.4284-26</span></a>; пп. 3.8, 12.2 <span class="nw">МР 3.5.0353-24</span>), протоколы прикладывают к программе производственного контроля. Смывы — от 1 400 ₽.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a10" id="q10">Как часто дезинфицировать вентиляцию и кондиционеры?<span class="pm"></span></button><div class="ans" id="a10" role="region" aria-labelledby="q10"><div><p>Централизованные системы вентиляции и кондиционирования — не реже 1 раза в год. Централизованные системы кондиционирования и увлажнения в офисах, гостиницах, торговле, на производстве и транспорте исследуют на легионеллы не реже 2 раз в год, кроме сплит-систем и установок малой мощности без увлажнения (п. 132 <span class="nw">СанПиН 3.3686-21</span>). Подробнее — на странице <a href="../ochistka-dezinfektsiya-ventilyatsii/">об очистке и дезинфекции вентиляции</a>.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a11" id="q11">Какие санитарные правила изменились с 1 сентября 2026 года?<span class="pm"></span></button><div class="ans" id="a11" role="region" aria-labelledby="q11"><div><p>Вступили в силу шесть новых правил: <span class="nw">СП 2.1.4284-26</span> (вместо <span class="nw">СП 2.1.3678-20</span>), <span class="nw">СП 2.3.6.4281-26</span> (вместо <span class="nw">СП 2.3.6.3668-20</span>), <span class="nw">СанПиН 2.3/2.4.4282-26</span> (вместо <span class="nw">СанПиН 2.3/2.4.3590-20</span>), а также <span class="nw">СП 2.2.4285-26</span>, <span class="nw">СП 2.4.2.4283-26</span> и <span class="nw">СП 2.5.4286-26</span> (<a href="https://www.41.rospotrebnadzor.ru/content/s-1-sentyabrya-2026-goda-vstupayut-v-silu-shest-novyh-sanitarnyh-pravil" target="_blank" rel="noopener noreferrer">сообщение Роспотребнадзора</a>). Требования к дезинфекционной деятельности по-прежнему в <span class="nw">СанПиН 3.3686-21</span>.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a12" id="q12">Сколько стоит дезинфекция для организаций?<span class="pm"></span></button><div class="ans" id="a12" role="region" aria-labelledby="q12"><div><p>Ориентиры: дезинфекция помещений — от 9 ₽ за м², дезинфекция воздуховодов — от 45 ₽ за погонный метр, микробиологические смывы — от 1 400 ₽, санитарный аудит — от 9 000 ₽, комплексное обслуживание по договору — от 3 500 ₽ в месяц. Осмотр и расчёт бесплатны, точную стоимость фиксируем в договоре.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="normy">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Нормативная база</div>
+      <h2 data-split>На какие документы <em>мы опираемся</em></h2>
+    </div>
+    <table class="d-table dzf-docs" data-fade>
+      <caption class="sr-only">Нормативные документы о дезинфекции для организаций</caption>
+      <thead><tr><th scope="col">Документ</th><th scope="col">Что регулирует</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Документ"><a href="https://minzdrav.gov.ru/documents/8004-federalnyy-zakon-52-fz-ot-30-marta-1999-g" target="_blank" rel="noopener noreferrer">Федеральный закон № 52-ФЗ</a>, ст. 11 и 32</td><td data-l="Что регулирует">Обязанности организаций и ИП, производственный контроль</td></tr>
+        <tr><td data-l="Документ"><a href="https://39.rospotrebnadzor.ru/content/ob-utverzhdenii-polozheniya-o-licenzirovanii-deyatelnosti-po-okazaniyu-uslug-po-dezinfekcii" target="_blank" rel="noopener noreferrer">Постановление Правительства РФ от 20.03.2024 № 337</a></td><td data-l="Что регулирует">Лицензирование услуг по дезинфекции, дезинсекции и дератизации с 1 марта 2025 года</td></tr>
+        <tr><td data-l="Документ"><a href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773&amp;rdk=0" target="_blank" rel="noopener noreferrer"><span class="nw">СанПиН 3.3686-21</span></a>, пп. 40, 79–89, 131–132</td><td data-l="Что регулирует">Дезинфекционная деятельность, виды дезинфекции, средства, вентиляция и кондиционирование</td></tr>
+        <tr><td data-l="Документ"><a href="http://publication.pravo.gov.ru/document/0001202606020088" target="_blank" rel="noopener noreferrer"><span class="nw">СП 2.1.4284-26</span></a> (с 01.09.2026)</td><td data-l="Что регулирует">Эксплуатация помещений: гостиницы, салоны, прачечные, медорганизации, бассейны, вентиляция</td></tr>
+        <tr><td data-l="Документ"><a href="https://base.garant.ru/414329165/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener noreferrer"><span class="nw">СП 2.3.6.4281-26</span></a> (с 01.09.2026)</td><td data-l="Что регулирует">Торговые объекты и рынки пищевой продукции</td></tr>
+        <tr><td data-l="Документ"><a href="https://klgd-4.gosuslugi.ru/netcat_files/30/50/SanPiN_2.3_2.4.4282_26.pdf" target="_blank" rel="noopener noreferrer"><span class="nw">СанПиН 2.3/2.4.4282-26</span></a> (с 01.09.2026)</td><td data-l="Что регулирует">Общественное питание</td></tr>
+        <tr><td data-l="Документ"><a href="https://docs.cntd.ru/document/902320560/titles/3BOKT9Q" target="_blank" rel="noopener noreferrer">ТР ТС 021/2011</a>, ст. 10</td><td data-l="Что регулирует">Процедуры ХАССП: уборка, мойка, дезинфекция, дезинсекция, дератизация</td></tr>
+        <tr><td data-l="Документ"><a href="https://www.garant.ru/products/ipo/prime/doc/410334925/" target="_blank" rel="noopener noreferrer"><span class="nw">МР 3.5.0353-24</span></a></td><td data-l="Что регулирует">Санитарная обработка на предприятиях пищевой промышленности</td></tr>
+        <tr><td data-l="Документ"><a href="https://www.consultant.ru/document/cons_doc_LAW_541253/" target="_blank" rel="noopener noreferrer"><span class="nw">МР 3.5.0396-25</span></a></td><td data-l="Что регулирует">Очистка и дезинфекция систем вентиляции и кондиционирования</td></tr>
+        <tr><td data-l="Документ"><a href="https://base.garant.ru/409607223/" target="_blank" rel="noopener noreferrer"><span class="nw">Р 3.5.1.4025-24</span></a></td><td data-l="Что регулирует">Ультрафиолетовое обеззараживание воздуха</td></tr>
+        <tr><td data-l="Документ"><span class="nw">Р 4.2.3676-20</span></td><td data-l="Что регулирует">Испытания эффективности дезинфицирующих средств</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="cta" id="zayavka"><div class="cta-bg f-lazy" aria-hidden="true" data-parallax-bg></div><div class="cta-orb" id="orb" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-eyebrow>Бесплатный осмотр</div>
+      <h2 data-split>Закажите бесплатное обследование <em>и расчёт</em></h2>
+      <p class="sub" data-fade>Специалист приедет на объект в Москве или Московской области, оценит зоны и площадь, подберёт режим и окно работ — ночью, в выходные или в санитарный день — и пришлёт расчёт.</p>
+      <ul class="cta-list" data-group="ctalist">
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Осмотр и расчёт по Москве и МО — 0 ₽</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Ночью, в выходные и в санитарный день — без наценки</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Акт и запись в журнале после каждого выезда</li>
+      </ul>
+      <div class="cta-contacts" data-fade>
+        <a class="ph" href="tel:+74951043570">+7 (495) 104-35-70</a>
+        <div class="msg">
+          <a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a>
+          <a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <form class="form" id="form" novalidate>
+      <div class="fbody">
+        <h3>Заявка на обследование и расчёт</h3>
+        <p class="fs">Заполнение займёт меньше минуты</p>
+        <div class="fg">
+          <div class="field"><label class="sr-only" for="f-name">Ваше имя</label><input id="f-name" name="name" placeholder="Ваше имя" required autocomplete="name"><small class="ferr">Укажите имя</small></div>
+          <div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>
+          <div class="field full"><label class="sr-only" for="f-type">Тип объекта</label><select id="f-type" name="type" required><option value="" disabled selected>Тип объекта</option><option value="Пищевое производство">Пищевое производство</option><option value="Магазин или торговая сеть">Магазин или торговая сеть</option><option value="Ресторан или кафе">Ресторан, кафе или столовая</option><option value="Склад, логистика">Склад или логистический центр</option><option value="Фармацевтическое производство">Фармацевтическое производство</option><option value="Гостиница">Гостиница</option><option value="Другое">Офис или бизнес-центр</option><option value="Другое">Медицинская организация</option><option value="Другое">Другое</option></select><small class="ferr">Выберите тип объекта</small></div>
+          <div class="field full"><label class="sr-only" for="fk">Что нужно</label><select id="fk" name="task"><option value="" selected>Что нужно (необязательно)</option><option>Плановая дезинфекция</option><option>Внеплановая дезинфекция</option><option>Смывы и лабораторный контроль</option><option>Очистка и дезинфекция вентиляции</option><option>Дезинсекция</option><option>Дератизация</option><option>Санитарный аудит (СЭС-аудит)</option><option>Комплексное обслуживание по договору</option></select></div>
+          <div class="field full"><label class="sr-only" for="fm">Адрес или комментарий</label><input id="fm" name="comment" placeholder="Адрес, площадь или комментарий" autocomplete="street-address" maxlength="200"></div>
+          <div class="field" hidden><input type="hidden" name="email" value=""></div>
+          <input type="hidden" name="msg" id="fmsg" value="">
+        </div>
+        <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Получить расчёт</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>
+        <p class="legal">Нажимая кнопку, вы даёте <a href="../soglasie/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаете, что ознакомились с <a href="../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg class="ok-ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M15 27l7 7 15-16"/></svg>
+        <h3>Заявка отправлена</h3><p>Перезвоним в ближайшее рабочее время, чтобы согласовать день бесплатного выезда. Срочные заявки — круглосуточно по телефону.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span><span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span></a>
+        <p class="d"><span class="nw">Пест-контроль</span> и <span class="nw">пест-менеджмент</span> по системе IPM для бизнеса в Москве и Московской области: бесплатный аудит, оценка <span class="nw">пест-риска</span>, мониторинг вредителей и отчётность.</p>
+      </div>
+      <div><h4>Услуги</h4><ul><li><a href="./" aria-current="page">Дезинфекция для организаций</a></li><li><a href="../deratizatsiya/">Дератизация для организаций</a></li><li><a href="../dezinsektsiya/">Дезинсекция для организаций</a></li><li><a href="../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a></li><li><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a></li><li><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на дератизацию и дезинсекцию</a></li><li><a href="../#podhod"><span><span class="nw">Пест-контроль</span> по системе IPM</span></a></li><li><a href="../#etapy">Этапы работы</a></li><li><a href="../#vrediteli">Вредители</a></li><li><a href="../#dokumenty">Документы для проверок</a></li><li><a href="../#usloviya">Цена</a></li><li><a href="../#voprosy">Вопросы</a></li></ul></div>
+      <div><h4>Отрасли</h4><ul><li><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a></li><li><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети</a></li><li><a href="../restorany-i-kafe/">Рестораны и кафе</a></li><li><a href="../sklady-i-logistika/">Склады и логистика</a></li><li><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a></li><li><a href="../gostinitsy/">Гостиницы и отели</a></li></ul></div>
+      <div><h4>Материалы</h4><ul><li><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a></li><li><a href="../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a></li><li><a href="../materialy/">Все материалы</a></li></ul></div>
+      <div><h4>Контакты</h4><ul><li><a href="tel:+74951043570">+7 (495) 104-35-70</a></li><li><a href="mailto:b2b@pestcontrol-center.ru">b2b@<wbr><span style="white-space:nowrap">pestcontrol-center.ru</span></a></li><li>Пн–Пт: 8:00–20:00</li><li>Срочные выезды: 24/7</li></ul>
+        <div class="msg"><a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a><a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a></div>
+      </div>
+    </div>
+    <div class="fb"><span>© 2026 ПЕСТКОНТРОЛЬ Центр</span><a href="../privacy/">Политика конфиденциальности</a><a href="../soglasie/">Согласие на обработку данных</a><span>Информация на сайте не является публичной офертой</span></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+74951043570" class="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Позвонить</a>
+  <a href="#zayavka" class="c2"><span>Бесплатный выезд</span></a>
+</div>
+<div class="fab" role="group" aria-label="Написать в мессенджер">
+  <a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a>
+  <a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a>
+</div>
+
+<script>
+/* Предпросмотр: вне рабочего домена заявка не отправляется (на пестконтроль-центр.рф этот блок не срабатывает) */
+(function(){
+  if(!/^(www\.)?xn----itbbsflddbfpfdodg9d0f\.xn--p1ai$/i.test(location.hostname)){
+    var origFetch=window.fetch;
+    window.fetch=function(u){
+      if(typeof u==='string'&&u.indexOf('send.php')>-1){
+        return new Promise(function(r){setTimeout(function(){r(new Response('{"success":true}',{status:200,headers:{'Content-Type':'application/json'}}))},400)});
+      }
+      return origFetch.apply(this,arguments);
+    };
+  }
+  var lz=document.querySelectorAll('.f-lazy');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('bg-in');io.unobserve(e.target)}})},{rootMargin:'300px'});
+    lz.forEach(function(el){io.observe(el)});
+  }else{lz.forEach(function(el){el.classList.add('bg-in')})}
+  /* заявка: тип объекта, задача, комментарий и страница — в поле msg, которое читает send.php */
+  var f=document.getElementById('form');
+  if(f){
+    f.addEventListener('submit',function(){
+      var tp=document.getElementById('f-type'),tk=document.getElementById('fk'),cm=document.getElementById('fm'),ms=document.getElementById('fmsg');
+      if(ms){
+        var parts=['Страница: дезинфекция для организаций (/dezinfektsiya/)'];
+        if(tp&&tp.selectedIndex>0)parts.push('Объект: '+tp.options[tp.selectedIndex].text);
+        if(tk&&tk.value)parts.push('Задача: '+tk.value);
+        if(cm&&cm.value.trim())parts.push('Комментарий / адрес: '+cm.value.trim());
+        ms.value=parts.join('\n');
+      }
+    },true);
+  }
+})();
+</script>
+<script>
+  /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */
+  (function (r, l) {
+    var go = function () { l.forEach(function (u) { var e = document.createElement('script'); e.src = r + u; e.async = false; document.body.appendChild(e); }); };
+    if (document.visibilityState === 'hidden' || !window.requestAnimationFrame) setTimeout(go, 0);
+    else requestAnimationFrame(function () { setTimeout(go, 0); });
+  })('../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261106s2']);
+</script>
+<!-- Yandex.Metrika counter + UIS + Radist: загружаются после первого действия посетителя (касание, прокрутка, мышь, клавиатура) или через 5 с после загрузки страницы -->
+<script type="text/javascript">
+    (function (w, d) {
+        w.ym = w.ym || function () { (w.ym.a = w.ym.a || []).push(arguments); };
+        w.ym.l = 1 * new Date();
+        ym(113675622, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        var done = false, ready = false, wait = null, ev = ['pointerdown', 'touchstart', 'keydown', 'scroll', 'wheel', 'mousemove'];
+        w.__cs = w.__cs || [];
+        w.__cs.push(['waitForTrackViewAndRun', function () { ready = true; }]);
+        // Radist: код заявки в ссылках Telegram и MAX — сразу, скрипт Radist загрузится вместе со счётчиками
+        var rmsg = 'Здравствуйте! Пишу с сайта пестконтроль-центр.рф. Номер заявки: {radist_tracker}';
+        w.radist_tracker = w.radist_tracker || function () { (w.radist_tracker.a = w.radist_tracker.a || []).push(arguments); };
+        w.radist_tracker.l = 1 * new Date();
+        w.radist_tracker({ message: rmsg, whatsapp_enabled: true, tgbot_enabled: true, tg_enabled: true, max_enabled: true, vk_enabled: true });
+        (function () {
+            var id = null, abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', s = 'ro', i, txt;
+            try {
+                id = sessionStorage.getItem('radistVisit');
+                if (!id || id.length !== 12) {
+                    for (i = 0; i < 10; i++) s += abc.charAt(Math.floor(Math.random() * abc.length));
+                    sessionStorage.setItem('radistVisit', s);
+                    id = sessionStorage.getItem('radistVisit');
+                }
+            } catch (e) { id = null; }
+            if (!id || id.length !== 12) return;
+            txt = encodeURIComponent(rmsg.replace(/{radist_tracker}/g, id));
+            [].forEach.call(d.querySelectorAll('a[href*="//t.me/"], a[href*="//max.ru/"]'), function (a) {
+                try {
+                    var u = new URL(a.href), n = u.pathname.split('/')[1] || '';
+                    if (u.host === 'max.ru') a.href = 'https://max.ru/' + u.pathname.substring(1) + '?start=' + id;
+                    else if (u.host === 't.me' && !/bot$/i.test(n)) a.href = 'https://t.me' + u.pathname + '?text=' + txt;
+                } catch (e) {}
+            });
+        })();
+        function add(src) { var k = d.createElement('script'); k.async = true; k.src = src; d.head.appendChild(k); return k; }
+        function load() {
+            if (done) return; done = true;
+            ev.forEach(function (e) { w.removeEventListener(e, load, true); });
+            add('https://mc.yandex.ru/metrika/tag.js?id=113675622');
+            var p = d.createElement('link'); p.rel = 'preconnect'; p.href = 'https://tracker.comagic.ru'; d.head.appendChild(p);
+            add('https://app.uiscom.ru/static/cs.min.js?k=ICWycQx6m3NSBe3WlCeDAdAKMTmNhMHC').onerror = function () { ready = true; };
+            add('https://track.radist.me/tracker.min.js');
+        }
+        ev.forEach(function (e) { w.addEventListener(e, load, { capture: true, passive: true }); });
+        function later() { setTimeout(load, 5000); }
+        if (d.readyState === 'complete') later(); else w.addEventListener('load', later);
+        // Ожидание подмены номера при первом касании: набор откладывается до ответа UIS, максимум 0,8–1 с
+        d.addEventListener('click', function (e) {
+            if (ready) return;
+            var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+            if (!a || e.button || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+            e.preventDefault();
+            if (wait) return;
+            load();
+            var href = a.getAttribute('href'), op = a.style.opacity, max = 'GestureEvent' in w ? 800 : 1000, t;
+            function go() {
+                for (var i = 0; i < wait.length; i++) clearTimeout(wait[i]);
+                wait = null; ready = true; a.style.opacity = op;
+                w.location.href = a.href;
+            }
+            function check(last) { return function () { if (wait && (last || ready || a.getAttribute('href') !== href)) go(); }; }
+            wait = [];
+            a.style.opacity = '.6';
+            for (t = 50; t <= max; t += 50) wait.push(setTimeout(check(t === max), t));
+        }, true);
+    })(window, document);
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113675622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
