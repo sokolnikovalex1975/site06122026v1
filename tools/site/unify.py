@@ -111,6 +111,7 @@ URL = {
     'ppk': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',
     'rest': 'restorany-i-kafe/',
     'san': 'sanitarnyy-audit/',
+    'dezinf': 'dezinfektsiya/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -144,10 +145,23 @@ CARD = {
             'Полный образец ППК для пищевого производства (PDF и Word) и раздел о дезинсекции и дератизации по правилам 2026 года.'),
     'san': ('Услуга', 'Санитарный аудит (СЭС-аудит)',
             'Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.'),
+    'dezinf': ('Услуга', 'Дезинфекция для организаций',
+               'Профилактическая и заключительная дезинфекция, периодичность по правилам 2026 года и все санитарные услуги в одной программе.'),
 }
 
 STRIP_LABELS = {}
 PAGES = {
+    'dezinfektsiya/index.html': dict(key='dezinf', root='../', related=['vent', 'san', 'dezins', 'derat'], strip=(
+        'Коротко о дезинфекции', [
+            ('lucide-spray-can', 'Профилактическая', 'и заключительная дезинфекция'),
+            ('lucide-file-badge', 'СанПиН 3.3686-21', 'и правила 2026 года'),
+            ('lucide-shield-check', 'Лицензия', 'Роспотребнадзора'),
+            ('lucide-notebook-pen', 'Акт и журнал', 'после каждого выезда'),
+            ('lucide-flask-conical', 'Смывы', 'через аккредитованную лабораторию'),
+            ('lucide-clipboard-check', 'Санитарный аудит', 'до проверки'),
+            ('lucide-crosshair', 'Пест-контроль', 'по системе IPM'),
+            ('lucide-clock', 'Ночью и в выходные', 'без наценки'),
+        ])),
     'deratizatsiya/index.html': dict(key='derat', root='../', related=['dezins', 'dogovor', 'prog', 'san']),
     'dezinsektsiya/index.html': dict(key='dezins', root='../', related=['derat', 'dogovor', 'prog', 'san'], strip=(
         'Коротко о дезинсекции', [

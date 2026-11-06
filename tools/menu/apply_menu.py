@@ -22,6 +22,7 @@ from typo import typo  # неразрывный пробел после коро
 
 # Услуги (выпадающий список «Услуги ▾» в шапке и раскрывающийся блок в мобильном меню)
 USLUGI = [
+    ('dezinfektsiya', 'Дезинфекция для организаций'),
     ('deratizatsiya', 'Дератизация для организаций'),
     ('dezinsektsiya', 'Дезинсекция для организаций'),
     ('sanitarnyy-audit', 'Санитарный аудит <span class="nw">(СЭС-аудит)</span>'),
@@ -58,6 +59,7 @@ ARR = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"
 PAGES = [
     # файл, путь к корню, текущая страница
     ('index.html', '', ''),
+    ('dezinfektsiya/index.html', '../', 'dezinfektsiya'),
     (DERAT + '/index.html', '../', DERAT),
     ('dezinsektsiya/index.html', '../', 'dezinsektsiya'),
     (VENT + '/index.html', '../', VENT),
@@ -111,7 +113,7 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur in (DERAT, 'dezinsektsiya', VENT, SAN)
+    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', VENT, SAN)
     in_ind = any(s == cur for s, _ in INDUSTRIES)
     in_mat = cur.startswith('materialy')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
