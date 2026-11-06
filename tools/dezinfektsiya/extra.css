@@ -26,10 +26,10 @@
 .dzf-chain li:not(:first-child)>span{padding-left:22px;position:relative;color:var(--t2)}
 .dzf-chain li:not(:first-child)>span::before{content:"→";position:absolute;left:0;top:0;color:var(--acc)}
 
-/* виды дезинфекции и заключительная */
+/* виды дезинфекции и порядок плановой дезинфекции */
 .dzf-kinds td:first-child{min-width:170px}
-.dzf-zak{margin-top:clamp(36px,4vw,60px);padding:clamp(22px,2vw,34px);background:var(--card);border:1px solid rgba(124,134,255,.35);border-radius:var(--r);scroll-margin-top:96px}
-.dzf-zak h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;margin:0 0 22px}
+.dzf-plan{margin-top:clamp(36px,4vw,60px);padding:clamp(22px,2vw,34px);background:var(--card);border:1px solid rgba(124,134,255,.35);border-radius:var(--r);scroll-margin-top:96px}
+.dzf-plan h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;margin:0 0 22px}
 
 /* методы, порядок санобработки */
 .dzf-meth{grid-template-columns:repeat(4,minmax(0,1fr))}
