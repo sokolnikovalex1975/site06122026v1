@@ -103,11 +103,11 @@ ICONS = json.loads((pathlib.Path(__file__).resolve().parent / 'icons.json').read
 URL = {
     'home': '', 'derat': 'deratizatsiya/', 'dezins': 'dezinsektsiya/',
     'dogovor': 'dogovor-deratizatsiya-dezinsektsiya/', 'food': 'pishchevoe-proizvodstvo/',
-    'seti': 'magaziny-i-torgovye-seti/',
+    'seti': 'magaziny-i-torgovye-seti/', 'hotel': 'gostinitsy/',
     'mat': 'materialy/', 'prog': 'materialy/programma-pest-kontrolya/',
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
-    'farma': 'farmatsevticheskie-proizvodstva/',
     'vent': 'ochistka-dezinfektsiya-ventilyatsii/',
+    'farma': 'farmatsevticheskie-proizvodstva/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -121,16 +121,18 @@ CARD = {
              'Точки контроля, визиты по графику смен и документы для Роспотребнадзора, аудиторов и торговых сетей.'),
     'seti': ('Отрасль', 'Пест-контроль магазинов и торговых сетей',
              'Ночные визиты без закрытия зала, журнал и схема точек в каждом магазине, сводный отчёт по сети.'),
+    'hotel': ('Отрасль', 'Пест-контроль гостиниц и отелей',
+              'Осмотры номерного фонда, протокол при жалобе гостя на клопов и журнал по проверочному листу Роспотребнадзора.'),
     'prog': ('Материал', 'Программа пест-контроля',
              'Образец в PDF и шаблон Word: 7 разделов, оценка пест-риска по зонам и план мероприятий.'),
     'zhur': ('Материал', 'Журнал пест-контроля',
              'Образец заполнения и шаблон в PDF: 9 разделов на 10 листах — точки контроля, ловушки, предписания.'),
     'pm': ('Материал', 'Пест-менеджмент или разовая обработка',
            'Чем системный контроль по IPM отличается от обработок по вызову и когда хватит одного выезда.'),
-    'farma': ('Отрасль', 'Пест-контроль фармацевтического производства',
-              'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
     'vent': ('Услуга', 'Очистка и дезинфекция вентиляции',
              'Воздуховоды, кухонные вытяжки и кондиционеры: видео до и после, акт по п. 43 ППР, журнал по МР 3.5.0396-25.'),
+    'farma': ('Отрасль', 'Пест-контроль фармацевтического производства',
+              'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
 }
 
 STRIP_LABELS = {}
@@ -190,6 +192,17 @@ PAGES = {
             ('lucide-chart-column', 'Сводный отчёт', 'по всей сети'),
             ('lucide-file-badge', 'СП 2.3.6.4281-26', 'и СанПиН 3.3686-21'),
             ('lucide-file-signature', 'Один договор', 'на все адреса'),
+        ])),
+    'gostinitsy/index.html': dict(key='hotel', root='../', related=['dezins', 'derat', 'dogovor', 'zhur'], strip=(
+        'Коротко о пест-контроле гостиниц', [
+            ('lucide-crosshair', 'IPM', 'для гостиниц и отелей'),
+            ('lucide-scan-search', 'Бесплатное обследование', 'гостиницы'),
+            ('lucide-bed-double', 'Номер и соседние', '— осмотр по сигналу'),
+            ('lucide-clock', 'Выезд за 3 часа', '24/7'),
+            ('lucide-lock', 'Без огласки', '— конфиденциальный выезд'),
+            ('lucide-activity', 'Осмотры', 'не реже 2 раз в месяц'),
+            ('lucide-notebook-pen', 'Журнал и акты', 'по проверочному листу'),
+            ('lucide-ban', 'Без порошков', 'и ядов острого действия'),
         ])),
     'farmatsevticheskie-proizvodstva/index.html': dict(key='farma', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
         'Коротко о пест-контроле на фармпроизводстве', [
@@ -446,7 +459,18 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
     ]}, ensure_ascii=False) + '</script>'
 
 
+HOTEL_LINKS = {  # карточки гостиниц на страницах услуг ведут на отраслевую страницу (раньше — к блоку «Отрасли» на главной)
+    'dezinsektsiya/index.html': ('<h3><a href="../#otrasli">Гостиницы, отели и&nbsp;общежития</a></h3>', '<h3><a href="../gostinitsy/">Гостиницы, отели и&nbsp;общежития</a></h3>'),
+    'dogovor-deratizatsiya-dezinsektsiya/index.html': ('<h3><a href="../#otrasli">Гостиницы</a></h3>', '<h3><a href="../gostinitsy/">Гостиницы</a></h3>'),
+}
+
+
 def page_specific(rel, s):
+    if rel in HOTEL_LINKS:
+        old, new = HOTEL_LINKS[rel]
+        if new not in s:
+            assert old in s, rel + ': нет карточки гостиниц'
+            s = s.replace(old, new, 1)
     if rel == 'deratizatsiya/index.html':
         # переключатель вариантов фото первого экрана был нужен только для выбора — в сайте оставляем вариант 1
         s = re.sub(r'\n\s*<div class="hero-vbar".*?</div>\n', '\n', s, count=1, flags=re.S)
@@ -589,10 +613,15 @@ def process_home():
     if 'href="magaziny-i-torgovye-seti/"' not in s[a:b]:
         assert a > 0 and s[b - 6:b] == '</div>', 'карточка торговых сетей'
         s = s[:b - 6] + f'<a class="ind-more" href="magaziny-i-torgovye-seti/">Подробнее об обслуживании магазинов{ARR}</a>' + s[b - 6:]
-    # карточка фармацевтических производств ведёт на отраслевую страницу
-    if 'class="ind-more" href="farmatsevticheskie-proizvodstva/"' not in s:
-        a = s.find('id="otrasl-farma"')
+    if 'href="gostinitsy/"' not in s:
+        a = s.find('id="otrasl-gostinitsy"')
         b = s.find('</article>', a)
+        assert a > 0 and s[b - 6:b] == '</div>', 'карточка гостиниц'
+        s = s[:b - 6] + f'<a class="ind-more" href="gostinitsy/">Подробнее об обслуживании гостиниц{ARR}</a>' + s[b - 6:]
+    # карточка фармацевтических производств ведёт на отраслевую страницу
+    a = s.find('id="otrasl-farma"')
+    b = s.find('</article>', a)
+    if 'href="farmatsevticheskie-proizvodstva/"' not in s[a:b]:
         assert a > 0 and s[b - 6:b] == '</div>', 'карточка фармацевтических производств'
         s = s[:b - 6] + f'<a class="ind-more" href="farmatsevticheskie-proizvodstva/">Подробнее о <span class="nw">пест-контроле</span> по GMP{ARR}</a>' + s[b - 6:]
     # ссылки «Подробнее» в блоках главной

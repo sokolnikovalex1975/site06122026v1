@@ -5,7 +5,7 @@
     (в «Услугах» с 06.11.2026 — очистка и дезинфекция вентиляции)
 
 В меню — только готовые страницы сайта. Отрасли без своей страницы ведут к карточке отрасли на главной
-(якоря #otrasl-…), у пищевых и фармацевтических производств, магазинов и торговых сетей — свои страницы. «Контакты» — только в подвале.
+(якоря #otrasl-…), у пищевых и фармацевтических производств, магазинов и торговых сетей, гостиниц — свои страницы. «Контакты» — только в подвале.
 Ссылки — обычные <a href> прямо в HTML. С внутренних страниц якоря ведут на главную (../#podhod).
 Телефон, ссылки Telegram/MAX, кнопки заявки и блок счётчиков не меняются.
 Страницы документов (политика, согласие) получают ту же шапку и тот же подвал.
@@ -34,7 +34,7 @@ INDUSTRIES = [
     ('#otrasl-restorany', 'Рестораны и кафе'),
     ('#otrasl-sklady', 'Склады и логистика'),
     ('farmatsevticheskie-proizvodstva', 'Фармацевтические производства'),
-    ('#otrasl-gostinitsy', 'Гостиницы и отели'),
+    ('gostinitsy', 'Гостиницы и отели'),
 ]
 DOGOVOR = 'dogovor-deratizatsiya-dezinsektsiya'
 DERAT = 'deratizatsiya'
@@ -61,6 +61,7 @@ PAGES = [
     (DOGOVOR + '/index.html', '../', DOGOVOR),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
     ('magaziny-i-torgovye-seti/index.html', '../', 'magaziny-i-torgovye-seti'),
+    ('gostinitsy/index.html', '../', 'gostinitsy'),
     ('farmatsevticheskie-proizvodstva/index.html', '../', 'farmatsevticheskie-proizvodstva'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html', '../../', 'materialy/pest-menedzhment-ili-razovaya-obrabotka'),
     ('materialy/index.html', '../', 'materialy'),
