@@ -4,6 +4,7 @@
     python3 tools/site/build_site.py
 
 По шагам:
+  0. tools/gostinitsy/build_page.py — страница «Пест-контроль гостиниц и отелей» из своих исходников;
   1. tools/site/unify.py        — анимации и заголовки в стиле главной, бегущая строка, «Смотрите также», ссылки «Подробнее»;
   2. tools/site/legal_pages.py  — шапка и подвал сайта на страницах политики и согласия;
   3. tools/menu/apply_menu.py   — одинаковые шапка, мобильное меню и подвал на всех страницах;
@@ -24,7 +25,7 @@ SITEMAP = [  # адрес, приоритет
     ('', '1.0'),
     ('deratizatsiya/', '0.9'), ('dezinsektsiya/', '0.9'), ('dogovor-deratizatsiya-dezinsektsiya/', '0.9'),
     ('ochistka-dezinfektsiya-ventilyatsii/', '0.9'),
-    ('pishchevoe-proizvodstvo/', '0.8'), ('magaziny-i-torgovye-seti/', '0.8'),
+    ('pishchevoe-proizvodstvo/', '0.8'), ('magaziny-i-torgovye-seti/', '0.8'), ('gostinitsy/', '0.8'),
     ('materialy/', '0.6'), ('materialy/programma-pest-kontrolya/', '0.7'),
     ('materialy/zhurnal-pest-kontrolya/', '0.7'), ('materialy/pest-menedzhment-ili-razovaya-obrabotka/', '0.7'),
 ]
@@ -37,6 +38,7 @@ def run(*args):
 
 
 def main():
+    run('tools/gostinitsy/build_page.py')  # страница гостиниц собирается из своих исходников (tools/gostinitsy)
     run('tools/site/unify.py')
     run('tools/site/legal_pages.py')
     run('tools/menu/apply_menu.py')
