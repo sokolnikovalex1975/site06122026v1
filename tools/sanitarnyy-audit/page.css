@@ -95,7 +95,7 @@
 /* автор и принципы */
 .sa-author-wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(24px,3vw,56px);align-items:start}
 .sa-author{display:flex;gap:20px;align-items:center;padding:clamp(24px,2.4vw,36px)}
-.sa-avatar{flex:none;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:rgba(124,134,255,.12);border:1px solid rgba(124,134,255,.4);color:var(--acc);font-size:22px;letter-spacing:.04em}
+.sa-avatar{flex:none;display:block;width:112px;height:112px;border-radius:50%;object-fit:cover;background:#18181b;border:1px solid rgba(124,134,255,.4)}
 .sa-author p{margin:0}
 .sa-author-name{font-size:clamp(20px,1.5vw,26px);color:var(--t1);letter-spacing:-.02em;margin-bottom:4px!important}
 .sa-author-role{color:var(--t2);margin-bottom:4px!important}
@@ -164,7 +164,7 @@
 .d-table.sa-ptable td::before{content:none}
 .d-table.sa-ptable td:last-child{padding-right:0;font-size:16px;width:44%}
 .sa-author{align-items:flex-start}
-.sa-avatar{width:60px;height:60px;font-size:19px}
+.sa-avatar{width:80px;height:80px}
 .sa-pnotes{padding:22px 20px}
 .sa-viol{padding:22px 20px}
 }
