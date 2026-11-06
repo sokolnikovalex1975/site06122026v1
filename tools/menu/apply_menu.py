@@ -24,6 +24,7 @@ from typo import typo  # неразрывный пробел после коро
 USLUGI = [
     ('deratizatsiya', 'Дератизация для организаций'),
     ('dezinsektsiya', 'Дезинсекция для организаций'),
+    ('sanitarnyy-audit', 'Санитарный аудит <span class="nw">(СЭС-аудит)</span>'),
     ('ochistka-dezinfektsiya-ventilyatsii', 'Очистка и дезинфекция вентиляции'),
     ('dogovor-deratizatsiya-dezinsektsiya', 'Договор на обслуживание'),
 ]
@@ -31,14 +32,15 @@ USLUGI = [
 INDUSTRIES = [
     ('pishchevoe-proizvodstvo', 'Пищевые производства'),
     ('magaziny-i-torgovye-seti', 'Магазины и торговые сети'),
-    ('#otrasl-restorany', 'Рестораны и кафе'),
-    ('#otrasl-sklady', 'Склады и логистика'),
+    ('restorany-i-kafe', 'Рестораны и кафе'),
+    ('sklady-i-logistika', 'Склады и логистика'),
     ('farmatsevticheskie-proizvodstva', 'Фармацевтические производства'),
     ('#otrasl-gostinitsy', 'Гостиницы и отели'),
 ]
 DOGOVOR = 'dogovor-deratizatsiya-dezinsektsiya'
 DERAT = 'deratizatsiya'
 VENT = 'ochistka-dezinfektsiya-ventilyatsii'
+SAN = 'sanitarnyy-audit'
 MATERIALS = [  # слова через дефис не переносим (класс nw, как в остальных текстах сайта)
     ('materialy/programma-pest-kontrolya', 'Программа <span class="nw">пест-контроля</span>'),
     ('materialy/zhurnal-pest-kontrolya', 'Журнал <span class="nw">пест-контроля</span>'),
@@ -60,6 +62,7 @@ PAGES = [
     (VENT + '/index.html', '../', VENT),
     (DOGOVOR + '/index.html', '../', DOGOVOR),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
+    ('restorany-i-kafe/index.html', '../', 'restorany-i-kafe'),
     ('magaziny-i-torgovye-seti/index.html', '../', 'magaziny-i-torgovye-seti'),
     ('farmatsevticheskie-proizvodstva/index.html', '../', 'farmatsevticheskie-proizvodstva'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html', '../../', 'materialy/pest-menedzhment-ili-razovaya-obrabotka'),
@@ -103,11 +106,11 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur in (DERAT, 'dezinsektsiya', VENT)
+    in_usl = cur in (DERAT, 'dezinsektsiya', VENT, SAN)
     in_ind = any(s == cur for s, _ in INDUSTRIES)
     in_mat = cur.startswith('materialy')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
-    usl_items = ''.join(page_link(root, cur, s, t + ARR) for s, t in USLUGI)
+    usl_items = ''.join(page_link(root, cur, s, one(t) + ARR) for s, t in USLUGI)
     usl_items += anchor(root, 'podhod', '<span>Пест-контроль по системе IPM</span>' + ARR, 'nav-dd-all')
     ind_items = ''.join(page_link(root, cur, s, t + ARR) for s, t in INDUSTRIES)
     ind_items += anchor(root, 'otrasli', 'Все отрасли' + ARR, 'nav-dd-all')
@@ -123,7 +126,7 @@ def build(root, cur, cta_mobile):
         + dropdown('materialy', 'Материалы', mat_items, in_mat) + '\n    </nav>'
     )
     # мобильное меню
-    sub_usl = ''.join(page_link(root, cur, s, t) for s, t in USLUGI) + anchor(root, 'podhod', '<span class="nw">Пест-контроль</span> по системе IPM')
+    sub_usl = ''.join(page_link(root, cur, s, one(t)) for s, t in USLUGI) + anchor(root, 'podhod', '<span class="nw">Пест-контроль</span> по системе IPM')
     sub_ind = ''.join(page_link(root, cur, s, t) for s, t in INDUSTRIES) + anchor(root, 'otrasli', 'Все отрасли')
     sub_mat = ''.join(page_link(root, cur, s, one(t)) for s, t in MATERIALS) + page_link(root, cur, 'materialy', 'Все материалы')
     dog_text = 'Договор <small>на дератизацию и дезинсекцию</small>'
@@ -141,7 +144,7 @@ def build(root, cur, cta_mobile):
     # подпись с вложенным <span class="nw"> оборачиваем в один <span>: на телефоне ссылки подвала — inline-flex,
     # и без обёртки пробел перед вложенным тегом пропал бы
     wrap = lambda t: f'<span>{t}</span>' if '<' in t else t
-    ft_srv = (''.join(li(page_link(root, cur, s, t if s != DOGOVOR else 'Договор на дератизацию и дезинсекцию')) for s, t in USLUGI)
+    ft_srv = (''.join(li(page_link(root, cur, s, wrap(t) if s != DOGOVOR else 'Договор на дератизацию и дезинсекцию')) for s, t in USLUGI)
               + li(anchor(root, 'podhod', wrap('<span class="nw">Пест-контроль</span> по системе IPM')))
               + ''.join(li(anchor(root, s, t)) for s, t in SERVICE))
     ft_ind = ''.join(li(page_link(root, cur, s, t)) for s, t in INDUSTRIES)

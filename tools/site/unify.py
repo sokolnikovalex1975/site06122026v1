@@ -108,6 +108,7 @@ URL = {
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
     'farma': 'farmatsevticheskie-proizvodstva/',
     'vent': 'ochistka-dezinfektsiya-ventilyatsii/',
+    'rest': 'restorany-i-kafe/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -121,6 +122,8 @@ CARD = {
              'Точки контроля, визиты по графику смен и документы для Роспотребнадзора, аудиторов и торговых сетей.'),
     'seti': ('Отрасль', 'Пест-контроль магазинов и торговых сетей',
              'Ночные визиты без закрытия зала, журнал и схема точек в каждом магазине, сводный отчёт по сети.'),
+    'rest': ('Отрасль', 'Пест-контроль ресторанов и кафе',
+             'Визиты после закрытия, гели и ловушки на кухне, журнал и акты по СанПиН для заведений и сетей.'),
     'prog': ('Материал', 'Программа пест-контроля',
              'Образец в PDF и шаблон Word: 7 разделов, оценка пест-риска по зонам и план мероприятий.'),
     'zhur': ('Материал', 'Журнал пест-контроля',
@@ -201,6 +204,17 @@ PAGES = {
             ('lucide-notebook-pen', 'Отчёты', 'для инспекции и аудита'),
             ('lucide-pill', 'ТЛФ, стерильные, АФС', 'и фитопрепараты'),
             ('lucide-clock', 'Выезд за 3 часа', 'по сигналу'),
+        ])),
+    'restorany-i-kafe/index.html': dict(key='rest', root='../', related=['dezins', 'derat', 'dogovor', 'zhur'], strip=(
+        'Коротко о пест-контроле ресторанов', [
+            ('lucide-clock', 'После закрытия', 'визиты ночью и до открытия'),
+            ('lucide-map-pinned', 'Точки контроля', 'на кухне, в баре и на складе'),
+            ('lucide-ban', 'Без распыления', 'там, где открытый продукт'),
+            ('lucide-notebook-pen', 'Журнал и акт', 'после каждого визита'),
+            ('lucide-file-badge', 'СанПиН 2.3/2.4.4282-26', 'и СанПиН 3.3686-21'),
+            ('lucide-utensils', 'Рестораны, кафе, бары', 'столовые и фуд-корты'),
+            ('lucide-scan-search', 'Бесплатное обследование', 'и расчёт'),
+            ('lucide-shield-check', 'Сети', '— общий график и сводный отчёт'),
         ])),
     'materialy/index.html': dict(key='mat', root='../', related=['derat', 'dezins', 'dogovor', 'food'], strip=(
         'Документы и практика IPM', [
@@ -464,6 +478,9 @@ def page_specific(rel, s):
         # номер МР уточнён на странице журнала: «МР 3.5.2.0373-25» не существует (0373-25 — МР 1.2 о косметике);
         # для дезинсекции основа — СанПиН 3.3686-21
         s = s.replace('Определение и нормативы · СанПиН 3.3686-21 и МР 3.5.2.0373-25', 'Определение и нормативы · СанПиН 3.3686-21')
+    if rel in ('dezinsektsiya/index.html', 'dogovor-deratizatsiya-dezinsektsiya/index.html'):
+        # отраслевая карточка общепита — на страницу «Рестораны и кафе» (раньше вела к блоку «Отрасли» на главной)
+        s = re.sub(r'<a href="\.\./#otrasli">(Рестораны(?:,| и)[^<]*)</a>', r'<a href="../restorany-i-kafe/">\1</a>', s)
     if rel == 'dogovor-deratizatsiya-dezinsektsiya/index.html':
         s = s.replace('<div class="d-kind-b"><h3>Дезинсекция</h3>',
                       '<div class="d-kind-b"><h3><a href="../dezinsektsiya/" style="color:inherit;border-bottom:1px solid var(--line2)">Дезинсекция</a></h3>')
@@ -595,6 +612,12 @@ def process_home():
         b = s.find('</article>', a)
         assert a > 0 and s[b - 6:b] == '</div>', 'карточка фармацевтических производств'
         s = s[:b - 6] + f'<a class="ind-more" href="farmatsevticheskie-proizvodstva/">Подробнее о <span class="nw">пест-контроле</span> по GMP{ARR}</a>' + s[b - 6:]
+    # карточка ресторанов ведёт на страницу «Рестораны и кафе»
+    a = s.find('id="otrasl-restorany"')
+    b = s.find('</article>', a)
+    if 'href="restorany-i-kafe/"' not in s[a:b]:
+        assert a > 0 and s[b - 6:b] == '</div>', 'карточка ресторанов'
+        s = s[:b - 6] + f'<a class="ind-more" href="restorany-i-kafe/">Подробнее об обслуживании ресторанов{ARR}</a>' + s[b - 6:]
     # ссылки «Подробнее» в блоках главной
     adds = [
         ('podhod', more_html('Подробнее', [('materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'Пест-менеджмент или разовая обработка')])),
