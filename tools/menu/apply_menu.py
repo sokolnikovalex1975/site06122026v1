@@ -4,7 +4,7 @@
     Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
 
 В меню — только готовые страницы сайта. Отрасли без своей страницы ведут к карточке отрасли на главной
-(якоря #otrasl-…), страницы пищевых и фармацевтических производств — отдельные. «Контакты» — только в подвале.
+(якоря #otrasl-…), у пищевых и фармацевтических производств, магазинов и торговых сетей — свои страницы. «Контакты» — только в подвале.
 Ссылки — обычные <a href> прямо в HTML. С внутренних страниц якоря ведут на главную (../#podhod).
 Телефон, ссылки Telegram/MAX, кнопки заявки и блок счётчиков не меняются.
 Страницы документов (политика, согласие) получают ту же шапку и тот же подвал.
@@ -28,7 +28,7 @@ USLUGI = [
 # Отрасли — в порядке блока «Отрасли» на главной. Адрес со знаком # — карточка отрасли на главной (своей страницы пока нет)
 INDUSTRIES = [
     ('pishchevoe-proizvodstvo', 'Пищевые производства'),
-    ('#otrasl-seti', 'Магазины и торговые сети'),
+    ('magaziny-i-torgovye-seti', 'Магазины и торговые сети'),
     ('#otrasl-restorany', 'Рестораны и кафе'),
     ('#otrasl-sklady', 'Склады и логистика'),
     ('farmatsevticheskie-proizvodstva', 'Фармацевтические производства'),
@@ -56,6 +56,7 @@ PAGES = [
     ('dezinsektsiya/index.html', '../', 'dezinsektsiya'),
     (DOGOVOR + '/index.html', '../', DOGOVOR),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
+    ('magaziny-i-torgovye-seti/index.html', '../', 'magaziny-i-torgovye-seti'),
     ('farmatsevticheskie-proizvodstva/index.html', '../', 'farmatsevticheskie-proizvodstva'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html', '../../', 'materialy/pest-menedzhment-ili-razovaya-obrabotka'),
     ('materialy/index.html', '../', 'materialy'),
