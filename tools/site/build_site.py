@@ -26,7 +26,7 @@ SITEMAP = [  # адрес, приоритет
     ('', '1.0'),
     ('deratizatsiya/', '0.9'), ('dezinsektsiya/', '0.9'), ('sanitarnyy-audit/', '0.9'), ('dogovor-deratizatsiya-dezinsektsiya/', '0.9'),
     ('ochistka-dezinfektsiya-ventilyatsii/', '0.9'),
-    ('pishchevoe-proizvodstvo/', '0.8'), ('restorany-i-kafe/', '0.8'), ('magaziny-i-torgovye-seti/', '0.8'), ('gostinitsy/', '0.8'), ('farmatsevticheskie-proizvodstva/', '0.8'),
+    ('pishchevoe-proizvodstvo/', '0.8'), ('restorany-i-kafe/', '0.8'), ('magaziny-i-torgovye-seti/', '0.8'), ('gostinitsy/', '0.8'), ('farmatsevticheskie-proizvodstva/', '0.8'), ('sklady-i-logistika/', '0.8'),
     ('materialy/', '0.6'), ('materialy/programma-pest-kontrolya/', '0.7'),
     ('materialy/zhurnal-pest-kontrolya/', '0.7'), ('materialy/pest-menedzhment-ili-razovaya-obrabotka/', '0.7'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/', '0.7'),
@@ -42,6 +42,7 @@ def run(*args):
 def main():
     run('tools/gostinitsy/build_page.py')  # страница гостиниц собирается из своих исходников (tools/gostinitsy)
     run('tools/sanitarnyy-audit/build_page.py')  # санитарный аудит — из своих исходников (tools/sanitarnyy-audit)
+    run('tools/sklady/assemble.py')  # страница складов и логистики — из своих исходников (tools/sklady)
     run('tools/site/unify.py')
     run('tools/site/legal_pages.py')
     run('tools/menu/apply_menu.py')

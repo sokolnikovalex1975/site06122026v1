@@ -107,7 +107,7 @@ URL = {
     'mat': 'materialy/', 'prog': 'materialy/programma-pest-kontrolya/',
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
     'vent': 'ochistka-dezinfektsiya-ventilyatsii/',
-    'farma': 'farmatsevticheskie-proizvodstva/',
+    'farma': 'farmatsevticheskie-proizvodstva/', 'sklady': 'sklady-i-logistika/',
     'ppk': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',
     'rest': 'restorany-i-kafe/',
     'san': 'sanitarnyy-audit/',
@@ -138,6 +138,8 @@ CARD = {
              'Воздуховоды, кухонные вытяжки и кондиционеры: видео до и после, акт по п. 43 ППР, журнал по МР 3.5.0396-25.'),
     'farma': ('Отрасль', 'Пест-контроль фармацевтического производства',
               'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
+    'sklady': ('Отрасль', 'Пест-контроль для складов и логистики',
+               'Схема точек по зонам склада, визиты без остановки приёмки и отгрузки, журнал и отчёт для аудитов.'),
     'ppk': ('Материал', 'Программа производственного контроля по ХАССП',
             'Что вписать о дезинсекции и дератизации в ППК, правила 2026 года и образец раздела.'),
     'san': ('Услуга', 'Санитарный аудит (СЭС-аудит)',
@@ -191,6 +193,8 @@ PAGES = {
             ('lucide-file-badge', 'ХАССП', 'аудиты сертификации и сетей'),
             ('lucide-clock', 'Срочные выезды', '24/7'),
         ])),
+    # своя бегущая строка — в tools/sklady/main.html
+    'sklady-i-logistika/index.html': dict(key='sklady', root='../', related=['derat', 'dezins', 'dogovor', 'prog']),
     'magaziny-i-torgovye-seti/index.html': dict(key='seti', root='../', related=['derat', 'dezins', 'dogovor', 'zhur'], strip=(
         'Коротко о пест-контроле магазинов', [
             ('lucide-shopping-cart', 'Магазины и сети', 'Москва и область'),
@@ -687,6 +691,12 @@ def process_home():
     if 'href="farmatsevticheskie-proizvodstva/"' not in s[a:b]:
         assert a > 0 and s[b - 6:b] == '</div>', 'карточка фармацевтических производств'
         s = s[:b - 6] + f'<a class="ind-more" href="farmatsevticheskie-proizvodstva/">Подробнее о <span class="nw">пест-контроле</span> по GMP{ARR}</a>' + s[b - 6:]
+    # карточка складов и логистики ведёт на отраслевую страницу
+    if 'class="ind-more" href="sklady-i-logistika/"' not in s:
+        a = s.find('id="otrasl-sklady"')
+        b = s.find('</article>', a)
+        assert a > 0 and s[b - 6:b] == '</div>', 'карточка складов и логистики'
+        s = s[:b - 6] + f'<a class="ind-more" href="sklady-i-logistika/">Подробнее о <span class="nw">пест-контроле</span> складов{ARR}</a>' + s[b - 6:]
     # карточка ресторанов ведёт на страницу «Рестораны и кафе»
     a = s.find('id="otrasl-restorany"')
     b = s.find('</article>', a)

@@ -27,7 +27,7 @@ COUNTERS_MARK = '<!-- Yandex.Metrika counter + UIS + Radist'
 PAGES = [
     'index.html', 'deratizatsiya/index.html', 'dezinsektsiya/index.html', 'dogovor-deratizatsiya-dezinsektsiya/index.html',
     'sanitarnyy-audit/index.html', 'ochistka-dezinfektsiya-ventilyatsii/index.html',
-    'pishchevoe-proizvodstvo/index.html', 'restorany-i-kafe/index.html', 'magaziny-i-torgovye-seti/index.html', 'gostinitsy/index.html', 'farmatsevticheskie-proizvodstva/index.html',
+    'pishchevoe-proizvodstvo/index.html', 'restorany-i-kafe/index.html', 'magaziny-i-torgovye-seti/index.html', 'gostinitsy/index.html', 'farmatsevticheskie-proizvodstva/index.html', 'sklady-i-logistika/index.html',
     'materialy/index.html', 'materialy/programma-pest-kontrolya/index.html',
     'materialy/zhurnal-pest-kontrolya/index.html', 'materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html',
     'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html',

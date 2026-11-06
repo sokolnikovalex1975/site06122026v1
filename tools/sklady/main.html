@@ -1,0 +1,750 @@
+<main id="main" tabindex="-1">
+<span id="top"></span>
+
+<!-- ============ 1. ПЕРВЫЙ ЭКРАН (HERO) ============ -->
+<section class="d-hero" id="hero">
+  <div class="wrap">
+    <div class="d-hero-copy">
+      <nav class="d-crumbs" aria-label="Навигационная цепочка">
+        <a href="../">Главная</a><span aria-hidden="true">→</span><a href="../#otrasli">Отрасли</a><span aria-hidden="true">→</span><span aria-current="page">Склады и логистика</span>
+      </nav>
+      <div class="eyebrow" data-eyebrow>Склады · РЦ · фулфилмент · только для юридических лиц</div>
+      <h1><span class="ln d-ln1"><span><span class="nw">Пест-контроль</span></span></span> <span class="ln d-ln2"><span>для складов</span></span> <span class="ln d-ln3"><span><em>и логистики</em></span></span></h1>
+
+      <div class="d-hero-media" id="heroMedia">
+        <picture>
+          <source media="(max-width:860px)" srcset="../img/sklad-hero-mob-760.webp 760w, ../img/sklad-hero-mob.webp 1024w" sizes="100vw" width="1024" height="576">
+          <img id="hero-img" class="d-hero-img" src="../img/sklad-hero.webp" srcset="../img/sklad-hero-1440.webp 1440w, ../img/sklad-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="Специалист ПЕСТКОНТРОЛЬ Центра проверяет феромонную ловушку на стойке стеллажа и станцию контроля грызунов № 07 в проходе распределительного центра" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+
+      <ul class="d-ticks">
+        <li>Грызуны, насекомые и вредители запасов — в одной программе и на одной схеме точек</li>
+        <li>Визиты под график приёмки и отгрузки, без остановки ворот и доков</li>
+        <li>Журнал, акты и отчёт по зонам для Роспотребнадзора, аудитов сетей и IFS&nbsp;Logistics</li>
+      </ul>
+      <p class="sub">Обслуживаем сухие, продуктовые, холодильные и фармацевтические склады, распределительные центры и фулфилмент в Москве и области. Обследование склада и расчёт программы — бесплатно.</p>
+      <div class="d-btns">
+        <a href="#zayavka" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Заказать бесплатное обследование</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:+74951043570" class="btn btn-o btn-lg d-tel-btn" data-magnet><span class="btn-t">+7 (495) 104-35-70</span></a>
+      </div>
+      <p class="w-hero-note"><i aria-hidden="true"></i>Внеплановый выезд по сигналу — в течение 3 часов, 24/7</p>
+    </div>
+    <div aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ БЕГУЩАЯ СТРОКА ============ -->
+<div class="strip" aria-label="Стандарт пест-контроля склада">
+  <div class="strip-track" id="stripTrack">
+    <div class="strip-set">
+      <div class="strip-item">{{i:warehouse}}<b>Без остановки</b> приёмки и отгрузки</div>
+      <div class="strip-item">{{i:map-pinned}}<b>Схема точек</b> по зонам склада</div>
+      <div class="strip-item">{{i:bug}}<b>Феромонный мониторинг</b> моли и жуков</div>
+      <div class="strip-item">{{i:door-open}}<b>Барьер у доков</b> и ворот</div>
+      <div class="strip-item">{{i:ban}}<b>Без ядов</b> в зонах хранения продуктов</div>
+      <div class="strip-item">{{i:notebook-pen}}<b>Журнал и акт</b> после каждого визита</div>
+      <div class="strip-item">{{i:file-badge}}<b>СанПиН 3.3686-21</b> и МР 3.5.3.0374-25</div>
+      <div class="strip-item">{{i:clock}}<b>Выезд за 3 часа</b> по сигналу 24/7</div>
+    </div>
+    <div class="strip-set" aria-hidden="true">
+      <div class="strip-item">{{i:warehouse}}<b>Без остановки</b> приёмки и отгрузки</div>
+      <div class="strip-item">{{i:map-pinned}}<b>Схема точек</b> по зонам склада</div>
+      <div class="strip-item">{{i:bug}}<b>Феромонный мониторинг</b> моли и жуков</div>
+      <div class="strip-item">{{i:door-open}}<b>Барьер у доков</b> и ворот</div>
+      <div class="strip-item">{{i:ban}}<b>Без ядов</b> в зонах хранения продуктов</div>
+      <div class="strip-item">{{i:notebook-pen}}<b>Журнал и акт</b> после каждого визита</div>
+      <div class="strip-item">{{i:file-badge}}<b>СанПиН 3.3686-21</b> и МР 3.5.3.0374-25</div>
+      <div class="strip-item">{{i:clock}}<b>Выезд за 3 часа</b> по сигналу 24/7</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 2. САМОПРОВЕРКА СКЛАДА ============ -->
+<section class="f-checks" id="samoproverka" aria-labelledby="chk-t">
+  <div class="wrap">
+    <div class="panel f-check" data-fade>
+      <div class="panel-scan" aria-hidden="true"></div>
+      <div class="panel-glare" aria-hidden="true"></div>
+      <div class="f-check-in">
+        <div class="f-check-l">
+          <div class="eyebrow" data-eyebrow>Самопроверка склада</div>
+          <h2 id="chk-t" class="f-check-t" data-split>Проверьте склад <em>перед проверкой или аудитом</em></h2>
+          <p class="f-check-res"><b id="chk-n">0</b> из 5</p>
+          <p class="f-check-note" id="chk-note" aria-live="polite">Если хотя бы одного пункта нет, вредители будут возвращаться, а у инспектора или аудитора клиента появятся замечания. На бесплатном выезде покажем, что доработать.</p>
+          <a href="#zayavka" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Заказать бесплатное обследование</span></a>
+        </div>
+        <ul class="f-check-list">
+          <li><label><input type="checkbox"><span>Ворота и доки закрываются плотно: щётки и уплотнители целые, ворота не стоят открытыми без погрузки</span></label></li>
+          <li><label><input type="checkbox"><span>Контейнеры с приманкой стоят снаружи и закреплены, а в зонах хранения продуктов — только ловушки без яда</span></label></li>
+          <li><label><input type="checkbox"><span>Каждая точка пронумерована и нанесена на план-схему склада, включая феромонные и световые ловушки</span></label></li>
+          <li><label><input type="checkbox"><span>Паллеты и тару осматривают на приёмке, а партию с признаками вредителей отправляют в карантин</span></label></li>
+          <li><label><input type="checkbox"><span>В журнале — результат по каждой точке после каждого визита, служба эксплуатации получает список щелей и проёмов</span></label></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. КАРТА РИСКОВ: 7 ЗОН СКЛАДА (ИНТЕРАКТИВНАЯ СХЕМА) ============ -->
+<section class="s" id="zony">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Карта рисков склада</div>
+      <h2 data-split>Семь зон, где склад <em>теряет защиту</em></h2>
+      <p class="sub" data-fade>Вредители заходят на склад через конкретные места: ворота, приёмку, площадку отходов, бытовые помещения. Для каждой зоны подбираем свой тип точек контроля и свои действия для склада.</p>
+    </div>
+    <div class="f-zmap" data-fade>
+      <figure class="card f-plan w-plan">
+        <svg viewBox="0 0 800 560" role="img" aria-labelledby="plan-sklad-t">
+          <title id="plan-sklad-t">Схема склада с семью зонами риска: периметр и площадка ТКО, доки и ворота, приёмка, стеллажное хранение, отгрузка и возвраты, бытовые помещения, навесы и кровля</title>
+          <!-- территория -->
+          <rect class="wfence" x="12" y="12" width="776" height="536" rx="18"/>
+          <g class="z" data-z="1">
+            <path class="zf" fill-rule="evenodd" d="M24 24H776V536H24Z M90 112H710V484H90Z"/>
+          </g>
+          <!-- площадка ТКО -->
+          <rect class="wt" x="722" y="402" width="44" height="64" rx="5"/>
+          <rect x="729" y="410" width="30" height="20" rx="3" fill="#24242c"/><rect x="729" y="438" width="30" height="20" rx="3" fill="#24242c"/>
+          <!-- фуры у доков -->
+          <g class="wt"><rect x="276" y="36" width="40" height="70" rx="4"/><rect x="408" y="36" width="40" height="70" rx="4"/><rect x="540" y="36" width="40" height="70" rx="4"/></g>
+          <!-- зона 7: навес над доками -->
+          <g class="z" data-z="7">
+            <rect class="zf" x="250" y="114" width="430" height="34" rx="4"/>
+          </g>
+          <rect class="wc" x="250" y="114" width="430" height="34" rx="4"/>
+          <!-- здание -->
+          <rect class="wf" x="90" y="150" width="620" height="334" rx="6"/>
+          <!-- зона 2: доки и ворота -->
+          <g class="z" data-z="2">
+            <rect class="zf" x="250" y="152" width="430" height="36" rx="3"/>
+          </g>
+          <g class="wd"><rect x="272" y="146" width="48" height="10" rx="2"/><rect x="338" y="146" width="48" height="10" rx="2"/><rect x="404" y="146" width="48" height="10" rx="2"/><rect x="470" y="146" width="48" height="10" rx="2"/><rect x="536" y="146" width="48" height="10" rx="2"/><rect x="602" y="146" width="48" height="10" rx="2"/></g>
+          <!-- зона 3: приёмка и карантин; зона 5: отгрузка и возвраты -->
+          <g class="z" data-z="3"><rect class="zf" x="250" y="192" width="208" height="70" rx="4"/></g>
+          <g class="z" data-z="5"><rect class="zf" x="472" y="192" width="208" height="70" rx="4"/></g>
+          <rect x="250" y="192" width="208" height="70" rx="4" fill="none" stroke="#2a2a33" stroke-dasharray="4 4"/>
+          <rect x="472" y="192" width="208" height="70" rx="4" fill="none" stroke="#2a2a33" stroke-dasharray="4 4"/>
+          <!-- зона 4: стеллажи -->
+          <g class="z" data-z="4"><rect class="zf" x="250" y="274" width="448" height="200" rx="4"/></g>
+          <g class="wr"><rect x="266" y="290" width="416" height="14" rx="2"/><rect x="266" y="322" width="416" height="14" rx="2"/><rect x="266" y="354" width="416" height="14" rx="2"/><rect x="266" y="386" width="416" height="14" rx="2"/><rect x="266" y="418" width="416" height="14" rx="2"/><rect x="266" y="450" width="416" height="14" rx="2"/></g>
+          <!-- зона 6: бытовые помещения -->
+          <g class="z" data-z="6"><rect class="zf" x="94" y="154" width="146" height="196" rx="4"/></g>
+          <g fill="none" stroke="#3f3f46" stroke-width="1.6"><path d="M240 152V482M92 252H240M92 350H240"/></g>
+          <!-- подписи -->
+          <g class="lbl">
+            <text x="30" y="530">Периметр</text>
+            <text x="728" y="394">ТКО</text>
+            <text x="268" y="136">Навес над доками</text>
+            <text x="104" y="186">Бытовые</text>
+            <text x="104" y="284">Столовая</text>
+            <text x="104" y="384">Техзона</text>
+            <text x="262" y="214">Приёмка</text>
+            <text x="484" y="214">Отгрузка и возвраты</text>
+          </g>
+          <!-- маркеры: КИК снаружи -->
+          <g class="ms" stroke="#09090b" stroke-width="2">
+            <rect x="72" y="176" width="12" height="12" rx="3"/><rect x="72" y="306" width="12" height="12" rx="3"/><rect x="72" y="436" width="12" height="12" rx="3"/>
+            <rect x="150" y="490" width="12" height="12" rx="3"/><rect x="330" y="490" width="12" height="12" rx="3"/><rect x="510" y="490" width="12" height="12" rx="3"/><rect x="660" y="490" width="12" height="12" rx="3"/>
+            <rect x="716" y="200" width="12" height="12" rx="3"/><rect x="716" y="320" width="12" height="12" rx="3"/><rect x="700" y="474" width="12" height="12" rx="3"/>
+            <rect x="232" y="120" width="12" height="12" rx="3"/><rect x="688" y="120" width="12" height="12" rx="3"/>
+          </g>
+          <!-- маркеры: ловушки без яда внутри -->
+          <g class="mr" stroke="#09090b" stroke-width="2">
+            <rect x="258" y="162" width="11" height="11" rx="2"/><rect x="324" y="162" width="11" height="11" rx="2"/><rect x="390" y="162" width="11" height="11" rx="2"/><rect x="456" y="162" width="11" height="11" rx="2"/><rect x="522" y="162" width="11" height="11" rx="2"/><rect x="588" y="162" width="11" height="11" rx="2"/><rect x="654" y="162" width="11" height="11" rx="2"/>
+            <rect x="244" y="300" width="11" height="11" rx="2"/><rect x="244" y="420" width="11" height="11" rx="2"/><rect x="694" y="214" width="11" height="11" rx="2"/><rect x="694" y="330" width="11" height="11" rx="2"/><rect x="694" y="440" width="11" height="11" rx="2"/>
+            <rect x="160" y="230" width="11" height="11" rx="2"/><rect x="160" y="326" width="11" height="11" rx="2"/>
+          </g>
+          <!-- феромонные ловушки на стеллажах -->
+          <g class="mp"><circle cx="272" cy="313" r="5"/><circle cx="676" cy="345" r="5"/><circle cx="272" cy="377" r="5"/><circle cx="676" cy="409" r="5"/><circle cx="272" cy="441" r="5"/></g>
+          <!-- световые ловушки вдали от ворот -->
+          <g class="mu"><rect x="330" y="252" width="22" height="6" rx="2"/><rect x="560" y="252" width="22" height="6" rx="2"/><rect x="120" y="296" width="22" height="6" rx="2"/></g>
+          <!-- номера зон -->
+          <g class="bdgs">
+            <g class="bdg" data-z="1"><circle cx="54" cy="64" r="20"/><text x="54" y="65">1</text></g>
+            <g class="bdg" data-z="2"><circle cx="694" cy="172" r="16"/><text x="694" y="173">2</text></g>
+            <g class="bdg" data-z="3"><circle cx="420" cy="234" r="18"/><text x="420" y="235">3</text></g>
+            <g class="bdg" data-z="4"><circle cx="474" cy="380" r="20"/><text x="474" y="381">4</text></g>
+            <g class="bdg" data-z="5"><circle cx="642" cy="234" r="18"/><text x="642" y="235">5</text></g>
+            <g class="bdg" data-z="6"><circle cx="200" cy="230" r="18"/><text x="200" y="231">6</text></g>
+            <g class="bdg" data-z="7"><circle cx="232" cy="96" r="16"/><text x="232" y="97">7</text></g>
+          </g>
+        </svg>
+        <figcaption class="f-legend">
+          <span><i class="lg-st"></i>Контейнеры КИК с приманкой — снаружи</span>
+          <span><i class="lg-rm"></i>Ловушки без яда — внутри</span>
+          <span><i class="lg-tr"></i>Феромонные ловушки на стеллажах</span>
+          <span><i class="lg-uv"></i>Световые ловушки вдали от ворот</span>
+        </figcaption>
+      </figure>
+      <ol class="f-zlist">
+        <li data-z="1" tabindex="0">
+          <b>Периметр и площадка ТКО</b>
+          <span>Крысы живут у мусорных контейнеров, в теплотрассах и на соседних участках и идут к зданию вдоль стен. Здесь проходит первый барьер.</span>
+          <small>КИК с приманкой по периметру · осмотр нор</small>
+        </li>
+        <li data-z="2" tabindex="0">
+          <b>Доки, ворота и рампы</b>
+          <span>Главный вход для грызунов, птиц и летающих насекомых: щели под воротами, изношенные уплотнители и герметизаторы, ворота, открытые дольше погрузки.</span>
+          <small>Ловушки у каждых ворот · список щелей для эксплуатации</small>
+        </li>
+        <li data-z="3" tabindex="0">
+          <b>Приёмка и карантин партий</b>
+          <span>С паллетами, тарой и сырьём завозятся мыши, моль и жуки. Партию с признаками вредителей нужно остановить на приёмке, а не найти потом в стеллаже.</span>
+          <small>Чек-лист осмотра партий · ловушки без яда</small>
+        </li>
+        <li data-z="4" tabindex="0">
+          <b>Стеллажное хранение</b>
+          <span>Мыши селятся в нижних ярусах и коробах, вредители запасов — в продуктах, кормах и сухофруктах. Нужен проход вдоль стен для осмотра и ротация партий.</span>
+          <small>Ловушки у оснований стеллажей · феромонные ловушки</small>
+        </li>
+        <li data-z="5" tabindex="0">
+          <b>Отгрузка, возвраты и брак</b>
+          <span>В зоне возвратов копятся повреждённые упаковки и просыпи — корм для грызунов и насекомых. Поэтому её держим на отдельном контроле.</span>
+          <small>Ловушки без яда · световые ловушки</small>
+        </li>
+        <li data-z="6" tabindex="0">
+          <b>Бытовые помещения и столовая</b>
+          <span>Тараканы и муравьи появляются там, где сотрудники едят и хранят еду: в комнатах приёма пищи, раздевалках, у кофемашин и холодильников.</span>
+          <small>Клеевые ловушки · точечные обработки по показаниям</small>
+        </li>
+        <li data-z="7" tabindex="0">
+          <b>Навесы, кровля и фермы</b>
+          <span>Голуби и воробьи садятся на навесы над доками и фермы внутри склада, помёт попадает на товар, паллеты и технику.</span>
+          <small>Места присады на схеме · рекомендации по защите</small>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. ТИПЫ СКЛАДОВ ============ -->
+<section class="s" id="tipy-skladov">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Какие склады обслуживаем</div>
+      <h2 data-split>Программа под тип склада <em>и&nbsp;товар на&nbsp;хранении</em></h2>
+      <p class="sub" data-fade>Склады пищевой продукции, таможенные терминалы и объекты транспортной инфраструктуры прямо названы в перечне объектов особого эпидемиологического значения (п. 98 СанПиН 3.3686-21). Фармацевтические склады проверяют по правилам дистрибьюторской практики, логистических операторов — по стандартам их заказчиков.</p>
+    </div>
+    <div class="d-cards" data-group="tasks">
+      <article class="d-card d-kind w-kind" data-tilt>
+        <div class="d-kind-img"><img src="../img/ind-warehouse.webp" srcset="../img/ind-warehouse-720.webp 720w, ../img/ind-warehouse.webp 900w" sizes="(max-width:600px) calc(100vw - 40px), (max-width:860px) 42vw, (max-width:1900px) 30vw, 570px" width="900" height="542" loading="lazy" decoding="async" alt="Высотные стеллажи сухого склада непищевых товаров" data-parallax></div>
+        <div class="d-kind-b">
+          <span class="f-lbl">Непищевые товары</span>
+          <h3>Сухие склады и РЦ</h3>
+          <p>Грызуны портят упаковку, кабели и сам товар, а помёт и погрызы становятся поводом для претензий клиента. Основной барьер — периметр, доки и ворота, внутри — ловушки у стен и оснований стеллажей.</p>
+          <div class="tags"><span class="tag">Доки и ворота</span><span class="tag">Ловушки без яда</span></div>
+        </div>
+      </article>
+      <article class="d-card d-kind w-kind" data-tilt>
+        <div class="d-kind-img"><img src="../img/sklad-produkty.webp" srcset="../img/sklad-produkty-720.webp 720w, ../img/sklad-produkty.webp 1200w" sizes="(max-width:600px) calc(100vw - 40px), (max-width:860px) 42vw, (max-width:1900px) 30vw, 570px" width="1200" height="670" loading="lazy" decoding="async" alt="Специалист и сотрудница приёмки осматривают паллету с мешками муки на продуктовом складе" data-parallax></div>
+        <div class="d-kind-b">
+          <span class="f-lbl">Пищевая продукция</span>
+          <h3>Продуктовые склады и РЦ сетей</h3>
+          <p>Объект особого эпидемиологического значения: обследование на насекомых — не реже 2 раз в месяц, дератизация — по результатам ежемесячной оценки. Внутри — только ловушки без яда, на приёмке — осмотр партий.</p>
+          <div class="tags"><span class="tag">СанПиН п. 98, 101, 110</span><span class="tag">ХАССП</span><span class="tag">Аудит сети</span></div>
+        </div>
+      </article>
+      <article class="d-card d-kind w-kind" data-tilt>
+        <div class="d-kind-img"><img src="../img/sklad-holod.webp" srcset="../img/sklad-holod-720.webp 720w, ../img/sklad-holod.webp 1200w" sizes="(max-width:600px) calc(100vw - 40px), (max-width:860px) 42vw, (max-width:1900px) 30vw, 570px" width="1200" height="670" loading="lazy" decoding="async" alt="Специалист проверяет станцию контроля грызунов № 12 у стены из сэндвич-панелей в морозильной камере" data-parallax></div>
+        <div class="d-kind-b">
+          <span class="f-lbl">Температурное хранение</span>
+          <h3>Холодильные и морозильные склады</h3>
+          <p>Мыши держатся у тёплых технических зон, компрессорных и тамбуров и могут жить в утеплителе панелей. Контролируем тамбуры, примыкания панелей, кабельные вводы и пространство вокруг камер.</p>
+          <div class="tags"><span class="tag">Тамбуры и камеры</span><span class="tag">Сэндвич-панели</span></div>
+        </div>
+      </article>
+      <article class="d-card d-kind w-kind" data-tilt>
+        <div class="d-kind-img"><img src="../img/sklad-farma.webp" srcset="../img/sklad-farma-720.webp 720w, ../img/sklad-farma.webp 1200w" sizes="(max-width:600px) calc(100vw - 40px), (max-width:860px) 42vw, (max-width:1900px) 30vw, 570px" width="1200" height="670" loading="lazy" decoding="async" alt="Специалист с чек-листом проверяет механическую ловушку без яда № 05 на фармацевтическом складе" data-parallax></div>
+        <div class="d-kind-b">
+          <span class="f-lbl">Лекарственные средства</span>
+          <h3>Фармацевтические склады</h3>
+          <p>Правила надлежащей дистрибьюторской практики ЕАЭС (п. 36) требуют защищать помещения от насекомых, грызунов и других животных и вести программу профилактического контроля вредителей. Внутри — только ловушки без яда.</p>
+          <div class="tags"><span class="tag">GDP</span><span class="tag">Программа контроля</span></div>
+        </div>
+      </article>
+      <article class="d-card d-kind w-kind" data-tilt>
+        <div class="d-kind-img"><img src="../img/sklad-fulfilment.webp" srcset="../img/sklad-fulfilment-720.webp 720w, ../img/sklad-fulfilment.webp 1200w" sizes="(max-width:600px) calc(100vw - 40px), (max-width:860px) 42vw, (max-width:1900px) 30vw, 570px" width="1200" height="670" loading="lazy" decoding="async" alt="Специалист проверяет клеевую ловушку под конвейером фулфилмент-центра" data-parallax></div>
+        <div class="d-kind-b">
+          <span class="f-lbl">Интернет-торговля</span>
+          <h3>Фулфилмент и склады e-commerce</h3>
+          <p>Тысячи товарных позиций, короба и поток возвратов. Моль и жуки приходят с продуктами и кормами для животных, тараканы — в бытовых зонах. Ведём контроль по зонам и товарным группам.</p>
+          <div class="tags"><span class="tag">Зона возвратов</span><span class="tag">Товарные группы</span></div>
+        </div>
+      </article>
+      <article class="d-card d-kind w-kind" data-tilt>
+        <div class="d-kind-img"><img src="../img/sklad-rampa.webp" srcset="../img/sklad-rampa-720.webp 720w, ../img/sklad-rampa.webp 1200w" sizes="(max-width:600px) calc(100vw - 40px), (max-width:860px) 42vw, (max-width:1900px) 30vw, 570px" width="1200" height="670" loading="lazy" decoding="async" alt="Погрузочные доки логистического центра и наружный контейнер КИК № 01 у стены" data-parallax></div>
+        <div class="d-kind-b">
+          <span class="f-lbl">Логистические операторы</span>
+          <h3>Ответственное хранение, 3PL и СВХ</h3>
+          <p>Склад отвечает перед поклажедателями за сохранность товара. Отчёт ведём по зонам склада, по согласованию — отдельно по клиентам, с фото находок. Таможенные терминалы входят в перечень п. 98 СанПиН.</p>
+          <div class="tags"><span class="tag">Отчёт по клиентам</span><span class="tag">Фотофиксация</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. ВРЕДИТЕЛИ СКЛАДА ============ -->
+<section class="s pests-s" id="vrediteli-sklada">
+  <div class="pests-bg f-lazy" data-parallax-bg aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Целевые вредители</div>
+      <h2 data-split>Кого контролируем <em>на&nbsp;складе</em></h2>
+      <p class="sub" data-fade>У каждого вредителя свои маршруты и признаки. Точки контроля подбираем под вредителя и зону, а не раскладываем одно средство по всему складу.</p>
+    </div>
+    <div class="pests d-pests3" data-group="pests">
+      <article class="card pest c">
+        <div class="pest-img"><img width="240" height="240" decoding="async" loading="lazy" src="../img/p-rat.webp" alt="Серая крыса"><i class="scan" aria-hidden="true"></i></div>
+        <div class="pest-b">
+          <div class="pest-t"><h3>Серая крыса</h3><span class="lvl z">Периметр · ТКО · доки</span></div>
+          <div class="lat">Rattus norvegicus · норы у фундамента, теплотрассы, приямки</div>
+          <p>Приходит с соседних участков и от мусорных контейнеров, роет норы у фундамента и пролезает под воротами. Прогрызает упаковку, утеплитель и изоляцию кабелей.</p>
+          <div class="bar"><div class="bar-l"><span>Угроза товару и инженерным сетям</span><span>Высокая</span></div><div class="bar-t"><div class="bar-f" data-w="92" style="--w:92%"></div></div></div>
+        </div>
+      </article>
+      <article class="card pest c">
+        <div class="pest-img"><img width="240" height="240" decoding="async" loading="lazy" src="../img/p-mouse.webp" alt="Домовая мышь"><i class="scan" aria-hidden="true"></i></div>
+        <div class="pest-b">
+          <div class="pest-t"><h3>Домовая мышь</h3><span class="lvl z">Стеллажи · короба · утеплитель</span></div>
+          <div class="lat">Mus musculus · заходит с паллетами и через щели около 6 мм</div>
+          <p>Завозится с паллетами и гофротарой, живёт в нижних ярусах стеллажей и в коробах. Помёт и погрызы на упаковке — повод для претензии и списания партии.</p>
+          <div class="bar"><div class="bar-l"><span>Риск списания и возврата партий</span><span>Высокая</span></div><div class="bar-t"><div class="bar-f" data-w="88" style="--w:88%"></div></div></div>
+        </div>
+      </article>
+      <article class="card pest h">
+        <div class="pest-img"><img width="240" height="240" decoding="async" loading="lazy" src="../img/p-moth.webp" alt="Южная амбарная огнёвка — пищевая моль"><i class="scan" aria-hidden="true"></i></div>
+        <div class="pest-b">
+          <div class="pest-t"><h3>Моль и жуки — вредители запасов</h3><span class="lvl z">Крупы · корма · сухофрукты</span></div>
+          <div class="lat">Огнёвки, хрущаки, мукоеды, точильщики, кожееды</div>
+          <p>Заводятся в муке, крупах, кормах для животных, орехах, сухофруктах, какао и табаке и переходят на соседние партии. Отслеживаем феромонными ловушками по рядам и ищем партию-источник.</p>
+          <div class="bar"><div class="bar-l"><span>Риск порчи соседних партий</span><span>Высокая</span></div><div class="bar-t"><div class="bar-f" data-w="80" style="--w:80%"></div></div></div>
+        </div>
+      </article>
+      <article class="card pest m">
+        <div class="pest-img"><img width="240" height="240" decoding="async" loading="lazy" src="../img/p-cockroach.webp" alt="Рыжий таракан"><i class="scan" aria-hidden="true"></i></div>
+        <div class="pest-b">
+          <div class="pest-t"><h3>Тараканы</h3><span class="lvl z">Бытовые зоны · столовая</span></div>
+          <div class="lat">Рыжий таракан · тёплые и влажные места, гофротара</div>
+          <p>Живут в комнатах приёма пищи, у кофемашин и холодильников, в душевых и у мусорных зон, переносятся в коробах. Контролируем клеевыми ловушками, обрабатываем точечно по результатам.</p>
+          <div class="bar"><div class="bar-l"><span>Риск замечаний при проверке</span><span>Средняя</span></div><div class="bar-t"><div class="bar-f" data-w="60" style="--w:60%"></div></div></div>
+        </div>
+      </article>
+      <article class="card pest m">
+        <div class="pest-img"><img width="240" height="240" decoding="async" loading="lazy" src="../img/p-fly.webp" alt="Комнатная муха"><i class="scan" aria-hidden="true"></i></div>
+        <div class="pest-b">
+          <div class="pest-t"><h3>Мухи и летающие насекомые</h3><span class="lvl z">Доки · ТКО · возвраты</span></div>
+          <div class="lat">Комнатная муха и другие синантропные мухи</div>
+          <p>Залетают через открытые ворота и от площадки отходов, особенно летом. Световые ловушки ставим внутри и вдали от ворот, чтобы не приманивать насекомых с улицы.</p>
+          <div class="bar"><div class="bar-l"><span>Риск загрязнения продукции</span><span>Средняя</span></div><div class="bar-t"><div class="bar-f" data-w="55" style="--w:55%"></div></div></div>
+        </div>
+      </article>
+      <article class="card pest h">
+        <div class="pest-img"><img width="240" height="240" decoding="async" loading="lazy" src="../img/p-pigeon.webp" alt="Сизый голубь"><i class="scan" aria-hidden="true"></i></div>
+        <div class="pest-b">
+          <div class="pest-t"><h3>Голуби и воробьи</h3><span class="lvl z">Навесы · фермы · кровля</span></div>
+          <div class="lat">Сизый голубь, домовый воробей</div>
+          <p>Залетают через ворота и проёмы, садятся на фермы и стеллажи, пачкают помётом товар и технику. Отмечаем места присады и гнездования и даём рекомендации: сетки, закрытие проёмов, противоприсадочные системы.</p>
+          <div class="bar"><div class="bar-l"><span>Риск порчи товара и техники</span><span>Высокая</span></div><div class="bar-t"><div class="bar-f" data-w="70" style="--w:70%"></div></div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. СОСТАВ ОБСЛУЖИВАНИЯ ============ -->
+<section class="s" id="sostav">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Состав обслуживания</div>
+      <h2 data-split>Что входит <em>в&nbsp;пест-контроль склада</em></h2>
+      <p class="sub" data-fade>Аудиторы IFS&nbsp;Logistics и торговых сетей смотрят, кто за что отвечает. Поэтому в программе разделяем работу подрядчика и действия склада.</p>
+    </div>
+    <div class="w-prog" data-fade>
+      <div class="d-card">
+        <h3>{{i:shield-check}}Делаем мы</h3>
+        <ul class="w-list">
+          <li><b>Обследуем</b> все помещения и прилегающую территорию, ищем пути проникновения и очаги.</li>
+          <li><b>Оцениваем пест-риск</b> по зонам и товарным группам и составляем программу пест-контроля.</li>
+          <li><b>Рисуем план-схему:</b> у каждой точки контроля сквозной номер на стене и на схеме.</li>
+          <li><b>Оснащаем склад:</b> контейнеры КИК с приманкой — снаружи, механические и клеевые ловушки — внутри, феромонные и световые ловушки — по зонам.</li>
+          <li><b>На каждом визите</b> проверяем все точки, меняем расходники и записываем результат в журнал.</li>
+          <li><b>Обработки</b> проводим только по результатам мониторинга, средствами с государственной регистрацией.</li>
+          <li><b>Раз в месяц</b> присылаем отчёт: находки по зонам, динамику и фото.</li>
+          <li><b>Выезжаем внепланово</b> в течение 3 часов, если на складе заметили грызуна или насекомых.</li>
+        </ul>
+      </div>
+      <div class="w-side">
+        <figure class="w-photo">
+          <img src="../img/sklad-feromon.webp" srcset="../img/sklad-feromon-720.webp 720w, ../img/sklad-feromon.webp 1200w" sizes="(max-width:1100px) calc(100vw - 40px), 42vw" width="1200" height="670" loading="lazy" decoding="async" alt="Феромонная ловушка с уловом моли на стойке стеллажа продуктового склада">
+          <figcaption>Феромонная ловушка на стойке стеллажа: по улову видно, в каком ряду начинается заражение</figcaption>
+        </figure>
+        <div class="d-card">
+          <h3>{{i:list-checks}}Нужно от склада</h3>
+          <ul class="w-list w-need">
+            <li>Назначить ответственного и сообщать нам о находках между визитами.</li>
+            <li>Держать ворота закрытыми и следить за щётками и уплотнителями.</li>
+            <li>Убирать просыпи и вовремя вывозить отходы и брак.</li>
+            <li>Не загораживать точки контроля паллетами и товаром.</li>
+            <li>Устранять щели и проёмы по нашему списку.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. РАБОТА БЕЗ ОСТАНОВКИ СКЛАДА ============ -->
+<section class="s" id="bez-ostanovki">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Без остановки склада</div>
+      <h2 data-split>Работаем в&nbsp;ритме <em>вашего склада</em></h2>
+      <p class="sub" data-fade>Склад, который работает в несколько смен, нельзя закрыть на обработку. Поэтому маршрут, время визита и способ обработки согласуем при запуске.</p>
+    </div>
+    <div class="card w-day" data-fade>
+      <div class="w-day-h"><b>Пример графика распределительного центра</b><span>Окно визита подбираем под ваши смены</span></div>
+      <div class="w-rows">
+        <div class="w-row"><span>Приёмка</span><div class="w-bar"><i class="yel" style="--a:6;--b:14">06:00–14:00</i></div></div>
+        <div class="w-row"><span>Отгрузка</span><div class="w-bar"><i class="yel" style="--a:16;--b:24">16:00–24:00</i></div></div>
+        <div class="w-row"><span>Плановый визит</span><div class="w-bar"><i class="acc" style="--a:14;--b:16"></i><em class="w-lab" style="--a:16">14:00–16:00</em></div></div>
+      </div>
+      <div class="w-scale" aria-hidden="true"><span></span><div><em style="left:0">0:00</em><em style="left:25%">6:00</em><em style="left:50%">12:00</em><em style="left:75%">18:00</em><em style="left:100%">24:00</em></div></div>
+    </div>
+    <div class="w-cards4" data-group="tasks">
+      <div class="d-card" data-tilt><span class="ico">{{i:route}}</span><h3>Маршрут по зонам</h3><p>Обходим точки по схеме и не перекрываем проезды техники. Ворота и доки проверяем, когда они свободны.</p></div>
+      <div class="d-card" data-tilt><span class="ico">{{i:calendar-clock}}</span><h3>Обработка в согласованное окно</h3><p>Если обработка нужна, проводим её без людей и открытого товара в зоне. Пищевую продукцию на время дезинсекции убирают или герметично упаковывают (п. 105 СанПиН 3.3686-21).</p></div>
+      <div class="d-card" data-tilt><span class="ico">{{i:shield-check}}</span><h3>Допуск и безопасность</h3><p>Проходим вводный инструктаж склада, работаем в СИЗ и соблюдаем правила движения техники на территории.</p></div>
+      <div class="d-card" data-tilt><span class="ico">{{i:clipboard-check}}</span><h3>Предупреждение персонала</h3><p>Заранее сообщаем дату, время и меры предосторожности, а руководитель склада доводит их до сотрудников (п. 102 СанПиН 3.3686-21).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. ЗАПУСК ОБСЛУЖИВАНИЯ (ТАЙМЛАЙН) ============ -->
+<section class="s" id="reglament">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Запуск обслуживания</div>
+      <h2 data-split>От бесплатного выезда <em>до&nbsp;первого отчёта</em></h2>
+      <p class="sub" data-fade>Пять шагов, после которых у склада есть рабочая схема защиты и комплект документов для проверки.</p>
+    </div>
+    <div class="tl" id="tl">
+      <div class="tl-line"><div class="tl-prog" id="tlprog"></div><i class="tl-head" id="tlhead"></i></div>
+      <div class="tl-row">
+        <div class="tl-txt"><div class="wk">Шаг 1 · 0 ₽</div><h3>Бесплатное обследование склада</h3><p>Инженер обходит все зоны и территорию вместе с вашим ответственным: ищет щели под воротами, изношенные уплотнители, норы, следы грызунов и насекомых, места присады птиц.</p></div>
+        <div class="tl-img"><img width="1200" height="670" decoding="async" src="../img/sklad-vorota.webp" srcset="../img/sklad-vorota-720.webp 720w, ../img/sklad-vorota.webp 1200w" sizes="(max-width:760px) calc(100vw - 112px), (max-width:1930px) 43vw, 830px" alt="Специалист фонарём проверяет щель под уплотнителем ворот дока и станцию № 03" loading="lazy" data-parallax></div>
+        <span class="tl-dot">01</span>
+      </div>
+      <div class="tl-row flip">
+        <div class="tl-txt"><div class="wk">Шаг 2 · за 1 час</div><h3>Программа, схема и проект договора</h3><p>Готовим программу пест-контроля, план-схему точек по зонам и проект договора с ценой — в течение 1 часа после осмотра.</p></div>
+        <div class="tl-img"><img width="1100" height="660" decoding="async" src="../img/step2.webp" srcset="../img/step2-720.webp 720w, ../img/step2.webp 1100w" sizes="(max-width:760px) calc(100vw - 112px), (max-width:1930px) 43vw, 830px" alt="План-схема точек контроля, график осмотров и папки документов пест-контроля" loading="lazy" data-parallax></div>
+        <span class="tl-dot">02</span>
+      </div>
+      <div class="tl-row">
+        <div class="tl-txt"><div class="wk">Шаг 3 · первый визит</div><h3>Оснащение и нумерация точек</h3><p>Ставим контейнеры КИК снаружи, ловушки внутри, феромонные и световые ловушки по зонам. Исправные станции прежнего подрядчика осматриваем, маркируем и принимаем на обслуживание бесплатно.</p></div>
+        <div class="tl-img"><img width="1200" height="800" decoding="async" src="../img/programma-kik-rampa.webp" srcset="../img/programma-kik-rampa-720.webp 720w, ../img/programma-kik-rampa.webp 1200w" sizes="(max-width:760px) calc(100vw - 112px), (max-width:1930px) 43vw, 830px" alt="Антивандальный контейнер КИК с номерной табличкой у погрузочной рампы" loading="lazy" data-parallax></div>
+        <span class="tl-dot">03</span>
+      </div>
+      <div class="tl-row flip">
+        <div class="tl-txt"><div class="wk">Шаг 4 · 1–2 раза в месяц</div><h3>Плановые визиты по графику</h3><p>Проверяем все точки по маршруту, учитываем находки, меняем расходники и заполняем журнал. На складах пищевой продукции обследование на насекомых — не реже 2 раз в месяц.</p></div>
+        <div class="tl-img"><img width="1200" height="670" decoding="async" src="../img/sklad-feromon.webp" srcset="../img/sklad-feromon-720.webp 720w, ../img/sklad-feromon.webp 1200w" sizes="(max-width:760px) calc(100vw - 112px), (max-width:1930px) 43vw, 830px" alt="Проверка феромонной ловушки на стеллаже во время планового визита" loading="lazy" data-parallax></div>
+        <span class="tl-dot">04</span>
+      </div>
+      <div class="tl-row">
+        <div class="tl-txt"><div class="wk">Шаг 5 · каждый месяц</div><h3>Отчёт и корректирующие действия</h3><p>Раз в месяц — отчёт по зонам с динамикой и фото, список щелей и проёмов для службы эксплуатации. По сигналу склада выезжаем внепланово в течение 3 часов.</p></div>
+        <div class="tl-img"><img width="1920" height="1072" decoding="async" src="../img/pm-hero.webp" srcset="../img/pm-hero-mob.webp 1024w, ../img/pm-hero.webp 1920w" sizes="(max-width:760px) calc(100vw - 112px), (max-width:1930px) 43vw, 830px" alt="Инженер пест-контроля обсуждает отчёт с руководителем склада в проходе между стеллажами" loading="lazy" data-parallax></div>
+        <span class="tl-dot">05</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. НОРМЫ, АУДИТЫ И ДОКУМЕНТЫ ============ -->
+<section class="s" id="dokumenty">
+  <div class="wrap">
+    <div class="head head-row">
+      <div>
+        <div class="eyebrow" data-eyebrow>Нормы и документы</div>
+        <h2 data-split>Что проверяют на&nbsp;складе <em>инспектор и&nbsp;аудитор</em></h2>
+      </div>
+      <p class="sub sub-side" data-fade>На проверке смотрят не только договор, но и схему точек, журнал по каждой точке, отчёты и документы на средства.</p>
+    </div>
+
+    <div class="kpis w-kpis" data-group="kpis">
+      <div class="card kpi"><b data-count="2">2</b><i class="u">раза в месяц</i><span>Обследование на насекомых на складах пищевой продукции (п. 101 СанПиН 3.3686-21)</span></div>
+      <div class="card kpi"><b data-count="12">12</b><i class="u">раз в год</i><span>Оценка заселённости грызунами и дератизация по её результатам (п. 110)</span></div>
+      <div class="card kpi"><b data-count="3">3</b><i class="u">блока работ</i><span>Оценка до обработки, обработка и оценка эффективности (МР 3.5.3.0374-25)</span></div>
+      <div class="card kpi"><b data-count="100" data-suf="%">100%</b><i class="u">средств с СГР</i><span>Средства с государственной регистрацией и действующая лицензия</span></div>
+    </div>
+
+    <table class="d-table" data-fade style="margin-bottom:36px">
+      <thead>
+        <tr>
+          <th scope="col">Норматив или стандарт</th>
+          <th scope="col">Что требует от склада</th>
+          <th scope="col">Кто проверяет</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-l="Норматив или стандарт">СанПиН 3.3686-21</td>
+          <td data-l="Что требует от склада">Склады пищевой продукции, таможенные терминалы, объекты транспортной инфраструктуры, контейнеры и спецавтотранспорт — в перечне п. 98. Обследование на насекомых не реже 2 раз в месяц (п. 101), дератизация по ежемесячной оценке (п. 110), приманки — в закрывающихся пронумерованных контейнерах, отдельно от пищевой продукции и кормов (п. 120)</td>
+          <td data-l="Кто проверяет">Роспотребнадзор</td>
+        </tr>
+        <tr>
+          <td data-l="Норматив или стандарт">МР 3.5.3.0374-25</td>
+          <td data-l="Что требует от склада">Методические рекомендации по дератизации 2025 года: обследование, обработка и оценка эффективности; на складах — следовые площадки и неотравленные приманки, подтверждение находок фотофиксацией</td>
+          <td data-l="Кто проверяет">Роспотребнадзор, служба качества</td>
+        </tr>
+        <tr>
+          <td data-l="Норматив или стандарт">ТР ТС 021/2011, ст. 17</td>
+          <td data-l="Что требует от склада">Хранение и перевозка пищевой продукции в условиях, сохраняющих её безопасность; грузовые отделения и контейнеры защищают продукцию от проникновения грызунов и насекомых</td>
+          <td data-l="Кто проверяет">Роспотребнадзор, производители-поклажедатели</td>
+        </tr>
+        <tr>
+          <td data-l="Норматив или стандарт">Правила дистрибьюторской практики ЕАЭС, п. 36</td>
+          <td data-l="Что требует от склада">Помещения защищены от проникновения насекомых, грызунов и других животных; на складе есть программа профилактического контроля вредителей</td>
+          <td data-l="Кто проверяет">Росздравнадзор, аудиторы GDP</td>
+        </tr>
+        <tr>
+          <td data-l="Норматив или стандарт">IFS&nbsp;Logistics, BRCGS Storage &amp; Distribution</td>
+          <td data-l="Что требует от склада">Документированная программа контроля вредителей на основе оценки рисков, мониторинг, анализ трендов и корректирующие действия</td>
+          <td data-l="Кто проверяет">Сертификационные аудиторы, торговые сети</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="docs" data-group="docs">
+      <article class="card doc"><span class="num">01</span><span class="ico">{{i:file-signature}}</span><h3>Договор и программа</h3><p>Зоны склада, целевые вредители, кратность визитов и время реагирования — 3 часа по сигналу.</p></article>
+      <article class="card doc"><span class="num">02</span><span class="ico">{{i:map-pinned}}</span><h3>План-схема точек</h3><p>Чертёж склада и территории со сквозной нумерацией КИК, ловушек, феромонных и световых ловушек.</p></article>
+      <article class="card doc"><span class="num">03</span><span class="ico">{{i:notebook-pen}}</span><h3>Журнал пест-контроля</h3><p>Результат по каждой точке после каждого визита: состояние, находки, замена расходников.</p></article>
+      <article class="card doc"><span class="num">04</span><span class="ico">{{i:clipboard-check}}</span><h3>Акты</h3><p>Акты обследования и выполненных работ на бумаге или по ЭДО, с НДС и без НДС.</p></article>
+      <article class="card doc"><span class="num">05</span><span class="ico">{{i:badge-check}}</span><h3>Лицензия и СГР</h3><p>Выписка из реестра лицензий № <span class="nw">Л064-00111-77/01942445</span>, СГР и паспорта безопасности средств.</p></article>
+      <article class="card doc"><span class="num">06</span><span class="ico">{{i:chart-line}}</span><h3>Ежемесячный отчёт</h3><p>Находки и динамика по зонам, фото и список корректирующих действий для службы эксплуатации.</p></article>
+    </div>
+
+    <div class="w-samples" data-fade>
+      <a class="w-sample" href="../materialy/programma-pest-kontrolya/"><img src="../img/programma-sample-p1-240.webp" width="240" height="339" loading="lazy" decoding="async" alt="Первая страница образца программы пест-контроля"><div><b>Образец программы <span class="nw">пест-контроля</span></b><span class="ds">Образец в PDF и шаблон Word</span></div></a>
+      <a class="w-sample" href="../materialy/zhurnal-pest-kontrolya/"><img src="../img/zhurnal-obrazets-p1-360.webp" width="360" height="509" loading="lazy" decoding="async" alt="Первая страница образца журнала пест-контроля"><div><b>Образец журнала <span class="nw">пест-контроля</span></b><span class="ds">Заполненный образец и шаблон, PDF</span></div></a>
+      <a class="w-sample" href="../dogovor-deratizatsiya-dezinsektsiya/"><img src="../img/dogovor-sample-p1-240.webp" width="240" height="339" loading="lazy" decoding="async" alt="Первая страница образца договора на дератизацию и дезинсекцию"><div><b>Договор на обслуживание</b><span class="ds">Условия, сроки и образец договора</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. ТИПОВЫЕ ЗАДАЧИ СКЛАДОВ ============ -->
+<section class="s" id="zadachi">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Типовые задачи</div>
+      <h2 data-split>С чем к&nbsp;нам <em>приходят склады</em></h2>
+    </div>
+    <div class="tasks" data-group="tasks">
+      <article class="card task">
+        <span class="chip-y">Аудит клиента</span>
+        <q>Через месяц аудит по IFS&nbsp;Logistics, а от прежнего подрядчика остались только акты — без схемы точек и журнала по каждой точке.</q>
+        <div class="who"><span class="ava">{{i:shield-check}}</span><div><b>Директор по качеству</b><span>Логистический оператор · программа, схема и журнал с первого визита, документы к дате аудита</span></div></div>
+      </article>
+      <article class="card task">
+        <span class="chip-y">Претензия поклажедателя</span>
+        <q>Клиент вернул паллету с погрызенной упаковкой и спрашивает, откуда грызуны и что склад с этим делает.</q>
+        <div class="who"><span class="ava">{{i:warehouse}}</span><div><b>Руководитель склада</b><span>Ответственное хранение · осмотр зоны и путей проникновения, усиление контура у доков, отчёт с фото по зоне</span></div></div>
+      </article>
+      <article class="card task">
+        <span class="chip-y">Моль в стеллажах</span>
+        <q>В зоне кормов для животных летает моль. Боимся, что она перейдёт на крупы и сухофрукты в соседних рядах.</q>
+        <div class="who"><span class="ava">{{i:package-search}}</span><div><b>Начальник смены</b><span>Фулфилмент · феромонные ловушки по рядам, поиск партии-источника, рекомендации по изоляции и ротации</span></div></div>
+      </article>
+      <article class="card task">
+        <span class="chip-y">Птицы на рампе</span>
+        <q>Голуби сидят на навесе над доками и залетают внутрь, помёт — на паллетах и погрузчиках.</q>
+        <div class="who"><span class="ava">{{i:bird}}</span><div><b>Главный инженер</b><span>Распределительный центр · осмотр навесов и ферм, места присады на схеме, список проёмов и рекомендации по защите</span></div></div>
+      </article>
+      <article class="card task">
+        <span class="chip-y">Новый склад</span>
+        <q>Запускаем новый склад и хотим, чтобы точки контроля и документы были готовы до приёмки первой партии.</q>
+        <div class="who"><span class="ava">{{i:boxes}}</span><div><b>Директор склада</b><span>Сухой склад · схема после осмотра, оснащение до запуска, программа под требования клиентов</span></div></div>
+      </article>
+      <article class="card task">
+        <span class="chip-y">Смена подрядчика</span>
+        <q>Меняем подрядчика, но не хотим разрыва в журналах: через два месяца плановая проверка.</q>
+        <div class="who"><span class="ava">{{i:file-signature}}</span><div><b>Менеджер по эксплуатации</b><span>Продуктовый склад · принимаем текущую схему и станции, продолжаем нумерацию и журнал без разрыва</span></div></div>
+      </article>
+    </div>
+    <div class="tasks-foot" data-fade>
+      <span class="ico">{{i:lightbulb}}</span>
+      <p>Это типовые рабочие ситуации на складах, а не описания конкретных клиентов. На бесплатном выезде инженер осмотрит ваш склад и покажет решение до подписания договора.</p>
+      <a href="#zayavka" class="link-arrow">Заказать обследование <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. СТОИМОСТЬ И УСЛОВИЯ ============ -->
+<section class="s" id="stoimost">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Стоимость и условия</div>
+      <h2 data-split>Сколько стоит <span class="nw">пест-контроль</span> <em>склада</em></h2>
+      <p class="sub" data-fade>Цена зависит от площади и числа корпусов, количества ворот и рамп, товара на хранении и кратности визитов. Точный расчёт со схемой точек присылаем в течение 1 часа после бесплатного осмотра.</p>
+    </div>
+    <table class="d-table d-price" data-fade>
+      <thead>
+        <tr>
+          <th scope="col">Объект / работа</th>
+          <th scope="col">Что входит в обслуживание</th>
+          <th scope="col">Ориентир</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-l="Объект / работа">Дератизация склада до 1 000 м²</td>
+          <td data-l="Что входит в обслуживание">Внешний и внутренний контуры защиты, контроль ворот и рамп, 1–2 визита в месяц, журнал и акты</td>
+          <td data-l="Ориентир">от 4 500 ₽/мес</td>
+        </tr>
+        <tr>
+          <td data-l="Объект / работа">Плановая дезинсекция склада</td>
+          <td data-l="Что входит в обслуживание">Обследования 1–2 раза в месяц, обслуживание клеевых и световых ловушек, журнал и отчётность</td>
+          <td data-l="Ориентир">от 4 500 ₽/мес</td>
+        </tr>
+        <tr>
+          <td data-l="Объект / работа">Склад от 1 000 м², РЦ, фулфилмент, холодильный комплекс</td>
+          <td data-l="Что входит в обслуживание">Комплексная программа: грызуны, насекомые и вредители запасов, схема по зонам, ежемесячный отчёт</td>
+          <td data-l="Ориентир">после бесплатного выезда</td>
+        </tr>
+        <tr>
+          <td data-l="Объект / работа">Разовая истребительная обработка</td>
+          <td data-l="Что входит в обслуживание">Подавление очага грызунов или насекомых в складских помещениях</td>
+          <td data-l="Ориентир">от 3 500 ₽</td>
+        </tr>
+        <tr>
+          <td data-l="Объект / работа">Контейнеры КИК и ловушки</td>
+          <td data-l="Что входит в обслуживание">Первичное оснащение склада станциями контроля и ловушками</td>
+          <td data-l="Ориентир">от 600 ₽ за точку</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-cols3" data-group="tasks">
+      <div class="d-card" data-tilt>
+        <h3>Входит в абонентскую плату</h3>
+        <p>Плановые визиты по графику, проверка всех точек, расходники при обходах, ведение журнала, план-схема, акты, ежемесячный отчёт и внеплановые выезды в течение 3 часов.</p>
+      </div>
+      <div class="d-card" data-tilt>
+        <h3>Что влияет на цену</h3>
+        <p>Площадь и число корпусов, количество ворот и рамп, <b>товар на хранении</b> (пищевой, непищевой, лекарства), кратность визитов по СанПиН и требования ваших аудиторов.</p>
+      </div>
+      <div class="d-card" data-tilt>
+        <h3>Сроки и документооборот</h3>
+        <p>Проект договора с расчётом — <b>за 1 час</b> после осмотра. Работаем <b>с НДС и без НДС</b>, подписываем договор и акты <b>через ЭДО</b> или на бумаге. Срок договора — 12 месяцев с пролонгацией.</p>
+      </div>
+    </div>
+
+    <ul class="d-chips" data-fade>
+      <li><a href="../deratizatsiya/">Дератизация для организаций →</a></li>
+      <li><a href="../dezinsektsiya/">Дезинсекция для организаций →</a></li>
+      <li><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на дератизацию и дезинсекцию →</a></li>
+      <li><a href="../pishchevoe-proizvodstvo/">Пест-контроль на пищевом производстве →</a></li>
+      <li><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/">Пест-менеджмент или разовая обработка →</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 12. ВОПРОСЫ (FAQ) ============ -->
+<section class="s" id="voprosy">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Частые вопросы</div>
+      <h2 data-split>Вопросы о&nbsp;пест-контроле <em>склада</em></h2>
+    </div>
+    <div class="faq">
+      <div class="faq-col" data-group="faq">
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a1" id="q1">Как часто нужно проводить дератизацию и дезинсекцию на складе?<span class="pm"></span></button>
+          <div class="ans" id="a1" role="region" aria-labelledby="q1"><div><p>По СанПиН 3.3686-21 склады пищевой продукции, таможенные терминалы и объекты транспортной инфраструктуры относятся к объектам особого эпидемиологического значения (п. 98). На них обследование на насекомых проводят не реже 2 раз в месяц (п. 101), а дератизацию — по результатам ежемесячной оценки (п. 110). На других объектах обследование на насекомых — не реже 1 раза в месяц. На практике визиты планируем 1–2 раза в месяц и добавляем внеплановые по сигналу склада.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a2" id="q2">Можно ли раскладывать отраву на складе с продуктами?<span class="pm"></span></button>
+          <div class="ans" id="a2" role="region" aria-labelledby="q2"><div><p>По п. 120 СанПиН 3.3686-21 приманки с антикоагулянтами размещают только в закрывающихся пронумерованных контейнерах, в недоступных для детей и животных местах и отдельно от пищевой продукции и кормов. Поэтому контейнеры с приманкой ставим снаружи по периметру, а в зонах хранения продуктов используем механические и клеевые ловушки без яда.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a3" id="q3">Нужно ли останавливать работу склада на время обработки?<span class="pm"></span></button>
+          <div class="ans" id="a3" role="region" aria-labelledby="q3"><div><p>Нет. Плановые визиты проходят при работающем складе: инженер обходит точки по маршруту и не перекрывает проезды. Обработку, если она нужна, проводим в согласованное окно, когда в зоне нет людей и открытой продукции. Пищевую продукцию на время дезинсекции убирают или герметично упаковывают — это требование п. 105 СанПиН 3.3686-21.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a4" id="q4">Как защитить склад от грызунов?<span class="pm"></span></button>
+          <div class="ans" id="a4" role="region" aria-labelledby="q4"><div><p>Защиту строят снаружи внутрь. Первый барьер — периметр и площадка ТКО: закреплённые контейнеры с приманкой вдоль стен. Второй — доки и ворота: целые щётки и уплотнители, закрытые без погрузки ворота, ловушки у проёмов изнутри. Третий — внутренние зоны: ловушки у стен и оснований стеллажей, проход вдоль стен для осмотра и осмотр паллет на приёмке. Щели и проёмы, которые находим, передаём списком службе эксплуатации.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a5" id="q5">Как бороться с пищевой молью и жуками на складе?<span class="pm"></span></button>
+          <div class="ans" id="a5" role="region" aria-labelledby="q5"><div><p>Сначала найти источник: развешиваем феромонные ловушки по рядам и смотрим, где улов выше, затем осматриваем партии в этой зоне. Заражённую партию изолируют, просыпи убирают, товар отгружают по принципу «первым пришёл — первым ушёл». Обработку применяем только по результатам мониторинга и с защитой продукции.</p></div></div>
+        </div>
+      </div>
+      <div class="faq-col" data-group="faq">
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a6" id="q6">Что делать, если на складе живут птицы?<span class="pm"></span></button>
+          <div class="ans" id="a6" role="region" aria-labelledby="q6"><div><p>Голуби и воробьи залетают через открытые ворота и проёмы и садятся на фермы, навесы и верхние ярусы стеллажей. Мы осматриваем кровлю и навесы, отмечаем места присады и гнездования на схеме и даём рекомендации: какие проёмы закрыть, где нужны сетки и противоприсадочные системы.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a7" id="q7">Какие документы по пест-контролю нужны складу для проверки или аудита?<span class="pm"></span></button>
+          <div class="ans" id="a7" role="region" aria-labelledby="q7"><div><p>Договор и программа пест-контроля, план-схема точек с нумерацией, журнал с результатами по каждой точке, акты выполненных работ, ежемесячные отчёты по зонам, копии СГР и паспортов безопасности средств и выписка из реестра лицензий. Эти документы запрашивают Роспотребнадзор, аудиторы IFS&nbsp;Logistics и BRCGS и торговые сети.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a8" id="q8">Какие требования к пест-контролю у фармацевтического склада?<span class="pm"></span></button>
+          <div class="ans" id="a8" role="region" aria-labelledby="q8"><div><p>Правила надлежащей дистрибьюторской практики ЕАЭС (п. 36) требуют, чтобы помещения были защищены от проникновения насекомых, грызунов и других животных и чтобы на складе действовала программа профилактического контроля вредителей. На фармскладах внутри используем только ловушки без яда и ведём записи по каждой точке.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a9" id="q9">Вы работаете с логистическими операторами и складами ответственного хранения?<span class="pm"></span></button>
+          <div class="ans" id="a9" role="region" aria-labelledby="q9"><div><p>Да. Для 3PL-операторов и складов ответственного хранения ведём отчёт по зонам склада, а по согласованию — отдельно по клиентам, с фото находок. Такой отчёт можно передать поклажедателю или его аудитору.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a10" id="q10">Сколько стоит пест-контроль склада?<span class="pm"></span></button>
+          <div class="ans" id="a10" role="region" aria-labelledby="q10"><div><p>Дератизация склада до 1 000 м² — от 4 500 ₽ в месяц, плановая дезинсекция склада — от 4 500 ₽ в месяц. Для складов больше 1 000 м², РЦ, фулфилмента и холодильных комплексов считаем комплексную программу после бесплатного обследования; расчёт со схемой точек присылаем в течение 1 часа после осмотра.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13. ЗАЯВКА ============ -->
+<section class="cta" id="zayavka">
+  <div class="cta-bg f-lazy" data-parallax-bg aria-hidden="true"></div><div class="cta-orb" id="orb" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-eyebrow>Заявка</div>
+      <h2 data-split>Начните с бесплатного <em>обследования склада</em></h2>
+      <p class="sub" data-fade>Инженер приедет на склад, осмотрит территорию, доки, зоны хранения и бытовые помещения, найдёт пути проникновения вредителей и подготовит расчёт программы со схемой точек. Выезд ни к чему не обязывает.</p>
+      <ul class="cta-list" data-group="ctalist">
+        <li>{{i:circle-check}}Выезд по Москве и Московской области — 0 ₽</li>
+        <li>{{i:circle-check}}Проект договора со схемой и ценой — за 1 час после осмотра</li>
+        <li>{{i:circle-check}}Только для юридических лиц и ИП (с НДС и без НДС, ЭДО)</li>
+      </ul>
+      <div class="cta-contacts" data-fade>
+        <a class="ph" href="tel:+74951043570">+7 (495) 104-35-70</a>
+        {{msg}}
+      </div>
+    </div>
+    <form class="form" id="form" novalidate data-form>
+      <div class="fbody">
+        <h3>Заявка на <span class="nw">пест-контроль</span> склада</h3>
+        <p class="fs">Заполнение займёт меньше минуты</p>
+        <div class="fg">
+          <div class="field"><label class="sr-only" for="f-name">Ваше имя</label><input id="f-name" name="name" placeholder="Ваше имя" required autocomplete="name"><small class="ferr">Укажите имя</small></div>
+          <div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>
+          <div class="field" hidden><input type="hidden" name="type" value="Склад, логистика"></div>
+          <div class="field full"><label class="sr-only" for="f-wtype">Тип склада</label><select id="f-wtype" name="wtype"><option value="" selected>Тип склада</option><option>Сухой склад или РЦ</option><option>Продуктовый склад или РЦ</option><option>Холодильный или морозильный склад</option><option>Фармацевтический склад</option><option>Фулфилмент</option><option>Ответственное хранение, 3PL, СВХ</option><option>Другое</option></select></div>
+          <div class="field full"><label class="sr-only" for="f-address">Адрес или район склада и площадь</label><input id="f-address" name="address" placeholder="Адрес или район склада и примерная площадь" autocomplete="street-address" maxlength="200"></div>
+          <div class="field full"><label class="sr-only" for="f-service">Какая задача стоит</label><select id="f-service" name="service"><option value="" selected>Какая задача стоит</option><option>Постоянный пест-контроль по договору</option><option>Подготовка к проверке Роспотребнадзора или аудиту</option><option>Срочный выезд — замечены грызуны, насекомые или птицы</option><option>Смена подрядчика без разрыва в документах</option></select></div>
+          <div class="field" hidden><input type="hidden" name="email" value=""></div>
+          <input type="hidden" name="msg" value="">
+        </div>
+        <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Заказать бесплатное обследование</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>
+        <p class="legal">Нажимая кнопку, вы даёте <a href="../soglasie/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаете, что ознакомились с <a href="../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg class="ok-ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M15 27l7 7 15-16"/></svg>
+        <h3>Заявка отправлена</h3><p>Перезвоним в ближайшее рабочее время, чтобы согласовать день бесплатного обследования склада.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>

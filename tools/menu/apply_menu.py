@@ -33,7 +33,7 @@ INDUSTRIES = [
     ('pishchevoe-proizvodstvo', 'Пищевые производства'),
     ('magaziny-i-torgovye-seti', 'Магазины и торговые сети'),
     ('restorany-i-kafe', 'Рестораны и кафе'),
-    ('#otrasl-sklady', 'Склады и логистика'),
+    ('sklady-i-logistika', 'Склады и логистика'),
     ('farmatsevticheskie-proizvodstva', 'Фармацевтические производства'),
     ('gostinitsy', 'Гостиницы и отели'),
 ]
@@ -68,6 +68,7 @@ PAGES = [
     ('magaziny-i-torgovye-seti/index.html', '../', 'magaziny-i-torgovye-seti'),
     ('gostinitsy/index.html', '../', 'gostinitsy'),
     ('farmatsevticheskie-proizvodstva/index.html', '../', 'farmatsevticheskie-proizvodstva'),
+    ('sklady-i-logistika/index.html', '../', 'sklady-i-logistika'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html', '../../', 'materialy/pest-menedzhment-ili-razovaya-obrabotka'),
     ('materialy/index.html', '../', 'materialy'),
     ('materialy/programma-pest-kontrolya/index.html', '../../', 'materialy/programma-pest-kontrolya'),
