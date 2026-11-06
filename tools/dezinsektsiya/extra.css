@@ -118,3 +118,6 @@ html{scroll-behavior:auto}
 @media (max-width:400px){.d-page .form .btn-lg,.f-check .btn-lg,.d-btns .btn{font-size:15px;padding:0 14px}.d-doc{grid-template-columns:96px minmax(0,1fr);column-gap:14px}.d-doc-h{font-size:17px}.d-obj-img{flex-basis:88px;min-height:88px}.d-obj-b{padding:12px 14px}.d-obj h3{font-size:16px}}
 @media (max-width:360px){.d-doc .btn-lg,.f-check .btn-lg,.d-btns .btn{max-width:100%;padding:0 12px;font-size:14px}.d-page .form .btn-ic{display:none}}
 @media (max-width:340px){.d-page .ft{grid-template-columns:minmax(0,1fr)}.d-obj-img{flex-basis:76px;min-height:76px}.d-page .form .btn-lg,.f-check .btn-lg,.d-btns .btn{font-size:13.5px;padding:0 10px}.d-doc .btn-lg{font-size:14px;padding:0 14px}}
+
+/* Первый экран: пока он не загружен целиком (после него ещё нет следующего блока), содержимое скрыто — как на главной (CLS при постепенной загрузке) */
+.d-hero:not(:has(~ *)) .wrap{visibility:hidden}

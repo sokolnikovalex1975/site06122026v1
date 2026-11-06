@@ -4,7 +4,7 @@
     Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
 
 В меню — только готовые страницы сайта. Отрасли без своей страницы ведут к карточке отрасли на главной
-(якоря #otrasl-…), страницы пищевых и фармацевтических производств — отдельные. «Контакты» — только в подвале.
+(якоря #otrasl-…), страницы пищевых и фармацевтических производств, складов и логистики — отдельные. «Контакты» — только в подвале.
 Ссылки — обычные <a href> прямо в HTML. С внутренних страниц якоря ведут на главную (../#podhod).
 Телефон, ссылки Telegram/MAX, кнопки заявки и блок счётчиков не меняются.
 Страницы документов (политика, согласие) получают ту же шапку и тот же подвал.
@@ -23,14 +23,15 @@ from typo import typo  # неразрывный пробел после коро
 USLUGI = [
     ('deratizatsiya', 'Дератизация для организаций'),
     ('dezinsektsiya', 'Дезинсекция для организаций'),
+    ('ochistka-dezinfektsiya-ventilyatsii', 'Очистка и дезинфекция вентиляции'),
     ('dogovor-deratizatsiya-dezinsektsiya', 'Договор на обслуживание'),
 ]
 # Отрасли — в порядке блока «Отрасли» на главной. Адрес со знаком # — карточка отрасли на главной (своей страницы пока нет)
 INDUSTRIES = [
     ('pishchevoe-proizvodstvo', 'Пищевые производства'),
-    ('#otrasl-seti', 'Магазины и торговые сети'),
+    ('magaziny-i-torgovye-seti', 'Магазины и торговые сети'),
     ('#otrasl-restorany', 'Рестораны и кафе'),
-    ('#otrasl-sklady', 'Склады и логистика'),
+    ('sklady-i-logistika', 'Склады и логистика'),
     ('farmatsevticheskie-proizvodstva', 'Фармацевтические производства'),
     ('#otrasl-gostinitsy', 'Гостиницы и отели'),
 ]
@@ -57,6 +58,7 @@ PAGES = [
     (DOGOVOR + '/index.html', '../', DOGOVOR),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
     ('farmatsevticheskie-proizvodstva/index.html', '../', 'farmatsevticheskie-proizvodstva'),
+    ('sklady-i-logistika/index.html', '../', 'sklady-i-logistika'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html', '../../', 'materialy/pest-menedzhment-ili-razovaya-obrabotka'),
     ('materialy/index.html', '../', 'materialy'),
     ('materialy/programma-pest-kontrolya/index.html', '../../', 'materialy/programma-pest-kontrolya'),

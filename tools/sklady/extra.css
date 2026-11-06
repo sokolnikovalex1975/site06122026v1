@@ -1,0 +1,110 @@
+/* ===== Склады и логистика: дополнения к стилям страницы дератизации ===== */
+
+/* Первый экран: пока он не загружен целиком (после него ещё нет следующего блока), содержимое скрыто — так же, как на главной.
+   Иначе при постепенной загрузке на медленной сети блоки первого экрана сдвигаются (CLS): на компьютере текст выровнен
+   по центру высоты экрана, на телефоне кнопки и заметка стоят выше списка, хотя в коде идут после него. Без :has() правило не действует */
+.d-hero:not(:has(~ *)) .wrap{visibility:hidden}
+
+/* Hero: заметка о срочных выездах */
+.w-hero-note{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:14px;color:var(--t2)}
+.w-hero-note i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--grn);box-shadow:0 0 0 4px rgba(5,223,114,.14)}
+
+/* План склада: элементы схемы */
+.w-plan .wl{fill:none;stroke:#3f3f46;stroke-width:2}
+.w-plan .wf{fill:#0e0e12;stroke:#3f3f46;stroke-width:2}
+.w-plan .wr{fill:#16161c;stroke:#2a2a33;stroke-width:1}
+.w-plan .wd{fill:#1d1d24;stroke:#52525b;stroke-width:1.4}
+.w-plan .wt{fill:#121217;stroke:#3f3f46;stroke-width:1.2}
+.w-plan .wc{fill:none;stroke:#52525b;stroke-width:1.2;stroke-dasharray:5 5}
+.w-plan .wfence{fill:none;stroke:#3f3f46;stroke-width:1.4;stroke-dasharray:2 7;stroke-linecap:round}
+.w-plan .ms{fill:#facc15}
+.w-plan .mr{fill:#38bdf8}
+.w-plan .mp{fill:#7c86ff}
+.w-plan .mu{fill:#c084fc}
+.w-plan .mb{fill:none;stroke:#22c55e;stroke-width:2.4;stroke-dasharray:7 6}
+.w-plan .wtxt{fill:#71717a;font:500 11px Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.w-plan .z .zf{stroke:transparent;stroke-width:2}
+.lg-uv{width:16px;height:6px;border-radius:2px;background:#c084fc}
+
+/* Типы складов: подпись-требование под текстом карточки */
+.w-kind .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:18px}
+
+/* Состав обслуживания: «делаем мы» и «нужно от склада» */
+.w-prog{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:16px;align-items:stretch}
+.w-prog .d-card h3{display:flex;align-items:center;gap:12px}
+.w-prog .d-card h3 svg{flex:none;width:22px;height:22px;color:var(--acc)}
+.w-list{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
+.w-list li{position:relative;padding:14px 0 14px 34px;border-bottom:1px solid var(--line);color:var(--t2);line-height:1.52}
+.w-list li:last-child{border-bottom:0}
+.w-list li::before{content:"";position:absolute;left:4px;top:1.32em;width:12px;height:6px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}
+.w-list li b{color:var(--t1);font-weight:500}
+.w-side{display:grid;gap:16px;grid-template-rows:auto 1fr}
+.w-photo{margin:0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);background:#0c0c10;aspect-ratio:16/9;position:relative}
+.w-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.w-photo figcaption{position:absolute;left:14px;bottom:14px;right:14px;font-size:13px;line-height:1.4;color:#e4e4e7;background:rgba(9,9,11,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:9px 12px}
+.w-need li::before{border-color:var(--yel)}
+
+/* Работа без остановки склада: лента суток */
+.w-day{margin:0 0 18px;padding:clamp(20px,2.2vw,36px)}
+.w-day-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;align-items:baseline;margin:0 0 22px}
+.w-day-h b{font-weight:500;font-size:clamp(17px,1.2vw,20px);letter-spacing:-.015em}
+.w-day-h span{font-size:13px;color:var(--t3)}
+.w-rows{display:grid;gap:12px}
+.w-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:center}
+.w-row>span{font-size:14px;color:var(--t2)}
+.w-bar{position:relative;height:30px;border-radius:8px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.w-bar i{position:absolute;top:3px;bottom:3px;left:calc(var(--a)/24*100%);width:calc((var(--b) - var(--a))/24*100%);border-radius:6px;background:rgba(255,255,255,.12);display:flex;align-items:center;padding:0 10px;font-style:normal;font-size:12px;color:var(--t2);white-space:nowrap;overflow:hidden}
+.w-bar i.acc{background:linear-gradient(90deg,var(--acc2),var(--acc));color:#fff;font-weight:500;box-shadow:0 0 24px rgba(124,134,255,.35)}
+.w-bar i.yel{background:rgba(250,204,21,.16);color:#fde68a}
+.w-lab{position:absolute;top:50%;left:calc(var(--a)/24*100% + 10px);transform:translateY(-50%);font-style:normal;font-size:12px;font-weight:500;color:#fff;white-space:nowrap}
+.w-scale{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;margin-top:10px}
+.w-scale div{position:relative;height:16px}
+.w-scale em{position:absolute;top:0;transform:translateX(-50%);font-style:normal;font-size:11px;color:var(--t3);letter-spacing:.04em}
+.w-scale em:first-child{transform:none}
+.w-scale em:last-child{transform:translateX(-100%)}
+.w-cards4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.w-cards4 .d-card h3{font-size:clamp(18px,1.25vw,22px)}
+.w-cards4 .d-card .ico{display:inline-flex;width:44px;height:44px;border-radius:12px;align-items:center;justify-content:center;background:rgba(124,134,255,.12);color:var(--acc);margin:0 0 18px}
+.w-cards4 .d-card .ico svg{width:22px;height:22px}
+
+/* Фон заявки — доки логистического центра (ленивая загрузка, как у фона по умолчанию) */
+#zayavka .cta-bg{background-image:url(../img/sklad-rampa.webp)}
+.js:not(.anim-fail) #zayavka .cta-bg:not(.bg-in){background-image:none}
+
+/* Цифры норм: число, единица и пояснение */
+.w-kpis .kpi b{margin-bottom:4px}
+.w-kpis .kpi .u{display:block;font-style:normal;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0 0 12px}
+
+/* Образцы документов */
+.w-samples{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:16px 0 0}
+.w-sample{display:grid;grid-template-columns:88px minmax(0,1fr);gap:18px;align-items:center;padding:16px 18px;border:1px solid var(--line2);border-radius:var(--r);background:var(--card);color:var(--t1);transition:border-color .25s,background .25s}
+.w-sample:hover{border-color:var(--acc);background:rgba(124,134,255,.07)}
+.w-sample img{width:88px;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--line);background:#fff;display:block}
+.w-sample b{display:block;font-weight:500;font-size:16px;letter-spacing:-.01em;margin:0 0 6px}
+.w-sample .ds{display:block;font-size:14px;color:var(--t2);line-height:1.45}
+.w-sample .ds::after{content:"\00a0→";color:var(--acc)}
+
+@media (max-width:1100px){
+  .w-prog{grid-template-columns:minmax(0,1fr)}
+  .w-side{grid-template-rows:auto}
+  .w-cards4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .w-samples{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:860px){
+  #zayavka .cta-bg{background-image:url(../img/sklad-rampa-720.webp)}
+  .js:not(.anim-fail) #zayavka .cta-bg:not(.bg-in){background-image:none}
+  .w-hero-note{order:4;margin:12px 0 0;font-size:13px}
+  .w-row,.w-scale{grid-template-columns:minmax(0,1fr);gap:6px}
+  .w-scale>span{display:none}
+  .w-bar i{font-size:11px;padding:0 7px}
+}
+@media (max-width:600px){
+  .w-plan .bdg{transform:scale(1.7);transform-box:fill-box;transform-origin:center}
+  .w-cards4{grid-template-columns:minmax(0,1fr)}
+  .w-day{padding:20px 16px}
+  .w-sample{grid-template-columns:64px minmax(0,1fr);gap:14px;padding:14px}
+  .w-sample img{width:64px}
+}
+@media (max-width:400px){
+  #vrediteli-sklada .lvl{white-space:normal}
+}

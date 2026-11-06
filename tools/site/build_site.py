@@ -23,7 +23,7 @@ SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 SITEMAP = [  # адрес, приоритет
     ('', '1.0'),
     ('deratizatsiya/', '0.9'), ('dezinsektsiya/', '0.9'), ('dogovor-deratizatsiya-dezinsektsiya/', '0.9'),
-    ('pishchevoe-proizvodstvo/', '0.8'), ('farmatsevticheskie-proizvodstva/', '0.8'),
+    ('pishchevoe-proizvodstvo/', '0.8'), ('farmatsevticheskie-proizvodstva/', '0.8'), ('sklady-i-logistika/', '0.8'),
     ('materialy/', '0.6'), ('materialy/programma-pest-kontrolya/', '0.7'),
     ('materialy/zhurnal-pest-kontrolya/', '0.7'), ('materialy/pest-menedzhment-ili-razovaya-obrabotka/', '0.7'),
 ]

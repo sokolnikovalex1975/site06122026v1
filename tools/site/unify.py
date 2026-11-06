@@ -105,7 +105,7 @@ URL = {
     'dogovor': 'dogovor-deratizatsiya-dezinsektsiya/', 'food': 'pishchevoe-proizvodstvo/',
     'mat': 'materialy/', 'prog': 'materialy/programma-pest-kontrolya/',
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
-    'farma': 'farmatsevticheskie-proizvodstva/',
+    'farma': 'farmatsevticheskie-proizvodstva/', 'sklady': 'sklady-i-logistika/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -125,6 +125,8 @@ CARD = {
            'Чем системный контроль по IPM отличается от обработок по вызову и когда хватит одного выезда.'),
     'farma': ('Отрасль', 'Пест-контроль фармацевтического производства',
               'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
+    'sklady': ('Отрасль', 'Пест-контроль для складов и логистики',
+               'Схема точек по зонам склада, визиты без остановки приёмки и отгрузки, журнал и отчёт для аудитов.'),
 }
 
 STRIP_LABELS = {}
@@ -174,6 +176,8 @@ PAGES = {
             ('lucide-pill', 'ТЛФ, стерильные, АФС', 'и фитопрепараты'),
             ('lucide-clock', 'Выезд за 3 часа', 'по сигналу'),
         ])),
+    # своя бегущая строка — в tools/sklady/main.html
+    'sklady-i-logistika/index.html': dict(key='sklady', root='../', related=['derat', 'dezins', 'dogovor', 'prog']),
     'materialy/index.html': dict(key='mat', root='../', related=['derat', 'dezins', 'dogovor', 'food'], strip=(
         'Документы и практика IPM', [
             ('lucide-file-signature', 'Программа', 'пест-контроля — образец PDF и шаблон Word'),
@@ -557,6 +561,12 @@ def process_home():
         b = s.find('</article>', a)
         assert a > 0 and s[b - 6:b] == '</div>', 'карточка фармацевтических производств'
         s = s[:b - 6] + f'<a class="ind-more" href="farmatsevticheskie-proizvodstva/">Подробнее о <span class="nw">пест-контроле</span> по GMP{ARR}</a>' + s[b - 6:]
+    # карточка складов и логистики ведёт на отраслевую страницу
+    if 'class="ind-more" href="sklady-i-logistika/"' not in s:
+        a = s.find('id="otrasl-sklady"')
+        b = s.find('</article>', a)
+        assert a > 0 and s[b - 6:b] == '</div>', 'карточка складов и логистики'
+        s = s[:b - 6] + f'<a class="ind-more" href="sklady-i-logistika/">Подробнее о <span class="nw">пест-контроле</span> складов{ARR}</a>' + s[b - 6:]
     # ссылки «Подробнее» в блоках главной
     adds = [
         ('podhod', more_html('Подробнее', [('materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'Пест-менеджмент или разовая обработка')])),
