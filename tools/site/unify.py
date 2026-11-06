@@ -110,6 +110,7 @@ URL = {
     'farma': 'farmatsevticheskie-proizvodstva/',
     'ppk': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',
     'rest': 'restorany-i-kafe/',
+    'san': 'sanitarnyy-audit/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -139,12 +140,14 @@ CARD = {
               'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
     'ppk': ('Материал', 'Программа производственного контроля по ХАССП',
             'Что вписать о дезинсекции и дератизации в ППК, правила 2026 года и образец раздела.'),
+    'san': ('Услуга', 'Санитарный аудит (СЭС-аудит)',
+            'Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.'),
 }
 
 STRIP_LABELS = {}
 PAGES = {
-    'deratizatsiya/index.html': dict(key='derat', root='../', related=['dezins', 'dogovor', 'prog', 'zhur']),
-    'dezinsektsiya/index.html': dict(key='dezins', root='../', related=['derat', 'dogovor', 'prog', 'zhur'], strip=(
+    'deratizatsiya/index.html': dict(key='derat', root='../', related=['dezins', 'dogovor', 'prog', 'san']),
+    'dezinsektsiya/index.html': dict(key='dezins', root='../', related=['derat', 'dogovor', 'prog', 'san'], strip=(
         'Коротко о дезинсекции', [
             ('lucide-crosshair', 'IPM', 'контроль насекомых'),
             ('lucide-scan-search', 'Бесплатный осмотр', 'и расчёт до договора'),
@@ -177,7 +180,7 @@ PAGES = {
             ('lucide-file-badge', 'Документы', 'для Роспотребнадзора и аудитов'),
             ('lucide-crosshair', 'IPM', 'в основе программы'),
         ])),
-    'pishchevoe-proizvodstvo/index.html': dict(key='food', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
+    'pishchevoe-proizvodstvo/index.html': dict(key='food', root='../', related=['derat', 'dezins', 'prog', 'san'], strip=(
         'Коротко о пест-контроле на производстве', [
             ('lucide-crosshair', 'IPM', 'на пищевом производстве'),
             ('lucide-scan-search', 'Бесплатное обследование', 'производства'),
@@ -286,6 +289,16 @@ PAGES = {
             ('lucide-clipboard-check', 'С 1 сентября 2026', '— новые санитарные правила'),
             ('lucide-notebook-pen', 'Образец раздела', 'для ППК'),
             ('lucide-list-checks', 'Подтверждение', '— договор и акты'),
+        ])),    'sanitarnyy-audit/index.html': dict(key='san', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
+        'Коротко о санитарном аудите', [
+            ('lucide-clipboard-check', 'Проверочные листы', '— приказы № 578 и № 580'),
+            ('lucide-file-badge', 'СанПиН 2026', '— нормы с 1 сентября 2026'),
+            ('lucide-flask-conical', 'Смывы и пробы воздуха', '— в стоимости'),
+            ('lucide-notebook-pen', 'Реестр нарушений', '— с фото и пунктом нормы'),
+            ('lucide-clock', 'Выезд 2–6 часов', '— акт через 3 рабочих дня'),
+            ('lucide-crosshair', 'Пест-контроль', '— проверяем глубже всего'),
+            ('lucide-shield-check', 'Лицензия', '№ Л064-00111-77/01942445'),
+            ('lucide-lock', 'Конфиденциально', '— результат только у заказчика'),
         ])),
 }
 
@@ -494,7 +507,25 @@ HOTEL_LINKS = {  # карточки гостиниц на страницах у�
 }
 
 
+SAN_REL = ('deratizatsiya/index.html', 'dezinsektsiya/index.html', 'pishchevoe-proizvodstvo/index.html')
+
+
+def rel_card(root, k):
+    kind, title, desc = CARD[k]
+    return (f'<a class="card rel-card" href="{root}{URL[k]}">'
+            f'<span class="rel-k">{kind}</span><span class="rel-t">{tp(title)}</span>'
+            f'<span class="rel-d">{tp(desc)}</span><span class="rel-a" aria-hidden="true">{ARR}</span></a>')
+
+
 def page_specific(rel, s):
+    if rel in SAN_REL and 'id="smotrite-takzhe"' in s and 'class="card rel-card" href="../sanitarnyy-audit/"' not in s:
+        # «Смотрите также» уже собран: карточку журнала меняем на санитарный аудит (как в related у страницы)
+        i = s.index('id="smotrite-takzhe"')
+        j = s.index('</section>', i)
+        block, n = re.subn(r'<a class="card rel-card" href="\.\./materialy/zhurnal-pest-kontrolya/">.*?</a>',
+                           lambda m: rel_card('../', 'san'), s[i:j], count=1, flags=re.S)
+        assert n == 1, rel + ': нет карточки журнала в «Смотрите также»'
+        s = s[:i] + block + s[j:]
     if rel in HOTEL_LINKS:
         old, new = HOTEL_LINKS[rel]
         if new not in s:
