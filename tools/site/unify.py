@@ -103,6 +103,7 @@ ICONS = json.loads((pathlib.Path(__file__).resolve().parent / 'icons.json').read
 URL = {
     'home': '', 'derat': 'deratizatsiya/', 'dezins': 'dezinsektsiya/',
     'dogovor': 'dogovor-deratizatsiya-dezinsektsiya/', 'food': 'pishchevoe-proizvodstvo/',
+    'seti': 'magaziny-i-torgovye-seti/',
     'mat': 'materialy/', 'prog': 'materialy/programma-pest-kontrolya/',
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
 }
@@ -116,6 +117,8 @@ CARD = {
                 'Одно или оба направления в одном договоре: график визитов, акт после выезда, цена до подписания.'),
     'food': ('Отрасль', 'Пест-контроль на пищевом производстве',
              'Точки контроля, визиты по графику смен и документы для Роспотребнадзора, аудиторов и торговых сетей.'),
+    'seti': ('Отрасль', 'Пест-контроль магазинов и торговых сетей',
+             'Ночные визиты без закрытия зала, журнал и схема точек в каждом магазине, сводный отчёт по сети.'),
     'prog': ('Материал', 'Программа пест-контроля',
              'Образец в PDF и шаблон Word: 7 разделов, оценка пест-риска по зонам и план мероприятий.'),
     'zhur': ('Материал', 'Журнал пест-контроля',
@@ -159,6 +162,17 @@ PAGES = {
             ('lucide-notebook-pen', 'Журнал и акты', 'для Роспотребнадзора'),
             ('lucide-file-badge', 'ХАССП', 'аудиты сертификации и сетей'),
             ('lucide-clock', 'Срочные выезды', '24/7'),
+        ])),
+    'magaziny-i-torgovye-seti/index.html': dict(key='seti', root='../', related=['derat', 'dezins', 'dogovor', 'zhur'], strip=(
+        'Коротко о пест-контроле магазинов', [
+            ('lucide-shopping-cart', 'Магазины и сети', 'Москва и область'),
+            ('lucide-scan-search', 'Бесплатное обследование', 'магазина'),
+            ('lucide-clock', 'Ночные визиты', 'без закрытия зала'),
+            ('lucide-map-pinned', 'Точки контроля', 'на схеме каждого магазина'),
+            ('lucide-notebook-pen', 'Журнал и акты', 'по каждому адресу'),
+            ('lucide-chart-column', 'Сводный отчёт', 'по всей сети'),
+            ('lucide-file-badge', 'СП 2.3.6.4281-26', 'и СанПиН 3.3686-21'),
+            ('lucide-file-signature', 'Один договор', 'на все адреса'),
         ])),
     'materialy/index.html': dict(key='mat', root='../', related=['derat', 'dezins', 'dogovor', 'food'], strip=(
         'Документы и практика IPM', [
@@ -537,6 +551,12 @@ def process_home():
         b = s.find('</article>', a)
         assert a > 0 and s[b - 6:b] == '</div>', 'карточка пищевых производств'
         s = s[:b - 6] + f'<a class="ind-more" href="pishchevoe-proizvodstvo/">Подробнее об обслуживании производств{ARR}</a>' + s[b - 6:]
+    # карточка торговых сетей ведёт на страницу «Магазины и торговые сети»
+    a = s.find('id="otrasl-seti"')
+    b = s.find('</article>', a)
+    if 'href="magaziny-i-torgovye-seti/"' not in s[a:b]:
+        assert a > 0 and s[b - 6:b] == '</div>', 'карточка торговых сетей'
+        s = s[:b - 6] + f'<a class="ind-more" href="magaziny-i-torgovye-seti/">Подробнее об обслуживании магазинов{ARR}</a>' + s[b - 6:]
     # ссылки «Подробнее» в блоках главной
     adds = [
         ('podhod', more_html('Подробнее', [('materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'Пест-менеджмент или разовая обработка')])),

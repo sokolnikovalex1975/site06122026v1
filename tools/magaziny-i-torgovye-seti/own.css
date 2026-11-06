@@ -1,0 +1,91 @@
+/* ===== Магазины и торговые сети: собственные блоки страницы ===== */
+/* Коротко о главном: определение + факты */
+.t-def{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(24px,3.4vw,64px);align-items:start}
+.t-lead{font-size:clamp(19px,1.45vw,25px);line-height:1.5;color:var(--t1);margin:0 0 18px;max-width:640px}
+.t-lead b{font-weight:600}
+.t-def-p{color:var(--t2);font-size:clamp(15px,1vw,17px);line-height:1.65;margin:0 0 22px;max-width:620px}
+.t-upd{display:inline-flex;align-items:center;gap:10px;margin:0;font-size:13px;color:var(--t3)}
+.t-upd::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--grn);box-shadow:0 0 0 4px rgba(5,223,114,.12)}
+.t-facts{margin:0;border-top:1px solid var(--line)}
+.t-facts>div{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:6px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.t-facts dt{color:var(--t3);font-size:clamp(13px,.86vw,15px);line-height:1.45}
+.t-facts dd{margin:0;color:var(--t1);font-size:clamp(15px,.98vw,17px);line-height:1.5}
+.t-facts small{display:block;margin-top:5px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
+
+/* Карта рисков магазина */
+.t-zmap{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(20px,2.4vw,44px);align-items:start}
+.t-plan{margin:0;padding:clamp(14px,1.4vw,26px)}
+.t-plan svg{display:block;width:100%;height:auto}
+.t-plan svg *{pointer-events:none}
+.t-plan .zf,.t-plan .bdg{pointer-events:all}
+.t-plan .zf{fill:transparent;transition:fill .3s,stroke .3s}
+.t-plan .z.on .zf{fill:rgba(124,134,255,.15)}
+.t-plan .bdg{cursor:pointer}
+.t-plan .bdg circle{pointer-events:all}
+.t-plan .bdg circle{fill:#09090b;stroke:#7c86ff;stroke-width:2;transition:fill .3s}
+.t-plan .bdg text{fill:#7c86ff;font:500 21px Inter,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central;transition:fill .3s}
+.t-plan .bdg.on circle{fill:#7c86ff}
+.t-plan .bdg.on text{fill:#fff}
+.t-plan .lbl text{fill:#84848e;font:400 14px Inter,system-ui,sans-serif}
+.t-zlist{gap:8px}
+.t-zlist li{padding:13px 16px}
+
+/* Сеть: преимущества + пример отчёта */
+.t-net{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,3vw,56px);align-items:start}
+.t-feats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,2vw,34px) clamp(20px,2vw,32px)}
+.t-feats li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:4px 14px;align-items:start}
+.t-feats svg{grid-row:1/span 2;width:40px;height:40px;padding:9px;border-radius:12px;border:1px solid rgba(124,134,255,.35);background:rgba(124,134,255,.08);color:var(--acc)}
+.t-feats b{font-weight:500;font-size:clamp(16px,1.05vw,19px);line-height:1.3;padding-top:2px}
+.t-feats span{color:var(--t2);font-size:clamp(14px,.92vw,16px);line-height:1.55}
+.t-rep{margin:0;padding:clamp(18px,1.8vw,30px)}
+.t-rep-h{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin-bottom:18px}
+.t-rep-h b{font-weight:500;font-size:clamp(17px,1.15vw,21px)}
+.t-chip{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.t-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:18px}
+.t-kpis div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.02)}
+.t-kpis b{display:block;font-weight:500;font-size:clamp(20px,1.6vw,28px);line-height:1.15;color:var(--t1)}
+.t-kpis span{display:block;margin-top:4px;font-size:12.5px;line-height:1.35;color:var(--t3)}
+.t-rep-tb{width:100%;border-collapse:collapse;font-size:clamp(13px,.86vw,15px)}
+.t-rep-tb th{text-align:left;font-weight:400;font-size:12px;color:var(--t3);padding:0 10px 10px 0;border-bottom:1px solid var(--line)}
+.t-rep-tb td{padding:11px 10px 11px 0;border-bottom:1px solid var(--line);color:var(--t2);vertical-align:top;line-height:1.4}
+.t-rep-tb td:first-child{color:var(--t1);white-space:nowrap}
+.t-rep-tb td small{display:block;color:var(--t3);font-size:12px}
+.t-rep-tb th:last-child,.t-rep-tb td:last-child{padding-right:0;text-align:right}
+.t-st{display:inline-block;white-space:nowrap;font-size:12px;line-height:1;padding:6px 9px;border-radius:999px;border:1px solid}
+.t-st.ok{color:var(--grn);border-color:rgba(5,223,114,.35);background:rgba(5,223,114,.08)}
+.t-st.warn{color:var(--yel);border-color:rgba(253,199,0,.35);background:rgba(253,199,0,.08)}
+.t-st.bad{color:var(--red);border-color:rgba(255,100,103,.4);background:rgba(255,100,103,.09)}
+.t-rep-f{margin-top:14px;font-size:13px;color:var(--t3)}
+
+/* Регламент визита в колонке со снимком */
+.d-swap .d-terms{grid-area:ticks;margin:0}
+.t-docs td a,.d-note a{color:var(--t1)}
+
+@media (max-width:1100px){
+  .t-def,.t-zmap,.t-net{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .t-feats{grid-template-columns:minmax(0,1fr)}
+  .t-facts>div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .t-kpis{gap:8px}
+  .t-kpis div{padding:10px}
+  .t-kpis span{font-size:11.5px}
+}
+@media (max-width:600px){
+  .t-plan .lbl{display:none}
+  .t-plan .bdg text{font-size:24px}
+  .t-zlist li{padding:13px}
+  .t-rep-tb{font-size:13px}
+  .t-rep-tb td,.t-rep-tb th{padding-right:8px}
+  .t-st{font-size:11px;padding:5px 7px}
+}
+@media (max-width:380px){
+  .t-rep{padding:16px 14px}
+  .t-rep-tb th:nth-child(2),.t-rep-tb td:nth-child(2){display:none}
+  .t-rep-tb td,.t-rep-tb th{padding-right:6px}
+  .t-st{font-size:10.5px;padding:4px 6px}
+  .t-kpis b{font-size:18px}
+  .t-kpis span{font-size:11px}
+}
+.t-plan .bdg{transform-box:fill-box;transform-origin:center;transition:transform .3s}
+@media (max-width:600px){.t-plan .bdg{transform:scale(1.3)}}
