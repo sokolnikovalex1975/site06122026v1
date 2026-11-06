@@ -31,7 +31,7 @@ USLUGI = [
 INDUSTRIES = [
     ('pishchevoe-proizvodstvo', 'Пищевые производства'),
     ('magaziny-i-torgovye-seti', 'Магазины и торговые сети'),
-    ('#otrasl-restorany', 'Рестораны и кафе'),
+    ('restorany-i-kafe', 'Рестораны и кафе'),
     ('#otrasl-sklady', 'Склады и логистика'),
     ('farmatsevticheskie-proizvodstva', 'Фармацевтические производства'),
     ('gostinitsy', 'Гостиницы и отели'),
@@ -61,6 +61,7 @@ PAGES = [
     (VENT + '/index.html', '../', VENT),
     (DOGOVOR + '/index.html', '../', DOGOVOR),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
+    ('restorany-i-kafe/index.html', '../', 'restorany-i-kafe'),
     ('magaziny-i-torgovye-seti/index.html', '../', 'magaziny-i-torgovye-seti'),
     ('gostinitsy/index.html', '../', 'gostinitsy'),
     ('farmatsevticheskie-proizvodstva/index.html', '../', 'farmatsevticheskie-proizvodstva'),
