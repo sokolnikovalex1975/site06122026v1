@@ -5,3 +5,6 @@ vendor/phpmailer/
 
 __pycache__/
 *.pyc
+
+# версия для Timeweb со счётчиками (tools/site/build_prod.py)
+dist/

@@ -4,7 +4,8 @@
 Что делает (повторный запуск ничего не дублирует):
   * в <head> каждой страницы — одинаковый ранний скрипт (заставка один раз за посещение,
     страховка анимаций через 4 с), одна версия style.css и app.min.js;
-  * подключает GSAP, ScrollTrigger и Lenis (локальные файлы vendor/) на всех страницах с анимациями;
+  * подключает GSAP, ScrollTrigger и Lenis (локальные файлы vendor/) на всех страницах с анимациями —
+    вместе с app.min.js они грузятся сразу после первой отрисовки (LOADER), чтобы не задерживать первый экран;
   * добавляет заставку, курсор и зерно, как на главной;
   * размечает анимации в стиле главной: надзаголовки (data-eyebrow), заголовки H2 по словам (data-split),
     подзаголовки и блоки (data-fade), группы карточек (data-group), наклон карточек с фото (data-tilt),
@@ -24,8 +25,19 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import htmldom  # noqa: E402
+sys.path.insert(0, str(ROOT / 'tools' / 'legal'))
+from typo import typo  # noqa: E402  неразрывный пробел после коротких слов, как в остальных текстах сайта
 
-VERSION = '20261106s1'  # общая версия style.css и app.min.js для сброса кэша
+
+def nw(text):
+    """Слова через дефис (пест-контроль, пест-риск) не переносим — класс nw, как в текстах страниц."""
+    return re.sub(r'(?<![\w>-])([А-Яа-яЁё]+-[А-Яа-яЁё]+)(?![\w-])', r'<span class="nw">\1</span>', text)
+
+
+def tp(text):
+    return typo(nw(text))
+
+VERSION = '20261106s2'  # общая версия style.css и app.min.js для сброса кэша
 
 HEAD_SCRIPT = (
     "<script>\n"
@@ -39,6 +51,24 @@ HEAD_SCRIPT = (
     "  })(document.documentElement);\n"
     "</script>"
 )
+# Скрипты анимаций (GSAP, ScrollTrigger, Lenis) и app.min.js подключаются сразу после первой отрисовки, а не через defer:
+# с defer первый кадр ждал выполнения ~160 КБ скриптов, и на телефонах фото и заголовок первого экрана появлялись на 0,8–1 с позже.
+# Порядок выполнения сохраняется (async = false); в фоновой вкладке — без ожидания кадра.
+LOADER = (
+    "<script>\n"
+    "  /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */\n"
+    "  (function (r, l) {\n"
+    "    var go = function () { l.forEach(function (u) { var e = document.createElement('script'); e.src = r + u; e.async = false; document.body.appendChild(e); }); };\n"
+    "    if (document.visibilityState === 'hidden' || !window.requestAnimationFrame) setTimeout(go, 0);\n"
+    "    else requestAnimationFrame(function () { setTimeout(go, 0); });\n"
+    "  })('{root}', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v={version}']);\n"
+    "</script>"
+)
+SCRIPTS_RE = re.compile(
+    r'<script src="((?:\.\./)*)vendor/gsap\.min\.js" defer></script>\n'
+    r'<script src="\1vendor/ScrollTrigger\.min\.js" defer></script>\n'
+    r'<script src="\1vendor/lenis\.min\.js" defer></script>\n'
+    r'<script src="\1app\.min\.js\?v=[^"]*" defer></script>')
 HEAD_SCRIPT_RE = re.compile(
     r"<script>\s*(?:/\*[^*]*\*/\s*)?(?:document\.documentElement\.className\+=' js anim-fail no-intro';"
     r"|document\.documentElement\.classList\.add\('js'\);.*?4000\);"
@@ -173,7 +203,7 @@ PAGES = {
 def strip_html(label, items):
     def one(it):
         ico, b, rest = it
-        return f'<div class="strip-item">{ICONS[ico]}<b>{b}</b> {rest}</div>'
+        return f'<div class="strip-item">{ICONS[ico]}<b>{tp(b)}</b> {tp(rest)}</div>'
     row = '\n      '.join(one(it) for it in items)
     return (
         f'\n<div class="strip" aria-label="{label}">\n'
@@ -190,8 +220,8 @@ def related_html(root, keys):
         kind, title, desc = CARD[k]
         cards.append(
             f'      <a class="card rel-card" href="{root}{URL[k]}">'
-            f'<span class="rel-k">{kind}</span><span class="rel-t">{title}</span>'
-            f'<span class="rel-d">{desc}</span><span class="rel-a" aria-hidden="true">{ARR}</span></a>')
+            f'<span class="rel-k">{kind}</span><span class="rel-t">{tp(title)}</span>'
+            f'<span class="rel-d">{tp(desc)}</span><span class="rel-a" aria-hidden="true">{ARR}</span></a>')
     return (
         '\n<!-- ============ СМОТРИТЕ ТАКЖЕ (перелинковка) ============ -->\n'
         '<section class="s s-rel" id="smotrite-takzhe">\n'
@@ -208,7 +238,7 @@ def related_html(root, keys):
 
 
 def more_html(label, links):
-    a = ''.join(f'<a href="{href}">{text}{ARR}</a>' for href, text in links)
+    a = ''.join(f'<a href="{href}"><span>{tp(text)}</span>{ARR}</a>' for href, text in links)
     return f'\n    <nav class="more" aria-label="{label}" data-fade><span class="more-k">{label}</span>{a}</nav>'
 
 
@@ -264,7 +294,7 @@ def mark_section(ed, sec):
     for n in nodes:
         if n.has_class('eyebrow') and not in_group(n):
             ed.add_attr(n, 'data-eyebrow')
-        if n.tag == 'h2' and not n.has_class('p-sec-h') and not n.closest(lambda a: a.has_class('qa', 'card', 'form')):
+        if n.tag == 'h2' and not n.has_class('p-sec-h', 'sr-only') and not n.closest(lambda a: a.has_class('qa', 'card', 'form')):
             ed.add_attr(n, 'data-split')
     # группы карточек
     for n in nodes:
@@ -327,6 +357,15 @@ def fix_head(s, root):
                                   f'<script src="{root}vendor/ScrollTrigger.min.js" defer></script>\n'
                                   f'<script src="{root}vendor/lenis.min.js" defer></script>\n' + m.group(1)), s, count=1)
         assert n == 1, 'нет подключения app.min.js'
+    return use_loader(s)
+
+
+def use_loader(s):
+    """defer-подключение GSAP, ScrollTrigger, Lenis и app.min.js → загрузчик после первой отрисовки (LOADER)"""
+    if 'setTimeout(go, 0)' not in s:
+        s, n = SCRIPTS_RE.subn(lambda m: LOADER.replace('{root}', m.group(1)).replace('{version}', VERSION), s, count=1)
+        assert n == 1, 'нет подключения скриптов анимаций'
+    s = re.sub(r"('(?:\.\./)*app\.min\.js\?v=)[^']*'", rf"\g<1>{VERSION}'", s)
     return s
 
 
@@ -378,10 +417,16 @@ def page_specific(rel, s):
     if rel == 'materialy/index.html':
         # в разделе были структурированные данные страницы программы (TechArticle, документы, FAQ) — ставим данные раздела
         s = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: MAT_LD, s, count=1, flags=re.S)
+        # раздел без фото на первом экране: предзагрузка фото страницы программы (скопирована вместе с шаблоном) только мешала
+        s = re.sub(r'\n<link rel="preload" as="image"[^>]*programma-hero[^>]*>', '', s)
         # пометки для превью убираем; число зон — как на странице программы (план мероприятий по 6 зонам A_1…F_6)
         s = re.sub(r' · Опубликован в[\s\xa0]превью</span>', '</span>', s)
         s = re.sub(r'Материал 04 · В[\s\xa0]плане</span>', 'Материал 04 · Готовится</span>', s)
         s = re.sub(r'образец таблицы мероприятий по([\s\xa0])5([\s\xa0])зонам', r'образец таблицы мероприятий по\g<1>6\g<2>зонам', s)
+        # карточки материалов — H3 сразу после H1; невидимый H2 восстанавливает порядок заголовков (доступность, Lighthouse)
+        if '<h2 class="sr-only">' not in s:
+            s, n = re.subn(r'\n(    <div class="p-secs" style="margin-top:36px")', '\n    <h2 class="sr-only">Материалы и образцы документов</h2>\n\\1', s, count=1)
+            assert n == 1, 'materialy: нет списка материалов'
     if rel == 'materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html':
         if 'class="cta-bg' not in s:
             s = s.replace('<section class="cta" id="zayavka">\n', '<section class="cta" id="zayavka"><div class="cta-bg f-lazy" aria-hidden="true"></div>\n', 1)
@@ -452,6 +497,7 @@ def process_home():
     s, n = HEAD_SCRIPT_RE.subn(lambda m: HEAD_SCRIPT, s, count=1)
     assert n == 1
     s = re.sub(r'(src="app\.min\.js)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
+    s = use_loader(s)
     # якоря карточек отраслей
     ed = htmldom.Editor(s)
     sec = next(n for n in ed.root.iter() if n.tag == 'section' and n.attrs.get('id') == 'otrasli')

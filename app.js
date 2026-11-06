@@ -7,7 +7,9 @@
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var hasGSAP = !!(window.gsap && window.ScrollTrigger);
-  var anim = hasGSAP && !reduce;
+  /* скрипты подключаются после первой отрисовки; если они пришли позже страховки (4 с, класс anim-fail), страница уже
+     показана целиком — анимации не запускаем, чтобы не прятать видимый текст повторно */
+  var anim = hasGSAP && !reduce && !html.classList.contains('anim-fail');
   if (!anim) html.classList.add('anim-fail');
   html.classList.add('anim-ready');
   if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
@@ -132,15 +134,17 @@
       }
       fab.style.translate = lift > 0 ? '0 ' + (-lift) + 'px' : '';
     };
-    var findUis = new MutationObserver(function () {
+    var hookUis = function () {
       var el = $('.comagic-c-buttons');
-      if (!el) return;
+      if (!el || uis) return;
       findUis.disconnect();
       uis = el;
       new MutationObserver(fitFab).observe(el, { attributes: true, attributeFilter: ['class', 'style'] });
       fitFab(); setTimeout(fitFab, 700);
-    });
+    };
+    var findUis = new MutationObserver(hookUis);
     findUis.observe(document.body, { childList: true, subtree: true });
+    hookUis(); /* кнопка UIS могла появиться раньше, чем загрузился этот скрипт */
     addEventListener('resize', fitFab);
   }
 
@@ -435,6 +439,11 @@
   /* вход первого экрана */
   var heroLines = $$('.hero h1 .ln>span');
   if (heroLines.length) gsap.set(heroLines, { y: 0, yPercent: 110, rotation: 3 });
+  /* фото первого экрана — сразу в начальном масштабе входа (до скрипта его держит style.css), чтобы под уходящей
+     заставкой оно не дёргалось из 1 в 1.12 */
+  var heroImgs = dHero ? $$('.d-hero-img, .f-hero-img', dHero) : [];
+  if (heroImgs.length) gsap.set(heroImgs, { scale: 1.12 });
+  else if (hero && $('.hero-bg')) gsap.set('.hero-bg,.hero-lit', { scale: 1.18 });
   function heroIn() {
     if (dHero) {
       /* внутренние страницы: тот же почерк, что у главной — строки заголовка поднимаются из-под маски,

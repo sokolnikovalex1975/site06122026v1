@@ -90,6 +90,11 @@ def mm_group(key, label, items, opened):
             f'<div class="mm-sub" id="mm-{key}"><div>{items}</div></div></div>')
 
 
+def one(t):
+    """Подпись с вложенным тегом (<span class="nw">) — одним элементом: пункты списков — flex, иначе слова разъедутся."""
+    return f'<span>{t}</span>' if '<' in t else t
+
+
 def build(root, cur, cta_mobile):
     home = root == ''
     in_usl = cur in (DERAT, 'dezinsektsiya')
@@ -100,7 +105,7 @@ def build(root, cur, cta_mobile):
     usl_items += anchor(root, 'podhod', '<span>Пест-контроль по системе IPM</span>' + ARR, 'nav-dd-all')
     ind_items = ''.join(page_link(root, cur, s, t + ARR) for s, t in INDUSTRIES)
     ind_items += anchor(root, 'otrasli', 'Все отрасли' + ARR, 'nav-dd-all')
-    mat_items = ''.join(page_link(root, cur, s, t + ARR) for s, t in MATERIALS)
+    mat_items = ''.join(page_link(root, cur, s, one(t) + ARR) for s, t in MATERIALS)
     mat_items += page_link(root, cur, 'materialy', 'Все материалы' + ARR, 'nav-dd-all')
     spy = ' data-spy="#otrasli"' if home else ''
     nav = (
@@ -114,7 +119,7 @@ def build(root, cur, cta_mobile):
     # мобильное меню
     sub_usl = ''.join(page_link(root, cur, s, t) for s, t in USLUGI) + anchor(root, 'podhod', '<span class="nw">Пест-контроль</span> по системе IPM')
     sub_ind = ''.join(page_link(root, cur, s, t) for s, t in INDUSTRIES) + anchor(root, 'otrasli', 'Все отрасли')
-    sub_mat = ''.join(page_link(root, cur, s, t) for s, t in MATERIALS) + page_link(root, cur, 'materialy', 'Все материалы')
+    sub_mat = ''.join(page_link(root, cur, s, one(t)) for s, t in MATERIALS) + page_link(root, cur, 'materialy', 'Все материалы')
     dog_text = 'Договор <small>на дератизацию и дезинсекцию</small>'
     mm = (
         '<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">\n  '

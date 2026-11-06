@@ -99,7 +99,7 @@ html:not(.js) .intro,html.anim-fail .intro,html.no-intro .intro{display:none}
 .logo-txt{font-size:0}
 .logo-name{font-weight:600;font-size:clamp(17px,1.45vw,28px);letter-spacing:-.02em}
 .logo-sub{font-weight:500;font-size:clamp(10px,.75vw,14px);color:var(--acc);text-transform:uppercase;letter-spacing:.06em;margin-left:6px}
-.nav{display:flex;align-items:center;gap:clamp(16px,1.9vw,38px)}
+.nav{display:flex;align-items:center;gap:clamp(14px,calc(2.9vw - 22px),38px)} /* с тремя списками (Услуги, Отрасли, Материалы) шапка помещается в 1281–1700 px */
 .nav>a,.nav-dd-btn{font-size:clamp(14px,1.05vw,20px);color:var(--t2);transition:color .25s;position:relative;padding:10px 0;white-space:nowrap}
 .nav>a::after,.nav-dd-btn::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--acc);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
 .nav>a:hover,.nav>a.active,.nav-dd-btn.active,.nav-dd.open .nav-dd-btn{color:#fff}
@@ -677,6 +677,11 @@ html .d-hero h1 em,html .p-hero h1 em,html .f-hero h1 em{font-style:italic;font-
 .js:not(.anim-fail) .p-hero .p-stack>a{opacity:0}
 @media (max-width:860px){
   .js:not(.anim-fail) .d-hero h1 .ln>span,.js:not(.anim-fail) .p-hero h1 .ln>span{transform:none;opacity:0}
+}
+/* скрипты анимаций грузятся после первой отрисовки: до их запуска фото первого экрана уже стоит в начальном масштабе входа */
+@media (prefers-reduced-motion:no-preference){
+  .js:not(.anim-ready):not(.anim-fail) .d-hero-img,.js:not(.anim-ready):not(.anim-fail) .f-hero-img{transform:scale(1.12)}
+  .js:not(.anim-ready):not(.anim-fail) .hero-bg,.js:not(.anim-ready):not(.anim-fail) .hero-lit{transform:scale(1.18)}
 }
 @media (prefers-reduced-motion:reduce){
   .js .d-hero h1 .ln>span,.js .p-hero h1 .ln>span{transform:none!important;opacity:1!important}
