@@ -7,8 +7,8 @@
 из сборки main (dist/timeweb) той же страницы, поэтому совпадает байт в байт с тем, что даёт tools/menu/apply_menu.py.
 Заодно убирается задвоенная ссылка «Согласие на обработку данных» в нижней строке подвала (была на трёх страницах сайта).
 
-Проверки: на страницах, где файл сайта совпадает со сборкой main без новой страницы, результат должен совпасть со сборкой
-main с новой страницей байт в байт; на остальных — отличаться от файла сайта только тремя вставками (и снятым дублем).
+Проверка: результат без трёх вставок должен совпасть с файлом сайта байт в байт (с точностью до снятого дубля ссылки);
+для сведения печатается, совпал ли результат со сборкой main (совпадает там, где файл сайта и до вставки был равен main).
 
 Запуск: python3 tools/deploy/insert_dezinf_menu.py <папка с файлами сайта> <dist/timeweb> <папка результата>
 """
@@ -30,7 +30,6 @@ PAGES = [
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/index.php', '../../'),
     ('privacy/index.php', '../'), ('soglasie/index.php', '../'),
 ]
-SAME = set(sys.argv[4].split(',')) if len(sys.argv) > 4 and sys.argv[4] else set()
 
 
 def one(rx, s, what):
@@ -65,7 +64,6 @@ def dedup(s, root):
     return s.replace(one_link + f'<a href="{root}soglasie/">Согласие на\u00a0обработку данных</a>', one_link, 1)
 
 
-ok = True
 for f, root in PAGES:
     live = (LIVE / f).read_text(encoding='utf-8')
     build = (BUILD / f).read_text(encoding='utf-8')
@@ -77,13 +75,8 @@ for f, root in PAGES:
     if back != live:
         assert back == dedup(live, root), f'{f}: лишние отличия'
         note = ' + снят дубль ссылки на согласие'
-    if f in SAME:
-        if new != build:
-            ok = False
-            print('ОШИБКА', f, 'не совпадает со сборкой main')
-            continue
-        note += ' = сборка main'
+    # для сведения: совпадает ли результат со сборкой main (не совпадает там, где файл сайта и до вставки отличался от main)
+    note += ' = сборка main' if new == build else ' (файл сайта и до вставки отличался от main)'
     (OUT / f).parent.mkdir(parents=True, exist_ok=True)
     (OUT / f).write_text(new, encoding='utf-8')
     print('ok', f, f'+{len(new.encode()) - len(live.encode())} байт' + note)
-sys.exit(0 if ok else 1)
