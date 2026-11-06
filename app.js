@@ -108,9 +108,8 @@
     }
     lastY = y;
     var max = document.documentElement.scrollHeight - innerHeight;
-    prog.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
-    var f = cta.getBoundingClientRect();
-    mbar.classList.toggle('show', y > innerHeight * 0.6 && f.top > innerHeight * 0.5);
+    if (prog) prog.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+    if (mbar) mbar.classList.toggle('show', y > innerHeight * 0.6 && (!cta || cta.getBoundingClientRect().top > innerHeight * 0.5));
   };
   addEventListener('scroll', function () { onScroll(scrollY); }, { passive: true });
   onScroll(scrollY);
@@ -171,6 +170,7 @@
 
   /* ---------- форма ---------- */
   var form = $('#form'), ph = $('#phone'), submitBtn = $('#submitBtn');
+  if (form && ph && submitBtn) {
   $$('.field').forEach(function (f, i) {
     var err = $('.ferr', f), inp = $('input,select,textarea', f);
     if (err && inp) { err.id = 'err-' + i; inp.setAttribute('aria-describedby', err.id); }
@@ -248,6 +248,7 @@
         alert(err && err.userMessage ? err.userMessage : FAIL_MSG);
       });
   });
+  }
 
   /* ---------- фоновые картинки блоков: грузим при подходе к блоку ---------- */
   var lazyBgs = $$('.pests-bg,.cta-bg');
@@ -367,7 +368,8 @@
 
   /* ---------- первый экран: «фонарь» инспектора, параллакс, наклон панели ---------- */
   var hero = $('#hero'), media = $('#heroMedia'), lit = $('#heroLit'), panel = $('#panel');
-  var dHero = $('.d-hero'), dMedia = dHero ? $('.d-hero-media', dHero) : null;
+  /* первый экран внутренних страниц: .d-hero (услуги, договор, материалы), .p-hero (раздел и журнал), .f-hero (отрасль) */
+  var dHero = $('.d-hero') || $('.p-hero') || $('.f-hero'), dMedia = dHero ? $('.d-hero-media, .hero-media', dHero) : null;
   var sx = 0.7, sy = 0.42, tx = 0.7, ty = 0.42, lastMove = -1e9, heroVisible = true, litOn = false;
   if (lit && media && hero) {
     lit.style.setProperty('--sr', mobile ? '190px' : 'clamp(240px, 21vw, 400px)');
@@ -435,17 +437,25 @@
   if (heroLines.length) gsap.set(heroLines, { y: 0, yPercent: 110, rotation: 3 });
   function heroIn() {
     if (dHero) {
+      /* внутренние страницы: тот же почерк, что у главной — строки заголовка поднимаются из-под маски,
+         затем по очереди проявляются надзаголовок, отметки, текст и кнопки (элементы с data-h) */
       var dEyebrow = $('.eyebrow', dHero);
       if (dEyebrow) dEyebrow.classList.add('in');
-      var dLines = $$('.d-hero h1 .ln>span');
+      /* строка под маской (блочная) поднимается снизу; строка, которая на телефоне течёт в тексте (inline), — проявляется */
+      var dLines = $$('h1 .ln>span', dHero);
       var tlD = gsap.timeline({ defaults: { ease: 'expo.out' } });
-      tlD.fromTo('.d-hero-img', { scale: 1.12 }, { scale: 1, duration: 2.2, clearProps: 'transform' }, 0)
-        .fromTo('.d-crumbs', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.9, clearProps: 'transform' }, 0.05)
-        .fromTo(dLines, { y: 0, yPercent: 110, rotation: 3 }, { yPercent: 0, rotation: 0, duration: 1.3, stagger: 0.1, clearProps: 'transform' }, 0.12)
-        .fromTo('.hero-vbar', { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.95, clearProps: 'transform' }, 0.28)
-        .fromTo('.d-hero .d-ticks li', { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: 0.85, stagger: 0.07, clearProps: 'transform' }, 0.35)
-        .fromTo('.d-hero .sub', fx({ opacity: 0, y: 18 }, 6), fx({ opacity: 1, y: 0, duration: 1, clearProps: 'filter,transform' }, 0), 0.42)
-        .fromTo('.d-hero .d-btns', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 1, clearProps: 'transform' }, 0.48);
+      var dImg = $$('.d-hero-img, .f-hero-img', dHero);
+      if (dImg.length) tlD.fromTo(dImg, { scale: 1.12 }, { scale: 1, duration: 2.2, clearProps: 'transform' }, 0);
+      dLines.forEach(function (l, i) {
+        var at = 0.12 + i * 0.1;
+        /* без clearProps: начальное положение строк задано в style.css, итоговое остаётся во встроенном стиле */
+        if (getComputedStyle(l.parentNode).display !== 'inline') tlD.fromTo(l, { opacity: 1, y: 0, yPercent: 110, rotation: 3 }, { yPercent: 0, rotation: 0, duration: 1.3 }, at);
+        else tlD.fromTo(l, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 1.1 }, at);
+      });
+      var dH = $$('[data-h]', dHero);
+      if (dH.length) tlD.fromTo(dH, fx({ opacity: 0, y: 18 }, 6), fx({ opacity: 1, y: 0, duration: 1, stagger: 0.06, clearProps: 'filter,transform' }, 0), 0.26);
+      var dStack = $$('.p-stack > a', dHero);
+      if (dStack.length) tlD.fromTo(dStack, fx({ opacity: 0, y: 70 }, 8), fx({ opacity: 1, y: 0, duration: 1.5, stagger: 0.14, clearProps: 'filter,transform' }, 0), 0.3);
       return;
     }
     litOn = true;
@@ -463,7 +473,7 @@
 
   /* ---------- заставка ---------- */
   var intro = $('#intro');
-  if (!intro || location.hash) {
+  if (!intro || location.hash || html.classList.contains('no-intro')) {
     if (intro) intro.remove();
     heroIn();
   } else {
@@ -503,7 +513,9 @@
 
   /* ---------- надзаголовки, заголовки, подзаголовки ---------- */
   defer(function () {
-  $$('[data-eyebrow]').forEach(function (el) {
+  /* все надзаголовки страницы (кроме первого экрана — он входит вместе с заголовком) */
+  $$('[data-eyebrow], .eyebrow').forEach(function (el) {
+    if (el.classList.contains('in') || (dHero && dHero.contains(el)) || (hero && !dHero && hero.contains(el) && !el.hasAttribute('data-eyebrow'))) return;
     ScrollTrigger.create({ trigger: el, start: 'top 90%', once: true, onEnter: function () { el.classList.add('in'); } });
   });
   $$('[data-split]').forEach(function (h) {
@@ -515,6 +527,8 @@
   });
   });
   defer(function () {
+  /* панели самопроверки и другие .panel вне первого экрана главной проявляются так же, как блоки data-fade */
+  $$('.panel').forEach(function (el) { if (el.id !== 'panel' && !el.hasAttribute('data-fade') && !el.closest('[data-group]')) el.setAttribute('data-fade', ''); });
   $$('[data-fade]').forEach(function (el) {
     gsap.fromTo(el, fx({ opacity: 0, y: 34 }, 8), fx({ opacity: 1, y: 0, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true } }, 0));
   });
@@ -542,7 +556,8 @@
       onceST(card, function () {
         var d = (i % 2) * 0.1;
         gsap.fromTo(card, { opacity: 0, y: 60, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 1.3, ease: 'expo.out', delay: d });
-        gsap.fromTo($('.pest-img img', card), { scale: 1.45, filter: 'grayscale(1) brightness(.6)' }, { scale: 1, filter: 'grayscale(0) brightness(1)', duration: 1.6, ease: 'expo.out', delay: d + 0.1, clearProps: 'filter' });
+        var pImg = $('.pest-img img', card);
+        if (pImg) gsap.fromTo(pImg, { scale: 1.45, filter: 'grayscale(1) brightness(.6)' }, { scale: 1, filter: 'grayscale(0) brightness(1)', duration: 1.6, ease: 'expo.out', delay: d + 0.1, clearProps: 'filter' });
         var b = $('.bar-f', card);
         if (b) gsap.fromTo(b, { width: '0%' }, { width: b.dataset.w + '%', duration: 1.8, ease: 'expo.out', delay: d + 0.35 });
         setTimeout(function () { card.classList.add('scanned'); }, (d + 0.3) * 1000);
@@ -604,6 +619,35 @@
     });
   });
 
+  /* универсальная группа карточек внутренних страниц: подъём с задержкой по колонкам; фото в карточке раскрывается шторкой */
+  group('cards').forEach(function (g) {
+    var items = $$(':scope>*', g), cols = Math.max(1, Math.round(g.offsetWidth / Math.max(1, items[0] ? items[0].offsetWidth : 1)));
+    items.forEach(function (card, i) {
+      var box = $('.ind-img, .d-obj-img, .d-kind-img, .d-swap-img, .pm-img, [data-reveal]', card), pic = box ? $('img', box) : null;
+      onceST(card, function () {
+        var d = (i % cols) * 0.1;
+        gsap.fromTo(card, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.3, ease: 'expo.out', delay: d, clearProps: 'transform' });
+        if (box) gsap.fromTo(box, { clipPath: 'inset(0% 0% 100% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'expo.inOut', delay: d + 0.05 });
+        if (pic) gsap.fromTo(pic, { scale: 1.3 }, { scale: 1, duration: 1.9, ease: 'expo.out', delay: d + 0.05, clearProps: 'transform' });
+      }, 'top 90%');
+    });
+  });
+  /* строки сравнений и таблиц: выезжают слева по очереди */
+  group('rows').forEach(function (g) {
+    onceST(g, function () {
+      gsap.fromTo($$(':scope>*', g), { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 1, ease: 'expo.out', stagger: 0.06, clearProps: 'transform' });
+    }, 'top 88%');
+  });
+  /* фото отраслей вне блока «Отрасли» (карточки на внутренних страницах) — та же шторка, что и на главной */
+  $$('.ind-img').forEach(function (box) {
+    if (box.closest('[data-group="inds"]') || box.closest('[data-group="cards"]')) return;
+    var pic = $('img', box);
+    onceST(box, function () {
+      gsap.fromTo(box, { clipPath: 'inset(0% 0% 100% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.5, ease: 'expo.inOut' });
+      if (pic) gsap.fromTo(pic, { scale: 1.3 }, { scale: 1, duration: 2, ease: 'expo.out' });
+    }, 'top 92%');
+  });
+
   group('faq').forEach(function (g) {
     var items = $$(':scope>*', g);
     onceST(g, function () {
@@ -618,7 +662,7 @@
   });
 
   var formEl = $('[data-form]');
-  onceST(formEl, function () {
+  if (formEl) onceST(formEl, function () {
     gsap.fromTo(formEl, fx({ opacity: 0, y: 70, rotationY: desk ? -10 : 0, transformPerspective: 1400 }, 12),
       fx({ opacity: 1, y: 0, rotationY: 0, duration: 1.6, ease: 'expo.out', clearProps: 'filter' }, 0));
     gsap.fromTo($$('.field', formEl), { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out', stagger: 0.06, delay: 0.35, clearProps: 'transform' });
@@ -699,7 +743,7 @@
   }
 
   /* ---------- подвал ---------- */
-  gsap.fromTo('.ft>div', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', stagger: 0.08, scrollTrigger: { trigger: 'footer', start: 'top 92%', once: true } });
+  if ($('.ft>div')) gsap.fromTo('.ft>div', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', stagger: 0.08, scrollTrigger: { trigger: 'footer', start: 'top 92%', once: true } });
 
   /* пересчёт после загрузки шрифтов и изображений (если они уже загрузились — сразу) */
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { ScrollTrigger.refresh(); });

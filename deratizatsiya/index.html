@@ -25,11 +25,16 @@
 <link rel="preload" as="image" media="(min-width:861px)" imagesrcset="../img/derat-hero-v1-1440.webp 1440w, ../img/derat-hero-v1.webp 1920w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" as="image" media="(max-width:860px)" imagesrcset="../img/derat-hero-v1-mob-760.webp 760w, ../img/derat-hero-v1-mob.webp 1024w" imagesizes="100vw" fetchpriority="high">
 <script>
-  document.documentElement.classList.add('js');
-  if (location.hash) document.documentElement.classList.add('no-intro');
-  setTimeout(function(){ if(!document.documentElement.classList.contains('anim-ready')) document.documentElement.classList.add('anim-fail'); }, 4000);
+  /* начальные состояния анимаций — только при работающем JS; страховка — через 4 с всё показывается.
+     Заставка — один раз за посещение: при переходе по ссылке с якорем и между страницами сайта её нет */
+  (function (d) {
+    d.classList.add('js');
+    try { if (location.hash || sessionStorage.getItem('pc-intro')) d.classList.add('no-intro'); else sessionStorage.setItem('pc-intro', '1'); }
+    catch (e) { if (location.hash) d.classList.add('no-intro'); }
+    setTimeout(function () { if (!d.classList.contains('anim-ready')) d.classList.add('anim-fail'); }, 4000);
+  })(document.documentElement);
 </script>
-<link rel="stylesheet" href="../style.css?v=20261106b">
+<link rel="stylesheet" href="../style.css?v=20261106s1">
 <style>
 html{scroll-behavior:auto}
 .d-page .s{padding:clamp(64px,7vw,128px) 0;border-top:1px solid var(--line)}
@@ -54,11 +59,6 @@ html{scroll-behavior:auto}
 .d-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .d-hero .btn-lg{height:54px;padding:0 22px;font-size:15.5px}
 
-/* Переключатель 4 вариантов Hero-фото */
-.hero-vbar{margin-top:20px;display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;padding:6px 10px;border-radius:12px;background:rgba(9,9,11,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14)}
-.hero-vbtn{appearance:none;border:1px solid transparent;background:rgba(255,255,255,.04);color:var(--t2);font-family:inherit;font-size:12px;padding:5px 10px;border-radius:8px;cursor:pointer;transition:background .2s,color .2s,border-color .2s;white-space:nowrap}
-.hero-vbtn:hover{color:#fff;background:rgba(255,255,255,.09)}
-.hero-vbtn.on{background:rgba(124,134,255,.22);border-color:var(--acc);color:#fff;font-weight:500}
 
 /* Блок самопроверки */
 .f-checks{position:relative;padding:clamp(36px,4vw,68px) 0 clamp(56px,6vw,110px)}
@@ -167,7 +167,6 @@ main{overflow-x:clip}
   .d-hero-media{order:2;position:relative;inset:auto;width:calc(100% + 40px);margin:14px -20px 0;aspect-ratio:16/9}
   .d-hero-media::before{background:linear-gradient(180deg,#000 0,rgba(0,0,0,0) 16%),linear-gradient(0deg,#000 0,rgba(0,0,0,0) 20%)}
   .d-hero-img{object-position:76% 50%}
-  .hero-vbar{order:3;margin-top:12px;width:100%;justify-content:flex-start}
   .d-btns{order:4;margin-top:14px}
   .d-btns .btn{width:100%}
   .d-hero .d-ticks{order:5;margin:16px 0 0;gap:8px;font-size:14px}
@@ -301,7 +300,7 @@ main{overflow-x:clip}
       <span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span>
     </a>
     <nav class="nav" aria-label="Основное меню">
-      <div class="nav-dd"><button class="nav-dd-btn active" type="button" aria-expanded="false" aria-controls="nav-uslugi">Услуги<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-uslugi"><a href="./" aria-current="page">Дератизация для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dezinsektsiya/">Дезинсекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dezinfektsiya/">Дезинфекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#podhod" class="nav-dd-all"><span>Пест-контроль по системе IPM</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-otrasli">Отрасли<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-otrasli"><a href="../pishchevoe-proizvodstvo/">Пищевые производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../restorany-i-kafe/">Рестораны и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../sklady-i-logistika/">Склады и логистика<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../gostinitsy/">Гостиницы и отели<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasli" class="nav-dd-all">Все отрасли<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор</a><a href="../#podhod">Метод IPM</a><a href="../#usloviya">Цена</a><a href="../materialy/">Материалы</a>
+      <div class="nav-dd"><button class="nav-dd-btn active" type="button" aria-expanded="false" aria-controls="nav-uslugi">Услуги<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-uslugi"><a href="./" aria-current="page">Дератизация для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dezinsektsiya/">Дезинсекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#podhod" class="nav-dd-all"><span>Пест-контроль по системе IPM</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-otrasli">Отрасли<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-otrasli"><a href="../pishchevoe-proizvodstvo/">Пищевые производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasl-seti">Магазины и торговые сети<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasl-restorany">Рестораны и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasl-sklady">Склады и логистика<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasl-farma">Фармацевтические производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasl-gostinitsy">Гостиницы и отели<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasli" class="nav-dd-all">Все отрасли<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор</a><a href="../#podhod">Метод IPM</a><a href="../#usloviya">Цена</a><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-materialy">Материалы<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-materialy"><a href="../materialy/programma-pest-kontrolya/">Программа <span class="nw">пест-контроля</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/zhurnal-pest-kontrolya/">Журнал <span class="nw">пест-контроля</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span class="nw">Пест-менеджмент</span> или разовая обработка<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/" class="nav-dd-all">Все материалы<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
     </nav>
     <div class="hdr-right">
       <a class="phone" href="tel:+74951043570" aria-label="Позвонить: +7 (495) 104-35-70"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></i><span>+7 (495) 104-35-70</span></a>
@@ -315,7 +314,7 @@ main{overflow-x:clip}
   </div>
 </header>
 <nav class="mmenu" id="mmenu" aria-label="Мобильное меню">
-  <div class="mm-group open" data-open><button class="mm-toggle" type="button" aria-expanded="true" aria-controls="mm-uslugi">Услуги<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-uslugi"><div><a href="./" aria-current="page">Дератизация для организаций</a><a href="../dezinsektsiya/">Дезинсекция для организаций</a><a href="../dezinfektsiya/">Дезинфекция для организаций</a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание</a><a href="../#podhod"><span class="nw">Пест-контроль</span> по системе IPM</a></div></div></div><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-otrasli">Отрасли<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-otrasli"><div><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети</a><a href="../restorany-i-kafe/">Рестораны и кафе</a><a href="../sklady-i-logistika/">Склады и логистика</a><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a><a href="../gostinitsy/">Гостиницы и отели</a><a href="../#otrasli">Все отрасли</a></div></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор <small>на дератизацию и дезинсекцию</small></a><a href="../#podhod">Метод IPM</a><a href="../#usloviya">Цена</a><a href="../materialy/">Материалы</a>
+  <div class="mm-group open" data-open><button class="mm-toggle" type="button" aria-expanded="true" aria-controls="mm-uslugi">Услуги<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-uslugi"><div><a href="./" aria-current="page">Дератизация для организаций</a><a href="../dezinsektsiya/">Дезинсекция для организаций</a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание</a><a href="../#podhod"><span class="nw">Пест-контроль</span> по системе IPM</a></div></div></div><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-otrasli">Отрасли<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-otrasli"><div><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a><a href="../#otrasl-seti">Магазины и торговые сети</a><a href="../#otrasl-restorany">Рестораны и кафе</a><a href="../#otrasl-sklady">Склады и логистика</a><a href="../#otrasl-farma">Фармацевтические производства</a><a href="../#otrasl-gostinitsy">Гостиницы и отели</a><a href="../#otrasli">Все отрасли</a></div></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор <small>на дератизацию и дезинсекцию</small></a><a href="../#podhod">Метод IPM</a><a href="../#usloviya">Цена</a><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-materialy">Материалы<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-materialy"><div><a href="../materialy/programma-pest-kontrolya/">Программа <span class="nw">пест-контроля</span></a><a href="../materialy/zhurnal-pest-kontrolya/">Журнал <span class="nw">пест-контроля</span></a><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span class="nw">Пест-менеджмент</span> или разовая обработка</a><a href="../materialy/">Все материалы</a></div></div></div>
   <a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Заказать бесплатное обследование</span></a>
 </nav>
 
@@ -326,8 +325,8 @@ main{overflow-x:clip}
 <section class="d-hero" id="hero">
   <div class="wrap">
     <div class="d-hero-copy">
-      <nav class="d-crumbs" aria-label="Навигационная цепочка">
-        <a href="../">Главная</a><span aria-hidden="true">→</span><a href="./">Услуги</a><span aria-hidden="true">→</span><span aria-current="page">Дератизация для организаций</span>
+      <nav class="d-crumbs" aria-label="Навигационная цепочка" data-h>
+        <a href="../">Главная</a><span aria-hidden="true">→</span><span aria-current="page">Дератизация для организаций</span>
       </nav>
       <div class="eyebrow" data-eyebrow>Система IPM · Только для юридических лиц</div>
       <h1><span class="ln d-ln1"><span>Дератизация</span></span> <span class="ln d-ln2"><span><em>для&nbsp;организаций</em></span></span></h1>
@@ -339,20 +338,13 @@ main{overflow-x:clip}
         </picture>
       </div>
 
-      <div class="hero-vbar" role="group" aria-label="Точки контроля на объекте">
-        <button type="button" class="hero-vbtn on" data-v="1" data-alt="Специалист проверяет напольную станцию КИК № 12 у погрузочных ворот склада">Ворота склада</button>
-        <button type="button" class="hero-vbtn" data-v="2" data-alt="Специалист осматривает наружный контейнер КИК № 04 по периметру здания со схемой">Внешний периметр</button>
-        <button type="button" class="hero-vbtn" data-v="3" data-alt="Специалист проверяет механическую ловушку без яда № 08 внутри склада">Ловушка в складе</button>
-        <button type="button" class="hero-vbtn" data-v="4" data-alt="Инженер пест-контроля показывает точку контроля № 01 и схему представителю объекта">Обход со схемой</button>
-      </div>
-
       <ul class="d-ticks">
-        <li>Три контура защиты: улица и площадка ТКО, ворота и рампы, внутренние зоны</li>
-        <li>В цехах и на складах продукции — ловушки без токсичных приманок</li>
-        <li>Схема точек, журнал и акты для Роспотребнадзора, ХАССП и торговых сетей</li>
+        <li data-h>Три контура защиты: улица и площадка ТКО, ворота и рампы, внутренние зоны</li>
+        <li data-h>В цехах и на складах продукции — ловушки без токсичных приманок</li>
+        <li data-h>Схема точек, журнал и акты для Роспотребнадзора, ХАССП и торговых сетей</li>
       </ul>
-      <p class="sub">Защищаем предприятия Москвы и области от крыс и мышей: перекрываем пути захода, ставим пронумерованные станции и ведём ежемесячный учёт. Выезд и расчёт схемы — бесплатно.</p>
-      <div class="d-btns">
+      <p class="sub" data-h>Защищаем предприятия Москвы и области от крыс и мышей: перекрываем пути захода, ставим пронумерованные станции и ведём ежемесячный учёт. Выезд и расчёт схемы — бесплатно.</p>
+      <div class="d-btns" data-h>
         <a href="#zayavka" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Заказать бесплатное обследование</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="tel:+74951043570" class="btn btn-o btn-lg d-tel-btn" data-magnet><span class="btn-t">+7 (495) 104-35-70</span></a>
       </div>
@@ -500,7 +492,7 @@ main{overflow-x:clip}
           <span><i class="lg-tr"></i>Контур 3: ловушки без яда внутри помещений</span>
         </figcaption>
       </figure>
-      <ol class="f-zlist">
+      <ol class="f-zlist" data-group="steps">
         <li data-z="1" tabindex="0">
           <b>Внешний периметр и площадка ТКО</b>
           <span>Вдоль забора, у контейнерной площадки, хоздвора и ливневых колодцев крепим закрытые контейнеры КИК с влагостойкими блоками и тампонируем жилые норы.</span>
@@ -930,6 +922,23 @@ main{overflow-x:clip}
   </div>
 </section>
 
+
+<!-- ============ СМОТРИТЕ ТАКЖЕ (перелинковка) ============ -->
+<section class="s s-rel" id="smotrite-takzhe">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Смотрите также</div>
+      <h2 data-split>Связанные услуги <em>и материалы</em></h2>
+    </div>
+    <div class="rel-grid" data-group="cards">
+      <a class="card rel-card" href="../dezinsektsiya/"><span class="rel-k">Услуга</span><span class="rel-t">Дезинсекция для организаций</span><span class="rel-d">Контроль насекомых по IPM без остановки работы, ротация средств, журнал и акты по СанПиН.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../dogovor-deratizatsiya-dezinsektsiya/"><span class="rel-k">Обслуживание</span><span class="rel-t">Договор на дератизацию и дезинсекцию</span><span class="rel-d">Одно или оба направления в одном договоре: график визитов, акт после выезда, цена до подписания.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../materialy/programma-pest-kontrolya/"><span class="rel-k">Материал</span><span class="rel-t">Программа пест-контроля</span><span class="rel-d">Образец в PDF и шаблон Word: 7 разделов, оценка пест-риска по зонам и план мероприятий.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../materialy/zhurnal-pest-kontrolya/"><span class="rel-k">Материал</span><span class="rel-t">Журнал пест-контроля</span><span class="rel-d">Образец заполнения и шаблон в PDF: 9 разделов на 10 листах — точки контроля, ловушки, предписания.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 12. ВОПРОСЫ О ДЕРАТИЗАЦИИ ПРЕДПРИЯТИЙ (FAQ) ============ -->
 <section class="s" id="voprosy">
   <div class="wrap">
@@ -1032,14 +1041,14 @@ main{overflow-x:clip}
         <a href="../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span><span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span></a>
         <p class="d"><span class="nw">Пест-контроль</span> и <span class="nw">пест-менеджмент</span> по системе IPM для бизнеса в Москве и Московской области: бесплатный аудит, оценка <span class="nw">пест-риска</span>, мониторинг вредителей и отчётность.</p>
       </div>
-      <div><h4>Отрасли</h4><ul><li><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a></li><li><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети</a></li><li><a href="../restorany-i-kafe/">Рестораны и кафе</a></li><li><a href="../sklady-i-logistika/">Склады и логистика</a></li><li><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a></li><li><a href="../gostinitsy/">Гостиницы и отели</a></li></ul></div>
-      <div><h4>Обслуживание</h4><ul><li><a href="./" aria-current="page">Дератизация для организаций</a></li><li><a href="../dezinsektsiya/">Дезинсекция для организаций</a></li><li><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на дератизацию и дезинсекцию</a></li><li><a href="../#etapy">Этапы работы</a></li><li><a href="../#podhod">Метод IPM</a></li><li><a href="../#vrediteli">Вредители</a></li><li><a href="../#dokumenty">Документы</a></li><li><a href="../#usloviya">Цена</a></li><li><a href="../#voprosy">Вопросы</a></li></ul></div>
-      <div><h4>Материалы</h4><ul><li><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/tochki-kontrolya/">Точки контроля вредителей</a></li><li><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a></li><li><a href="../materialy/">Все материалы</a></li></ul></div>
+      <div><h4>Услуги</h4><ul><li><a href="./" aria-current="page">Дератизация для организаций</a></li><li><a href="../dezinsektsiya/">Дезинсекция для организаций</a></li><li><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на дератизацию и дезинсекцию</a></li><li><a href="../#podhod"><span><span class="nw">Пест-контроль</span> по системе IPM</span></a></li><li><a href="../#etapy">Этапы работы</a></li><li><a href="../#vrediteli">Вредители</a></li><li><a href="../#dokumenty">Документы для проверок</a></li><li><a href="../#usloviya">Цена</a></li><li><a href="../#voprosy">Вопросы</a></li></ul></div>
+      <div><h4>Отрасли</h4><ul><li><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a></li><li><a href="../#otrasl-seti">Магазины и торговые сети</a></li><li><a href="../#otrasl-restorany">Рестораны и кафе</a></li><li><a href="../#otrasl-sklady">Склады и логистика</a></li><li><a href="../#otrasl-farma">Фармацевтические производства</a></li><li><a href="../#otrasl-gostinitsy">Гостиницы и отели</a></li></ul></div>
+      <div><h4>Материалы</h4><ul><li><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a></li><li><a href="../materialy/">Все материалы</a></li></ul></div>
       <div><h4>Контакты</h4><ul><li><a href="tel:+74951043570">+7 (495) 104-35-70</a></li><li><a href="mailto:b2b@pestcontrol-center.ru">b2b@<wbr><span style="white-space:nowrap">pestcontrol-center.ru</span></a></li><li>Пн–Пт: 8:00–20:00</li><li>Срочные выезды: 24/7</li></ul>
         <div class="msg"><a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a><a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a></div>
       </div>
     </div>
-    <div class="fb"><span>© 2026 ПЕСТКОНТРОЛЬ Центр</span><a href="../privacy/">Политика конфиденциальности</a><a href="../soglasie/">Согласие на обработку данных</a><span>Информация на сайте не является публичной офертой</span></div>
+    <div class="fb"><span>© 2026 ПЕСТКОНТРОЛЬ Центр</span><a href="../privacy/">Политика конфиденциальности</a><a href="../soglasie/">Согласие на обработку данных</a><a href="../soglasie/">Согласие на обработку данных</a><span>Информация на сайте не является публичной офертой</span></div>
   </div>
 </footer>
 
@@ -1055,21 +1064,6 @@ main{overflow-x:clip}
 <script>
 /* Предпросмотр: вне рабочего домена заявка не отправляется (на пестконтроль-центр.рф этот блок не срабатывает) */
 (function(){if(/^(www\.)?xn----itbbsflddbfpfdodg9d0f\.xn--p1ai$/i.test(location.hostname))return;var f=window.fetch;window.fetch=function(u){if(typeof u==='string'&&u.indexOf('send.php')>-1)return new Promise(function(r){setTimeout(function(){r(new Response('{"success":true}',{status:200,headers:{'Content-Type':'application/json'}}))},500)});return f.apply(this,arguments)};document.addEventListener('DOMContentLoaded',function(){var p=document.querySelector('.form .fs');if(p)p.textContent='Предпросмотр: заявка никуда не отправляется'})})();
-/* Переключатель 4 вариантов Hero-фото */
-(function(){
-  var img=document.getElementById('hero-img'),srcMob=document.getElementById('hero-src-mob'),btns=document.querySelectorAll('.hero-vbtn');
-  if(!img||!btns.length)return;
-  btns.forEach(function(b){
-    b.addEventListener('click',function(){
-      var v=b.getAttribute('data-v'),alt=b.getAttribute('data-alt');
-      btns.forEach(function(x){x.classList.toggle('on',x===b)});
-      if(srcMob)srcMob.setAttribute('srcset','../img/derat-hero-v'+v+'-mob-760.webp 760w, ../img/derat-hero-v'+v+'-mob.webp 1024w');
-      img.setAttribute('srcset','../img/derat-hero-v'+v+'-1440.webp 1440w, ../img/derat-hero-v'+v+'.webp 1920w');
-      img.setAttribute('src','../img/derat-hero-v'+v+'.webp');
-      if(alt)img.setAttribute('alt',alt);
-    });
-  });
-})();
 /* Самопроверка: счётчик отмеченных пунктов */
 document.addEventListener('change',function(e){if(!e.target.closest('.f-check-list'))return;var n=0;document.querySelectorAll('.f-check-list input').forEach(function(i){n+=i.checked?1:0});document.getElementById('chk-n').textContent=n;document.querySelector('.f-check-res').classList.toggle('full',n===5);document.getElementById('chk-note').textContent=n===5?'Все 5 контуров и документов отмечены — на бесплатном обследовании проверим, как система работает на объекте.':'Отмечено '+n+' из 5 — на бесплатном выезде покажем, какие контуры и документы доработать до проверки.'});
 /* Схема трёх контуров: подсветка контура по карточке и наоборот */
@@ -1080,6 +1074,6 @@ document.addEventListener('change',function(e){if(!e.target.closest('.f-check-li
 <script src="../vendor/gsap.min.js" defer></script>
 <script src="../vendor/ScrollTrigger.min.js" defer></script>
 <script src="../vendor/lenis.min.js" defer></script>
-<script src="../app.min.js?v=20261106b" defer></script>
+<script src="../app.min.js?v=20261106s1" defer></script>
 </body>
 </html>

@@ -658,3 +658,53 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,4.3vw,82px) 0 36px;ba
 @media (max-width:340px){
   .logo-sub{display:none}
 }
+
+/* ===== Единый стиль страниц сайта (site06122026v1) ===== */
+/* Заголовок первого экрана внутренних страниц — как на главной: тонкое начертание, плотная разрядка, акцент курсивом */
+html .d-hero h1,html .p-hero h1{font-weight:300;letter-spacing:-.055em;line-height:1.08}
+html .d-hero h1 em,html .p-hero h1 em,html .f-hero h1 em{font-style:italic;font-weight:500}
+.d-hero h1 .ln,.p-hero h1 .ln{overflow:hidden}
+.d-hero h1 .ln>span,.p-hero h1 .ln>span{will-change:transform}
+@media (max-width:860px){
+  html .d-hero h1,html .p-hero h1{font-size:clamp(30px,8.4vw,42px);letter-spacing:-.05em;line-height:1.08}
+}
+/* Заголовки разделов на узких телефонах — одного размера на всех внутренних страницах */
+@media (max-width:440px){
+  .d-page .head h2,.d-page .cta h2,.d-page .f-check-t{font-size:clamp(26px,7.6vw,34px)}
+}
+/* Начальные состояния анимаций первого экрана внутренних страниц (без JS и при сбое анимаций всё видно сразу) */
+.js:not(.anim-fail) .d-hero h1 .ln>span,.js:not(.anim-fail) .p-hero h1 .ln>span{transform:translateY(110%)}
+.js:not(.anim-fail) .p-hero .p-stack>a{opacity:0}
+@media (max-width:860px){
+  .js:not(.anim-fail) .d-hero h1 .ln>span,.js:not(.anim-fail) .p-hero h1 .ln>span{transform:none;opacity:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .d-hero h1 .ln>span,.js .p-hero h1 .ln>span{transform:none!important;opacity:1!important}
+  .js .p-hero .p-stack>a{opacity:1!important}
+}
+
+/* «Смотрите также» — перелинковка внутренних страниц */
+.rel-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.1vw,20px)}
+.rel-card{display:flex;flex-direction:column;gap:12px;padding:clamp(22px,1.7vw,30px);min-height:clamp(220px,15vw,268px);color:var(--t2)}
+.rel-k{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.rel-t{font-size:clamp(19px,1.3vw,24px);line-height:1.25;letter-spacing:-.02em;color:var(--t1);font-weight:400}
+.rel-d{font-size:15px;line-height:1.55;color:var(--t3)}
+.rel-a{margin-top:auto;width:44px;height:44px;border-radius:50%;border:1.4px solid var(--line2);display:grid;place-items:center;color:var(--t1);transition:background .35s,border-color .35s,color .35s,transform .5s var(--ease)}
+.rel-a svg{width:16px;height:16px}
+.rel-card:hover .rel-a,.rel-card:focus-visible .rel-a{background:var(--t1);border-color:var(--t1);color:#000;transform:translateX(4px)}
+@media (max-width:1180px){.rel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.rel-grid{grid-template-columns:1fr}.rel-card{min-height:0}.rel-a{margin-top:6px}}
+
+/* Ссылки «Подробнее» под блоками главной */
+.more{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:clamp(28px,2.6vw,44px)}
+.more-k{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);margin-right:6px}
+.more a{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border-radius:999px;border:1.4px solid var(--line2);background:rgba(255,255,255,.02);color:var(--t1);font-size:15px;transition:border-color .3s,background .3s}
+.more a svg{width:14px;height:14px;flex:none;transition:transform .4s var(--ease)}
+.more a:hover,.more a:focus-visible{border-color:var(--acc);background:rgba(124,134,255,.1)}
+.more a:hover svg,.more a:focus-visible svg{transform:translateX(3px)}
+@media (max-width:560px){.more a{width:100%;justify-content:space-between;font-size:14px}}
+/* ссылка на отраслевую страницу в карточке отрасли */
+.ind-more{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding-top:4px;color:var(--t1);font-size:15px;font-weight:500;width:fit-content;border-bottom:1px solid var(--line2);transition:border-color .3s,color .3s}
+.ind-more svg{width:14px;height:14px;transition:transform .4s var(--ease)}
+.ind-more:hover,.ind-more:focus-visible{color:var(--acc);border-color:var(--acc)}
+.ind-more:hover svg,.ind-more:focus-visible svg{transform:translateX(3px)}
