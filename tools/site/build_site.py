@@ -10,6 +10,7 @@
   1. tools/site/unify.py        — анимации и заголовки в стиле главной, бегущая строка, «Смотрите также», ссылки «Подробнее»;
   2. tools/site/legal_pages.py  — шапка и подвал сайта на страницах политики и согласия;
   3. tools/menu/apply_menu.py   — одинаковые шапка, мобильное меню и подвал на всех страницах;
+     tools/site/mobile_crumbs.py — хлебные крошки на телефоне (до 900 px) скрыты на всех страницах;
   4. tools/build.py             — сжатие app.js в app.min.js и встраивание style.css в главную;
   5. server/sitemap.xml         — все страницы сайта для поисковиков.
 
@@ -48,6 +49,7 @@ def main():
     run('tools/site/unify.py')
     run('tools/site/legal_pages.py')
     run('tools/menu/apply_menu.py')
+    run('tools/site/mobile_crumbs.py')  # хлебные крошки на телефоне не показываются (правило владельца)
     run('tools/build.py')
     today = datetime.date.today().isoformat()
     urls = ''.join(f'  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{today}</lastmod>\n    <priority>{p}</priority>\n  </url>\n' for u, p in SITEMAP)
