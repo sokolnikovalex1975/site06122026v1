@@ -1,0 +1,170 @@
+/* ===== Страница «Санитарный аудит (СЭС-аудит)» (/sanitarnyy-audit/): дополнения к стилям отраслевой страницы ===== */
+.sa-page .f-hero .f-hero-img{object-position:66% 50%}
+.sa-hero-list{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px;max-width:640px}
+.sa-hero-list li{position:relative;padding-left:28px;color:#c4c4cc;line-height:1.5;font-size:clamp(15px,.95vw,18px)}
+.sa-hero-list li::before{content:"";position:absolute;left:2px;top:.45em;width:12px;height:6px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}
+.sa-trust{display:grid;gap:4px;margin:28px 0 0;font-size:14px;line-height:1.5;color:#a1a1aa;max-width:700px}
+.sa-trust a,.sa-upd a,.sa-src a,.sa-principles a,.sa-short a{color:var(--t2);border-bottom:1px solid var(--line2);transition:color .25s,border-color .25s}
+.sa-trust a{color:#c4c4cc;white-space:nowrap}
+.sa-principles a{white-space:nowrap}
+.sa-trust a:hover,.sa-upd a:hover,.sa-src a:hover,.sa-principles a:hover,.sa-short a:hover{color:var(--t1);border-color:var(--acc)}
+
+/* определение и «коротко» */
+.sa-def{margin:0 0 clamp(28px,3vw,44px);padding:clamp(18px,1.6vw,26px) clamp(20px,2vw,30px);border:1px solid var(--line2);border-left:2px solid var(--acc);border-radius:var(--r);background:var(--card);color:var(--t2);line-height:1.65;max-width:1100px;font-size:clamp(16px,1.05vw,19px)}
+.sa-def b{color:var(--t1);font-weight:500}
+.d-table.sa-short{max-width:1100px}
+.sa-short th{width:240px;color:var(--t3);font-size:15px}
+.d-table.sa-short td,.d-table.sa-short td:first-child{color:#c4c4cc}
+.sa-upd{margin:20px 0 0;font-size:14px;line-height:1.6;color:var(--t3)}
+
+/* нормы 2026 */
+.sa-doc{color:var(--acc);font-weight:500;white-space:nowrap}
+@media (min-width:901px){.sa-norms th:nth-child(1){width:17%}.sa-norms th:nth-child(2){width:15%}.sa-norms th:nth-child(3){width:17%}}
+.sa-h3{font-size:clamp(24px,2vw,36px);line-height:1.15;font-weight:300;letter-spacing:-.03em;margin:clamp(52px,4.6vw,84px) 0 clamp(20px,1.8vw,28px)}
+.sa-page .f-req{margin-top:0}
+
+/* лабораторные исследования */
+.sa-lab{margin-top:clamp(56px,5vw,96px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,3.2vw,60px);align-items:center}
+.sa-lab-text .sa-h3{margin-top:0}
+.sa-lab-text>p{color:var(--t2);line-height:1.65;margin:0;max-width:620px}
+.sa-lab-text .d-ticks{margin:24px 0 0}
+.sa-lab-text .d-ticks li{color:#c4c4cc}
+.sa-lab-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.sa-photo{margin:0}
+.sa-photo img{display:block;width:100%;height:auto;aspect-ratio:900/542;object-fit:cover;border-radius:var(--r);border:1px solid var(--line2);background:#18181b}
+.sa-photo figcaption{margin-top:10px;font-size:13px;line-height:1.45;color:var(--t3)}
+
+/* типовые нарушения */
+.sa-viol{margin-top:clamp(52px,4.6vw,84px);padding:clamp(24px,2.4vw,40px)}
+.sa-viol .sa-h3{margin:0 0 10px}
+.sa-src{margin:0 0 6px;font-size:14px;line-height:1.6;color:var(--t3);max-width:900px}
+.sa-viol ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 44px}
+.sa-viol li{position:relative;padding-left:22px;color:var(--t2);line-height:1.55}
+.sa-viol li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--red)}
+
+/* что вы получите */
+.sa-docs{list-style:none;counter-reset:sd;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.sa-docs li{background:var(--card);border:1px solid var(--line2);border-top:2px solid rgba(124,134,255,.45);border-radius:var(--r);padding:clamp(20px,1.8vw,28px);line-height:1.5}
+.sa-docs li::before{counter-increment:sd;content:"0" counter(sd);display:block;color:var(--acc);font-size:14px;margin-bottom:14px}
+.sa-docs b{display:block;font-weight:500;line-height:1.3;margin-bottom:8px;font-size:clamp(16px,1.1vw,19px)}
+.sa-docs span{color:var(--t2);font-size:15px;line-height:1.55}
+.sa-reg{font-size:15px;margin-top:18px}
+.sa-reg td:first-child{color:var(--t3);width:34px}
+.sa-reg td:nth-child(2){color:var(--t1)}
+.sa-risk{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid;font-size:13px;line-height:1.5;white-space:nowrap}
+.sa-hi{color:var(--red);border-color:rgba(255,100,103,.45);background:rgba(255,100,103,.08)}
+.sa-mid{color:var(--yel);border-color:rgba(253,199,0,.4);background:rgba(253,199,0,.06)}
+@media (min-width:901px){.sa-reg th:nth-child(4){width:15%}.sa-reg th:nth-child(5){width:96px}.sa-reg th:nth-child(7){width:84px}}
+
+/* штрафы */
+@media (min-width:901px){.sa-fines th:nth-child(1){width:15%}.sa-fines th:nth-child(3){width:24%}.sa-fines th:nth-child(4){width:20%}}
+.sa-fines td:nth-child(3){color:var(--t1)}
+
+/* когда придёт Роспотребнадзор */
+.sa-when{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sa-when .d-card{border-top:2px solid rgba(124,134,255,.45)}
+.sa-when .d-card h3{font-size:clamp(19px,1.35vw,24px);line-height:1.25}
+.sa-when .d-card p{font-size:15px}
+
+/* сравнение */
+.sa-cmp th[scope=row]{color:var(--t1);font-weight:500;font-size:15px;width:15%}
+.sa-cmp thead th:nth-child(2){color:var(--acc)}
+.sa-cmp td:nth-child(2){color:var(--t1);background:rgba(124,134,255,.06)}
+.d-table.sa-cmp td:first-child{color:var(--t2)}
+@media (min-width:901px){.sa-cmp thead th:nth-child(2),.sa-cmp td:nth-child(2){padding-left:16px;padding-right:16px}}
+
+/* отрасли */
+.sa-inds .d-card{display:flex;flex-direction:column}
+.sa-ico{margin:0 0 18px;color:var(--acc);line-height:0}
+.sa-ico svg{width:28px;height:28px;stroke-width:1.6}
+.sa-more{align-self:flex-start;margin-top:auto;padding-top:18px;color:var(--t1);font-size:15px;line-height:1.4}
+.sa-more span{border-bottom:1px solid var(--line2);transition:border-color .25s}
+.sa-more:hover span{border-color:var(--acc)}
+
+/* стоимость */
+.sa-price{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,3vw,56px);align-items:start}
+.sa-ptable th:last-child,.sa-ptable td:last-child{text-align:right;padding-right:0}
+.d-table.sa-ptable td:last-child{color:var(--t1);font-size:clamp(16px,1.1vw,19px)}
+.d-table.sa-ptable td:first-child{color:#c4c4cc}
+.sa-pnotes{padding:clamp(24px,2.4vw,40px)}
+.sa-pnotes p{margin:0 0 18px;color:var(--t2);line-height:1.6}
+.sa-pnotes p b{display:block;color:var(--t1);font-weight:500;margin-bottom:4px}
+.sa-pnotes .sa-free{border-top:1px solid var(--line2);padding-top:18px}
+.sa-pnotes .btn{width:100%;margin-top:6px;white-space:normal;text-align:center;line-height:1.25}
+
+/* автор и принципы */
+.sa-author-wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(24px,3vw,56px);align-items:start}
+.sa-author{display:flex;gap:20px;align-items:center;padding:clamp(24px,2.4vw,36px)}
+.sa-avatar{flex:none;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:rgba(124,134,255,.12);border:1px solid rgba(124,134,255,.4);color:var(--acc);font-size:22px;letter-spacing:.04em}
+.sa-author p{margin:0}
+.sa-author-name{font-size:clamp(20px,1.5vw,26px);color:var(--t1);letter-spacing:-.02em;margin-bottom:4px!important}
+.sa-author-role{color:var(--t2);margin-bottom:4px!important}
+.sa-author-date{color:var(--t3);font-size:14px}
+.sa-principles{list-style:none;padding:0;margin:0;border-top:1px solid var(--line2)}
+.sa-principles li{padding:18px 0;border-bottom:1px solid var(--line2);color:var(--t2);line-height:1.6}
+.sa-principles b{color:var(--t1);font-weight:500}
+
+/* нормативная база */
+.sa-base{list-style:none;padding:0;margin:0;border-top:1px solid var(--line2);max-width:1200px}
+.sa-base li{position:relative;padding:14px 0 14px 30px;border-bottom:1px solid var(--line2);color:var(--t2);line-height:1.6;font-size:15px}
+.sa-base li::before{content:"§";position:absolute;left:4px;top:14px;color:var(--acc)}
+.sa-base a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+.sa-base a:hover{border-color:var(--t1)}
+
+@media (max-width:1100px){
+.sa-lab{grid-template-columns:minmax(0,1fr)}
+.sa-docs{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sa-docs li:last-child{grid-column:1/-1}
+.sa-when{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* широкие таблицы — карточками уже на планшете */
+@media (max-width:900px){
+.sa-norms thead,.sa-reg thead,.sa-cmp thead,.sa-fines thead{display:none}
+.sa-norms,.sa-norms tbody,.sa-norms tr,.sa-norms td,.sa-reg,.sa-reg tbody,.sa-reg tr,.sa-reg td,.sa-cmp,.sa-cmp tbody,.sa-cmp tr,.sa-cmp td,.sa-cmp th,.sa-fines,.sa-fines tbody,.sa-fines tr,.sa-fines td{display:block;width:100%}
+.sa-norms tr,.sa-reg tr,.sa-cmp tr,.sa-fines tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 18px;margin-bottom:12px}
+.sa-norms td,.sa-reg td,.sa-cmp td,.sa-fines td{border:0;padding:10px 0}
+.sa-norms td+td,.sa-reg td+td,.sa-cmp td+td,.sa-fines td+td{border-top:1px solid var(--line)}
+.sa-norms td::before,.sa-reg td::before,.sa-cmp td::before,.sa-fines td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}
+.sa-norms tr,.sa-fines tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
+.sa-norms td:nth-child(1),.sa-norms td:nth-child(4),.sa-fines td:nth-child(1),.sa-fines td:nth-child(2){grid-column:1/-1}
+.sa-norms td:nth-child(1),.sa-fines td:nth-child(1){font-size:17px;color:var(--t1)}
+.sa-norms td:nth-child(1)::before,.sa-fines td:nth-child(1)::before,.sa-fines td:nth-child(2)::before{content:none}
+.sa-fines td:nth-child(2){border-top:0;padding-top:0}
+.sa-reg tr{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;align-items:start}
+.sa-reg td:first-child{display:none}
+.sa-reg td:nth-child(2){grid-column:1;grid-row:1;border-top:0;font-size:17px}
+.sa-reg td:nth-child(5){grid-column:2;grid-row:1;border-top:0;padding-top:12px}
+.sa-reg td:nth-child(2)::before,.sa-reg td:nth-child(5)::before{content:none}
+.sa-reg td:nth-child(3),.sa-reg td:nth-child(4),.sa-reg td:nth-child(6),.sa-reg td:nth-child(7){grid-column:1/-1}
+.sa-cmp th[scope=row]{width:100%;border:0;padding:12px 0 8px;font-size:17px}
+.sa-cmp td:nth-child(2){background:none;border-top:1px solid var(--line)}
+.sa-cmp td:nth-child(2)::before{color:var(--acc)}
+.sa-price,.sa-author-wrap{grid-template-columns:minmax(0,1fr)}
+.sa-viol ul{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+.sa-page .f-hero .f-hero-img{object-position:50% 50%}
+.sa-trust{font-size:13px}
+}
+@media (max-width:600px){
+.sa-norms tr{grid-template-columns:minmax(0,1fr)}
+.sa-short th{display:block;width:100%;border:0;padding:12px 0 2px;font-size:13px}
+.d-table.sa-short td{padding:0 0 12px}
+.d-table.sa-short tr{padding:4px 16px}
+.sa-lab-media{grid-template-columns:minmax(0,1fr)}
+.sa-docs,.sa-when{grid-template-columns:minmax(0,1fr)}
+.sa-docs li:last-child{grid-column:auto}
+/* прайс остаётся таблицей из двух колонок */
+.d-table.sa-ptable{display:table}
+.sa-ptable thead{display:table-header-group}
+.sa-ptable tbody{display:table-row-group}
+.d-table.sa-ptable tr{display:table-row;border:0;border-radius:0;padding:0;margin:0}
+.d-table.sa-ptable th,.d-table.sa-ptable td{display:table-cell;width:auto;padding:14px 14px 14px 0;border-bottom:1px solid var(--line2)}
+.d-table.sa-ptable td+td{border-top:0}
+.d-table.sa-ptable td::before{content:none}
+.d-table.sa-ptable td:last-child{padding-right:0;font-size:16px;width:44%}
+.sa-author{align-items:flex-start}
+.sa-avatar{width:60px;height:60px;font-size:19px}
+.sa-pnotes{padding:22px 20px}
+.sa-viol{padding:22px 20px}
+}

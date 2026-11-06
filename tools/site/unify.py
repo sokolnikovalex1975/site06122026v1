@@ -108,6 +108,7 @@ URL = {
     'zhur': 'materialy/zhurnal-pest-kontrolya/', 'pm': 'materialy/pest-menedzhment-ili-razovaya-obrabotka/',
     'farma': 'farmatsevticheskie-proizvodstva/',
     'vent': 'ochistka-dezinfektsiya-ventilyatsii/',
+    'san': 'sanitarnyy-audit/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -131,12 +132,14 @@ CARD = {
               'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
     'vent': ('Услуга', 'Очистка и дезинфекция вентиляции',
              'Воздуховоды, кухонные вытяжки и кондиционеры: видео до и после, акт по п. 43 ППР, журнал по МР 3.5.0396-25.'),
+    'san': ('Услуга', 'Санитарный аудит (СЭС-аудит)',
+            'Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.'),
 }
 
 STRIP_LABELS = {}
 PAGES = {
-    'deratizatsiya/index.html': dict(key='derat', root='../', related=['dezins', 'dogovor', 'prog', 'zhur']),
-    'dezinsektsiya/index.html': dict(key='dezins', root='../', related=['derat', 'dogovor', 'prog', 'zhur'], strip=(
+    'deratizatsiya/index.html': dict(key='derat', root='../', related=['dezins', 'dogovor', 'prog', 'san']),
+    'dezinsektsiya/index.html': dict(key='dezins', root='../', related=['derat', 'dogovor', 'prog', 'san'], strip=(
         'Коротко о дезинсекции', [
             ('lucide-crosshair', 'IPM', 'контроль насекомых'),
             ('lucide-scan-search', 'Бесплатный осмотр', 'и расчёт до договора'),
@@ -169,7 +172,7 @@ PAGES = {
             ('lucide-file-badge', 'Документы', 'для Роспотребнадзора и аудитов'),
             ('lucide-crosshair', 'IPM', 'в основе программы'),
         ])),
-    'pishchevoe-proizvodstvo/index.html': dict(key='food', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
+    'pishchevoe-proizvodstvo/index.html': dict(key='food', root='../', related=['derat', 'dezins', 'prog', 'san'], strip=(
         'Коротко о пест-контроле на производстве', [
             ('lucide-crosshair', 'IPM', 'на пищевом производстве'),
             ('lucide-scan-search', 'Бесплатное обследование', 'производства'),
@@ -245,6 +248,17 @@ PAGES = {
             ('lucide-shield-check', 'Предписания', 'и сигнальный лист персонала'),
             ('lucide-file-badge', 'СанПиН 3.3686-21', 'и ХАССП'),
             ('lucide-crosshair', 'ISO 22000', 'и FSSC 22000'),
+        ])),
+    'sanitarnyy-audit/index.html': dict(key='san', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
+        'Коротко о санитарном аудите', [
+            ('lucide-clipboard-check', 'Проверочные листы', '— приказы № 578 и № 580'),
+            ('lucide-file-badge', 'СанПиН 2026', '— нормы с 1 сентября 2026'),
+            ('lucide-flask-conical', 'Смывы и пробы воздуха', '— в стоимости'),
+            ('lucide-notebook-pen', 'Реестр нарушений', '— с фото и пунктом нормы'),
+            ('lucide-clock', 'Выезд 2–6 часов', '— акт через 3 рабочих дня'),
+            ('lucide-crosshair', 'Пест-контроль', '— проверяем глубже всего'),
+            ('lucide-shield-check', 'Лицензия', '№ Л064-00111-77/01942445'),
+            ('lucide-lock', 'Конфиденциально', '— результат только у заказчика'),
         ])),
 }
 
@@ -446,7 +460,25 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
     ]}, ensure_ascii=False) + '</script>'
 
 
+SAN_REL = ('deratizatsiya/index.html', 'dezinsektsiya/index.html', 'pishchevoe-proizvodstvo/index.html')
+
+
+def rel_card(root, k):
+    kind, title, desc = CARD[k]
+    return (f'<a class="card rel-card" href="{root}{URL[k]}">'
+            f'<span class="rel-k">{kind}</span><span class="rel-t">{tp(title)}</span>'
+            f'<span class="rel-d">{tp(desc)}</span><span class="rel-a" aria-hidden="true">{ARR}</span></a>')
+
+
 def page_specific(rel, s):
+    if rel in SAN_REL and 'id="smotrite-takzhe"' in s and 'class="card rel-card" href="../sanitarnyy-audit/"' not in s:
+        # «Смотрите также» уже собран: карточку журнала меняем на санитарный аудит (как в related у страницы)
+        i = s.index('id="smotrite-takzhe"')
+        j = s.index('</section>', i)
+        block, n = re.subn(r'<a class="card rel-card" href="\.\./materialy/zhurnal-pest-kontrolya/">.*?</a>',
+                           lambda m: rel_card('../', 'san'), s[i:j], count=1, flags=re.S)
+        assert n == 1, rel + ': нет карточки журнала в «Смотрите также»'
+        s = s[:i] + block + s[j:]
     if rel == 'deratizatsiya/index.html':
         # переключатель вариантов фото первого экрана был нужен только для выбора — в сайте оставляем вариант 1
         s = re.sub(r'\n\s*<div class="hero-vbar".*?</div>\n', '\n', s, count=1, flags=re.S)
