@@ -121,3 +121,12 @@
 /* Невысокие экраны ноутбуков (1366×768, 1280×800): кнопки первого экрана остаются видимыми */
 @media (min-width:861px) and (max-height:820px){.d-hero h1{font-size:clamp(34px,3.2vw,56px)}}
 .k-more .link-arrow{white-space:normal}
+/* ссылка на «Разработку ППК» для непищевых объектов в подписи первого экрана и в таблице цен */
+.p-hero-note a,.k-price td a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+.p-hero-note a:hover,.k-price td a:hover{border-color:var(--t1)}
+/* планшет в альбомной ориентации и небольшие ноутбуки (861–1180 px): колонка текста шире, затемнение фото — под неё,
+   кнопка заявки остаётся на первом экране */
+@media (min-width:861px) and (max-width:1180px){
+.d-hero .wrap{grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr)}
+.d-hero-media::before{background:linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.88) 44%,rgba(0,0,0,.4) 60%,rgba(0,0,0,0) 72%),linear-gradient(180deg,#000 0,rgba(0,0,0,.55) 90px,rgba(0,0,0,0) 260px),linear-gradient(0deg,#000 0,rgba(0,0,0,0) 20%)}
+}

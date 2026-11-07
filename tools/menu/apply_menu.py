@@ -3,7 +3,8 @@
 
     Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
     (в «Услугах» с 06.11.2026 — очистка и дезинфекция вентиляции, с 07.11.2026 — разработка ППК по ХАССП:
-    страница /materialy/programma-proizvodstvennogo-kontrolya-haccp/ стала страницей услуги и из «Материалов» перенесена в «Услуги»)
+    страница /materialy/programma-proizvodstvennogo-kontrolya-haccp/ стала страницей услуги и из «Материалов» перенесена в «Услуги»;
+    с 08.11.2026 — ещё «Разработка ППК» (/razrabotka-ppk/) для непищевых объектов: это две разные услуги)
 
 В меню — только готовые страницы сайта. Отрасли без своей страницы ведут к карточке отрасли на главной
 (якоря #otrasl-…), у пищевых и фармацевтических производств, магазинов и торговых сетей, гостиниц — свои страницы. «Контакты» — только в подвале.
@@ -28,6 +29,7 @@ USLUGI = [
     ('dezinsektsiya', 'Дезинсекция для организаций'),
     ('sanitarnyy-audit', 'Санитарный аудит <span class="nw">(СЭС-аудит)</span>'),
     ('ochistka-dezinfektsiya-ventilyatsii', 'Очистка и дезинфекция вентиляции'),
+    ('razrabotka-ppk', 'Разработка ППК'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp', 'Разработка ППК по ХАССП'),
     ('dogovor-deratizatsiya-dezinsektsiya', 'Договор на обслуживание'),
 ]
@@ -45,6 +47,7 @@ DERAT = 'deratizatsiya'
 VENT = 'ochistka-dezinfektsiya-ventilyatsii'
 SAN = 'sanitarnyy-audit'
 PPK = 'materialy/programma-proizvodstvennogo-kontrolya-haccp'  # страница услуги, хотя адрес — в разделе «Материалы»
+RPPK = 'razrabotka-ppk'  # «Разработка ППК» для непищевых объектов (с 08.11.2026); ППК по ХАССП — отдельная услуга
 MATERIALS = [  # слова через дефис не переносим (класс nw, как в остальных текстах сайта)
     ('normativnaya-baza', 'Нормативная база'),  # раздел «Нормативная база» (tools/normativnaya-baza)
     ('materialy/programma-pest-kontrolya', 'Программа <span class="nw">пест-контроля</span>'),
@@ -70,6 +73,7 @@ PAGES = [
     ('dezinsektsiya/index.html', '../', 'dezinsektsiya'),
     (VENT + '/index.html', '../', VENT),
     (SAN + '/index.html', '../', SAN),
+    (RPPK + '/index.html', '../', RPPK),
     (DOGOVOR + '/index.html', '../', DOGOVOR),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
     ('restorany-i-kafe/index.html', '../', 'restorany-i-kafe'),
@@ -121,7 +125,7 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', VENT, SAN, PPK)
+    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', VENT, SAN, RPPK, PPK)
     in_ind = any(s == cur for s, _ in INDUSTRIES)
     in_mat = (cur.startswith('materialy') or cur.startswith('normativnaya-baza')) and cur != PPK
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾

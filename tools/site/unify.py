@@ -112,6 +112,7 @@ URL = {
     'vent': 'ochistka-dezinfektsiya-ventilyatsii/',
     'farma': 'farmatsevticheskie-proizvodstva/', 'sklady': 'sklady-i-logistika/',
     'ppk': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',
+    'rppk': 'razrabotka-ppk/',
     'rest': 'restorany-i-kafe/',
     'san': 'sanitarnyy-audit/',
     'dezinf': 'dezinfektsiya/',
@@ -146,7 +147,9 @@ CARD = {
     'sklady': ('Отрасль', 'Пест-контроль для складов и логистики',
                'Схема точек по зонам склада, визиты без остановки приёмки и отгрузки, журнал и отчёт для аудитов.'),
     'ppk': ('Услуга', 'Разработка ППК по ХАССП',
-            'Программа производственного контроля под ваш объект: анализ опасностей, ККТ, лабораторный контроль, журналы. Образец в PDF.'),
+            'Программа для пищевых объектов: анализ опасностей, ККТ, лабораторный контроль, журналы. От 19\u00a0900\u00a0₽, образец в PDF.'),
+    'rppk': ('Услуга', 'Разработка ППК',
+             'Программа производственного контроля для офиса, склада, гостиницы и других непищевых объектов. От 5\u00a0900\u00a0₽.'),
     'san': ('Услуга', 'Санитарный аудит (СЭС-аудит)',
             'Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.'),
     'dezinf': ('Услуга', 'Дезинфекция для организаций',
@@ -305,16 +308,28 @@ PAGES = {
             ('lucide-file-badge', 'СанПиН 3.3686-21', 'и ХАССП'),
             ('lucide-crosshair', 'ISO 22000', 'и FSSC 22000'),
         ])),
-    'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html': dict(key='ppk', root='../../', related=['prog', 'zhur', 'food', 'dogovor'], strip=(
+    'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html': dict(key='ppk', root='../../', related=['rppk', 'prog', 'food', 'dogovor'], strip=(
         'Коротко о разработке программы производственного контроля', [
             ('lucide-file-signature', 'Разработка ППК', '— под ваш объект'),
-            ('lucide-scan-search', 'Выезд и обследование', '— бесплатно'),
+            ('lucide-calculator', 'От 19\u00a0900\u00a0₽', '— ППК по ХАССП'),
             ('lucide-file-badge', 'ТР ТС 021/2011', '— процедуры ХАССП'),
             ('lucide-list-checks', 'ККТ', 'и программы предварительных мероприятий'),
             ('lucide-flask-conical', 'Лабораторный контроль', '— точки и периодичность'),
             ('lucide-shield-check', 'Дезинсекция и дератизация', '— по лицензии'),
             ('lucide-clipboard-check', 'С 1 сентября 2026', '— новые санитарные правила'),
             ('lucide-notebook-pen', 'Формы журналов', 'и план-график'),
+        ])),
+    # услуга «Разработка ППК» для непищевых объектов (tools/razrabotka-ppk), с 08.11.2026; ППК по ХАССП — отдельная страница выше
+    'razrabotka-ppk/index.html': dict(key='rppk', root='../', related=['ppk', 'san', 'dogovor', 'nb'], strip=(
+        'Коротко о разработке программы производственного контроля', [
+            ('lucide-calculator', 'От 5\u00a0900\u00a0₽', '— ППК для непищевых объектов'),
+            ('lucide-list-checks', 'СП 1.1.1058-01', '— все 9 пунктов раздела 3'),
+            ('lucide-clipboard-check', 'С 1 сентября 2026', '— ссылки на новые правила'),
+            ('lucide-file-signature', 'Утверждает руководитель', '— без согласования с Роспотребнадзором'),
+            ('lucide-flask-conical', 'Лабораторные исследования', '— точки и периодичность'),
+            ('lucide-notebook-pen', 'Формы учёта', 'и план-график'),
+            ('lucide-shield-check', 'Дезинсекция и дератизация', '— по лицензии'),
+            ('lucide-factory', 'ППК по ХАССП', '— от 19\u00a0900\u00a0₽ для пищевых объектов'),
         ])),    # раздел «Нормативная база» (tools/normativnaya-baza): у хаба свой блок «Разборы и образцы» вместо «Смотрите также»
     'normativnaya-baza/index.html': dict(key='nb', root='../', strip=(
         'Коротко о нормативной базе', [
