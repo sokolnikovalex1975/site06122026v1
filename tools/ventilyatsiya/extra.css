@@ -32,17 +32,35 @@
 .v-duct[data-state="clean"] .v-shine{opacity:.6}
 .v-duct[data-state="dez"] .v-shine,.v-duct[data-state="dez"] .v-ok{opacity:1}
 
-/* пример записи в журнале — как лист документа */
-.v-jr{margin:0;background:#f5f5f2;color:#1c1d22;border-radius:var(--r);padding:clamp(18px,1.6vw,26px);box-shadow:0 30px 80px -30px rgba(0,0,0,.7);font-size:13.5px;line-height:1.45}
-.v-jr-h{border-bottom:1px solid #d6d6cf;padding-bottom:12px;margin-bottom:6px}
-.v-jr-h b{display:block;font-weight:600;font-size:14px;line-height:1.35;color:#111}
-.v-jr-h span{display:block;margin-top:6px;font-size:12px;color:#5d5f68}
-.v-jr-rows{margin:0}
-.v-jr-rows div{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:10px;padding:8px 0;border-bottom:1px dashed #d6d6cf}
-.v-jr-rows dt{color:#5d5f68}
-.v-jr-rows dd{margin:0;color:#111;font-weight:500}
-.v-jr figcaption{margin-top:10px;font-size:12px;color:#6b6d75}
-#dokumenty .d-split{grid-template-columns:minmax(0,1fr) minmax(0,440px)}
+/* документы после работ: бланки PDF по группам (обязательные, рекомендованные, для руководителя) и папка на объекте */
+.v-docs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,360px);gap:clamp(28px,4vw,72px);align-items:start}
+.v-dg+.v-dg{margin-top:clamp(30px,3vw,46px)}
+.v-dg-t{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 14px;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t3)}
+.v-chip{display:inline-flex;align-items:center;padding:5px 11px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.03);color:var(--t2);font-size:12px;letter-spacing:.08em}
+.v-chip.req{color:#d9dcff;border-color:rgba(124,134,255,.45);background:rgba(124,134,255,.14)}
+.v-dl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line2)}
+.v-doc{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:6px 20px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line2)}
+.v-doc-img{display:flex;align-items:center;justify-content:center;width:64px;aspect-ratio:210/297;border-radius:4px;overflow:hidden;background:#f5f5f2;box-shadow:0 12px 28px -14px rgba(0,0,0,.85);transition:transform .45s var(--ease)}
+.v-doc-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.v-doc-c{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);margin:2px 0 6px}
+.v-doc h4{margin:0;font-size:clamp(17px,1.1vw,19px);font-weight:500;line-height:1.35;letter-spacing:-.005em}
+.v-doc h4 a{color:var(--t1);text-decoration:none}
+.v-doc h4 a::after{content:"";position:absolute;inset:0;z-index:1}
+.v-doc h4 a:focus-visible{outline:none}
+.v-doc:has(h4 a:focus-visible){outline:2px solid var(--acc);outline-offset:4px;border-radius:6px}
+.v-doc p{margin:8px 0 0;color:var(--t2);line-height:1.55;font-size:15px}
+.v-doc-f{align-self:center;white-space:nowrap;font-size:13px;color:var(--t2);padding:7px 12px;border:1px solid var(--line2);border-radius:999px;transition:color .3s,border-color .3s,background .3s}
+.v-dg-note{margin:16px 0 0;color:var(--t2);font-size:14.5px;line-height:1.55;padding-left:14px;border-left:2px solid rgba(124,134,255,.5)}
+@media (hover:hover) and (pointer:fine){.v-doc:hover .v-doc-f{color:#fff;border-color:rgba(124,134,255,.55);background:rgba(124,134,255,.12)}.v-doc:hover .v-doc-img{transform:translateY(-3px) rotate(-1.5deg)}.v-doc:hover h4 a{text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}}
+.v-folder h3{margin:0}
+.v-folder-stack{position:relative;display:block;height:262px;margin:2px auto 24px;max-width:300px}
+.v-folder-stack img{position:absolute;top:0;left:50%;width:176px;height:auto;border-radius:6px;background:#f5f5f2;box-shadow:0 26px 60px -24px rgba(0,0,0,.95)}
+.v-folder-stack .s1{transform:translateX(-66%) rotate(-3deg);z-index:2}
+.v-folder-stack .s2{transform:translateX(-30%) translateY(12px) rotate(4deg)}
+.v-folder .d-ticks{margin:16px 0 0;gap:9px;font-size:15px;color:var(--t2)}
+.v-folder-note{margin:16px 0 0;color:var(--t3);font-size:14px;line-height:1.5}
+.v-folder .v-folder-btn{display:flex;width:100%;margin-top:22px;padding:0 20px;font-size:16px}
+.v-folder-meta{margin:10px 0 0;text-align:center;color:var(--t3);font-size:13px}
 
 /* типы объектов */
 .v-inds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
@@ -62,13 +80,14 @@
 .v-duct{grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "art" "cap" "leg"}
 .v-duct figcaption{min-height:0}
 .v-legend{grid-template-columns:repeat(4,max-content)}
-#dokumenty .d-split{grid-template-columns:minmax(0,1fr) minmax(0,380px)}
+.v-docs{grid-template-columns:minmax(0,1fr) minmax(0,320px)}
 }
 @media (max-width:860px){
 .v-hero h1{font-size:clamp(28px,8vw,40px)}
 .v-swap-r{grid-template-areas:"head" "img" "ticks";grid-template-columns:minmax(0,1fr)}
 .v-steps{grid-template-columns:minmax(0,1fr)}
-#dokumenty .d-split{grid-template-columns:minmax(0,1fr)}
+.v-docs{grid-template-columns:minmax(0,1fr)}
+.v-folder{max-width:560px}
 .v-freq td:nth-child(3){min-width:0}
 .v-legend{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -76,7 +95,12 @@
 .v-inds{grid-template-columns:minmax(0,1fr)}
 .v-seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;border-radius:14px}
 .v-seg button{padding:9px 6px;font-size:13px;border-radius:10px}
-.v-jr-rows div{grid-template-columns:minmax(0,1fr);gap:2px}
+.v-doc{grid-template-columns:52px minmax(0,1fr);gap:4px 16px;padding:16px 0}
+.v-doc-img{width:52px}
+.v-doc-f{grid-column:2;justify-self:start;margin-top:10px;padding:5px 10px;font-size:12.5px}
+.v-doc p{font-size:14.5px}
+.v-folder-stack{height:226px}
+.v-folder-stack img{width:150px}
 }
 @media (prefers-reduced-motion:reduce){
 .v-duct .v-dust,.v-duct .v-grease,.v-duct .v-germs,.v-duct .v-ok,.v-duct .v-shine{transition:none}
