@@ -47,6 +47,7 @@ SAN = 'sanitarnyy-audit'
 RPPK = 'razrabotka-ppk'
 MATERIALS = [  # слова через дефис не переносим (класс nw, как в остальных текстах сайта)
     ('normativnaya-baza', 'Нормативная база'),  # раздел «Нормативная база» (tools/normativnaya-baza)
+    ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora', 'Документы для Роспотребнадзора'),  # с 08.11.2026; в подвале — после «Проверочных листов»
     ('materialy/programma-pest-kontrolya', 'Программа <span class="nw">пест-контроля</span>'),
     ('materialy/zhurnal-pest-kontrolya', 'Журнал <span class="nw">пест-контроля</span>'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka', '<span class="nw">Пест-менеджмент</span> или разовая обработка'),
@@ -55,9 +56,9 @@ MATERIALS = [  # слова через дефис не переносим (кл�
 FOOTER_MAT_EXTRA = {  # в подвале под пунктом — ещё одна ссылка (в шапке её нет)
     'normativnaya-baza': ('normativnaya-baza/proverochnye-listy', 'Проверочные листы 2026'),
 }
-SERVICE = [  # блоки главной
+SERVICE = [  # блоки главной («Документы для проверок» → страница «Документы для Роспотребнадзора» в «Материалах», 08.11.2026)
     ('etapy', 'Этапы работы'), ('vrediteli', 'Вредители'),
-    ('dokumenty', 'Документы для проверок'), ('usloviya', 'Цена'), ('voprosy', 'Вопросы'),
+    ('usloviya', 'Цена'), ('voprosy', 'Вопросы'),
 ]
 CHEV = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 CHEV_M = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -86,6 +87,7 @@ PAGES = [
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html', '../../', 'materialy/programma-proizvodstvennogo-kontrolya-haccp'),
     ('normativnaya-baza/index.html', '../', 'normativnaya-baza'),
     ('normativnaya-baza/proverochnye-listy/index.html', '../../', 'normativnaya-baza/proverochnye-listy'),
+    ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html', '../../', 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora'),
 ]
 LEGAL = [('privacy/index.html', '../', 'privacy'), ('soglasie/index.html', '../', 'soglasie')]
 

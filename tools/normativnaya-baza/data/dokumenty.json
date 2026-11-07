@@ -1,0 +1,1156 @@
+{
+ "edition": "ред. 11.2026",
+ "checked": "07.11.2026",
+ "page_url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/",
+ "groups": [
+  {
+   "n": 1,
+   "key": "programmy",
+   "title": "Организационные документы и программы",
+   "h2": "Организационные документы и программы",
+   "lead": "Основа папки. По программе производственного контроля инспектор сверяет всё остальное: какие исследования вы должны были провести, какие журналы вести и кто за что отвечает.",
+   "items": [
+    {
+     "id": "1.1",
+     "title": "Учредительные документы",
+     "note": "Для ИП — документ о государственной регистрации",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "1.2",
+     "title": "Документы на помещение",
+     "note": "Право собственности или договор аренды (субаренды)",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "1.3",
+     "title": "Приказы о назначении ответственных, должностные инструкции",
+     "note": "Кто отвечает за производственный контроль и соблюдение санитарных правил",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "1.4",
+     "title": "Список работников и штатное расписание",
+     "note": "ФИО, профессия, дата приёма. По списку сверяют медкнижки и медосмотры",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "1.5",
+     "title": "Уведомление о начале деятельности",
+     "note": "Если вид деятельности есть в перечне; подают через Госуслуги до начала работы",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "постановление Правительства РФ № 725 (<a href=\"https://86.rospotrebnadzor.ru/news/obnovlenyi-trebovaniya-k-podache-uvedomlenij-o-nachale-osushhestvleniya-nekotoryix-vidov-deyatelnosti.html\" target=\"_blank\" rel=\"noopener\">Роспотребнадзор по ХМАО</a>)",
+     "link_html": "",
+     "for_whom": "если вид деятельности в перечне",
+     "obj": "all",
+     "cond": "если вид деятельности в перечне",
+     "cond_for": {}
+    },
+    {
+     "id": "1.6",
+     "title": "Программа производственного контроля (ППК)",
+     "note": "Со ссылками на правила 2026 года и планом лабораторных исследований. Утверждает руководитель. Разрабатываем целиком или только раздел о дезинсекции и дератизации",
+     "who": "Вы или мы",
+     "ours": true,
+     "basis_html": "52-ФЗ, ст. 11 и 32; СП 1.1.1058-01 (<a href=\"https://cgon.rospotrebnadzor.ru/biznesu/profilaktika-nadzor-uslsugi/profilakticheskie-meropriatiya/proizvodstvennyy-kontrol-chto-organizovat-biznesu/\" target=\"_blank\" rel=\"noopener\">ЦГОН</a>)",
+     "link_html": "<a href=\"@/razrabotka-ppk/\">Разработка ППК</a>, <a href=\"@/materialy/programma-proizvodstvennogo-kontrolya-haccp/\">образец ППК по ХАССП</a>",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "1.7",
+     "title": "Программа пест-контроля",
+     "note": "Зоны, кратность обследований, схема точек контроля, график визитов",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "<a href=\"http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773\" target=\"_blank\" rel=\"noopener\">СанПиН 3.3686-21</a>, пп. 88, 101, 110",
+     "link_html": "<a href=\"@/materialy/programma-pest-kontrolya/\">Образец программы</a>",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "1.8",
+     "title": "Документы по процедурам ХАССП",
+     "note": "Программа, схема помещений с критическими контрольными точками, схема движения сырья. Разрабатываем в составе ППК",
+     "who": "Вы или мы",
+     "ours": true,
+     "basis_html": "<a href=\"https://docs.cntd.ru/document/902320560\" target=\"_blank\" rel=\"noopener\">ТР ТС 021/2011</a>, ст. 10; общепит — п. 4 <a href=\"https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/\" target=\"_blank\" rel=\"noopener\">СанПиН 2.3/2.4.4282-26</a>; <a href=\"https://35.rospotrebnadzor.ru/informirovanie/perechen-svedeniy/\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "<a href=\"@/razrabotka-ppk/#haccp\">ППК по ХАССП</a>, <a href=\"@/materialy/programma-proizvodstvennogo-kontrolya-haccp/\">образец</a>",
+     "for_whom": "пищевые производства, общепит, торговля — если есть собственное производство",
+     "obj": [
+      "pp",
+      "ob",
+      "tr"
+     ],
+     "cond": "",
+     "cond_for": {
+      "tr": "если есть собственное производство"
+     }
+    },
+    {
+     "id": "1.9",
+     "title": "Перечень сырья и материалов, список оборудования — источников ультразвука, инфразвука и излучений",
+     "note": "Для промышленных предприятий",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>, раздел о промышленных предприятиях",
+     "link_html": "",
+     "for_whom": "фармпроизводства",
+     "obj": [
+      "fa"
+     ],
+     "cond": "",
+     "cond_for": {}
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "key": "dogovory",
+   "title": "Договоры",
+   "h2": "Какие договоры нужны для Роспотребнадзора",
+   "lead": "Договор показывает, кто и как часто выполняет работы. Инспектор сверяет его с актами: если в договоре нет кратности обследований или нужных зон, вопросы будут к договору.",
+   "items": [
+    {
+     "id": "2.1",
+     "title": "Дезинсекция и дератизация — с исполнителем, у которого есть лицензия",
+     "note": "Обследования на насекомых не реже 2 раз в месяц для объектов из п. 98, ежемесячная оценка заселённости грызунами, мусорокамеры и площадка, сроки внеплановых выездов",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "<a href=\"http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773\" target=\"_blank\" rel=\"noopener\">СанПиН 3.3686-21</a>, пп. 88, 98, 101, 110, 133; лицензия — с 01.03.2025 (<a href=\"https://cgon.rospotrebnadzor.ru/biznesu/profilaktika-nadzor-uslsugi/nadzornie-meropriatiya/litsenzirovanie-dezinfektsionnoy-deyatelnosti/\" target=\"_blank\" rel=\"noopener\">ЦГОН</a>)",
+     "link_html": "<a href=\"@/dogovor-deratizatsiya-dezinsektsiya/\">Образец договора</a>",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "2.2",
+     "title": "Лабораторные исследования и инструментальные замеры",
+     "note": "Если нет своей аккредитованной лаборатории. Перечень исследований — по ППК",
+     "who": "Аккредитованная лаборатория",
+     "ours": false,
+     "basis_html": "п. 2.5 СП 1.1.1058-01 (<a href=\"https://www.garant.ru/consult/work_law/1620091/\" target=\"_blank\" rel=\"noopener\">Гарант</a>); <a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "Смывы и пробы воздуха — в <a href=\"@/sanitarnyy-audit/\">санаудите</a>",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "2.3",
+     "title": "Вывоз твёрдых коммунальных отходов",
+     "note": "С региональным оператором; акты оказанных услуг",
+     "who": "Региональный оператор",
+     "ours": false,
+     "basis_html": "п. 4 ст. 24.7 89-ФЗ (<a href=\"https://www.consultant.ru/law/podborki/obyazatelno_li_zaklyuchat_dogovor_s_regionalnym_operatorom/\" target=\"_blank\" rel=\"noopener\">КонсультантПлюс</a>)",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "2.4",
+     "title": "Отходы I–II класса опасности: отработанные ртутные лампы и другие",
+     "note": "Передача ФГУП «ФЭО» через ФГИС ОПВК — если такие отходы образуются",
+     "who": "ФГУП «ФЭО»",
+     "ours": false,
+     "basis_html": "ст. 14.4 89-ФЗ (<a href=\"https://rpn.gov.ru/regions/51/news/o-neobkhodimosti-registratsii-v-fgis-opvk-pri-obrashchenii-s-otkhodami-i-i-ii-klassov-opasnosti-5825141.html\" target=\"_blank\" rel=\"noopener\">Росприроднадзор</a>)",
+     "link_html": "",
+     "for_whom": "если такие отходы образуются",
+     "obj": "all",
+     "cond": "если такие отходы образуются",
+     "cond_for": {}
+    },
+    {
+     "id": "2.5",
+     "title": "Предварительные и периодические медицинские осмотры",
+     "note": "С медицинской организацией, у которой есть лицензия",
+     "who": "Медорганизация",
+     "ours": false,
+     "basis_html": "приказ Минздрава № 29н (<a href=\"https://77.rospotrebnadzor.ru/index.php/press-centr/press-relizy/15322-o-vazhnosti-prokhozhdeniya-periodicheskikh-meditsinskikh-osmotrov-19-04-2026\" target=\"_blank\" rel=\"noopener\">Роспотребнадзор по Москве</a>)",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "2.6",
+     "title": "Стирка санитарной и специальной одежды, белья",
+     "note": "Если стирают не на объекте",
+     "who": "Прачечная",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "если стирают не на объекте",
+     "obj": "all",
+     "cond": "если стирают не на объекте",
+     "cond_for": {}
+    },
+    {
+     "id": "2.7",
+     "title": "Очистка и дезинфекция вентиляции и кондиционирования",
+     "note": "Централизованные системы кондиционирования и увлажнения: профилактическая очистка и дезинфекция — не реже 1 раза в год",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "п. 132 СанПиН 3.3686-21 (<a href=\"https://cgon.rospotrebnadzor.ru/biznesu/articles/ventilyatsiya-ochistka-i-dezinfektsiya/\" target=\"_blank\" rel=\"noopener\">ЦГОН</a>)",
+     "link_html": "<a href=\"@/ochistka-dezinfektsiya-ventilyatsii/\">Вентиляция</a>",
+     "for_whom": "если есть такие системы",
+     "obj": "all",
+     "cond": "если есть такие системы",
+     "cond_for": {}
+    },
+    {
+     "id": "2.8",
+     "title": "Профилактическая дезинфекция",
+     "note": "Если её выполняет подрядчик, а не ваш персонал",
+     "who": "Мы или ваш персонал",
+     "ours": true,
+     "basis_html": "ППК",
+     "link_html": "<a href=\"@/dezinfektsiya/\">Дезинфекция</a>",
+     "for_whom": "если работает подрядчик",
+     "obj": "all",
+     "cond": "если работает подрядчик",
+     "cond_for": {}
+    },
+    {
+     "id": "2.9",
+     "title": "Передача и утилизация отходов производства",
+     "note": "Договоры и акты выполненных работ",
+     "who": "Специализированная организация",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "пищевые производства, фармпроизводства",
+     "obj": [
+      "pp",
+      "fa"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "2.10",
+     "title": "Водоснабжение, водоотведение, тепло- и электроснабжение",
+     "note": "Договоры с ресурсоснабжающими организациями",
+     "who": "Ресурсоснабжающие организации",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>, раздел о персональных услугах",
+     "link_html": "",
+     "for_whom": "салоны и бытовые услуги",
+     "obj": [
+      "us"
+     ],
+     "cond": "",
+     "cond_for": {}
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "key": "akty",
+   "title": "Акты и отчёты",
+   "h2": "Акты: чем подтвердить, что работы выполнены",
+   "lead": "Акты подтверждают, что работы по договору действительно проводились. Инспектор смотрит даты, кратность и результаты, а не только подписи.",
+   "items": [
+    {
+     "id": "3.1",
+     "title": "Акт первичного обследования объекта",
+     "note": "Заселённость, места проникновения, точки контроля, риски",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "п. 88 <a href=\"http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773\" target=\"_blank\" rel=\"noopener\">СанПиН 3.3686-21</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "3.2",
+     "title": "Акты плановых обследований на насекомых",
+     "note": "Не реже 2 раз в месяц на объектах из п. 98, на остальных — ежемесячно",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "п. 101 <a href=\"http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773\" target=\"_blank\" rel=\"noopener\">СанПиН 3.3686-21</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "3.3",
+     "title": "Отчёт об оценке заселённости грызунами и решение о дератизации",
+     "note": "На объектах из п. 98 — ежемесячно",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "п. 110 <a href=\"http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773\" target=\"_blank\" rel=\"noopener\">СанПиН 3.3686-21</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "3.4",
+     "title": "Акты выполненных работ по каждой обработке",
+     "note": "Дата и время, помещения, средство и номер СГР, концентрация, способ, меры безопасности, исполнитель",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>; п. 102 СанПиН 3.3686-21; общепит — п. 45 <a href=\"https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/\" target=\"_blank\" rel=\"noopener\">СанПиН 2.3/2.4.4282-26</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "3.5",
+     "title": "Обследование мусорокамер и обработка контейнерной площадки",
+     "note": "Мусорокамеры — не реже 1 раза в месяц; площадка, если она ваша, — с кратностью по прил. 1 к СанПиН 2.1.3684-21",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "п. 133 СанПиН 3.3686-21; п. 8 и прил. 1 <a href=\"http://pravo.gov.ru/proxy/ips/?doc_itself=&amp;backlink=1&amp;nd=602024221&amp;page=1&amp;rdk=3\" target=\"_blank\" rel=\"noopener\">СанПиН 2.1.3684-21</a>; торговля — п. 72 СП 2.3.6.4281-26",
+     "link_html": "",
+     "for_whom": "если есть мусорокамера или площадка",
+     "obj": "all",
+     "cond": "если есть мусорокамера или площадка",
+     "cond_for": {}
+    },
+    {
+     "id": "3.6",
+     "title": "Акт очистки и дезинфекции вентиляции",
+     "note": "С записью в журнале учёта работ",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "п. 132 СанПиН 3.3686-21 (<a href=\"https://cgon.rospotrebnadzor.ru/biznesu/articles/ventilyatsiya-ochistka-i-dezinfektsiya/\" target=\"_blank\" rel=\"noopener\">ЦГОН</a>); МР 3.5.0396-25",
+     "link_html": "<a href=\"@/ochistka-dezinfektsiya-ventilyatsii/\">Вентиляция</a>",
+     "for_whom": "если есть такие системы",
+     "obj": "all",
+     "cond": "если есть такие системы",
+     "cond_for": {}
+    },
+    {
+     "id": "3.7",
+     "title": "Акт обследования технического состояния вентиляции",
+     "note": "С инструментальными измерениями объёмов вытяжки: перед вводом в эксплуатацию или реконструкцией, через 2 года, затем не реже 1 раза в 10 лет",
+     "who": "Подрядчик по вентиляции",
+     "ours": false,
+     "basis_html": "п. 8 <a href=\"http://publication.pravo.gov.ru/file/pdf?eoNumber=0001202606020088\" target=\"_blank\" rel=\"noopener\">СП 2.1.4284-26</a>; вопрос проверочного листа № 578 (<a href=\"https://base.garant.ru/414956074/172a6d689833ce3e42dc0a8a7b3cddf9/\" target=\"_blank\" rel=\"noopener\">Гарант</a>)",
+     "link_html": "",
+     "for_whom": "если на объект распространяется СП 2.1.4284-26",
+     "obj": "all",
+     "cond": "если на объект распространяется СП 2.1.4284-26",
+     "cond_for": {}
+    },
+    {
+     "id": "3.8",
+     "title": "Акт очистки вентиляции от горючих отложений",
+     "note": "Его запрашивает пожарный надзор, но удобно хранить в той же папке",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "Правила противопожарного режима, п. 43",
+     "link_html": "<a href=\"@/ochistka-dezinfektsiya-ventilyatsii/\">Вентиляция</a>",
+     "for_whom": "если есть вентиляция",
+     "obj": "all",
+     "cond": "если есть вентиляция",
+     "cond_for": {}
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "key": "protokoly",
+   "title": "Протоколы лабораторных исследований",
+   "h2": "Протоколы лабораторных исследований",
+   "lead": "Какие исследования нужны и как часто, устанавливает ваша программа производственного контроля. Инспектор сверяет протоколы с планом исследований в программе и проверяет, что лаборатория аккредитована.",
+   "items": [
+    {
+     "id": "4.1",
+     "title": "Смывы с поверхностей, оборудования, инвентаря и рук персонала",
+     "note": "По плану ППК",
+     "who": "Лаборатория; входят в наш санаудит",
+     "ours": true,
+     "basis_html": "ППК; СП 1.1.1058-01",
+     "link_html": "<a href=\"@/sanitarnyy-audit/\">Санитарный аудит</a>",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "4.2",
+     "title": "Пробы воздуха помещений",
+     "note": "По плану ППК",
+     "who": "Лаборатория; входят в наш санаудит",
+     "ours": true,
+     "basis_html": "ППК",
+     "link_html": "<a href=\"@/sanitarnyy-audit/\">Санитарный аудит</a>",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "4.3",
+     "title": "Микроклимат, освещённость, шум на рабочих местах",
+     "note": "Можно использовать результаты спецоценки условий труда не старше 6 месяцев",
+     "who": "Аккредитованная лаборатория",
+     "ours": false,
+     "basis_html": "ППК; п. 1.1 ст. 32 52-ФЗ (<a href=\"https://www.consultant.ru/document/cons_doc_LAW_384394/d4d04d2e799bdca563354397e3c1f53374d9dce4/\" target=\"_blank\" rel=\"noopener\">КонсультантПлюс</a>)",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "4.4",
+     "title": "Питьевая вода",
+     "note": "Если исследования предусмотрены ППК",
+     "who": "Лаборатория",
+     "ours": false,
+     "basis_html": "ППК",
+     "link_html": "",
+     "for_whom": "если предусмотрено ППК",
+     "obj": "all",
+     "cond": "если предусмотрено ППК",
+     "cond_for": {}
+    },
+    {
+     "id": "4.5",
+     "title": "Пищевая продукция и сырьё",
+     "note": "По плану ППК и процедурам ХАССП",
+     "who": "Лаборатория",
+     "ours": false,
+     "basis_html": "ППК; <a href=\"https://docs.cntd.ru/document/902320560\" target=\"_blank\" rel=\"noopener\">ТР ТС 021/2011</a>",
+     "link_html": "",
+     "for_whom": "пищевые производства, общепит, торговля — если есть собственное производство",
+     "obj": [
+      "pp",
+      "ob",
+      "tr"
+     ],
+     "cond": "",
+     "cond_for": {
+      "tr": "если есть собственное производство"
+     }
+    },
+    {
+     "id": "4.6",
+     "title": "Легионеллы в системах кондиционирования и увлажнения",
+     "note": "Не реже 2 раз в год; кроме установок малой мощности без увлажнения и сплит-систем",
+     "who": "Мы, через аккредитованную лабораторию",
+     "ours": true,
+     "basis_html": "п. 132 СанПиН 3.3686-21 (<a href=\"https://cgon.rospotrebnadzor.ru/biznesu/articles/ventilyatsiya-ochistka-i-dezinfektsiya/\" target=\"_blank\" rel=\"noopener\">ЦГОН</a>)",
+     "link_html": "<a href=\"@/ochistka-dezinfektsiya-ventilyatsii/\">Вентиляция</a>",
+     "for_whom": "если есть такие системы",
+     "obj": "all",
+     "cond": "если есть такие системы",
+     "cond_for": {}
+    },
+    {
+     "id": "4.7",
+     "title": "Оценка эффективности дезинфекции",
+     "note": "Смывы после обработки — по ППК или договору",
+     "who": "Мы, через лабораторию",
+     "ours": true,
+     "basis_html": "ППК; договор",
+     "link_html": "<a href=\"@/dezinfektsiya/\">Дезинфекция</a>",
+     "for_whom": "если предусмотрено",
+     "obj": "all",
+     "cond": "если предусмотрено",
+     "cond_for": {}
+    },
+    {
+     "id": "4.8",
+     "title": "Атмосферный воздух на границе санитарно-защитной зоны",
+     "note": "Если у предприятия есть выбросы",
+     "who": "Аккредитованная лаборатория",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>, раздел о промышленных предприятиях",
+     "link_html": "",
+     "for_whom": "фармпроизводства — если есть выбросы",
+     "obj": [
+      "fa"
+     ],
+     "cond": "если есть выбросы",
+     "cond_for": {}
+    },
+    {
+     "id": "4.9",
+     "title": "Контроль стерилизации инструментов и работы стерилизаторов",
+     "note": "Договор и протоколы исследований — если стерилизуете инструменты",
+     "who": "Лаборатория",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>, раздел о персональных услугах",
+     "link_html": "",
+     "for_whom": "салоны и бытовые услуги — если стерилизуете инструменты",
+     "obj": [
+      "us"
+     ],
+     "cond": "если стерилизуете инструменты",
+     "cond_for": {}
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "key": "zhurnaly",
+   "title": "Журналы и графики",
+   "h2": "Журналы и графики",
+   "lead": "Журналы показывают, что контроль идёт каждый день или по графику. Для большинства журналов форма рекомендуемая: важны полнота записей и отсутствие пропусков.",
+   "items": [
+    {
+     "id": "5.1",
+     "title": "Журнал пест-контроля (учёта дезинсекции и дератизации)",
+     "note": "Визиты, состояние точек контроля, находки, принятые меры",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "СанПиН 3.3686-21, раздел III",
+     "link_html": "<a href=\"@/materialy/zhurnal-pest-kontrolya/\">Образец журнала</a>",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "5.2",
+     "title": "Журнал учёта работ по вентиляции",
+     "note": "Очистка, дезинфекция, лабораторный контроль",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "МР 3.5.0396-25, прил. 3",
+     "link_html": "<a href=\"@/ochistka-dezinfektsiya-ventilyatsii/\">Вентиляция</a>",
+     "for_whom": "если есть такие системы",
+     "obj": "all",
+     "cond": "если есть такие системы",
+     "cond_for": {}
+    },
+    {
+     "id": "5.3",
+     "title": "Графики уборки и генеральных уборок, журнал генеральных уборок",
+     "note": "",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "5.4",
+     "title": "Контроль дезинфицирующих средств и рабочих растворов",
+     "note": "Маркировка ёмкостей, контроль концентрации — если дезинфекцию проводит ваш персонал",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "ППК; общепит — п. 47 <a href=\"https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/\" target=\"_blank\" rel=\"noopener\">СанПиН 2.3/2.4.4282-26</a>",
+     "link_html": "",
+     "for_whom": "если дезинфицирует ваш персонал",
+     "obj": "all",
+     "cond": "если дезинфицирует ваш персонал",
+     "cond_for": {}
+    },
+    {
+     "id": "5.5",
+     "title": "Журнал учёта работы бактерицидных облучателей",
+     "note": "Если облучатели установлены; вместе с их паспортами",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://35.rospotrebnadzor.ru/informirovanie/perechen-svedeniy/\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "если установлены облучатели",
+     "obj": "all",
+     "cond": "если установлены облучатели",
+     "cond_for": {}
+    },
+    {
+     "id": "5.6",
+     "title": "Гигиенический журнал",
+     "note": "Ежедневный осмотр работников перед сменой; на бумаге или в электронном виде",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "п. 25 и прил. 1 <a href=\"https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/\" target=\"_blank\" rel=\"noopener\">СанПиН 2.3/2.4.4282-26</a>",
+     "link_html": "",
+     "for_whom": "общепит",
+     "obj": [
+      "ob"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "5.7",
+     "title": "Журналы температуры холодильного оборудования, температуры и влажности склада",
+     "note": "Ежедневно, на бумаге и (или) в электронном виде",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "п. 35 и прил. 2, 3 <a href=\"https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/\" target=\"_blank\" rel=\"noopener\">СанПиН 2.3/2.4.4282-26</a>",
+     "link_html": "",
+     "for_whom": "общепит",
+     "obj": [
+      "ob"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "5.8",
+     "title": "Учёт замены фритюрных жиров",
+     "note": "Если есть фритюр: ежедневный контроль, записи хранят не менее 3 месяцев",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "п. 44 <a href=\"https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/\" target=\"_blank\" rel=\"noopener\">СанПиН 2.3/2.4.4282-26</a>",
+     "link_html": "",
+     "for_whom": "общепит — если есть фритюр",
+     "obj": [
+      "ob"
+     ],
+     "cond": "если есть фритюр",
+     "cond_for": {}
+    },
+    {
+     "id": "5.9",
+     "title": "Журналы бракеража готовой и скоропортящейся продукции",
+     "note": "При питании пациентов, детей, в организациях социального обслуживания",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "п. 56, раздел VIII и прил. 4, 5 <a href=\"https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/\" target=\"_blank\" rel=\"noopener\">СанПиН 2.3/2.4.4282-26</a>",
+     "link_html": "",
+     "for_whom": "общепит — при питании пациентов, детей, в соцобслуживании",
+     "obj": [
+      "ob"
+     ],
+     "cond": "при питании пациентов, детей, в соцобслуживании",
+     "cond_for": {}
+    },
+    {
+     "id": "5.10",
+     "title": "Журнал температуры и влажности хранения",
+     "note": "Ежедневно — холодильное оборудование и склады, на бумаге и (или) в электронном виде",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "п. 38 СП 2.3.6.4281-26 (<a href=\"https://legalacts.ru/doc/postanovlenie-glavnogo-gosudarstvennogo-sanitarnogo-vracha-rf-ot-02062026-n_2/\" target=\"_blank\" rel=\"noopener\">legalacts.ru</a>)",
+     "link_html": "",
+     "for_whom": "торговля",
+     "obj": [
+      "tr"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "5.11",
+     "title": "Технологические журналы и журнал поступления сырья",
+     "note": "",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>, <a href=\"https://35.rospotrebnadzor.ru/informirovanie/perechen-svedeniy/\" target=\"_blank\" rel=\"noopener\">вологодский вариант</a>",
+     "link_html": "",
+     "for_whom": "пищевые производства",
+     "obj": [
+      "pp"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "5.12",
+     "title": "Журнал температуры и влажности хранения",
+     "note": "Условия хранения, установленные изготовителем",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "п. 7 ст. 17 <a href=\"https://docs.cntd.ru/document/902320560\" target=\"_blank\" rel=\"noopener\">ТР ТС 021/2011</a>",
+     "link_html": "",
+     "for_whom": "склады",
+     "obj": [
+      "sk"
+     ],
+     "cond": "",
+     "cond_for": {}
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "key": "personal",
+   "title": "Персонал",
+   "h2": "Документы на персонал: медкнижки, медосмотры, гигиеническая аттестация",
+   "lead": "Медкнижки и медосмотры проверяют почти на каждом объекте. Инспектор сверяет их со списком работников.",
+   "items": [
+    {
+     "id": "6.1",
+     "title": "Личные медицинские книжки",
+     "note": "С отметками о медосмотрах, гигиенической аттестации и прививках. Бумажные по прежней форме — до 1 сентября 2027 года, далее — электронные",
+     "who": "Работник; сроки контролируете вы",
+     "ours": false,
+     "basis_html": "ст. 34 52-ФЗ; приказы Минздрава № 90н и № 705н (<a href=\"https://cgon.rospotrebnadzor.ru/lichnye-meditsinskie-knizhki/\" target=\"_blank\" rel=\"noopener\">ЦГОН</a>)",
+     "link_html": "",
+     "for_whom": "если работникам она положена",
+     "obj": "all",
+     "cond": "если работникам она положена",
+     "cond_for": {}
+    },
+    {
+     "id": "6.2",
+     "title": "Документы о медосмотрах",
+     "note": "Список работников для осмотров, заключения предварительных осмотров, заключительный акт по периодическим",
+     "who": "Вы и медорганизация",
+     "ours": false,
+     "basis_html": "приказ Минздрава № 29н (<a href=\"https://77.rospotrebnadzor.ru/index.php/press-centr/press-relizy/15322-o-vazhnosti-prokhozhdeniya-periodicheskikh-meditsinskikh-osmotrov-19-04-2026\" target=\"_blank\" rel=\"noopener\">Роспотребнадзор по Москве</a>)",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "6.3",
+     "title": "Гигиеническая подготовка и аттестация",
+     "note": "При приёме на работу, затем ежегодно — с мясо-молочной и кремово-кондитерской продукцией, детским питанием; остальным — раз в 2 года",
+     "who": "Работник; организует работодатель",
+     "ours": false,
+     "basis_html": "приказ Минздрава № 229 (<a href=\"https://ppt.ru/news/medknijka/gigienicheskuyu-podgotovku-rabotnikov-razreshat-prohodit-samostoyatelno\" target=\"_blank\" rel=\"noopener\">ppt.ru</a>); торговля — п. 6 СП 2.3.6.4281-26 (<a href=\"https://www.consultant.ru/document/cons_doc_LAW_535840/63e10d7dbe480f3e143ca0dec69ae0b31222f4ff/\" target=\"_blank\" rel=\"noopener\">КонсультантПлюс</a>)",
+     "link_html": "",
+     "for_whom": "если работникам она положена",
+     "obj": "all",
+     "cond": "если работникам она положена",
+     "cond_for": {}
+    },
+    {
+     "id": "6.4",
+     "title": "Сводная ведомость спецоценки условий труда",
+     "note": "",
+     "who": "Вы и организация по СОУТ",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>, раздел о промышленных предприятиях",
+     "link_html": "",
+     "for_whom": "фармпроизводства",
+     "obj": [
+      "fa"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "6.5",
+     "title": "Карточки выдачи СИЗ и документы на их качество",
+     "note": "",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>, раздел о промышленных предприятиях",
+     "link_html": "",
+     "for_whom": "фармпроизводства",
+     "obj": [
+      "fa"
+     ],
+     "cond": "",
+     "cond_for": {}
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "key": "ispolnitel",
+   "title": "Документы исполнителя",
+   "h2": "Документы исполнителя, которые должны храниться у вас",
+   "lead": "Эти документы готовит подрядчик, но храниться они должны у вас: инспектор запрашивает их у проверяемой организации.",
+   "items": [
+    {
+     "id": "7.1",
+     "title": "Номер лицензии исполнителя и выписка из реестра",
+     "note": "Лицензия на дезинфекционную деятельность; проверяется в реестре Роспотребнадзора",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "99-ФЗ; постановление Правительства РФ № 337; <a href=\"https://fp.rospotrebnadzor.ru/licen/\" target=\"_blank\" rel=\"noopener\">реестр лицензий</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "7.2",
+     "title": "Свидетельства о госрегистрации (СГР) и инструкции на средства исполнителя",
+     "note": "На все средства, которые применяют на объекте; по запросу — паспорта безопасности",
+     "who": "Мы",
+     "ours": true,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "7.3",
+     "title": "Рекомендации по защите объекта и отметки о выполнении",
+     "note": "Сетки, уплотнители, закрытие проёмов — то, что делает сам объект",
+     "who": "Мы и вы",
+     "ours": true,
+     "basis_html": "п. 88 <a href=\"http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773\" target=\"_blank\" rel=\"noopener\">СанПиН 3.3686-21</a>; торговля — п. 78 СП 2.3.6.4281-26",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "key": "produkciya",
+   "title": "Документы на продукцию и средства",
+   "h2": "Документы на продукцию и средства",
+   "lead": "Эти документы подтверждают происхождение, безопасность и прослеживаемость продукции. Их запрашивают на пищевых объектах, в торговле и сфере услуг.",
+   "items": [
+    {
+     "id": "8.1",
+     "title": "Товаросопроводительные документы",
+     "note": "Накладные, ТТН — на продукцию, которая есть на объекте",
+     "who": "Поставщик; храните вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>; общепит — п. 5 <a href=\"https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/\" target=\"_blank\" rel=\"noopener\">СанПиН 2.3/2.4.4282-26</a>",
+     "link_html": "",
+     "for_whom": "пищевые производства, общепит, торговля, склады, салоны и бытовые услуги",
+     "obj": [
+      "pp",
+      "ob",
+      "tr",
+      "sk",
+      "us"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "8.2",
+     "title": "Декларации и сертификаты соответствия, СГР",
+     "note": "На продукцию, для которой они обязательны",
+     "who": "Изготовитель или поставщик",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "пищевые производства, общепит, торговля, склады, салоны и бытовые услуги",
+     "obj": [
+      "pp",
+      "ob",
+      "tr",
+      "sk",
+      "us"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "8.3",
+     "title": "Технологические и технико-технологические карты",
+     "note": "Утверждены руководителем; названия блюд в меню — как в картах",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "п. 11 <a href=\"https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/\" target=\"_blank\" rel=\"noopener\">СанПиН 2.3/2.4.4282-26</a>",
+     "link_html": "",
+     "for_whom": "общепит",
+     "obj": [
+      "ob"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "8.4",
+     "title": "Документация на выпускаемую продукцию",
+     "note": "Нормативная и техническая документация, ассортиментный перечень, декларации",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://35.rospotrebnadzor.ru/informirovanie/perechen-svedeniy/\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "пищевые производства",
+     "obj": [
+      "pp"
+     ],
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "8.5",
+     "title": "Маркировка и данные системы «Честный знак»",
+     "note": "Этикетки и коды маркировки — если продаёте маркируемые товары",
+     "who": "Вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://35.rospotrebnadzor.ru/informirovanie/perechen-svedeniy/\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "торговля — если продаёте маркируемые товары",
+     "obj": [
+      "tr"
+     ],
+     "cond": "если продаёте маркируемые товары",
+     "cond_for": {}
+    },
+    {
+     "id": "8.6",
+     "title": "Сведения о применении пестицидов в растительном сырье",
+     "note": "Если используете растительное сырьё",
+     "who": "Поставщик",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "пищевые производства — если используете растительное сырьё",
+     "obj": [
+      "pp"
+     ],
+     "cond": "если используете растительное сырьё",
+     "cond_for": {}
+    },
+    {
+     "id": "8.7",
+     "title": "Документы на дезинфицирующие и моющие средства",
+     "note": "СГР или декларации и инструкции — на средства, которые применяет ваш персонал",
+     "who": "Поставщик; храните вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>",
+     "link_html": "",
+     "for_whom": "все объекты",
+     "obj": "all",
+     "cond": "",
+     "cond_for": {}
+    },
+    {
+     "id": "8.8",
+     "title": "Документы на оборудование",
+     "note": "Стерилизаторы, бактерицидные облучатели, ультразвуковые установки — паспорта, сертификаты, инструкции; для солярия — на оборудование и лампы",
+     "who": "Поставщик; храните вы",
+     "ours": false,
+     "basis_html": "<a href=\"https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u\" target=\"_blank\" rel=\"noopener\">перечень сведений</a>, раздел о персональных услугах",
+     "link_html": "",
+     "for_whom": "салоны и бытовые услуги — если есть такое оборудование",
+     "obj": [
+      "us"
+     ],
+     "cond": "если есть такое оборудование",
+     "cond_for": {}
+    }
+   ]
+  }
+ ],
+ "objects": [
+  {
+   "code": "pp",
+   "name": "Пищевое производство",
+   "slug": "pishchevoe-proizvodstvo",
+   "page": "/pishchevoe-proizvodstvo/",
+   "short": "пищевые производства",
+   "important": [
+    "Объект из п. 98 СанПиН 3.3686-21: обследования на насекомых не реже 2 раз в месяц, ежемесячная оценка заселённости грызунами. Насекомых и грызунов на объекте быть не должно (п. 128).",
+    "Процедуры ХАССП оценивают по МР 5.1.0098-14: инспектор запрашивает инструкции, договоры, акты сдачи-приёмки, журналы и графики."
+   ],
+   "checklist": "Отдельной формы в приказах № 578 и № 580 нет",
+   "extra": [
+    "1.8",
+    "2.9",
+    "4.5",
+    "5.11",
+    "8.1",
+    "8.2",
+    "8.4",
+    "8.6"
+   ],
+   "count": 49
+  },
+  {
+   "code": "ob",
+   "name": "Ресторан, кафе, столовая",
+   "slug": "restorany",
+   "page": "/restorany-i-kafe/",
+   "short": "общепит",
+   "important": [
+    "ППК — на принципах ХАССП (п. 4 СанПиН 2.3/2.4.4282-26).",
+    "Во время дезинсекции и дератизации нельзя хранить и готовить продукцию, а распыляемые и рассыпаемые средства — применять при посетителях и персонале (п. 45). Поэтому в актах важны дата и время обработки."
+   ],
+   "checklist": "№ 580, прил. 2 — вопросы 11, 58, 108, 109. Питание детей — № 578, прил. 24",
+   "extra": [
+    "1.8",
+    "4.5",
+    "5.6",
+    "5.7",
+    "5.8",
+    "5.9",
+    "8.1",
+    "8.2",
+    "8.3"
+   ],
+   "count": 50
+  },
+  {
+   "code": "tr",
+   "name": "Магазин, торговая сеть",
+   "slug": "magaziny",
+   "page": "/magaziny-i-torgovye-seti/",
+   "short": "торговля",
+   "important": [
+    "Ежедневный журнал температуры и влажности (п. 38 СП 2.3.6.4281-26), термометры или автоматическая регистрация (п. 32).",
+    "Гигиеническая подготовка работников, контактирующих с продукцией, — при приёме и не реже 1 раза в 2 года (п. 6). Сыпучие продукты — в помещениях без амбарных вредителей (п. 46), дератизация площадки накопления отходов (п. 72), насекомые и грызуны не допускаются (п. 78)."
+   ],
+   "checklist": "№ 580, прил. 1 — вопросы 58, 89, 138, 153, 155",
+   "extra": [
+    "1.8",
+    "4.5",
+    "5.10",
+    "8.1",
+    "8.2",
+    "8.5"
+   ],
+   "count": 47
+  },
+  {
+   "code": "sk",
+   "name": "Склад пищевой продукции",
+   "slug": "sklady",
+   "page": "/sklady-i-logistika/",
+   "short": "склады",
+   "important": [
+    "Хранение пищевой продукции входит в п. 98 СанПиН 3.3686-21 — кратность обследований как у пищевых объектов.",
+    "Журнал температуры и влажности — по условиям изготовителя (ст. 17 ТР ТС 021/2011); документы, подтверждающие прослеживаемость партий."
+   ],
+   "checklist": "Отдельной формы нет",
+   "extra": [
+    "5.12",
+    "8.1",
+    "8.2"
+   ],
+   "count": 44
+  },
+  {
+   "code": "fa",
+   "name": "Фармацевтическое производство",
+   "slug": "farmproizvodstvo",
+   "page": "/farmatsevticheskie-proizvodstva/",
+   "short": "фармпроизводства",
+   "important": [
+    "Для Роспотребнадзора — документы промышленного предприятия: условия труда, спецоценка, медосмотры, СИЗ, замеры, отходы, санитарно-защитная зона. Так же собирают папку другие промышленные предприятия.",
+    "Пест-контроль по п. 3.4 Правил GMP ЕАЭС оценивают на инспекциях GMP и аудитах — это отдельная проверка."
+   ],
+   "checklist": "Отдельной формы нет",
+   "extra": [
+    "1.9",
+    "2.9",
+    "4.8",
+    "6.4",
+    "6.5"
+   ],
+   "count": 46
+  },
+  {
+   "code": "go",
+   "name": "Гостиница, хостел",
+   "slug": "gostinitsy",
+   "page": "/gostinitsy/",
+   "short": "гостиницы",
+   "important": [
+    "Гостиницы входят в п. 98: обследования не реже 2 раз в месяц, ежемесячная оценка заселённости грызунами, обследование мусорокамер (п. 133), легионеллы — при централизованном кондиционировании и увлажнении (п. 132).",
+    "Уведомление о начале деятельности гостиницы не подают: гостиничные услуги исключены из перечня постановления № 725. Если есть ресторан, добавьте раздел «Ресторан, кафе, столовая»."
+   ],
+   "checklist": "№ 578, прил. 2 — вопросы 28 и 39–43",
+   "extra": [],
+   "count": 41
+  },
+  {
+   "code": "us",
+   "name": "Салон красоты, бытовые услуги",
+   "slug": "uslugi",
+   "page": "",
+   "short": "салоны и бытовые услуги",
+   "important": [
+    "Перечень сведений для персональных услуг включает договоры на водо-, тепло- и электроснабжение, на стирку белья, на утилизацию ламп, документы на стерилизаторы и облучатели и контроль стерилизации."
+   ],
+   "checklist": "№ 580, прил. 5 — вопросы 20, 28–33, 89, 90",
+   "extra": [
+    "2.10",
+    "4.9",
+    "8.1",
+    "8.2",
+    "8.8"
+   ],
+   "count": 46
+  },
+  {
+   "code": "dr",
+   "name": "Другой объект",
+   "slug": "drugoy",
+   "page": "",
+   "short": "другие объекты",
+   "important": [
+    "Сверьтесь с официальным перечнем сведений для своего вида деятельности. Для медицинских и детских организаций перечень шире: дополнительные журналы, договоры на утилизацию медицинских отходов и обслуживание медтехники, документы по питанию."
+   ],
+   "checklist": "Форма — по виду деятельности, см. разбор проверочных листов",
+   "extra": [],
+   "count": 41
+  }
+ ],
+ "deadlines": [
+  {
+   "date": "01.03.2027",
+   "text": "Заканчивается срок СанПиН 2.1.3684-21 — в нём требования к контейнерным площадкам (п. 8, прил. 1). После утверждения замены сверьте ссылки в ППК и договоре.",
+   "src_name": "нормативная база сайта",
+   "src_url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/"
+  },
+  {
+   "date": "01.09.2027",
+   "text": "Заканчивается срок СанПиН 3.3686-21 — главного документа о дезинсекции и дератизации. Программу пест-контроля, договор и раздел ППК нужно будет обновить.",
+   "src_name": "нормативная база сайта",
+   "src_url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/"
+  },
+  {
+   "date": "до 01.09.2027",
+   "text": "Можно выдавать и вести бумажные медкнижки прежней формы. Проверьте, у кого из работников они бумажные.",
+   "src_name": "ЦГОН",
+   "src_url": "https://cgon.rospotrebnadzor.ru/lichnye-meditsinskie-knizhki/"
+  },
+  {
+   "date": "с 01.09.2027",
+   "text": "Если примут законопроект, внесённый 07.10.2026, гигиеническая подготовка изменится: при поступлении на работу и затем раз в 5 лет, с самостоятельной подготовкой и электронной оценкой. Пока действует приказ № 229.",
+   "src_name": "ppt.ru",
+   "src_url": "https://ppt.ru/news/medknijka/gigienicheskuyu-podgotovku-rabotnikov-razreshat-prohodit-samostoyatelno"
+  }
+ ],
+ "base_count": 41,
+ "total": 64
+}

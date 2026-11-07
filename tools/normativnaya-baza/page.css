@@ -127,6 +127,13 @@
 .nb-link b{font-weight:400;font-size:clamp(18px,1.3vw,23px);line-height:1.32;letter-spacing:-.01em}
 .nb-link-go{margin-top:auto;color:var(--t2);font-size:15px;transition:color .25s}
 .nb-link:hover .nb-link-go,.nb-link:focus-visible .nb-link-go{color:var(--t1)}
+/* карточка на всю ширину: фото слева, текст справа (перечень «Документы для Роспотребнадзора») */
+.nb-link-wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;padding:0;min-height:0}
+.nb-link-wide>:not(.nb-link-img){margin:0}
+.nb-link-wide .nb-link-img{margin:0;border-bottom:0;border-right:1px solid var(--line);aspect-ratio:16/9}
+.nb-link-txt{display:flex;flex-direction:column;gap:12px;padding:clamp(24px,2.6vw,44px)}
+.nb-link-d{color:var(--t2);font-size:15px;line-height:1.6;max-width:560px}
+.nb-link-wide b{font-size:clamp(20px,1.6vw,28px)}
 
 /* автор */
 .nb-author-wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(24px,3vw,56px);align-items:center}
@@ -200,6 +207,9 @@
 @media (max-width:600px){
   .nb-links{grid-template-columns:minmax(0,1fr)}
   .nb-link{min-height:0}
+  .nb-link-wide{display:flex;flex-direction:column}
+  .nb-link-wide .nb-link-img{aspect-ratio:4/3;border-right:0;border-bottom:1px solid var(--line)}
+  .nb-link-txt{padding:4px clamp(22px,2vw,32px) clamp(22px,2vw,30px)}
   .nb-page .nb-steps{grid-template-columns:minmax(0,1fr)}
   .nb-dl,.nb-q-wide .nb-dl{grid-template-columns:minmax(0,1fr)}
   .nb-dl dt{padding-bottom:2px}

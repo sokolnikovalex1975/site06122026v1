@@ -1,0 +1,203 @@
+/* «Документы для Роспотребнадзора» (/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/): свои блоки dk-*, остальное — из page.css (nb-*) */
+/* первый экран — как у хаба и проверочных листов (page.css: .d-hero.nb-hero), свои — ссылка на PDF и кадр фото */
+.dk-pdf-line{margin:20px 0 0}
+.dk-pdf-line a{display:inline-flex;align-items:center;gap:10px;color:var(--t2);font-size:15px;line-height:1.4;border-bottom:1px solid rgba(124,134,255,.35);padding-bottom:2px;transition:color .25s,border-color .25s}
+.dk-pdf-line a:hover,.dk-pdf-line a:focus-visible{color:var(--t1);border-color:var(--t1)}
+.dk-pdf-line svg{width:18px;height:18px;flex:none;color:var(--acc)}
+.dk-hero .d-hero-media::before{background:linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.9) 42%,rgba(0,0,0,.42) 58%,rgba(0,0,0,0) 70%),linear-gradient(180deg,#000 0,rgba(0,0,0,.55) 90px,rgba(0,0,0,0) 260px),linear-gradient(0deg,#000 0,rgba(0,0,0,.65) 110px,rgba(0,0,0,0) 300px)}
+
+/* чек-лист PDF: обложка, описание, кнопка */
+.dk-pdfcard{display:grid;grid-template-columns:132px minmax(0,1fr) auto;gap:clamp(20px,2.6vw,44px);align-items:center;margin-top:clamp(28px,2.6vw,44px);padding:clamp(22px,2.2vw,34px) clamp(22px,2.8vw,48px)}
+.dk-cover{display:block;border-radius:6px;overflow:hidden;box-shadow:0 18px 40px -14px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.1);transform:rotate(-2deg);transition:transform .4s var(--ease)}
+.dk-pdfcard:hover .dk-cover{transform:rotate(0) translateY(-2px)}
+.dk-cover img{display:block;width:100%;height:auto;background:#fff}
+.dk-pdfcard-k{margin:0 0 10px;font-size:clamp(19px,1.4vw,24px);font-weight:400;letter-spacing:-.02em;line-height:1.3;color:var(--t1)}
+.dk-pdfcard-t p:last-child{margin:0;color:var(--t2);line-height:1.62;max-width:820px}
+.dk-pdfcard-b{white-space:nowrap}
+
+/* восемь групп */
+.dk-gs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.dk-g{display:flex;flex-direction:column;gap:10px;padding:clamp(20px,1.8vw,28px);color:var(--t1);min-height:220px}
+.dk-g-n{font-size:14px;font-weight:500;color:var(--acc)}
+.dk-g b{font-weight:400;font-size:clamp(18px,1.25vw,22px);line-height:1.3;letter-spacing:-.01em}
+.dk-g-d{color:var(--t2);font-size:15px;line-height:1.55}
+.dk-g-c{margin-top:auto;color:var(--t3);font-size:14px;transition:color .25s}
+.dk-g:hover .dk-g-c,.dk-g:focus-visible .dk-g-c{color:var(--t1)}
+
+/* конструктор */
+.dk-picks{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}
+.dk-pick{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:8px 10px 8px 18px;border:1.4px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.03);color:var(--t2);font:inherit;font-size:15px;cursor:pointer;transition:border-color .25s,color .25s,background .25s}
+.dk-pick small{min-width:30px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.07);color:var(--t3);font-size:13px;text-align:center;transition:background .25s,color .25s}
+.dk-pick:hover,.dk-pick:focus-visible{border-color:var(--acc);color:var(--t1)}
+.dk-pick[aria-pressed="true"]{border-color:var(--acc);background:rgba(124,134,255,.14);color:var(--t1)}
+.dk-pick[aria-pressed="true"] small{background:var(--acc2);color:#fff}
+.dk-list{min-height:96px}
+.dk-empty{margin:0;padding:26px 28px;border:1.4px dashed var(--line2);border-radius:var(--r);color:var(--t2);line-height:1.6;max-width:900px}
+.dk-lg{margin:0 0 26px}
+.dk-lg h3{display:flex;gap:12px;align-items:baseline;margin:0 0 6px;font-size:clamp(17px,1.15vw,20px);font-weight:500;color:var(--t1)}
+.dk-lg h3 span{color:var(--acc);font-size:14px}
+.dk-row{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:6px 16px;align-items:center;padding:12px 0;border-top:1px solid var(--line2)}
+.dk-row:last-child{border-bottom:1px solid var(--line2)}
+.dk-row-n{color:var(--acc);font-weight:500;font-size:15px;white-space:nowrap}
+.dk-row-t{color:var(--t1);line-height:1.45}
+.dk-row-t small{display:block;color:var(--t3);font-size:13px;margin-top:2px}
+.dk-seg{display:inline-flex;gap:6px}
+.dk-seg button{min-width:44px;min-height:38px;padding:0 14px;border:1.4px solid var(--line2);border-radius:999px;background:transparent;color:var(--t2);font:inherit;font-size:14px;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.dk-seg button:hover,.dk-seg button:focus-visible{border-color:var(--acc);color:var(--t1)}
+.dk-seg button[aria-pressed="true"][data-v="y"]{background:rgba(5,223,114,.14);border-color:rgba(5,223,114,.7);color:#d1fae5}
+.dk-seg button[aria-pressed="true"][data-v="n"]{background:rgba(255,100,103,.14);border-color:rgba(255,100,103,.75);color:#ffe4e6}
+.dk-seg button[aria-pressed="true"][data-v="x"]{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.6);color:#fff}
+.dk-row.is-y .dk-row-t{color:var(--t2)}
+.dk-row.is-n .dk-row-n{color:#ff8a8c}
+.dk-row.is-x .dk-row-t{color:var(--t3)}
+.dk-bar{position:sticky;bottom:14px;z-index:6;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin-top:22px;padding:14px 14px 14px 24px;border:1.4px solid var(--line2);border-radius:20px;background:rgba(12,12,16,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.dk-bar[hidden]{display:none}
+@media (min-width:761px){.dk-bar{margin-right:max(0px,calc(96px - (100vw - 100%) / 2))}}  /* не под кнопками мессенджеров */
+.dk-mini{display:none}
+.dk-count{margin:0;color:var(--t2);font-size:15px;line-height:1.5}
+.dk-count b{color:var(--t1);font-weight:500}
+.dk-count .dk-miss{color:#ffb3b5}
+.dk-acts{display:flex;flex-wrap:wrap;gap:10px}
+.dk-acts .btn{height:48px;padding:0 22px;font-size:15px}
+.dk-privacy{margin:16px 0 0;color:var(--t3);font-size:14px;line-height:1.55}
+.dk-privacy a{color:var(--t2);border-bottom:1px solid rgba(124,134,255,.45)}
+
+/* таблицы групп */
+.dk-sec .head{margin-bottom:clamp(32px,3vw,56px)}
+.dk-tbl{font-size:15px}
+.dk-tbl td{color:var(--t2)}
+.dk-tbl td b{display:block;color:var(--t1);font-weight:500;line-height:1.45}
+.dk-note{display:block;margin-top:4px;color:var(--t2);font-size:14px;line-height:1.55}
+.dk-n{color:var(--acc)!important;font-weight:500;white-space:nowrap}
+.dk-ours{color:var(--acc2);margin-left:6px;font-size:12px;vertical-align:1px}
+.dk-sec tr:target td{background:rgba(124,134,255,.08)}
+@media (min-width:901px){
+  .dk-tbl td:nth-child(1){width:6.5%}
+  .dk-tbl td:nth-child(2){width:29%}
+  .dk-tbl td:nth-child(3){width:13%}
+  .dk-tbl td:nth-child(4){width:22%}
+  .dk-tbl td:nth-child(5){width:14%}
+  .dk-tbl td:nth-child(6){width:15.5%}
+}
+@media (max-width:900px){
+  /* карточка пункта: номер и название, ниже — короткие строки «подпись — значение» */
+  .dk-tbl tr{padding:6px 16px 10px}
+  .dk-tbl td.dk-n{font-size:16px;padding-bottom:4px}
+  .dk-tbl td.dk-n::before{display:none}
+  .dk-tbl td.dk-n+td{border-top:0;padding-top:0;padding-bottom:12px}
+  .dk-tbl td.dk-n+td::before{display:none}
+  .dk-tbl td:nth-child(n+3){position:relative;padding:6px 0 6px 116px;font-size:14px;line-height:1.5}
+  .dk-tbl td:nth-child(n+4){border-top:0}
+  .dk-tbl td:nth-child(n+3)::before{position:absolute;left:0;top:6px;width:104px;margin:0;font-size:12.5px;line-height:1.6}
+  .dk-tbl td:nth-child(3){padding-top:10px}
+  .dk-tbl td:nth-child(3)::before{top:10px}
+  .dk-tbl td.dk-0{display:none}
+}
+@media (max-width:380px){
+  /* узкие телефоны: «СанПиН 2.3/2.4.4282-26;» помещается в колонку значения */
+  .dk-tbl tr{padding:6px 12px 10px}
+  .dk-tbl td:nth-child(n+3){padding-left:98px}
+  .dk-tbl td:nth-child(n+3)::before{width:90px;font-size:12px}
+}
+.dk-akt{margin-top:clamp(28px,2.6vw,44px);padding:clamp(24px,2.4vw,40px);color:var(--t2);line-height:1.65}
+.dk-akt-h{margin:0 0 12px;font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;line-height:1.3;color:var(--t1)}
+.dk-akt p{margin:0;max-width:1100px}
+.dk-akt ul{margin:12px 0 16px;padding-left:22px;columns:2;column-gap:56px}
+.dk-akt li{break-inside:avoid;margin-bottom:4px}
+.dk-akt a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45)}
+
+/* по видам объектов: на компьютере — вкладки, на телефоне — аккордеон */
+.dk-tabs{display:none}
+.dk-o{border:1.4px solid var(--line);border-radius:var(--r);background:var(--card);margin-bottom:12px}
+.dk-o summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 64px 18px 22px;position:relative;color:var(--t1);font-size:17px}
+.dk-o summary::-webkit-details-marker{display:none}
+.dk-o summary small{color:var(--t3);font-size:14px;white-space:nowrap}
+.dk-o summary::after{content:"+";position:absolute;right:20px;top:50%;width:30px;height:30px;margin-top:-15px;border:1px solid var(--line2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--t2);font-size:17px;line-height:1}
+.dk-o[open] summary::after{content:"−"}
+.dk-o-b{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,56px);padding:4px 22px 24px}
+.dk-o-k{margin:18px 0 8px;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.dk-o-col>.dk-o-k:first-child{margin-top:0}
+.dk-x{list-style:none;padding:0;margin:0}
+.dk-x li{padding:9px 0;border-top:1px solid var(--line2);color:var(--t1);line-height:1.5}
+.dk-x-n{color:var(--acc);font-weight:500;margin-right:6px}
+.dk-x-c{color:var(--t3)}
+.dk-x-none,.dk-o-cl{margin:0;color:var(--t2);line-height:1.6}
+.dk-imp{margin:0;padding-left:20px;color:var(--t2);line-height:1.62}
+.dk-imp li+li{margin-top:8px}
+.dk-o-page{margin:18px 0 0}
+.dk-o-page a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45)}
+@media (min-width:761px){
+  .js .dk-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+  .js .dk-tab{padding:10px 18px;border:1.4px solid var(--line2);border-radius:999px;background:transparent;color:var(--t2);font:inherit;font-size:15px;cursor:pointer;transition:border-color .25s,color .25s,background .25s}
+  .js .dk-tab:hover,.js .dk-tab:focus-visible{border-color:var(--acc);color:var(--t1)}
+  .js .dk-tab[aria-selected="true"]{border-color:var(--acc);background:rgba(124,134,255,.14);color:var(--t1)}
+  .js .dk-o summary{display:none}
+  .js .dk-o:not([open]){display:none}
+  .js .dk-o-b{padding-top:clamp(22px,2.2vw,34px)}
+}
+
+/* как запрашивают документы */
+.dk-rules{list-style:none;padding:0;margin:0;max-width:1240px}
+.dk-rules li{position:relative;padding:16px 0 16px 34px;border-top:1px solid var(--line2);color:var(--t2);line-height:1.62}
+.dk-rules li::before{content:"";position:absolute;left:4px;top:25px;width:9px;height:9px;border-radius:50%;background:var(--acc)}
+.dk-rules b{color:var(--t1);font-weight:500}
+.dk-rules a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45)}
+.dk-h3{margin-top:clamp(40px,3.6vw,64px)!important;margin-bottom:14px!important}
+
+/* что готовим мы */
+.dk-we{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.dk-we-c{min-height:250px;padding-top:clamp(22px,2vw,30px)}
+.dk-we-d{color:var(--t2);font-size:15px;line-height:1.6}
+
+/* печать списка из конструктора */
+#dk-print-area{display:none}
+@media print{
+  body.dk-printing>*:not(#dk-print-area){display:none!important}
+  body.dk-printing #dk-print-area{display:block;color:#000;font:12pt/1.45 Inter,Arial,sans-serif}
+  #dk-print-area h1{font-size:18pt;margin:0 0 4pt}
+  #dk-print-area p{margin:0 0 10pt}
+  #dk-print-area h2{font-size:12.5pt;margin:12pt 0 4pt}
+  #dk-print-area table{width:100%;border-collapse:collapse}
+  #dk-print-area td{border:1px solid #bbb;padding:4pt 6pt;vertical-align:top}
+  #dk-print-area td:first-child{width:9%;white-space:nowrap}
+  #dk-print-area td:last-child{width:16%}
+}
+
+@media (max-width:1100px){
+  .dk-gs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dk-we{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:1180px){
+  .dk-hero .dk-pdf-line{order:4}
+  .dk-hero .d-hero-media::before{background:linear-gradient(0deg,#000 0,rgba(0,0,0,0) 24%)}
+}
+@media (max-width:760px){
+  .dk-pdfcard{grid-template-columns:64px minmax(0,1fr);gap:16px 18px}
+  .dk-pdfcard-t{display:contents}
+  .dk-pdfcard-k{align-self:center;margin:0}
+  .dk-pdfcard-t p:last-child{grid-column:1/-1}
+  .dk-pdfcard-b{grid-column:1/-1;justify-content:center}
+  .dk-o-b{grid-template-columns:minmax(0,1fr);gap:0}
+  .dk-o-col+.dk-o-col{margin-top:18px}
+  .dk-akt ul{columns:1}
+  .dk-row{grid-template-columns:44px minmax(0,1fr)}
+  .dk-seg{grid-column:2}
+  .dk-bar{position:static;padding:12px;border-radius:16px}
+  /* счётчик над нижней панелью сайта и слева от кнопок мессенджеров */
+  .dk-mini:not([hidden]){display:flex;width:max-content;max-width:calc(100% - 64px);position:sticky;bottom:calc(88px + env(safe-area-inset-bottom));z-index:6;align-items:center;gap:10px;margin-top:14px;padding:10px 16px;border:1.4px solid var(--line2);border-radius:999px;background:rgba(12,12,16,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--t2);font:inherit;font-size:14px;line-height:1.35;text-align:left;cursor:pointer}
+  .dk-mini-t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .dk-mini b{color:var(--t1);font-weight:500}
+  .dk-mini .dk-miss{color:#ffb3b5}
+  .dk-mini-go{color:var(--acc)}
+  .dk-acts{width:100%}
+  .dk-acts .btn{flex:1 1 auto;height:46px;padding:0 16px;font-size:14px}
+  .dk-acts .dk-dl{display:none}
+}
+@media (max-width:600px){
+  .dk-gs,.dk-we{grid-template-columns:minmax(0,1fr)}
+  .dk-g{min-height:0}
+  .dk-we-c{min-height:0}
+  .dk-pick{font-size:14px;min-height:44px;padding:6px 8px 6px 14px}
+  .dk-o summary{font-size:16px;padding:16px 58px 16px 18px}
+  .dk-o-b{padding:2px 18px 20px}
+}

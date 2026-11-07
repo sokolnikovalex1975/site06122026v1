@@ -2,10 +2,14 @@
 """Фото первого экрана раздела «Нормативная база» из мастер-файлов.
 
     python3 tools/normativnaya-baza/make_images.py <мастер хаба.png> <мастер листов.png>
+    python3 tools/normativnaya-baza/make_images.py dok-hero=<мастер.png>    # одно фото: имя=мастер
 
 Мастер-файлы (PNG 2752×1536, без сжатия) хранятся в файлах проекта, папка «Страница Нормативная база/Визуалы v1»:
     nb-hero-v3-master.png — санитарный врач с папкой норм (хаб /normativnaya-baza/);
     pl-hero-v1-master.png — проходим проверочный лист на складе (/normativnaya-baza/proverochnye-listy/).
+Мастер страницы «Документы для Роспотребнадзора» — в папке «Страница Документы для Роспотребнадзора/Визуалы v1»:
+    dok-hero-v1-master.png — менеджер по качеству отмечает чек-лист, специалист по пест-контролю передаёт акт
+    (/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/; нашивка на рукаве убрана в мастере).
 
 Размеры как у остальных страниц сайта:
     img/<имя>.webp          1920×1072 — компьютер;
@@ -23,7 +27,7 @@ from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 IMG = ROOT / 'img'
 # (имя, левая граница кадра 4:3 в мастере 2752×1536)
-HEROES = [('nb-hero', 704), ('pl-hero', 704)]
+HEROES = [('nb-hero', 704), ('pl-hero', 704), ('dok-hero', 704)]
 Q = 80  # как у остальных фото первого экрана (42–97 КБ при 1920 px)
 
 
@@ -33,9 +37,15 @@ def save(im, path):
 
 
 def main():
-    if len(sys.argv) != 3:
+    args, left = sys.argv[1:], dict(HEROES)
+    if args and all('=' in a for a in args):
+        pairs = [a.split('=', 1) for a in args]
+    elif len(args) == 2:
+        pairs = list(zip(('nb-hero', 'pl-hero'), args))
+    else:
         sys.exit(__doc__)
-    for (name, x0), master in zip(HEROES, sys.argv[1:3]):
+    for name, master in pairs:
+        x0 = left[name]
         im = Image.open(master).convert('RGB')
         assert im.size == (2752, 1536), (master, im.size)
         for w, h, suffix in ((1920, 1072, ''), (1440, 804, '-1440')):

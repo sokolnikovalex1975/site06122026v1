@@ -8,7 +8,8 @@
      tools/sanitarnyy-audit/build_page.py — страница «Санитарный аудит (СЭС-аудит)» из своих исходников;
      tools/razrabotka-ppk/build_page.py — страница «Разработка ППК» из своих исходников;
      tools/dezinfektsiya/build_page.py — страница «Дезинфекция для организаций» из своих исходников;
-     tools/normativnaya-baza/build_pages.py — раздел «Нормативная база» (хаб и «Проверочные листы 2026»);
+     tools/normativnaya-baza/build_pages.py — раздел «Нормативная база» (хаб, «Проверочные листы 2026»
+       и «Документы для Роспотребнадзора»);
   1. tools/site/unify.py        — анимации и заголовки в стиле главной, бегущая строка, «Смотрите также», ссылки «Подробнее»;
   2. tools/site/legal_pages.py  — шапка и подвал сайта на страницах политики и согласия;
   3. tools/menu/apply_menu.py   — одинаковые шапка, мобильное меню и подвал на всех страницах;
@@ -35,6 +36,7 @@ SITEMAP = [  # адрес, приоритет
     ('materialy/zhurnal-pest-kontrolya/', '0.7'), ('materialy/pest-menedzhment-ili-razovaya-obrabotka/', '0.7'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/', '0.7'),
     ('normativnaya-baza/', '0.7'), ('normativnaya-baza/proverochnye-listy/', '0.7'),
+    ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', '0.7'),
 ]
 
 
