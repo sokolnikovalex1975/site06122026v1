@@ -578,8 +578,10 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
 .dk-h3{margin-top:clamp(40px,3.6vw,64px)!important;margin-bottom:14px!important}
 
 /* что готовим мы */
-.dk-we{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.dk-we-c{min-height:250px;padding-top:clamp(22px,2vw,30px)}
+/* пять карточек: три в первом ряду, две во втором — на всю ширину */
+.dk-we{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.dk-we-c{grid-column:span 2;min-height:250px;padding-top:clamp(22px,2vw,30px)}
+.dk-we-c:nth-child(n+4){grid-column:span 3;min-height:200px}
 .dk-we-d{color:var(--t2);font-size:15px;line-height:1.6}
 
 /* печать списка из конструктора */
@@ -599,6 +601,8 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
 @media (max-width:1100px){
   .dk-gs{grid-template-columns:repeat(2,minmax(0,1fr))}
   .dk-we{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dk-we-c,.dk-we-c:nth-child(n+4){grid-column:auto}
+  .dk-we-c:last-child{grid-column:1/-1;min-height:0}
 }
 @media (max-width:1180px){
   .dk-hero .dk-pdf-line{order:4}
@@ -1019,8 +1023,7 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
     <div class="head"><div class="eyebrow" data-eyebrow>Что делаем мы</div><h2 data-split>Что из перечня <em>готовим мы</em></h2><p class="sub" data-fade>В таблицах эти строки отмечены значком <span class="dk-ours" aria-hidden="true">●</span>.</p></div>
     <div class="dk-we" data-group="cards">
       <a class="card nb-link dk-we-c" href="../../dogovor-deratizatsiya-dezinsektsiya/"><span class="nb-link-k">Пункты 1.6, 1.7, 2.1, 3.1–3.5, 5.1, 7.1–7.3</span><b><span class="nw">Пест-контроль</span> по договору</b><span class="dk-we-d">Программа <span class="nw">пест-контроля</span> и схема точек, журнал, акты обследований и обработок, отчёты по грызунам, раздел ППК о дезинсекции и дератизации, номер лицензии, свидетельства о госрегистрации и инструкции на средства, рекомендации по защите объекта.</span><span class="nb-link-go">Образец договора →</span></a>
-      <a class="card nb-link dk-we-c" href="../../razrabotka-ppk/"><span class="nb-link-k">Пункты 1.6, 1.8</span><b>Разработка ППК</b><span class="dk-we-d">Программа производственного контроля (ППК) целиком под ваш объект, для пищевых объектов — по ХАССП: план лабораторных исследований, ссылки на правила 2026 года, раздел о дезинсекции и дератизации.</span><span class="nb-link-go">Разработка ППК →</span></a>
-      <a class="card nb-link dk-we-c" href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/"><span class="nb-link-k">Образец · PDF</span><b>Образец ППК по ХАССП</b><span class="dk-we-d">Готовая программа для пищевого производства на 27 страниц: ККТ, лабораторный контроль, медосмотры, формы учёта и раздел о дезинсекции и дератизации.</span><span class="nb-link-go">Смотреть образец →</span></a>
+      <a class="card nb-link dk-we-c" href="../../razrabotka-ppk/"><span class="nb-link-k">Пункты 1.6, 1.8</span><b>Разработка ППК</b><span class="dk-we-d">Программа производственного контроля (ППК) целиком под ваш объект: план лабораторных исследований, процедуры ХАССП для пищевых объектов, раздел о дезинсекции и дератизации.</span><span class="nb-link-go">Разработка программы производственного контроля →</span></a>
       <a class="card nb-link dk-we-c" href="../../ochistka-dezinfektsiya-ventilyatsii/"><span class="nb-link-k">Пункты 2.7, 3.6, 3.8, 4.6, 5.2</span><b>Вентиляция</b><span class="dk-we-d">Очистка и дезинфекция, акты, журнал учёта работ, смывы на легионеллы через аккредитованную лабораторию, очистка от горючих отложений.</span><span class="nb-link-go">Очистка и дезинфекция вентиляции →</span></a>
       <a class="card nb-link dk-we-c" href="../../dezinfektsiya/"><span class="nb-link-k">Пункты 2.8, 4.7</span><b>Дезинфекция</b><span class="dk-we-d">Профилактическая дезинфекция и оценка её эффективности.</span><span class="nb-link-go">Дезинфекция →</span></a>
       <a class="card nb-link dk-we-c" href="../../sanitarnyy-audit/"><span class="nb-link-k">Пункты 4.1, 4.2</span><b>Санитарный аудит</b><span class="dk-we-d">Проверим объект и папку документов до инспектора. Смывы и пробы воздуха входят в стоимость — от 9 000 ₽; если после аудита вы заключаете договор <span class="nw">на пест-контроль</span>, стоимость аудита засчитываем.</span><span class="nb-link-go">Санитарный аудит →</span></a>
