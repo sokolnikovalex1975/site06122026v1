@@ -13,10 +13,13 @@
     @/                     — корень сайта (../ или ../../)
     <!--FAQ-->             — блок вопросов (из списков FAQ ниже, из них же FAQPage)
     <!--TIMELINE-->        — хроника изменений (прошедшие даты — серым, по дате DATE)
+    <!--ROADMAP-->         — дорожная карта норм 2025–2027 над хроникой (метка «Сегодня» — по дате посетителя, см. ROAD_JS)
+    <!--HERO_PHOTO-->      — фото первого экрана (img/<hero>.webp, мастер-файлы и нарезка — make_images.py)
     <!--OBJ:адрес:текст--> — название объекта; ссылка, только если такая страница есть в репозитории
     <!--INDLINKS-->        — строка ссылок на отраслевые страницы (только существующие)
     <!--FORM_FIELDS-->     — поля формы; тип объекта — только значения, которые принимает send.php
     <!--CTA_CONTACTS-->, <!--ICON:имя-->, LICENSE_URL — как на странице санитарного аудита
+                             (иконки — tools/site/icons.json и свои иконки раздела icons-nb.json)
 
 Дальше страницы доводит общий конвейер сайта (бегущая строка, «Смотрите также», разметка анимаций, общее меню):
 
@@ -185,6 +188,15 @@ LAWS = [  # документы хаба для разметки ItemList (Legisl
      'мероприятий', None, OUT, '2021-09-01', 'https://www.normacs.ru/Doclist/doc/15NM.html'),
 ]
 
+ROADMAP = [  # (дата ISO, как показать, что происходит, подпись сверху или снизу оси, место на оси в %)
+    ('2025-03-01', '01.03.2025', 'Услуги по дезинсекции и дератизации — только по лицензии', 'up', 6),
+    ('2026-09-01', '01.09.2026', 'Новые правила для общепита, торговли, помещений и условий труда', 'down', 22),
+    ('2026-10-04', '04–05.10.2026', 'Начали применяться новые проверочные листы', 'up', 38),
+    ('2026-10-05', '05.10.2026', 'Новая редакция СанПиН 2.1.3684-21', 'down', 51),
+    ('2027-03-01', '01.03.2027', 'Заканчивается срок СанПиН 2.1.3684-21', 'up', 72),
+    ('2027-09-01', '01.09.2027', 'Заканчивается срок СанПиН 3.3686-21', 'down', 90),
+]
+
 TYPES_HUB = [('Пищевое производство', 'Пищевое производство'), ('Ресторан или кафе', 'Ресторан или кафе'),
              ('Магазин или торговая сеть', 'Магазин продуктов'), ('Склад, логистика', 'Склад'),
              ('Гостиница', 'Гостиница'), ('Другое', 'Медицинская организация'), ('Другое', 'Другое')]
@@ -205,6 +217,8 @@ PAGES = [
         'h1': 'СанПиН и требования к дезинсекции и дератизации: что действует в 2026 году',
         'crumbs': [('Главная', ''), ('Нормативная база', 'normativnaya-baza/')],
         'og_image': 'nb-og.jpg', 'og_alt': 'СанПиН и требования к дезинсекции и дератизации в 2026 году',
+        'hero': 'nb-hero', 'hero_alt': 'Санитарный врач в белом халате и голубых перчатках листает папку с нормативными '
+                                        'документами в производственном помещении; на стене — ловушка для летающих насекомых',
         'faq': HUB_FAQ, 'faq_h2': 'Вопросы <em>о нормативных требованиях</em>',
         'types': TYPES_HUB, 'name': 'Нормативная база', 'comment_ph': 'Комментарий: вид деятельности, площадь, ближайшая проверка',
         'date_published': DATE,
@@ -220,6 +234,8 @@ PAGES = [
         'crumbs': [('Главная', ''), ('Нормативная база', 'normativnaya-baza/'),
                    ('Проверочные листы 2026', 'normativnaya-baza/proverochnye-listy/')],
         'og_image': 'pl-og.jpg', 'og_alt': 'Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации',
+        'hero': 'pl-hero', 'hero_alt': 'Менеджер по качеству отмечает пункты проверочного листа, специалист по пест-контролю '
+                                        'показывает на пронумерованный контейнер для мониторинга грызунов на складе',
         'faq': LISTY_FAQ, 'faq_h2': 'Вопросы <em>о проверочных листах</em>',
         'types': TYPES_LISTY, 'name': 'Проверочные листы 2026', 'comment_ph': 'Комментарий: вид деятельности, дата проверки, что смущает',
         'date_published': DATE,
@@ -308,6 +324,76 @@ def timeline_html():
     return '\n'.join(rows)
 
 
+def hero_photo(p):
+    """<picture> первого экрана, как на странице программы пест-контроля: на телефоне (до 860 px) кадр 4:3."""
+    n = p['hero']
+    return (f'<div class="d-hero-media"><picture><source media="(max-width:860px)" '
+            f'srcset="@/img/{n}-mob-760.webp 760w, @/img/{n}-mob.webp 1024w" sizes="100vw" width="1024" height="768">'
+            f'<img class="d-hero-img" src="@/img/{n}.webp" srcset="@/img/{n}-1440.webp 1440w, @/img/{n}.webp 1920w" '
+            f'sizes="100vw" width="1920" height="1072" alt="{p["hero_alt"]}" fetchpriority="high" decoding="async">'
+            '</picture></div>')
+
+
+def hero_preload(p):
+    n = p['hero']
+    return (f'<link rel="preload" as="image" media="(min-width:861px)" imagesrcset="../img/{n}-1440.webp 1440w, '
+            f'../img/{n}.webp 1920w" imagesizes="100vw" fetchpriority="high">\n'
+            f'<link rel="preload" as="image" media="(max-width:860px)" imagesrcset="../img/{n}-mob-760.webp 760w, '
+            f'../img/{n}-mob.webp 1024w" imagesizes="100vw" fetchpriority="high">\n')
+
+
+def road_now(today):
+    """Место метки «Сегодня» на оси и её порядок в вертикальной карте (телефон). Тот же расчёт — в ROAD_JS."""
+    ds = [r[0] for r in ROADMAP]
+    xs = [r[4] for r in ROADMAP]
+    i = sum(d <= today for d in ds)
+    if i == 0:
+        return max(1, xs[0] - 4), -1
+    if i == len(ds):
+        return min(99, xs[-1] + 4), 2 * len(ds)
+    import datetime
+    f = lambda d: datetime.date.fromisoformat(d).toordinal()  # noqa: E731
+    k = (f(today) - f(ds[i - 1])) / (f(ds[i]) - f(ds[i - 1]))
+    return round(xs[i - 1] + (xs[i] - xs[i - 1]) * k, 1), 2 * i - 1
+
+
+def roadmap_html():
+    x, order = road_now(DATE)
+    pts = []
+    for k, (iso, shown, what, side, pos) in enumerate(ROADMAP):
+        state = 'is-past' if iso <= DATE else 'is-next'
+        pts.append(f'        <li class="nb-road-pt is-{side} {state}" data-d="{iso}" style="--x:{pos}%;--o:{2 * k}">'
+                   f'<time datetime="{iso}">{shown}</time><span>{what}</span></li>')
+    shown = '.'.join(reversed(DATE.split('-')))
+    return '\n'.join([
+        '    <figure class="nb-fig nb-road-fig">',
+        '      <figcaption class="nb-fig-head"><span class="nb-fig-t">Дорожная карта норм <em>2025–2027</em></span>'
+        '<span class="nb-fig-d">Серым — то, что уже действует, цветом — предстоящие сроки.</span></figcaption>',
+        '      <ol class="nb-road" id="nbRoad">',
+        f'        <li class="nb-road-axis" aria-hidden="true"><i class="nb-road-fill" style="width:{x}%"></i></li>',
+        *pts,
+        f'        <li class="nb-road-now" aria-hidden="true" style="--x:{x}%;--o:{order}"><span>Сверка норм · {shown}</span></li>',
+        '      </ol>',
+        '    </figure>'])
+
+
+# метка «Сегодня» и цвет событий — по дате посетителя (без скрипта — по дате сверки DATE, как в хронике)
+ROAD_JS = ("<script>/* Дорожная карта и хроника: прошедшее — серым, метка «Сегодня» — по сегодняшней дате */\n"
+           "(function(){var r=document.getElementById('nbRoad');if(!r)return;var t=new Date(),d=new Date(t.getFullYear(),t.getMonth(),t.getDate()),"
+           "P=function(s){var a=s.split('-');return new Date(+a[0],a[1]-1,+a[2]);},pts=[].slice.call(r.querySelectorAll('[data-d]')),"
+           "ds=pts.map(function(p){return P(p.getAttribute('data-d'));}),xs=pts.map(function(p){return parseFloat(p.style.getPropertyValue('--x'));}),"
+           "i=0,x,o;while(i<ds.length&&ds[i]<=d)i++;"
+           "if(i===0){x=Math.max(1,xs[0]-4);o=-1;}else if(i===ds.length){x=Math.min(99,xs[i-1]+4);o=2*i;}"
+           "else{x=xs[i-1]+(xs[i]-xs[i-1])*(d-ds[i-1])/(ds[i]-ds[i-1]);o=2*i-1;}"
+           "pts.forEach(function(p,k){p.classList.toggle('is-past',ds[k]<=d);p.classList.toggle('is-next',ds[k]>d);});"
+           "var n=r.querySelector('.nb-road-now'),z=function(v){return(v<10?'0':'')+v;};"
+           "n.style.setProperty('--x',x.toFixed(1)+'%');n.style.setProperty('--o',o);"
+           "n.firstChild.textContent='Сегодня · '+z(d.getDate())+'.'+z(d.getMonth()+1)+'.'+d.getFullYear();"
+           "r.querySelector('.nb-road-fill').style.width=x.toFixed(1)+'%';"
+           "[].forEach.call(document.querySelectorAll('.nb-tl li'),function(li){var m=li.querySelector('time');if(!m)return;"
+           "var e=P(m.getAttribute('datetime'));li.classList.toggle('is-past',e<=d);li.classList.toggle('is-next',e>d);});})();</script>\n")
+
+
 def form_fields(p):
     for value, _ in p['types']:
         assert value in SEND_TYPES, 'send.php не примет тип объекта: ' + value
@@ -341,6 +427,8 @@ def json_ld(p):
     faq = {'@type': 'FAQPage', '@id': url + '#faq', 'mainEntity': [
         {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': plain(a)}} for q, a in p['faq']]}
     image = {'@type': 'ImageObject', 'url': SITE + 'img/' + p['og_image'], 'width': 1200, 'height': 630}
+    hero = {'@type': 'ImageObject', 'url': SITE + 'img/' + p['hero'] + '.webp', 'width': 1920, 'height': 1072,
+            'caption': p['hero_alt']}
     if p['src'] == 'hub.html':
         items = []
         for i, (ident, name, date, force, expires, link) in enumerate(LAWS):
@@ -353,14 +441,14 @@ def json_ld(p):
             items.append(law)
         page = {'@type': 'WebPage', '@id': url + '#webpage', 'url': url, 'name': p['h1'], 'headline': p['h1'],
                 'description': p['desc'], 'inLanguage': 'ru', 'datePublished': p['date_published'], 'dateModified': DATE,
-                'author': AUTHOR, 'publisher': {'@id': SITE + '#org'}, 'primaryImageOfPage': image,
+                'author': AUTHOR, 'publisher': {'@id': SITE + '#org'}, 'primaryImageOfPage': hero, 'image': [hero, image],
                 'about': ['Дезинсекция', 'Дератизация', 'СанПиН 3.3686-21', 'Проверочные листы Роспотребнадзора'],
                 'mainEntity': {'@type': 'ItemList', 'name': 'Документы о дезинсекции и дератизации',
                                'numberOfItems': len(items), 'itemListElement': items}}
     else:
         page = {'@type': 'Article', '@id': url + '#article', 'headline': p['h1'], 'description': p['desc'],
                 'inLanguage': 'ru', 'datePublished': p['date_published'], 'dateModified': DATE, 'author': AUTHOR,
-                'publisher': {'@id': SITE + '#org'}, 'mainEntityOfPage': url, 'image': image,
+                'publisher': {'@id': SITE + '#org'}, 'mainEntityOfPage': url, 'image': [hero, image],
                 'about': [{'@type': 'Legislation', 'legislationIdentifier': 'Приказ Роспотребнадзора № 578',
                            'legislationDate': '2026-07-20', 'legislationLegalForce': IN, 'url': 'https://base.garant.ru/414956074/'},
                           {'@type': 'Legislation', 'legislationIdentifier': 'Приказ Роспотребнадзора № 580',
@@ -411,15 +499,16 @@ def build(p, tpl, icons):
          f'<meta property="og:image:alt" content="{p["og_alt"]}">\n'
          '<meta name="twitter:card" content="summary_large_image">'),
         (r'<meta property="og:type" content="[^"]*">', '<meta property="og:type" content="article">'),
-        # на первом экране нет фото — предзагрузку фото пищевой страницы убираем
-        (r'<link rel="preload" href="\.\./img/food-hero\.webp"[^>]*>\n<link rel="preload" href="\.\./img/food-hero-mob\.webp"[^>]*>\n?', ''),
+        # вместо фото пищевой страницы — предзагрузка своего фото первого экрана (компьютер и телефон)
+        (r'<link rel="preload" href="\.\./img/food-hero\.webp"[^>]*>\n<link rel="preload" href="\.\./img/food-hero-mob\.webp"[^>]*>\n?',
+         hero_preload(p)),
     ]
     for pat, new in rep:
         head, n = re.subn(pat, lambda m: new, head, count=1)
         if pat.startswith('<meta property="og:type"') and n == 0:
             continue  # в шаблоне может не быть og:type
         assert n == 1, 'шаблон: не найдено ' + pat
-    assert 'food-hero' not in head and 'og:image" content="' + og_img in head
+    assert 'food-hero' not in head and 'og:image" content="' + og_img in head and p['hero'] + '-mob-760.webp' in head
     css = tpl[tpl.index('<style>') + 7:tpl.index('</style>')]
     css += '\n' + (HERE / 'page.css').read_text(encoding='utf-8').strip()
 
@@ -444,6 +533,8 @@ def build(p, tpl, icons):
     main = (HERE / p['src']).read_text(encoding='utf-8')
     main = main.replace('<!--FAQ-->', faq_section(p['faq'], p['faq_h2']))
     main = main.replace('<!--TIMELINE-->', timeline_html())
+    main = main.replace('<!--ROADMAP-->', roadmap_html())
+    main = main.replace('<!--HERO_PHOTO-->', hero_photo(p))
     main = main.replace('<!--FORM_FIELDS-->', form_fields(p))
     main = re.sub(r'<!--OBJ:([a-z0-9-]+):([^>]*?)-->', obj_link('@/'), main)
     main = main.replace('<!--INDLINKS-->', ind_links('@/'))
@@ -457,7 +548,8 @@ def build(p, tpl, icons):
     assert 'LICENSE_URL' not in main
 
     html = (head + '<style>' + css + '</style>\n' + json_ld(p).replace('"@/', '"' + root) + '\n' + top + main + bottom
-            + page_js + '\n' + loader + form_js(p) + '</body>\n</html>\n')
+            + page_js + '\n' + loader + form_js(p) + (ROAD_JS if 'id="nbRoad"' in main else '')
+            + '</body>\n</html>\n')
     out = ROOT / p['out']
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding='utf-8')
@@ -467,6 +559,7 @@ def build(p, tpl, icons):
 def main():
     tpl = (ROOT / 'pishchevoe-proizvodstvo' / 'index.html').read_text(encoding='utf-8')
     icons = json.loads((ROOT / 'tools' / 'site' / 'icons.json').read_text(encoding='utf-8'))
+    icons.update(json.loads((HERE / 'icons-nb.json').read_text(encoding='utf-8')))  # иконки, которых нет в общем наборе
     for p in PAGES:
         build(p, tpl, icons)
 

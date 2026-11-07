@@ -22,6 +22,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2309090b' stroke='%237c86ff' stroke-width='2'/%3E%3Cpath d='M16 7l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10v-5z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preload" href="../../fonts/inter-ru-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" media="(min-width:861px)" imagesrcset="../../img/pl-hero-1440.webp 1440w, ../../img/pl-hero.webp 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(max-width:860px)" imagesrcset="../../img/pl-hero-mob-760.webp 760w, ../../img/pl-hero-mob.webp 1024w" imagesizes="100vw" fetchpriority="high">
 <script>
   /* начальные состояния анимаций — только при работающем JS; страховка — через 4 с всё показывается.
      Заставка — один раз за посещение: при переходе по ссылке с якорем и между страницами сайта её нет */
@@ -46,25 +48,55 @@
 @media (max-width:600px){.f-steps4{grid-template-columns:minmax(0,1fr)}.d-btns .btn,.d-card .btn,.f-check .btn{width:100%;white-space:normal;text-align:center;line-height:1.25}.d-page .btn-lg{padding:0 16px}.f-plan .lbl{display:none}.f-check-in{padding:24px 20px}.f-check-list label{padding:15px 2px;gap:14px}.f-zlist li{padding:14px}}
 @media (max-width:400px){.hdr .wrap{gap:10px}.hdr-right{gap:8px}.logo{gap:8px}.logo-mark{width:34px;height:34px}.logo-name{font-size:15px}.phone i,.burger{width:40px;height:40px}}@media (max-width:340px){.logo-sub{display:none}}
 /* Раздел «Нормативная база»: /normativnaya-baza/ и /normativnaya-baza/proverochnye-listy/ (класс nb-page) */
-/* первый экран без фото: тёмный фон, как в разделе «Материалы» */
-.nb-hero{position:relative;padding:clamp(120px,10vw,190px) 0 clamp(56px,6vw,96px);background:radial-gradient(1100px 620px at 82% 8%,rgba(97,95,255,.15),transparent 64%),radial-gradient(900px 520px at 4% 100%,rgba(124,134,255,.06),transparent 60%)}
-.nb-hero-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.7fr);gap:clamp(28px,4vw,80px);align-items:end}
-.nb-hero h1{font-size:clamp(40px,4.4vw,82px);margin:0 0 clamp(22px,2vw,34px)}
+/* первый экран: фото на всю ширину и текст слева на градиенте — как у «Программы пест-контроля» в разделе «Материалы».
+   На телефоне (до 860 px) порядок: заголовок → фото → текст → кнопки; надзаголовок не показывается, крошки скрыты правилом m-crumbs */
+.d-hero.nb-hero{position:relative;overflow:hidden;display:flex;align-items:flex-end;min-height:clamp(680px,54vw,940px);padding:calc(clamp(68px,6vw,115px) + 28px) 0 clamp(40px,4vw,64px);background:#000}
+.nb-hero .wrap{width:100%;display:grid;grid-template-columns:minmax(0,1.28fr) minmax(0,.72fr);gap:0 clamp(28px,4vw,80px);align-items:end}
+.nb-hero .d-hero-copy{grid-column:1;min-width:0}
+.nb-hero .d-hero-copy>*:not(.d-hero-media),.nb-hero .nb-toc{position:relative;z-index:1}
+.nb-hero .d-hero-media{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;margin:0}
+.nb-hero .d-hero-media::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.86) 40%,rgba(0,0,0,.3) 58%,rgba(0,0,0,0) 70%),linear-gradient(180deg,#000 0,rgba(0,0,0,.55) 90px,rgba(0,0,0,0) 260px),linear-gradient(0deg,#000 0,rgba(0,0,0,.65) 110px,rgba(0,0,0,0) 300px)}
+.nb-hero .d-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 50%}
+.nb-hero .f-crumbs{margin:0 0 22px}
+.nb-hero .eyebrow{margin:0}
+.d-hero.nb-hero h1{font-size:clamp(36px,3.6vw,66px);line-height:1.08;letter-spacing:-.055em;font-weight:300;margin:18px 0 0}
 .nb-hero h1 .ln{display:block;padding:0 .08em .08em 0;margin-bottom:-.08em}
 .nb-hero h1 .ln>span{display:inline-block}
-.nb-hero .eyebrow{margin-bottom:clamp(20px,1.8vw,30px)}
-.nb-hero p.lead{font-size:clamp(16px,1.08vw,20px);line-height:1.62;color:#c4c4cc;max-width:900px;margin:0 0 30px}
-.nb-byline{font-size:14px;line-height:1.5;color:var(--t3);margin:-12px 0 28px}
-.nb-check{padding:clamp(22px,2vw,32px)}
-.nb-check-k{font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:var(--acc);margin:0 0 10px}
-.nb-check ul{list-style:none;padding:0;margin:0}
-.nb-check li{display:flex;flex-direction:column;gap:4px;padding:14px 0;border-top:1px solid var(--line2)}
-.nb-check li:last-child{padding-bottom:0}
-.nb-check li span{font-size:13px;color:var(--t3)}
-.nb-check li b{font-weight:500;color:var(--t1);font-size:clamp(15px,1.05vw,18px);line-height:1.4}
-.nb-toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(36px,3.4vw,56px)}
-.nb-toc a{display:inline-block;padding:9px 16px;border:1px solid var(--line2);border-radius:999px;font-size:14px;color:var(--t2);transition:border-color .2s,color .2s}
+.nb-hero p.lead{font-size:clamp(15px,1.02vw,18px);line-height:1.62;color:#c4c4cc;max-width:720px;margin:22px 0 0}
+.nb-hero .d-btns{margin-top:26px}
+.nb-byline{font-size:13px;line-height:1.5;color:var(--t3);margin:16px 0 0;max-width:720px}
+.nb-hero .nb-toc{grid-column:1/-1;margin-top:clamp(28px,2.6vw,44px)}
+.nb-toc{display:flex;flex-wrap:wrap;gap:8px}
+.nb-toc a{display:inline-block;padding:9px 16px;border:1px solid var(--line2);border-radius:999px;font-size:14px;color:var(--t2);background:rgba(0,0,0,.45);transition:border-color .2s,color .2s}
 .nb-toc a:hover,.nb-toc a:focus-visible{border-color:var(--acc);color:var(--t1)}
+@media (min-width:1600px){.nb-hero p.lead,.nb-byline{max-width:820px}}
+/* планшет и телефон (до 1180 px): заголовок → фото → текст → кнопки; при наложении текста на фото на этих ширинах
+   люди на снимке уходили бы под текст */
+@media (max-width:1180px){
+  .d-hero.nb-hero{display:block;min-height:0;padding:calc(clamp(68px,6vw,115px) + 18px) 0 clamp(32px,6vw,48px)}
+  .nb-hero .wrap{display:block}
+  .nb-hero .d-hero-copy{display:flex;flex-direction:column}
+  .nb-hero .eyebrow{display:none}
+  .d-hero.nb-hero h1{order:1;margin:0}
+  .nb-hero h1 .ln{display:inline}
+  .nb-hero .d-hero-media{order:2;position:relative;inset:auto;aspect-ratio:16/9;max-height:min(560px,52vh);margin:22px calc(var(--pad) * -1) 0}
+  .nb-hero .d-hero-media::before{background:linear-gradient(0deg,#000 0,rgba(0,0,0,0) 24%)}
+  .nb-hero .d-hero-img{object-position:50% 15%}
+  .nb-hero p.lead{order:3;margin:18px 0 0;max-width:820px}
+  .nb-hero .d-btns{order:4;margin-top:24px}
+  .nb-hero .nb-byline{order:5;max-width:820px}
+  .nb-hero .f-crumbs{order:6;margin:18px 0 0}
+  .nb-hero .nb-toc{margin-top:28px}
+}
+@media (max-width:860px){
+  .d-hero.nb-hero h1{font-size:clamp(28px,7.8vw,36px);line-height:1.08}
+  .nb-hero .d-hero-media{aspect-ratio:4/3;max-height:min(560px,70vh);margin-top:18px}
+  .nb-hero .d-hero-img{object-position:50% 40%}
+  .nb-hero p.lead{margin:14px 0 0;font-size:15px;line-height:1.55;max-width:none}
+  .nb-hero .d-btns{margin-top:22px;gap:10px}
+  .nb-hero .nb-byline{margin-top:14px}
+  .nb-hero .nb-toc{margin-top:26px}
+}
 
 /* ссылки в тексте */
 .nb-page .nb-tbl td a,.nb-after a,.nb-dl a,.nb-fact a,.nb-errs a,.nb-q-note a,.nb-food a,.nb-base a,.nb-five a,.nb-lic a,.nb-page .cta .sub a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
@@ -75,7 +107,8 @@
 /* пять главных пунктов */
 .nb-five{list-style:none;counter-reset:nb;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .nb-five li{counter-increment:nb;position:relative;padding:clamp(24px,2.2vw,34px) clamp(22px,2vw,32px) clamp(24px,2.2vw,34px) clamp(60px,4.4vw,82px);color:var(--t2);line-height:1.62}
-.nb-five li::before{content:"0" counter(nb);position:absolute;left:clamp(22px,2vw,32px);top:clamp(27px,2.4vw,38px);color:var(--acc);font-size:14px;font-weight:500}
+.nb-five li{padding-left:clamp(80px,5.8vw,104px)}
+.nb-five .nb-ic{position:absolute;left:clamp(22px,2vw,32px);top:clamp(24px,2.2vw,34px)}
 .nb-five li b{display:block;color:var(--t1);font-weight:500;font-size:clamp(17px,1.2vw,21px);line-height:1.35;margin-bottom:10px}
 .nb-five li:last-child:nth-child(odd){grid-column:1/-1}
 
@@ -132,7 +165,13 @@
 
 /* разборы и образцы */
 .nb-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.nb-link{display:flex;flex-direction:column;gap:12px;padding:clamp(22px,2vw,32px);min-height:190px;color:var(--t1)}
+.nb-link{display:flex;flex-direction:column;gap:12px;padding:0 0 clamp(22px,2vw,30px);min-height:190px;color:var(--t1);overflow:hidden}
+.nb-link>:not(.nb-link-img){margin:0 clamp(22px,2vw,32px)}
+.nb-link-img{display:block;aspect-ratio:16/9;overflow:hidden;background:#18181b;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.nb-link-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.nb-link-img.is-doc{background:#f4f4f5}
+.nb-link-img.is-doc img{object-position:50% 0}
+.nb-link:hover .nb-link-img img,.nb-link:focus-visible .nb-link-img img{transform:scale(1.04)}
 .nb-link-k{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
 .nb-link b{font-weight:400;font-size:clamp(18px,1.3vw,23px);line-height:1.32;letter-spacing:-.01em}
 .nb-link-go{margin-top:auto;color:var(--t2);font-size:15px;transition:color .25s}
@@ -188,22 +227,24 @@
 .nb-errs li{position:relative;padding:16px 0 16px 34px;border-top:1px solid var(--line2);color:var(--t2);line-height:1.6}
 .nb-errs li::before,.nb-errs li::after{content:"";position:absolute;left:3px;top:27px;width:14px;height:2px;background:var(--red);transform:rotate(45deg)}
 .nb-errs li::after{transform:rotate(-45deg)}
+.nb-errs-wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(24px,3.4vw,64px);align-items:start}
+.nb-errs-wrap .nb-errs{grid-template-columns:minmax(0,1fr)}
+.nb-errs-ph{margin:0;position:sticky;top:110px}
+.nb-errs-ph img{display:block;width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line2);background:#18181b}
+.nb-errs-ph figcaption{margin-top:10px;color:var(--t3);font-size:13px;line-height:1.5}
 
 @media (max-width:1100px){
-  .nb-hero-grid{grid-template-columns:minmax(0,1fr);align-items:start}
-  .nb-check{max-width:620px}
   .nb-links{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:900px){
-  .nb-qs,.nb-author-wrap{grid-template-columns:minmax(0,1fr)}
+  .nb-qs,.nb-author-wrap,.nb-errs-wrap{grid-template-columns:minmax(0,1fr)}
+  .nb-errs-ph{position:static;max-width:640px}
   .nb-page .nb-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:760px){
-  .nb-hero{padding:100px 0 48px}
   .nb-five,.nb-grid2,.nb-errs{grid-template-columns:minmax(0,1fr)}
   .nb-toc{gap:6px}
   .nb-toc a{padding:8px 13px;font-size:13px}
-  .nb-check li b{font-size:15px}
 }
 @media (max-width:600px){
   .nb-links{grid-template-columns:minmax(0,1fr)}
@@ -214,16 +255,184 @@
   .nb-dl dd{border-top:0;padding-top:2px}
   .nb-avatar{width:80px;height:80px}
   .nb-author{align-items:flex-start}
-  .nb-five li{padding-left:22px;padding-top:56px}
-  .nb-five li::before{top:24px}
+  .nb-five li{padding-left:22px;padding-top:82px}
+  .nb-five .nb-ic{top:24px;left:22px}
   .nb-q h3{flex-direction:column;gap:6px}
-}</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org", "name": "ПЕСТКОНТРОЛЬ Центр", "legalName": "ООО «Центр дезинфекционных услуг»", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/", "telephone": "+7 495 104-35-70", "email": "b2b@pestcontrol-center.ru"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, {"@type": "ListItem", "position": 2, "name": "Нормативная база", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/"}, {"@type": "ListItem", "position": 3, "name": "Проверочные листы 2026", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/"}]}, {"@type": "Article", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/#article", "headline": "Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации", "description": "Вопросы о насекомых и грызунах в проверочных листах (чек-листах) Роспотребнадзора по приказам № 578 и № 580: где они есть, нормы СанПиН и документы для ответа.", "inLanguage": "ru", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "Марианна Семерина", "jobTitle": "Санитарный врач"}, "publisher": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org"}, "mainEntityOfPage": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/", "image": {"@type": "ImageObject", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/pl-og.jpg", "width": 1200, "height": 630}, "about": [{"@type": "Legislation", "legislationIdentifier": "Приказ Роспотребнадзора № 578", "legislationDate": "2026-07-20", "legislationLegalForce": "https://schema.org/InForce", "url": "https://base.garant.ru/414956074/"}, {"@type": "Legislation", "legislationIdentifier": "Приказ Роспотребнадзора № 580", "legislationDate": "2026-07-20", "legislationLegalForce": "https://schema.org/InForce", "url": "http://publication.pravo.gov.ru/document/0001202609240001"}], "isPartOf": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/#webpage"}}, {"@type": "FAQPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/#faq", "mainEntity": [{"@type": "Question", "name": "С какого числа действуют новые проверочные листы Роспотребнадзора?", "acceptedAnswer": {"@type": "Answer", "text": "Приказ № 578 — с 4 октября 2026 года, приказ № 580 — с 5 октября 2026 года. Они заменили приказы № 18 от 20.01.2022 и № 808 от 24.12.2021."}}, {"@type": "Question", "name": "Может ли инспектор проверять то, чего нет в проверочном листе?", "acceptedAnswer": {"@type": "Answer", "text": "Да. В п. 2 обоих приказов сказано, что плановый рейдовый осмотр и выездная проверка не ограничиваются вопросами из форм."}}, {"@type": "Question", "name": "Как часто нужно обследовать объект на насекомых?", "acceptedAnswer": {"@type": "Answer", "text": "Объекты особого эпидемиологического значения — не реже 2 раз в месяц, другие объекты — раз в месяц, очаги инфекционных заболеваний — раз в неделю (п. 101 СанПиН 3.3686-21)."}}, {"@type": "Question", "name": "Нужно ли проводить дератизацию каждый месяц?", "acceptedAnswer": {"@type": "Answer", "text": "На объектах особого эпидемиологического значения раз в месяц обязательна оценка заселённости грызунами. Истребительные мероприятия проводят по её результатам (п. 110 СанПиН 3.3686-21)."}}, {"@type": "Question", "name": "Можно ли проводить дезинсекцию и дератизацию своими силами?", "acceptedAnswer": {"@type": "Answer", "text": "Лицензия не нужна, если работы выполняют для собственных нужд. Но в листах для гостиниц, аптек, магазинов непродовольственных товаров, спортивных объектов и бань спрашивают, проводит ли обработки «организация, осуществляющая дезинфекционную деятельность». Для мест массового пребывания людей это прямо установлено п. 130 СанПиН 3.3686-21."}}, {"@type": "Question", "name": "Что спрашивают о вредителях при проверке общепита?", "acceptedAnswer": {"@type": "Answer", "text": "В листе для общепита (приказ № 580, приложение 2) четыре таких вопроса: дезинсекция и дератизация в составе производственного контроля на принципах ХАССП (вопрос 11), отсутствие насекомых, грызунов, синантропных птиц и животных (58), запрет хранить и готовить продукцию во время обработок (108) и запрет распыляемых и рассыпаемых средств при посетителях и персонале (109)."}}, {"@type": "Question", "name": "Что спрашивают о вредителях при проверке магазина продуктов?", "acceptedAnswer": {"@type": "Answer", "text": "В листе для торговли пищевой продукцией (приказ № 580, приложение 1) пять таких вопросов: защита продукции от грызунов и насекомых при перевозке (58), хранение сыпучих продуктов в помещениях, не заражённых амбарными вредителями (89), дератизация площадки накопления отходов (138), запрет присутствия насекомых и грызунов (153) и дезинсекция, дератизация и инженерная защита зданий (155)."}}, {"@type": "Question", "name": "Есть ли проверочный лист для пищевого производства?", "acceptedAnswer": {"@type": "Answer", "text": "В приказах № 578 и № 580 отдельной формы нет. На производстве оценивают процедуры ХАССП по ТР ТС 021/2011, в том числе периодичность и проведение дезинсекции и дератизации (ст. 10 ч. 3 п. 10)."}}, {"@type": "Question", "name": "Применяют ли проверочные листы при профилактическом визите?", "acceptedAnswer": {"@type": "Answer", "text": "Приказы утверждают формы для плановых рейдовых осмотров и выездных проверок. О профилактическом визите — на странице санитарного аудита."}}, {"@type": "Question", "name": "Где взять полный текст проверочных листов?", "acceptedAnswer": {"@type": "Answer", "text": "Официальная публикация приказа № 580 — на publication.pravo.gov.ru. Тексты всех форм обоих приказов есть в системе «Гарант», ссылки — в таблице «Какие вопросы зададут на вашем объекте» и в источниках."}}]}]}</script>
+}
+
+/* ---------- инфографика раздела: свёрстана кодом, текст остаётся текстом ---------- */
+.nb-fig{margin:0 0 clamp(32px,3vw,52px)}
+.nb-fig-head{display:flex;flex-direction:column;gap:6px;margin:0 0 18px}
+.nb-fig-t{font-size:clamp(21px,1.6vw,28px);font-weight:300;letter-spacing:-.025em;line-height:1.22;color:var(--t1)}
+.nb-fig-t em{font-style:italic;font-weight:500}
+.nb-fig-d{color:var(--t2);font-size:15px;line-height:1.55;max-width:860px}
+.nb-fig-note{color:var(--t3);font-size:13px;line-height:1.5;margin:14px 0 0}
+.nb-ic{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:12px;background:rgba(124,134,255,.1);border:1px solid rgba(124,134,255,.28);color:var(--acc)}
+.nb-ic svg{width:20px;height:20px}
+
+/* месяц на объекте особого значения */
+.nb-cal{display:grid;grid-template-columns:minmax(170px,.9fr) repeat(4,minmax(0,1fr));border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:var(--card)}
+.nb-cal-row{display:contents}
+.nb-cal-r,.nb-cal-c,.nb-cal-h{display:flex;align-items:center;min-height:66px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.nb-cal-c,.nb-cal-h{border-left:1px solid var(--line)}
+.nb-cal-hd>*{min-height:46px;background:rgba(255,255,255,.03)}
+.nb-cal-h{color:var(--t3);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.nb-cal-r{flex-direction:column;align-items:flex-start;justify-content:center;gap:2px}
+.nb-cal-r b{color:var(--t1);font-weight:500;font-size:15px;line-height:1.3}
+.nb-cal-r small{color:var(--t3);font-size:12px;line-height:1.35}
+.nb-cal-row:last-child>*{border-bottom:0}
+.nb-dot{display:inline-flex;align-items:center;gap:8px;font-size:13px;line-height:1.3;color:var(--t2);border:1px solid;border-radius:99px;padding:6px 12px 6px 7px}
+.nb-dot>b{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;color:#000;font-size:12px;font-weight:700}
+.nb-dot-w{display:none}
+.nb-dot.is-ins{border-color:rgba(124,134,255,.45)}.nb-dot.is-ins>b{background:var(--acc)}
+.nb-dot.is-rod{border-color:rgba(255,137,4,.45)}.nb-dot.is-rod>b{background:var(--org)}
+.nb-dot.is-bin{border-color:rgba(5,223,114,.4)}.nb-dot.is-bin>b{background:var(--grn)}
+.nb-dot.is-tr{border-style:dashed;border-color:var(--t4);color:var(--t3)}.nb-dot.is-tr>b{background:none;border:1px dashed var(--t3);color:var(--t3)}
+/* до 900 px (телефон и планшет) — карточка на каждую строку: что проверяют, норма и отметки «Неделя N · …» */
+@media (max-width:900px){
+  .nb-cal{display:flex;flex-direction:column;gap:10px;border:0;border-radius:0;background:none;overflow:visible}
+  .nb-cal-row{display:flex;flex-wrap:wrap;gap:8px;padding:16px;border:1px solid var(--line2);border-radius:var(--r);background:var(--card)}
+  .nb-cal-hd{display:none}
+  .nb-cal-r,.nb-cal-c,.nb-cal-row:last-child>*{min-height:0;padding:0;border:0}
+  .nb-cal-r{flex:1 1 100%;margin-bottom:4px}
+  .nb-cal-c:empty{display:none}
+  .nb-dot-w{display:inline}
+}
+
+/* дорожная карта норм: на компьютере ось слева направо, на телефоне — сверху вниз */
+.nb-road{list-style:none;margin:0;padding:0;position:relative;height:300px}
+.nb-road-axis{position:absolute;left:0;right:0;top:150px;height:2px;background:rgba(124,134,255,.55)}
+.nb-road-fill{position:absolute;left:0;top:0;bottom:0;background:var(--t4)}
+.nb-road-pt{position:absolute;top:0;left:var(--x);width:clamp(132px,12.5vw,200px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-align:center}
+.nb-road-pt::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;border:2px solid var(--acc);background:var(--bg2);box-shadow:0 0 0 6px rgba(124,134,255,.12);box-sizing:border-box}
+.nb-road-pt time{font-weight:600;font-size:15px;line-height:1.3;color:var(--acc);margin-bottom:6px}
+.nb-road-pt span{color:var(--t2);font-size:13px;line-height:1.4}
+.nb-road-pt.is-up{height:159px;justify-content:flex-end}
+.nb-road-pt.is-up::before{order:3;margin-top:14px}
+.nb-road-pt.is-down{top:141px}
+.nb-road-pt.is-down::before{margin-bottom:14px}
+.nb-road-pt.is-past time,.nb-road-pt.is-past span{color:var(--t3)}
+.nb-road-pt.is-past::before{border-color:var(--t4);background:var(--t4);box-shadow:none}
+.nb-road-now{position:absolute;left:var(--x);top:151px;transform:translate(-50%,-50%);z-index:2}
+.nb-road-now span{display:block;white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#000;background:var(--yel);border-radius:99px;padding:4px 10px;box-shadow:0 0 0 5px rgba(253,199,0,.16)}
+@media (max-width:760px){
+  .nb-road{height:auto;display:flex;flex-direction:column;gap:20px;padding:2px 0 2px 34px}
+  .nb-road-axis{left:8px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:var(--line2)}
+  .nb-road-fill{display:none}
+  .nb-road-pt,.nb-road-pt.is-up,.nb-road-pt.is-down{position:relative;left:auto;top:auto;width:auto;height:auto;transform:none;align-items:flex-start;justify-content:flex-start;text-align:left;order:var(--o)}
+  .nb-road-pt::before,.nb-road-pt.is-up::before,.nb-road-pt.is-down::before{position:absolute;left:-34px;top:1px;margin:0}
+  .nb-road-pt time{margin-bottom:2px}
+  .nb-road-pt span{font-size:14px}
+  .nb-road-now{position:relative;left:auto;top:auto;transform:none;order:var(--o);margin-left:-34px;align-self:flex-start}
+}
+
+/* от закона до журнала */
+.nb-tier-list{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.nb-tier{position:relative;display:grid;grid-template-columns:minmax(190px,.26fr) minmax(0,1fr);border:1px solid var(--line2);border-radius:var(--r);background:var(--card)}
+.nb-tier+.nb-tier::before{content:"";position:absolute;left:clamp(40px,4vw,64px);top:-15px;width:8px;height:8px;border-right:1.5px solid var(--t4);border-bottom:1.5px solid var(--t4);transform:rotate(45deg)}
+.nb-tier-n{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:18px 20px;border-right:1px solid var(--line2)}
+.nb-tier-n b{font-size:15px;font-weight:600;color:var(--t1)}
+.nb-tier-n small{font-size:12px;line-height:1.35;color:var(--t3)}
+.nb-tier-ch{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px 18px}
+.nb-chip{display:inline-block;font-size:13px;line-height:1.3;color:var(--t1);border:1px solid var(--line2);border-radius:99px;padding:6px 12px;background:rgba(255,255,255,.02);transition:border-color .2s,background .2s}
+span.nb-chip{color:var(--t2)}
+a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(124,134,255,.08)}
+.nb-chip.is-key{border-color:rgba(124,134,255,.55);background:rgba(124,134,255,.12)}
+.nb-tier.is-own{border-color:rgba(124,134,255,.45);background:rgba(124,134,255,.06)}
+@media (max-width:760px){
+  .nb-tier{grid-template-columns:minmax(0,1fr)}
+  .nb-tier-n{border-right:0;border-bottom:1px solid var(--line2);padding:14px 16px}
+  .nb-tier-ch{padding:12px 16px 14px}
+}
+
+/* выберите вид объекта */
+.nb-objs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.nb-obj{display:flex;flex-direction:column;overflow:hidden;color:var(--t1)}
+.nb-obj-img{display:block;aspect-ratio:16/10;overflow:hidden;background:#18181b}
+.nb-obj-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.nb-obj:hover .nb-obj-img img,.nb-obj:focus-visible .nb-obj-img img{transform:scale(1.05)}
+.nb-obj-t{display:flex;flex-direction:column;gap:3px;padding:12px 14px 14px}
+.nb-obj-t b{font-size:14px;font-weight:600;line-height:1.3}
+.nb-obj-t small{font-size:12px;line-height:1.35;color:var(--t3)}
+@media (max-width:1100px){.nb-objs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.nb-objs{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+
+/* было → стало */
+.nb-bs{display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(0,1.3fr);align-items:center;gap:10px}
+.nb-bs-col{display:grid;gap:12px}
+.nb-ord{border:1px solid var(--line2);border-radius:var(--r);padding:18px 20px;background:var(--card)}
+.nb-ord b{display:block;font-size:17px;font-weight:600;color:var(--t1);margin-bottom:4px}
+.nb-ord>span:not(.nb-ord-n){color:var(--t2);font-size:14px;line-height:1.5}
+.nb-ord.is-old{background:none;border-style:dashed}
+.nb-ord.is-old b{color:#c4c4cc;text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:2px}
+.nb-ord.is-old>span{color:#a1a1aa}
+.nb-ord.is-new{border-color:rgba(124,134,255,.5)}
+.nb-ord-n{float:right;margin:0 0 6px 14px;font-size:34px;font-weight:300;line-height:1;color:var(--acc)}
+.nb-bs-arrow{display:grid;place-items:center;color:var(--acc)}
+.nb-bs-arrow svg{width:34px;height:34px}
+.nb-bs-tot{margin:2px 0 0;color:var(--t3);font-size:14px}
+@media (max-width:760px){
+  .nb-bs{grid-template-columns:minmax(0,1fr)}
+  .nb-bs-arrow svg{transform:rotate(90deg)}
+}
+
+/* фрагмент формы проверочного листа */
+.nb-sheet{max-width:1120px;background:#f4f4f5;color:#18181b;border-radius:8px;padding:clamp(16px,2vw,28px);box-shadow:0 30px 60px rgba(0,0,0,.5);transform:rotate(-.5deg)}
+.nb-sheet-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin:0 0 14px;font-size:12px;color:#52525c}
+.nb-sheet table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.45}
+.nb-sheet th{text-align:left;font-weight:600;font-size:12px;color:#18181b;background:#e4e4e7;border:1px solid #a1a1aa;padding:8px}
+.nb-sheet td{vertical-align:top;border:1px solid #a1a1aa;padding:8px;background:rgba(124,134,255,.09)}
+.nb-sheet-n{width:40px;font-weight:600}
+.nb-sheet-norm{width:200px;color:#52525c;font-size:12px}
+.nb-sheet-c{width:58px;text-align:center}
+.nb-box{display:inline-block;position:relative;vertical-align:middle;width:16px;height:16px;border:1.5px solid #3f3f46;border-radius:2px}
+.nb-box.is-on::after{content:"";position:absolute;left:4px;top:0;width:5px;height:10px;border:solid var(--acc2);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+@media (max-width:760px){
+  .nb-sheet{transform:none;padding:14px}
+  .nb-sheet thead{display:none}
+  .nb-sheet table,.nb-sheet tbody{display:block}
+  .nb-sheet tr{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-bottom:10px;padding:12px;border:1px solid #a1a1aa;border-radius:6px;background:rgba(124,134,255,.09)}
+  .nb-sheet tr:last-child{margin-bottom:0}
+  .nb-sheet td{display:block;border:0;padding:0;background:none}
+  .nb-sheet-n{flex:0 0 26px;align-self:flex-start}
+  .nb-sheet-q{flex:1 1 calc(100% - 42px)}
+  .nb-sheet-norm{flex:1 1 100%;width:auto;padding-left:42px!important}
+  .nb-sheet-c{flex:0 0 auto;width:auto;display:inline-flex!important;align-items:center;gap:6px}
+  .nb-sheet-c:nth-child(4){margin-left:42px}
+  .nb-sheet-c::after{content:attr(data-l);font-size:12px;color:#52525c}
+}
+
+/* папка к проверке */
+.nb-folder{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.nb-fdoc{display:flex;flex-direction:column;gap:6px;padding:12px 12px 18px;color:var(--t1)}
+.nb-fdoc-img{display:block;aspect-ratio:3/4;overflow:hidden;border-radius:8px;background:#fff;margin-bottom:8px}
+.nb-fdoc-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.nb-fdoc-img.is-photo img{object-position:50% 50%}
+.nb-fdoc:hover .nb-fdoc-img img,.nb-fdoc:focus-visible .nb-fdoc-img img{transform:scale(1.03)}
+.nb-fdoc b{font-size:15px;font-weight:600;line-height:1.3;padding:0 4px}
+.nb-fdoc small{font-size:13px;line-height:1.4;color:var(--t3);padding:0 4px}
+@media (max-width:1100px){.nb-folder{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.nb-folder{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+
+/* иконки: виды объектов в таблице, шаги подготовки */
+.nb-obj-ic{display:inline-flex;align-items:center;gap:12px;color:var(--t1)}
+.nb-obj-ic .nb-ic{width:34px;height:34px;border-radius:10px}
+.nb-obj-ic .nb-ic svg{width:17px;height:17px}
+.nb-page .nb-steps li::before{display:inline-block;vertical-align:middle;margin:0 12px 14px 0}
+.nb-steps .nb-ic{display:inline-grid;vertical-align:middle;width:36px;height:36px;border-radius:10px;margin:0 0 14px}
+.nb-steps .nb-ic svg{width:18px;height:18px}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org", "name": "ПЕСТКОНТРОЛЬ Центр", "legalName": "ООО «Центр дезинфекционных услуг»", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/", "telephone": "+7 495 104-35-70", "email": "b2b@pestcontrol-center.ru"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, {"@type": "ListItem", "position": 2, "name": "Нормативная база", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/"}, {"@type": "ListItem", "position": 3, "name": "Проверочные листы 2026", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/"}]}, {"@type": "Article", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/#article", "headline": "Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации", "description": "Вопросы о насекомых и грызунах в проверочных листах (чек-листах) Роспотребнадзора по приказам № 578 и № 580: где они есть, нормы СанПиН и документы для ответа.", "inLanguage": "ru", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "Марианна Семерина", "jobTitle": "Санитарный врач"}, "publisher": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org"}, "mainEntityOfPage": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/", "image": [{"@type": "ImageObject", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/pl-hero.webp", "width": 1920, "height": 1072, "caption": "Менеджер по качеству отмечает пункты проверочного листа, специалист по пест-контролю показывает на пронумерованный контейнер для мониторинга грызунов на складе"}, {"@type": "ImageObject", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/pl-og.jpg", "width": 1200, "height": 630}], "about": [{"@type": "Legislation", "legislationIdentifier": "Приказ Роспотребнадзора № 578", "legislationDate": "2026-07-20", "legislationLegalForce": "https://schema.org/InForce", "url": "https://base.garant.ru/414956074/"}, {"@type": "Legislation", "legislationIdentifier": "Приказ Роспотребнадзора № 580", "legislationDate": "2026-07-20", "legislationLegalForce": "https://schema.org/InForce", "url": "http://publication.pravo.gov.ru/document/0001202609240001"}], "isPartOf": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/#webpage"}}, {"@type": "FAQPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/#faq", "mainEntity": [{"@type": "Question", "name": "С какого числа действуют новые проверочные листы Роспотребнадзора?", "acceptedAnswer": {"@type": "Answer", "text": "Приказ № 578 — с 4 октября 2026 года, приказ № 580 — с 5 октября 2026 года. Они заменили приказы № 18 от 20.01.2022 и № 808 от 24.12.2021."}}, {"@type": "Question", "name": "Может ли инспектор проверять то, чего нет в проверочном листе?", "acceptedAnswer": {"@type": "Answer", "text": "Да. В п. 2 обоих приказов сказано, что плановый рейдовый осмотр и выездная проверка не ограничиваются вопросами из форм."}}, {"@type": "Question", "name": "Как часто нужно обследовать объект на насекомых?", "acceptedAnswer": {"@type": "Answer", "text": "Объекты особого эпидемиологического значения — не реже 2 раз в месяц, другие объекты — раз в месяц, очаги инфекционных заболеваний — раз в неделю (п. 101 СанПиН 3.3686-21)."}}, {"@type": "Question", "name": "Нужно ли проводить дератизацию каждый месяц?", "acceptedAnswer": {"@type": "Answer", "text": "На объектах особого эпидемиологического значения раз в месяц обязательна оценка заселённости грызунами. Истребительные мероприятия проводят по её результатам (п. 110 СанПиН 3.3686-21)."}}, {"@type": "Question", "name": "Можно ли проводить дезинсекцию и дератизацию своими силами?", "acceptedAnswer": {"@type": "Answer", "text": "Лицензия не нужна, если работы выполняют для собственных нужд. Но в листах для гостиниц, аптек, магазинов непродовольственных товаров, спортивных объектов и бань спрашивают, проводит ли обработки «организация, осуществляющая дезинфекционную деятельность». Для мест массового пребывания людей это прямо установлено п. 130 СанПиН 3.3686-21."}}, {"@type": "Question", "name": "Что спрашивают о вредителях при проверке общепита?", "acceptedAnswer": {"@type": "Answer", "text": "В листе для общепита (приказ № 580, приложение 2) четыре таких вопроса: дезинсекция и дератизация в составе производственного контроля на принципах ХАССП (вопрос 11), отсутствие насекомых, грызунов, синантропных птиц и животных (58), запрет хранить и готовить продукцию во время обработок (108) и запрет распыляемых и рассыпаемых средств при посетителях и персонале (109)."}}, {"@type": "Question", "name": "Что спрашивают о вредителях при проверке магазина продуктов?", "acceptedAnswer": {"@type": "Answer", "text": "В листе для торговли пищевой продукцией (приказ № 580, приложение 1) пять таких вопросов: защита продукции от грызунов и насекомых при перевозке (58), хранение сыпучих продуктов в помещениях, не заражённых амбарными вредителями (89), дератизация площадки накопления отходов (138), запрет присутствия насекомых и грызунов (153) и дезинсекция, дератизация и инженерная защита зданий (155)."}}, {"@type": "Question", "name": "Есть ли проверочный лист для пищевого производства?", "acceptedAnswer": {"@type": "Answer", "text": "В приказах № 578 и № 580 отдельной формы нет. На производстве оценивают процедуры ХАССП по ТР ТС 021/2011, в том числе периодичность и проведение дезинсекции и дератизации (ст. 10 ч. 3 п. 10)."}}, {"@type": "Question", "name": "Применяют ли проверочные листы при профилактическом визите?", "acceptedAnswer": {"@type": "Answer", "text": "Приказы утверждают формы для плановых рейдовых осмотров и выездных проверок. О профилактическом визите — на странице санитарного аудита."}}, {"@type": "Question", "name": "Где взять полный текст проверочных листов?", "acceptedAnswer": {"@type": "Answer", "text": "Официальная публикация приказа № 580 — на publication.pravo.gov.ru. Тексты всех форм обоих приказов есть в системе «Гарант», ссылки — в таблице «Какие вопросы зададут на вашем объекте» и в источниках."}}]}]}</script>
 <style data-fx>
 /* подсветка рамки карточек за курсором — как у .card на главной (tools/site/fx.py) */
 :where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev){position:relative}
 :where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev)::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;pointer-events:none;background:radial-gradient(360px circle at var(--mx,-999px) var(--my,-999px),rgba(124,134,255,.85),rgba(124,134,255,.15) 35%,transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .4s;z-index:2}
 @media (hover:hover) and (pointer:fine){:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev):hover::after{opacity:1}}
+/* «фонарь» на фото первого экрана — как на главной (tools/site/fx.py) */
+.fx-lit{position:absolute;inset:0;opacity:0;pointer-events:none;-webkit-mask-image:radial-gradient(circle var(--sr,320px) at var(--sx,72%) var(--sy,46%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%);mask-image:radial-gradient(circle var(--sr,320px) at var(--sx,72%) var(--sy,46%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%);transition:opacity 1.8s cubic-bezier(.16,1,.3,1)}
+#hero :is(.d-hero-media,.hero-media)>picture>img{transition:filter 1.8s cubic-bezier(.16,1,.3,1)}
+#hero.fx-lit-on :is(.d-hero-media,.hero-media)>picture>img{filter:grayscale(.3) brightness(.56)}
+#hero.fx-lit-on .fx-lit img{filter:brightness(1.08) contrast(1.06) saturate(1.06)}
+#hero.fx-lit-on .fx-lit{opacity:1}
 </style>
 <style id="m-crumbs">/* крошки на телефоне не показываем: для SEO хватает BreadcrumbList и ссылок в HTML */@media (max-width:900px){.d-crumbs,.f-crumbs{display:none!important}}</style>
 </head>
@@ -269,28 +478,19 @@
 </nav>
 
 <main id="main" tabindex="-1">
-<section class="p-hero nb-hero" id="hero">
+<section class="d-hero nb-hero" id="hero">
   <div class="wrap">
-    <nav class="f-crumbs" aria-label="Навигационная цепочка" data-h><a href="../../">Главная</a><span aria-hidden="true">→</span><a href="../../normativnaya-baza/">Нормативная база</a><span aria-hidden="true">→</span><span aria-current="page">Проверочные листы 2026</span></nav>
-    <div class="nb-hero-grid">
-      <div class="nb-hero-copy">
-        <div class="eyebrow">Нормативная база · Проверено 06.11.2026</div>
-        <h1><span class="ln"><span>Проверочные листы</span></span> <span class="ln"><span><em>Роспотребнадзора 2026:</em></span></span> <span class="ln"><span>вопросы о дезинсекции</span></span> <span class="ln"><span>и дератизации</span></span></h1>
-        <p class="lead" data-h>С 4 и 5 октября 2026 года Роспотребнадзор проводит плановые рейдовые осмотры и выездные проверки по новым проверочным листам (их ещё называют <span class="nw">чек-листами</span>) — приказы № 578 и № 580 от 20 июля 2026 года. Вопросы о насекомых и грызунах есть в 20 из 37 форм: в листах для торговли, общепита, гостиниц, медицинских организаций, аптек, спортивных объектов, салонов, бань и прачечных. Чаще всего проверяют пять вещей: нет ли на объекте вредителей, кто проводит обработки, соблюдается ли кратность обследований, проводится ли ежемесячная оценка заселённости грызунами и обследуются ли мусорокамеры и контейнерные площадки. На каждый вопрос отвечают документами — договором, графиком, актами обследований, журналом и схемой точек контроля.</p>
-        <p class="nb-byline">Подготовила Марианна Семерина, санитарный врач · Сверено с текстами приказов 06.11.2026</p>
-        <div class="d-btns" data-h>
-          <a href="#po-obektam" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Найти вопросы для моего объекта</span></a>
-          <a href="#zayavka" class="btn btn-o btn-lg" data-magnet><span class="btn-t">Проверить объект по листу</span></a>
-        </div>
+    <div class="d-hero-copy">
+      <nav class="f-crumbs" aria-label="Навигационная цепочка" data-h><a href="../../">Главная</a><span aria-hidden="true">→</span><a href="../../normativnaya-baza/">Нормативная база</a><span aria-hidden="true">→</span><span aria-current="page">Проверочные листы 2026</span></nav>
+      <div class="eyebrow">Нормативная база · Проверено 06.11.2026</div>
+      <h1><span class="ln"><span>Проверочные листы</span></span> <span class="ln"><span><em>Роспотребнадзора 2026:</em></span></span> <span class="ln"><span>вопросы о дезинсекции</span></span> <span class="ln"><span>и дератизации</span></span></h1>
+      <div class="d-hero-media"><picture><source media="(max-width:860px)" srcset="../../img/pl-hero-mob-760.webp 760w, ../../img/pl-hero-mob.webp 1024w" sizes="100vw" width="1024" height="768"><img class="d-hero-img" src="../../img/pl-hero.webp" srcset="../../img/pl-hero-1440.webp 1440w, ../../img/pl-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="Менеджер по качеству отмечает пункты проверочного листа, специалист по пест-контролю показывает на пронумерованный контейнер для мониторинга грызунов на складе" fetchpriority="high" decoding="async"></picture><div class="fx-lit" aria-hidden="true"><picture><source media="(max-width:860px)" srcset="../../img/pl-hero-mob-760.webp 760w, ../../img/pl-hero-mob.webp 1024w" sizes="100vw" width="1024" height="768"><img class="d-hero-img fx-lit-img" src="../../img/pl-hero.webp" srcset="../../img/pl-hero-1440.webp 1440w, ../../img/pl-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="" decoding="async"></picture></div></div>
+      <p class="lead" data-h>С 4 и 5 октября 2026 года Роспотребнадзор проводит плановые рейдовые осмотры и выездные проверки по новым проверочным листам (их ещё называют <span class="nw">чек-листами</span>) — приказы № 578 и № 580 от 20 июля 2026 года. Вопросы о насекомых и грызунах есть в 20 из 37 форм: в листах для торговли, общепита, гостиниц, медицинских организаций, аптек, спортивных объектов, салонов, бань и прачечных. Чаще всего проверяют пять вещей: нет ли на объекте вредителей, кто проводит обработки, соблюдается ли кратность обследований, проводится ли ежемесячная оценка заселённости грызунами и обследуются ли мусорокамеры и контейнерные площадки. На каждый вопрос отвечают документами — договором, графиком, актами обследований, журналом и схемой точек контроля.</p>
+      <div class="d-btns" data-h>
+        <a href="#po-obektam" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Найти вопросы для моего объекта</span></a>
+        <a href="#zayavka" class="btn btn-o btn-lg" data-magnet><span class="btn-t">Проверить объект по листу</span></a>
       </div>
-      <aside class="card nb-check p-hero-note" aria-label="Коротко о проверочных листах" data-h>
-        <p class="nb-check-k">В цифрах</p>
-        <ul>
-          <li><span>Форм в приказах № 578 и № 580</span><b>37</b></li>
-          <li><span>Из них с вопросами о вредителях</span><b>20</b></li>
-          <li><span>Применяются</span><b>с 4–5 октября 2026 года</b></li>
-        </ul>
-      </aside>
+      <p class="nb-byline p-hero-note" data-h>Подготовила Марианна Семерина, санитарный врач · сверено с текстами приказов 06.11.2026</p>
     </div>
     <nav class="p-toc nb-toc" aria-label="Разделы страницы" data-h><a href="#chto-izmenilos">Что изменилось</a><a href="#pyat-voprosov">Пять вопросов</a><a href="#po-obektam">По видам объектов</a><a href="#dokumenty">Документы для ответа</a><a href="#podgotovka">Подготовка</a><a href="#oshibki">Ошибки</a><a href="#voprosy">Вопросы</a></nav>
   </div>
@@ -324,6 +524,21 @@
 <section class="s" id="chto-izmenilos">
   <div class="wrap">
     <div class="head"><div class="eyebrow" data-eyebrow>Что изменилось</div><h2 data-split>Приказы № 578 и № 580: <em>что изменилось в проверочных листах</em></h2></div>
+    <figure class="nb-fig nb-bs-fig" data-fade>
+      <figcaption class="nb-fig-head"><span class="nb-fig-t">Было <em>→ стало</em></span></figcaption>
+      <div class="nb-bs">
+        <div class="nb-bs-col">
+          <div class="nb-ord is-old"><b>Приказ № 18</b><span>от 20.01.2022 — утратил силу</span></div>
+          <div class="nb-ord is-old"><b>Приказ № 808</b><span>от 24.12.2021 — утратил силу</span></div>
+        </div>
+        <div class="nb-bs-arrow" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></div>
+        <div class="nb-bs-col">
+          <div class="nb-ord is-new"><span class="nb-ord-n">31</span><b>Приказ № 578</b><span>от 20.07.2026 · применяется с 04.10.2026 · 31 форма: торговля непродовольственными товарами, гостиницы, медицинские организации, аптеки, образовательные организации и другие объекты</span></div>
+          <div class="nb-ord is-new"><span class="nb-ord-n">6</span><b>Приказ № 580</b><span>от 20.07.2026 · применяется с 05.10.2026 · 6 форм: торговля пищевой продукцией, общепит, спорт, прачечные, салоны красоты, бани</span></div>
+          <p class="nb-bs-tot">Всего 37 форм. Вопросы о насекомых и грызунах есть в 20 из них.</p>
+        </div>
+      </div>
+    </figure>
     <div class="nb-grid2" data-group="cards">
       <div class="card nb-fact"><b>Новые приказы.</b> Приказ № 578 утвердил 31 форму: торговля непродовольственными товарами, гостиницы, медицинские организации, аптеки, образовательные организации и другие объекты. Приказ № 580 утвердил 6 форм: торговля пищевой продукцией, общепит, спорт, прачечные, салоны красоты, бани. Они действуют с 4 и 5 октября 2026 года и заменили приказы № 18 от 20.01.2022 и № 808 от 24.12.2021.</div>
       <div class="card nb-fact"><b>Новые ссылки на нормы.</b> Вопросы теперь ссылаются на правила 2026 года. Например, вопрос о дезинсекции и дератизации при появлении вредителей раньше ссылался на п. 2.12 СП <span class="nw">2.1.3678-20</span>, теперь — на п. 14 СП <span class="nw">2.1.4284-26</span>.</div>
@@ -336,6 +551,23 @@
 <section class="s" id="pyat-voprosov">
   <div class="wrap">
     <div class="head"><div class="eyebrow" data-eyebrow>Пять вопросов</div><h2 data-split>Пять вопросов о вредителях, <em>которые встречаются чаще всего</em></h2><p class="sub" data-fade>Формулировки вопросов взяты из форм дословно. Под каждым — что он значит на практике и чем на него ответить.</p></div>
+    <figure class="nb-fig nb-sheet-fig" data-fade>
+      <figcaption class="nb-fig-head"><span class="nb-fig-t">Как это выглядит <em>в форме для гостиниц</em></span><span class="nb-fig-d">В листе для гостиниц все пять вопросов идут подряд — № 39–43. Инспектор отмечает «да», «нет» или «неприменимо».</span></figcaption>
+      <div class="nb-sheet">
+        <p class="nb-sheet-h"><span>Приказ Роспотребнадзора от 20.07.2026 № 578, приложение № 2</span><span>фрагмент · вопросы 39–43</span></p>
+        <table>
+          <thead><tr><th scope="col">№</th><th scope="col">Контрольный вопрос</th><th scope="col">Реквизиты норм</th><th scope="col">Да</th><th scope="col">Нет</th><th scope="col">Неприм.</th></tr></thead>
+          <tbody>
+          <tr><td class="nb-sheet-n">39</td><td class="nb-sheet-q">Обеспечивает ли контролируемое лицо отсутствие в используемых им помещениях насекомых, грызунов и следов их жизнедеятельности?</td><td class="nb-sheet-norm">п. 14 СП <span class="nw">2.1.4284-26</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box is-on" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          <tr><td class="nb-sheet-n">40</td><td class="nb-sheet-q">Проводится ли контролируемым лицом при появлении синантропных насекомых и грызунов дезинсекция и дератизация силами организации, осуществляющей дезинфекционную деятельность (в отсутствие работников и потребителей)?</td><td class="nb-sheet-norm">п. 14 СП <span class="nw">2.1.4284-26</span>; п. 130 СанПиН <span class="nw">3.3686-21</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box is-on" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          <tr><td class="nb-sheet-n">41</td><td class="nb-sheet-q">Обеспечивается ли контролируемым лицом установленная нормативами кратность плановых обследований на заселенность членистоногими эксплуатируемых им объектов, имеющих особое эпидемиологическое значение, силами организации, осуществляющей дезинфекционную деятельность?</td><td class="nb-sheet-norm">пп. 88, 98, 101, 130 СанПиН <span class="nw">3.3686-21</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          <tr><td class="nb-sheet-n">42</td><td class="nb-sheet-q">Обеспечивается ли контролируемым лицом проведение ежемесячной оценки заселенности грызунами эксплуатируемых им объектов, имеющих особое эпидемиологическое значение, силами организации, осуществляющей дезинфекционную деятельность?</td><td class="nb-sheet-norm">пп. 88, 98, 108, 110, 130 СанПиН <span class="nw">3.3686-21</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          <tr><td class="nb-sheet-n">43</td><td class="nb-sheet-q">Обследуются ли контролируемым лицом системы мусороудаления, включая мусоросборные камеры (при их наличии), с периодичностью не реже 1 раза в месяц, на предмет наличия синантропных членистоногих и грызунов?</td><td class="nb-sheet-norm">п. 133 СанПиН <span class="nw">3.3686-21</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="nb-fig-note">Формулировки — из приказа, оформление наше: это иллюстрация, а не бланк. Отметки «да» поставлены для примера.</p>
+    </figure>
     <div class="nb-qs" data-group="cards">
       <article class="card nb-q" id="vopros-1">
         <h3><span class="nb-q-n">01</span>Нет ли на объекте насекомых и грызунов</h3>
@@ -408,17 +640,17 @@
     <table class="d-table nb-tbl nb-forms" data-fade>
       <thead><tr><th scope="col">Объект</th><th scope="col">Форма</th><th scope="col">Вопросы о вредителях</th><th scope="col">На что обратить внимание</th></tr></thead>
       <tbody>
-        <tr><td data-l="Объект">Торговля пищевой продукцией, рынки</td><td data-l="Форма"><a href="https://base.garant.ru/414962758/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener">№ 580, прил. 1</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">58, 89, 138, 153, 155</b></td><td data-l="На что обратить внимание">Сыпучие продукты — в помещениях, не заражённых амбарными вредителями (п. 46 СП <span class="nw">2.3.6.4281-26</span>). Защита продукции при перевозке. Дезинсекция, дератизация и инженерная защита зданий — с периодичностью «с учётом требований <span class="nw">санитарно-эпидемиологических</span> правил» (п. 78)</td></tr>
-        <tr><td data-l="Объект">Общепит, кроме питания детей</td><td data-l="Форма"><a href="https://base.garant.ru/414962758/f7ee959fd36b5699076b35abf4f52c5c/" target="_blank" rel="noopener">№ 580, прил. 2</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">11, 58, 108, 109</b></td><td data-l="На что обратить внимание">Дезинсекция и дератизация — часть производственного контроля на принципах ХАССП (вопрос 11). Нельзя хранить и готовить продукцию во время обработки (108) и применять распыляемые и рассыпаемые средства при посетителях и персонале (109)</td></tr>
-        <tr><td data-l="Объект">Гостиницы</td><td data-l="Форма"><a href="https://base.garant.ru/414956074/f7ee959fd36b5699076b35abf4f52c5c/" target="_blank" rel="noopener">№ 578, прил. 2</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">28, 39–43</b></td><td data-l="На что обратить внимание">Полный набор: отсутствие вредителей, исполнитель, кратность обследований, ежемесячная оценка грызунов, мусорокамеры, контейнерная площадка</td></tr>
-        <tr><td data-l="Объект">Медицинские организации</td><td data-l="Форма"><a href="https://base.garant.ru/414956074/b89690251be5277812a78962f6302560/" target="_blank" rel="noopener">№ 578, прил. 10</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">8, 9, 10, 67, 144, 198</b></td><td data-l="На что обратить внимание">Грызунонепроницаемость перекрытий, перегородок и мест прохода коммуникаций (9); защита продухов чердаков и подвалов от грызунов, птиц и насекомых (67); дератизация по п. 110 СанПиН <span class="nw">3.3686-21</span> (198)</td></tr>
-        <tr><td data-l="Объект">Аптеки</td><td data-l="Форма"><a href="https://base.garant.ru/414956074/10ed0f917186039eb157d3ba4f962ee5/" target="_blank" rel="noopener">№ 578, прил. 11</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">19, 24–27</b></td><td data-l="На что обратить внимание">Полный набор, кроме мусорокамер</td></tr>
-        <tr><td data-l="Объект">Магазины непродовольственных товаров</td><td data-l="Форма"><a href="https://base.garant.ru/414956074/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener">№ 578, прил. 1</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">28</b></td><td data-l="На что обратить внимание">Исполнитель — организация, осуществляющая дезинфекционную деятельность</td></tr>
-        <tr><td data-l="Объект">Спорт, бассейны, аквапарки</td><td data-l="Форма"><a href="https://base.garant.ru/414962758/3e22e51c74db8e0b182fad67b502e640/" target="_blank" rel="noopener">№ 580, прил. 3</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">27, 51–55</b></td><td data-l="На что обратить внимание">Кратность обследований прямо расписана в вопросе 53</td></tr>
-        <tr><td data-l="Объект">Прачечные и химчистки</td><td data-l="Форма"><a href="https://base.garant.ru/414962758/172a6d689833ce3e42dc0a8a7b3cddf9/" target="_blank" rel="noopener">№ 580, прил. 4</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">28, 49, 50, 68, 69</b></td><td data-l="На что обратить внимание">Дезинсекция и дератизация по санитарным правилам — отдельными вопросами</td></tr>
-        <tr><td data-l="Объект">Салоны красоты</td><td data-l="Форма"><a href="https://base.garant.ru/414962758/c9c989f1e999992b41b30686f0032f7d/" target="_blank" rel="noopener">№ 580, прил. 5</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">20, 28–33, 89, 90</b></td><td data-l="На что обратить внимание">Насекомые и грызуны — отдельными вопросами</td></tr>
-        <tr><td data-l="Объект">Бани и сауны</td><td data-l="Форма"><a href="https://base.garant.ru/414962758/7dede6ac8f25be619ed07c17ed1c62c9/" target="_blank" rel="noopener">№ 580, прил. 6</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">25, 35–39</b></td><td data-l="На что обратить внимание">Полный набор</td></tr>
-        <tr><td data-l="Объект">Школы</td><td data-l="Форма"><a href="https://base.garant.ru/414956074/8599a70d26e5983585d90ff6adf82e89/" target="_blank" rel="noopener">№ 578, прил. 14</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">64</b></td><td data-l="На что обратить внимание">Организация и контроль дезинфекции, дезинсекции, дератизации и противоклещевых обработок</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle cx="18" cy="20" r="2" /> <circle cx="8" cy="20" r="2" /> </svg></span>Торговля пищевой продукцией, рынки</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener">№ 580, прил. 1</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">58, 89, 138, 153, 155</b></td><td data-l="На что обратить внимание">Сыпучие продукты — в помещениях, не заражённых амбарными вредителями (п. 46 СП <span class="nw">2.3.6.4281-26</span>). Защита продукции при перевозке. Дезинсекция, дератизация и инженерная защита зданий — с периодичностью «с учётом требований <span class="nw">санитарно-эпидемиологических</span> правил» (п. 78)</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-utensils" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /> <path d="M7 2v20" /> <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" /> </svg></span>Общепит, кроме питания детей</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/f7ee959fd36b5699076b35abf4f52c5c/" target="_blank" rel="noopener">№ 580, прил. 2</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">11, 58, 108, 109</b></td><td data-l="На что обратить внимание">Дезинсекция и дератизация — часть производственного контроля на принципах ХАССП (вопрос 11). Нельзя хранить и готовить продукцию во время обработки (108) и применять распыляемые и рассыпаемые средства при посетителях и персонале (109)</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-bed-double" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" /> <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" /> <path d="M12 4v6" /> <path d="M2 18h20" /> </svg></span>Гостиницы</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/f7ee959fd36b5699076b35abf4f52c5c/" target="_blank" rel="noopener">№ 578, прил. 2</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">28, 39–43</b></td><td data-l="На что обратить внимание">Полный набор: отсутствие вредителей, исполнитель, кратность обследований, ежемесячная оценка грызунов, мусорокамеры, контейнерная площадка</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-stethoscope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M11 2v2" /> <path d="M5 2v2" /> <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" /> <path d="M8 15a6 6 0 0 0 12 0v-3" /> <circle cx="20" cy="10" r="2" /> </svg></span>Медицинские организации</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/b89690251be5277812a78962f6302560/" target="_blank" rel="noopener">№ 578, прил. 10</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">8, 9, 10, 67, 144, 198</b></td><td data-l="На что обратить внимание">Грызунонепроницаемость перекрытий, перегородок и мест прохода коммуникаций (9); защита продухов чердаков и подвалов от грызунов, птиц и насекомых (67); дератизация по п. 110 СанПиН <span class="nw">3.3686-21</span> (198)</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-pill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" /> <path d="m8.5 8.5 7 7" /> </svg></span>Аптеки</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/10ed0f917186039eb157d3ba4f962ee5/" target="_blank" rel="noopener">№ 578, прил. 11</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">19, 24–27</b></td><td data-l="На что обратить внимание">Полный набор, кроме мусорокамер</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-shopping-bag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /> <path d="M3 6h18" /> <path d="M16 10a4 4 0 0 1-8 0" /> </svg></span>Магазины непродовольственных товаров</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener">№ 578, прил. 1</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">28</b></td><td data-l="На что обратить внимание">Исполнитель — организация, осуществляющая дезинфекционную деятельность</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-dumbbell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.4 14.4 9.6 9.6" /> <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" /> <path d="m21.5 21.5-1.4-1.4" /> <path d="M3.9 3.9 2.5 2.5" /> <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z" /> </svg></span>Спорт, бассейны, аквапарки</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/3e22e51c74db8e0b182fad67b502e640/" target="_blank" rel="noopener">№ 580, прил. 3</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">27, 51–55</b></td><td data-l="На что обратить внимание">Кратность обследований прямо расписана в вопросе 53</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-washing-machine" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 6h3" /> <path d="M17 6h.01" /> <rect width="18" height="20" x="3" y="2" rx="2" /> <circle cx="12" cy="13" r="5" /> <path d="M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5" /> </svg></span>Прачечные и химчистки</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/172a6d689833ce3e42dc0a8a7b3cddf9/" target="_blank" rel="noopener">№ 580, прил. 4</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">28, 49, 50, 68, 69</b></td><td data-l="На что обратить внимание">Дезинсекция и дератизация по санитарным правилам — отдельными вопросами</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-scissors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="6" cy="6" r="3" /> <path d="M8.12 8.12 12 12" /> <path d="M20 4 8.12 15.88" /> <circle cx="6" cy="18" r="3" /> <path d="M14.8 14.8 20 20" /> </svg></span>Салоны красоты</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/c9c989f1e999992b41b30686f0032f7d/" target="_blank" rel="noopener">№ 580, прил. 5</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">20, 28–33, 89, 90</b></td><td data-l="На что обратить внимание">Насекомые и грызуны — отдельными вопросами</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-bath" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 4 8 6" /> <path d="M17 19v2" /> <path d="M2 12h20" /> <path d="M7 19v2" /> <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" /> </svg></span>Бани и сауны</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/7dede6ac8f25be619ed07c17ed1c62c9/" target="_blank" rel="noopener">№ 580, прил. 6</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">25, 35–39</b></td><td data-l="На что обратить внимание">Полный набор</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-school" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 22v-4a2 2 0 1 0-4 0v4" /> <path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10" /> <path d="M18 5v17" /> <path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6" /> <path d="M6 5v17" /> <circle cx="12" cy="9" r="2" /> </svg></span>Школы</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/8599a70d26e5983585d90ff6adf82e89/" target="_blank" rel="noopener">№ 578, прил. 14</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">64</b></td><td data-l="На что обратить внимание">Организация и контроль дезинфекции, дезинсекции, дератизации и противоклещевых обработок</td></tr>
       </tbody>
     </table>
     <div class="card nb-food" data-fade>
@@ -432,6 +664,16 @@
 <section class="s" id="dokumenty">
   <div class="wrap">
     <div class="head"><div class="eyebrow" data-eyebrow>Документы для ответа</div><h2 data-split>Какими документами <em>ответить на вопросы</em></h2></div>
+    <figure class="nb-fig nb-folder-fig">
+      <figcaption class="nb-fig-head"><span class="nb-fig-t">Папка <em>к проверке</em></span><span class="nb-fig-d">Пять документов, которыми отвечают на вопросы о вредителях. Нажмите, чтобы открыть образец.</span></figcaption>
+      <div class="nb-folder" data-group="cards">
+        <a class="card nb-fdoc" href="../../dogovor-deratizatsiya-dezinsektsiya/"><span class="nb-fdoc-img"><img src="../../img/dogovor-sample-p1-360.webp" width="360" height="509" loading="lazy" decoding="async" alt="Первая страница образца договора на дератизацию и дезинсекцию"></span><b>Договор</b><small>кто проводит обработки и номер лицензии</small></a>
+        <a class="card nb-fdoc" href="../../materialy/programma-pest-kontrolya/"><span class="nb-fdoc-img"><img src="../../img/programma-sample-p1-360.webp" width="360" height="509" loading="lazy" decoding="async" alt="Первая страница образца программы пест-контроля"></span><b>Программа <span class="nw">пест-контроля</span></b><small>кратность обследований</small></a>
+        <a class="card nb-fdoc" href="../../materialy/programma-pest-kontrolya/"><span class="nb-fdoc-img is-photo"><img src="../../img/programma-plan-skhema-720.webp" width="720" height="480" loading="lazy" decoding="async" alt="План-схема пронумерованных точек контроля на столе"></span><b>Схема точек контроля</b><small>совпадает с тем, что видит инспектор</small></a>
+        <a class="card nb-fdoc" href="../../materialy/zhurnal-pest-kontrolya/"><span class="nb-fdoc-img"><img src="../../img/zhurnal-obrazets-p1-360.webp" width="360" height="509" loading="lazy" decoding="async" alt="Первая страница образца журнала пест-контроля"></span><b>Журнал</b><small>осмотры и ежемесячная оценка грызунов</small></a>
+        <a class="card nb-fdoc" href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/"><span class="nb-fdoc-img"><img src="../../img/ppk-sample-p1-360.webp" width="360" height="509" loading="lazy" decoding="async" alt="Титульный лист образца программы производственного контроля"></span><b>ППК по ХАССП</b><small>раздел о дезинсекции и дератизации</small></a>
+      </div>
+    </figure>
     <table class="d-table nb-tbl nb-answers" data-fade>
       <thead><tr><th scope="col">Что спросят</th><th scope="col">Что показать</th><th scope="col">Образец</th></tr></thead>
       <tbody>
@@ -451,12 +693,12 @@
   <div class="wrap">
     <div class="head"><div class="eyebrow" data-eyebrow>Подготовка</div><h2 data-split>Как подготовиться к проверке: <em>шесть шагов</em></h2></div>
     <ol class="d-steps nb-steps" data-group="steps">
-      <li><b>Найдите свои формы</b><span>в таблице выше. На одном объекте их может быть несколько.</span></li>
-      <li><b>Пройдите вопросы о насекомых и грызунах.</b><span>Отметьте, где ответ «нет» или подтвердить нечем.</span></li>
-      <li><b>Сверьте договор.</b><span>У исполнителя есть лицензия. В договоре указаны кратность обследований на насекомых (для объектов особого эпидемиологического значения — не реже 2 раз в месяц), ежемесячная оценка грызунов, мусорокамеры и контейнерная площадка, сроки внеплановых выездов.</span></li>
-      <li><b>Соберите папку:</b><span>договор, лицензия исполнителя, программа, схема точек контроля, акты за последние месяцы, журнал. Проверьте, что программы ссылаются на действующие документы.</span></li>
-      <li><b>Пройдите объект.</b><span>Точки контроля на месте и совпадают со схемой, следов вредителей нет, сетки, уплотнители и доводчики дверей исправны.</span></li>
-      <li><b>Назначьте ответственного</b><span>и порядок действий при обнаружении вредителей: кому сообщить, в какой срок вызвать исполнителя, где отметить.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /> </svg></span><b>Найдите свои формы</b><span>в таблице выше. На одном объекте их может быть несколько.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-list-checks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 5h8" /> <path d="M13 12h8" /> <path d="M13 19h8" /> <path d="m3 17 2 2 4-4" /> <path d="m3 7 2 2 4-4" /> </svg></span><b>Пройдите вопросы о насекомых и грызунах.</b><span>Отметьте, где ответ «нет» или подтвердить нечем.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-signature" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z" /> <path d="M14.487 7.858A1 1 0 0 1 14 7V2" /> <path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516" /> <path d="M8 18h1" /> </svg></span><b>Сверьте договор.</b><span>У исполнителя есть лицензия. В договоре указаны кратность обследований на насекомых (для объектов особого эпидемиологического значения — не реже 2 раз в месяц), ежемесячная оценка грызунов, мусорокамеры и контейнерная площадка, сроки внеплановых выездов.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-folder-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /> </svg></span><b>Соберите папку:</b><span>договор, лицензия исполнителя, программа, схема точек контроля, акты за последние месяцы, журнал. Проверьте, что программы ссылаются на действующие документы.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-map-pinned" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 01-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0112 0" /> <path d="M4.474 15h-.197a1 1 0 00-.969.753l-1.097 4.35a1.5 1.5 0 001.444 1.898L20.344 22a1.5 1.5 0 001.446-1.897l-1.098-4.35a1 1 0 00-.969-.753h-.197" /> <circle cx="12" cy="8" r="2" /> </svg></span><b>Пройдите объект.</b><span>Точки контроля на месте и совпадают со схемой, следов вредителей нет, сетки, уплотнители и доводчики дверей исправны.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-user-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <polyline points="16 11 18 13 22 9" /> </svg></span><b>Назначьте ответственного</b><span>и порядок действий при обнаружении вредителей: кому сообщить, в какой срок вызвать исполнителя, где отметить.</span></li>
     </ol>
   </div>
 </section>
@@ -464,15 +706,18 @@
 <section class="s" id="oshibki">
   <div class="wrap">
     <div class="head"><div class="eyebrow" data-eyebrow>Ошибки</div><h2 data-split>Ошибки, которые <em>видны на проверке</em></h2></div>
-    <ul class="nb-errs" data-fade>
-      <li>В договоре «обработка раз в месяц», но нет обследований. Для объекта особого эпидемиологического значения обследования на насекомых нужны не реже 2 раз в месяц, а оценка заселённости грызунами — ежемесячно.</li>
-      <li>Акты без даты и времени, без результатов по точкам и подписи ответственного.</li>
-      <li>Обработки своими силами там, где лист прямо спрашивает об организации, осуществляющей дезинфекционную деятельность.</li>
-      <li>В общепите распыляют средства при персонале или оставляют продукцию в цехе во время обработки.</li>
-      <li>Мусорокамеры и контейнерная площадка не включены в договор и график.</li>
-      <li>Схема точек контроля не совпадает с тем, что инспектор видит на объекте.</li>
-      <li>В программах остались ссылки на отменённые документы — например, СП <span class="nw">3.5.3.3223-14</span> или СП <span class="nw">2.1.3678-20</span>. Полный список — в <a href="../../normativnaya-baza/#otmenennye">нормативной базе</a>.</li>
-    </ul>
+    <div class="nb-errs-wrap" data-fade>
+      <ul class="nb-errs">
+        <li>В договоре «обработка раз в месяц», но нет обследований. Для объекта особого эпидемиологического значения обследования на насекомых нужны не реже 2 раз в месяц, а оценка заселённости грызунами — ежемесячно.</li>
+        <li>Акты без даты и времени, без результатов по точкам и подписи ответственного.</li>
+        <li>Обработки своими силами там, где лист прямо спрашивает об организации, осуществляющей дезинфекционную деятельность.</li>
+        <li>В общепите распыляют средства при персонале или оставляют продукцию в цехе во время обработки.</li>
+        <li>Мусорокамеры и контейнерная площадка не включены в договор и график.</li>
+        <li>Схема точек контроля не совпадает с тем, что инспектор видит на объекте.</li>
+        <li>В программах остались ссылки на отменённые документы — например, СП <span class="nw">3.5.3.3223-14</span> или СП <span class="nw">2.1.3678-20</span>. Полный список — в <a href="../../normativnaya-baza/#otmenennye">нормативной базе</a>.</li>
+      </ul>
+      <figure class="nb-errs-ph"><img src="../../img/dez-ipm-kontrol-720.webp" srcset="../../img/dez-ipm-kontrol-720.webp 720w, ../../img/dez-ipm-kontrol.webp 1200w" sizes="(max-width:900px) 100vw, 40vw" width="720" height="538" loading="lazy" decoding="async" alt="Специалист в перчатке проверяет клеевую ловушку у стены под табличкой точки контроля КЛТ-08, рядом журнал осмотра"><figcaption>Номер точки на стене, ловушка и запись в журнале — инспектор сверяет их со схемой.</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -630,6 +875,37 @@
 (function(){
   var mm=window.matchMedia;if(!mm)return;
   var fine=mm('(hover: hover) and (pointer: fine)').matches;
+  /* «фонарь»: следует за мышью, без движения мыши плавно ходит сам; на сенсорных экранах ходит сам (30 кадров в секунду).
+     Не считаем, пока первый экран не виден или вкладка скрыта. Старт — вместе со входом первого экрана */
+  var hero=document.getElementById('hero'),lit=hero&&hero.querySelector('.fx-lit');
+  if(lit&&!mm('(prefers-reduced-motion: reduce)').matches){
+    var media=lit.parentNode,small=mm('(max-width:860px)').matches,full=hero.classList.contains('f-hero');
+    lit.style.setProperty('--sr',small?'150px':'clamp(240px, 21vw, 400px)');
+    var cx=small?.5:(full?.68:.74),ax=small?.24:(full?.16:.13),cy=small?.5:.47,ay=small?.2:.17;
+    var sx=cx,sy=cy,tx=cx,ty=cy,last=-1e9,vis=true,on=false,raf=0,lt=0;
+    var frame=function(now){
+      raf=0;if(!on||!vis||document.hidden)return;
+      var dt=now-lt;if(!fine&&dt<30){raf=requestAnimationFrame(frame);return;}
+      lt=now;if(now-last>2600){var t=now/1000;tx=cx+ax*Math.sin(t*.33);ty=cy+ay*Math.sin(t*.47+1.3);}
+      var k=1-Math.pow(.94,Math.min(dt,100)/16.67);sx+=(tx-sx)*k;sy+=(ty-sy)*k;
+      lit.style.setProperty('--sx',(sx*100).toFixed(2)+'%');lit.style.setProperty('--sy',(sy*100).toFixed(2)+'%');
+      raf=requestAnimationFrame(frame);
+    };
+    var kick=function(){if(!raf&&on&&vis&&!document.hidden){lt=performance.now();raf=requestAnimationFrame(frame);}};
+    hero.addEventListener('pointermove',function(e){
+      if(e.pointerType!=='mouse')return;var r=media.getBoundingClientRect();if(!r.width||!r.height)return;
+      tx=(e.clientX-r.left)/r.width;ty=(e.clientY-r.top)/r.height;last=performance.now();kick();
+    },{passive:true});
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;kick();}).observe(hero);
+    document.addEventListener('visibilitychange',kick);
+    var start=function(){if(on)return;on=true;hero.classList.add('fx-lit-on');kick();};
+    var eb=hero.querySelector('.eyebrow');
+    if(eb&&'MutationObserver' in window){
+      if(eb.classList.contains('in'))start();
+      else{var mo=new MutationObserver(function(){if(eb.classList.contains('in')){mo.disconnect();start();}});mo.observe(eb,{attributes:true,attributeFilter:['class']});}
+    }
+    setTimeout(start,eb?5000:2500);
+  }
   /* подсветка рамки карточек за курсором — как у .card на главной */
   if(fine)document.addEventListener('pointermove',function(e){
     var c=e.target.closest&&e.target.closest('.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev');if(!c)return;
