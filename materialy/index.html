@@ -270,6 +270,12 @@
 @media (max-width:340px){.logo-sub{display:none}}
 @media (max-width:480px){#submitBtn{padding:0 18px;gap:10px}#submitBtn .btn-t{white-space:normal;text-align:center;line-height:1.2}}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, {"@type": "ListItem", "position": 2, "name": "Материалы", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/"}]}, {"@type": "CollectionPage", "name": "Материалы о пест-контроле для предприятий", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/", "inLanguage": "ru-RU", "description": "Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка, образец программы производственного контроля по ХАССП (PDF и Word) и её раздел пест-контроля, нормативная база дезинсекции и дератизации и разбор проверочных листов Роспотребнадзора 2026 года.", "isPartOf": {"@type": "WebSite", "name": "ПЕСТКОНТРОЛЬ Центр", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/programma-pest-kontrolya/", "name": "Программа пест-контроля на предприятии: образец PDF, шаблон Word и пример заполнения"}, {"@type": "ListItem", "position": 2, "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/pest-menedzhment-ili-razovaya-obrabotka/", "name": "Пест-менеджмент или разовая обработка"}, {"@type": "ListItem", "position": 3, "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/zhurnal-pest-kontrolya/", "name": "Журнал пест-контроля: образец заполнения, бланк и шаблон"}, {"@type": "ListItem", "position": 4, "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/programma-proizvodstvennogo-kontrolya-haccp/", "name": "Программа производственного контроля по ХАССП: образец и раздел пест-контроля"}, {"@type": "ListItem", "position": 5, "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/", "name": "Нормативная база: СанПиН и требования к дезинсекции и дератизации"}, {"@type": "ListItem", "position": 6, "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/", "name": "Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации"}]}, "publisher": {"@type": "Organization", "name": "ПЕСТКОНТРОЛЬ Центр", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/", "telephone": "+7-495-104-35-70", "email": "b2b@pestcontrol-center.ru"}}]}</script>
+<style data-fx>
+/* подсветка рамки карточек за курсором — как у .card на главной (tools/site/fx.py) */
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev){position:relative}
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev)::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;pointer-events:none;background:radial-gradient(360px circle at var(--mx,-999px) var(--my,-999px),rgba(124,134,255,.85),rgba(124,134,255,.15) 35%,transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .4s;z-index:2}
+@media (hover:hover) and (pointer:fine){:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev):hover::after{opacity:1}}
+</style>
 <style id="m-crumbs">/* крошки на телефоне не показываем: для SEO хватает BreadcrumbList и ссылок в HTML */@media (max-width:900px){.d-crumbs,.f-crumbs{display:none!important}}</style>
 </head>
 <body class="d-page">
@@ -497,6 +503,18 @@
 (function(){if(/^(www\.)?xn----itbbsflddbfpfdodg9d0f\.xn--p1ai$/i.test(location.hostname))return;var f=window.fetch;window.fetch=function(u){if(typeof u==='string'&&u.indexOf('send.php')>-1)return new Promise(function(r){setTimeout(function(){r(new Response('{"success":true}',{status:200,headers:{'Content-Type':'application/json'}}))},500)});return f.apply(this,arguments)};document.addEventListener('DOMContentLoaded',function(){var p=document.querySelector('.form .fs');if(p)p.textContent='Предпросмотр: заявка никуда не отправляется'})})();
 document.addEventListener('change',function(e){if(!e.target.closest('.f-check-list'))return;var n=0;document.querySelectorAll('.f-check-list input').forEach(function(i){n+=i.checked?1:0});document.getElementById('chk-n').textContent=n;document.querySelector('.f-check-res').classList.toggle('full',n===5);document.getElementById('chk-note').textContent=n===5?'Все 5 пунктов отмечены — на бесплатном обследовании проверим, как программа и точки контроля работают в цехах.':'Отмечено '+n+' из 5 — на бесплатном обследовании проверим папку и покажем, какие разделы и схемы доработать к проверке.'});
 (function(){var f=document.getElementById('form');if(!f)return;f.addEventListener('submit',function(){var e=f.elements,s=e.service.value||'не выбрано',a=e.address.value.trim()||'не указан';e.msg.value='Задача: '+s+'\nАдрес объекта: '+a+'\nСтраница: Материалы о пест-контроле (/materialy/)';});})();
+</script>
+<script data-fx>
+/* Эффекты под курсором, как на главной (tools/site/fx.py) */
+(function(){
+  var mm=window.matchMedia;if(!mm)return;
+  var fine=mm('(hover: hover) and (pointer: fine)').matches;
+  /* подсветка рамки карточек за курсором — как у .card на главной */
+  if(fine)document.addEventListener('pointermove',function(e){
+    var c=e.target.closest&&e.target.closest('.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev');if(!c)return;
+    var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  },{passive:true});
+})();
 </script>
 <script>
   /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */

@@ -42,6 +42,18 @@
 @media (max-width:600px){.f-steps4{grid-template-columns:minmax(0,1fr)}.d-btns .btn,.d-card .btn,.f-check .btn{width:100%;white-space:normal;text-align:center;line-height:1.25}.d-page .btn-lg{padding:0 16px}.f-plan .lbl{display:none}.f-check-in{padding:24px 20px}.f-check-list label{padding:15px 2px;gap:14px}.f-zlist li{padding:14px}}
 @media (max-width:400px){.hdr .wrap{gap:10px}.hdr-right{gap:8px}.logo{gap:8px}.logo-mark{width:34px;height:34px}.logo-name{font-size:15px}.phone i,.burger{width:40px;height:40px}}@media (max-width:340px){.logo-sub{display:none}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"},{"@type":"ListItem","position":2,"name":"Пест-контроль на пищевом производстве","item":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/pishchevoe-proizvodstvo/"}]}</script>
+<style data-fx>
+/* подсветка рамки карточек за курсором — как у .card на главной (tools/site/fx.py) */
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev){position:relative}
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev)::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;pointer-events:none;background:radial-gradient(360px circle at var(--mx,-999px) var(--my,-999px),rgba(124,134,255,.85),rgba(124,134,255,.15) 35%,transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .4s;z-index:2}
+@media (hover:hover) and (pointer:fine){:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev):hover::after{opacity:1}}
+/* «фонарь» на фото первого экрана — как на главной (tools/site/fx.py) */
+.fx-lit{position:absolute;inset:0;opacity:0;pointer-events:none;-webkit-mask-image:radial-gradient(circle var(--sr,320px) at var(--sx,72%) var(--sy,46%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%);mask-image:radial-gradient(circle var(--sr,320px) at var(--sx,72%) var(--sy,46%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%);transition:opacity 1.8s cubic-bezier(.16,1,.3,1)}
+#hero :is(.d-hero-media,.hero-media)>picture>img{transition:filter 1.8s cubic-bezier(.16,1,.3,1)}
+#hero.fx-lit-on :is(.d-hero-media,.hero-media)>picture>img{filter:grayscale(.3) brightness(.56)}
+#hero.fx-lit-on .fx-lit img{filter:brightness(1.08) contrast(1.06) saturate(1.06)}
+#hero.fx-lit-on .fx-lit{opacity:1}
+</style>
 <style id="m-crumbs">/* крошки на телефоне не показываем: для SEO хватает BreadcrumbList и ссылок в HTML */@media (max-width:900px){.d-crumbs,.f-crumbs{display:none!important}}</style>
 </head>
 <body class="d-page">
@@ -87,7 +99,7 @@
 
 <main id="main" tabindex="-1">
 <section class="hero f-hero" id="hero">
-  <div class="hero-media"><picture><source media="(max-width:760px)" srcset="../img/food-hero-mob.webp" width="1013" height="760"><img class="f-hero-img" src="../img/food-hero.webp" width="1615" height="974" alt="Специалист проверяет станцию контроля грызунов в цехе пищевого производства" fetchpriority="high" decoding="async"></picture></div>
+  <div class="hero-media"><picture><source media="(max-width:760px)" srcset="../img/food-hero-mob.webp" width="1013" height="760"><img class="f-hero-img" src="../img/food-hero.webp" width="1615" height="974" alt="Специалист проверяет станцию контроля грызунов в цехе пищевого производства" fetchpriority="high" decoding="async"></picture><div class="fx-lit" aria-hidden="true"><picture><source media="(max-width:760px)" srcset="../img/food-hero-mob.webp" width="1013" height="760"><img class="f-hero-img fx-lit-img" src="../img/food-hero.webp" width="1615" height="974" alt="" decoding="async"></picture></div></div>
   <div class="wrap">
     <div class="hero-copy">
       <nav class="f-crumbs" aria-label="Навигационная цепочка" data-h><a href="../">Главная</a><span aria-hidden="true">→</span><span aria-current="page">Пест-контроль на пищевом производстве</span></nav>
@@ -293,11 +305,11 @@
   <div class="wrap">
     <div class="head"><div class="eyebrow" data-eyebrow>Производства</div><h2 data-split>Учитываем <em>специфику производства</em></h2></div>
     <div class="inds f-inds" data-group="inds">
-      <article class="card ind" data-tilt><div class="ind-img"><img width="1200" height="558" decoding="async" loading="lazy" src="../img/case-food.webp" srcset="../img/case-food-720.webp 720w, ../img/case-food.webp 1200w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 50vw, 34vw" alt="Рамы с копчёной мясной продукцией в цехе мясопереработки"></div><div class="ind-b"><h3>Мясокомбинаты и мясопереработка</h3><p>Грызуны у сырья и отходов, мухи на приёмке.</p></div></article>
-      <article class="card ind" data-tilt><div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-dairy.webp" srcset="../img/ind-dairy-720.webp 720w, ../img/ind-dairy.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 50vw, 34vw" alt="Цех молочного завода: танки, линия розлива и трап в полу"></div><div class="ind-b"><h3>Молочные заводы</h3><p>Влажные зоны, трапы и стоки: дрозофилы, мухи, тараканы.</p></div></article>
-      <article class="card ind" data-tilt><div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-bakery.webp" srcset="../img/ind-bakery-720.webp 720w, ../img/ind-bakery.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 50vw, 34vw" alt="Цех хлебозавода с инсектицидной лампой и станцией контроля грызунов"></div><div class="ind-b"><h3>Хлебозаводы и пекарни</h3><p>Мука и тепло: пищевая моль, тараканы у печей, грызуны на складе.</p></div></article>
-      <article class="card ind" data-tilt><div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-confect.webp" srcset="../img/ind-confect-720.webp 720w, ../img/ind-confect.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 50vw, 50vw" alt="Линия кондитерской фабрики с конфетами и ловушкой-монитором под конвейером"></div><div class="ind-b"><h3>Кондитерские производства</h3><p>Сахар, орехи, фрукты: муравьи, моль, дрозофилы.</p></div></article>
-      <article class="card ind" data-tilt><div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-ready.webp" srcset="../img/ind-ready-720.webp 720w, ../img/ind-ready.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 100vw, 50vw" alt="Линия упаковки готовой еды в лотки"></div><div class="ind-b"><h3>Другие производства</h3><p>Напитки, готовая еда, полуфабрикаты.</p></div></article>
+      <article class="card ind" data-tilt><div class="ind-img"><img width="1200" height="558" decoding="async" loading="lazy" src="../img/case-food.webp" srcset="../img/case-food-720.webp 720w, ../img/case-food.webp 1200w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 50vw, 34vw" alt="Рамы с копчёной мясной продукцией в цехе мясопереработки" data-parallax></div><div class="ind-b"><h3>Мясокомбинаты и мясопереработка</h3><p>Грызуны у сырья и отходов, мухи на приёмке.</p></div></article>
+      <article class="card ind" data-tilt><div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-dairy.webp" srcset="../img/ind-dairy-720.webp 720w, ../img/ind-dairy.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 50vw, 34vw" alt="Цех молочного завода: танки, линия розлива и трап в полу" data-parallax></div><div class="ind-b"><h3>Молочные заводы</h3><p>Влажные зоны, трапы и стоки: дрозофилы, мухи, тараканы.</p></div></article>
+      <article class="card ind" data-tilt><div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-bakery.webp" srcset="../img/ind-bakery-720.webp 720w, ../img/ind-bakery.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 50vw, 34vw" alt="Цех хлебозавода с инсектицидной лампой и станцией контроля грызунов" data-parallax></div><div class="ind-b"><h3>Хлебозаводы и пекарни</h3><p>Мука и тепло: пищевая моль, тараканы у печей, грызуны на складе.</p></div></article>
+      <article class="card ind" data-tilt><div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-confect.webp" srcset="../img/ind-confect-720.webp 720w, ../img/ind-confect.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 50vw, 50vw" alt="Линия кондитерской фабрики с конфетами и ловушкой-монитором под конвейером" data-parallax></div><div class="ind-b"><h3>Кондитерские производства</h3><p>Сахар, орехи, фрукты: муравьи, моль, дрозофилы.</p></div></article>
+      <article class="card ind" data-tilt><div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-ready.webp" srcset="../img/ind-ready-720.webp 720w, ../img/ind-ready.webp 900w" sizes="(max-width:760px) calc(100vw - 40px), (max-width:1100px) 100vw, 50vw" alt="Линия упаковки готовой еды в лотки" data-parallax></div><div class="ind-b"><h3>Другие производства</h3><p>Напитки, готовая еда, полуфабрикаты.</p></div></article>
     </div>
   </div>
 </section>
@@ -454,6 +466,49 @@
 document.addEventListener('change',function(e){if(!e.target.closest('.f-check-list'))return;var n=0;document.querySelectorAll('.f-check-list input').forEach(function(i){n+=i.checked?1:0});document.getElementById('chk-n').textContent=n;document.querySelector('.f-check-res').classList.toggle('full',n===5);document.getElementById('chk-note').textContent=n===5?'Всё на месте — на обследовании проверим, как это работает на объекте.':'Чего-то не хватает — на бесплатном обследовании покажем, что добавить и в каком порядке.'});
 /* схема зон: подсветка зоны по пункту списка и наоборот */
 (function(){var map=document.querySelector('.f-zmap');if(!map)return;var plan=map.querySelector('.f-plan'),items=map.querySelectorAll('.f-zlist li');function set(z){plan.querySelectorAll('[data-z]').forEach(function(g){g.classList.toggle('on',g.getAttribute('data-z')===z)});items.forEach(function(li){li.classList.toggle('on',li.getAttribute('data-z')===z)})}items.forEach(function(li){var z=li.getAttribute('data-z');li.addEventListener('mouseenter',function(){set(z)});li.addEventListener('focus',function(){set(z)});li.addEventListener('click',function(){set(z)})});plan.querySelectorAll('.zf,.bdg').forEach(function(el){var g=el.closest('[data-z]');el.addEventListener('mouseenter',function(){set(g.getAttribute('data-z'))})});map.addEventListener('mouseleave',function(){set(null)})})();
+</script>
+<script data-fx>
+/* Эффекты под курсором, как на главной (tools/site/fx.py) */
+(function(){
+  var mm=window.matchMedia;if(!mm)return;
+  var fine=mm('(hover: hover) and (pointer: fine)').matches;
+  /* «фонарь»: следует за мышью, без движения мыши плавно ходит сам; на сенсорных экранах ходит сам (30 кадров в секунду).
+     Не считаем, пока первый экран не виден или вкладка скрыта. Старт — вместе со входом первого экрана */
+  var hero=document.getElementById('hero'),lit=hero&&hero.querySelector('.fx-lit');
+  if(lit&&!mm('(prefers-reduced-motion: reduce)').matches){
+    var media=lit.parentNode,small=mm('(max-width:860px)').matches,full=hero.classList.contains('f-hero');
+    lit.style.setProperty('--sr',small?'150px':'clamp(240px, 21vw, 400px)');
+    var cx=small?.5:(full?.68:.74),ax=small?.24:(full?.16:.13),cy=small?.5:.47,ay=small?.2:.17;
+    var sx=cx,sy=cy,tx=cx,ty=cy,last=-1e9,vis=true,on=false,raf=0,lt=0;
+    var frame=function(now){
+      raf=0;if(!on||!vis||document.hidden)return;
+      var dt=now-lt;if(!fine&&dt<30){raf=requestAnimationFrame(frame);return;}
+      lt=now;if(now-last>2600){var t=now/1000;tx=cx+ax*Math.sin(t*.33);ty=cy+ay*Math.sin(t*.47+1.3);}
+      var k=1-Math.pow(.94,Math.min(dt,100)/16.67);sx+=(tx-sx)*k;sy+=(ty-sy)*k;
+      lit.style.setProperty('--sx',(sx*100).toFixed(2)+'%');lit.style.setProperty('--sy',(sy*100).toFixed(2)+'%');
+      raf=requestAnimationFrame(frame);
+    };
+    var kick=function(){if(!raf&&on&&vis&&!document.hidden){lt=performance.now();raf=requestAnimationFrame(frame);}};
+    hero.addEventListener('pointermove',function(e){
+      if(e.pointerType!=='mouse')return;var r=media.getBoundingClientRect();if(!r.width||!r.height)return;
+      tx=(e.clientX-r.left)/r.width;ty=(e.clientY-r.top)/r.height;last=performance.now();kick();
+    },{passive:true});
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;kick();}).observe(hero);
+    document.addEventListener('visibilitychange',kick);
+    var start=function(){if(on)return;on=true;hero.classList.add('fx-lit-on');kick();};
+    var eb=hero.querySelector('.eyebrow');
+    if(eb&&'MutationObserver' in window){
+      if(eb.classList.contains('in'))start();
+      else{var mo=new MutationObserver(function(){if(eb.classList.contains('in')){mo.disconnect();start();}});mo.observe(eb,{attributes:true,attributeFilter:['class']});}
+    }
+    setTimeout(start,eb?5000:2500);
+  }
+  /* подсветка рамки карточек за курсором — как у .card на главной */
+  if(fine)document.addEventListener('pointermove',function(e){
+    var c=e.target.closest&&e.target.closest('.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev');if(!c)return;
+    var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  },{passive:true});
+})();
 </script>
 <script>
   /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */

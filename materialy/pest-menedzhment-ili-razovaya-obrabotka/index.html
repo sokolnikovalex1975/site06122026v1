@@ -100,6 +100,18 @@
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"},{"@type":"ListItem","position":2,"name":"Материалы","item":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/"},{"@type":"ListItem","position":3,"name":"Пест-менеджмент или разовая обработка","item":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/pest-menedzhment-ili-razovaya-obrabotka/"}]},{"@type":"TechArticle","headline":"Пест-менеджмент или разовая обработка на предприятии: в чём разница и что выбрать","description":"Сравнение системного пест-менеджмента по методу IPM и разовой дезинсекции или дератизации для юридических лиц по СанПиН 3.3686-21 и ХАССП.","mainEntityOfPage":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/pest-menedzhment-ili-razovaya-obrabotka/","publisher":{"@type":"Organization","name":"ПЕСТКОНТРОЛЬ Центр","url":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/","telephone":"+7-495-104-35-70","areaServed":["Москва","Московская область"]}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Чем пест-менеджмент отличается от пест-контроля?","acceptedAnswer":{"@type":"Answer","text":"Пест-контроль — общее название мер по сдерживанию численности вредителей. Пест-менеджмент делает акцент на управлении пест-риском как системой: обследовании, оценке опасности по зонам, мониторинге точек контроля, анализе трендов, прогнозе численности и ведении документации для проверок."}},{"@type":"Question","name":"Чем постоянный пест-контроль отличается от разовой обработки?","acceptedAnswer":{"@type":"Answer","text":"Разовая обработка уничтожает только тех особей, которые попали под препарат в день выезда. Постоянный пест-контроль по системе IPM закрывает пути проникновения вредителей, поддерживает контуры пронумерованных точек контроля, отслеживает динамику и применяет химию только по показаниям."}},{"@type":"Question","name":"Что такое IPM в пест-контроле простыми словами?","acceptedAnswer":{"@type":"Answer","text":"IPM (Integrated Pest Management) — интегрированный пест-менеджмент, при котором основу защиты составляют инженерные барьеры, санитария и регулярный мониторинг ловушек, а пестициды применяются точечно только при превышении порогового уровня численности."}},{"@type":"Question","name":"Как часто по закону нужно проводить обследования на предприятии?","acceptedAnswer":{"@type":"Answer","text":"По пп. 98, 101 и 110 СанПиН 3.3686-21 на объектах особого эпидемиологического значения (пищевые производства, общепит, продуктовые магазины, продовольственные склады, гостиницы) обследования на насекомых проводятся не реже 2 раз в месяц, а дератизация — по результатам ежемесячной оценки."}}]}]}</script>
+<style data-fx>
+/* подсветка рамки карточек за курсором — как у .card на главной (tools/site/fx.py) */
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev){position:relative}
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev)::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;pointer-events:none;background:radial-gradient(360px circle at var(--mx,-999px) var(--my,-999px),rgba(124,134,255,.85),rgba(124,134,255,.15) 35%,transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .4s;z-index:2}
+@media (hover:hover) and (pointer:fine){:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev):hover::after{opacity:1}}
+/* «фонарь» на фото первого экрана — как на главной (tools/site/fx.py) */
+.fx-lit{position:absolute;inset:0;opacity:0;pointer-events:none;-webkit-mask-image:radial-gradient(circle var(--sr,320px) at var(--sx,72%) var(--sy,46%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%);mask-image:radial-gradient(circle var(--sr,320px) at var(--sx,72%) var(--sy,46%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%);transition:opacity 1.8s cubic-bezier(.16,1,.3,1)}
+#hero :is(.d-hero-media,.hero-media)>picture>img{transition:filter 1.8s cubic-bezier(.16,1,.3,1)}
+#hero.fx-lit-on :is(.d-hero-media,.hero-media)>picture>img{filter:grayscale(.3) brightness(.56)}
+#hero.fx-lit-on .fx-lit img{filter:brightness(1.08) contrast(1.06) saturate(1.06)}
+#hero.fx-lit-on .fx-lit{opacity:1}
+</style>
 <style id="m-crumbs">/* крошки на телефоне не показываем: для SEO хватает BreadcrumbList и ссылок в HTML */@media (max-width:900px){.d-crumbs,.f-crumbs{display:none!important}}</style>
 </head>
 <body class="d-page">
@@ -150,7 +162,7 @@
       <nav class="d-crumbs" aria-label="Навигационная цепочка" data-h><a href="../../">Главная</a><span aria-hidden="true">→</span><a href="../../materialy/">Материалы</a><span aria-hidden="true">→</span><span aria-current="page"><span class="nw">Пест-менеджмент</span> или разовая обработка</span></nav>
       <div class="eyebrow">Материалы для бизнеса · Сравнение подходов</div>
       <h1><span class="ln d-ln1"><span><span class="nw">Пест-менеджмент</span></span></span> <span class="ln d-ln2"><span>или разовая</span></span> <span class="ln"><span><em>обработка</em></span></span></h1>
-      <div class="d-hero-media"><picture><source media="(max-width:860px)" srcset="../../img/pm-hero-mob.webp" width="1024" height="576"><img class="d-hero-img" src="../../img/pm-hero.webp" width="1920" height="1072" alt="Пест-менеджер и инженер предприятия сверяют схему точек контроля на складе" fetchpriority="high" decoding="async"></picture></div>
+      <div class="d-hero-media"><picture><source media="(max-width:860px)" srcset="../../img/pm-hero-mob.webp" width="1024" height="576"><img class="d-hero-img" src="../../img/pm-hero.webp" width="1920" height="1072" alt="Пест-менеджер и инженер предприятия сверяют схему точек контроля на складе" fetchpriority="high" decoding="async"></picture><div class="fx-lit" aria-hidden="true"><picture><source media="(max-width:860px)" srcset="../../img/pm-hero-mob.webp" width="1024" height="576"><img class="d-hero-img fx-lit-img" src="../../img/pm-hero.webp" width="1920" height="1072" alt="" decoding="async"></picture></div></div>
       <ul class="d-ticks">
         <li data-h>Чем системный <span class="nw">пест-контроль</span> по IPM отличается от дезинсекции и дератизации по вызову</li>
         <li data-h>Почему после разового распыления вредители возвращаются через <span class="nw">2–4 недели</span></li>
@@ -657,6 +669,49 @@ document.addEventListener('change',function(e){
     :'Отмечено признаков: '+n+'. Разовый выезд даст только временную передышку и не закроет требования проверяющих — такому объекту нужен постоянный пест-менеджмент с точками контроля и журналом.';
 });
 (function(){var f=document.getElementById('form');if(!f)return;f.addEventListener('submit',function(){var e=f.elements,s=e.service.value||'не выбрано',a=e.address.value.trim()||'не указан';e.msg.value='Ситуация: '+s+'\nАдрес объекта: '+a+'\nСтраница: пест-менеджмент или разовая обработка (/materialy/pest-menedzhment-ili-razovaya-obrabotka/)';});})();
+</script>
+<script data-fx>
+/* Эффекты под курсором, как на главной (tools/site/fx.py) */
+(function(){
+  var mm=window.matchMedia;if(!mm)return;
+  var fine=mm('(hover: hover) and (pointer: fine)').matches;
+  /* «фонарь»: следует за мышью, без движения мыши плавно ходит сам; на сенсорных экранах ходит сам (30 кадров в секунду).
+     Не считаем, пока первый экран не виден или вкладка скрыта. Старт — вместе со входом первого экрана */
+  var hero=document.getElementById('hero'),lit=hero&&hero.querySelector('.fx-lit');
+  if(lit&&!mm('(prefers-reduced-motion: reduce)').matches){
+    var media=lit.parentNode,small=mm('(max-width:860px)').matches,full=hero.classList.contains('f-hero');
+    lit.style.setProperty('--sr',small?'150px':'clamp(240px, 21vw, 400px)');
+    var cx=small?.5:(full?.68:.74),ax=small?.24:(full?.16:.13),cy=small?.5:.47,ay=small?.2:.17;
+    var sx=cx,sy=cy,tx=cx,ty=cy,last=-1e9,vis=true,on=false,raf=0,lt=0;
+    var frame=function(now){
+      raf=0;if(!on||!vis||document.hidden)return;
+      var dt=now-lt;if(!fine&&dt<30){raf=requestAnimationFrame(frame);return;}
+      lt=now;if(now-last>2600){var t=now/1000;tx=cx+ax*Math.sin(t*.33);ty=cy+ay*Math.sin(t*.47+1.3);}
+      var k=1-Math.pow(.94,Math.min(dt,100)/16.67);sx+=(tx-sx)*k;sy+=(ty-sy)*k;
+      lit.style.setProperty('--sx',(sx*100).toFixed(2)+'%');lit.style.setProperty('--sy',(sy*100).toFixed(2)+'%');
+      raf=requestAnimationFrame(frame);
+    };
+    var kick=function(){if(!raf&&on&&vis&&!document.hidden){lt=performance.now();raf=requestAnimationFrame(frame);}};
+    hero.addEventListener('pointermove',function(e){
+      if(e.pointerType!=='mouse')return;var r=media.getBoundingClientRect();if(!r.width||!r.height)return;
+      tx=(e.clientX-r.left)/r.width;ty=(e.clientY-r.top)/r.height;last=performance.now();kick();
+    },{passive:true});
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;kick();}).observe(hero);
+    document.addEventListener('visibilitychange',kick);
+    var start=function(){if(on)return;on=true;hero.classList.add('fx-lit-on');kick();};
+    var eb=hero.querySelector('.eyebrow');
+    if(eb&&'MutationObserver' in window){
+      if(eb.classList.contains('in'))start();
+      else{var mo=new MutationObserver(function(){if(eb.classList.contains('in')){mo.disconnect();start();}});mo.observe(eb,{attributes:true,attributeFilter:['class']});}
+    }
+    setTimeout(start,eb?5000:2500);
+  }
+  /* подсветка рамки карточек за курсором — как у .card на главной */
+  if(fine)document.addEventListener('pointermove',function(e){
+    var c=e.target.closest&&e.target.closest('.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev');if(!c)return;
+    var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  },{passive:true});
+})();
 </script>
 <script>
   /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */

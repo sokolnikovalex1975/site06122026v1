@@ -13,6 +13,8 @@
   * первый экран внутренних страниц входит так же, как на главной (элементы data-h);
   * бегущая строка после первого экрана на каждой странице;
   * перелинковка: блок «Смотрите также» на внутренних страницах, ссылки «Подробнее» на главной.
+  * эффекты под курсором, как на главной (tools/site/fx.py): «фонарь» на фото первого экрана, подсветка рамки
+    карточек, появление формы, параллакс фото в карточках отраслей.
 
 Меню в шапке, мобильное меню и подвал ставит tools/menu/apply_menu.py (запускается после этого скрипта).
 Запуск из корня репозитория:  python3 tools/site/build_site.py
@@ -27,6 +29,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import htmldom  # noqa: E402
 sys.path.insert(0, str(ROOT / 'tools' / 'legal'))
 from typo import typo  # noqa: E402  неразрывный пробел после коротких слов, как в остальных текстах сайта
+import fx  # noqa: E402  эффекты под курсором, как на главной: фонарь на фото первого экрана, подсветка карточек
 
 
 def nw(text):
@@ -680,6 +683,7 @@ def process_inner(rel, cfg):
         s, n = re.subn(r'(<section class="cta" id="zayavka">\s*<div class="cta-bg[^>]*></div>)',
                        lambda m: m.group(1) + '<div class="cta-orb" id="orb" aria-hidden="true"></div>', s, count=1)
         assert n == 1, rel + ': нет фона блока заявки'
+    s, fxinfo = fx.apply(s)  # фонарь на фото первого экрана, подсветка рамки карточек, data-form, параллакс фото
     f.write_text(s, encoding='utf-8')
     print('ok', rel)
 
