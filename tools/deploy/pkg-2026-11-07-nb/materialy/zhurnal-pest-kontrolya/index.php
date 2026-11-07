@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Журнал пест-контроля: образец, бланк и шаблон — ПЕСТКОНТРОЛЬ Центр</title>
+<meta name="description" content="Образец заполнения журнала пест-контроля и шаблон-бланк для печати в PDF. Форма из 9 разделов по СанПиН 3.3686-21 и ХАССП: точки контроля, осмотр ловушек, предписания.">
+<link rel="canonical" href="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/zhurnal-pest-kontrolya/">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ПЕСТКОНТРОЛЬ Центр">
+<meta property="og:url" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/zhurnal-pest-kontrolya/">
+<meta property="og:title" content="Журнал пест-контроля: образец заполнения и шаблон в PDF">
+<meta property="og:description" content="Образец заполнения журнала пест-контроля и шаблон-бланк для печати в PDF. Форма из 9 разделов по СанПиН 3.3686-21 и ХАССП: точки контроля, осмотр ловушек, предписания.">
+<meta property="og:image" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/zhurnal-og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Образец заполнения и шаблон журнала пест-контроля ПЕСТКОНТРОЛЬ Центр: титульные листы">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2309090b' stroke='%237c86ff' stroke-width='2'/%3E%3Cpath d='M16 7l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10v-5z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" href="../../fonts/inter-ru-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" media="(min-width:861px)" imagesrcset="../../img/zhurnal-obrazets-p1-360.webp 360w, ../../img/zhurnal-obrazets-p1-720.webp 720w" imagesizes="340px" fetchpriority="high">
+<script>
+  /* начальные состояния анимаций — только при работающем JS; страховка — через 4 с всё показывается.
+     Заставка — один раз за посещение: при переходе по ссылке с якорем и между страницами сайта её нет */
+  (function (d) {
+    d.classList.add('js');
+    try { if (location.hash || sessionStorage.getItem('pc-intro')) d.classList.add('no-intro'); else sessionStorage.setItem('pc-intro', '1'); }
+    catch (e) { if (location.hash) d.classList.add('no-intro'); }
+    setTimeout(function () { if (!d.classList.contains('anim-ready')) d.classList.add('anim-fail'); }, 4000);
+  })(document.documentElement);
+</script>
+<link rel="stylesheet" href="../../style.css?v=20261106s2">
+<style>html{scroll-behavior:auto}
+.d-page .s{padding:clamp(64px,7vw,128px) 0;border-top:1px solid var(--line)}
+.d-crumbs{font-size:14px;color:var(--t3);display:flex;flex-wrap:wrap;gap:8px;margin:0 0 clamp(20px,2.4vw,32px)}
+.d-crumbs a{color:var(--t2)}
+.d-crumbs a:hover{color:var(--t1)}
+.p-hero{position:relative;overflow:hidden;padding:calc(clamp(68px,6vw,115px) + 28px) 0 clamp(56px,6vw,100px);background:radial-gradient(900px 520px at 82% 30%,rgba(124,134,255,.16),rgba(9,9,11,0) 70%)}
+.p-hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(28px,4vw,72px);align-items:center}
+.p-hero h1{font-size:clamp(38px,4.1vw,74px);line-height:1.06;letter-spacing:-.05em;font-weight:300;margin:16px 0 0}
+.p-hero h1 .ln{display:block;padding:0 .08em .08em 0;margin-bottom:-.08em}
+.p-hero h1 .ln>span{display:inline-block}
+.p-def{font-size:clamp(16px,1.18vw,20px);line-height:1.62;color:var(--t2);margin:24px 0 0;max-width:660px}
+.p-def strong{color:var(--t1);font-weight:500}
+.d-ticks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
+.d-ticks li{position:relative;padding-left:30px;line-height:1.52;color:var(--t1)}
+.d-ticks li::before{content:"";position:absolute;left:2px;top:.45em;width:13px;height:7px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}
+.d-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.p-files{display:none;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:14px;color:var(--t3)}
+.p-files a{color:var(--t2);text-decoration:underline;text-decoration-color:rgba(124,134,255,.5);text-underline-offset:4px}
+.p-files a:hover{color:var(--t1)}
+.p-stack{position:relative;justify-self:center;width:min(100%,430px);aspect-ratio:430/560}
+.p-stack a{position:absolute;display:block;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08);transition:transform .5s var(--ease)}
+.p-stack img{display:block;width:100%;height:auto}
+.p-stack .s1{left:0;top:0;width:78%;z-index:2;transform:rotate(-2.5deg)}
+.p-stack .s2{right:0;top:9%;width:70%;z-index:1;transform:rotate(4deg);opacity:.92}
+.p-stack a:hover{transform:rotate(0) translateY(-4px)}
+.p-stack-cap{position:absolute;left:4%;bottom:0;z-index:3;display:flex;gap:8px;flex-wrap:wrap}
+.p-chip{font-size:12px;letter-spacing:.04em;padding:6px 11px;border-radius:99px;background:rgba(9,9,11,.86);border:1px solid var(--line2);color:var(--t1);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.p-chip.y{background:var(--yel);border-color:var(--yel);color:#09090b;font-weight:600}
+.p-toc{display:flex;flex-wrap:wrap;gap:8px;margin:clamp(28px,3vw,44px) 0 0;padding:0;list-style:none}
+.p-toc a{display:inline-flex;gap:8px;align-items:center;padding:9px 14px;border:1px solid var(--line2);border-radius:99px;font-size:13.5px;color:var(--t2);background:rgba(255,255,255,.02);transition:border-color .2s,color .2s}
+.p-toc a:hover{border-color:var(--acc);color:var(--t1)}
+.p-toc b{font-family:var(--mono,monospace);font-size:11px;color:var(--acc);font-weight:500}
+.p-dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.p-dl-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line2);border-radius:var(--r);overflow:hidden}
+.p-dl-card.main{border-color:rgba(253,199,0,.45)}
+.p-dl-img{display:block;background:linear-gradient(180deg,rgba(124,134,255,.1),rgba(124,134,255,0));padding:22px 22px 0;height:250px;overflow:hidden;border-bottom:1px solid var(--line2)}
+.p-dl-img img{display:block;width:76%;max-width:260px;height:auto;margin:0 auto;border-radius:6px 6px 0 0;box-shadow:0 18px 40px rgba(0,0,0,.5);transition:transform .4s var(--ease)}
+.p-dl-card:hover .p-dl-img img{transform:translateY(-4px)}
+.p-dl-body{padding:clamp(20px,1.8vw,28px);display:flex;flex-direction:column;gap:10px;flex:1}
+.p-dl-meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--t3);letter-spacing:.04em}
+.p-dl-meta span{padding:3px 9px;border-radius:6px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.p-dl-meta span.f{color:var(--acc);border-color:rgba(124,134,255,.35)}
+.p-dl-card h3{font-size:clamp(19px,1.4vw,23px);font-weight:400;letter-spacing:-.02em;margin:0}
+.p-dl-card p{color:var(--t2);line-height:1.58;margin:0;font-size:15px}
+.p-dl-card .btn{margin-top:auto;align-self:flex-start}
+.f-checks{position:relative;padding:0 0 clamp(56px,6vw,110px)}
+.f-check.panel{max-width:none}
+.f-check-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(24px,4vw,72px);padding:clamp(24px,3vw,48px)}
+.f-check-t{font-size:clamp(26px,2.5vw,44px);line-height:1.1;letter-spacing:-.04em;font-weight:300;margin:0}
+.f-check-res{margin:20px 0 10px;color:var(--t2);font-size:15px}
+.f-check-res b{font-size:clamp(38px,3.2vw,60px);font-weight:300;letter-spacing:-.04em;color:var(--acc);margin-right:6px;line-height:1;transition:color .3s}
+.f-check-res.full b{color:var(--grn)}
+.f-check-note{color:var(--t2);line-height:1.6;margin:0 0 24px;max-width:460px}
+.f-check-list{list-style:none;margin:0;padding:0;display:grid;align-content:center;border-top:1px solid var(--line)}
+.f-check-list li{border-bottom:1px solid var(--line)}
+.f-check-list label{display:flex;gap:16px;align-items:flex-start;padding:15px 4px;cursor:pointer;font-size:clamp(15px,1.05vw,17.5px);line-height:1.46;color:var(--t2);transition:color .25s}
+.f-check-list label:hover{color:var(--t1)}
+.f-check-list input{appearance:none;-webkit-appearance:none;flex:none;width:24px;height:24px;margin:2px 0 0;border-radius:7px;border:1.4px solid var(--line2);background:rgba(255,255,255,.03) center/14px no-repeat;cursor:pointer;transition:background-color .25s,border-color .25s}
+.f-check-list input:checked{background-color:var(--acc2);border-color:var(--acc);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.f-check-list input:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.f-check-list input:checked+span{color:var(--t1)}
+.f-check-list strong{color:var(--t1);font-weight:500}
+.d-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.d-cards.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.d-card{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(22px,2vw,32px)}
+.d-card h3{font-size:clamp(19px,1.4vw,24px);font-weight:400;letter-spacing:-.02em;margin:0 0 12px}
+.d-card p{color:var(--t2);line-height:1.6;margin:0}
+.d-card p+p{margin-top:10px}
+.d-card .f-num{font-size:clamp(20px,1.7vw,30px);line-height:1.1;letter-spacing:-.03em;font-weight:300;color:var(--acc);margin:0 0 14px}
+.d-card a{color:var(--acc);text-decoration:underline;text-underline-offset:3px}
+.f-req .d-card{border-top:2px solid rgba(124,134,255,.45)}
+.d-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:clamp(28px,4vw,72px);align-items:start}
+.d-terms{list-style:none;counter-reset:t;padding:0;margin:0;border-top:1px solid var(--line2)}
+.d-terms li{display:grid;grid-template-columns:44px minmax(0,.36fr) minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line2);line-height:1.55}
+.d-terms li::before{counter-increment:t;content:counter(t);color:var(--acc);font-family:var(--mono,monospace);font-size:13px}
+.d-terms b{font-weight:500;color:var(--t1)}
+.d-terms span{color:var(--t2)}
+.d-terms span i{font-style:normal;color:var(--t3)}
+.d-doc{display:grid;gap:14px;position:sticky;top:110px}
+.d-doc-prev{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line2);background:#fff;box-shadow:0 18px 44px rgba(0,0,0,.45);transition:border-color .2s,transform .2s}
+.d-doc-prev:hover{border-color:var(--acc);transform:translateY(-2px)}
+.d-doc-prev img{display:block;width:100%;height:auto}
+.d-small{font-size:13px;color:var(--t3);margin:0;line-height:1.5}
+.d-tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:24px;border:1px solid var(--line2);border-radius:var(--r);background:var(--card)}
+.d-table{width:100%;border-collapse:collapse}
+.d-table th,.d-table td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);line-height:1.5;vertical-align:top;font-size:14.5px}
+.d-table th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);font-weight:500;background:rgba(255,255,255,.02)}
+.d-table tr:last-child td{border-bottom:0}
+.d-table td:first-child{color:var(--t1);font-weight:500}
+.d-table td:not(:first-child){color:var(--t2)}
+.mx-t{min-width:760px}
+.mx-t th,.mx-t td{text-align:center;padding:11px 10px;font-size:14px}
+.mx-t th:first-child,.mx-t td:first-child,.mx-t th:nth-child(2),.mx-t td:nth-child(2){text-align:left}
+.mx-t td.v{font-family:var(--mono,monospace);color:var(--t1)}
+.mx-t td.hl{background:rgba(253,199,0,.12);color:var(--yel)}
+.mx-t td.cr{background:rgba(253,164,175,.12);color:#fda4af}
+.mx-t td.na{color:var(--t3)}
+.p-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:16px 0 0;padding:0;list-style:none;font-size:14px;color:var(--t2)}
+.p-legend b{display:inline-block;min-width:30px;text-align:center;font-family:var(--mono,monospace);font-weight:500;color:var(--acc);border:1px solid rgba(124,134,255,.35);border-radius:6px;padding:1px 6px;margin-right:6px}
+.p-subhead{font-size:clamp(20px,1.55vw,26px);font-weight:400;letter-spacing:-.02em;margin:44px 0 6px;color:var(--t1)}
+.p-subhead.first{margin-top:8px}
+.p-scroll{display:none;margin-top:14px}
+.p-sublead{color:var(--t3);font-size:14px;margin:0;line-height:1.5}
+.p-code{display:inline-block;font-family:var(--mono,monospace);font-size:12px;color:var(--acc);background:rgba(124,134,255,.12);border:1px solid rgba(124,134,255,.3);padding:2px 7px;border-radius:6px}
+.p-ok{color:#34d399;font-weight:500}
+.p-wip{color:var(--yel);font-weight:500}
+.p-steps{list-style:none;counter-reset:st;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.p-steps li{counter-increment:st;position:relative;background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(22px,2vw,30px) clamp(22px,2vw,30px) clamp(22px,2vw,30px) 76px}
+.p-steps li::before{content:counter(st,decimal-leading-zero);position:absolute;left:24px;top:22px;font-family:var(--mono,monospace);font-size:14px;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:8px;padding:4px 7px}
+.p-steps h3{font-size:clamp(18px,1.3vw,21px);font-weight:400;letter-spacing:-.02em;margin:0 0 8px}
+.p-steps p{color:var(--t2);line-height:1.6;margin:0;font-size:15px}
+.p-secs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.p-sec{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(22px,2.2vw,32px)}
+.p-sec-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.p-sec-num{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--yel);font-weight:500;padding:4px 10px;border-radius:99px;background:rgba(253,199,0,.1);border:1px solid rgba(253,199,0,.28)}
+.p-sec-who{font-size:12px;color:var(--t3);text-align:right}
+.p-sec h3{font-size:clamp(18px,1.35vw,22px);font-weight:400;letter-spacing:-.02em;margin:0 0 10px;color:var(--t1)}
+.p-sec h3 a,.p-sec h2 a{color:var(--t1)}
+.p-sec h2.p-sec-h{font-size:clamp(18px,1.35vw,22px);font-weight:400;letter-spacing:-.02em;line-height:1.3;margin:0 0 10px;color:var(--t1)}
+.p-sec h3 a:hover,.p-sec h2 a:hover{color:var(--acc)}
+.p-sec p{color:var(--t2);line-height:1.6;margin:0;font-size:15px}
+.p-sec .d-btns{margin-top:20px}
+.p-obj{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.p-obj .d-card h3{font-size:clamp(18px,1.3vw,21px)}
+.p-obj ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
+.p-obj li{position:relative;padding-left:18px;color:var(--t2);font-size:14.5px;line-height:1.5}
+.p-obj li::before{content:"";position:absolute;left:2px;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--acc)}
+.d-cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.d-chips{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.d-chips a{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border:1px solid var(--line2);border-radius:99px;background:var(--card);color:var(--t1);font-size:14px;transition:border-color .2s,background .2s}
+.d-chips a:hover{border-color:var(--acc);background:rgba(124,134,255,.08)}
+.p-note{margin-top:24px;padding:18px 22px;border-left:2px solid var(--yel);background:rgba(253,199,0,.05);border-radius:0 12px 12px 0;color:var(--t2);line-height:1.6}
+.p-note b{color:var(--t1);font-weight:500}
+@media (max-width:1180px){.p-obj,.d-cards.c4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1100px){
+  .p-hero-grid,.f-check-in,.d-split{grid-template-columns:minmax(0,1fr)}
+  .d-doc{position:static;max-width:520px}
+  .p-stack{width:min(100%,380px)}
+}
+@media (max-width:900px){
+  .hdr{background:rgba(0,0,0,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--line)}
+  .d-cards,.p-secs,.d-cols2,.p-dl,.p-steps{grid-template-columns:minmax(0,1fr)}
+  .p-dl-img{height:220px}
+}
+@media (max-width:860px){
+  .p-hero{padding:76px 0 36px}
+  .p-hero-copy{display:flex;flex-direction:column}
+  .p-hero-copy .eyebrow{order:1;font-size:11px}
+  .p-hero-copy h1{order:2;font-size:clamp(30px,8vw,40px);line-height:1.06;margin-top:8px}
+  .p-hero-copy .p-def{order:3;font-size:14px;line-height:1.48;margin-top:12px}
+  .p-hero-copy .d-btns{order:4;margin-top:14px}
+  .p-hero-copy .p-files{display:flex;order:5;margin-top:12px;font-size:13px}
+  .p-hero-copy .d-ticks{order:6;margin-top:14px;gap:8px;font-size:14px}
+  .p-hero-copy .d-ticks li{line-height:1.42;padding-left:26px}
+  .p-hero-copy .d-crumbs{order:7;margin:14px 0 0;font-size:11px;line-height:1.3;gap:5px;color:rgba(255,255,255,.38);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .p-hero-copy .d-crumbs a{color:rgba(255,255,255,.46)}
+  .p-hero-copy .p-btn-sec{display:none}
+  .p-stack{width:min(86%,320px);margin-top:8px}
+  .p-toc{display:none}
+  .p-scroll{display:block}
+  .p-scroll+.d-tw{margin-top:8px}
+  .d-terms li{grid-template-columns:30px minmax(0,1fr);gap:6px 12px}
+  .d-terms span{grid-column:2}
+  .p-obj,.d-cards.c4{grid-template-columns:minmax(0,1fr)}
+  .p-steps li{padding-left:22px;padding-top:62px}
+  .p-steps li::before{left:22px;top:20px}
+  .d-table.st,.d-table.st tbody,.d-table.st tr,.d-table.st td{display:block;width:100%}
+  .d-table.st thead{display:none}
+  .d-table.st tr{padding:16px 18px;border-bottom:1px solid var(--line)}
+  .d-table.st td{padding:6px 0;border:0}
+  .d-table.st td::before{content:attr(data-l);display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:2px}
+}
+@media (max-width:600px){
+  .d-btns .btn,.f-check .btn,.d-doc .btn,.p-dl-card .btn{width:100%;white-space:normal;text-align:center;line-height:1.25}
+  .d-page .btn-lg{padding:0 16px}
+  .f-check-in{padding:24px 20px}
+  .p-dl-img{height:200px}
+}
+@media (max-width:400px){
+  .hdr .wrap{gap:10px}.hdr-right{gap:8px}.logo{gap:8px}.logo-mark{width:34px;height:34px}.logo-name{font-size:15px}.phone i,.burger{width:40px;height:40px}
+}
+@media (max-width:340px){.logo-sub{display:none}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"},{"@type":"ListItem","position":2,"name":"Материалы","item":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/"},{"@type":"ListItem","position":3,"name":"Журнал пест-контроля","item":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/zhurnal-pest-kontrolya/"}]},{"@type":"TechArticle","@id":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/zhurnal-pest-kontrolya/#article","headline":"Журнал пест-контроля: образец заполнения и шаблон в PDF","description":"Образец заполнения журнала пест-контроля и шаблон-бланк для печати в PDF. Форма из 9 разделов по СанПиН 3.3686-21 и ХАССП: точки контроля, осмотр ловушек, предписания.","inLanguage":"ru-RU","mainEntityOfPage":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/zhurnal-pest-kontrolya/","datePublished":"2026-11-06","dateModified":"2026-11-06","image":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/zhurnal-og.jpg","about":["журнал пест-контроля","дератизация","дезинсекция","ХАССП"],"author":{"@type":"Organization","name":"ПЕСТКОНТРОЛЬ Центр","url":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"},"publisher":{"@type":"Organization","name":"ПЕСТКОНТРОЛЬ Центр","legalName":"ООО «Центр дезинфекционных услуг»","taxID":"7714462211","url":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/","telephone":"+7-495-104-35-70","email":"b2b@pestcontrol-center.ru","logo":{"@type":"ImageObject","url":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/zhurnal-og.jpg"}},"hasPart":[{"@type":"DigitalDocument","name":"Образец заполнения журнала пест-контроля (PDF, 10 листов)","encodingFormat":"application/pdf","url":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/zhurnal-pest-kontrolya/obrazets-zhurnala-pest-kontrolya.pdf","inLanguage":"ru-RU"},{"@type":"DigitalDocument","name":"Шаблон (бланк) журнала пест-контроля для печати (PDF, 10 листов)","encodingFormat":"application/pdf","url":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/zhurnal-pest-kontrolya/shablon-zhurnala-pest-kontrolya.pdf","inLanguage":"ru-RU"}]},{"@type":"Service","name":"Ведение журнала и документации пест-контроля по договору","serviceType":"Пест-контроль, дератизация и дезинсекция для организаций по системе IPM и ХАССП","provider":{"@type":"Organization","name":"ПЕСТКОНТРОЛЬ Центр","url":"https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/","telephone":"+7-495-104-35-70"},"areaServed":[{"@type":"City","name":"Москва"},{"@type":"AdministrativeArea","name":"Московская область"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Есть ли утверждённая форма журнала пест-контроля?","acceptedAnswer":{"@type":"Answer","text":"Единой государственной формы нет. СанПиН 3.3686-21 требует учитывать численность вредителей, контролировать эффективность истребительных мероприятий и вести производственный контроль за их объёмом и качеством (пп. 82, 99, 114), а форму записей определяет программа пест-контроля объекта и договор с подрядчиком. Поэтому журнал разных компаний выглядит по-разному. Наша форма из 9 разделов закрывает и требования санитарных правил, и то, что смотрят аудиторы ХАССП, ISO 22000 и FSSC 22000."}},{"@type":"Question","name":"Где скачать образец, бланк и шаблон журнала пест-контроля?","acceptedAnswer":{"@type":"Answer","text":"На этой странице, бесплатно и без регистрации, два PDF-файла: образец заполнения на 10 листов (журнал пекарни за сентябрь–октябрь) и шаблон — тот же журнал без записей, он же бланк для печати. Файлы совпадают лист в лист, поэтому свой журнал удобно заполнять, глядя в образец. Листы визитов, поточечного осмотра и предписаний печатайте в нужном количестве, а номера листов проставьте при прошивке."}},{"@type":"Question","name":"Журнал пест-контроля и журнал учёта дератизации и дезинсекции — это одно и то же?","acceptedAnswer":{"@type":"Answer","text":"По смыслу да, но журнал пест-контроля шире. Простой журнал учёта дератизации и дезинсекции фиксирует выезды и обработки. Журнал пест-контроля дополнительно ведёт мониторинг вредителей по каждой точке контроля, учёт насекомых по видам, предписания и анализ тенденций — это нужно для ХАССП и аудитов. Ведомость визитов в нашей форме (раздел 4) одновременно служит журналом учёта дератизации и дезинсекции."}},{"@type":"Question","name":"Кто должен заполнять журнал пест-контроля — сотрудник предприятия или подрядчик?","acceptedAnswer":{"@type":"Answer","text":"Результаты осмотров точек контроля, применённые средства и замечания вносит специалист подрядной организации в день визита. Ответственный сотрудник предприятия подписывает визит, отмечает выполнение предписаний и следит за сигнальным листом, куда персонал записывает наблюдения между визитами."}},{"@type":"Question","name":"Как часто нужно делать записи в журнале пест-контроля?","acceptedAnswer":{"@type":"Answer","text":"Запись делается при каждом плановом и внеплановом визите. Для объектов из пункта 98 СанПиН 3.3686-21 — пищевая промышленность, общественное питание, хранение и реализация пищевой продукции, гостиницы, медицинские организации и другие — плановые обследования на насекомых проводятся не реже 2 раз в месяц (п. 101), а дератизация — по результатам ежемесячной оценки (п. 110). Внутренние стандарты сетей и аудиторов могут требовать чаще."}},{"@type":"Question","name":"Нужно ли прошивать, нумеровать и заверять журнал печатью?","acceptedAnswer":{"@type":"Answer","text":"Прямого требования в санитарных правилах нет, но для бумажного журнала это обычная практика: листы нумеруют, журнал прошнуровывают, а на последней странице делают заверительную надпись с числом листов, подписями и печатями сторон. Так видно, что листы не заменяли и не вклеивали задним числом."}},{"@type":"Question","name":"Чем журнал пест-контроля отличается от акта выполненных работ?","acceptedAnswer":{"@type":"Answer","text":"Акт подтверждает конкретный выезд: перечень работ, расход средств, основание для оплаты, в том числе по ЭДО. Журнал хранится на объекте и показывает непрерывную историю каждой точки контроля из месяца в месяц, предписания и их выполнение. Номера актов указываются в ведомости визитов журнала, поэтому документы легко сверить."}},{"@type":"Question","name":"Можно ли вести журнал пест-контроля в электронном виде?","acceptedAnswer":{"@type":"Answer","text":"Санитарные правила не запрещают электронный учёт, а для учёта дезинфекции прямо допускают программные продукты (п. 94 СанПиН 3.3686-21). На практике на объекте держат бумажный журнал с подписями, а электронный отчёт с фото и трендами получает служба качества. Если ваш стандарт или торговая сеть принимает только электронные записи, проверьте, что в них видны дата, автор и подтверждение Заказчика."}},{"@type":"Question","name":"Что писать в журнале, если точка контроля заставлена паллетами или повреждена?","acceptedAnswer":{"@type":"Answer","text":"Пустую клетку оставлять нельзя. В поточечном листе ставится код «Д» — нет доступа — или «Р» — повреждена и заменена, а в лист предписаний вносится причина и срок: например, освободить проход вдоль стены. На следующем визите отмечается, восстановлен ли доступ."}},{"@type":"Question","name":"Сколько хранить заполненные журналы пест-контроля?","acceptedAnswer":{"@type":"Answer","text":"Единый срок в санитарных правилах не установлен: его задаёт внутренний порядок предприятия, программа пест-контроля или требования сети. Часто журналы, акты и план-схемы хранят не меньше трёхлетнего цикла сертификации системы пищевой безопасности, чтобы на ресертификационном аудите была видна история."}},{"@type":"Question","name":"Можно ли заказать у вас только оформление журнала без обслуживания?","acceptedAnswer":{"@type":"Answer","text":"Нет. Мы не заполняем журналы без фактической работы на объекте. Образец и шаблон журнала можно бесплатно скачать на этой странице, а рабочий журнал со схемой точек, программой и полным комплектом документов мы заводим и ведём по договору после бесплатного обследования."}}]}]}</script>
+<style id="m-crumbs">/* крошки на телефоне не показываем: для SEO хватает BreadcrumbList и ссылок в HTML */@media (max-width:900px){.d-crumbs,.f-crumbs{display:none!important}}</style>
+</head>
+<body class="d-page">
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<!-- ============ INTRO ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-in">
+    <svg class="intro-mark" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linejoin="round"><path class="im-shield" pathLength="100" d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z" stroke="#fff"/><circle class="im-c" pathLength="100" cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path class="im-x" pathLength="100" d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg>
+    <div class="intro-word"><span>ПЕСТКОНТРОЛЬ</span><b>Центр</b></div>
+    <div class="intro-bar"><i></i></div>
+  </div>
+</div>
+
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+<div class="cursor" aria-hidden="true"><i class="cursor-dot"></i><i class="cursor-ring"></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="../../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span>
+      <span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-uslugi">Услуги<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-uslugi"><a href="../../dezinfektsiya/">Дезинфекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../deratizatsiya/">Дератизация для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../dezinsektsiya/">Дезинсекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../#podhod" class="nav-dd-all"><span>Пест-контроль по системе IPM</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-otrasli">Отрасли<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-otrasli"><a href="../../pishchevoe-proizvodstvo/">Пищевые производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../magaziny-i-torgovye-seti/">Магазины и торговые сети<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../restorany-i-kafe/">Рестораны и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../sklady-i-logistika/">Склады и логистика<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../farmatsevticheskie-proizvodstva/">Фармацевтические производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../gostinitsy/">Гостиницы и отели<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../#otrasli" class="nav-dd-all">Все отрасли<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор</a><a href="../../#podhod">Метод IPM</a><a href="../../#usloviya">Цена</a><div class="nav-dd"><button class="nav-dd-btn active" type="button" aria-expanded="false" aria-controls="nav-materialy">Материалы<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-materialy"><a href="../../normativnaya-baza/">Нормативная база<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="./" aria-current="page"><span>Журнал <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/" class="nav-dd-all">Все материалы<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+    </nav>
+    <div class="hdr-right">
+      <a class="phone" href="tel:+74951043570" aria-label="Позвонить: +7 (495) 104-35-70"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></i><span>+7 (495) 104-35-70</span></a>
+      <div class="msg">
+        <a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a>
+        <a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a>
+      </div>
+      <a href="#zayavka" class="btn btn-w btn-sm" data-magnet><span class="btn-t">Проверить журнал</span></a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">
+  <div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-uslugi">Услуги<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-uslugi"><div><a href="../../dezinfektsiya/">Дезинфекция для организаций</a><a href="../../deratizatsiya/">Дератизация для организаций</a><a href="../../dezinsektsiya/">Дезинсекция для организаций</a><a href="../../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a><a href="../../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание</a><a href="../../#podhod"><span class="nw">Пест-контроль</span> по системе IPM</a></div></div></div><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-otrasli">Отрасли<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-otrasli"><div><a href="../../pishchevoe-proizvodstvo/">Пищевые производства</a><a href="../../magaziny-i-torgovye-seti/">Магазины и торговые сети</a><a href="../../restorany-i-kafe/">Рестораны и кафе</a><a href="../../sklady-i-logistika/">Склады и логистика</a><a href="../../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a><a href="../../gostinitsy/">Гостиницы и отели</a><a href="../../#otrasli">Все отрасли</a></div></div></div><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор <small>на дератизацию и дезинсекцию</small></a><a href="../../#podhod">Метод IPM</a><a href="../../#usloviya">Цена</a><div class="mm-group open" data-open><button class="mm-toggle" type="button" aria-expanded="true" aria-controls="mm-materialy">Материалы<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-materialy"><div><a href="../../normativnaya-baza/">Нормативная база</a><a href="../../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a><a href="./" aria-current="page"><span>Журнал <span class="nw">пест-контроля</span></span></a><a href="../../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a><a href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a><a href="../../materialy/">Все материалы</a></div></div></div>
+  <a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Бесплатное обследование</span></a>
+</nav>
+
+<main id="main" tabindex="-1">
+<section class="p-hero" id="hero">
+  <div class="wrap">
+    <div class="p-hero-grid">
+      <div class="p-hero-copy">
+        <nav class="d-crumbs" aria-label="Навигационная цепочка" data-h><a href="../../">Главная</a><span aria-hidden="true">→</span><a href="../">Материалы</a><span aria-hidden="true">→</span><span aria-current="page">Журнал пест-контроля</span></nav>
+        <div class="eyebrow">Материалы · Документы IPM и ХАССП</div>
+        <h1><span class="ln"><span>Журнал <span class="nw">пест-контроля:</span></span></span> <span class="ln"><span>образец заполнения,</span></span> <span class="ln"><span><em>бланк и шаблон</em></span></span></h1>
+        <p class="p-def" data-h><strong>Журнал пест-контроля</strong> — рабочий документ объекта, где по каждой пронумерованной точке контроля записывают результат осмотра, применённые средства, находки вредителей и выполнение предписаний. Ниже — готовая форма из 9 разделов: образец заполнения на примере пекарни и шаблон-бланк для печати. Оба файла в PDF и совпадают лист в лист.</p>
+        <div class="d-btns" data-h>
+          <a href="obrazets-zhurnala-pest-kontrolya.pdf" class="btn btn-w btn-lg" target="_blank" rel="noopener" data-dl="obrazets" data-magnet><span class="btn-t">Скачать образец заполнения, PDF</span></a>
+          <a href="shablon-zhurnala-pest-kontrolya.pdf" class="btn btn-o btn-lg p-btn-sec" target="_blank" rel="noopener" data-dl="shablon" data-magnet><span class="btn-t">Скачать шаблон, PDF</span></a>
+        </div>
+        <p class="p-files" data-h><a href="shablon-zhurnala-pest-kontrolya.pdf" target="_blank" rel="noopener" data-dl="shablon">Шаблон журнала для печати, PDF</a></p>
+        <ul class="d-ticks">
+          <li data-h>Образец и шаблон совпадают лист в лист — свой журнал удобно заполнять по образцу</li>
+          <li data-h>Учитывает СанПиН 3.3686-21 и то, что смотрят аудиторы ХАССП, ISO 22000 и FSSC 22000</li>
+          <li data-h>Рабочий журнал заводим и ведём на объекте с первого визита по договору</li>
+        </ul>
+      </div>
+      <div class="p-stack" aria-label="Страницы образца журнала">
+        <a href="obrazets-zhurnala-pest-kontrolya.pdf" class="s1" target="_blank" rel="noopener" aria-label="Открыть образец журнала пест-контроля, PDF"><img src="../../img/zhurnal-obrazets-p1-360.webp" srcset="../../img/zhurnal-obrazets-p1-360.webp 360w, ../../img/zhurnal-obrazets-p1-720.webp 720w" sizes="(max-width:860px) 260px, 340px" width="360" height="509" decoding="async" alt="Титульный лист образца журнала пест-контроля ПЕСТКОНТРОЛЬ Центр с реквизитами исполнителя и составом разделов"></a>
+        <a href="obrazets-zhurnala-pest-kontrolya.pdf" class="s2" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../../img/zhurnal-obrazets-p8-360.webp" srcset="../../img/zhurnal-obrazets-p8-360.webp 360w, ../../img/zhurnal-obrazets-p8-720.webp 720w" sizes="(max-width:860px) 230px, 300px" width="360" height="509" loading="lazy" decoding="async" alt=""></a>
+        <div class="p-stack-cap"><span class="p-chip y">Образец заполнения</span><span class="p-chip">10 листов · 9 разделов</span></div>
+      </div>
+    </div>
+    <ol class="p-toc" aria-label="Содержание страницы" data-h>
+      <li><a href="#skachat"><b>01</b>Скачать образец и шаблон</a></li>
+      <li><a href="#forma"><b>02</b>Форма: 9 разделов</a></li>
+      <li><a href="#obrazets"><b>03</b>Образец заполнения</a></li>
+      <li><a href="#kak-vesti"><b>04</b>Как вести журнал</a></li>
+      <li><a href="#obekty"><b>05</b>Ресторан, склад, производство</a></li>
+      <li><a href="#oshibki"><b>06</b>Ошибки</a></li>
+      <li><a href="#normy"><b>07</b>Нормативная база</a></li>
+      <li><a href="#voprosy"><b>08</b>Вопросы</a></li>
+    </ol>
+  </div>
+</section>
+
+<div class="strip" aria-label="Коротко о журнале пест-контроля">
+  <div class="strip-track" id="stripTrack">
+    <div class="strip-set">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /> </svg><b>9 разделов</b> на 10 листах</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-signature" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z" /> <path d="M14.487 7.858A1 1 0 0 1 14 7V2" /> <path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516" /> <path d="M8 18h1" /> </svg><b>Образец и шаблон</b> — в PDF, лист в лист</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-map-pinned" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 01-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0112 0" /> <path d="M4.474 15h-.197a1 1 0 00-.969.753l-1.097 4.35a1.5 1.5 0 001.444 1.898L20.344 22a1.5 1.5 0 001.446-1.897l-1.098-4.35a1 1 0 00-.969-.753h-.197" /> <circle cx="12" cy="8" r="2" /> </svg><b>Реестр точек</b> контроля</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-scan-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 7V5a2 2 0 0 1 2-2h2" /> <path d="M17 3h2a2 2 0 0 1 2 2v2" /> <path d="M21 17v2a2 2 0 0 1-2 2h-2" /> <path d="M7 21H5a2 2 0 0 1-2-2v-2" /> <circle cx="12" cy="12" r="3" /> <path d="m16 16-1.9-1.9" /> </svg><b>Поточечный лист</b> осмотра ловушек</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-activity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /> </svg><b>Учёт насекомых</b> и грызунов</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg><b>Предписания</b> и сигнальный лист персонала</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88" /> <circle cx="6" cy="14" r="3" /> </svg><b>СанПиН 3.3686-21</b> и ХАССП</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-crosshair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <line x1="22" x2="18" y1="12" y2="12" /> <line x1="6" x2="2" y1="12" y2="12" /> <line x1="12" x2="12" y1="6" y2="2" /> <line x1="12" x2="12" y1="22" y2="18" /> </svg><b>ISO 22000</b> и FSSC 22000</div>
+    </div>
+    <div class="strip-set" aria-hidden="true">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /> </svg><b>9 разделов</b> на 10 листах</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-signature" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z" /> <path d="M14.487 7.858A1 1 0 0 1 14 7V2" /> <path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516" /> <path d="M8 18h1" /> </svg><b>Образец и шаблон</b> — в PDF, лист в лист</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-map-pinned" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 01-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0112 0" /> <path d="M4.474 15h-.197a1 1 0 00-.969.753l-1.097 4.35a1.5 1.5 0 001.444 1.898L20.344 22a1.5 1.5 0 001.446-1.897l-1.098-4.35a1 1 0 00-.969-.753h-.197" /> <circle cx="12" cy="8" r="2" /> </svg><b>Реестр точек</b> контроля</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-scan-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 7V5a2 2 0 0 1 2-2h2" /> <path d="M17 3h2a2 2 0 0 1 2 2v2" /> <path d="M21 17v2a2 2 0 0 1-2 2h-2" /> <path d="M7 21H5a2 2 0 0 1-2-2v-2" /> <circle cx="12" cy="12" r="3" /> <path d="m16 16-1.9-1.9" /> </svg><b>Поточечный лист</b> осмотра ловушек</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-activity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /> </svg><b>Учёт насекомых</b> и грызунов</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg><b>Предписания</b> и сигнальный лист персонала</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88" /> <circle cx="6" cy="14" r="3" /> </svg><b>СанПиН 3.3686-21</b> и ХАССП</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-crosshair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <line x1="22" x2="18" y1="12" y2="12" /> <line x1="6" x2="2" y1="12" y2="12" /> <line x1="12" x2="12" y1="6" y2="2" /> <line x1="12" x2="12" y1="22" y2="18" /> </svg><b>ISO 22000</b> и FSSC 22000</div>
+    </div>
+  </div>
+</div>
+
+<section class="s" id="skachat">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Бесплатно, без регистрации</div>
+      <h2 data-split>Скачать журнал <span class="nw">пест-контроля:</span> <em>образец, бланк и шаблон</em></h2>
+      <p class="sub" data-fade>Два файла одной формы, совпадают лист в лист. Образец показывает, как выглядят правильные записи за два месяца работы. Шаблон — тот же журнал без записей: его печатают и заполняют от руки.</p>
+    </div>
+    <div class="p-dl" data-group="cards">
+      <article class="p-dl-card main">
+        <a class="p-dl-img" href="obrazets-zhurnala-pest-kontrolya.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../../img/zhurnal-obrazets-p1-360.webp" srcset="../../img/zhurnal-obrazets-p1-360.webp 360w, ../../img/zhurnal-obrazets-p1-720.webp 720w" sizes="260px" width="360" height="509" loading="lazy" decoding="async" alt=""></a>
+        <div class="p-dl-body">
+          <div class="p-dl-meta"><span class="f">PDF</span><span>10 листов</span><span>A4</span></div>
+          <h3>Образец заполнения журнала <span class="nw">пест-контроля</span></h3>
+          <p>Заполненный журнал пекарни за сентябрь–октябрь: 30 точек контроля, поточечные отметки, находки грызунов и тараканов, предписания и их выполнение, сигналы персонала, сводка за месяц.</p>
+          <a href="obrazets-zhurnala-pest-kontrolya.pdf" class="btn btn-w btn-lg" target="_blank" rel="noopener" data-dl="obrazets"><span class="btn-t">Скачать образец, PDF</span></a>
+        </div>
+      </article>
+      <article class="p-dl-card">
+        <a class="p-dl-img" href="shablon-zhurnala-pest-kontrolya.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../../img/zhurnal-shablon-p1-360.webp" srcset="../../img/zhurnal-shablon-p1-360.webp 360w, ../../img/zhurnal-shablon-p1-720.webp 720w" sizes="260px" width="360" height="509" loading="lazy" decoding="async" alt=""></a>
+        <div class="p-dl-body">
+          <div class="p-dl-meta"><span class="f">PDF</span><span>10 листов</span><span>для печати</span></div>
+          <h3>Шаблон и бланк журнала <span class="nw">пест-контроля</span></h3>
+          <p>Тот же журнал из 9 разделов без записей, с разлинованными таблицами. Листы визитов, поточечного осмотра и предписаний распечатайте в нужном количестве, затем пронумеруйте и прошнуруйте журнал.</p>
+          <a href="shablon-zhurnala-pest-kontrolya.pdf" class="btn btn-o btn-lg" target="_blank" rel="noopener" data-dl="shablon"><span class="btn-t">Скачать шаблон, PDF</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="f-checks" id="samoproverka" aria-labelledby="chk-t">
+  <div class="wrap">
+    <div class="panel f-check" data-fade>
+      <div class="panel-scan" aria-hidden="true"></div>
+      <div class="f-check-in">
+        <div class="f-check-l">
+          <div class="eyebrow" data-eyebrow>Проверка за 2 минуты</div>
+          <h2 id="chk-t" class="f-check-t" data-split>Пройдёт ли ваш журнал <em><span class="nw">пест-контроля</span> проверку</em></h2>
+          <p class="f-check-res"><b id="chk-n">0</b> из 6</p>
+          <p class="f-check-note" id="chk-note" aria-live="polite">Отметьте, что уже есть в вашем журнале. Если чего-то не хватает — на бесплатном обследовании сверим журнал, схему и точки на объекте и покажем, что исправить до проверки.</p>
+          <a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Проверить журнал на объекте</span></a>
+        </div>
+        <ul class="f-check-list">
+          <li><label><input type="checkbox"><span><strong>Титульный лист заполнен:</strong> объект и адрес, номер договора, реквизиты и лицензия подрядчика, ответственные с обеих сторон, дата начала журнала</span></label></li>
+          <li><label><input type="checkbox"><span><strong>Учёт по каждой точке:</strong> запись идёт по номеру точки контроля с план-схемы, а не одной строкой «обработка проведена»</span></label></li>
+          <li><label><input type="checkbox"><span><strong>Нет пустых клеток:</strong> при отсутствии находок стоит «0», при отсутствии доступа — отметка и причина</span></label></li>
+          <li><label><input type="checkbox"><span><strong>Средства с номерами СГР:</strong> наименование, действующее вещество, место применения и расход по каждому визиту</span></label></li>
+          <li><label><input type="checkbox"><span><strong>Предписания закрыты:</strong> у каждого замечания есть ответственный, срок, отметка о выполнении и проверка подрядчиком</span></label></li>
+          <li><label><input type="checkbox"><span><strong>Всё сходится:</strong> даты визитов совпадают с актами, номера точек — со схемой и указателями на стенах</span></label></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="forma">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Структура документа</div>
+      <h2 data-split>Форма журнала <span class="nw">пест-контроля:</span> <em>9 разделов и их графы</em></h2>
+      <p class="sub" data-fade>Так устроен бланк ПЕСТКОНТРОЛЬ Центра. В одном документе — журнал учёта дератизации и дезинсекции, журнал мониторинга вредителей и лист осмотра ловушек. Каждый раздел отвечает на вопрос проверяющего: что за объект, где стоят точки, чем работали, что нашли и что сделали.</p>
+    </div>
+    <div class="d-split">
+      <ol class="d-terms" data-group="steps">
+        <li><b>Титульный лист и паспорт объекта</b><span>Объект, адрес, площади, зоны защиты, целевые вредители, кратность визитов, ответственные и контакты, график плановых визитов. <i>Реквизиты исполнителя и лицензия — на титуле.</i></span></li>
+        <li><b>Реестр точек <span class="nw">пест-контроля</span> (ТПК)</b><span>№ точки, тип устройства, контур, место по план-схеме, дата установки, порог. <i>Отдельная таблица — изменения расстановки.</i></span></li>
+        <li><b>Перечень средств и материалов</b><span>Наименование и форма, действующее вещество, СГР или декларация, где и как применяется, ограничения. <i>Подписи согласования обеих сторон.</i></span></li>
+        <li><b>Ведомость визитов и расхода</b><span>Дата и время, вид визита, выполненные работы и результаты, средства и расход, № акта, подписи специалиста и Заказчика.</span></li>
+        <li><b>Поточечный лист осмотра ТПК</b><span>Чек-лист осмотра ловушек: матрица «точка × дата визита» с кодами: 0, П%, М/К, С, Н, З, Д, Р. <i>Лист на 30 точек и 8 визитов.</i></span></li>
+        <li><b>Учёт насекомых по видам</b><span>Дата, точка, вид и стадия, число особей, оценка к порогу, принятые меры. Вывод специалиста о динамике.</span></li>
+        <li><b>Замечания и корректирующие действия</b><span>Что выявлено и почему это риск, рекомендация, ответственный и срок, отметка Заказчика о выполнении, проверка подрядчиком.</span></li>
+        <li><b>Сигнальный лист и инструктажи</b><span>Что и где персонал увидел между визитами, кто сообщил и кому, отметка подрядчика. Учёт инструктажей сотрудников.</span></li>
+        <li><b>Ежемесячная сводка и заверительная надпись</b><span>Визиты, число осмотров, активность грызунов и насекомых, предписания выдано/закрыто, оценка риска. Заверение листов подписями и печатями.</span></li>
+      </ol>
+      <div class="d-doc" data-fade>
+        <a href="obrazets-zhurnala-pest-kontrolya.pdf" class="d-doc-prev" target="_blank" rel="noopener" aria-label="Открыть образец журнала пест-контроля, PDF"><img src="../../img/zhurnal-obrazets-p6-480.webp" srcset="../../img/zhurnal-obrazets-p6-480.webp 480w, ../../img/zhurnal-obrazets-p6-960.webp 960w" sizes="(max-width:1100px) 92vw, 400px" width="480" height="679" loading="lazy" decoding="async" alt="Поточечный лист осмотра 30 точек пест-контроля за 6 визитов с кодами отметок — лист 6 образца журнала"></a>
+        <p class="d-small">Раздел 5 образца: поточечный лист осмотра. Маркером: жёлтым — достигнут порог, красным — превышение или отлов внутри здания.</p>
+        <a href="shablon-zhurnala-pest-kontrolya.pdf" class="btn btn-o btn-lg" target="_blank" rel="noopener" data-dl="shablon"><span class="btn-t">Скачать шаблон, PDF</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="obrazets">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Пример из образца</div>
+      <h2 data-split>Образец заполнения журнала <em><span class="nw">пест-контроля</span></em></h2>
+      <p class="sub" data-fade>Фрагменты журнала пекарни: 30 точек контроля, визиты 2 раза в месяц, один внеплановый выезд по сигналу персонала. Видно не только находки, но и «нули», замены приманки и закрытые предписания.</p>
+    </div>
+    <h3 class="p-subhead first" data-fade>Поточечный лист: 7 точек из 30 за пять визитов</h3>
+    <p class="p-sublead" data-fade>Каждая клетка — результат осмотра точки на конкретном визите. Через «/» — что сделал специалист.</p>
+    <p class="d-small p-scroll" data-fade>Таблицу можно прокрутить вправо →</p><div class="d-tw" data-fade><table class="d-table mx-t"><thead><tr><th scope="col">№ ТПК</th><th scope="col">Место установки</th><th scope="col">16.09</th><th scope="col">30.09</th><th scope="col">14.10</th><th scope="col">21.10 <span class="nw">(внепл.)</span></th><th scope="col">28.10</th></tr></thead><tbody><tr><td><span class="p-code">КИК-03</span></td><td>Площадка ТКО</td><td class="v hl">П25/З</td><td class="v">П10</td><td class="v">0</td><td class="v na">—</td><td class="v">0</td></tr><tr><td><span class="p-code">КИК-05</span></td><td>Отмостка восточной стены</td><td class="v">0</td><td class="v cr">П50/З</td><td class="v">П20/З</td><td class="v na">—</td><td class="v">П5</td></tr><tr><td><span class="p-code">МЛ-04</span></td><td>Экспедиция, у ворот № 2</td><td class="v">0</td><td class="v hl">Д</td><td class="v">0</td><td class="v na">—</td><td class="v">0</td></tr><tr><td><span class="p-code">МЛ-10</span></td><td>Склад сырья, стеллаж А-2</td><td class="v">0</td><td class="v">0</td><td class="v">0</td><td class="v cr">М1/З</td><td class="v">0</td></tr><tr><td><span class="p-code">ИМ-03</span></td><td>Моечное отделение цеха</td><td class="v">0</td><td class="v">0/З</td><td class="v cr">Н2</td><td class="v na">—</td><td class="v">0/З</td></tr><tr><td><span class="p-code">ИЛ-01</span></td><td>Экспедиция, над входом из цеха</td><td class="v">Н14</td><td class="v">Н11/З</td><td class="v">Н7</td><td class="v na">—</td><td class="v">Н4/З</td></tr><tr><td><span class="p-code">ФЛ-01</span></td><td>Склад муки, стеллаж Б-1</td><td class="v hl">Н2</td><td class="v">Н1</td><td class="v">0</td><td class="v">0</td><td class="v">0</td></tr></tbody></table></div>
+    <ul class="p-legend" data-group="ctalist">
+      <li><b>0</b>находок нет</li><li><b>П25</b>съедено 25 % приманки</li><li><b>М1</b>отлов: 1 мышь</li><li><b>Н2</b>2 насекомых на клеевой поверхности</li><li><b>З</b>замена приманки или пластины</li><li><b>Д</b>нет доступа к точке</li><li><b>—</b>не входила во внеплановый визит</li>
+    </ul>
+    <h3 class="p-subhead" data-fade>Лист предписаний: от находки до проверки</h3>
+    <p class="p-sublead" data-fade>Именно эту таблицу аудитор ХАССП смотрит, чтобы понять, работают ли корректирующие действия.</p>
+    <div class="d-tw" data-fade>
+      <table class="d-table st">
+        <thead><tr><th scope="col">№ и дата</th><th scope="col">Точка</th><th scope="col">Что выявлено</th><th scope="col">Рекомендация</th><th scope="col">Срок</th><th scope="col">Результат</th></tr></thead>
+        <tbody>
+          <tr><td data-l="№ и дата">№ 4 · 30.09</td><td data-l="Точка"><span class="p-code">КИК-05</span></td><td data-l="Что выявлено">2 норы у отмостки, строительный мусор</td><td data-l="Рекомендация">Засыпать и утрамбовать норы, вывезти мусор</td><td data-l="Срок">АХО, до 07.10</td><td data-l="Результат"><span class="p-ok">Выполнено 06.10.</span> На 14.10 новых нор нет, поедаемость снизилась с 50 до 20 %, к 28.10 — 5 %</td></tr>
+          <tr><td data-l="№ и дата">№ 6 · 14.10</td><td data-l="Точка"><span class="p-code">ИМ-03</span></td><td data-l="Что выявлено">Рыжий таракан, 2 особи; отслоение герметика за моечной ванной, влага</td><td data-l="Рекомендация">Санобработка за ванной, герметизация шва; точечная обработка гелем</td><td data-l="Срок">Нач. цеха, до 21.10</td><td data-l="Результат"><span class="p-ok">Выполнено 20.10.</span> Контроль 28.10 — 0 особей, обработка эффективна</td></tr>
+          <tr><td data-l="№ и дата">№ 7 · 21.10</td><td data-l="Точка"><span class="p-code">МЛ-10</span></td><td data-l="Что выявлено">Отлов мыши после сигнала кладовщика; ввод кабеля в стене не загерметизирован</td><td data-l="Рекомендация">Заделать отверстие металлической сеткой и герметиком</td><td data-l="Срок">Гл. инженер, до 28.10</td><td data-l="Результат"><span class="p-ok">Выполнено 27.10.</span> На 28.10 в МЛ-10 — 0</td></tr>
+          <tr><td data-l="№ и дата">№ 8 · 28.10</td><td data-l="Точка"><span class="p-code">КИК-03</span></td><td data-l="Что выявлено">Крышки контейнеров ТКО не закрываются</td><td data-l="Рекомендация">Заменить контейнеры или крышки, держать закрытыми</td><td data-l="Срок">АХО, до 11.11</td><td data-l="Результат"><span class="p-wip">В работе</span> — проверка на визите 11.11</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="d-btns" data-fade><a href="obrazets-zhurnala-pest-kontrolya.pdf" class="btn btn-w btn-lg" target="_blank" rel="noopener" data-dl="obrazets"><span class="btn-t">Открыть весь образец, 10 листов</span></a></div>
+  </div>
+</section>
+
+<section class="s" id="kak-vesti">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Порядок записей</div>
+      <h2 data-split>Как вести журнал <span class="nw">пест-контроля:</span> <em>6 правил</em></h2>
+      <p class="sub" data-fade>Правила напечатаны и на втором листе бланка, чтобы их видели все, кто открывает журнал.</p>
+    </div>
+    <ol class="p-steps" data-group="steps">
+      <li><h3>Запись — в день визита, на объекте</h3><p>Специалист заполняет журнал до ухода с объекта, представитель Заказчика подписывает визит. Записи «по памяти» через неделю — первое, что замечают проверяющие.</p></li>
+      <li><h3>Каждая точка — под своим номером</h3><p>Номер в журнале совпадает с план-схемой и указателем на стене. Если точку перенесли, это отмечают в таблице изменений расстановки и обновляют схему.</p></li>
+      <li><h3>Ноль — тоже результат</h3><p>«0» значит: точку осмотрели, находок нет. Пустая клетка читается как пропущенный осмотр. Нет доступа — код «Д» и запись в лист предписаний.</p></li>
+      <li><h3>Средство — по перечню и с расходом</h3><p>Указывают номер средства из согласованного перечня, место и расход. Родентициды — только в запираемых станциях на территории, не в помещениях с открытой продукцией.</p></li>
+      <li><h3>Находка — сразу в предписание</h3><p>Нора, щель под воротами, просыпи, влага: причина записывается с ответственным и сроком. Закрывают запись только после проверки на следующем визите.</p></li>
+      <li><h3>Исправления — открыто</h3><p>Зачеркнуть одной линией, рядом верная запись, дата и подпись. Корректор, подчистки и вклеенные листы делают журнал недостоверным.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="obekty">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Под тип объекта</div>
+      <h2 data-split>Журнал <span class="nw">пест-контроля</span> для ресторана, склада <em>и пищевого производства</em></h2>
+      <p class="sub" data-fade>Форма одна, меняются набор точек, зоны и то, на что смотрит проверяющий. Все эти объекты входят в перечень пункта 98 СанПиН 3.3686-21, поэтому обследования на насекомых — не реже 2 раз в месяц.</p>
+    </div>
+    <div class="p-obj" data-group="cards">
+      <article class="d-card"><h3>Ресторан, кафе, столовая</h3><p>Компактный журнал на 10–20 точек: кухня, моечная, склад продуктов, зона приёма товара, мусорная площадка.</p><ul><li>Клеевые мониторы у моек и оборудования</li><li>Механические ловушки в подсобных помещениях</li><li>Сигнальный лист для поваров и вечерней смены</li></ul></article>
+      <article class="d-card"><h3>Магазин и супермаркет</h3><p>Отдельные зоны для торгового зала, склада и дебаркадера: здесь вредители чаще всего приходят с товаром.</p><ul><li>Станции по периметру и у ворот приёмки</li><li>Феромонные ловушки у бакалеи</li><li>Отчёт по форме торговой сети</li></ul></article>
+      <article class="d-card"><h3>Склад и распределительный центр</h3><p>Много точек по периметру здания и вдоль стен, где стоят паллеты: важно отмечать доступ к каждой.</p><ul><li>Код «Д» и предписание при заставленной точке</li><li>Контроль уплотнителей ворот и доков</li><li>Изменения расстановки после перепланировки</li></ul></article>
+      <article class="d-card"><h3>Пищевое производство</h3><p>Журнал как часть системы ХАССП: пороги из программы <span class="nw">пест-контроля,</span> анализ тенденций, корректирующие действия.</p><ul><li>Контуры защиты: территория, периметр, цеха</li><li>Световые ловушки с учётом по видам</li><li>Ежемесячная сводка для службы качества</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="oshibki">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Что не проходит проверку</div>
+      <h2 data-split>Ошибки в журнале <span class="nw">пест-контроля,</span> <em>которые находят на проверках</em></h2>
+      <p class="sub" data-fade>Проверяющий сверяет журнал со схемой точек, указателями на стенах и актами. Вот что чаще всего не сходится.</p>
+    </div>
+    <div class="p-secs" data-group="cards">
+      <article class="p-sec"><div class="p-sec-top"><span class="p-sec-num">Ошибка 01</span><span class="p-sec-who">Аудит ХАССП, торговая сеть</span></div><h3>Одна строка «обработка проведена»</h3><p>Если на объекте 30 точек контроля, по каждой должен быть виден результат. Общая фраза не показывает, что и где осматривали.</p></article>
+      <article class="p-sec"><div class="p-sec-top"><span class="p-sec-num">Ошибка 02</span><span class="p-sec-who">ISO 22000, FSSC 22000</span></div><h3>Записаны только находки</h3><p>Пустые клетки читаются как пропущенный осмотр. «0» по каждой точке подтверждает, что специалист её проверил по графику.</p></article>
+      <article class="p-sec"><div class="p-sec-top"><span class="p-sec-num">Ошибка 03</span><span class="p-sec-who">Обход цеха и склада</span></div><h3>Номера не совпадают со схемой</h3><p>Ловушку убрали при ремонте, а в журнале она по-прежнему «исправна». На обходе выборочную сверку точек со схемой делают почти всегда.</p></article>
+      <article class="p-sec"><div class="p-sec-top"><span class="p-sec-num">Ошибка 04</span><span class="p-sec-who">Роспотребнадзор</span></div><h3>Нет названий, СГР и расхода</h3><p>«Разложена приманка» — не запись. Нужны наименование средства, действующее вещество, номер свидетельства о госрегистрации, место и расход.</p></article>
+      <article class="p-sec"><div class="p-sec-top"><span class="p-sec-num">Ошибка 05</span><span class="p-sec-who">Служба качества</span></div><h3>Предписания без отметок о выполнении</h3><p>Одна и та же щель у ворот из месяца в месяц и пустая графа выполнения показывают, что корректирующие действия не работают.</p></article>
+      <article class="p-sec"><div class="p-sec-top"><span class="p-sec-num">Ошибка 06</span><span class="p-sec-who">Любая проверка</span></div><h3>Журнал «восстановлен» перед проверкой</h3><p>Одна ручка, одинаковый почерк и даты, которые не совпадают с актами и пропусками охраны, выдают записи задним числом.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="normy">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Нормативная база</div>
+      <h2 data-split>Что требует закон, <em>а что — стандарт пищевой безопасности</em></h2>
+      <p class="sub" data-fade>Единого утверждённого бланка журнала <span class="nw">пест-контроля</span> нет. Требования к содержанию записей складываются из санитарных правил, методических рекомендаций и стандартов, по которым работает предприятие.</p>
+    </div>
+    <div class="d-cards c4 f-req" data-group="cards">
+      <article class="d-card"><p class="f-num">СанПиН 3.3686-21</p><h3>Раздел III, пп. 98–124</h3><p>Перечень объектов особого эпидемиологического значения (п. 98), обследования на насекомых не реже 2 раз в месяц (п. 101), дератизация по ежемесячной оценке (п. 110), контроль эффективности (п. 114).</p><p><a href="http://pravo.gov.ru/proxy/ips/?docbody=&nd=602107773" target="_blank" rel="noopener noreferrer">Текст на pravo.gov.ru</a></p></article>
+      <article class="d-card"><p class="f-num">МР 3.5.3.0374-25</p><h3>Дератизация</h3><p>Методические рекомендации Роспотребнадзора 2025 года по организации и проведению дератизационных мероприятий: обследование, учёт численности грызунов, оценка эффективности.</p></article>
+      <article class="d-card"><p class="f-num">ТР ТС 021/2011</p><h3>Статья 10</h3><p>Процедуры на принципах ХАССП на пищевом производстве, в том числе меры, которые не дают грызунам и насекомым попасть в производственные помещения.</p></article>
+      <article class="d-card"><p class="f-num">ГОСТ Р 54762-2011</p><h3>Раздел 12</h3><p>Борьба с вредителями в программах предварительных требований: документированная программа, схема точек, записи мониторинга, анализ и корректирующие действия.</p></article>
+    </div>
+    <p class="p-note" data-fade><b>Что это значит для журнала.</b> Санитарные правила требуют учитывать численность вредителей, оценивать эффективность мер и вести производственный контроль за дезинфекционными работами (пп. 82, 99, 114). Форму записей вы выбираете сами — но проверяющий должен увидеть по ней каждую точку, каждый визит и каждое закрытое замечание.</p>
+  </div>
+</section>
+
+<section class="s" id="svyazka">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Папка пест-контроля</div>
+      <h2 data-split>Журнал проверяют <em>вместе со всей папкой объекта</em></h2>
+      <p class="sub" data-fade>Рядом с журналом кладут договор, программу, план-схему и акты и сверяют даты, номера точек и названия средств. По договору мы ведём всю папку.</p>
+    </div>
+    <div class="d-tw" data-fade>
+      <table class="d-table st">
+        <thead><tr><th scope="col">Документ</th><th scope="col">Что сверяют с журналом</th></tr></thead>
+        <tbody>
+          <tr><td data-l="Документ"><a href="../../dogovor-deratizatsiya-dezinsektsiya/" style="color:var(--acc);text-decoration:underline;text-underline-offset:3px">Договор на дератизацию и дезинсекцию</a></td><td data-l="Что сверяют">Адрес и площади объекта, кратность визитов, реквизиты и лицензия подрядчика на титуле журнала</td></tr>
+          <tr><td data-l="Документ"><a href="../programma-pest-kontrolya/" style="color:var(--acc);text-decoration:underline;text-underline-offset:3px">Программа <span class="nw">пест-контроля</span></a></td><td data-l="Что сверяют">Целевые вредители, частота осмотров и пороги в реестре точек и поточечном листе</td></tr>
+          <tr><td data-l="Документ">План-схема точек контроля</td><td data-l="Что сверяют">Количество, типы и нумерация точек, изменения расстановки</td></tr>
+          <tr><td data-l="Документ">Акты и ежемесячный отчёт</td><td data-l="Что сверяют">Номер акта по каждому визиту в ведомости, анализ тенденций и закрытые предписания</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="p-subhead" data-fade>Сколько стоит обслуживание с ведением журнала</h3>
+    <div class="d-tw" data-fade>
+      <table class="d-table st">
+        <thead><tr><th scope="col">Объект</th><th scope="col">Что входит</th><th scope="col">Ориентир</th></tr></thead>
+        <tbody>
+          <tr><td data-l="Объект">Кафе, ресторан, столовая</td><td data-l="Что входит">Контроль грызунов и насекомых, схема точек, объектовый журнал, копии СГР и акты</td><td data-l="Ориентир">от 3 500 ₽/мес</td></tr>
+          <tr><td data-l="Объект">Магазин, супермаркет</td><td data-l="Что входит">Торговый зал, склад и дебаркадер, поточечный журнал, отчётность для сети</td><td data-l="Ориентир">от 3 500 ₽/мес</td></tr>
+          <tr><td data-l="Объект">Склад до 1 000 м²</td><td data-l="Что входит">Периметр, доки и зоны хранения, журнал осмотров и предписаний</td><td data-l="Ориентир">от 4 500 ₽/мес</td></tr>
+          <tr><td data-l="Объект">Пищевое производство</td><td data-l="Что входит">Программа, схема, поточечный учёт, анализ тенденций для ХАССП, ЭДО</td><td data-l="Ориентир">после бесплатного выезда</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="d-cols2" data-group="cards">
+      <div class="d-card"><h3>Журнал с первого визита</h3><p>Обследование объекта бесплатно. Проект договора с программой и расчётом присылаем в течение 1 часа после осмотра. На первом визите маркируем точки, передаём план-схему и заведённый журнал.</p></div>
+      <div class="d-card"><h3>Смена подрядчика без пробела</h3><p>Принимаем объект с даты окончания прежнего договора: проверяем старые точки, обновляем схему и открываем новый журнал без перерыва в истории осмотров. Работаем с НДС и без НДС, по ЭДО и на бумаге.</p></div>
+    </div>
+    <ul class="d-chips" data-group="ctalist">
+      <li><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор на дератизацию и дезинсекцию →</a></li>
+      <li><a href="../programma-pest-kontrolya/">Программа пест-контроля: образец и шаблон →</a></li>
+      <li><a href="../pest-menedzhment-ili-razovaya-obrabotka/">Пест-менеджмент или разовая обработка →</a></li>
+      <li><a href="../../pishchevoe-proizvodstvo/">Пест-контроль на пищевом производстве →</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ============ СМОТРИТЕ ТАКЖЕ (перелинковка) ============ -->
+<section class="s s-rel" id="smotrite-takzhe">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Смотрите также</div>
+      <h2 data-split>Связанные услуги <em>и материалы</em></h2>
+    </div>
+    <div class="rel-grid" data-group="cards">
+      <a class="card rel-card" href="../../materialy/programma-pest-kontrolya/"><span class="rel-k">Материал</span><span class="rel-t">Программа <span class="nw">пест-контроля</span></span><span class="rel-d">Образец в PDF и шаблон Word: 7 разделов, оценка <span class="nw">пест-риска</span> по зонам и план мероприятий.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span class="rel-k">Материал</span><span class="rel-t"><span class="nw">Пест-менеджмент</span> или разовая обработка</span><span class="rel-d">Чем системный контроль по IPM отличается от обработок по вызову и когда хватит одного выезда.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../../deratizatsiya/"><span class="rel-k">Услуга</span><span class="rel-t">Дератизация для организаций</span><span class="rel-d">Три контура защиты от крыс и мышей, контейнеры КИК и ловушки без яда в цехах, схема точек и акты.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../../dezinsektsiya/"><span class="rel-k">Услуга</span><span class="rel-t">Дезинсекция для организаций</span><span class="rel-d">Контроль насекомых по IPM без остановки работы, ротация средств, журнал и акты по СанПиН.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="voprosy">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Частые вопросы</div>
+      <h2 data-split>Вопросы <em>о журнале <span class="nw">пест-контроля</span></em></h2>
+    </div>
+    <div class="faq"><div class="faq-col" data-group="faq"><div class="card qa"><button aria-expanded="false" aria-controls="a1" id="q1">Есть ли утверждённая форма журнала пест-контроля?<span class="pm"></span></button><div class="ans" id="a1" role="region" aria-labelledby="q1"><div><p>Единой государственной формы нет. СанПиН 3.3686-21 требует учитывать численность вредителей, контролировать эффективность истребительных мероприятий и вести производственный контроль за их объёмом и качеством (пп. 82, 99, 114), а форму записей определяет программа пест-контроля объекта и договор с подрядчиком. Поэтому журнал разных компаний выглядит по-разному. Наша форма из 9 разделов закрывает и требования санитарных правил, и то, что смотрят аудиторы ХАССП, ISO 22000 и FSSC 22000.</p></div></div></div><div class="card qa"><button aria-expanded="false" aria-controls="a2" id="q2">Где скачать образец, бланк и шаблон журнала пест-контроля?<span class="pm"></span></button><div class="ans" id="a2" role="region" aria-labelledby="q2"><div><p>На этой странице, бесплатно и без регистрации, два PDF-файла: образец заполнения на 10 листов (журнал пекарни за сентябрь–октябрь) и шаблон — тот же журнал без записей, он же бланк для печати. Файлы совпадают лист в лист, поэтому свой журнал удобно заполнять, глядя в образец. Листы визитов, поточечного осмотра и предписаний печатайте в нужном количестве, а номера листов проставьте при прошивке.</p></div></div></div><div class="card qa"><button aria-expanded="false" aria-controls="a3" id="q3">Журнал пест-контроля и журнал учёта дератизации и дезинсекции — это одно и то же?<span class="pm"></span></button><div class="ans" id="a3" role="region" aria-labelledby="q3"><div><p>По смыслу да, но журнал пест-контроля шире. Простой журнал учёта дератизации и дезинсекции фиксирует выезды и обработки. Журнал пест-контроля дополнительно ведёт мониторинг вредителей по каждой точке контроля, учёт насекомых по видам, предписания и анализ тенденций — это нужно для ХАССП и аудитов. Ведомость визитов в нашей форме (раздел 4) одновременно служит журналом учёта дератизации и дезинсекции.</p></div></div></div><div class="card qa"><button aria-expanded="false" aria-controls="a4" id="q4">Кто должен заполнять журнал пест-контроля — сотрудник предприятия или подрядчик?<span class="pm"></span></button><div class="ans" id="a4" role="region" aria-labelledby="q4"><div><p>Результаты осмотров точек контроля, применённые средства и замечания вносит специалист подрядной организации в день визита. Ответственный сотрудник предприятия подписывает визит, отмечает выполнение предписаний и следит за сигнальным листом, куда персонал записывает наблюдения между визитами.</p></div></div></div><div class="card qa"><button aria-expanded="false" aria-controls="a5" id="q5">Как часто нужно делать записи в журнале пест-контроля?<span class="pm"></span></button><div class="ans" id="a5" role="region" aria-labelledby="q5"><div><p>Запись делается при каждом плановом и внеплановом визите. Для объектов из пункта 98 СанПиН 3.3686-21 — пищевая промышленность, общественное питание, хранение и реализация пищевой продукции, гостиницы, медицинские организации и другие — плановые обследования на насекомых проводятся не реже 2 раз в месяц (п. 101), а дератизация — по результатам ежемесячной оценки (п. 110). Внутренние стандарты сетей и аудиторов могут требовать чаще.</p></div></div></div><div class="card qa"><button aria-expanded="false" aria-controls="a6" id="q6">Нужно ли прошивать, нумеровать и заверять журнал печатью?<span class="pm"></span></button><div class="ans" id="a6" role="region" aria-labelledby="q6"><div><p>Прямого требования в санитарных правилах нет, но для бумажного журнала это обычная практика: листы нумеруют, журнал прошнуровывают, а на последней странице делают заверительную надпись с числом листов, подписями и печатями сторон. Так видно, что листы не заменяли и не вклеивали задним числом.</p></div></div></div></div><div class="faq-col" data-group="faq"><div class="card qa"><button aria-expanded="false" aria-controls="a7" id="q7">Чем журнал пест-контроля отличается от акта выполненных работ?<span class="pm"></span></button><div class="ans" id="a7" role="region" aria-labelledby="q7"><div><p>Акт подтверждает конкретный выезд: перечень работ, расход средств, основание для оплаты, в том числе по ЭДО. Журнал хранится на объекте и показывает непрерывную историю каждой точки контроля из месяца в месяц, предписания и их выполнение. Номера актов указываются в ведомости визитов журнала, поэтому документы легко сверить.</p></div></div></div><div class="card qa"><button aria-expanded="false" aria-controls="a8" id="q8">Можно ли вести журнал пест-контроля в электронном виде?<span class="pm"></span></button><div class="ans" id="a8" role="region" aria-labelledby="q8"><div><p>Санитарные правила не запрещают электронный учёт, а для учёта дезинфекции прямо допускают программные продукты (п. 94 СанПиН 3.3686-21). На практике на объекте держат бумажный журнал с подписями, а электронный отчёт с фото и трендами получает служба качества. Если ваш стандарт или торговая сеть принимает только электронные записи, проверьте, что в них видны дата, автор и подтверждение Заказчика.</p></div></div></div><div class="card qa"><button aria-expanded="false" aria-controls="a9" id="q9">Что писать в журнале, если точка контроля заставлена паллетами или повреждена?<span class="pm"></span></button><div class="ans" id="a9" role="region" aria-labelledby="q9"><div><p>Пустую клетку оставлять нельзя. В поточечном листе ставится код «Д» — нет доступа — или «Р» — повреждена и заменена, а в лист предписаний вносится причина и срок: например, освободить проход вдоль стены. На следующем визите отмечается, восстановлен ли доступ.</p></div></div></div><div class="card qa"><button aria-expanded="false" aria-controls="a10" id="q10">Сколько хранить заполненные журналы пест-контроля?<span class="pm"></span></button><div class="ans" id="a10" role="region" aria-labelledby="q10"><div><p>Единый срок в санитарных правилах не установлен: его задаёт внутренний порядок предприятия, программа пест-контроля или требования сети. Часто журналы, акты и план-схемы хранят не меньше трёхлетнего цикла сертификации системы пищевой безопасности, чтобы на ресертификационном аудите была видна история.</p></div></div></div><div class="card qa"><button aria-expanded="false" aria-controls="a11" id="q11">Можно ли заказать у вас только оформление журнала без обслуживания?<span class="pm"></span></button><div class="ans" id="a11" role="region" aria-labelledby="q11"><div><p>Нет. Мы не заполняем журналы без фактической работы на объекте. Образец и шаблон журнала можно бесплатно скачать на этой странице, а рабочий журнал со схемой точек, программой и полным комплектом документов мы заводим и ведём по договору после бесплатного обследования.</p></div></div></div></div></div>
+  </div>
+</section>
+
+<section class="cta" id="zayavka"><div class="cta-bg f-lazy" aria-hidden="true" data-parallax-bg></div><div class="cta-orb" id="orb" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-eyebrow>Заявка</div>
+      <h2 data-split>Проверим журнал <span class="nw">пест-контроля</span> <em>и заведём рабочий на вашем объекте</em></h2>
+      <p class="sub" data-fade>Бесплатно приедем на объект в Москве или области, сверим точки контроля, схему и журнал с требованиями СанПиН 3.3686-21 и ХАССП и пришлём проект договора с расчётом в течение 1 часа после осмотра.</p>
+      <ul class="cta-list" data-group="ctalist">
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Выезд по Москве и Московской области</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Осмотр объекта и расчёт — бесплатно</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Проект договора — в течение 1 часа после осмотра</li>
+      </ul>
+      <div class="cta-contacts" data-fade>
+        <a class="ph" href="tel:+74951043570">+7 (495) 104-35-70</a>
+        <div class="msg">
+          <a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a>
+          <a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <form class="form" id="form" novalidate data-form>
+      <div class="fbody">
+        <h3>Заявка на бесплатное обследование</h3>
+        <p class="fs">Заполнение займёт меньше минуты</p>
+        <div class="fg">
+          <div class="field"><label class="sr-only" for="f-name">Ваше имя</label><input id="f-name" name="name" placeholder="Ваше имя" required autocomplete="name"><small class="ferr">Укажите имя</small></div>
+          <div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>
+          <div class="field full"><label class="sr-only" for="f-type">Тип объекта</label><select id="f-type" name="type" required><option value="" disabled selected>Тип объекта</option><option>Пищевое производство</option><option>Магазин или торговая сеть</option><option>Ресторан или кафе</option><option>Склад, логистика</option><option>Фармацевтическое производство</option><option>Гостиница</option><option>Другое</option></select><small class="ferr">Выберите тип объекта</small></div>
+          <div class="field full"><label class="sr-only" for="f-address">Адрес или район объекта</label><input id="f-address" name="address" placeholder="Адрес или район объекта" autocomplete="street-address" maxlength="200"></div>
+          <div class="field full"><label class="sr-only" for="f-service">Что нужно</label><select id="f-service" name="service"><option value="" selected>Какая задача</option><option>Пест-контроль с ведением журнала по договору</option><option>Проверить журнал и папку перед проверкой или аудитом</option><option>Сменить подрядчика без перерыва в журнале</option></select></div>
+          <div class="field" hidden><input type="hidden" name="email" value=""></div>
+          <input type="hidden" name="msg" value="">
+        </div>
+        <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Заказать бесплатное обследование</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>
+        <p class="legal">Нажимая кнопку, вы даёте <a href="../../soglasie/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаете, что ознакомились с <a href="../../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg class="ok-ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M15 27l7 7 15-16"/></svg>
+        <h3>Заявка отправлена</h3><p>Перезвоним в ближайшее рабочее время, чтобы согласовать день выезда.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="../../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span><span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span></a>
+        <p class="d"><span class="nw">Пест-контроль</span> и <span class="nw">пест-менеджмент</span> по системе IPM для бизнеса в Москве и Московской области: бесплатный аудит, оценка <span class="nw">пест-риска</span>, мониторинг вредителей и отчётность.</p>
+      </div>
+      <div><h4>Услуги</h4><ul><li><a href="../../dezinfektsiya/">Дезинфекция для организаций</a></li><li><a href="../../deratizatsiya/">Дератизация для организаций</a></li><li><a href="../../dezinsektsiya/">Дезинсекция для организаций</a></li><li><a href="../../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a></li><li><a href="../../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a></li><li><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор на дератизацию и дезинсекцию</a></li><li><a href="../../#podhod"><span><span class="nw">Пест-контроль</span> по системе IPM</span></a></li><li><a href="../../#etapy">Этапы работы</a></li><li><a href="../../#vrediteli">Вредители</a></li><li><a href="../../#dokumenty">Документы для проверок</a></li><li><a href="../../#usloviya">Цена</a></li><li><a href="../../#voprosy">Вопросы</a></li></ul></div>
+      <div><h4>Отрасли</h4><ul><li><a href="../../pishchevoe-proizvodstvo/">Пищевые производства</a></li><li><a href="../../magaziny-i-torgovye-seti/">Магазины и торговые сети</a></li><li><a href="../../restorany-i-kafe/">Рестораны и кафе</a></li><li><a href="../../sklady-i-logistika/">Склады и логистика</a></li><li><a href="../../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a></li><li><a href="../../gostinitsy/">Гостиницы и отели</a></li></ul></div>
+      <div><h4>Материалы</h4><ul><li><a href="../../normativnaya-baza/">Нормативная база</a></li><li><a href="../../normativnaya-baza/proverochnye-listy/">Проверочные листы 2026</a></li><li><a href="../../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a></li><li><a href="./" aria-current="page"><span>Журнал <span class="nw">пест-контроля</span></span></a></li><li><a href="../../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a></li><li><a href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a></li><li><a href="../../materialy/">Все материалы</a></li></ul></div>
+      <div><h4>Контакты</h4><ul><li><a href="tel:+74951043570">+7 (495) 104-35-70</a></li><li><a href="mailto:b2b@pestcontrol-center.ru">b2b@<wbr><span style="white-space:nowrap">pestcontrol-center.ru</span></a></li><li>Пн–Пт: 8:00–20:00</li><li>Срочные выезды: 24/7</li></ul>
+        <div class="msg"><a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a><a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a></div>
+      </div>
+    </div>
+    <div class="fb"><span>© 2026 ПЕСТКОНТРОЛЬ Центр</span><a href="../../privacy/">Политика конфиденциальности</a><a href="../../soglasie/">Согласие на обработку данных</a><span>Информация на сайте не является публичной офертой</span></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+74951043570" class="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Позвонить</a>
+  <a href="#zayavka" class="c2"><span>Обследование</span></a>
+</div>
+<div class="fab" role="group" aria-label="Написать в мессенджер">
+  <a href="https://max.ru/u/f9LHodD0cOIlIUXFkt4KMFP88lD8n4TArBiTcV7RI1XML5c4o39QfsDBXUc" class="max" aria-label="Написать в Max" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3zm-3.6 12.3V8.7h1.6l2 2.8 2-2.8h1.6v6.6h-1.7v-3.9L12 14l-1.9-2.6v3.9z"/></svg></a>
+  <a href="https://t.me/Centr_Dezinfection?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%BF%D0%B5%D1%81%D1%82%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80.%D1%80%D1%84" class="tg" aria-label="Написать в Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.5zM9.6 14.1l8.6-5.4c.4-.3.8-.1.5.2l-7.1 6.4-.3 3.3z"/></svg></a>
+</div>
+
+<script>
+(function(){if(/^(www\.)?xn----itbbsflddbfpfdodg9d0f\.xn--p1ai$/i.test(location.hostname))return;var f=window.fetch;window.fetch=function(u){if(typeof u==='string'&&u.indexOf('send.php')>-1)return new Promise(function(r){setTimeout(function(){r(new Response('{"success":true}',{status:200,headers:{'Content-Type':'application/json'}}))},500)});return f.apply(this,arguments)};document.addEventListener('DOMContentLoaded',function(){var p=document.querySelector('.form .fs');if(p)p.textContent='Предпросмотр: заявка никуда не отправляется'})})();
+document.addEventListener('change',function(e){if(!e.target.closest('.f-check-list'))return;var n=0;document.querySelectorAll('.f-check-list input').forEach(function(i){n+=i.checked?1:0});document.getElementById('chk-n').textContent=n;document.querySelector('.f-check-res').classList.toggle('full',n===6);document.getElementById('chk-note').textContent=n===6?'Все 6 пунктов на месте. На бесплатном обследовании проверим, совпадает ли журнал с точками в цехах и на складе.':'Отмечено '+n+' из 6. На бесплатном обследовании сверим журнал и схему и покажем, что исправить до проверки.'});
+document.addEventListener('click',function(e){var a=e.target.closest('[data-dl]');if(!a)return;try{if(window.ym)ym(113675622,'reachGoal','zhurnal_'+a.getAttribute('data-dl'))}catch(_){}});
+(function(){var f=document.getElementById('form');if(!f)return;f.addEventListener('submit',function(){var e=f.elements,s=e.service.value||'не выбрано',a=e.address.value.trim()||'не указан';e.msg.value='Задача: '+s+'\nАдрес объекта: '+a+'\nСтраница: Журнал пест-контроля (/materialy/zhurnal-pest-kontrolya/)';});})();
+</script>
+<script>
+  /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */
+  (function (r, l) {
+    var go = function () { l.forEach(function (u) { var e = document.createElement('script'); e.src = r + u; e.async = false; document.body.appendChild(e); }); };
+    if (document.visibilityState === 'hidden' || !window.requestAnimationFrame) setTimeout(go, 0);
+    else requestAnimationFrame(function () { setTimeout(go, 0); });
+  })('../../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261106s2']);
+</script>
+<!-- Yandex.Metrika counter + UIS + Radist: загружаются после первого действия посетителя (касание, прокрутка, мышь, клавиатура) или через 5 с после загрузки страницы -->
+<script type="text/javascript">
+    (function (w, d) {
+        w.ym = w.ym || function () { (w.ym.a = w.ym.a || []).push(arguments); };
+        w.ym.l = 1 * new Date();
+        ym(113675622, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        var done = false, ready = false, wait = null, ev = ['pointerdown', 'touchstart', 'keydown', 'scroll', 'wheel', 'mousemove'];
+        w.__cs = w.__cs || [];
+        w.__cs.push(['waitForTrackViewAndRun', function () { ready = true; }]);
+        // Radist: код заявки в ссылках Telegram и MAX — сразу, скрипт Radist загрузится вместе со счётчиками
+        var rmsg = 'Здравствуйте! Пишу с сайта пестконтроль-центр.рф. Номер заявки: {radist_tracker}';
+        w.radist_tracker = w.radist_tracker || function () { (w.radist_tracker.a = w.radist_tracker.a || []).push(arguments); };
+        w.radist_tracker.l = 1 * new Date();
+        w.radist_tracker({ message: rmsg, whatsapp_enabled: true, tgbot_enabled: true, tg_enabled: true, max_enabled: true, vk_enabled: true });
+        (function () {
+            var id = null, abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', s = 'ro', i, txt;
+            try {
+                id = sessionStorage.getItem('radistVisit');
+                if (!id || id.length !== 12) {
+                    for (i = 0; i < 10; i++) s += abc.charAt(Math.floor(Math.random() * abc.length));
+                    sessionStorage.setItem('radistVisit', s);
+                    id = sessionStorage.getItem('radistVisit');
+                }
+            } catch (e) { id = null; }
+            if (!id || id.length !== 12) return;
+            txt = encodeURIComponent(rmsg.replace(/{radist_tracker}/g, id));
+            [].forEach.call(d.querySelectorAll('a[href*="//t.me/"], a[href*="//max.ru/"]'), function (a) {
+                try {
+                    var u = new URL(a.href), n = u.pathname.split('/')[1] || '';
+                    if (u.host === 'max.ru') a.href = 'https://max.ru/' + u.pathname.substring(1) + '?start=' + id;
+                    else if (u.host === 't.me' && !/bot$/i.test(n)) a.href = 'https://t.me' + u.pathname + '?text=' + txt;
+                } catch (e) {}
+            });
+        })();
+        function add(src) { var k = d.createElement('script'); k.async = true; k.src = src; d.head.appendChild(k); return k; }
+        function load() {
+            if (done) return; done = true;
+            ev.forEach(function (e) { w.removeEventListener(e, load, true); });
+            add('https://mc.yandex.ru/metrika/tag.js?id=113675622');
+            var p = d.createElement('link'); p.rel = 'preconnect'; p.href = 'https://tracker.comagic.ru'; d.head.appendChild(p);
+            add('https://app.uiscom.ru/static/cs.min.js?k=ICWycQx6m3NSBe3WlCeDAdAKMTmNhMHC').onerror = function () { ready = true; };
+            add('https://track.radist.me/tracker.min.js');
+        }
+        ev.forEach(function (e) { w.addEventListener(e, load, { capture: true, passive: true }); });
+        function later() { setTimeout(load, 5000); }
+        if (d.readyState === 'complete') later(); else w.addEventListener('load', later);
+        // Ожидание подмены номера при первом касании: набор откладывается до ответа UIS, максимум 0,8–1 с
+        d.addEventListener('click', function (e) {
+            if (ready) return;
+            var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+            if (!a || e.button || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+            e.preventDefault();
+            if (wait) return;
+            load();
+            var href = a.getAttribute('href'), op = a.style.opacity, max = 'GestureEvent' in w ? 800 : 1000, t;
+            function go() {
+                for (var i = 0; i < wait.length; i++) clearTimeout(wait[i]);
+                wait = null; ready = true; a.style.opacity = op;
+                w.location.href = a.href;
+            }
+            function check(last) { return function () { if (wait && (last || ready || a.getAttribute('href') !== href)) go(); }; }
+            wait = [];
+            a.style.opacity = '.6';
+            for (t = 50; t <= max; t += 50) wait.push(setTimeout(check(t === max), t));
+        }, true);
+    })(window, document);
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113675622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
