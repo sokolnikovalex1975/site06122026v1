@@ -37,7 +37,7 @@
 | `/farmatsevticheskie-proizvodstva/` | Пест-контроль фармацевтического производства по GMP (на сайте с 06.11.2026) |
 | `/sklady-i-logistika/` | Пест-контроль для складов и логистики (на сайте с 06.11.2026) |
 | `/materialy/` | Материалы о пест-контроле для предприятий |
-| `/materialy/programma-pest-kontrolya/` | Программа пест-контроля: образец PDF, шаблон Word |
+| `/materialy/programma-pest-kontrolya/` | Программа пест-контроля: образец и пустой шаблон в PDF (шаблон Word снят 08.11.2026) |
 | `/materialy/zhurnal-pest-kontrolya/` | Журнал пест-контроля: образец заполнения и шаблон (PDF) |
 | `/materialy/pest-menedzhment-ili-razovaya-obrabotka/` | Пест-менеджмент или разовая обработка |
 | `/razrabotka-ppk/` | Разработка программы производственного контроля (ППК) — услуга для объектов непищевого профиля, от 5 900 ₽ (превью с 08.11.2026, на сайт не выложена). **На сайте с 08.11.2026 00:58 МСК — другая версия** (для всех объектов, от 5 900 ₽, 1 рабочий день; ветка `live/2026-11-08-rppk`, см. `CHANGES.md`) |
@@ -284,7 +284,7 @@ python3 tools/site/build_prod.py      # → dist/timeweb/ (в репозитор
 | Документ | Шапка | Как собирается |
 |---|---|---|
 | `materialy/programma-pest-kontrolya/obrazets-programmy-pest-kontrolya.pdf` (6 стр.) | полная — стр. 1, 3, 5 (начало программы и приложений), компактная строка с телефоном и сайтом — стр. 2, 4, 6 | `brand_pdf.py` |
-| `materialy/programma-pest-kontrolya/shablon-programmy-pest-kontrolya.docx` | картинка в верхнем колонтитуле (каждая страница) + подложка Word | `brand_docx.py` |
+| `materialy/programma-pest-kontrolya/shablon-programmy-pest-kontrolya.pdf` (6 стр., с 08.11.2026 вместо Word) | как у образца программы: полная — стр. 1, 3, 5, компактная — стр. 2, 4, 6 | `programma_src.py` → `brand_pdf.py shablon` |
 | `dogovor-deratizatsiya-dezinsektsiya/obrazets-dogovora-pestkontrol-tsentr.pdf` (6 стр.) | полная — стр. 1, 5, 6 (договор и приложения), компактная — стр. 2–4 | `brand_pdf.py` |
 | `materialy/programma-proizvodstvennogo-kontrolya-haccp/obrazets-…pdf` (27 стр.) | полная на титуле, колонтитул с телефоном и сайтом на стр. 2–27 | `tools/ppk/sample/build_sample.py` |
 | `materialy/zhurnal-pest-kontrolya/*.pdf` (10 листов) | полная на каждом листе | `tools/zhurnal/` (см. README там) |
@@ -294,15 +294,24 @@ python3 tools/site/build_prod.py      # → dist/timeweb/ (в репозитор
   (компактная шапка в одну строку), `watermark_doc` (страница с водяным знаком, `tools/zhurnal/wm.py`), `docx_watermark_run`
   (подложка Word: VML WordArt, Calibri, прозрачность 85 %).
 - `render.mjs` — печать шапки (PDF ровно по размеру + PNG 600 dpi) и страницы с водяным знаком (Playwright/Chromium).
-- `brand_pdf.py` — программа пест-контроля и договор (исходников-HTML у них нет): из копий без оформления `src/*.pdf` вырезает
+- `brand_pdf.py` — программа пест-контроля, её пустой шаблон (`shablon`) и договор: из копий без оформления `src/*.pdf` вырезает
   прежнюю шапку (redaction полосы шапки: текст и векторная графика), ставит новую шапку векторной вставкой, на остальные страницы —
   компактную строку в верхнее поле, поверх всех страниц — водяной знак; метаданные, превью `img/programma-sample-p{1,3,5}-*.webp`
-  и `img/dogovor-sample-p1.webp`. Текст документов, ссылки и число страниц не меняются (скрипт сверяется по тексту).
-- `brand_docx.py` — шаблон Word программы пест-контроля из `src/shablon-programmy-pest-kontrolya.docx`: новая картинка шапки,
-  подложка в колонтитуле, свойства файла, миниатюра; проверка — PDF LibreOffice в `/tmp/docs_brand_docx_check.pdf`.
+  и `img/dogovor-sample-p1.webp` (у шаблона превью нет). Текст документов, ссылки и число страниц не меняются (скрипт сверяется
+  по тексту). Исходник-HTML есть только у программы (`programma_html.py`); у договора — только `src/*.pdf`.
+- `programma_html.py` — HTML образца программы (6 страниц A4), перенесён из генератора в файлах проекта («Страница Программа
+  пест-контроля / Вёрстка v0»); печать Chromium совпадает с `src/obrazets-programmy-pest-kontrolya.pdf` по тексту и картинке страниц.
+- `programma_src.py` — пустой шаблон программы из того же HTML: записи по объекту скрыты (`visibility:hidden`), поэтому вёрстка,
+  таблицы и высота строк как у образца. Пусто: п. 2.3 (виды и зоны; группы вредителей остаются), матрица Приложения № 1 (6 строк
+  без кодов A_1…F_6), реестр Приложения № 2 (категории средств остаются), даты «20__ г.»; в колонтитуле «Шаблон программы…».
+  Результат — `src/shablon-programmy-pest-kontrolya.pdf`, оформление — `brand_pdf.py shablon`. `--check` — сверка печати образца.
+- `brand_docx.py` — шаблон Word программы из `src/shablon-programmy-pest-kontrolya.docx` — только для файлов проекта, на сайте
+  его нет с 08.11.2026 (правило владельца: шаблоны и образцы на сайте — один макет и только PDF); результат — во временной папке
+  `/tmp/docs_brand_build/`, проверка — PDF LibreOffice в `/tmp/docs_brand_docx_check.pdf`.
 
 ```bash
-NODE_PATH=/home/user/node_modules python3 tools/docs_brand/brand_pdf.py && NODE_PATH=/home/user/node_modules python3 tools/docs_brand/brand_docx.py
+NODE_PATH=/home/user/node_modules python3 tools/docs_brand/programma_src.py && NODE_PATH=/home/user/node_modules python3 tools/docs_brand/brand_pdf.py shablon
+NODE_PATH=/home/user/node_modules python3 tools/docs_brand/brand_pdf.py programma   # и dogovor — только если менялись их src/*.pdf
 ```
 
 ## Страница «Дезинфекция для организаций» (`/dezinfektsiya/`)

@@ -135,7 +135,7 @@ CARD = {
     'rest': ('Отрасль', 'Пест-контроль ресторанов и кафе',
              'Визиты после закрытия, гели и ловушки на кухне, журнал и акты по СанПиН для заведений и сетей.'),
     'prog': ('Материал', 'Программа пест-контроля',
-             'Образец в PDF и шаблон Word: 7 разделов, оценка пест-риска по зонам и план мероприятий.'),
+             'Образец и шаблон в PDF: 7 разделов, оценка пест-риска по зонам и план мероприятий.'),
     'zhur': ('Материал', 'Журнал пест-контроля',
              'Образец заполнения и шаблон в PDF: 9 разделов на 10 листах — точки контроля, ловушки, предписания.'),
     'pm': ('Материал', 'Пест-менеджмент или разовая обработка',
@@ -266,7 +266,7 @@ PAGES = {
         ])),
     'materialy/index.html': dict(key='mat', root='../', related=['derat', 'dezins', 'dogovor', 'food'], strip=(
         'Документы и практика IPM', [
-            ('lucide-file-signature', 'Программа', 'пест-контроля — образец PDF и шаблон Word'),
+            ('lucide-file-signature', 'Программа', 'пест-контроля — образец и шаблон в PDF'),
             ('lucide-notebook-pen', 'Журнал', 'пест-контроля — 9 разделов'),
             ('lucide-activity', 'Пест-менеджмент', 'или разовая обработка'),
             ('lucide-file-badge', 'СанПиН 3.3686-21', 'и ТР ТС 021/2011'),
@@ -289,7 +289,7 @@ PAGES = {
     'materialy/programma-pest-kontrolya/index.html': dict(key='prog', root='../../', related=['zhur', 'pm', 'derat', 'dezins'], strip=(
         'Коротко о программе пест-контроля', [
             ('lucide-file-signature', 'Образец программы', '— PDF на 6 страниц'),
-            ('lucide-notebook-pen', 'Шаблон', 'в Word (DOCX)'),
+            ('lucide-notebook-pen', 'Шаблон', 'в PDF для заполнения'),
             ('lucide-crosshair', '7 разделов', 'программы'),
             ('lucide-activity', 'Пест-риск', 'по зонам объекта'),
             ('lucide-map-pinned', 'Точки контроля', 'на план-схеме'),
@@ -557,7 +557,7 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
          'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка, образец программы производственного контроля по ХАССП (PDF) и её раздел пест-контроля, нормативная база дезинсекции и дератизации и разбор проверочных листов Роспотребнадзора 2026 года.',
          'isPartOf': {'@type': 'WebSite', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE},
          'mainEntity': {'@type': 'ItemList', 'itemListElement': [
-             {'@type': 'ListItem', 'position': 1, 'url': SITE + 'materialy/programma-pest-kontrolya/', 'name': 'Программа пест-контроля на предприятии: образец PDF, шаблон Word и пример заполнения'},
+             {'@type': 'ListItem', 'position': 1, 'url': SITE + 'materialy/programma-pest-kontrolya/', 'name': 'Программа пест-контроля на предприятии: образец и шаблон в PDF, пример заполнения'},
              {'@type': 'ListItem', 'position': 2, 'url': SITE + 'materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'name': 'Пест-менеджмент или разовая обработка'},
              {'@type': 'ListItem', 'position': 3, 'url': SITE + 'materialy/zhurnal-pest-kontrolya/', 'name': 'Журнал пест-контроля: образец заполнения, бланк и шаблон'},
              {'@type': 'ListItem', 'position': 4, 'url': SITE + 'materialy/programma-proizvodstvennogo-kontrolya-haccp/', 'name': 'Разработка программы производственного контроля по ХАССП и образец ППК'},

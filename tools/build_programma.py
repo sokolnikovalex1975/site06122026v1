@@ -12,8 +12,8 @@ from typo import typo
 CANONICAL_BASE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai'
 PAGE_URL = f'{CANONICAL_BASE}/materialy/programma-pest-kontrolya/'
 TITLE = 'Программа пест-контроля: образец и шаблон для предприятия — ПЕСТКОНТРОЛЬ Центр'
-DESC = 'Образец программы пест-контроля на предприятии: скачать PDF и шаблон Word, форма из 7 разделов, пример заполнения плана мероприятий и расчёта пест-риска по ХАССП и СанПиН 3.3686-21.'
-OG_TITLE = 'Программа пест-контроля: образец PDF, шаблон Word и пример заполнения'
+DESC = 'Образец программы пест-контроля на предприятии: скачать образец и шаблон в PDF, форма из 7 разделов, пример заполнения плана мероприятий и расчёта пест-риска по ХАССП и СанПиН 3.3686-21.'
+OG_TITLE = 'Программа пест-контроля: образец и шаблон в PDF, пример заполнения'
 OG_IMAGE_ALT = 'Специалист по пест-контролю и инженер по качеству сверяют программу и план-схему точек контроля в цехе'
 
 FAQS = [
@@ -27,11 +27,11 @@ FAQS = [
     ),
     (
         'Где скачать образец программы пест-контроля и можно ли его использовать?',
-        'На этой странице образец программы пест-контроля можно скачать бесплатно — в PDF и как шаблон Word (DOCX). Он обезличен и показывает форму документа: паспорт объекта, целевые виды вредителей, расчёт пест-риска, план-схему точек, план мероприятий, реестр средств и подписи сторон. Для проверки Роспотребнадзора или аудита торговой сети шаблон заполняют по реальному объекту: без обследования, привязки к помещениям и номеров точек на схеме он остаётся формальной бумагой.'
+        'На этой странице образец программы пест-контроля можно скачать бесплатно в PDF — вместе с пустым шаблоном той же формы. Образец обезличен и показывает форму документа: паспорт объекта, целевые виды вредителей, расчёт пест-риска, план-схему точек, план мероприятий, реестр средств и подписи сторон. Для проверки Роспотребнадзора или аудита торговой сети шаблон заполняют по реальному объекту: без обследования, привязки к помещениям и номеров точек на схеме он остаётся формальной бумагой.'
     ),
     (
-        'Есть ли шаблон программы пест-контроля в Word, чтобы заполнить самостоятельно?',
-        'Да, рядом с PDF есть шаблон в формате DOCX с теми же разделами и приложениями; поля для заполнения отмечены подчёркиванием. Паспорт объекта и сведения об ответственных предприятие может внести само. Оценку пест-риска, план-схему точек, пороги численности и перечень средств заполняет специалист по пест-контролю после осмотра — этого ждут аудиторы ХАССП и стандарты IPM.'
+        'Есть ли пустой шаблон программы пест-контроля, чтобы заполнить самостоятельно?',
+        'Да, рядом с образцом есть шаблон в PDF с теми же разделами и приложениями, но без записей: поля для заполнения отмечены подчёркиванием, таблицы целевых видов, плана мероприятий и реестра средств пустые, шаблон можно распечатать. Паспорт объекта и сведения об ответственных предприятие может внести само. Оценку пест-риска, план-схему точек, пороги численности и перечень средств заполняет специалист по пест-контролю после осмотра — этого ждут аудиторы ХАССП и стандарты IPM.'
     ),
     (
         'Чем программа пест-контроля по системе IPM отличается от графика обработок по договору ДДД?',
@@ -74,7 +74,7 @@ SCHEMA_GRAPH = {
             "inLanguage": "ru-RU",
             "mainEntityOfPage": PAGE_URL,
             "datePublished": "2026-11-06",
-            "dateModified": "2026-11-06",
+            "dateModified": "2026-11-08",
             "author": {
                 "@type": "Organization",
                 "name": "Методический отдел ПЕСТКОНТРОЛЬ Центр",
@@ -98,9 +98,9 @@ SCHEMA_GRAPH = {
         },
         {
             "@type": "DigitalDocument",
-            "name": "Шаблон программы пест-контроля в Word (DOCX)",
-            "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            "url": PAGE_URL + "shablon-programmy-pest-kontrolya.docx",
+            "name": "Шаблон программы пест-контроля на предприятии (PDF, 6 страниц, без записей)",
+            "encodingFormat": "application/pdf",
+            "url": PAGE_URL + "shablon-programmy-pest-kontrolya.pdf",
             "inLanguage": "ru-RU",
             "publisher": {"@type": "Organization", "name": "ПЕСТКОНТРОЛЬ Центр"}
         },
@@ -397,7 +397,7 @@ MAIN_HTML = f"""
       <div class="d-hero-media"><picture><source media="(max-width:860px)" srcset="../../img/programma-hero-mob-760.webp 760w, ../../img/programma-hero-mob.webp 1024w" sizes="100vw" width="1024" height="576"><img class="d-hero-img" src="../../img/programma-hero.webp" srcset="../../img/programma-hero-1440.webp 1440w, ../../img/programma-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="Специалист по пест-контролю и инженер по качеству сверяют программу пест-контроля и план-схему точек в цехе пищевого производства" fetchpriority="high" decoding="async"></picture></div>
       <p class="p-def"><strong>Программа пест-контроля</strong> — рабочий документ системы IPM и плана ХАССП: целевые вредители объекта, оценка пест-риска по зонам, схема пронумерованных точек контроля (ТПК), пороги численности и обязанности предприятия и лицензированной службы.</p>
       <ul class="d-ticks">
-        <li>Бесплатный образец программы пест-контроля — PDF на 6 страниц и шаблон Word для заполнения</li>
+        <li>Бесплатный образец программы пест-контроля и пустой шаблон для заполнения — PDF по 6 страниц</li>
         <li>Форма из 7 разделов по СанПиН 3.3686-21, ТР ТС 021/2011 и ГОСТ Р 54762-2011 (FSSC 22000)</li>
         <li>Пример заполнения плана мероприятий по 6 зонам и разработка программы под ваш объект</li>
       </ul>
@@ -405,7 +405,7 @@ MAIN_HTML = f"""
         <a href="obrazets-programmy-pest-kontrolya.pdf" class="btn btn-w btn-lg" target="_blank" rel="noopener"><span class="btn-t">Скачать образец, PDF</span></a>
         <a href="#zayavka" class="btn btn-o btn-lg"><span class="btn-t">Заказать разработку программы</span></a>
       </div>
-      <p class="p-hero-note">Есть <a href="shablon-programmy-pest-kontrolya.docx" download>шаблон программы в Word (DOCX)</a> · обезличенный образец ПЕСТКОНТРОЛЬ Центра</p>
+      <p class="p-hero-note">Есть <a href="shablon-programmy-pest-kontrolya.pdf" target="_blank" rel="noopener">пустой шаблон программы, PDF</a> · обезличенный образец ПЕСТКОНТРОЛЬ Центра</p>
     </div>
     <div aria-hidden="true"></div>
   </div>
@@ -414,7 +414,7 @@ MAIN_HTML = f"""
 <nav class="p-toc" aria-label="Содержание страницы">
   <div class="wrap">
     <b>Содержание</b>
-    <a href="#obrazets">Образец PDF и шаблон Word</a>
+    <a href="#obrazets">Образец и шаблон PDF</a>
     <a href="#razdely">Форма: 7 разделов</a>
     <a href="#kak-zapolnit">Как заполнить шаблон</a>
     <a href="#metodika">Расчёт пест-риска</a>
@@ -430,8 +430,8 @@ MAIN_HTML = f"""
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">Образец · форма · шаблон</div>
-      <h2>Образец программы <span class="nw">пест-контроля</span>: <em>скачать PDF и шаблон Word</em></h2>
-      <p class="sub">Обезличенный образец рабочей программы ПЕСТКОНТРОЛЬ Центра для пищевого производства, склада, магазина или ресторана. Показывает, как выглядит заполненная форма: титул с грифами утверждения, паспорт объекта, расчёт пест-риска, план мероприятий по зонам, реестр средств и подписи сторон.</p>
+      <h2>Образец программы <span class="nw">пест-контроля</span>: <em>скачать PDF и пустой шаблон</em></h2>
+      <p class="sub">Обезличенный образец рабочей программы ПЕСТКОНТРОЛЬ Центра для пищевого производства, склада, магазина или ресторана. Показывает, как выглядит заполненная форма: титул с грифами утверждения, паспорт объекта, расчёт пест-риска, план мероприятий по зонам, реестр средств и подписи сторон. Рядом — пустой шаблон той же формы без записей.</p>
     </div>
     <div class="p-obr">
       <div class="p-obr-pages">
@@ -451,9 +451,9 @@ MAIN_HTML = f"""
         </ol>
         <div class="p-obr-btns">
           <a href="obrazets-programmy-pest-kontrolya.pdf" class="btn btn-w btn-lg" target="_blank" rel="noopener"><span class="btn-t">Скачать образец, PDF</span></a>
-          <a href="shablon-programmy-pest-kontrolya.docx" class="btn btn-o btn-lg" download><span class="btn-t">Шаблон Word, DOCX</span></a>
+          <a href="shablon-programmy-pest-kontrolya.pdf" class="btn btn-o btn-lg" target="_blank" rel="noopener"><span class="btn-t">Скачать шаблон, PDF</span></a>
         </div>
-        <p class="p-obr-meta">PDF — 6 страниц, 145 КБ; DOCX — те же разделы с полями для заполнения. Структура плана мероприятий — по методике НЧНОУ «Институт <span class="nw">пест-менеджмента</span>» (<a href="https://ipm.moscow/pest-hazard-assessment" target="_blank" rel="noopener noreferrer">ipm.moscow</a>).</p>
+        <p class="p-obr-meta">Образец — PDF, 6 страниц, 191 КБ; шаблон — PDF, 6 страниц, 172 КБ: те же разделы и таблицы без записей. Структура плана мероприятий — по методике НЧНОУ «Институт <span class="nw">пест-менеджмента</span>» (<a href="https://ipm.moscow/pest-hazard-assessment" target="_blank" rel="noopener noreferrer">ipm.moscow</a>).</p>
       </div>
     </div>
   </div>
@@ -618,7 +618,7 @@ MAIN_HTML = f"""
     <div class="head">
       <div class="eyebrow">Пример заполнения</div>
       <h2>Как заполнить шаблон <span class="nw">программы</span>: <em>шесть шагов</em></h2>
-      <p class="sub">Так составляется программа <span class="nw">пест-контроля</span> на предприятии — в том же порядке, что и в шаблоне Word. Пример заполненной матрицы мероприятий — на странице 3 образца.</p>
+      <p class="sub">Так составляется программа <span class="nw">пест-контроля</span> на предприятии — в том же порядке, что и в шаблоне. Пример заполненной матрицы мероприятий — на странице 3 образца.</p>
     </div>
     <div class="p-fill">
       <ol class="p-fill-steps">
@@ -631,7 +631,7 @@ MAIN_HTML = f"""
       </ol>
       <div class="p-fill-side">
         <figure class="p-fig"><img src="../../img/programma-plan-skhema-720.webp" srcset="../../img/programma-plan-skhema-720.webp 720w, ../../img/programma-plan-skhema.webp 1200w" sizes="(max-width:1100px) 100vw, 45vw" width="1200" height="800" loading="lazy" decoding="async" alt="План-схема точек пест-контроля: три контура защиты и пронумерованные точки на плане предприятия"><figcaption>План-схема точек к программе: внешний контур территории, периметр здания и внутренние помещения — каждая точка с номером.</figcaption></figure>
-        <div class="p-obr-btns"><a href="shablon-programmy-pest-kontrolya.docx" class="btn btn-w btn-lg" download><span class="btn-t">Скачать шаблон Word</span></a><a href="#zayavka" class="btn btn-o btn-lg"><span class="btn-t">Заполнить со специалистом</span></a></div>
+        <div class="p-obr-btns"><a href="shablon-programmy-pest-kontrolya.pdf" class="btn btn-w btn-lg" target="_blank" rel="noopener"><span class="btn-t">Скачать шаблон, PDF</span></a><a href="#zayavka" class="btn btn-o btn-lg"><span class="btn-t">Заполнить со специалистом</span></a></div>
       </div>
     </div>
   </div>
@@ -965,7 +965,7 @@ document.addEventListener('change',function(e){if(!e.target.closest('.f-check-li
       <article class="p-sec p-sec-wide">
         <div>
           <div class="p-sec-top"><span class="p-sec-num">Материал 01 · Опубликован в превью</span><span class="p-sec-who">СанПиН 3.3686-21 · ГОСТ Р 54762-2011 · СТО 55003215.001-2023</span></div>
-          <h3><a href="./programma-pest-kontrolya/" style="color:var(--t1)">Программа пест-контроля на предприятии: образец PDF, шаблон Word и пример заполнения</a></h3>
+          <h3><a href="./programma-pest-kontrolya/" style="color:var(--t1)">Программа пест-контроля на предприятии: образец и шаблон в PDF, пример заполнения</a></h3>
           <p>Из каких 7 разделов состоит рабочая программа пест-контроля для плана ХАССП, как рассчитывается индекс пест-риска, чем отличаются программы ПОПМ (PRP) и ПРПО (OPRP), образец таблицы мероприятий по 5 зонам и разделение обязанностей между подрядчиком и Заказчиком.</p>
           <div class="d-btns" style="margin-top:20px"><a href="./programma-pest-kontrolya/" class="btn btn-w btn-lg"><span class="btn-t">Читать материал и смотреть образец</span></a></div>
         </div>

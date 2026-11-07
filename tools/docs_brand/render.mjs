@@ -1,6 +1,8 @@
 // Печать фирменных элементов документов (Playwright / Chromium).
 //   node render.mjs header <in.html> <out.pdf> [<out.png>]  — PDF размером ровно с шапку (.hd или .rh) и PNG 600 dpi для Word
 //   node render.mjs page <in.html> <out.pdf> <w_mm> <h_mm>   — PDF одной страницы заданного размера (водяной знак)
+//   node render.mjs doc <in.html> <out.pdf>                  — документ A4 без полей, с фоном (программа пест-контроля:
+//                                                              те же настройки печати, что у генератора образца)
 import { chromium } from 'playwright';
 
 const [,, mode, inHtml, outPdf, a4, a5] = process.argv;
@@ -23,6 +25,14 @@ if (mode === 'header') {
   await pg.goto('file://' + inHtml, { waitUntil: 'load' });
   await pg.pdf({ path: outPdf, width: a4 + 'mm', height: a5 + 'mm', printBackground: true,
                  margin: { top: 0, right: 0, bottom: 0, left: 0 } });
+  console.log('ok', outPdf);
+} else if (mode === 'doc') {
+  const pg = await b.newPage();
+  await pg.goto('file://' + inHtml, { waitUntil: 'networkidle' });
+  await pg.evaluateHandle('document.fonts.ready');
+  await pg.emulateMedia({ media: 'print' });
+  await pg.pdf({ path: outPdf, format: 'A4', printBackground: true,
+                 margin: { top: '0mm', right: '0mm', bottom: '0mm', left: '0mm' } });
   console.log('ok', outPdf);
 }
 await b.close();
