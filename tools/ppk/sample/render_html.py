@@ -14,6 +14,8 @@ HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT / 'tools' / 'zhurnal'))
+sys.path.insert(0, str(ROOT / 'tools' / 'docs_brand'))
+import brand  # noqa: E402
 import content as C  # noqa: E402
 from wm import watermark_svg  # noqa: E402
 
@@ -395,15 +397,13 @@ def cover():
     appr = ''.join(f'<div>{inline(x)}</div>' for x in c['approve'])
     rows = ''.join(f'<tr><th>{inline(a)}</th><td>{inline(b)}</td></tr>' for a, b in c['rows'])
     return f'''<section class="cover">
-  <div class="cv-top">
-    <div class="brand">{LOGO}<div><div class="bn">ПЕСТКОНТРОЛЬ<small>ЦЕНТР</small></div><div class="bt">Дератизация, дезинсекция и пест-контроль для организаций · ХАССП</div></div></div>
-    <div class="badge">Образец документа<small>реквизиты условные</small></div>
-  </div>
+  {brand.header_html('Дератизация, дезинсекция и пест-контроль для организаций · ХАССП')}
   <div class="signs">
     <div class="sg"><div class="sg-h">{c['agree_title']}</div>{agree}</div>
     <div class="sg"><div class="sg-h">{c['approve_title']}</div>{appr}</div>
   </div>
   <div class="cv-title">
+    <div class="cv-badge">Образец документа<span>реквизиты условные</span></div>
     <div class="k">{inline(c['kicker'])}</div>
     <div class="t">{inline(c['title'])}</div>
     <div class="s">{inline(c['subtitle'])}</div>
@@ -443,18 +443,13 @@ body { margin: 0; font-family: 'Inter', sans-serif; font-size: 8.5pt; line-heigh
 .v { color: #2a3ab0; }
 b { font-weight: 700; }
 p { margin: 0 0 5pt; }
-.wm { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-32deg); z-index: -1; }
+.wm { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-45deg); z-index: -1; pointer-events: none; }
 
 /* обложка */
 .cover { height: 261mm; display: flex; flex-direction: column; break-after: page; position: relative; }
-.cv-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 5mm; border-bottom: 1.4pt solid #615fff; }
-.brand { display: flex; align-items: center; gap: 3mm; }
-.brand .lg { width: 12mm; height: 12mm; }
-.bn { font-weight: 800; font-size: 13pt; letter-spacing: .02em; color: #09090b; }
-.bn small { font-size: 8.4pt; color: #4f46e5; margin-left: 1.6mm; letter-spacing: .08em; }
-.bt { font-size: 7.4pt; color: #52525b; margin-top: .6mm; }
-.badge { text-align: right; font-weight: 800; font-size: 8.4pt; letter-spacing: .08em; text-transform: uppercase; color: #4f46e5; border: 1pt solid #c7c9f5; border-radius: 3mm; padding: 2mm 3.4mm; background: #f5f5ff; }
-.badge small { display: block; font-weight: 600; font-size: 6.6pt; letter-spacing: .02em; text-transform: none; color: #52525b; margin-top: .4mm; }
+''' + brand.header_css(1.0) + r'''
+.cv-badge { display: inline-flex; align-items: baseline; gap: 2mm; font-size: 7pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 1mm 2.6mm; border-radius: 1mm; background: #fdc700; color: #09090b; margin-bottom: 4mm; }
+.cv-badge span { font-weight: 600; letter-spacing: .02em; text-transform: none; font-size: 6.8pt; }
 .signs { display: grid; grid-template-columns: 1fr 1fr; gap: 14mm; margin-top: 9mm; font-size: 8.4pt; line-height: 1.75; }
 .sg:last-child { padding-left: 12mm; }
 .sg-h { font-weight: 800; letter-spacing: .1em; font-size: 8.6pt; margin-bottom: 1mm; color: #09090b; }
@@ -574,20 +569,26 @@ table.frm tr.ex td { color: #2a3ab0; font-style: italic; background: #fafaff; }
 
 
 def header_template():
-    return ('<div style="width:100%;margin:0 13mm 0 17mm;padding:0 0 1.6mm;font-family:Inter;font-size:6.4pt;color:#52525b;'
-            'display:flex;align-items:center;justify-content:space-between;border-bottom:.6pt solid #615fff;-webkit-print-color-adjust:exact;">'
+    """Верхний колонтитул страниц 2+: логотип и название слева, справа крупно телефон и сайт (как в журнале)."""
+    ic = 'width:4.6mm;height:4.6mm;border-radius:50%;background:#615fff;display:inline-flex;align-items:center;justify-content:center;flex:none'
+    svg = 'style="width:2.6mm;height:2.6mm;display:block"'
+    return ('<div style="width:100%;margin:0 13mm 0 17mm;padding:0 0 1.5mm;font-family:Inter;line-height:1;'
+            'display:flex;align-items:center;justify-content:space-between;border-bottom:.7pt solid #615fff;-webkit-print-color-adjust:exact;">'
+            '<div style="display:flex;align-items:center;gap:1.8mm;">'
+            + LOGO.replace('class="lg"', 'style="width:6mm;height:6mm"') +
+            '<span style="font-weight:800;color:#09090b;font-size:8.4pt;letter-spacing:.01em">ПЕСТКОНТРОЛЬ</span>'
+            '<span style="font-weight:700;color:#615fff;font-size:5.6pt;letter-spacing:.14em">ЦЕНТР</span></div>'
             '<div style="display:flex;align-items:center;gap:1.6mm;">'
-            + LOGO.replace('class="lg"', 'style="width:5mm;height:5mm"') +
-            '<span style="font-weight:800;color:#09090b;font-size:7.6pt;letter-spacing:.02em">ПЕСТКОНТРОЛЬ</span>'
-            '<span style="font-weight:800;color:#4f46e5;font-size:5.8pt;letter-spacing:.08em">ЦЕНТР</span></div>'
-            '<div style="text-align:right"><span style="color:#4f46e5;font-weight:700;letter-spacing:.04em">ОБРАЗЕЦ</span>'
-            ' · Программа производственного контроля · ' + html.escape(C.ORG) + '</div></div>')
+            f'<i style="{ic}">' + brand.IC_PHONE.replace('<svg ', f'<svg {svg} ', 1) + '</i>'
+            f'<b style="font-size:10pt;font-weight:750;color:#09090b;margin-right:3mm;white-space:nowrap">{brand.CO["phone"]}</b>'
+            f'<i style="{ic}">' + brand.IC_GLOBE.replace('<svg ', f'<svg {svg} ', 1) + '</i>'
+            f'<b style="font-size:9.6pt;font-weight:650;color:#615fff;white-space:nowrap">{brand.CO["site"]}</b></div></div>')
 
 
 def footer_template():
     return ('<div style="width:100%;margin:0 13mm 0 17mm;font-family:Inter;font-size:6.2pt;color:#71717a;'
             'display:flex;justify-content:space-between;align-items:center;">'
-            '<span>ПЕСТКОНТРОЛЬ Центр · пестконтроль-центр.рф · +7 (495) 104-35-70 · образец ППК для хлебопекарного и кондитерского производства · ' + C.REV + '</span>'
+            '<span>ПЕСТКОНТРОЛЬ Центр · образец программы производственного контроля для хлебопекарного и кондитерского производства · ' + C.REV + '</span>'
             '<span style="font-weight:600;color:#3f3f46">Стр. <span class="pageNumber"></span> из <span class="totalPages"></span></span></div>')
 
 
@@ -595,9 +596,9 @@ def build(out_dir, pages=None):
     out_dir = pathlib.Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     pages = pages or {}
-    wm = watermark_svg(ROOT / 'fonts', length_mm=210, color='#6366f1', opacity=0.045)
+    wm = watermark_svg(ROOT / 'fonts', length_mm=brand.WM['length_mm'], color=brand.WM['color'], opacity=brand.WM['opacity'])
     body = cover() + toc(pages) + '<main>' + render_blocks(C.DOC) + render_blocks(C.APPX) + '</main>'
-    doc = (f'<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Образец программы производственного контроля — {html.escape(C.ORG)}</title>'
+    doc = (f'<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Образец программы производственного контроля — ПЕСТКОНТРОЛЬ Центр</title>'
            f'<style>{CSS}</style></head><body>{wm}{body}</body></html>')
     (out_dir / 'ppk.html').write_text(doc, encoding='utf-8')
     (out_dir / 'templates.json').write_text(json.dumps({'header': header_template(), 'footer': footer_template()}, ensure_ascii=False), encoding='utf-8')

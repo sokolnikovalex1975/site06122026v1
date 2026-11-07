@@ -30,10 +30,11 @@ DOMAIN = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai'
 PATH = '/materialy/programma-proizvodstvennogo-kontrolya-haccp/'
 URL = DOMAIN + PATH
 DATE = '2026-11-06'
+MODIFIED = '2026-11-07'  # фирменная шапка и водяной знак в образце, шаблон Word снят
 
-TITLE = 'Программа производственного контроля по ХАССП: образец PDF и Word — ПЕСТКОНТРОЛЬ Центр'
-DESC = ('Образец программы производственного контроля для пищевого производства: 27 страниц, ККТ, '
-        'лабораторный контроль, медосмотры, формы учёта — PDF и Word. Что вписать о дезинсекции и '
+TITLE = 'Программа производственного контроля по ХАССП: образец ППК в PDF — ПЕСТКОНТРОЛЬ Центр'
+DESC = ('Образец программы производственного контроля для пищевого производства: PDF на 27 страниц, ККТ, '
+        'лабораторный контроль, медосмотры, формы учёта. Что вписать о дезинсекции и '
         'дератизации по СанПиН 2026 года.')
 OG_TITLE = 'Образец программы производственного контроля по ХАССП и раздел пест-контроля'
 HEADLINE = 'Программа производственного контроля по ХАССП: раздел пест-контроля'
@@ -49,7 +50,7 @@ FAQ = [
      'кулинария или пекарня, это уже производство.'),
     ('Где взять образец программы производственного контроля для пищевого производства?',
      'На этой странице — бесплатный образец ППК на 27 страниц для хлебопекарного и кондитерского производства: '
-     'PDF и шаблон Word. В нём все пункты раздела 3 СП 1.1.1058-01, лабораторный контроль сырья, продукции, '
+     'в PDF. В нём все пункты раздела 3 СП 1.1.1058-01, лабораторный контроль сырья, продукции, '
      'смывов и воды, 4 критические контрольные точки ХАССП, медосмотры и гигиеническая подготовка по должностям, '
      'раздел о дезинсекции и дератизации, аварийные ситуации и 19 форм учёта. Реквизиты в образце условные: '
      'программу адаптируют под свой объект, утверждает её руководитель.'),
@@ -172,6 +173,23 @@ DYNAMIC = {'js', 'anim-ready', 'anim-off', 'anim-fail', 'no-intro', 'scrolled', 
            'in', 'sent', 'err', 'is-loading', 'hidden', 'menu-open', 'has-cursor', 'nohover', 'warn', 'full', 'ok'}
 
 
+def split_sel(sel):
+    """Список селекторов по запятым верхнего уровня: запятые внутри :where(…), :is(…), :not(…) не делят селектор."""
+    out, depth, cur = [], 0, ''
+    for ch in sel:
+        if ch == '(':
+            depth += 1
+        elif ch == ')':
+            depth -= 1
+        if ch == ',' and depth == 0:
+            out.append(cur)
+            cur = ''
+        else:
+            cur += ch
+    out.append(cur)
+    return out
+
+
 def shake(css, used):
     keep = []
     for media, sel, body, at in parse_css(css):
@@ -179,7 +197,8 @@ def shake(css, used):
             keep.append((media, sel, body, at))
             continue
         alive = []
-        for one in sel.split(','):
+        # :where(…) из tools/site/fx.py с классами чужих страниц выпадет целиком — unify.py добавит эти стили заново
+        for one in split_sel(sel):
             cls = set(re.findall(r'\.([a-zA-Z][\w-]*)', re.sub(r'\[[^\]]*\]', '', one)))
             if all(c in used or c in DYNAMIC for c in cls):
                 alive.append(one.strip())
@@ -230,17 +249,13 @@ def ld_json():
             {'@type': 'ListItem', 'position': 2, 'name': 'Материалы', 'item': DOMAIN + '/materialy/'},
             {'@type': 'ListItem', 'position': 3, 'name': 'Программа производственного контроля по ХАССП', 'item': URL}]},
         {'@type': 'TechArticle', 'headline': HEADLINE, 'image': DOMAIN + '/img/ppk-og.jpg', 'description': DESC,
-         'inLanguage': 'ru-RU', 'mainEntityOfPage': URL, 'datePublished': DATE, 'dateModified': DATE,
+         'inLanguage': 'ru-RU', 'mainEntityOfPage': URL, 'datePublished': DATE, 'dateModified': MODIFIED,
          'about': ['Программа производственного контроля', 'ХАССП', 'Дезинсекция', 'Дератизация'],
          'author': {'@type': 'Organization', 'name': 'Методический отдел ПЕСТКОНТРОЛЬ Центр', 'url': DOMAIN + '/'},
          'publisher': org,
          'citation': [{'@type': 'Legislation', 'name': n, 'url': u} for n, u in CITATIONS]},
         {'@type': 'DigitalDocument', 'name': 'Образец программы производственного контроля для пищевого производства (PDF, 27 страниц)',
          'encodingFormat': 'application/pdf', 'url': URL + 'obrazets-programmy-proizvodstvennogo-kontrolya.pdf',
-         'inLanguage': 'ru-RU', 'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр'}},
-        {'@type': 'DigitalDocument', 'name': 'Шаблон программы производственного контроля в Word (DOCX)',
-         'encodingFormat': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-         'url': URL + 'shablon-programmy-proizvodstvennogo-kontrolya.docx',
          'inLanguage': 'ru-RU', 'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр'}},
         {'@type': 'Service', 'name': 'Подготовка раздела «Дезинсекция и дератизация» для программы производственного контроля',
          'serviceType': 'Пест-контроль по ХАССП и программа производственного контроля',
@@ -330,7 +345,8 @@ def main():
             'rel-d', 'rel-a', 'card', 'head', 'eyebrow', 'wrap', 's'}
     for cl in re.findall(r'class="([^"]*)"', s):
         used.update(cl.split())
-    frame_css = '\n'.join(re.findall(r'<style[^>]*>(.*?)</style>', frame, re.S))
+    # без <style data-fx> и <style id="m-crumbs"> каркаса — их заново вставляют tools/site/unify.py и mobile_crumbs.py
+    frame_css = '\n'.join(re.findall(r'<style(?![^>]*(?:data-fx|id="m-crumbs"))[^>]*>(.*?)</style>', frame, re.S))
     css = shake(frame_css, used) + mini((SRC / 'page.css').read_text(encoding='utf-8'))
     s = re.sub(r'<style[^>]*>.*?</style>\n?', '', s, flags=re.S)
     # стили страницы — сразу после общего style.css, как на других страницах

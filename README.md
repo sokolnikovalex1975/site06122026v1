@@ -204,18 +204,50 @@ python3 tools/site/build_prod.py      # → dist/timeweb/ (в репозитор
 Добавлена 06.11.2026, на пестконтроль-центр.рф выложена в 14:52 МСК вместе с полным образцом ППК (см. `CHANGES.md`).
 
 - Страница: `tools/ppk/main.html` (текст и блоки), `tools/ppk/page.css` (стили собственных блоков `k-*`), `tools/ppk/build_ppk.py`
-  (каркас — страница «Программа пест-контроля»; заголовки, вопросы → HTML и FAQPage, TechArticle, два DigitalDocument — PDF и DOCX,
-  Service, BreadcrumbList; цели Метрики `ppk_obrazets` и `ppk_shablon` по клику на ссылки с `data-dl`).
+  (каркас — страница «Программа пест-контроля»; заголовки, вопросы → HTML и FAQPage, TechArticle, DigitalDocument — PDF,
+  Service, BreadcrumbList; цель Метрики `ppk_obrazets` по клику на ссылки с `data-dl`). Шаблона Word на странице нет с 07.11.2026.
   Сборка: `python3 tools/ppk/build_ppk.py && python3 tools/site/build_site.py && python3 tools/site/build_prod.py`.
-- Образец ППК (вымышленный хлебозавод ООО «Северный каравай» с кремовым цехом, 4 ККТ, 19 форм учёта, план-схема точек):
+- Образец ППК (хлебозавод с кремовым цехом, наименование заказчика — пустое поле «ООО «____________»», 4 ККТ, 19 форм учёта,
+  план-схема точек; на титуле шапка с телефоном и сайтом, на остальных страницах — колонтитул с ними же, водяной знак на всех):
   `tools/ppk/sample/` — `content.py` (весь текст; `**жирный**`, `⟦значение⟧` — данные для замены: синие в PDF, жёлтые в Word),
   `render_html.py` (вёрстка страниц, план-схема и блок-схема в SVG), `render_pdf.mjs` (Chromium → PDF), `build_docx.py` (Word),
   `build_sample.py` (два прохода для номеров страниц в содержании, метаданные, превью `img/ppk-sample-p{1,11,20}-{240,360,720}.webp`).
   Сборка: `python3 tools/ppk/sample/build_sample.py` → `materialy/programma-proizvodstvennogo-kontrolya-haccp/obrazets-programmy-proizvodstvennogo-kontrolya.pdf`
-  (27 страниц) и `shablon-programmy-proizvodstvennogo-kontrolya.docx`. Нужны шрифт Inter 4.1 (TTF в `~/.fonts`,
+  (27 страниц); Word-версия собирается только во временную папку `/tmp/ppk_sample_build/shablon-programmy-proizvodstvennogo-kontrolya.docx`
+  (для файлов проекта, на сайт не выкладывается). Нужны шрифт Inter 4.1 (TTF в `~/.fonts`,
   https://github.com/rsms/inter/releases/tag/v4.1), Node + playwright (Chromium), PyMuPDF, python-docx, Pillow.
   Скрипт предупредит, если таблица ККТ уйдёт со страницы 11 или план-схема — со страницы 20: тогда поправьте ссылки `#page=`,
   превью и диапазоны страниц в блоке «Что внутри образца ППК» в `tools/ppk/main.html`.
+
+## Образцы документов: шапка и водяной знак (`tools/docs_brand/`)
+
+Все документы для скачивания оформлены одинаково (с 07.11.2026): шапка как в журнале пест-контроля — логотип, ПЕСТКОНТРОЛЬ ЦЕНТР,
+справа крупно телефон +7 (495) 104-35-70 (чёрный) и адрес пестконтроль-центр.рф (фиолетовый) с фиолетовыми значками, под шапкой
+фиолетовая линия; диагональный водяной знак «пестконтроль-центр.рф» (#7c4dff, 12 %, −45°, контуры букв — не текст, поиск и копирование
+текста PDF не мешает). Наименований реальных юрлиц заказчиков в образцах нет: только ООО «Центр дезинфекционных услуг» — исполнитель.
+
+| Документ | Шапка | Как собирается |
+|---|---|---|
+| `materialy/programma-pest-kontrolya/obrazets-programmy-pest-kontrolya.pdf` (6 стр.) | полная — стр. 1, 3, 5 (начало программы и приложений), компактная строка с телефоном и сайтом — стр. 2, 4, 6 | `brand_pdf.py` |
+| `materialy/programma-pest-kontrolya/shablon-programmy-pest-kontrolya.docx` | картинка в верхнем колонтитуле (каждая страница) + подложка Word | `brand_docx.py` |
+| `dogovor-deratizatsiya-dezinsektsiya/obrazets-dogovora-pestkontrol-tsentr.pdf` (6 стр.) | полная — стр. 1, 5, 6 (договор и приложения), компактная — стр. 2–4 | `brand_pdf.py` |
+| `materialy/programma-proizvodstvennogo-kontrolya-haccp/obrazets-…pdf` (27 стр.) | полная на титуле, колонтитул с телефоном и сайтом на стр. 2–27 | `tools/ppk/sample/build_sample.py` |
+| `materialy/zhurnal-pest-kontrolya/*.pdf` (10 листов) | полная на каждом листе | `tools/zhurnal/` (см. README там) |
+
+- `brand.py` — общие элементы: контакты, логотип и значки, `header_css/header_html` (шапка журнала, масштаб `s`), `runner_*`
+  (компактная шапка в одну строку), `watermark_doc` (страница с водяным знаком, `tools/zhurnal/wm.py`), `docx_watermark_run`
+  (подложка Word: VML WordArt, Calibri, прозрачность 85 %).
+- `render.mjs` — печать шапки (PDF ровно по размеру + PNG 600 dpi) и страницы с водяным знаком (Playwright/Chromium).
+- `brand_pdf.py` — программа пест-контроля и договор (исходников-HTML у них нет): из копий без оформления `src/*.pdf` вырезает
+  прежнюю шапку (redaction полосы шапки: текст и векторная графика), ставит новую шапку векторной вставкой, на остальные страницы —
+  компактную строку в верхнее поле, поверх всех страниц — водяной знак; метаданные, превью `img/programma-sample-p{1,3,5}-*.webp`
+  и `img/dogovor-sample-p1.webp`. Текст документов, ссылки и число страниц не меняются (скрипт сверяется по тексту).
+- `brand_docx.py` — шаблон Word программы пест-контроля из `src/shablon-programmy-pest-kontrolya.docx`: новая картинка шапки,
+  подложка в колонтитуле, свойства файла, миниатюра; проверка — PDF LibreOffice в `/tmp/docs_brand_docx_check.pdf`.
+
+```bash
+NODE_PATH=/home/user/node_modules python3 tools/docs_brand/brand_pdf.py && NODE_PATH=/home/user/node_modules python3 tools/docs_brand/brand_docx.py
+```
 
 ## Страница «Дезинфекция для организаций» (`/dezinfektsiya/`)
 

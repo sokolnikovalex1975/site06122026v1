@@ -11,13 +11,15 @@ from docx import Document
 from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_CELL_VERTICAL_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK, WD_COLOR_INDEX, WD_TAB_ALIGNMENT
-from docx.oxml import OxmlElement
+from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import qn
 from docx.shared import Cm, Inches, Mm, Pt, RGBColor
 
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import content as C  # noqa: E402
+sys.path.insert(0, str(HERE.parents[2] / 'tools' / 'docs_brand'))
+import brand  # noqa: E402
 from render_html import typo  # noqa: E402
 
 FONT = 'Arial'
@@ -27,6 +29,7 @@ INDIGO = RGBColor(0x4F, 0x46, 0xE5)
 NAVY = RGBColor(0x1E, 0x1B, 0x4B)
 GREY = RGBColor(0x52, 0x52, 0x5B)
 LIGHT = RGBColor(0x71, 0x71, 0x7A)
+VIOLET = RGBColor(0x61, 0x5F, 0xFF)
 RED = RGBColor(0xB9, 0x1C, 0x1C)
 EXBLUE = RGBColor(0x2A, 0x3A, 0xB0)
 TEXT_W = 178  # мм
@@ -466,10 +469,16 @@ def setup(doc):
         pp.paragraph_format.tab_stops.add_tab_stop(Inches(3.25), WD_TAB_ALIGNMENT.CLEAR)
         pp.paragraph_format.tab_stops.add_tab_stop(Inches(6.5), WD_TAB_ALIGNMENT.CLEAR)
     hp.paragraph_format.tab_stops.add_tab_stop(Mm(TEXT_W), WD_TAB_ALIGNMENT.RIGHT)
-    runs(hp, 'Программа производственного контроля\t⟦' + C.ORG + '⟧', size=7.5, color=LIGHT)
+    runs(hp, '**ПЕСТКОНТРОЛЬ Центр** · Программа производственного контроля\t', size=7.5, color=LIGHT)
+    runs(hp, '+7 (495) 104-35-70', size=10, bold=True, color=DARK, typo_=False)
+    runs(hp, '   ', size=10, typo_=False)
+    runs(hp, 'пестконтроль-центр.рф', size=10, bold=True, color=VIOLET, typo_=False)
+    # водяной знак «пестконтроль-центр.рф» (как «Подложка» Word) — в колонтитулах первой и остальных страниц
+    for hdr in (s.header, s.first_page_header):
+        hdr.paragraphs[0]._p.append(parse_xml(brand.docx_watermark_run(with_ns=True, shape_id=1 if hdr is s.header else 2)))
     fp = s.footer.paragraphs[0]
     fp.paragraph_format.tab_stops.add_tab_stop(Mm(TEXT_W), WD_TAB_ALIGNMENT.RIGHT)
-    runs(fp, 'Шаблон ПЕСТКОНТРОЛЬ Центра · пестконтроль-центр.рф · +7 (495) 104-35-70\tСтр. ', size=7, color=LIGHT)
+    runs(fp, 'Шаблон ПЕСТКОНТРОЛЬ Центра · образец программы производственного контроля\tСтр. ', size=7, color=LIGHT)
     field(fp, 'PAGE')
     runs(fp, ' из ', size=7, color=LIGHT)
     field(fp, 'NUMPAGES')
@@ -478,6 +487,10 @@ def setup(doc):
 def cover(doc):
     c = C.COVER
     para(doc, 'ПЕСТКОНТРОЛЬ ЦЕНТР · дератизация, дезинсекция и пест-контроль для организаций', size=8, bold=True, color=INDIGO, after=2)
+    p = para(doc, '', after=4)
+    runs(p, '+7 (495) 104-35-70', size=12, bold=True, color=DARK, typo_=False)
+    runs(p, '    ', size=12, typo_=False)
+    runs(p, 'пестконтроль-центр.рф', size=12, bold=True, color=VIOLET, typo_=False)
     para(doc, 'Шаблон документа: значения, выделенные жёлтым, замените данными своего объекта', size=8, color=GREY, after=18)
     tb = doc.add_table(rows=1, cols=2)
     borders(tb, none=True)

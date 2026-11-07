@@ -6,8 +6,9 @@ python3 tools/ppk/sample/build_sample.py
 Нужно: шрифт Inter 4.x в системе (~/.fonts), Node + playwright (Chromium), PyMuPDF, python-docx, Pillow.
 Результат: materialy/programma-proizvodstvennogo-kontrolya-haccp/
   obrazets-programmy-proizvodstvennogo-kontrolya.pdf
-  shablon-programmy-proizvodstvennogo-kontrolya.docx
   img/ppk-sample-p{1,11,20}-{240,360,720}.webp (превью титула, ККТ и план-схемы для блока «Образец» на странице)
+Шаблон Word на сайте не публикуется (снят 07.11.2026): DOCX собирается во временную папку
+/tmp/ppk_sample_build/shablon-programmy-proizvodstvennogo-kontrolya.docx — только для файлов проекта.
 """
 import json
 import pathlib
@@ -77,9 +78,13 @@ def main():
     doc.close()
     json.dump({'pages': n, 'toc': pages}, open(TMP / 'pages.json', 'w'), ensure_ascii=False)
 
-    # DOCX
+    # DOCX — только во временную папку (на сайте шаблона Word нет)
     import build_docx
-    build_docx.build(OUT / DOCX_NAME, TMP)
+    build_docx.build(TMP / DOCX_NAME, TMP)
+    stale = OUT / DOCX_NAME
+    if stale.exists():
+        stale.unlink()
+        print('удалён', stale)
 
     # превью страниц
     d = fitz.open(str(pdf_path))
