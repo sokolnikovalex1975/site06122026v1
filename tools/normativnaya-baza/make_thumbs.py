@@ -3,7 +3,7 @@
 
 Карточка показывает верх первой страницы в кадре 16:9, поэтому вместо целой страницы A4 (360×509, на телефоне
 растягивалась в 2–3 раза) берётся готовая вырезка верха страницы: 480×270 и 720×405 (договор — 680×383,
-исходник договора шириной 680). Исходник — те же превью страниц, что на страницах образцов (img/*-720.webp).
+исходник договора шириной 680). Исходник — те же превью страниц, что на страницах образцов (img/*-720.webp); у чек-листа — первая страница PDF.
 
     python3 tools/normativnaya-baza/make_thumbs.py
 """
@@ -18,10 +18,24 @@ DOCS = {  # имя превью: исходник
     'zhurnal-obrazets-p1': 'zhurnal-obrazets-p1-720.webp',
     'ppk-sample-p1': 'ppk-sample-p1-720.webp',
     'dogovor-sample-p1': 'dogovor-sample-p1.webp',
+    'akt-obrazets-p1': 'akt-obrazets-p1-720.webp',  # образец акта (tools/akt/build_akt.py)
+    # чек-лист документов: своего превью страницы нет — первая страница PDF в ширину 720 px
+    'cheklist-p1': '../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/cheklist-dokumentov-dlya-rospotrebnadzora.pdf',
 }
 
+
+def page_image(src):
+    if not src.endswith('.pdf'):
+        return Image.open(IMG / src).convert('RGB')
+    import pymupdf
+    page = pymupdf.open(IMG / src)[0]
+    pix = page.get_pixmap(matrix=pymupdf.Matrix(1440 / page.rect.width, 1440 / page.rect.width))
+    im = Image.frombytes('RGB', (pix.width, pix.height), pix.samples)
+    return im.resize((720, round(720 * pix.height / pix.width)), Image.LANCZOS)
+
+
 for name, src in DOCS.items():
-    im = Image.open(IMG / src).convert('RGB')
+    im = page_image(src)
     w, h = im.size
     top = im.crop((0, 0, w, round(w * 9 / 16)))
     for tw in (480, w):

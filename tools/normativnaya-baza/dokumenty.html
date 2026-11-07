@@ -1,0 +1,179 @@
+<main id="main" tabindex="-1">
+<section class="d-hero nb-hero" id="hero">
+  <div class="wrap">
+    <div class="d-hero-copy">
+      <nav class="f-crumbs" aria-label="Навигационная цепочка"><a href="@/">Главная</a><span aria-hidden="true">→</span><a href="@/normativnaya-baza/">Нормативная база</a><span aria-hidden="true">→</span><span aria-current="page">Документы для Роспотребнадзора</span></nav>
+      <div class="eyebrow">Нормативная база · Проверено 07.11.2026</div>
+      <h1><span class="ln"><span>Документы</span></span> <span class="ln"><span><em>для Роспотребнадзора:</em></span></span> <span class="ln"><span>полный перечень</span></span> <span class="ln"><span>для проверки</span></span></h1>
+      <!--HERO_PHOTO-->
+      <p class="lead">На проверке Роспотребнадзор запрашивает документы из исчерпывающего перечня сведений, который он публикует по видам деятельности (п. 9 ч. 3 ст. 46 248-ФЗ). Почти всем объектам нужны программа производственного контроля, договоры и акты по дезинсекции и дератизации, договор на вывоз отходов, протоколы лабораторных исследований и медицинские книжки работников. Остальное зависит от деятельности: общепиту — программа ХАССП и журналы, салону красоты — графики уборок и документы на стерилизацию. Ниже — восемь групп документов с основанием и тем, кто их готовит, и сборщик папки для 14 типов объектов.</p>
+      <div class="d-btns">
+        <a href="#papka" class="btn btn-w btn-lg"><span class="btn-t">Собрать список для моего объекта</span></a>
+        <a href="#zayavka" class="btn btn-o btn-lg"><span class="btn-t">Проверить папку с санитарным врачом</span></a>
+      </div>
+      <p class="nb-byline p-hero-note">Подготовила Марианна Семерина, санитарный врач · сверено с официальными перечнями и нормами 07.11.2026</p>
+    </div>
+    <nav class="p-toc nb-toc" aria-label="Разделы страницы"><a href="#korotko">Коротко</a><a href="#papka">Соберите папку</a><a href="#perechen">Перечень</a><a href="#akty">Акты</a><a href="#po-obektam">По типам объектов</a><a href="#podat">Если нужно подать</a><a href="#oshibki">Ошибки</a><a href="#voprosy">Вопросы</a></nav>
+  </div>
+</section>
+
+<section class="s" id="korotko">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Коротко</div><h2>Восемь групп документов, <em>которые запрашивает инспектор</em></h2><p class="sub">Ориентир — <a href="https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u" target="_blank" rel="noopener">перечень сведений Управления Роспотребнадзора по Калининградской области</a>: он разбит по видам деятельности. Наш список не заменяет официальный перечень, а показывает, что из него обычно запрашивают и кто готовит каждый документ.</p></div>
+<!--DK_SHORT-->
+  </div>
+</section>
+
+<section class="s" id="papka">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Соберите папку</div><h2>Соберите папку <em>для вашего объекта</em></h2><p class="sub">Выберите тип объекта и отметьте документы, которые уже есть. Список того, чего не хватает, можно отправить санитарному врачу: он бесплатно сверит папку и скажет, что из этого важно для проверки.</p></div>
+    <div class="card dk-tool" data-dk-tool>
+      <fieldset class="dk-types">
+        <legend>Тип объекта</legend>
+<!--DK_TYPES-->
+      </fieldset>
+      <div class="dk-kit" id="dk-kit" aria-live="polite">
+        <p class="dk-kit-empty">Выберите тип объекта — появится список документов с отметками «есть». Полный перечень с основаниями — <a href="#perechen">ниже</a>, особенности объектов — в таблице <a href="#po-obektam">«По типам объектов»</a>.</p>
+      </div>
+      <div class="dk-bar" id="dk-bar" hidden>
+        <p class="dk-count" id="dk-count" role="status"></p>
+        <div class="dk-bar-btns">
+          <button type="button" class="btn btn-w" id="dk-send"><span class="btn-t">Отправить список санитарному врачу</span></button>
+          <a class="btn btn-o" href="CHECKLIST_PDF" download data-goal="dokumenty_pdf"><span class="btn-t">Чек-лист PDF</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="perechen">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Перечень</div><h2>Перечень документов <em>для проверки</em></h2><p class="sub">В столбце «Кто готовит» отмечено, какие документы оформляем мы по договору на обслуживание. Ссылки ведут на образцы и разборы норм.</p></div>
+    <div class="dk-find" role="search">
+      <label class="dk-find-l" for="dk-q">Найти документ в перечне</label>
+      <div class="dk-find-f">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.6-3.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="dk-q" type="search" autocomplete="off" spellcheck="false" placeholder="Например: протокол смывов, вывоз отходов, медкнижки" aria-describedby="dk-q-st">
+        <button type="button" class="dk-find-x" id="dk-q-x" aria-label="Очистить поиск" hidden>×</button>
+      </div>
+      <p class="dk-find-st" id="dk-q-st" role="status"></p>
+    </div>
+<!--DK_GROUPS-->
+  </div>
+</section>
+
+<section class="s" id="po-obektam">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">По типам объектов</div><h2>Что добавить к общему списку <em>для вашего объекта</em></h2><p class="sub">Номера вопросов о насекомых и грызунах — из <a href="@/normativnaya-baza/proverochnye-listy/">разбора проверочных листов</a>, сверенного с текстами приказов № 578 и № 580. Ссылка в столбце «Проверочный лист» ведёт на полный текст формы.</p></div>
+<!--DK_OBJECTS-->
+  </div>
+</section>
+
+<section class="s" id="podat">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Если документы нужно подать</div><h2>Когда документы не показывают, <em>а подают</em></h2></div>
+    <div class="nb-grid2 dk-grid3">
+      <div class="card nb-fact"><b>Уведомление о начале деятельности.</b> С 1 сентября 2025 года перечень видов деятельности задаёт постановление Правительства № 725 вместо № 584: в нём 60 позиций вместо 90, гостиничные услуги исключены (<a href="https://86.rospotrebnadzor.ru/news/obnovlenyi-trebovaniya-k-podache-uvedomlenij-o-nachale-osushhestvleniya-nekotoryix-vidov-deyatelnosti.html" target="_blank" rel="noopener">Роспотребнадзор по ХМАО</a>). Уведомление подают через Госуслуги до начала работы (<a href="http://26.rospotrebnadzor.ru/ond/uonpd/" target="_blank" rel="noopener">Роспотребнадзор по Ставропольскому краю</a>).</div>
+      <div class="card nb-fact"><b>Санитарно-эпидемиологическое заключение</b> — отдельная госуслуга для отдельных видов деятельности. Эта страница о другом: о документах, которые показывают на проверке.</div>
+      <div class="card nb-fact"><b>Ответ на требование при документарной проверке.</b> Документы направляют в течение 10 рабочих дней со дня получения требования (ч. 4 ст. 72 248-ФЗ, <a href="https://www.consultant.ru/document/cons_doc_LAW_358750/b4e4c47c5158a23084ade806c3f6ea297ea65ca5/" target="_blank" rel="noopener">КонсультантПлюс</a>). Если чего-то не хватает, это видно сразу — поэтому папку лучше собрать заранее.</div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="oshibki">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Ошибки</div><h2>Ошибки в папке, <em>которые видит инспектор</em></h2></div>
+    <ul class="nb-errs">
+      <li>В договоре «обработка раз в месяц», а обследований нет. Для объекта особого эпидемиологического значения обследования на насекомых нужны не реже 2 раз в месяц, оценка заселённости грызунами — ежемесячно.</li>
+      <li>У подрядчика нет лицензии, или её номер нигде не указан — ни в договоре, ни в актах.</li>
+      <li>Акты без даты и времени, без результатов по точкам контроля и подписи ответственного.</li>
+      <li>Мусорокамеры и контейнерная площадка не включены в договор и график обследований.</li>
+      <li>Схема точек контроля не совпадает с тем, что инспектор видит на объекте.</li>
+      <li>В программе производственного контроля ссылки на отменённые СанПиН 2.3/2.4.3590-20, СП 2.3.6.3668-20 и СП 2.1.3678-20 — их заменили правила 2026 года. Полный список — в <a href="@/normativnaya-baza/#otmenennye">нормативной базе</a>.</li>
+      <li>Протоколы лаборатории, в область аккредитации которой это исследование не входит.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="gotovim">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Что готовим мы</div><h2>Какие документы из списка <em>оформляем мы</em></h2><p class="sub">По договору на обслуживание документы по дезинсекции, дератизации, дезинфекции и вентиляции готовим и обновляем мы — вам остаётся хранить их в папке.</p></div>
+    <div class="nb-links">
+      <a class="card nb-link" href="@/dogovor-deratizatsiya-dezinsektsiya/"><span class="nb-link-k">Договор и акты</span><b>Договор, акты обследований и выполненных работ, отчёты о заселённости грызунами</b><span class="nb-link-go">Договор на обслуживание →</span></a>
+      <a class="card nb-link" href="@/materialy/programma-pest-kontrolya/"><span class="nb-link-k">Программа и журнал</span><b>Программа пест-контроля, схема точек контроля, журнал, раздел ППК о дезинсекции и дератизации</b><span class="nb-link-go">Образцы →</span></a>
+      <a class="card nb-link" href="@/sanitarnyy-audit/"><span class="nb-link-k">Протоколы</span><b>Смывы и пробы воздуха через аккредитованную лабораторию, исследования на легионеллы</b><span class="nb-link-go">Санитарный аудит →</span></a>
+      <a class="card nb-link" href="@/dezinfektsiya/"><span class="nb-link-k">Дезинфекция</span><b>Акты профилактической дезинфекции и смывы для оценки её эффективности</b><span class="nb-link-go">Дезинфекция →</span></a>
+      <a class="card nb-link" href="@/ochistka-dezinfektsiya-ventilyatsii/"><span class="nb-link-k">Вентиляция</span><b>Акт очистки по п. 43 ППР, акт дезинфекции и журнал по МР 3.5.0396-25</b><span class="nb-link-go">Вентиляция →</span></a>
+      <a class="card nb-link" href="@/normativnaya-baza/proverochnye-listy/"><span class="nb-link-k">Проверочные листы</span><b>Какими документами ответить на вопросы листа о насекомых и грызунах</b><span class="nb-link-go">Разбор листов →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="avtor">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Автор и сверка</div><h2>Кто подготовил <em>перечень</em></h2></div>
+    <div class="nb-author-wrap">
+      <div class="card nb-author">
+        <img class="nb-avatar" src="@/img/san-author-photo-240.webp" srcset="@/img/san-author-photo-240.webp 240w, @/img/san-author-photo-480.webp 480w" sizes="(max-width:600px) 80px, 112px" width="240" height="240" loading="lazy" decoding="async" alt="Иллюстративное фото санитарного врача, изображение сгенерировано">
+        <div><p class="nb-author-name">Марианна Семерина</p><p class="nb-author-role">Санитарный врач, автор материала</p><p class="nb-author-date">Сверено с официальными перечнями и нормами — 07.11.2026</p><p class="nb-author-note">Фото иллюстративное</p></div>
+      </div>
+      <p class="nb-author-text">Перечень подготовила Марианна Семерина, санитарный врач. Основа — исчерпывающие перечни сведений управлений Роспотребнадзора, разъяснения ЦГОН и тексты норм; пункты СанПиН и вопросы проверочных листов сверены 06–07.11.2026. Если перечень или нормы изменятся, мы обновим страницу и чек-лист.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="istochniki">
+  <div class="wrap">
+    <details class="nb-src">
+      <summary><span class="eyebrow">Источники</span><span class="nb-src-t">Официальные тексты и разъяснения (проверено 07.11.2026)</span></summary>
+      <ul class="nb-base">
+        <li>Исчерпывающий перечень сведений по видам деятельности — <a href="https://39.rospotrebnadzor.ru/content/perechen-svedeniy-kotorye-mogut-zaprashivatsya-kontrolnym-nadzornym-organom-u" target="_blank" rel="noopener">Управление Роспотребнадзора по Калининградской области</a>, <a href="https://35.rospotrebnadzor.ru/informirovanie/perechen-svedeniy/" target="_blank" rel="noopener">Управление по Вологодской области</a></li>
+        <li>Производственный контроль: что организовать бизнесу — <a href="https://cgon.rospotrebnadzor.ru/biznesu/profilaktika-nadzor-uslsugi/profilakticheskie-meropriatiya/proizvodstvennyy-kontrol-chto-organizovat-biznesu/" target="_blank" rel="noopener">ЦГОН Роспотребнадзора</a></li>
+        <li>Лабораторные исследования в производственном контроле, п. 2.5 СП 1.1.1058-01 — <a href="https://www.garant.ru/consult/work_law/1620091/" target="_blank" rel="noopener">Гарант</a>; результаты спецоценки, п. 1.1 ст. 32 52-ФЗ — <a href="https://www.consultant.ru/document/cons_doc_LAW_384394/d4d04d2e799bdca563354397e3c1f53374d9dce4/" target="_blank" rel="noopener">КонсультантПлюс</a></li>
+        <li>СанПиН 3.3686-21, пп. 88, 98, 99, 101–103, 108–111, 132, 133 — <a href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773" target="_blank" rel="noopener">pravo.gov.ru</a></li>
+        <li>Вентиляция и кондиционирование, п. 132 СанПиН 3.3686-21 — <a href="https://cgon.rospotrebnadzor.ru/biznesu/articles/ventilyatsiya-ochistka-i-dezinfektsiya/" target="_blank" rel="noopener">ЦГОН</a>; медицинские организации — <a href="https://cgon.rospotrebnadzor.ru/biznesu/articles/sanitarno-epidemiologicheskie-trebovaniya-k-sistemam-otopleniya-ventilyatsii-mikroklimatu-i-vozdushn/" target="_blank" rel="noopener">ЦГОН</a></li>
+        <li>Журналы общепита, СанПиН 2.3/2.4.4282-26 — <a href="https://base.garant.ru/414329257/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener">Гарант</a></li>
+        <li>Медицинские книжки, приказ Минздрава № 705н — <a href="https://cgon.rospotrebnadzor.ru/lichnye-meditsinskie-knizhki/" target="_blank" rel="noopener">ЦГОН</a>; медосмотры, приказ № 29н — <a href="https://77.rospotrebnadzor.ru/index.php/press-centr/press-relizy/15322-o-vazhnosti-prokhozhdeniya-periodicheskikh-meditsinskikh-osmotrov-19-04-2026" target="_blank" rel="noopener">Управление Роспотребнадзора по г. Москве</a></li>
+        <li>Договор с региональным оператором — <a href="https://www.consultant.ru/law/podborki/obyazatelno_li_zaklyuchat_dogovor_s_regionalnym_operatorom/" target="_blank" rel="noopener">КонсультантПлюс</a></li>
+        <li>Уведомление о начале деятельности, постановление № 725 — <a href="https://86.rospotrebnadzor.ru/news/obnovlenyi-trebovaniya-k-podache-uvedomlenij-o-nachale-osushhestvleniya-nekotoryix-vidov-deyatelnosti.html" target="_blank" rel="noopener">Роспотребнадзор по ХМАО</a>, <a href="http://26.rospotrebnadzor.ru/ond/uonpd/" target="_blank" rel="noopener">по Ставропольскому краю</a></li>
+        <li>Документарная проверка, ст. 72 248-ФЗ — <a href="https://www.consultant.ru/document/cons_doc_LAW_358750/b4e4c47c5158a23084ade806c3f6ea297ea65ca5/" target="_blank" rel="noopener">КонсультантПлюс</a></li>
+        <li>Проверочные листы, приказы № 578 и № 580 — <a href="https://base.garant.ru/414956074/" target="_blank" rel="noopener">Гарант: № 578</a>, <a href="http://publication.pravo.gov.ru/document/0001202609240001" target="_blank" rel="noopener">официальная публикация № 580</a>; номера вопросов — <a href="@/normativnaya-baza/proverochnye-listy/">разбор листов на сайте</a></li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+<!--FAQ-->
+
+<section class="cta" id="zayavka"><div class="cta-bg f-lazy" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Заявка</div>
+      <h2>Проверим папку документов <em>до инспектора</em></h2>
+      <p class="sub">Санитарный врач бесплатно сверит ваш список с перечнем для вашего вида деятельности и скажет, каких документов не хватает и что в них исправить. Если нужна проверка на месте со смывами и пробами воздуха — расскажем о <a href="@/sanitarnyy-audit/">платном санитарном аудите</a>.</p>
+      <ul class="cta-list">
+        <li><!--ICON:lucide-circle-check-->Сверка списка документов для вашего объекта — бесплатно и дистанционно</li>
+        <li><!--ICON:lucide-circle-check-->Что из этого оформим мы: договор, акты, программа, журнал</li>
+        <li><!--ICON:lucide-circle-check-->Санитарный аудит с выездом и лабораторией — по желанию</li>
+      </ul>
+<!--CTA_CONTACTS-->
+    </div>
+    <form class="form" id="form" novalidate data-form>
+      <div class="fbody">
+        <h3>Проверить папку документов</h3>
+        <p class="fs">Заполнение займёт меньше минуты</p>
+        <div class="fg">
+<!--FORM_FIELDS-->
+</div>
+        <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Проверить папку</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>
+        <p class="legal">Нажимая кнопку, вы даёте <a href="@/soglasie/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаете, что ознакомились с <a href="@/privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+        <p class="legal nb-lic">Работы выполняет ООО «Центр дезинфекционных услуг», лицензия на дезинфекционную деятельность <a href="LICENSE_URL" target="_blank" rel="noopener">№ Л064-00111-77/01942445</a></p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg class="ok-ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M15 27l7 7 15-16"/></svg>
+        <h3>Заявка отправлена</h3><p>Перезвоним в ближайшее рабочее время и договоримся, как прислать документы на сверку.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>

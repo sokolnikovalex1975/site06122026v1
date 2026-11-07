@@ -171,3 +171,7 @@
 .sa-pnotes{padding:22px 20px}
 .sa-viol{padding:22px 20px}
 }
+/* до 400 px штрафы в одну колонку: на 320–340 px суммы не помещались в половину карточки */
+@media (max-width:400px){
+.sa-fines tr{grid-template-columns:minmax(0,1fr)}
+}

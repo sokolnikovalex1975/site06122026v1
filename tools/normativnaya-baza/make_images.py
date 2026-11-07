@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """Фото первого экрана раздела «Нормативная база» из мастер-файлов.
 
-    python3 tools/normativnaya-baza/make_images.py <мастер хаба.png> <мастер листов.png>
+    python3 tools/normativnaya-baza/make_images.py <мастер хаба.png> <мастер листов.png> [<мастер документов.png>]
+    python3 tools/normativnaya-baza/make_images.py dk-hero=<мастер документов.png>   — только одно фото
 
 Мастер-файлы (PNG 2752×1536, без сжатия) хранятся в файлах проекта, папка «Страница Нормативная база/Визуалы v1»:
     nb-hero-v3-master.png — санитарный врач с папкой норм (хаб /normativnaya-baza/);
-    pl-hero-v1-master.png — проходим проверочный лист на складе (/normativnaya-baza/proverochnye-listy/).
+    pl-hero-v1-master.png — проходим проверочный лист на складе (/normativnaya-baza/proverochnye-listy/);
+папка «Страница Документы для Роспотребнадзора/Визуалы v1»:
+    dk-hero-v1-master.png — управляющая и специалист сверяют папку документов
+                            (/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/, 08.11.2026).
 
 Размеры как у остальных страниц сайта:
     img/<имя>.webp          1920×1072 — компьютер;
@@ -23,7 +27,7 @@ from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 IMG = ROOT / 'img'
 # (имя, левая граница кадра 4:3 в мастере 2752×1536)
-HEROES = [('nb-hero', 704), ('pl-hero', 704)]
+HEROES = [('nb-hero', 704), ('pl-hero', 704), ('dk-hero', 704)]
 Q = 80  # как у остальных фото первого экрана (42–97 КБ при 1920 px)
 
 
@@ -33,9 +37,15 @@ def save(im, path):
 
 
 def main():
-    if len(sys.argv) != 3:
+    args = sys.argv[1:]
+    if not 1 <= len(args) <= len(HEROES):
         sys.exit(__doc__)
-    for (name, x0), master in zip(HEROES, sys.argv[1:3]):
+    x0s = dict(HEROES)
+    if all('=' in a for a in args):  # имя=мастер
+        jobs = [(n, x0s[n], m) for n, m in (a.split('=', 1) for a in args)]
+    else:  # по порядку HEROES
+        jobs = [(n, x0, m) for (n, x0), m in zip(HEROES, args)]
+    for name, x0, master in jobs:
         im = Image.open(master).convert('RGB')
         assert im.size == (2752, 1536), (master, im.size)
         for w, h, suffix in ((1920, 1072, ''), (1440, 804, '-1440')):
