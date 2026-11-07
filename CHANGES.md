@@ -2,6 +2,29 @@
 
 Основа — версия, опубликованная на пестконтроль-центр.рф 20.10.2026. Дизайн, вёрстка компонентов, анимации и шрифты не менялись. Переписаны тексты, изменён порядок блоков и наполнение карточек, обновлены метаданные.
 
+## Выкладка на пестконтроль-центр.рф 07.11.2026, 17:39 МСК: образцы документов (шапка, водяной знак, без наименований заказчиков; шаблон Word ППК снят)
+
+- **Что выложено (33 файла, все — замена):** 5 документов — `obrazets-programmy-pest-kontrolya.pdf`, `shablon-programmy-pest-kontrolya.docx`,
+  `obrazets-dogovora-pestkontrol-tsentr.pdf`, `obrazets-programmy-proizvodstvennogo-kontrolya.pdf`, `obrazets-zhurnala-pest-kontrolya.pdf`;
+  26 превью (`img/programma-sample-*`, `img/dogovor-sample-p1.webp`, `img/ppk-sample-*`, `img/zhurnal-obrazets-*`, `img/zhurnal-og.jpg`);
+  страницы `/materialy/programma-proizvodstvennogo-kontrolya-haccp/` и `/materialy/` (правки — запись ниже). Адреса файлов те же.
+- **Удалено с сервера:** `materialy/programma-proizvodstvennogo-kontrolya-haccp/shablon-programmy-proizvodstvennogo-kontrolya.docx`
+  (после успешной выкладки, FTP `DELE`; по HTTPS теперь 404). Копия — `~/pestcontrol-deploy-2026-11-07-docs/deleted/` на Mac mini
+  (sha256 `0ce24af6…c593`, как в `MANIFEST-2026-11-06-ppk.sha256`).
+- **Из какого состояния собрано:** документы и картинки на сайте совпадали с прежними версиями в репозитории (коммит aa5d92c) байт в байт;
+  две страницы сняты с сайта по HTTPS в 17:29 МСК, правки внесены скриптом `tools/deploy/patch-2026-11-07-docs.py` (9 замен: только отличия
+  сборки до → после; эффекты `tools/site/fx.py` из коммита aa5d92c на сайт не выложены и в пакет не вошли). Конфиг —
+  `tools/deploy/deploy-2026-11-07-docs.conf`, лаунчер — `tools/deploy/launch-2026-11-07-docs.sh`.
+- **Выкладка:** `run_all.sh deploy` из «Терминала» на Mac mini (папка `/tmp/pcdeploy/pestcontrol-deploy-work-2026-11-07-docs`), запуск один.
+  FTP без TLS, `/public_html`; сверка с `EXPECTED_BEFORE` — 33 из 33, загрузка, сверка на сервере — 33 из 33
+  (`tools/deploy/MANIFEST-2026-11-07-docs.sha256`), по HTTPS — тоже 33 из 33. `.netrc` удалён.
+- **Копия прежних файлов:** `tools/deploy/backup/before-docs_2026-11-07_ftp.zip` (33 файла, суммы = `EXPECTED_BEFORE`) и
+  `~/pestcontrol-deploy-2026-11-07-docs` на Mac mini. Откат: в копию папки положить `.netrc` и запустить `bash run_all.sh rollback`;
+  шаблон Word вернуть загрузкой из `deleted/`.
+- **Счётчики и колл-трекинг:** на обеих страницах блок Метрики 113675622, UIS/CoMagic и Radist — байт в байт как до выкладки
+  (`ym` загружается, ошибок в консоли и ответов 4xx нет). Lighthouse страницы ППК на сайте: телефон — 95 / 100 / 100 / 100
+  (LCP 2,2 с, CLS 0, TBT 20 мс), компьютер — 97 / 100 / 100 / 100 (LCP 0,6 с).
+
 ## Образцы документов: шапка с телефоном и сайтом, водяной знак, без наименований заказчиков; шаблон Word ППК снят (07.11.2026)
 
 - **Шапка и водяной знак во всех документах для скачивания** (`tools/docs_brand/`, см. README): шапка как в журнале пест-контроля —
