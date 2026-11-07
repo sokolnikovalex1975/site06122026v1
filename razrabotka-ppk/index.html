@@ -669,7 +669,7 @@
 <div class="field"><label class="sr-only" for="f-name">Ваше имя</label><input id="f-name" name="name" placeholder="Ваше имя" required autocomplete="name"><small class="ferr">Укажите имя</small></div>
 <div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>
 <div class="field full"><label class="sr-only" for="f-company">Компания</label><input id="f-company" name="company" placeholder="Компания (необязательно)" autocomplete="organization"></div>
-<div class="field full"><label class="sr-only" for="f-type">Вид объекта</label><select id="f-type" name="type" required><option value="" selected>Вид объекта</option><option>Ресторан или кафе</option><option>Магазин или торговая сеть</option><option>Пищевое производство</option><option>Склад, логистика</option><option>Гостиница</option><option>Офис или бытовые услуги</option><option>Фармацевтическое производство</option><option>Другое</option></select><small class="ferr">Выберите вид объекта</small></div>
+<div class="field full"><label class="sr-only" for="f-type">Вид объекта</label><select id="f-type" name="type" required><option value="" selected>Вид объекта</option><option>Ресторан или кафе</option><option>Магазин или торговая сеть</option><option>Пищевое производство</option><option>Склад, логистика</option><option>Гостиница</option><option value="Другое">Офис или бытовые услуги</option><option>Фармацевтическое производство</option><option>Другое</option></select><small class="ferr">Выберите вид объекта</small></div>
 <div class="field full"><label class="sr-only" for="f-goal">Что нужно</label><select id="f-goal" name="goal"><option value="" selected>Что нужно</option><option>Разработать ППК</option><option>Разработать ППК по ХАССП</option><option>Не знаю, какая ППК нужна</option><option>Обновить ППК под правила 2026 года</option><option>Проверить действующую ППК</option><option>ППК для сети объектов</option></select></div>
 <div class="field full"><label class="sr-only" for="f-addr">Адрес или район</label><input id="f-addr" name="address" placeholder="Адрес или район" autocomplete="street-address"></div>
 <div class="field full"><label class="sr-only" for="f-msg">Комментарий</label><textarea id="f-msg" name="comment" placeholder="Комментарий: площадь, число сотрудников, сроки"></textarea></div>
@@ -772,8 +772,9 @@
     else requestAnimationFrame(function () { setTimeout(go, 0); });
   })('../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261106s2']);
 </script>
-<script>/* Форма: что нужно, адрес, комментарий и страница — в поле msg, которое читает send.php */
-document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,g=e.goal.value||'не выбрано',a=e.address.value.trim()||'не указан',c=e.comment.value.trim();e.msg.value='Что нужно: '+g+'\nАдрес: '+a+(c?'\nКомментарий: '+c:'')+'\nСтраница: Разработка ППК (/razrabotka-ppk/)';},true);
+<script>/* Форма: что нужно, адрес, комментарий и страница — в поле msg, которое читает send.php;
+   «Офис или бытовые услуги» уходит на сервер как «Другое» (список send.php), название вида — в msg */
+document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,g=e.goal.value||'не выбрано',a=e.address.value.trim()||'не указан',c=e.comment.value.trim(),o=e.type.options[e.type.selectedIndex],k=o&&o.value&&o.text!==o.value?'Вид объекта: '+o.text+'\n':'';e.msg.value=k+'Что нужно: '+g+'\nАдрес: '+a+(c?'\nКомментарий: '+c:'')+'\nСтраница: Разработка ППК (/razrabotka-ppk/)';},true);
 /* кнопки в карточках цен сразу выбирают в форме «Что нужно» */
 document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-goal]');if(!b)return;var g=document.getElementById('f-goal');if(g)g.value=b.getAttribute('data-goal');});
 /* клик по образцу ППК — цель Метрики ppk_obrazets, как на странице образца */

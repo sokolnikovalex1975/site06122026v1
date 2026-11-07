@@ -269,10 +269,12 @@ def main():
     # только загрузчик анимаций: скрипт формы пищевой страницы (unify.py) сюда не переносим — у страницы свои поля
     li = tpl.index('<script>\n  /* скрипты анимаций')
     loader = tpl[li:tpl.index('</script>', li) + len('</script>')] + '\n'
-    form_js = ("<script>/* Форма: что нужно, адрес, комментарий и страница — в поле msg, которое читает send.php */\n"
+    form_js = ("<script>/* Форма: что нужно, адрес, комментарий и страница — в поле msg, которое читает send.php;\n"
+               "   «Офис или бытовые услуги» уходит на сервер как «Другое» (список send.php), название вида — в msg */\n"
                "document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,"
-               "g=e.goal.value||'не выбрано',a=e.address.value.trim()||'не указан',c=e.comment.value.trim();"
-               "e.msg.value='Что нужно: '+g+'\\nАдрес: '+a+(c?'\\nКомментарий: '+c:'')+"
+               "g=e.goal.value||'не выбрано',a=e.address.value.trim()||'не указан',c=e.comment.value.trim(),"
+               "o=e.type.options[e.type.selectedIndex],k=o&&o.value&&o.text!==o.value?'Вид объекта: '+o.text+'\\n':'';"
+               "e.msg.value=k+'Что нужно: '+g+'\\nАдрес: '+a+(c?'\\nКомментарий: '+c:'')+"
                "'\\nСтраница: Разработка ППК (/razrabotka-ppk/)';},true);\n"
                "/* кнопки в карточках цен сразу выбирают в форме «Что нужно» */\n"
                "document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-goal]');if(!b)return;"
