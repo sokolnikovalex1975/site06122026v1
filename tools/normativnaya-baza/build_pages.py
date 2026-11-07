@@ -3,6 +3,8 @@
 
     normativnaya-baza/index.html                    — хаб «СанПиН и требования к дезинсекции и дератизации» (hub.html)
     normativnaya-baza/proverochnye-listy/index.html — «Проверочные листы Роспотребнадзора 2026» (listy.html)
+    normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html — «Документы для Роспотребнадзора» (dokumenty.html;
+        перечень, «Соберите папку» и «По типам объектов» — из dokumenty_data.py, стили dokumenty.css, скрипт dokumenty.js)
 
 Шаблон — готовая отраслевая страница pishchevoe-proizvodstvo/index.html (как у санитарного аудита): из неё берутся
 <head> без заголовков, шапка, мобильное меню, подвал, плавающие кнопки, ранний скрипт и загрузчик анимаций, общие стили.
@@ -17,6 +19,7 @@
     <!--INDLINKS-->        — строка ссылок на отраслевые страницы (только существующие)
     <!--FORM_FIELDS-->     — поля формы; тип объекта — только значения, которые принимает send.php
     <!--CTA_CONTACTS-->, <!--ICON:имя-->, LICENSE_URL — как на странице санитарного аудита
+    <!--DK_SHORT-->, <!--DK_TYPES-->, <!--DK_GROUPS-->, <!--DK_OBJECTS-->, CHECKLIST_PDF — страница документов (dokumenty_data.py)
 
 Дальше страницы доводит общий конвейер сайта (бегущая строка, «Смотрите также», разметка анимаций, общее меню):
 
@@ -35,9 +38,13 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / 'tools' / 'legal'))
 from typo import typo  # noqa: E402  неразрывные пробелы после коротких слов, как на остальных страницах
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import dokumenty_data as DK  # noqa: E402  перечень документов для проверки Роспотребнадзора (третья страница раздела)
 
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 DATE = '2026-11-06'  # дата сверки норм; при публикации в другой день поменяйте datePublished в PAGES
+DK_DATE = '2026-11-07'  # страница «Документы для Роспотребнадзора»: опубликована и сверена 07.11.2026
+SEARCH_V = '20261107'  # версия search.min.js и search-index.json (поиск по сайту, tools/search) — меняйте при их обновлении
 AUTHOR = {'@type': 'Person', 'name': 'Марианна Семерина', 'jobTitle': 'Санитарный врач'}
 # фото в карточке автора иллюстративное (сгенерировано), поэтому image у Person не указываем
 ORG = {'@type': 'Organization', '@id': SITE + '#org', 'name': 'ПЕСТКОНТРОЛЬ Центр',
@@ -91,8 +98,8 @@ HUB_FAQ = [
 
 LISTY_FAQ = [
     ('С какого числа действуют новые проверочные листы Роспотребнадзора?',
-     'Приказ № 578 — с 4 октября 2026 года, приказ № 580 — с 5 октября 2026 года. Они заменили приказы № 18 '
-     'от 20.01.2022 и № 808 от 24.12.2021.'),
+     'Приказ № 578 — с 4 октября 2026 года, приказ № 580 — с 5 октября 2026 года. Они заменили приказ № 18 '
+     'от 20.01.2022 и приказ № 808 от 24.12.2021.'),
     ('Может ли инспектор проверять то, чего нет в проверочном листе?',
      'Да. В п. 2 обоих приказов сказано, что плановый рейдовый осмотр и выездная проверка не ограничиваются вопросами '
      'из форм.'),
@@ -192,6 +199,7 @@ TYPES_LISTY = [('Ресторан или кафе', 'Ресторан или к�
                ('Склад, логистика', 'Склад'), ('Пищевое производство', 'Пищевое производство'),
                ('Гостиница', 'Гостиница'), ('Другое', 'Медицинская организация'), ('Другое', 'Аптека'),
                ('Другое', 'Другое')]
+TYPES_DOC = [(send, lab) for _, lab, send, _ in DK.OBJECTS] + [('Другое', 'Другое')]
 SEND_TYPES = {'Пищевое производство', 'Фармацевтическое производство', 'Ресторан или кафе', 'Гостиница',
               'Магазин или торговая сеть', 'Склад, логистика', 'Элеватор, комбикормовый завод', 'Другое'}  # как в send.php
 
@@ -223,6 +231,22 @@ PAGES = [
         'faq': LISTY_FAQ, 'faq_h2': 'Вопросы <em>о проверочных листах</em>',
         'types': TYPES_LISTY, 'name': 'Проверочные листы 2026', 'comment_ph': 'Комментарий: вид деятельности, дата проверки, что смущает',
         'date_published': DATE,
+    },
+    {
+        'src': 'dokumenty.html', 'out': 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html',
+        'slug': 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', 'root': '../../',
+        'title': 'Документы для Роспотребнадзора: перечень для проверки в 2026 году',
+        'og_title': 'Документы для Роспотребнадзора: полный перечень для проверки',
+        'desc': 'Какие документы нужны для проверки Роспотребнадзора: договоры, акты, протоколы лабораторных исследований, '
+                'журналы и ППК. Перечень по типам объектов и чек-лист PDF. Москва и область.',
+        'h1': 'Документы для Роспотребнадзора: полный перечень для проверки',
+        'crumbs': [('Главная', ''), ('Нормативная база', 'normativnaya-baza/'),
+                   ('Документы для Роспотребнадзора', 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/')],
+        'og_image': 'dk-og.jpg', 'og_alt': 'Документы для Роспотребнадзора: полный перечень для проверки',
+        'faq': DK.FAQ, 'faq_h2': 'Вопросы <em>о документах для проверки</em>',
+        'types': TYPES_DOC, 'name': 'Документы для Роспотребнадзора',
+        'comment_ph': 'Комментарий: вид деятельности, каких документов не хватает, когда проверка',
+        'date_published': DK_DATE, 'date_modified': DK_DATE, 'css': 'dokumenty.css', 'js': 'dokumenty.js', 'body_cls': 'dk-page',
     },
 ]
 
@@ -257,7 +281,8 @@ def typeset(html):
             continue
         # сначала неразрывные пробелы (пока в тексте нет тегов: «к» перед словом через дефис не повиснет), потом nw
         t = typo(part)
-        t = NW_RE.sub(r'<span class="nw">\1</span>', t)
+        # длинные слова («санитарно-эпидемиологическое») могут переноситься на дефисе, иначе не помещаются на 320 px
+        t = NW_RE.sub(lambda m: m.group(1) if len(m.group(1)) > 18 else '<span class="nw">' + m.group(1) + '</span>', t)
         t = CODE_RE.sub(r'<span class="nw">\1</span>', t)
         t = TRTS_RE.sub(lambda m: '<span class="nw">ТР\u00a0ТС\u00a0' + m.group(1) + '</span>', t)
         out.append(t)
@@ -357,6 +382,19 @@ def json_ld(p):
                 'about': ['Дезинсекция', 'Дератизация', 'СанПиН 3.3686-21', 'Проверочные листы Роспотребнадзора'],
                 'mainEntity': {'@type': 'ItemList', 'name': 'Документы о дезинсекции и дератизации',
                                'numberOfItems': len(items), 'itemListElement': items}}
+    elif p['src'] == 'dokumenty.html':
+        page = {'@type': 'Article', '@id': url + '#article', 'headline': p['h1'], 'description': p['desc'],
+                'inLanguage': 'ru', 'datePublished': p['date_published'], 'dateModified': p['date_modified'],
+                'author': AUTHOR, 'publisher': {'@id': SITE + '#org'}, 'mainEntityOfPage': url, 'image': image,
+                'about': ['Проверка Роспотребнадзора', 'Документы для проверки', 'Производственный контроль',
+                          'Дезинсекция', 'Дератизация'],
+                'hasPart': [{'@type': 'DigitalDocument', 'name': 'Образец акта обследования и выполненных работ по дезинсекции '
+                             'и дератизации', 'encodingFormat': 'application/pdf', 'url': url + DK.AKT_PDF},
+                            {'@type': 'DigitalDocument', 'name': 'Бланк акта обследования и выполненных работ по дезинсекции '
+                             'и дератизации', 'encodingFormat': 'application/pdf', 'url': url + DK.AKT_BLANK},
+                            {'@type': 'DigitalDocument', 'name': 'Чек-лист документов для проверки Роспотребнадзора',
+                             'encodingFormat': 'application/pdf', 'url': url + DK.CHECKLIST_PDF}],
+                'isPartOf': {'@id': SITE + 'normativnaya-baza/#webpage'}}
     else:
         page = {'@type': 'Article', '@id': url + '#article', 'headline': p['h1'], 'description': p['desc'],
                 'inLanguage': 'ru', 'datePublished': p['date_published'], 'dateModified': DATE, 'author': AUTHOR,
@@ -388,6 +426,122 @@ IND = [('restorany-i-kafe', 'рестораны и кафе'), ('magaziny-i-torg
 def ind_links(root):
     links = [f'<a href="{root}{s}/">{t}</a>' for s, t in IND if (ROOT / s / 'index.html').exists()]
     return (' Подробнее о вашей отрасли: ' + ' · '.join(links) + '.') if links else ''
+
+
+# ---------------------------------------------------------------- страница «Документы для Роспотребнадзора»
+OBJ_LABEL = {code: lab for code, lab, _, _ in DK.OBJECTS}
+OBJ_GEN = {code: gen for code, _, _, gen in DK.OBJECTS}
+
+
+def dk_short():
+    li = ''.join(f'      <li class="card"><a href="#{gid}"><span class="dk-n">{n}</span><b>{title}</b><span>{short}</span></a></li>\n'
+                 for gid, n, title, short in DK.GROUPS)
+    return '    <ol class="dk-short">\n' + li + '    </ol>'
+
+
+def dk_types():
+    def chips(objs):
+        return ''.join(f'<label class="dk-chip"><input type="radio" name="dk-obekt" value="{c}"><span>{lab}</span></label>'
+                       for c, lab, _, _ in objs)
+    main, other = DK.OBJECTS[:DK.MAIN_OBJECTS], DK.OBJECTS[DK.MAIN_OBJECTS:]
+    return (f'        <div class="dk-chips">{chips(main)}</div>\n'
+            f'        <p class="dk-types-k">Другой объект — типы из проверочных листов</p>\n'
+            f'        <div class="dk-chips">{chips(other)}</div>')
+
+
+def dk_for(obj):
+    if obj == DK.ALL:
+        return ''
+    names = [OBJ_LABEL[o] for o in obj]
+    return '<span class="dk-for">Для объектов: ' + ', '.join(n[0].lower() + n[1:] if not n.startswith(('ППК',)) else n for n in names) + '</span>'
+
+
+def dk_row(rw):
+    who = rw['who']
+    badge = f'<span class="dk-who{" dk-who-my" if who == "my" else ""}">{DK.WHO[who]}</span>'
+    who_t = rw['who_text']
+    who_html = badge + (f'<span class="dk-who-t">{who_t}</span>' if who_t != DK.WHO[who] else '')
+    note = f'<span class="dk-note">{rw["note"]}</span>' if rw['note'] else ''
+    sample = rw['sample'] or '—'
+    obj = ' '.join(rw['obj'])
+    return (f'        <tr id="d-{rw["id"]}" data-obj="{obj}" data-who="{who}" data-kw="{rw["kw"]}">'
+            f'<td data-l="Документ"><b class="dk-doc">{rw["name"]}</b>{note}{dk_for(rw["obj"])}</td>'
+            f'<td data-l="Кто готовит">{who_html}</td>'
+            f'<td data-l="Основание">{rw["basis"]}</td>'
+            f'<td data-l="Образец или услуга">{sample}</td></tr>')
+
+
+AKT_CARD = (
+    '    <div class="card dk-akt">\n'
+    f'      <a class="dk-akt-prev" href="{DK.AKT_PDF}" data-goal="akt_obrazets" aria-label="Образец акта, PDF">'
+    '<img src="@/img/akt-obrazets-p1-360.webp" srcset="@/img/akt-obrazets-p1-360.webp 360w, @/img/akt-obrazets-p1-720.webp 720w" '
+    'sizes="(max-width:760px) 240px, 200px" width="360" height="509" loading="lazy" decoding="async" '
+    'alt="Первая страница образца акта обследования и выполненных работ по дезинсекции и дератизации"></a>\n'
+    '      <div><span class="nb-link-k">Образец · PDF, 2 страницы</span>\n'
+    '        <h4>Акт обследования и выполненных работ по дезинсекции и дератизации</h4>\n'
+    '        <p>Результаты обследования по точкам контроля, выполненные работы со средством, номером свидетельства '
+    'о госрегистрации, концентрацией и способом, контроль эффективности прежней обработки (п. 99 СанПиН 3.3686-21), '
+    'рекомендации и подписи сторон. Бланк — тот же акт без записей, лист в лист.</p>\n'
+    f'        <div class="d-btns"><a class="btn btn-w" href="{DK.AKT_PDF}" download data-goal="akt_obrazets">'
+    '<span class="btn-t">Образец заполнения (PDF)</span></a>'
+    f'<a class="btn btn-o" href="{DK.AKT_BLANK}" download data-goal="akt_shablon"><span class="btn-t">Бланк акта (PDF)</span></a></div>\n'
+    '      </div>\n'
+    '    </div>')
+
+
+def dk_groups():
+    out = []
+    for gid, n, title, _ in DK.GROUPS:
+        rows = [rw for rw in DK.ROWS if rw['g'] == gid]
+        assert rows, gid
+        html = [f'    <div class="dk-g" id="{gid}">',
+                f'    <h3 class="dk-g-h"><span class="dk-n">{n}</span>{title}</h3>']
+        if gid == 'produktsiya':
+            html.append('    <p class="dk-g-p">Это не наша услуга — группа нужна для полноты папки на пищевых объектах, '
+                        'в школах и салонах.</p>')
+        html += ['    <table class="d-table nb-tbl dk-tbl">',
+                 '      <thead><tr><th scope="col">Документ</th><th scope="col">Кто готовит</th><th scope="col">Основание</th>'
+                 '<th scope="col">Образец или услуга</th></tr></thead>',
+                 '      <tbody>'] + [dk_row(rw) for rw in rows] + ['      </tbody>', '    </table>']
+        if gid == 'akty':
+            html.append(AKT_CARD)
+        html.append('    </div>')
+        out.append('\n'.join(html))
+    ids = [rw['id'] for rw in DK.ROWS]
+    assert len(ids) == len(set(ids)), 'повторяются id строк перечня'
+    for rw in DK.ROWS:
+        assert rw['obj'] == DK.ALL or all(o in OBJ_LABEL for o in rw['obj']), rw['id']
+    return '\n'.join(out)
+
+
+def dk_objects():
+    rows = []
+    for code, lab, _, _ in DK.OBJECTS:
+        form, url, qn, cat, add = DK.KITS[code]
+        if url:
+            sheet = f'<a href="{url}" target="_blank" rel="noopener">{form}</a>' + (f'<br>вопросы о вредителях: <b class="nb-val">{qn}</b>' if qn else '')
+        else:
+            sheet = form[0].upper() + form[1:]
+        extra = (f' Раздел официального перечня — «{cat}».' if cat else '')
+        rows.append(f'        <tr id="o-{code}" data-obekt="{code}"><td data-l="Объект"><b>{lab}</b>'
+                    f'<a class="dk-go" href="?obekt={code}#papka">Собрать папку →</a></td>'
+                    f'<td data-l="Проверочный лист">{sheet}</td><td data-l="Что добавить">{add}{extra}</td></tr>')
+    return ('    <table class="d-table nb-tbl dk-obj">\n'
+            '      <thead><tr><th scope="col">Объект</th><th scope="col">Проверочный лист</th><th scope="col">Что добавить к общему списку</th></tr></thead>\n'
+            '      <tbody>\n' + '\n'.join(rows) + '\n      </tbody>\n    </table>')
+
+
+def dk_js(root):
+    import subprocess
+    src = (HERE / 'dokumenty.js').read_text(encoding='utf-8').replace('__ROOT__', root).replace('__V__', SEARCH_V)
+    try:
+        r = subprocess.run(['npx', '--yes', 'esbuild@0.24.2', '--minify', '--target=es2015', '--charset=utf8', '--loader=js'],
+                           input=src, capture_output=True, text=True, cwd=ROOT, timeout=120)
+        if r.returncode == 0 and r.stdout.strip():
+            return '<script>/* Документы для Роспотребнадзора: сборщик папки, поиск по перечню (tools/normativnaya-baza/dokumenty.js) */\n' + r.stdout.strip() + '</script>\n'
+    except Exception:
+        pass
+    sys.exit('esbuild: не удалось сжать dokumenty.js')
 
 
 def build(p, tpl, icons):
@@ -422,10 +576,12 @@ def build(p, tpl, icons):
     assert 'food-hero' not in head and 'og:image" content="' + og_img in head
     css = tpl[tpl.index('<style>') + 7:tpl.index('</style>')]
     css += '\n' + (HERE / 'page.css').read_text(encoding='utf-8').strip()
+    if p.get('css'):
+        css += '\n' + (HERE / p['css']).read_text(encoding='utf-8').strip()
 
     # ---------------- шапка, меню (общее меню потом пересобирает tools/menu/apply_menu.py)
     top = tpl[tpl.index('</head>'):tpl.index('<main id="main"')]
-    top = top.replace('<body class="d-page">', '<body class="d-page nb-page">', 1)
+    top = top.replace('<body class="d-page">', '<body class="d-page nb-page' + (' ' + p['body_cls'] if p.get('body_cls') else '') + '">', 1)
     assert 'nb-page' in top
 
     # ---------------- подвал, плавающие кнопки, скрипты
@@ -447,6 +603,10 @@ def build(p, tpl, icons):
     main = main.replace('<!--FORM_FIELDS-->', form_fields(p))
     main = re.sub(r'<!--OBJ:([a-z0-9-]+):([^>]*?)-->', obj_link('@/'), main)
     main = main.replace('<!--INDLINKS-->', ind_links('@/'))
+    if p['src'] == 'dokumenty.html':
+        main = (main.replace('<!--DK_SHORT-->', dk_short()).replace('<!--DK_TYPES-->', dk_types())
+                .replace('<!--DK_GROUPS-->', dk_groups()).replace('<!--DK_OBJECTS-->', dk_objects())
+                .replace('href="CHECKLIST_PDF"', f'href="{DK.CHECKLIST_PDF}"'))
     main = typeset(main)
     main = main.replace('href="LICENSE_URL"', f'href="{LICENSE_URL}"')
     main = re.sub(r'<!--ICON:([a-z-]+)-->', lambda m: icons[m.group(1)], main)
@@ -456,8 +616,9 @@ def build(p, tpl, icons):
     assert '<!--' not in main.replace('<!-- ', ''), 'остались метки в ' + p['src']
     assert 'LICENSE_URL' not in main
 
+    extra_js = dk_js(root) if p.get('js') else ''
     html = (head + '<style>' + css + '</style>\n' + json_ld(p).replace('"@/', '"' + root) + '\n' + top + main + bottom
-            + page_js + '\n' + loader + form_js(p) + '</body>\n</html>\n')
+            + page_js + '\n' + loader + form_js(p) + extra_js + '</body>\n</html>\n')
     out = ROOT / p['out']
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding='utf-8')

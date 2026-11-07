@@ -116,6 +116,7 @@ URL = {
     'san': 'sanitarnyy-audit/',
     'dezinf': 'dezinfektsiya/',
     'nb': 'normativnaya-baza/', 'pl': 'normativnaya-baza/proverochnye-listy/',
+    'doc': 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/',
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -155,6 +156,8 @@ CARD = {
            'Действующие документы 2026 года, периодичность обследований, лицензия исполнителя и отменённые СП и СанПиН.'),
     'pl': ('Разбор', 'Проверочные листы Роспотребнадзора 2026',
            'Вопросы о насекомых и грызунах по приказам № 578 и № 580 — по видам объектов и с документами для ответа.'),
+    'doc': ('Перечень', 'Документы для Роспотребнадзора',
+            'Что должно быть в папке к проверке: восемь групп документов, кто их готовит, и сборщик папки для 14 типов объектов.'),
 }
 
 STRIP_LABELS = {}
@@ -327,7 +330,7 @@ PAGES = {
             ('lucide-ban', 'Отменённые документы', '— СП 3.5.3.3223-14 и другие'),
             ('lucide-notebook-pen', 'Образцы', 'программы, журнала и договора'),
         ])),
-    'normativnaya-baza/proverochnye-listy/index.html': dict(key='pl', root='../../', related=['nb', 'san', 'zhur', 'dogovor'], strip=(
+    'normativnaya-baza/proverochnye-listy/index.html': dict(key='pl', root='../../', related=['nb', 'doc', 'san', 'zhur'], strip=(
         'Коротко о проверочных листах', [
             ('lucide-clipboard-check', '37 форм', '— приказы № 578 и № 580'),
             ('lucide-list-checks', '20 форм', '— с вопросами о вредителях'),
@@ -337,6 +340,17 @@ PAGES = {
             ('lucide-shield-check', 'Исполнитель', '— организация с лицензией'),
             ('lucide-notebook-pen', 'Ответ', '— договор, акты, журнал'),
             ('lucide-search', 'Проверка шире листа', '— п. 2 приказов'),
+        ])),
+    'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html': dict(key='doc', root='../../', related=['pl', 'nb', 'san', 'zhur'], strip=(
+        'Коротко о документах для проверки', [
+            ('lucide-list-checks', '8 групп', '— от ППК до документов на продукцию'),
+            ('lucide-clipboard-check', '14 типов объектов', '— сборщик папки'),
+            ('lucide-file-signature', 'Договоры и акты', '— по дезинсекции и дератизации'),
+            ('lucide-flask-conical', 'Протоколы', '— смывы, воздух, вода, легионеллы'),
+            ('lucide-notebook-pen', 'Журналы', '— пест-контроль, общепит, уборки'),
+            ('lucide-shield-check', 'Лицензия исполнителя', '— с 1 марта 2025 года'),
+            ('lucide-clock', '10 рабочих дней', '— ответ на требование'),
+            ('lucide-file-badge', 'Чек-лист PDF', 'и образец акта'),
         ])),
     'sanitarnyy-audit/index.html': dict(key='san', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
         'Коротко о санитарном аудите', [
@@ -547,7 +561,8 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
              {'@type': 'ListItem', 'position': 3, 'url': SITE + 'materialy/zhurnal-pest-kontrolya/', 'name': 'Журнал пест-контроля: образец заполнения, бланк и шаблон'},
              {'@type': 'ListItem', 'position': 4, 'url': SITE + 'materialy/programma-proizvodstvennogo-kontrolya-haccp/', 'name': 'Программа производственного контроля по ХАССП: образец и раздел пест-контроля'},
              {'@type': 'ListItem', 'position': 5, 'url': SITE + 'normativnaya-baza/', 'name': 'Нормативная база: СанПиН и требования к дезинсекции и дератизации'},
-             {'@type': 'ListItem', 'position': 6, 'url': SITE + 'normativnaya-baza/proverochnye-listy/', 'name': 'Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации'}]},
+             {'@type': 'ListItem', 'position': 6, 'url': SITE + 'normativnaya-baza/proverochnye-listy/', 'name': 'Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации'},
+             {'@type': 'ListItem', 'position': 7, 'url': SITE + 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', 'name': 'Документы для Роспотребнадзора: полный перечень для проверки'}]},
          'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE, 'telephone': '+7-495-104-35-70', 'email': 'b2b@pestcontrol-center.ru'}},
     ]}, ensure_ascii=False) + '</script>'
 
@@ -640,6 +655,34 @@ def page_specific(rel, s):
     return s
 
 
+# «Документы для Роспотребнадзора» (с 07.11.2026) — в конце блока о документах: на отраслевых страницах сборщик папки
+# открывается сразу с нужным типом объекта (?obekt=…). (блок, подпись строки, параметры адреса, текст ссылки)
+DK_PAGE = 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/'
+DK_MORE = {
+    'restorany-i-kafe/index.html': ('dokumenty', 'Вся папка к проверке', '?obekt=restorany#papka', 'Документы для Роспотребнадзора: ресторан или кафе'),
+    'magaziny-i-torgovye-seti/index.html': ('dokumenty', 'Вся папка к проверке', '?obekt=magaziny#papka', 'Документы для Роспотребнадзора: магазин продуктов'),
+    'pishchevoe-proizvodstvo/index.html': ('dokumenty', 'Вся папка к проверке', '?obekt=pishchevoe#papka', 'Документы для Роспотребнадзора: пищевое производство'),
+    'sklady-i-logistika/index.html': ('dokumenty', 'Вся папка к проверке', '?obekt=sklady#papka', 'Документы для Роспотребнадзора: склад продуктов'),
+    'gostinitsy/index.html': ('dokumenty', 'Вся папка к проверке', '?obekt=gostinitsy#papka', 'Документы для Роспотребнадзора: гостиница'),
+    'farmatsevticheskie-proizvodstva/index.html': ('dokumenty', 'Вся папка к проверке', '?obekt=farma#papka', 'Документы для Роспотребнадзора: фармпроизводство'),
+    'sanitarnyy-audit/index.html': ('proverki', 'К проверке', '', 'Какие документы подготовить для Роспотребнадзора'),
+    'dezinfektsiya/index.html': ('dokumenty', 'Вся папка к проверке', '', 'Документы для Роспотребнадзора: полный перечень'),
+    'ochistka-dezinfektsiya-ventilyatsii/index.html': ('dokumenty', 'Вся папка к проверке', '', 'Документы для Роспотребнадзора: полный перечень'),
+}
+
+
+def dk_more(rel, s, root):
+    if rel not in DK_MORE or 'data-more="dk"' in s:
+        return s
+    sid, label, q, text = DK_MORE[rel]
+    i = s.find(f' id="{sid}"')
+    j = s.find('</section>', i)
+    k = s.rfind('\n  </div>', i, j)
+    assert i > 0 and k > i, rel + ': нет блока ' + sid
+    html = more_html(label, [(root + DK_PAGE + q, text)]).replace('<nav class="more"', '<nav class="more" data-more="dk"', 1)
+    return s[:k] + html + s[k:]
+
+
 def process_inner(rel, cfg):
     f = ROOT / rel
     s = f.read_text(encoding='utf-8')
@@ -659,6 +702,7 @@ def process_inner(rel, cfg):
         m = re.search(r'\n(?:<!-- =+[^\n]*-->\n)?<section class="[^"]*" id="voprosy">', s) or re.search(r'\n(?:<!-- =+[^\n]*-->\n)?<section class="cta[^"]*" id="zayavka">', s)
         assert m, rel + ': некуда вставить «Смотрите также»'
         s = s[:m.start()] + '\n' + block + s[m.start():]
+    s = dk_more(rel, s, root)
     # разметка анимаций
     ed = htmldom.Editor(s)
     main = next(n for n in ed.root.iter() if n.tag == 'main')
@@ -756,7 +800,8 @@ def process_home():
         ('podhod', more_html('Подробнее', [('materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'Пест-менеджмент или разовая обработка')])),
         ('dokumenty', more_html('Образцы документов', [('materialy/programma-pest-kontrolya/', 'Программа пест-контроля'),
                                                        ('materialy/zhurnal-pest-kontrolya/', 'Журнал пест-контроля'),
-                                                       ('dogovor-deratizatsiya-dezinsektsiya/', 'Договор на обслуживание')])),
+                                                       ('dogovor-deratizatsiya-dezinsektsiya/', 'Договор на обслуживание'),
+                                                       ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', 'Полный перечень для Роспотребнадзора')])),
         ('vrediteli', more_html('Подробнее', [('deratizatsiya/', 'Дератизация для организаций'), ('dezinsektsiya/', 'Дезинсекция для организаций')])),
         ('usloviya', more_html('Условия', [('dogovor-deratizatsiya-dezinsektsiya/', 'Договор на дератизацию и дезинсекцию')])),
     ]
@@ -770,6 +815,12 @@ def process_home():
         k = s.rfind('\n  </div>', i, j)  # закрытие .wrap
         assert k > i, sid
         s = s[:k] + html + s[k:]
+    # блок «Документы для проверок»: ссылка на полный перечень (страница «Документы для Роспотребнадзора», 07.11.2026);
+    # строка «Образцы документов» уже есть на главной, поэтому ссылку дописываем в неё
+    i = s.find('data-more="dokumenty"')
+    j = s.find('</nav>', i)
+    if i > 0 and 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/' not in s[i:j]:
+        s = s[:j] + f'<a href="normativnaya-baza/dokumenty-dlya-rospotrebnadzora/"><span>{tp("Полный перечень для Роспотребнадзора")}</span>{ARR}</a>' + s[j:]
     f.write_text(s, encoding='utf-8')
     print('ok index.html')
 

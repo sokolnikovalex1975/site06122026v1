@@ -7,12 +7,14 @@
   0. tools/gostinitsy/build_page.py — страница «Пест-контроль гостиниц и отелей» из своих исходников;
      tools/sanitarnyy-audit/build_page.py — страница «Санитарный аудит (СЭС-аудит)» из своих исходников;
      tools/dezinfektsiya/build_page.py — страница «Дезинфекция для организаций» из своих исходников;
-     tools/normativnaya-baza/build_pages.py — раздел «Нормативная база» (хаб и «Проверочные листы 2026»);
+     tools/normativnaya-baza/build_pages.py — раздел «Нормативная база» (хаб, «Проверочные листы 2026»,
+       «Документы для Роспотребнадзора»);
   1. tools/site/unify.py        — анимации и заголовки в стиле главной, бегущая строка, «Смотрите также», ссылки «Подробнее»;
   2. tools/site/legal_pages.py  — шапка и подвал сайта на страницах политики и согласия;
   3. tools/menu/apply_menu.py   — одинаковые шапка, мобильное меню и подвал на всех страницах;
      tools/site/mobile_crumbs.py — хлебные крошки на телефоне (до 900 px) скрыты на всех страницах;
   4. tools/build.py             — сжатие app.js в app.min.js и встраивание style.css в главную;
+     tools/search/build_index.py — поиск по сайту: search-index.json из готовых страниц и search.min.js;
   5. server/sitemap.xml         — все страницы сайта для поисковиков.
 
 Счётчики (Метрика, UIS, Radist) в репозитории не вставляются — они в server/counters.html
@@ -34,6 +36,7 @@ SITEMAP = [  # адрес, приоритет
     ('materialy/zhurnal-pest-kontrolya/', '0.7'), ('materialy/pest-menedzhment-ili-razovaya-obrabotka/', '0.7'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/', '0.7'),
     ('normativnaya-baza/', '0.7'), ('normativnaya-baza/proverochnye-listy/', '0.7'),
+    ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', '0.7'),
 ]
 
 
@@ -54,6 +57,7 @@ def main():
     run('tools/menu/apply_menu.py')
     run('tools/site/mobile_crumbs.py')  # хлебные крошки на телефоне не показываются (правило владельца)
     run('tools/build.py')
+    run('tools/search/build_index.py')  # поиск по сайту: индекс из готовых страниц (после меню и разметки)
     today = datetime.date.today().isoformat()
     urls = ''.join(f'  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{today}</lastmod>\n    <priority>{p}</priority>\n  </url>\n' for u, p in SITEMAP)
     (ROOT / 'server' / 'sitemap.xml').write_text(

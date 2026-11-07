@@ -61,6 +61,10 @@ footer .l-op p{max-width:none;font-size:8px;line-height:1.5;color:var(--t3);bord
 @media (min-width:761px){
   .l-doc a.u{white-space:nowrap}
 }
+/* «конфиденциальности» в заголовке не помещалось в строку на 320–340 px */
+@media (max-width:400px){
+  .l-doc h1{font-size:9vw}
+}
 @media print{
   .l-op p{color:#333}
   .l-card,.l-box{background:none;border-color:#ccc}
