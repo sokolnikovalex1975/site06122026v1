@@ -2,7 +2,8 @@
 """Общее меню сайта site06122026v1 (06.11.2026): шапка, мобильное меню и подвал на всех страницах.
 
     Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
-    (в «Услугах» с 06.11.2026 — очистка и дезинфекция вентиляции)
+    (в «Услугах» с 06.11.2026 — очистка и дезинфекция вентиляции, с 07.11.2026 — разработка ППК по ХАССП:
+    страница /materialy/programma-proizvodstvennogo-kontrolya-haccp/ стала страницей услуги и из «Материалов» перенесена в «Услуги»)
 
 В меню — только готовые страницы сайта. Отрасли без своей страницы ведут к карточке отрасли на главной
 (якоря #otrasl-…), у пищевых и фармацевтических производств, магазинов и торговых сетей, гостиниц — свои страницы. «Контакты» — только в подвале.
@@ -27,6 +28,7 @@ USLUGI = [
     ('dezinsektsiya', 'Дезинсекция для организаций'),
     ('sanitarnyy-audit', 'Санитарный аудит <span class="nw">(СЭС-аудит)</span>'),
     ('ochistka-dezinfektsiya-ventilyatsii', 'Очистка и дезинфекция вентиляции'),
+    ('materialy/programma-proizvodstvennogo-kontrolya-haccp', 'Разработка ППК по ХАССП'),
     ('dogovor-deratizatsiya-dezinsektsiya', 'Договор на обслуживание'),
 ]
 # Отрасли — в порядке блока «Отрасли» на главной. Адрес со знаком # — карточка отрасли на главной (своей страницы пока нет)
@@ -42,12 +44,12 @@ DOGOVOR = 'dogovor-deratizatsiya-dezinsektsiya'
 DERAT = 'deratizatsiya'
 VENT = 'ochistka-dezinfektsiya-ventilyatsii'
 SAN = 'sanitarnyy-audit'
+PPK = 'materialy/programma-proizvodstvennogo-kontrolya-haccp'  # страница услуги, хотя адрес — в разделе «Материалы»
 MATERIALS = [  # слова через дефис не переносим (класс nw, как в остальных текстах сайта)
     ('normativnaya-baza', 'Нормативная база'),  # раздел «Нормативная база» (tools/normativnaya-baza)
     ('materialy/programma-pest-kontrolya', 'Программа <span class="nw">пест-контроля</span>'),
     ('materialy/zhurnal-pest-kontrolya', 'Журнал <span class="nw">пест-контроля</span>'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka', '<span class="nw">Пест-менеджмент</span> или разовая обработка'),
-    ('materialy/programma-proizvodstvennogo-kontrolya-haccp', 'Программа производственного контроля по ХАССП'),
 ]
 FOOTER_MAT_EXTRA = {  # в подвале под пунктом — ещё одна ссылка (в шапке её нет)
     'normativnaya-baza': ('normativnaya-baza/proverochnye-listy', 'Проверочные листы 2026'),
@@ -119,9 +121,9 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', VENT, SAN)
+    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', VENT, SAN, PPK)
     in_ind = any(s == cur for s, _ in INDUSTRIES)
-    in_mat = cur.startswith('materialy') or cur.startswith('normativnaya-baza')
+    in_mat = (cur.startswith('materialy') or cur.startswith('normativnaya-baza')) and cur != PPK
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
     usl_items = ''.join(page_link(root, cur, s, one(t) + ARR) for s, t in USLUGI)
     usl_items += anchor(root, 'podhod', '<span>Пест-контроль по системе IPM</span>' + ARR, 'nav-dd-all')

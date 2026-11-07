@@ -12,6 +12,16 @@
 .k-ref{display:block;font-size:13px;line-height:1.5;color:var(--t3)}
 .k-facts .k-ref{padding-top:5px}
 
+/* Что входит в разработку ППК: 8 карточек */
+.k-scope{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.k-sc{display:flex;flex-direction:column;gap:10px}
+.k-sc h3{margin:0}
+.k-sc p{font-size:15px}
+.k-sc-ref{font-size:13px;line-height:1.45;letter-spacing:.02em;color:var(--acc)}
+.k-scope+.k-callout{margin-top:16px}
+@media (max-width:1180px){.k-scope{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.k-scope{grid-template-columns:minmax(0,1fr);gap:12px}}
+
 /* Полный образец ППК (компонент .p-obr из «Программы пест-контроля») */
 .k-obr .p-obr-list li{grid-template-columns:78px minmax(0,1fr)}
 .k-obr .p-obr-list li b{white-space:nowrap}

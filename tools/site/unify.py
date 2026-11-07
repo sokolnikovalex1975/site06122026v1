@@ -145,8 +145,8 @@ CARD = {
               'Контуры защиты до чистых зон, без яда в помещениях, тренды и документы для GMP-инспекции.'),
     'sklady': ('Отрасль', 'Пест-контроль для складов и логистики',
                'Схема точек по зонам склада, визиты без остановки приёмки и отгрузки, журнал и отчёт для аудитов.'),
-    'ppk': ('Материал', 'Программа производственного контроля по ХАССП',
-            'Полный образец ППК для пищевого производства (PDF, 27 страниц) и раздел о дезинсекции и дератизации по правилам 2026 года.'),
+    'ppk': ('Услуга', 'Разработка ППК по ХАССП',
+            'Программа производственного контроля под ваш объект: анализ опасностей, ККТ, лабораторный контроль, журналы. Образец в PDF.'),
     'san': ('Услуга', 'Санитарный аудит (СЭС-аудит)',
             'Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.'),
     'dezinf': ('Услуга', 'Дезинфекция для организаций',
@@ -306,15 +306,15 @@ PAGES = {
             ('lucide-crosshair', 'ISO 22000', 'и FSSC 22000'),
         ])),
     'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html': dict(key='ppk', root='../../', related=['prog', 'zhur', 'food', 'dogovor'], strip=(
-        'Коротко о программе производственного контроля', [
-            ('lucide-file-signature', 'ППК', '— в произвольной форме, утверждает руководитель'),
-            ('lucide-shield-check', 'Дезинсекция и дератизация', '— процедура ХАССП'),
-            ('lucide-file-badge', 'ТР ТС 021/2011', 'ст. 10 и 11'),
-            ('lucide-scan-search', 'Насекомые', '— обследования не реже 2 раз в месяц'),
-            ('lucide-activity', 'Грызуны', '— ежемесячная оценка'),
+        'Коротко о разработке программы производственного контроля', [
+            ('lucide-file-signature', 'Разработка ППК', '— под ваш объект'),
+            ('lucide-scan-search', 'Выезд и обследование', '— бесплатно'),
+            ('lucide-file-badge', 'ТР ТС 021/2011', '— процедуры ХАССП'),
+            ('lucide-list-checks', 'ККТ', 'и программы предварительных мероприятий'),
+            ('lucide-flask-conical', 'Лабораторный контроль', '— точки и периодичность'),
+            ('lucide-shield-check', 'Дезинсекция и дератизация', '— по лицензии'),
             ('lucide-clipboard-check', 'С 1 сентября 2026', '— новые санитарные правила'),
-            ('lucide-notebook-pen', 'Образец раздела', 'для ППК'),
-            ('lucide-list-checks', 'Подтверждение', '— договор и акты'),
+            ('lucide-notebook-pen', 'Формы журналов', 'и план-график'),
         ])),    # раздел «Нормативная база» (tools/normativnaya-baza): у хаба свой блок «Разборы и образцы» вместо «Смотрите также»
     'normativnaya-baza/index.html': dict(key='nb', root='../', strip=(
         'Коротко о нормативной базе', [
@@ -545,7 +545,7 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
              {'@type': 'ListItem', 'position': 1, 'url': SITE + 'materialy/programma-pest-kontrolya/', 'name': 'Программа пест-контроля на предприятии: образец PDF, шаблон Word и пример заполнения'},
              {'@type': 'ListItem', 'position': 2, 'url': SITE + 'materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'name': 'Пест-менеджмент или разовая обработка'},
              {'@type': 'ListItem', 'position': 3, 'url': SITE + 'materialy/zhurnal-pest-kontrolya/', 'name': 'Журнал пест-контроля: образец заполнения, бланк и шаблон'},
-             {'@type': 'ListItem', 'position': 4, 'url': SITE + 'materialy/programma-proizvodstvennogo-kontrolya-haccp/', 'name': 'Программа производственного контроля по ХАССП: образец и раздел пест-контроля'},
+             {'@type': 'ListItem', 'position': 4, 'url': SITE + 'materialy/programma-proizvodstvennogo-kontrolya-haccp/', 'name': 'Разработка программы производственного контроля по ХАССП и образец ППК'},
              {'@type': 'ListItem', 'position': 5, 'url': SITE + 'normativnaya-baza/', 'name': 'Нормативная база: СанПиН и требования к дезинсекции и дератизации'},
              {'@type': 'ListItem', 'position': 6, 'url': SITE + 'normativnaya-baza/proverochnye-listy/', 'name': 'Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации'}]},
          'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE, 'telephone': '+7-495-104-35-70', 'email': 'b2b@pestcontrol-center.ru'}},
