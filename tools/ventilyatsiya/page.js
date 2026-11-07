@@ -66,3 +66,52 @@
     },true);
   }
 })();
+/* Фонарь на фото первого экрана — как на главной: следует за мышью, без движения мыши плавно ходит сам,
+   на сенсорных экранах ходит сам (30 кадров в секунду). Не считаем, пока первый экран не виден или вкладка скрыта.
+   При «уменьшить движение» фонаря нет — фото остаётся как было */
+(function(){
+  var hero=document.getElementById('hero'),lit=document.getElementById('vLit'),mm=window.matchMedia;
+  if(!hero||!lit||!mm||mm('(prefers-reduced-motion: reduce)').matches)return;
+  var media=lit.parentNode,fine=mm('(hover: hover) and (pointer: fine)').matches,small=mm('(max-width:860px)').matches;
+  lit.style.setProperty('--sr',small?'150px':'clamp(240px, 21vw, 400px)');
+  var cx=small?.5:.74,ax=small?.24:.13,cy=small?.5:.47,ay=small?.2:.17;
+  var sx=cx,sy=cy,tx=cx,ty=cy,last=-1e9,vis=true,on=false,raf=0,lt=0;
+  var frame=function(now){
+    raf=0;
+    if(!on||!vis||document.hidden)return;
+    var dt=now-lt;
+    if(!fine&&dt<30){raf=requestAnimationFrame(frame);return;}
+    lt=now;
+    if(now-last>2600){var t=now/1000;tx=cx+ax*Math.sin(t*.33);ty=cy+ay*Math.sin(t*.47+1.3);}
+    var k=1-Math.pow(.94,Math.min(dt,100)/16.67);
+    sx+=(tx-sx)*k;sy+=(ty-sy)*k;
+    lit.style.setProperty('--sx',(sx*100).toFixed(2)+'%');
+    lit.style.setProperty('--sy',(sy*100).toFixed(2)+'%');
+    raf=requestAnimationFrame(frame);
+  };
+  var kick=function(){if(!raf&&on&&vis&&!document.hidden){lt=performance.now();raf=requestAnimationFrame(frame);}};
+  hero.addEventListener('pointermove',function(e){
+    if(e.pointerType!=='mouse')return;
+    var r=media.getBoundingClientRect();if(!r.width||!r.height)return;
+    tx=(e.clientX-r.left)/r.width;ty=(e.clientY-r.top)/r.height;last=performance.now();kick();
+  },{passive:true});
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;kick();}).observe(hero);
+  document.addEventListener('visibilitychange',kick);
+  var start=function(){if(on)return;on=true;hero.classList.add('v-lit-on');kick();};
+  /* старт вместе со входом первого экрана (общий скрипт ставит класс in на надзаголовок); страховка — через 5 с */
+  var eb=hero.querySelector('.eyebrow');
+  if(eb&&'MutationObserver' in window){
+    if(eb.classList.contains('in'))start();
+    else{var mo=new MutationObserver(function(){if(eb.classList.contains('in')){mo.disconnect();start();}});mo.observe(eb,{attributes:true,attributeFilter:['class']});}
+  }
+  setTimeout(start,5000);
+})();
+/* подсветка рамки информационных карточек за курсором — как у карточек .card на главной */
+(function(){
+  if(!window.matchMedia||!matchMedia('(hover: hover) and (pointer: fine)').matches)return;
+  document.addEventListener('pointermove',function(e){
+    var c=e.target.closest&&e.target.closest('.d-card');if(!c)return;
+    var r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  },{passive:true});
+})();
