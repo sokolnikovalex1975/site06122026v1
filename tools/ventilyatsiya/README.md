@@ -48,6 +48,9 @@ python3 tools/ventilyatsiya/docs/build_vent_docs.py /tmp/ventout --site   # Word
 
 - Публикуются только PDF (Word не выкладывается); на каждой странице — шапка с телефоном и сайтом и водяной знак
   «пестконтроль-центр.рф» (tools/docs_brand). Бланки без записей; печать исполнителя («М. П.») во всех актах.
+- Водяной знак — поверх содержимого (с 08.11.2026): в Word подложки нет, после LibreOffice знак накладывается на каждую страницу
+  готового PDF (`Brand.stamp`, PyMuPDF `show_pdf_page(overlay=True)`), поэтому заливка ячеек и плашек его не закрывает.
+  Проверка: `python3 tools/docs_brand/check_watermark.py ochistka-dezinfektsiya-ventilyatsii/*.pdf`.
 - PDF: `ochistka-dezinfektsiya-ventilyatsii/vnt-0N-*.pdf` и `dokumenty-ochistka-dezinfektsiya-ventilyatsii.pdf`;
   превью: `img/vnt-0N-p1-120.webp`, `-240.webp` (альбомный лист — левая часть в пропорции A4), `img/vnt-komplekt-p1-360/720.webp`,
   `img/vnt-02-p1-360/720.webp`.

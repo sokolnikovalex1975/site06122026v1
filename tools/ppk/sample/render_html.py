@@ -443,7 +443,7 @@ body { margin: 0; font-family: 'Inter', sans-serif; font-size: 8.5pt; line-heigh
 .v { color: #2a3ab0; }
 b { font-weight: 700; }
 p { margin: 0 0 5pt; }
-.wm { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-45deg); z-index: -1; pointer-events: none; }
+.wm { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-45deg); z-index: 30; pointer-events: none; }  /* поверх содержимого */
 
 /* обложка */
 .cover { height: 261mm; display: flex; flex-direction: column; break-after: page; position: relative; }
