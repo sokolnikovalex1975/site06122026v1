@@ -28,6 +28,7 @@ USLUGI = [
     ('dezinsektsiya', 'Дезинсекция для организаций'),
     ('sanitarnyy-audit', 'Санитарный аудит <span class="nw">(СЭС-аудит)</span>'),
     ('razrabotka-ppk', 'Разработка ППК'),  # с 08.11.2026 — ППК без ХАССП и по ХАССП на одной странице /razrabotka-ppk/
+    ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora', 'Документы для Роспотребнадзора'),
     ('ochistka-dezinfektsiya-ventilyatsii', 'Очистка и дезинфекция вентиляции'),
     ('dogovor-deratizatsiya-dezinsektsiya', 'Договор на обслуживание'),
 ]

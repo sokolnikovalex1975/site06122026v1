@@ -648,6 +648,13 @@ def build(p, tpl, icons):
     page_js = '<script>\n' + pv.group(1) + '\n</script>'
     li = tpl.index('<script>\n  /* скрипты анимаций')
     loader = tpl[li:tpl.index('</script>', li) + len('</script>')] + '\n'
+    if p.get('dok'):
+        # Long reference tables need immediate readable content, not hundreds
+        # of ScrollTrigger instances or word-splitting on the main thread.
+        head = head.replace('<html lang="ru">', '<html lang="ru" class="anim-fail">', 1)
+        loader = re.sub(
+            r"\['vendor/gsap\.min\.js', 'vendor/ScrollTrigger\.min\.js', 'vendor/lenis\.min\.js', ('app\.min\.js[^']*')\]",
+            r"[\1]", loader, count=1)
     contacts = cut(tpl, '      <div class="cta-contacts"', '    </div>\n    <form', after=False).replace(' data-fade', '')
     if root != '../':
         head, top, bottom, page_js, loader, contacts = (deeper(x) for x in (head, top, bottom, page_js, loader, contacts))
