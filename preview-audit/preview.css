@@ -50,6 +50,8 @@ html { scroll-padding-top: 120px; }
 .report > .mk { max-width: calc(100% - 32px); }
 .form fieldset { border: 0; min-width: 0; padding: 0; margin: 0; }
 .field label { display: block; margin: 0 0 7px; color: #d4d4dc; font-size: 13px; line-height: 1.4; }
+.required-mark { color: #b7baff; }
+.required-note { margin: 0 0 18px; color: #d4d4dc; font-size: 13px; line-height: 1.4; }
 .field input::placeholder, .field textarea::placeholder { color: #a6a6b1; opacity: 1; }
 .field input, .field textarea, .field select { font-weight: 400; }
 .consent { margin-top: 22px; }

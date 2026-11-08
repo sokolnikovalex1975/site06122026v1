@@ -34,7 +34,7 @@
     consent.setAttribute('aria-invalid', String(!consent.checked));
     result.classList.remove('ok');
     if (first) {
-      result.textContent = 'Проверьте имя, телефон и тип объекта. Заполненные поля остаются только в этой вкладке.';
+      result.textContent = 'Проверьте отмеченные поля. Заполненные поля остаются только в этой вкладке.';
       first.focus();
       return;
     }
