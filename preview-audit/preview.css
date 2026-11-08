@@ -1,0 +1,127 @@
+/* Только тестовая главная. Рабочие стили и production-интеграции не меняются. */
+:root { --preview-bar: 34px; --t2: #b4b4bd; --t3: #a3a3af; }
+body { padding-top: var(--preview-bar); }
+html { scroll-padding-top: 120px; }
+.hdr { top: var(--preview-bar); }
+.progress { top: var(--preview-bar); }
+.preview-toolbar {
+  position: fixed; inset: 0 0 auto; height: var(--preview-bar); z-index: 10000;
+  display: flex; align-items: center; justify-content: center; gap: 24px;
+  padding: 0 16px; background: #171627; border-bottom: 1px solid #7c86ff40;
+  font: 400 12px/1.2 Inter, sans-serif; color: #deddf5;
+}
+.preview-toolbar b { font-weight: 500; }
+.preview-toolbar button {
+  border: 0; border-bottom: 1px solid #aaa9d7; background: none; padding: 2px 0;
+  font: inherit; cursor: pointer; color: #fff;
+}
+.preview-toolbar button[aria-pressed="true"] { color: #fdc700; border-color: #fdc700; }
+.mk { display: none !important; }
+.show-review-notes .mk { display: inline-flex !important; }
+.intro, .cursor { display: none !important; }
+/* Первичная читаемость не зависит от анимационного движка. */
+[data-h], [data-fade], [data-eyebrow], [data-split], .sw, [data-group] > * {
+  opacity: 1; filter: none;
+}
+.hero h1 .ln { overflow: visible; }
+.hero .wrap { min-width: 0; }
+.hero .wrap > * { min-width: 0; max-width: 100%; }
+.hero-trust { margin-top: 28px; }
+.ht-item { flex: 1 1 260px; }
+.show-review-notes .hero-trust { margin-top: 46px; }
+.trust-s { padding-top: clamp(64px, 6vw, 96px); }
+.trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tr-main { grid-row: span 1; }
+.tr-card { min-width: 0; }
+.tr-num { overflow-wrap: anywhere; }
+.tr-req { flex-wrap: wrap; }
+#usloviya { padding-top: 56px; }
+.pr-in .pr-h { margin-top: 0; }
+.show-review-notes .pr-in .pr-h { margin-top: 14px; }
+.price { margin-bottom: 20px; }
+.pr-from { border: 1px solid #7c86ff40; }
+.pr-from b { font-size: clamp(24px, 2vw, 34px); line-height: 1.15; }
+.preview-cases { padding: 0; margin: 20px 0 28px; }
+.preview-cases summary {
+  width: fit-content; cursor: pointer; padding: 12px 0;
+  color: #b7baff; font-size: 16px; font-weight: 400;
+}
+.preview-cases .cases { margin-top: 20px; }
+.report > .mk { max-width: calc(100% - 32px); }
+.form fieldset { border: 0; min-width: 0; padding: 0; margin: 0; }
+.field label { display: block; margin: 0 0 7px; color: #d4d4dc; font-size: 13px; line-height: 1.4; }
+.field input::placeholder, .field textarea::placeholder { color: #a6a6b1; opacity: 1; }
+.field input, .field textarea, .field select { font-weight: 400; }
+.consent { margin-top: 22px; }
+.show-review-notes .consent { margin-top: 44px; }
+.consent input { width: 22px; height: 22px; top: 0; left: 0; opacity: 0; margin: 0; }
+.consent input:checked + .cb { background: #615fff; border-color: #8d93ff; }
+.consent input:checked + .cb svg { opacity: 1; }
+.consent input:focus-visible + .cb { outline: 2px solid #fff; outline-offset: 3px; }
+.consent.invalid .cb { border-color: #ff6467; }
+.preview-form-result {
+  padding: 0; margin-top: 18px; font-size: 14px; line-height: 1.6;
+  color: #ffc6c6; white-space: pre-line;
+}
+.preview-form-result:empty { display: none; }
+.preview-form-result.ok { display: block; padding: 16px; color: #b1f4cd; background: #05df7212; border-radius: 12px; text-align: left; }
+.preview-reset { display: block; margin-top: 14px; border: 0; border-bottom: 1px solid #7c86ff; color: #bec1ff; font: inherit; font-size: 14px; background: none; cursor: pointer; }
+.preview-reset[hidden] { display: none; }
+.form fieldset:disabled { opacity: .65; }
+.form noscript { display: block; margin-top: 16px; font-size: 14px; line-height: 1.5; color: #fdc700; }
+footer .fb > span:first-child { max-width: 620px; line-height: 1.6; }
+.preview-msg-toggle { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .tr-card, .pr-col { transition: border-color .25s, background .25s, transform .25s; }
+  .tr-card:hover { transform: translateY(-3px); }
+}
+@media (max-width: 760px) {
+  .preview-toolbar { justify-content: space-between; gap: 8px; padding: 0 12px; font-size: 10px; }
+  .preview-toolbar-note { display: none; }
+  .hero { padding-top: 100px; padding-bottom: 64px; }
+  .hero p.lead { font-weight: 400; }
+  .hero-trust { gap: 8px; }
+  .ht-item { flex: none; padding: 12px; }
+  .ht-item b { font-size: 13px; }
+  .ht-item small { font-size: 11px; overflow-wrap: anywhere; }
+  .hero-ctas { gap: 12px; margin-top: 28px; }
+  .hero-note { font-size: 12px; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .tr-card { padding: 24px; }
+  .trust-s .head .sub-side { margin-top: 0; }
+  .trust-s { padding-top: 72px; padding-bottom: 20px; }
+  #usloviya { padding-top: 48px; }
+  .rp-list li { align-items: flex-start; }
+  .rp-list svg { margin-top: 2px; }
+  .price > .mk { left: 12px; font-size: 10px; }
+  .mk { max-width: calc(100% - 24px); white-space: normal; line-height: 1.25; }
+  .hero-trust > .mk { left: 0; max-width: 100%; }
+  .report { margin-top: 28px; }
+  .rp-meta { line-height: 1.5; }
+  .rp-t { font-size: 12px; }
+  .rp-t th { font-size: 10px; }
+  .rp-t td { padding: 10px 4px; }
+  .rp-note { font-size: 12px; }
+  .form { padding: 24px; }
+  .fab { bottom: 94px; right: 14px; }
+  .fab a { display: none; }
+  .fab.is-open a { display: flex; }
+  .preview-msg-toggle {
+    display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+    border: 1px solid #7c86ff66; background: #23223c; color: #fff;
+    box-shadow: 0 4px 20px #0006; cursor: pointer; order: 5;
+  }
+  .preview-msg-toggle svg { width: 20px; height: 20px; }
+  body.preview-at-form .fab { display: none; }
+  body.preview-at-form .mbar { display: none; }
+  .preview-cases summary { font-size: 14px; }
+}
+@media (max-width: 374px) {
+  .hero h1 { font-size: 32px; }
+  .hero-ctas .btn { font-size: 14px; gap: 10px; padding: 16px; }
+  .hero .badge { font-size: 9px; padding-left: 10px; padding-right: 10px; letter-spacing: .07em; }
+  .pr-col, .pr-calc { padding: 20px; }
+  .report { padding: 24px 14px; }
+  .rp-sheet { padding: 14px; }
+  .rp-t th { letter-spacing: 0; }
+}
