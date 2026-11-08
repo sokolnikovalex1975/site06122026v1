@@ -35,7 +35,7 @@ PAGES = [
     'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html',
 ]
 LEGAL = ['privacy/index.html', 'soglasie/index.html']
-STATIC = ['style.css', 'legal.css', 'app.min.js', 'vendor', 'fonts', 'img']
+STATIC = ['style.css', 'legal.css', 'app.min.js', 'search.min.js', 'search-index.json', 'vendor', 'fonts', 'img']
 FILES = ['*.pdf', '*.docx']  # образцы документов рядом со страницами
 SERVER = ['.htaccess', 'robots.txt', 'sitemap.xml']
 ROBOTS_RE = re.compile(r'<meta name="robots" content="noindex, nofollow">(?:<!--[^>]*-->)?\n?')

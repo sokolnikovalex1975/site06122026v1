@@ -18,6 +18,14 @@ import pathlib
 HERE = pathlib.Path(__file__).resolve().parent
 DATA = json.loads((HERE / 'data' / 'dokumenty.json').read_text(encoding='utf-8'))
 PDF = '@/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/chek-list-dokumentov-dlya-rospotrebnadzora.pdf'
+# образец и бланк акта (форма АПК-01, tools/akt/build_akt.py) — карточка под таблицей «Акты» и ссылки в строках 3.2 и 3.4
+AKT_PDF = '@/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/obrazets-akta-dezinsektsii-i-deratizatsii.pdf'
+AKT_BLANK = '@/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/blank-akta-dezinsektsii-i-deratizatsii.pdf'
+# ссылки сайта в графе «Образец или услуга», которых нет в выгрузке data/dokumenty.json (подставляются, только если графа пуста)
+LINK_EXTRA = {
+    '3.2': '<a href="#obrazets-akta">Образец акта</a>',
+    '3.4': '<a href="#obrazets-akta">Образец акта</a>',
+}
 
 # заголовки H2 разделов: акцент курсивом, как на остальных страницах; тексты H2 — из согласованного черновика
 H2 = {
@@ -62,7 +70,17 @@ AFTER = {
              '<li>средство, номер свидетельства о госрегистрации, концентрацию и способ применения;</li>'
              '<li>меры безопасности и когда можно вернуться в помещения;</li>'
              '<li>исполнителя, номер его лицензии, подписи исполнителя и представителя объекта.</li></ul>'
-             f'<p>В общепите время обработки особенно важно: во время дезинсекции и дератизации нельзя хранить и готовить продукцию, а распыляемые и рассыпаемые средства нельзя применять при посетителях и персонале (п. 45 <a href="{U_SANPIN4282}"{EXT}>СанПиН 2.3/2.4.4282-26</a>).</p></div>'),
+             f'<p>В общепите время обработки особенно важно: во время дезинсекции и дератизации нельзя хранить и готовить продукцию, а распыляемые и рассыпаемые средства нельзя применять при посетителях и персонале (п. 45 <a href="{U_SANPIN4282}"{EXT}>СанПиН 2.3/2.4.4282-26</a>).</p></div>'
+             # образец акта (с 08.11.2026): та же карточка, что у чек-листа PDF в блоке «Восемь групп»
+             '<div class="card dk-pdfcard dk-aktcard" id="obrazets-akta">'
+             f'<a class="dk-cover" href="{AKT_PDF}" download data-dl="akt" tabindex="-1" aria-hidden="true"><img src="@/img/akt-obrazets-p1-360.webp" '
+             'srcset="@/img/akt-obrazets-p1-360.webp 360w, @/img/akt-obrazets-p1-720.webp 720w" sizes="(max-width:760px) 64px, 132px" '
+             'width="360" height="509" alt="" loading="lazy" decoding="async"></a>'
+             '<div class="dk-pdfcard-t"><p class="dk-pdfcard-k">Образец акта · PDF, 2 листа</p>'
+             '<p>Так выглядит наш акт по каждому визиту: время работ, обследование по точкам контроля, средства с концентрацией и номером СГР, '
+             'условия обработки, контроль эффективности и рекомендации — всё из списка выше. Данные заказчика в образце скрыты, бланк — та же форма без записей.</p></div>'
+             f'<div class="dk-aktcard-b"><a class="btn btn-w btn-lg" href="{AKT_PDF}" download data-dl="akt"><span class="btn-t">Скачать образец</span></a>'
+             f'<a class="btn btn-o btn-lg" href="{AKT_BLANK}" download data-dl="akt-blank"><span class="btn-t">Бланк для печати</span></a></div></div>'),
     'protokoly': '<p class="nb-after">Смывы и пробы воздуха входят в наш <a href="@/sanitarnyy-audit/">санитарный аудит</a> — исследования выполняет аккредитованная лаборатория.</p>',
     'personal': f'<p class="nb-after">Порядок гигиенической подготовки могут изменить. Законопроект, внесённый в Госдуму 07.10.2026, предлагает проходить её при поступлении на работу и затем раз в 5 лет, с самостоятельной подготовкой и электронной оценкой. Если закон примут, изменения вступят в силу с 01.09.2027, а пока действует приказ № 229 (<a href="{U_GIG229}"{EXT}>ppt.ru</a>, <a href="{U_GIGPROEKT}"{EXT}>Техэксперт</a>).</p>',
     'ispolnitel': '<p class="nb-after">Попросите подрядчика передать эти документы вместе с договором: без них инспектор не увидит, кто и чем обрабатывал объект.</p>',
@@ -104,6 +122,8 @@ def pick_buttons():
 def table(g):
     rows = []
     for it in g['items']:
+        if not it['link_html'] and it['id'] in LINK_EXTRA:
+            it = dict(it, link_html=LINK_EXTRA[it['id']])
         num = it['id'] + (OURS if it['ours'] else '')
         doc = f'<b>{esc(it["title"])}</b>' + (f'<span class="dk-note">{esc(it["note"])}</span>' if it['note'] else '')
         rows.append(f'        <tr id="p{it["id"].replace(".", "-")}"><td data-l="№" class="dk-n">{num}</td><td data-l="Документ">{doc}</td>'

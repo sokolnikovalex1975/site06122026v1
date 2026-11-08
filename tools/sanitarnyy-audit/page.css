@@ -262,3 +262,7 @@
   .sa-page .f-hero .badge .b-full{display:none}
   .sa-page .f-hero .badge .b-mo{display:inline}
 }
+/* до 400 px штрафы в одну колонку: на 320–340 px суммы не помещались в половину карточки */
+@media (max-width:400px){
+.sa-fines tr{grid-template-columns:minmax(0,1fr)}
+}

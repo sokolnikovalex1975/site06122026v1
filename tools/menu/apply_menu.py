@@ -183,15 +183,84 @@ def sub1(pat, rep, s):
     return out
 
 
+# ---------------------------------------------------------------- поиск по сайту (tools/search)
+# Лупа в шапке на всех страницах; по первому нажатию (или клавише «/») загружаются search.min.js и search-index.json.
+# В <head> — только стили кнопки и загрузчик (около 1,5 КБ). Блок стоит перед <style data-fx> (tools/site/fx.py), если его нет —
+# перед <style id="m-crumbs">, иначе перед </head>: так его место одинаково в сборке и в файлах с сайта
+# (tools/deploy/patch-2026-11-08-poisk.py), хотя fx.py и mobile_crumbs.py переставляют свои блоки в конец <head>.
+SEARCH_V = '20261108'  # версия search.min.js и search-index.json — та же, что V в tools/search/build_index.py
+SRCH_BTN = ('<button class="srch-btn" type="button" data-srch aria-label="Поиск по сайту" aria-haspopup="dialog">'
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>'
+            '<path d="m20 20-3.6-3.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>')
+# Раскладка шапки с лупой (проверена на 320–2560 px по всем страницам, /home/user/qa/hdrfit2.mjs):
+# от 761 px лупа без круга стоит вплотную к телефону, мессенджеры в шапке скрыты — Max и Telegram остаются
+# в плавающих кнопках .fab справа внизу (на сайте шапка и раньше не вмещала их рядом с кнопкой на 1381–1800 px);
+# до 900 px «ПЕСТКОНТРОЛЬ» и «Центр» в две строки; на телефонах кнопки 44 → 40 → 38 px.
+SRCH_CSS = ('<style id="srch-st">/* лупа поиска в шапке и раскладка шапки с ней (tools/menu/apply_menu.py) */'
+            '.srch-btn{flex:none;width:44px;height:44px;padding:0;border-radius:50%;display:grid;place-items:center;'
+            'background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff;cursor:pointer;'
+            'transition:color .25s,border-color .3s,background .3s,transform .35s cubic-bezier(.16,1,.3,1)}'
+            '.srch-btn:hover{border-color:#7c86ff;background:rgba(97,95,255,.2);transform:translateY(-2px)}'
+            '.srch-btn:focus-visible{outline:2px solid #7c86ff;outline-offset:2px}'
+            '.srch-btn svg{width:18px;height:18px;display:block}'
+            '@media (min-width:761px){.hdr .wrap{gap:16px}.hdr .msg{display:none}'
+            '.srch-btn{width:38px;height:38px;background:none;border-color:transparent;color:var(--t2);margin-right:calc(4px - clamp(14px,2vw,40px))}'
+            '.srch-btn svg{width:20px;height:20px}'
+            '.srch-btn:hover{color:#fff;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);transform:none}}'
+            '@media (min-width:761px) and (max-width:1440px){.hdr-right{gap:18px}.srch-btn{margin-right:-14px}}'
+            '@media (min-width:761px) and (max-width:1000px){.hdr-right{gap:12px}.srch-btn{margin-right:-8px}}'
+            '@media (max-width:900px){.logo-txt{display:flex;flex-direction:column;align-items:flex-start}.logo-sub{margin:0}}'
+            '@media (max-width:760px){.hdr .wrap{gap:12px}.hdr-right{gap:8px}}'
+            '@media (max-width:400px){.hdr .wrap{gap:10px}.srch-btn{width:40px;height:40px}}'
+            '@media (max-width:360px){.hdr .wrap{gap:8px}.hdr-right{gap:6px}.srch-btn,.phone i,.burger{width:38px;height:38px}}'
+            '@media (max-width:340px){.logo-mark{display:none}.logo-sub{display:block}}</style>')
+SRCH_JS = ('<script id="srch-js">/* поиск по сайту: движок и индекс загружаются по первому нажатию на лупу или «/» (tools/search) */'
+           '(function(r,v){var d=document,ld=0,w=null;function go(o){if(window.PCSearch)return window.PCSearch.open(r,v,o);w=o;if(ld)return;ld=1;'
+           'var s=d.createElement("script");s.src=r+"search.min.js?v="+v;s.async=true;s.onload=function(){window.PCSearch&&window.PCSearch.open(r,v,w)};'
+           's.onerror=function(){ld=0};d.head.appendChild(s)}'
+           'd.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-srch]");if(b){e.preventDefault();go({btn:b})}});'
+           'd.addEventListener("keydown",function(e){if(e.key!=="/"||e.ctrlKey||e.metaKey||e.altKey)return;var t=e.target,n=t&&t.tagName;'
+           'if(n==="INPUT"||n==="TEXTAREA"||n==="SELECT"||t.isContentEditable)return;e.preventDefault();go({})});'
+           # переход из поиска к вопросу (#q3): когда app.js подключит FAQ, ответ раскрывается сам
+           'if(/^#q\\d+$/.test(location.hash)){var c=0,t=setInterval(function(){var b=d.getElementById(location.hash.slice(1));'
+           'if(b&&d.documentElement.classList.contains("anim-ready")){clearInterval(t);if(b.getAttribute("aria-expanded")==="false")b.click()}'
+           'else if(++c>60)clearInterval(t)},150)}})("ROOT","' + SEARCH_V + '");</script>')
+SRCH_HEAD_RE = re.compile(r'<style id="srch-st">.*?</style><script id="srch-js">.*?</script>\n', re.S)
+
+
+def search_ui(s, root):
+    """Лупа в шапке и блок поиска в <head>; повторный запуск заменяет прежний блок (можно применять к файлам с сайта)."""
+    s = SRCH_HEAD_RE.sub('', s)
+    block = SRCH_CSS + SRCH_JS.replace('"ROOT"', '"' + (root or './') + '"') + '\n'
+    head = s[:s.index('</head>')]
+    for mark in ('<style data-fx>', '<style id="m-crumbs">'):
+        if mark in head:
+            s = s.replace(mark, block + mark, 1)
+            break
+    else:
+        assert s.count('</head>') == 1, 'не один </head>'
+        s = s.replace('</head>', block + '</head>', 1)
+    if 'class="srch-btn"' not in s:
+        s, n = re.subn(r'(<div class="hdr-right">\n(\s*))', lambda m: m.group(1) + SRCH_BTN + '\n' + m.group(2), s, count=1)
+        assert n == 1, 'нет .hdr-right в шапке'
+    return s
+
+
+def apply_page(s, root, cur):
+    """Шапка, мобильное меню, подвал и поиск одной страницы (тот же код правит страницы, снятые с сайта)."""
+    cta = re.search(r'<nav class="mmenu"[^>]*>.*?(<a href="(?:\.\./)*#zayavka" class="btn btn-w btn-lg">.*?</a>)\s*</nav>', s, re.S).group(1)
+    nav, mm, cols = (typo(x) for x in build(root, cur, cta))
+    s = sub1(r'<nav class="nav" aria-label="Основное меню">.*?</nav>', nav, s)
+    s = sub1(r'<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">.*?</nav>', mm, s)
+    s = sub1(r'<div><h4>(?:Объекты|Отрасли|Услуги)</h4>.*?(?=\n\s*<div><h4>Контакты</h4>)', cols, s)
+    return search_ui(s, root)
+
+
 def main():
     for rel, root, cur in PAGES + LEGAL:
         f = ROOT / rel
         s = f.read_text(encoding='utf-8')
-        cta = re.search(r'<nav class="mmenu"[^>]*>.*?(<a href="(?:\.\./)*#zayavka" class="btn btn-w btn-lg">.*?</a>)\s*</nav>', s, re.S).group(1)
-        nav, mm, cols = (typo(x) for x in build(root, cur, cta))
-        s = sub1(r'<nav class="nav" aria-label="Основное меню">.*?</nav>', nav, s)
-        s = sub1(r'<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">.*?</nav>', mm, s)
-        s = sub1(r'<div><h4>(?:Объекты|Отрасли|Услуги)</h4>.*?(?=\n\s*<div><h4>Контакты</h4>)', cols, s)
+        s = apply_page(s, root, cur)
         # нижняя строка подвала: ссылка на согласие рядом с политикой
         if not re.search('Согласие на[ \u00a0]обработку данных</a>', s):  # с неразрывным пробелом тоже
             s, n = re.subn(r'(<div class="fb">.*?<a href="((?:\.\./)*)privacy/">Политика конфиденциальности</a>)',

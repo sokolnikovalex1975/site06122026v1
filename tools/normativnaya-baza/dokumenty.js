@@ -150,7 +150,11 @@
     window.print();
   });
   window.addEventListener('afterprint', function () { document.body.classList.remove('dk-printing'); });
-  document.addEventListener('click', function (e) { if (e.target.closest('[data-dl="pdf"]')) goal('dokumenty_pdf'); });
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-dl="pdf"]')) goal('dokumenty_pdf');
+    else if (e.target.closest('[data-dl="akt"]')) goal('akt_obrazets');  // образец акта (карточка под таблицей «Акты»)
+    else if (e.target.closest('[data-dl="akt-blank"]')) goal('akt_shablon');
+  });
 
   // вкладки «По видам объектов» (на телефоне — обычный аккордеон <details>)
   var tabs = [].slice.call(document.querySelectorAll('.dk-tab')), panels = [].slice.call(document.querySelectorAll('.dk-o'));

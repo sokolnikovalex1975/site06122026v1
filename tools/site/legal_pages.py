@@ -11,6 +11,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from unify import VERSION  # noqa: E402
+LEGAL_V = '20261108'  # версия legal.css (меняйте при правке legal.css)
 
 TEMPLATE = 'materialy/index.html'  # та же глубина вложенности (../)
 LEGAL = ['privacy/index.html', 'soglasie/index.html']
@@ -45,7 +46,8 @@ def main():
             ft = footer.replace('\n</footer>', '\n  ' + op + '\n</footer>')
             s = re.sub(r'<footer class="l-ft">.*?</footer>', lambda m: ft, s, count=1, flags=re.S)
             s = s.replace('</body>', f'<script src="../app.min.js?v={VERSION}" defer></script>\n</body>', 1)
-        s = re.sub(r'(href="\.\./(?:style|legal)\.css)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
+        s = re.sub(r'(href="\.\./style\.css)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
+        s = re.sub(r'(href="\.\./legal\.css)\?v=[^"]*"', rf'\1?v={LEGAL_V}"', s)
         s = re.sub(r'(src="\.\./app\.min\.js)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
         # текущий документ отмечен в нижней строке подвала
         slug = rel.split('/')[0]
