@@ -256,8 +256,8 @@ html,body{margin:0;padding:0;background:#fff}
 body{font-family:Inter,Arial,sans-serif;color:#18181b;font-size:8.4pt;line-height:1.35;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .pg{width:210mm;height:297mm;padding:9mm 12mm 8mm 20mm;position:relative;overflow:hidden;break-after:page;page-break-after:always;display:flex;flex-direction:column;background:#fff}
 .pg:last-child{break-after:auto;page-break-after:auto}
-.wm{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%) rotate(-45deg);z-index:0;pointer-events:none}
-.pg>*:not(.wm){position:relative;z-index:1}
+.wm{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%) rotate(-45deg);z-index:5;pointer-events:none}
+.pg>*:not(.wm){position:relative;z-index:1}  /* водяной знак поверх содержимого: заливка шапок таблиц и плашек его не закрывает */
 /* шапка: крупно телефон и сайт на каждом листе */
 .hd{display:flex;align-items:center;justify-content:space-between;gap:6mm;padding-bottom:2.6mm;border-bottom:.7mm solid #615fff}
 .brand{display:flex;align-items:center;gap:3mm;min-width:0}

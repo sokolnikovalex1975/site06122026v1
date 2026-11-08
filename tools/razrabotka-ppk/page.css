@@ -1,15 +1,15 @@
-/* ===== Страница «Разработка программы производственного контроля (ППК)» (/razrabotka-ppk/): дополнения к стилям отраслевой страницы ===== */
+/* ===== Страница «Разработка ППК» (/razrabotka-ppk/): дополнения к стилям отраслевой страницы ===== */
 .rp-page .f-hero .f-hero-img{object-position:62% 50%}
-/* первый экран компактнее: кнопка заявки видна без прокрутки и на ноутбуке, и на телефоне */
-.rp-page .f-hero h1{font-size:clamp(40px,3.7vw,70px);margin:28px 0 24px}
-.rp-page .f-hero p.lead{max-width:640px}
-.rp-page .f-hero .hero-ctas{margin-top:32px}
-.rp-hero-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:8px;max-width:640px}
+/* заголовок длиннее, чем на других страницах (53 знака): чуть меньше кегль, чтобы «производственного контроля» шло одной строкой и кнопки были на первом экране */
+@media (min-width:761px){.rp-page .hero h1{font-size:clamp(38px,3.5vw,68px)}}
+.rp-hero-list{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px;max-width:640px}
 .rp-hero-list li{position:relative;padding-left:28px;color:#c4c4cc;line-height:1.5;font-size:clamp(15px,.95vw,18px)}
 .rp-hero-list li::before{content:"";position:absolute;left:2px;top:.45em;width:12px;height:6px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}
-.rp-trust{display:grid;gap:4px;margin:22px 0 0;font-size:14px;line-height:1.5;color:#a1a1aa;max-width:700px}
-.rp-trust a,.rp-short a,.rp-cmp a,.rp-ptable a,#normy-2026 .d-note a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:color .25s,border-color .25s}
-.rp-trust a:hover,.rp-short a:hover,.rp-cmp a:hover,.rp-ptable a:hover,#normy-2026 .d-note a:hover{border-color:var(--t1)}
+.rp-trust{display:grid;gap:4px;margin:28px 0 0;font-size:14px;line-height:1.5;color:#a1a1aa;max-width:700px}
+.rp-trust a,.rp-upd a,.rp-principles a,.rp-short a,.rp-when a,#laboratoriya .d-note a,#vybor .d-note a{color:var(--t2);border-bottom:1px solid var(--line2);transition:color .25s,border-color .25s}
+.rp-trust a{color:#c4c4cc;white-space:nowrap}
+.rp-principles a{white-space:nowrap}
+.rp-trust a:hover,.rp-upd a:hover,.rp-principles a:hover,.rp-short a:hover,.rp-when a:hover,#laboratoriya .d-note a:hover,#vybor .d-note a:hover{color:var(--t1);border-color:var(--acc)}
 
 /* определение и «коротко» */
 .rp-def{margin:0 0 clamp(28px,3vw,44px);padding:clamp(18px,1.6vw,26px) clamp(20px,2vw,30px);border:1px solid var(--line2);border-left:2px solid var(--acc);border-radius:var(--r);background:var(--card);color:var(--t2);line-height:1.65;max-width:1100px;font-size:clamp(16px,1.05vw,19px)}
@@ -19,45 +19,108 @@
 .d-table.rp-short td,.d-table.rp-short td:first-child{color:#c4c4cc}
 .rp-upd{margin:20px 0 0;font-size:14px;line-height:1.6;color:var(--t3)}
 
-/* ППК или ППК по ХАССП */
-.rp-cmp th[scope=row]{color:var(--t1);font-weight:500;font-size:15px;width:18%}
-.rp-cmp thead th:nth-child(2){color:var(--acc)}
-.rp-cmp td:nth-child(2){color:var(--t1);background:rgba(124,134,255,.06)}
-.d-table.rp-cmp td:first-child{color:var(--t2)}
-.rp-cmp td b{font-weight:500;color:var(--t1)}
-@media (min-width:901px){.rp-cmp thead th:nth-child(2),.rp-cmp td:nth-child(2){padding-left:16px;padding-right:16px}.rp-cmp thead th:nth-child(2){width:41%}}
+/* ППК или ППК по ХАССП — сравнение */
+.d-table.rp-cmp{max-width:1200px}
+@media (min-width:901px){.rp-cmp thead th:nth-child(1){width:20%}.rp-cmp thead th:nth-child(2),.rp-cmp thead th:nth-child(3){width:40%}}
+.rp-cmp thead th{font-size:clamp(17px,1.2vw,21px);color:var(--t1);font-weight:500;letter-spacing:-.01em}
+.rp-cmp thead th:nth-child(3){color:var(--acc)}
+.rp-cmp tbody th{font-size:15px}
+.d-table.rp-cmp td{color:#c4c4cc}
+.rp-cmp td b{color:var(--t1);font-weight:400;font-size:clamp(20px,1.6vw,28px);letter-spacing:-.02em;white-space:nowrap}
 
-/* состав программы */
-.rp-terms .rp-ref{display:inline-block;margin-left:8px;padding:1px 8px;border:1px solid rgba(124,134,255,.4);border-radius:999px;color:var(--acc);font-size:12px;font-weight:400;line-height:1.6;letter-spacing:0;vertical-align:2px;white-space:nowrap}
-.rp-result{margin-top:clamp(28px,3vw,44px);padding:clamp(20px,2vw,30px);border:1px solid rgba(124,134,255,.35);border-radius:var(--r);background:rgba(124,134,255,.06);max-width:1100px}
-.rp-result p{margin:0;color:var(--t2);line-height:1.65}
-.rp-result b{display:block;color:var(--t1);font-weight:500;margin-bottom:6px}
+/* когда разрабатывать и когда менять */
+@media (min-width:901px){.rp-when th:nth-child(1){width:38%}.rp-when th:nth-child(3){width:26%}}
+.d-table.rp-when td:nth-child(2){color:#c4c4cc}
+.rp-when td:nth-child(3){font-size:15px;color:var(--t3)}
 
-/* нормы 2026 */
-.rp-doc{color:var(--acc);font-weight:500;white-space:nowrap}
-@media (min-width:901px){.rp-norms th:nth-child(1){width:22%}.rp-norms th:nth-child(2){width:15%}.rp-norms th:nth-child(3){width:17%}}
+/* 9 пунктов раздела 3 */
+.rp-pt{display:inline-block;min-width:44px;padding:2px 10px;border-radius:999px;border:1px solid rgba(124,134,255,.45);background:rgba(124,134,255,.08);color:var(--acc);font-size:14px;line-height:1.5;text-align:center;white-space:nowrap}
+@media (min-width:901px){.rp-items th:nth-child(1){width:92px}.rp-items th:nth-child(2){width:40%}}
+.rp-items thead th:nth-child(3){color:var(--acc)}
+.d-table.rp-items td:nth-child(2){color:var(--t1)}
+.d-table.rp-items td:nth-child(3){color:#c4c4cc}
+
+/* что добавляется в ППК по ХАССП (ТР ТС 021/2011, ст. 11, ч. 3) */
+.rp-haccp{margin-top:clamp(28px,3vw,48px);padding:clamp(22px,2.4vw,36px);background:var(--card);border:1px solid var(--line2);border-top:2px solid var(--acc);border-radius:var(--r)}
+.rp-haccp h3{font-size:clamp(20px,1.6vw,28px);font-weight:400;letter-spacing:-.02em;line-height:1.25;margin:0 0 12px;color:var(--t1)}
+.rp-haccp>p{margin:0 0 clamp(20px,2vw,28px);color:var(--t2);line-height:1.65;max-width:1040px}
+.rp-hlist{list-style:none;counter-reset:rh;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px clamp(20px,2.4vw,36px)}
+.rp-hlist li{padding-top:16px;border-top:1px solid var(--line2);line-height:1.5}
+.rp-hlist li::before{counter-increment:rh;content:"0" counter(rh);display:block;color:var(--acc);font-size:13px;margin-bottom:10px}
+.rp-hlist b{display:block;color:var(--t1);font-weight:500;margin-bottom:6px;font-size:clamp(16px,1.05vw,18px)}
+.rp-hlist li>span{color:var(--t2);font-size:15px;line-height:1.55}
+
+/* что вы получите */
+.rp-docs{list-style:none;counter-reset:rd;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.rp-docs li{background:var(--card);border:1px solid var(--line2);border-top:2px solid rgba(124,134,255,.45);border-radius:var(--r);padding:clamp(20px,1.8vw,28px);line-height:1.5}
+.rp-docs li::before{counter-increment:rd;content:"0" counter(rd);display:block;color:var(--acc);font-size:14px;margin-bottom:14px}
+.rp-docs b{display:block;font-weight:500;line-height:1.3;margin-bottom:8px;font-size:clamp(17px,1.15vw,20px)}
+.rp-docs li>span{color:var(--t2);font-size:15px;line-height:1.55}
+
+/* образец (компонент .p-obr из «Программы пест-контроля») */
+.p-obr{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,3.4vw,56px);align-items:start}
+.p-obr-pages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.p-obr-page{display:block;color:var(--t2);font-size:13px;line-height:1.4}
+.p-obr-page>span{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line2);background:#fff;box-shadow:0 14px 36px rgba(0,0,0,.45);transition:border-color .2s,transform .2s;margin-bottom:10px}
+.p-obr-page img{display:block;width:100%;height:auto;aspect-ratio:720/1018}
+.p-obr-page:hover>span{border-color:var(--acc);transform:translateY(-2px)}
+.p-obr-page b{display:block;color:var(--t1);font-weight:500}
+.p-obr-info{background:var(--card);border:1px solid var(--line2);border-top:2px solid var(--acc);border-radius:var(--r);padding:clamp(22px,2.4vw,34px)}
+.p-obr-info h3{font-size:clamp(19px,1.4vw,24px);font-weight:400;letter-spacing:-.02em;margin:0 0 14px;color:var(--t1)}
+.p-obr-list{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:10px}
+.p-obr-list li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:10px;color:var(--t2);font-size:14px;line-height:1.5}
+.p-obr-list li b{font-family:var(--mono,monospace);font-size:12px;color:var(--acc);font-weight:500;padding-top:2px;white-space:nowrap}
+.p-obr-btns{display:flex;flex-wrap:wrap;gap:12px}
+.p-obr-meta{margin:14px 0 0;font-size:13px;color:var(--t3);line-height:1.5}
+.p-obr-meta a{color:var(--t2);text-decoration:underline;text-underline-offset:3px}
+.p-obr-meta a:hover{color:var(--t1)}
 
 /* объекты */
-.rp-inds .d-card{display:flex;flex-direction:column}
-.rp-ico{margin:0 0 18px;color:var(--acc);line-height:0}
-.rp-ico svg{width:28px;height:28px;stroke-width:1.6}
-.rp-more{align-self:flex-start;margin-top:auto;padding-top:18px;color:var(--t1);font-size:15px;line-height:1.4}
-.rp-more span{border-bottom:1px solid var(--line2);transition:border-color .25s}
-.rp-more:hover span{border-color:var(--acc)}
+.rp-ico{display:block;margin:0 0 10px;color:var(--acc);line-height:0}
+.rp-ico svg{width:24px;height:24px;stroke-width:1.6}
+@media (min-width:901px){.rp-obj th:nth-child(1){width:22%}.rp-obj th:nth-child(2){width:32%}}
+.d-table.rp-obj td:first-child{font-size:clamp(16px,1.1vw,19px)}
+.d-table.rp-obj td:nth-child(2){color:#c4c4cc}
+.rp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.rp-tag{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid var(--line2);font-size:13px;line-height:1.6;color:var(--t2);white-space:nowrap;letter-spacing:0}
+.rp-tag-h{border-color:rgba(124,134,255,.45);background:rgba(124,134,255,.08);color:var(--acc)}
+
+/* лабораторные исследования */
+.d-table.rp-labt{max-width:1100px}
+@media (min-width:901px){.rp-labt th:nth-child(1){width:24%}.rp-labt th:nth-child(2){width:40%}}
+
+/* частые ошибки — строками, как .d-terms шаблона, номера красные */
+.rp-err.d-terms li::before{color:var(--red)}
+.rp-err.d-terms b,.rp-err.d-terms b span{color:var(--t1)}
 
 /* стоимость */
-.rp-price{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,3vw,56px);align-items:start}
-.rp-ptable th:last-child,.rp-ptable td:last-child{text-align:right;padding-right:0}
-.d-table.rp-ptable td:last-child{color:var(--t1);font-size:clamp(16px,1.1vw,19px);white-space:nowrap}
-.d-table.rp-ptable td:first-child{color:#c4c4cc}
-.rp-pnotes{padding:clamp(24px,2.4vw,40px)}
-.rp-pnotes p{margin:0 0 18px;color:var(--t2);line-height:1.6}
+.rp-price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,2vw,32px);align-items:stretch}
+.rp-pcard{padding:clamp(24px,2.6vw,44px);display:flex;flex-direction:column;gap:clamp(16px,1.6vw,24px);border-top:2px solid rgba(124,134,255,.45)}
+.rp-pcard-h{border-top-color:var(--acc)}
+.rp-pcard p{margin:0}
+.rp-pname{font-size:clamp(24px,2vw,34px);line-height:1.15;letter-spacing:-.03em;color:var(--t1)}
+.rp-pcard-h .rp-pname{color:var(--acc)}
+.rp-pfor{color:var(--t2);line-height:1.55;font-size:15px}
+.rp-pfigs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px clamp(16px,2vw,32px);padding-top:clamp(18px,1.8vw,26px);border-top:1px solid var(--line2)}
+.rp-pk{font-size:14px;color:var(--t3);margin-bottom:6px!important}
+.rp-pnum{font-size:clamp(26px,2.3vw,40px);line-height:1.08;letter-spacing:-.035em;font-weight:300;color:var(--t1)}
+.rp-pcard .btn{margin-top:auto;align-self:flex-start;white-space:normal;text-align:center;line-height:1.25}
+.rp-pnotes{margin-top:clamp(18px,2vw,32px);padding:clamp(24px,2.4vw,40px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px clamp(24px,3vw,48px)}
+.rp-pnotes p{margin:0;color:var(--t2);line-height:1.6}
 .rp-pnotes p b{display:block;color:var(--t1);font-weight:500;margin-bottom:4px}
-.rp-pnotes .rp-free{border-top:1px solid var(--line2);padding-top:18px}
-.rp-pnotes .btn{width:100%;margin-top:6px;white-space:normal;text-align:center;line-height:1.25}
 
-/* форма: невыбранная «Какая задача стоит» — тем же серым, что и «Вид объекта» */
-.rp-page .field select:has(option[value=""]:checked){color:var(--t2)}
+/* автор и принципы */
+.rp-author-wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(24px,3vw,56px);align-items:start}
+.rp-author{display:flex;gap:20px;align-items:center;padding:clamp(24px,2.4vw,36px)}
+.rp-avatar{flex:none;display:block;width:112px;height:112px;border-radius:50%;object-fit:cover;background:#18181b;border:1px solid rgba(124,134,255,.4)}
+.rp-author p{margin:0}
+.rp-author-name{font-size:clamp(20px,1.5vw,26px);color:var(--t1);letter-spacing:-.02em;margin-bottom:4px!important}
+.rp-author-role{color:var(--t2);margin-bottom:4px!important}
+.rp-author-date{color:var(--t3);font-size:14px}
+.rp-author-note{color:var(--t3);font-size:13px;margin-top:6px!important}
+.rp-principles{list-style:none;padding:0;margin:0;border-top:1px solid var(--line2)}
+.rp-principles li{padding:18px 0;border-bottom:1px solid var(--line2);color:var(--t2);line-height:1.6}
+.rp-principles b{color:var(--t1);font-weight:500}
 
 /* нормативная база */
 .rp-base{list-style:none;padding:0;margin:0;border-top:1px solid var(--line2);max-width:1200px}
@@ -65,52 +128,63 @@
 .rp-base li::before{content:"§";position:absolute;left:4px;top:14px;color:var(--acc)}
 .rp-base a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
 .rp-base a:hover{border-color:var(--t1)}
+#normativnaya-baza .sub a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+#normativnaya-baza .sub a:hover{border-color:var(--t1)}
 
+@media (max-width:1100px){
+.p-obr{grid-template-columns:minmax(0,1fr)}
+}
+@media (min-width:901px) and (max-width:1180px){.rp-pfigs{grid-template-columns:minmax(0,1fr)}}
 /* широкие таблицы — карточками уже на планшете */
 @media (max-width:900px){
-.rp-norms thead,.rp-cmp thead{display:none}
-.rp-norms,.rp-norms tbody,.rp-norms tr,.rp-norms td,.rp-cmp,.rp-cmp tbody,.rp-cmp tr,.rp-cmp td,.rp-cmp th{display:block;width:100%}
-.rp-norms tr,.rp-cmp tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 18px;margin-bottom:12px}
-.rp-norms td,.rp-cmp td{border:0;padding:10px 0}
-.rp-norms td+td,.rp-cmp td+td{border-top:1px solid var(--line)}
-.rp-norms td::before,.rp-cmp td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}
-.rp-norms tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
-.rp-norms td:nth-child(1),.rp-norms td:nth-child(4){grid-column:1/-1}
-.rp-norms td:nth-child(1){font-size:17px;color:var(--t1)}
-.rp-norms td:nth-child(1)::before{content:none}
-.rp-cmp th[scope=row]{width:100%;border:0;padding:12px 0 8px;font-size:17px}
-.rp-cmp td:nth-child(2){background:none;border-top:1px solid var(--line)}
-.rp-cmp td:nth-child(2)::before{color:var(--acc)}
-.rp-price{grid-template-columns:minmax(0,1fr)}
+.rp-when thead,.rp-items thead,.rp-obj thead,.rp-labt thead{display:none}
+.rp-when,.rp-when tbody,.rp-when tr,.rp-when td,.rp-items,.rp-items tbody,.rp-items tr,.rp-items td,.rp-obj,.rp-obj tbody,.rp-obj tr,.rp-obj td,.rp-labt,.rp-labt tbody,.rp-labt tr,.rp-labt td{display:block;width:100%}
+.rp-when tr,.rp-items tr,.rp-obj tr,.rp-labt tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 18px;margin-bottom:12px}
+.rp-when td,.rp-items td,.rp-obj td,.rp-labt td{border:0;padding:10px 0}
+.rp-when td+td,.rp-items td+td,.rp-obj td+td,.rp-labt td+td{border-top:1px solid var(--line)}
+.rp-when td::before,.rp-items td::before,.rp-obj td::before,.rp-labt td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}
+.rp-when td:first-child,.rp-obj td:first-child,.rp-labt td:first-child{font-size:17px;color:var(--t1)}
+.rp-when td:first-child::before,.rp-obj td:first-child::before,.rp-labt td:first-child::before,.rp-items td:first-child::before{content:none}
+.rp-items tr{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:14px;align-items:start}
+.rp-items td:nth-child(1){grid-column:1;grid-row:1;padding-top:12px}
+.rp-items td:nth-child(2){grid-column:2;grid-row:1;border-top:0;font-size:16px}
+.rp-items td:nth-child(2)::before{content:none}
+.rp-items td:nth-child(3){grid-column:1/-1}
+.rp-items td:nth-child(3)::before{color:var(--acc)}
+.rp-docs{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rp-price,.rp-author-wrap,.rp-pnotes{grid-template-columns:minmax(0,1fr)}
+.rp-hlist{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rp-cmp thead{display:none}
+.rp-cmp,.rp-cmp tbody,.rp-cmp tr,.rp-cmp th,.rp-cmp td{display:block;width:100%}
+.rp-cmp tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 18px;margin-bottom:12px}
+.rp-cmp th,.rp-cmp td{border:0;padding:10px 0}
+.rp-cmp tbody th{font-size:17px;color:var(--t1);padding-top:12px}
+.rp-cmp td{border-top:1px solid var(--line)}
+.rp-cmp td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}
+.rp-cmp td+td::before{color:var(--acc)}
+.rp-cmp tr.rp-cmp-s{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
+.rp-cmp tr.rp-cmp-s th{grid-column:1/-1}
 }
 @media (max-width:760px){
 .rp-page .f-hero .f-hero-img{object-position:50% 50%}
-.rp-page .f-hero .hero-media{aspect-ratio:16/9}
-.rp-page .f-hero h1{font-size:clamp(30px,9.2vw,40px);margin:22px 0 16px}
-/* на телефоне кнопки сразу после вводного абзаца, список преимуществ — под ними */
-.rp-page .f-hero .hero-copy{display:flex;flex-direction:column}
-.rp-page .f-hero .hero-copy .badge{align-self:flex-start}
-.rp-page .f-hero .hero-ctas{margin-top:22px}
-.rp-hero-list{order:1;margin-top:24px}
-.rp-trust{order:2;font-size:13px}
+.rp-page .hero h1{font-size:clamp(28px,8.6vw,42px)}
+.rp-trust{font-size:13px}
 }
-@media (max-width:760px) and (max-height:700px){.rp-page .f-hero .hero-media{aspect-ratio:2/1}}
 @media (max-width:600px){
-.rp-norms tr{grid-template-columns:minmax(0,1fr)}
 .rp-short th{display:block;width:100%;border:0;padding:12px 0 2px;font-size:13px}
 .d-table.rp-short td{padding:0 0 12px}
 .d-table.rp-short tr{padding:4px 16px}
-.rp-terms .rp-ref{margin:6px 0 0;display:table}
-/* прайс остаётся таблицей из двух колонок */
-.d-table.rp-ptable{display:table}
-.rp-ptable thead{display:table-header-group}
-.rp-ptable tbody{display:table-row-group}
-.d-table.rp-ptable tr{display:table-row;border:0;border-radius:0;padding:0;margin:0}
-.d-table.rp-ptable th,.d-table.rp-ptable td{display:table-cell;width:auto;padding:14px 14px 14px 0;border-bottom:1px solid var(--line2)}
-.d-table.rp-ptable td+td{border-top:0}
-.d-table.rp-ptable td::before{content:none}
-.d-table.rp-ptable td:last-child{padding-right:0;font-size:16px;width:40%;white-space:normal}
-.rp-pnotes{padding:22px 20px}
+.rp-docs{grid-template-columns:minmax(0,1fr)}
+.p-obr-btns .btn{width:100%;white-space:normal;text-align:center;line-height:1.25}
+.p-obr-page{font-size:12px}
+.p-obr-page b{font-size:12px}
+.p-obr-page small{display:none}
+.p-obr-pages{gap:10px}
+.p-obr-list li{grid-template-columns:84px minmax(0,1fr);gap:8px;font-size:13.5px}
+.p-obr-list li b{font-size:11px}
+.rp-pcard .btn{width:100%;align-self:stretch}
+.rp-pfigs,.rp-hlist{grid-template-columns:minmax(0,1fr)}
+.rp-author{align-items:flex-start}
+.rp-avatar{width:80px;height:80px}
+.rp-pnotes,.rp-pcard{padding:22px 20px}
 }
-/* очень узкие экраны: длинные слова через дефис («санитарно-эпидемиологической») можно переносить */
-@media (max-width:359px){.rp-page main .nw{white-space:normal}}

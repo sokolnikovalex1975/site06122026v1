@@ -52,6 +52,13 @@
 .v-doc-f{align-self:center;white-space:nowrap;font-size:13px;color:var(--t2);padding:7px 12px;border:1px solid var(--line2);border-radius:999px;transition:color .3s,border-color .3s,background .3s}
 .v-dg-note{margin:16px 0 0;color:var(--t2);font-size:14.5px;line-height:1.55;padding-left:14px;border-left:2px solid rgba(124,134,255,.5)}
 @media (hover:hover) and (pointer:fine){.v-doc:hover .v-doc-f{color:#fff;border-color:rgba(124,134,255,.55);background:rgba(124,134,255,.12)}.v-doc:hover .v-doc-img{transform:translateY(-3px) rotate(-1.5deg)}.v-doc:hover h4 a{text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}}
+/* справа в строке: «Бланк · N стр.» (вся строка открывает бланк) и отдельная ссылка на образец заполнения — поверх ссылки строки */
+.v-doc-a{display:flex;flex-direction:column;align-items:stretch;gap:8px;align-self:center}
+.v-doc-a .v-doc-f{align-self:stretch;text-align:center}
+.v-doc-s{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;font-size:13px;color:#d9dcff;padding:7px 12px;border:1px solid rgba(124,134,255,.45);border-radius:999px;background:rgba(124,134,255,.1);text-decoration:none;transition:color .3s,border-color .3s,background .3s}
+.v-doc-s:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.v-doc-s:hover{color:#fff;border-color:rgba(124,134,255,.85);background:rgba(124,134,255,.26)}.v-doc:has(.v-doc-s:hover) .v-doc-f{color:var(--t2);border-color:var(--line2);background:none}.v-doc:has(.v-doc-s:hover) .v-doc-img{transform:none}.v-doc:has(.v-doc-s:hover) h4 a{text-decoration:none}}
+.v-folder .v-folder-btn2{margin-top:18px}
 .v-folder h3{margin:0}
 .v-folder-stack{position:relative;display:block;height:262px;margin:2px auto 24px;max-width:300px}
 .v-folder-stack img{position:absolute;top:0;left:50%;width:176px;height:auto;border-radius:6px;background:#f5f5f2;box-shadow:0 26px 60px -24px rgba(0,0,0,.95)}
@@ -81,6 +88,9 @@
 .v-duct figcaption{min-height:0}
 .v-legend{grid-template-columns:repeat(4,max-content)}
 .v-docs{grid-template-columns:minmax(0,1fr) minmax(0,320px)}
+.v-doc{grid-template-columns:64px minmax(0,1fr)}
+.v-doc-img{grid-row:1/span 2}
+.v-doc-a{grid-column:2;flex-direction:row;flex-wrap:wrap;justify-self:start;align-self:start;margin-top:10px}
 }
 @media (max-width:860px){
 .v-hero h1{font-size:clamp(28px,8vw,40px)}
@@ -97,10 +107,14 @@
 .v-seg button{padding:9px 6px;font-size:13px;border-radius:10px}
 .v-doc{grid-template-columns:52px minmax(0,1fr);gap:4px 16px;padding:16px 0}
 .v-doc-img{width:52px}
-.v-doc-f{grid-column:2;justify-self:start;margin-top:10px;padding:5px 10px;font-size:12.5px}
+.v-doc-a{gap:6px}
+.v-doc-f,.v-doc-s{padding:5px 9px;font-size:12.5px}
 .v-doc p{font-size:14.5px}
 .v-folder-stack{height:226px}
 .v-folder-stack img{width:150px}
+}
+@media (max-width:380px){
+.v-doc-a{flex-direction:column;align-items:stretch}
 }
 @media (prefers-reduced-motion:reduce){
 .v-duct .v-dust,.v-duct .v-grease,.v-duct .v-germs,.v-duct .v-ok,.v-duct .v-shine{transition:none}

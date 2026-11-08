@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-"""Фирменная шапка и водяной знак в готовых PDF: образец программы пест-контроля и образец договора.
+"""Фирменная шапка и водяной знак в готовых PDF: образец и пустой шаблон программы пест-контроля, образец договора.
 
-python3 tools/docs_brand/brand_pdf.py
+python3 tools/docs_brand/brand_pdf.py [programma|shablon|dogovor]   (без аргументов — все три)
+
+Пустой шаблон программы (`shablon`) — тот же макет, что образец, без записей; его src собирает
+tools/docs_brand/programma_src.py. Перезапуск для уже выложенных образца и договора даёт тот же текст и картинку
+страниц, но другие байты файла (идентификаторы PDF) — пересобирайте только изменённый документ.
 
 Исходники — копии PDF до правки в tools/docs_brand/src/ (повторный запуск не накладывает знак дважды).
 1. На первой странице и в начале приложений прежняя шапка (логотип, плашка «Типовой образец», мелкие серые контакты) вырезается
@@ -35,6 +39,13 @@ DOCS = {
         tagline='Дератизация, дезинсекция и пест-контроль для организаций · система IPM / ХАССП',
         previews=[(0, 'programma-sample-p1', [240, 360, 720]), (2, 'programma-sample-p3', [240, 360, 720]),
                   (4, 'programma-sample-p5', [240, 360, 720])]),
+    # пустой шаблон программы (с 08.11.2026 вместо шаблона Word): тот же макет, что у образца, — src собирает programma_src.py
+    'shablon': dict(
+        src=HERE / 'src' / 'shablon-programmy-pest-kontrolya.pdf',
+        dst=ROOT / 'materialy' / 'programma-pest-kontrolya' / 'shablon-programmy-pest-kontrolya.pdf',
+        band=(34, 27, 562, 71), x0=39.8, y0=22.5, width=516.0, runner_y0=14.0,
+        tagline='Дератизация, дезинсекция и пест-контроль для организаций · система IPM / ХАССП',
+        previews=[]),
     'dogovor': dict(
         src=HERE / 'src' / 'obrazets-dogovora-pestkontrol-tsentr.pdf',
         dst=ROOT / 'dogovor-deratizatsiya-dezinsektsiya' / 'obrazets-dogovora-pestkontrol-tsentr.pdf',

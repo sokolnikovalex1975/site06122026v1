@@ -2,6 +2,8 @@
 """Поиск по сайту: индекс search-index.json и движок search.min.js в корне сайта.
 
     python3 tools/search/build_index.py        (запускается из tools/site/build_site.py после меню и разметки)
+    python3 tools/search/build_index.py --pages <папка> --out <файл>   — индекс из других копий страниц (например, файлов
+        пакета выкладки: tools/deploy/patch-2026-11-08-dk.py сверяет его с индексом сборки); search.min.js не трогается
 
 Индекс собирается из готовых страниц сайта (тех же, что уходят на хостинг, — список tools/site/build_prod.PAGES)
 и из данных страницы «Документы для Роспотребнадзора» (tools/normativnaya-baza/dokumenty_data.py):
@@ -175,8 +177,11 @@ class Index:
         self.items.append([k, url, title, cut(snip), cut(kw, KWN), pi])
 
 
+PAGES_DIR = ROOT  # откуда читать страницы (--pages)
+
+
 def index_page(ix, rel):
-    s = (ROOT / rel).read_text(encoding='utf-8')
+    s = (PAGES_DIR / rel).read_text(encoding='utf-8')
     soup = BeautifulSoup(s, 'lxml')
     url = page_url(rel)
     name = short_name(soup, rel)
@@ -290,9 +295,16 @@ def minify():
 
 
 def main():
+    global PAGES_DIR
+    args = sys.argv[1:]
+    out_file = ROOT / 'search-index.json'
+    if '--pages' in args:
+        PAGES_DIR = pathlib.Path(args[args.index('--pages') + 1])
+    if '--out' in args:
+        out_file = pathlib.Path(args[args.index('--out') + 1])
     ix = Index()
     for rel in build_prod.PAGES:
-        if not (ROOT / rel).exists():
+        if not (PAGES_DIR / rel).exists():
             raise SystemExit(f'нет страницы {rel}')
         soup, pi = index_page(ix, rel)
         if rel == 'normativnaya-baza/index.html':
@@ -304,7 +316,7 @@ def main():
     missing = index_pdfs(ix)
     data = {'v': V, 'p': ix.pages, 'i': ix.items}
     raw = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
-    (ROOT / 'search-index.json').write_text(raw, encoding='utf-8')
+    out_file.write_text(raw, encoding='utf-8')
     kinds = {}
     for it in ix.items:
         kinds[it[0]] = kinds.get(it[0], 0) + 1
@@ -312,7 +324,8 @@ def main():
           ', '.join(f'{k} {v}' for k, v in sorted(kinds.items())))
     if missing:
         print('  внимание: нет файлов PDF —', ', '.join(missing))
-    minify()
+    if out_file == ROOT / 'search-index.json':
+        minify()
 
 
 if __name__ == '__main__':

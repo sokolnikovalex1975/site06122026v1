@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Фирменная шапка и водяной знак в шаблоне Word программы пест-контроля.
+"""Фирменная шапка и водяной знак в шаблоне Word программы пест-контроля — только для файлов проекта.
 
 python3 tools/docs_brand/brand_docx.py
 
-Исходник — tools/docs_brand/src/shablon-programmy-pest-kontrolya.docx (копия до правки), результат —
-materialy/programma-pest-kontrolya/shablon-programmy-pest-kontrolya.docx.
+С 08.11.2026 на сайте шаблон программы — только PDF без записей (tools/docs_brand/programma_src.py → brand_pdf.py shablon);
+Word-версия на сайт не выкладывается и в папку страницы не пишется. Исходник —
+tools/docs_brand/src/shablon-programmy-pest-kontrolya.docx (копия до правки), результат —
+/tmp/docs_brand_build/shablon-programmy-pest-kontrolya.docx (для файлов проекта).
 1. Картинка верхнего колонтитула (повторяется на каждой странице) заменяется шапкой как в журнале пест-контроля:
    логотип, ПЕСТКОНТРОЛЬ ЦЕНТР и справа крупно телефон и сайт (tools/docs_brand/brand.py, PNG 600 dpi, ширина 180 мм).
 2. В колонтитул добавляется водяной знак Word «пестконтроль-центр.рф» (WordArt, как «Вставка → Подложка»):
@@ -31,7 +33,7 @@ sys.path.insert(0, str(HERE))
 import brand  # noqa: E402
 
 SRC = HERE / 'src' / 'shablon-programmy-pest-kontrolya.docx'
-DST = ROOT / 'materialy' / 'programma-pest-kontrolya' / 'shablon-programmy-pest-kontrolya.docx'
+DST = pathlib.Path('/tmp/docs_brand_build/shablon-programmy-pest-kontrolya.docx')  # на сайт не выкладывается (с 08.11.2026)
 TAGLINE = 'Дератизация, дезинсекция и пест-контроль для организаций · система IPM / ХАССП'
 WIDTH_MM = 180.0  # ширина текста: A4 − поля 15 + 15 мм (w:pgMar left/right = 850)
 EMU_MM = 36000
@@ -112,9 +114,10 @@ def build():
         write(draft)
         thumb, pdf = thumbnail(draft, tmp)
         parts['docProps/thumbnail.jpeg'] = thumb
+        DST.parent.mkdir(parents=True, exist_ok=True)
         write(DST)
         shutil.copy(pdf, '/tmp/docs_brand_docx_check.pdf')
-        print('Word', DST.relative_to(ROOT), DST.stat().st_size, 'байт; проверочный PDF LibreOffice — /tmp/docs_brand_docx_check.pdf',
+        print('Word', DST, DST.stat().st_size, 'байт; проверочный PDF LibreOffice — /tmp/docs_brand_docx_check.pdf',
               len(fitz.open(pdf)), 'стр.')
 
 
