@@ -1,4 +1,4 @@
-/* Тестовая страница: никакой отправки, cookie-трекинга и записи в local/sessionStorage. */
+/* Тестовая страница: никакой отправки, трекинга или постоянного хранения данных. */
 (function () {
   'use strict';
   var toggle = document.getElementById('preview-notes');
