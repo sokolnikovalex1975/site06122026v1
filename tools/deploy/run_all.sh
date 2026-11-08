@@ -11,6 +11,10 @@
 #   bash run_all.sh deploy    — backup + upload одним запуском
 #   bash run_all.sh rollback  — вернуть прежние файлы из копии
 #   bash run_all.sh cleanup   — удалить временный .netrc и архив
+#   bash run_all.sh counters  — без подключения: счётчики в pkg/ (и сверка с backup/, если копия уже есть)
+# Счётчики (с 08.11.2026): перед загрузкой на каждой странице пакета (*index.php, кроме политики и согласия) должен
+# быть ровно один блок «Метрика 113675622 + UIS + Radist», у заменяемых страниц — байт в байт как в копии с сервера;
+# иначе выкладка останавливается до загрузки. Намеренная правка счётчиков: ALLOW_COUNTERS_CHANGE=1 bash run_all.sh deploy
 set -u
 D="$(cd "$(dirname "$0")" && pwd)"
 cd "$D" || exit 1
@@ -64,6 +68,31 @@ finish() {
   echo "== backup and log kept in: $KEEP"
   echo "== EXIT CODE $rc"
 }
+# Счётчики Метрики 113675622, UIS и Radist — обязательны на всех страницах, кроме политики и согласия
+NO_COUNTERS_PAGES="${NO_COUNTERS_PAGES:-privacy/index.php soglasie/index.php}"
+cblock() { perl -0777 -ne 'print $1 if /(<!-- Yandex\.Metrika counter \+ UIS \+ Radist.*?<!-- \/Yandex\.Metrika counter -->)/s' "$1"; }
+counters_check() {
+  local f n bad=0 pages=0
+  for f in $ORDER; do
+    case "$f" in *index.php) ;; *) continue ;; esac
+    case " $NO_COUNTERS_PAGES " in *" $f "*) continue ;; esac
+    pages=$((pages + 1))
+    [ -f "pkg/$f" ] || { echo "ERROR: pkg/$f missing"; bad=1; continue; }
+    n=$(perl -0777 -ne '$n = () = /ym\(113675622, .init./g; print $n' "pkg/$f")
+    if [ "$n" != 1 ] || ! grep -q 'uiscom' "pkg/$f" || ! grep -q 'radist' "pkg/$f" \
+       || ! grep -q '<!-- /Yandex.Metrika counter -->' "pkg/$f"; then
+      echo "ERROR: counters block missing or broken in pkg/$f (ym init: ${n:-0})"; bad=1; continue
+    fi
+    if [ -s "backup/$f" ] && [ "$(cblock "backup/$f" | shasum -a 256)" != "$(cblock "pkg/$f" | shasum -a 256)" ]; then
+      if [ "${ALLOW_COUNTERS_CHANGE:-0}" = 1 ]; then echo "WARNING: counters block changed in $f (ALLOW_COUNTERS_CHANGE=1)"
+      else echo "ERROR: counters block in pkg/$f differs from the server copy backup/$f"; bad=1; fi
+    fi
+  done
+  [ $bad = 0 ] && echo "== counters OK: Metrika 113675622 + UIS + Radist on $pages page(s) of the package"
+  return $bad
+}
+if [ "$MODE" = counters ]; then counters_check; exit $?; fi
+
 trap finish EXIT
 
 echo "== $(date '+%Y-%m-%d %H:%M:%S %Z') mode=$MODE host=$HOST"
@@ -151,6 +180,7 @@ do_upload() {
   for f in $REPLACED; do [ -s "backup/$f" ] || { echo "ERROR: backup/$f missing"; exit 18; }; done
   (cd pkg && shasum -a 256 -c ../MANIFEST.sha256 > /dev/null) || { echo "ERROR: package checksum mismatch"; exit 15; }
   echo "== package checksums OK"
+  counters_check || { echo "ERROR: counters check failed, upload cancelled (nothing uploaded)"; exit 19; }
   NEWF=""; REPF=""
   for f in $ORDER; do case " $(echo $REPLACED) " in *" $f "*) REPF="$REPF $f" ;; *) NEWF="$NEWF $f" ;; esac; done
   if [ -n "$NEWF" ]; then

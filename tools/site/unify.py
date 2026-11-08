@@ -536,7 +536,10 @@ def fix_head(s, root):
     assert n == 1, 'нет раннего скрипта в <head>'
     s = re.sub(r'(href="(?:\.\./)*style\.css)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
     s = re.sub(r'(src="(?:\.\./)*app\.min\.js)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
-    if 'vendor/gsap.min.js' not in s:
+    # Страница уже на загрузчике (setTimeout(go, 0)) без GSAP, ScrollTrigger и Lenis — так задумано: с 08.11.2026
+    # «Документы для Роспотребнадзора» (tools/normativnaya-baza/build_pages.py, p['dok']) грузят только app.min.js.
+    # Библиотеки добавляются лишь страницам, где ещё стоят defer-подключения.
+    if 'vendor/gsap.min.js' not in s and 'setTimeout(go, 0)' not in s:
         s, n = re.subn(r'(<script src="(?:\.\./)*app\.min\.js\?v=[^"]*" defer></script>)',
                        lambda m: (f'<script src="{root}vendor/gsap.min.js" defer></script>\n'
                                   f'<script src="{root}vendor/ScrollTrigger.min.js" defer></script>\n'

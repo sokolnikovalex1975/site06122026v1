@@ -15,13 +15,18 @@
   3. tools/menu/apply_menu.py   — одинаковые шапка, мобильное меню и подвал на всех страницах;
      tools/site/mobile_crumbs.py — хлебные крошки на телефоне (до 900 px) скрыты на всех страницах;
   4. tools/build.py             — сжатие app.js в app.min.js и встраивание style.css в главную;
-  5. server/sitemap.xml         — все страницы сайта для поисковиков.
+  5. server/sitemap.xml         — все страницы сайта для поисковиков. Дата изменения (lastmod) берётся из прежнего
+     server/sitemap.xml и меняется на сегодняшнюю только у страниц, которые эта сборка изменила, и у новых адресов
+     (до 08.11.2026 каждая сборка ставила сегодняшнюю дату всем страницам). --keep-lastmod — не менять даты вовсе
+     (например, если поменялись только меню и подвал).
 
 Счётчики (Метрика, UIS, Radist) в репозитории не вставляются — они в server/counters.html
 и добавляются только в версию для Timeweb: python3 tools/site/build_prod.py.
 """
 import datetime
+import hashlib
 import pathlib
+import re
 import subprocess
 import sys
 
@@ -46,7 +51,22 @@ def run(*args):
         sys.exit(f'ошибка: {" ".join(args)}')
 
 
+def page_hash(u):
+    f = ROOT / u / 'index.html'
+    return hashlib.sha256(f.read_bytes()).hexdigest() if f.exists() else None
+
+
+def old_lastmod():
+    f = ROOT / 'server' / 'sitemap.xml'
+    if not f.exists():
+        return {}
+    pairs = re.findall(r'<loc>([^<]*)</loc>\s*<lastmod>([^<]*)</lastmod>', f.read_text(encoding='utf-8'))
+    return {loc[len(SITE):]: lm for loc, lm in pairs if loc.startswith(SITE)}
+
+
 def main():
+    keep = '--keep-lastmod' in sys.argv[1:]
+    before = {u: page_hash(u) for u, _ in SITEMAP}
     run('tools/gostinitsy/build_page.py')  # страница гостиниц собирается из своих исходников (tools/gostinitsy)
     run('tools/sanitarnyy-audit/build_page.py')  # санитарный аудит — из своих исходников (tools/sanitarnyy-audit)
     run('tools/razrabotka-ppk/build_page.py')  # разработка ППК — из своих исходников (tools/razrabotka-ppk)
@@ -59,10 +79,18 @@ def main():
     run('tools/site/mobile_crumbs.py')  # хлебные крошки на телефоне не показываются (правило владельца)
     run('tools/build.py')
     today = datetime.date.today().isoformat()
-    urls = ''.join(f'  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{today}</lastmod>\n    <priority>{p}</priority>\n  </url>\n' for u, p in SITEMAP)
+    old = old_lastmod()
+    lastmod, fresh = {}, []
+    for u, _ in SITEMAP:
+        if u in old and (keep or page_hash(u) == before[u]):
+            lastmod[u] = old[u]
+        else:
+            lastmod[u] = today
+            fresh.append('/' + u)
+    urls = ''.join(f'  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{lastmod[u]}</lastmod>\n    <priority>{p}</priority>\n  </url>\n' for u, p in SITEMAP)
     (ROOT / 'server' / 'sitemap.xml').write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + '</urlset>\n', encoding='utf-8')
-    print('server/sitemap.xml:', len(SITEMAP), 'страниц')
+    print('server/sitemap.xml:', len(SITEMAP), 'страниц;', ('дата изменения ' + today + ': ' + ', '.join(fresh)) if fresh else 'даты изменения прежние')
 
 
 if __name__ == '__main__':
