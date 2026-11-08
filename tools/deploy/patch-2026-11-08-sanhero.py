@@ -23,7 +23,7 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-BASE, EDIT = 'ce1b75a', '04c5d92'
+BASE, EDIT = '0233825', 'd3c0a91'  # до переноса на 0233825 при отправке в GitHub — ce1b75a → 04c5d92, страница та же
 PAGE = 'sanitarnyy-audit/index.php'
 PAGE_SRC = 'sanitarnyy-audit/index.html'
 COUNTERS = re.compile(r'<!-- Yandex\.Metrika counter \+ UIS \+ Radist.*?<!-- /Yandex\.Metrika counter -->', re.S)
