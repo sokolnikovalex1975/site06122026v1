@@ -219,6 +219,97 @@
 .sa-avatar{width:80px;height:80px}
 .sa-pnotes{padding:22px 20px}
 .sa-viol{padding:22px 20px}
+}
+
+/* ===== Первый экран (08.11.2026): кнопки «Рассчитать стоимость аудита» и телефон всегда в пределах первого экрана.
+   Компьютер (от 901 px): первый экран — по высоте окна, размеры заголовка и отступы зависят от высоты, три пункта — строкой внизу.
+   Телефон (до 900 px): фото занимает место между шапкой и текстом, текст и кнопки — у нижнего края экрана;
+   до 760 px описание короче (span.lead-x скрыты), до 520 px в плашке «Москва и МО». Фото (.hero-media) — внутри .hero-copy ===== */
+/* --- общие правки --- */
+.sa-page .f-hero .badge .b-mo{display:none}
+
+/* --- десктоп и планшет в горизонтали (от 901 px) --- */
+@media (min-width:901px){
+  .sa-page .f-hero{
+    min-height:100vh;min-height:100svh;
+    align-items:stretch;
+    padding:calc(clamp(68px,6vw,115px) + clamp(14px,3.2svh,40px)) 0 clamp(18px,3.2svh,36px);
+  }
+  /* фото лежит внутри .hero-copy, но позиционируется от всего первого экрана */
+  .sa-page .f-hero .wrap{position:static;z-index:auto;display:flex;flex-direction:column;align-items:flex-start;gap:0;flex:1 1 auto}
+  .sa-page .f-hero .hero-copy,.sa-page .f-hero .sa-hero-more{display:contents}
+  .sa-page .f-hero .hero-copy>:not(.hero-media),.sa-page .f-hero .sa-hero-more>*{position:relative;z-index:2}
+  .sa-page .f-crumbs{margin:0 0 clamp(10px,2.2svh,24px)}
+  .sa-page .f-hero .badge{margin-top:auto;min-height:clamp(36px,5svh,43px)}
+  .sa-page .f-hero h1{
+    font-size:clamp(40px,min(4.4vw,7.3svh),84px);line-height:1.04;
+    margin:clamp(16px,2.8svh,34px) 0 clamp(14px,2.4svh,28px);
+  }
+  .sa-page .f-hero p.lead{max-width:min(780px,58vw);font-size:clamp(16px,min(1.05vw,2.15svh),20px);line-height:1.55}
+  .sa-page .hero-ctas{margin-top:clamp(20px,3.6svh,44px)}
+  .sa-page .f-hero .btn-lg{height:clamp(52px,min(4vw,7.6svh),77px)}
+  .sa-page .sa-trust{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:clamp(14px,2.2svh,26px);max-width:min(820px,56vw)}
+  /* три пункта — строкой внизу первого экрана */
+  .sa-page .sa-hero-list{
+    margin-top:auto;padding-top:clamp(18px,3svh,36px);
+    width:min(1440px,100% - 140px);max-width:none;
+    grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(20px,2.2vw,44px);
+  }
+  /* высота пункта — не меньше трёх строк: пока грузится Inter, запасной шрифт может перенести строку иначе,
+     и без запаса первый экран сдвигался бы при подмене шрифта (CLS) */
+  .sa-page .sa-hero-list li{
+    padding:clamp(12px,1.8svh,18px) 0 0 28px;border-top:1px solid rgba(255,255,255,.14);
+    font-size:clamp(14px,min(.95vw,2svh),17px);line-height:1.45;color:#c4c4cc;
+    min-height:calc(clamp(12px,1.8svh,18px) + 3*1.45em);
+  }
+  .sa-page .sa-hero-list li::before{top:calc(clamp(12px,1.8svh,18px) + .42em)}
+}
+/* низкие экраны ноутбуков (1280×720 с панелями браузера и т. п.) */
+@media (min-width:901px) and (max-height:640px){
+  .sa-page .f-crumbs{display:none}
+  .sa-page .f-hero h1{font-size:clamp(38px,min(4.4vw,7svh),84px)}
+  .sa-page .f-hero p.lead{max-width:min(820px,62vw)}
+}
+
+/* --- телефоны и планшеты в вертикали (до 900 px): фото занимает всё место над текстом, текст и кнопки — у нижнего края экрана --- */
+@media (max-width:900px){
+  .sa-page .f-hero{display:block;min-height:0;padding:0 0 clamp(36px,8vw,64px)}
+  .sa-page .f-hero .wrap{margin-top:0}
+  .sa-page .f-hero .hero-copy{
+    min-height:100vh;min-height:100svh;
+    display:flex;flex-direction:column;align-items:flex-start;
+    padding:68px 0 clamp(14px,2.6svh,22px);
+  }
+  .sa-page .f-hero .hero-media{
+    position:relative;inset:auto;flex:1 1 auto;align-self:stretch;width:auto;aspect-ratio:auto;
+    min-height:clamp(120px,22svh,220px);
+    margin:0 calc(-1*var(--pad)) calc(-1*clamp(40px,7svh,64px));
+  }
+  .sa-page .f-hero .hero-media::after{height:100%;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 46%,rgba(0,0,0,.55) 70%,rgba(0,0,0,.92) 90%,#000 100%)}
+  .sa-page .f-hero .f-hero-img{object-position:78% 28%}
+  .sa-page .f-hero .hero-copy>:not(.hero-media){position:relative;z-index:1}
+  .sa-page .f-hero .badge{min-height:0;padding:7px 13px;font-size:11px;letter-spacing:.08em}
+  .sa-page .f-hero h1{font-size:clamp(30px,min(9.4vw,5.9svh),46px);line-height:1.05;margin:clamp(12px,2.2svh,18px) 0 clamp(10px,1.8svh,16px)}
+  .sa-page .f-hero p.lead{font-size:clamp(14px,min(4vw,2.45svh),16px);line-height:1.5;color:#b9b9c2}
+  .sa-page .hero-ctas{margin-top:clamp(16px,2.8svh,24px);gap:10px}
+  .sa-page .hero-ctas .btn{height:clamp(48px,7.6svh,56px);font-size:16px}
+  .sa-page .sa-hero-more{padding-top:clamp(8px,2vw,16px)}
+  .sa-page .sa-trust{margin:0 0 22px}
+  .sa-page .sa-hero-list{margin:0}
+}
+@media (min-width:761px) and (max-width:900px){
+  .sa-page .f-hero p.lead{max-width:calc(100% - 90px)}
+}
+@media (max-width:760px){
+  .sa-page .f-hero .f-hero-img{object-position:50% 24%}
+  .sa-page .hero-ctas{width:100%}
+  .sa-page .hero-ctas .btn{width:100%}
+  /* короткое описание на телефоне: полный текст остаётся в коде и на компьютере */
+  .sa-page .f-hero .lead-x{display:none}
+}
+@media (max-width:520px){
+  .sa-page .f-hero .badge .b-full{display:none}
+  .sa-page .f-hero .badge .b-mo{display:inline}
 }</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, {"@type": "ListItem", "position": 2, "name": "Санитарный аудит (СЭС-аудит)", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/"}]}, {"@type": "Service", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/#service", "name": "Санитарный аудит (СЭС-аудит)", "alternateName": ["СЭС-аудит", "Санитарно-эпидемиологический аудит"], "serviceType": "Санитарный аудит (СЭС-аудит) по СанПиН и проверочным листам Роспотребнадзора", "description": "Санитарный аудит (СЭС-аудит) в Москве и области по СанПиН 2026 года и проверочным листам Роспотребнадзора: смывы и пробы воздуха, акт с реестром нарушений и планом устранения. От 9 000 ₽.", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/", "provider": {"@type": "Organization", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org", "name": "ПЕСТКОНТРОЛЬ Центр", "legalName": "ООО «Центр дезинфекционных услуг»", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/", "telephone": "+7 495 104-35-70", "email": "b2b@pestcontrol-center.ru"}, "areaServed": [{"@type": "City", "name": "Москва"}, {"@type": "AdministrativeArea", "name": "Московская область"}], "audience": {"@type": "BusinessAudience", "audienceType": "Рестораны и кафе, магазины и торговые сети, пищевые и фармацевтические производства, склады, гостиницы"}, "offers": {"@type": "AggregateOffer", "priceCurrency": "RUB", "lowPrice": 9000, "description": "Стоимость зависит от вида и площади объекта; смывы и пробы воздуха входят в стоимость аудита"}}, {"@type": "WebPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/#webpage", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/", "name": "Санитарный аудит (СЭС-аудит) в Москве и МО — ПЕСТКОНТРОЛЬ Центр", "description": "Санитарный аудит (СЭС-аудит) в Москве и области по СанПиН 2026 года и проверочным листам Роспотребнадзора: смывы и пробы воздуха, акт с реестром нарушений и планом устранения. От 9 000 ₽.", "inLanguage": "ru", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "Марианна Семерина", "jobTitle": "Санитарный врач"}, "about": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/#service"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/san-hero.webp", "width": 1920, "height": 1072}}, {"@type": "FAQPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sanitarnyy-audit/#faq", "mainEntity": [{"@type": "Question", "name": "Что такое СЭС-аудит?", "acceptedAnswer": {"@type": "Answer", "text": "Это добровольная проверка предприятия на соответствие санитарным нормам, которую проводит независимый специалист до прихода Роспотребнадзора. По итогам вы получаете акт с нарушениями и планом их устранения; штрафов и предписаний аудит не влечёт. Название осталось от санитарно-эпидемиологических станций (СЭС), функции которых сегодня выполняет Роспотребнадзор."}}, {"@type": "Question", "name": "Обязателен ли санитарный аудит?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Обязателен производственный контроль: его проводят сами предприниматели и юридические лица (ст. 11 и 32 Федерального закона № 52-ФЗ). Аудит показывает, как этот контроль работает на деле."}}, {"@type": "Question", "name": "Чем санитарный аудит отличается от проверки Роспотребнадзора?", "acceptedAnswer": {"@type": "Answer", "text": "Аудит проводит приглашённый специалист по вашему заказу, проверку — инспектор по основаниям 248-ФЗ. После аудита остаются акт и план устранения, после проверки — акт, а при нарушениях — предписание и протокол. Результаты аудита видит только заказчик."}}, {"@type": "Question", "name": "Сколько стоит санитарный аудит в Москве?", "acceptedAnswer": {"@type": "Answer", "text": "От 9 000 ₽ за кафе без кухни до 20 000 ₽ и выше за пищевое производство; смывы и пробы воздуха входят в стоимость. Точную сумму называем после короткого разговора о площади и виде деятельности."}}, {"@type": "Question", "name": "Сколько длится аудит?", "acceptedAnswer": {"@type": "Answer", "text": "Выезд занимает от 2 до 6 часов в зависимости от площади и числа зон, смену при этом не останавливаем. Акт с протоколами лабораторных исследований передаём через 3 рабочих дня."}}, {"@type": "Question", "name": "Какие документы подготовить к аудиту?", "acceptedAnswer": {"@type": "Answer", "text": "Программу производственного контроля; договоры на вывоз отходов, дезинфекцию, дезинсекцию и дератизацию, стирку санитарной одежды и лабораторные исследования; личные медицинские книжки; журналы (температура холодильников, бракераж, здоровье персонала, пест-контроль); протоколы лабораторных исследований; документы ХАССП. Если чего-то нет, это тоже результат аудита. Полный перечень по видам объектов — на странице «Документы для Роспотребнадзора»."}}, {"@type": "Question", "name": "Нужно ли менять программу производственного контроля после 1 сентября 2026 года?", "acceptedAnswer": {"@type": "Answer", "text": "Да, если она ссылается на отменённые СанПиН 2.3/2.4.3590-20, СП 2.3.6.3668-20, СП 2.1.3678-20 или СП 2.2.3670-20. С 1 сентября 2026 года действуют новые правила, и Центр гигиенического образования населения Роспотребнадзора напоминает: «Не забудьте внести изменения в программу производственного контроля»."}}, {"@type": "Question", "name": "Гарантируете, что проверка пройдёт без штрафов?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, и честный подрядчик такого не обещает: решение принимает инспектор, а проверка не ограничивается вопросами проверочного листа. Аудит снижает риск: нарушения, которые вы устранили заранее, инспектор уже не найдёт."}}, {"@type": "Question", "name": "Проверяете ли вы по проверочным листам Роспотребнадзора?", "acceptedAnswer": {"@type": "Answer", "text": "Да. С октября 2026 года действуют новые формы (приказы Роспотребнадзора от 20.07.2026 № 578 и № 580): в листе для общепита 142 вопроса, для торговли пищевой продукцией — 181. Мы проходим лист вашего вида деятельности и добавляем требования, которые инспектор вправе проверить сверх него."}}, {"@type": "Question", "name": "Делаете ли вы лабораторные исследования?", "acceptedAnswer": {"@type": "Answer", "text": "Да, смывы и пробы воздуха входят в стоимость аудита. Во время выезда отбираем смывы с рабочих поверхностей, оборудования, инвентаря и рук персонала и пробы воздуха в помещениях. Протоколы прикладываем к акту и сверяем с планом лабораторных исследований из вашей программы производственного контроля."}}, {"@type": "Question", "name": "Засчитывается ли стоимость аудита, если потом заключить договор на пест-контроль?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Если после аудита вы заключаете с нами договор на пест-контроль, стоимость аудита засчитываем в счёт оплаты обслуживания."}}, {"@type": "Question", "name": "Можно ли провести аудит сети магазинов или ресторанов?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Проверяем объекты по одному чек-листу и сводим результаты в общую таблицу, чтобы были видны нарушения, которые повторяются по всей сети."}}, {"@type": "Question", "name": "Работаете ли вы с частными лицами?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Санитарный аудит проводим для организаций и ИП в Москве и Московской области."}}]}]}</script>
 <style data-fx>
@@ -278,23 +369,25 @@
 
 <main id="main" tabindex="-1">
 <section class="hero f-hero" id="hero">
-  <div class="hero-media"><picture><source media="(max-width:760px)" srcset="../img/san-hero-mob-760.webp 760w, ../img/san-hero-mob.webp 1024w" sizes="100vw" width="1024" height="768"><img class="f-hero-img" src="../img/san-hero.webp" srcset="../img/san-hero-1440.webp 1440w, ../img/san-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="Санитарный врач с планшетом проверяет термометром температуру в холодильнике на кухне ресторана" fetchpriority="high" decoding="async"></picture><div class="fx-lit" aria-hidden="true"><picture><source media="(max-width:760px)" srcset="../img/san-hero-mob-760.webp 760w, ../img/san-hero-mob.webp 1024w" sizes="100vw" width="1024" height="768"><img class="f-hero-img fx-lit-img" src="../img/san-hero.webp" srcset="../img/san-hero-1440.webp 1440w, ../img/san-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="" decoding="async"></picture></div></div>
   <div class="wrap">
     <div class="hero-copy">
+      <div class="hero-media"><picture><source media="(max-width:760px)" srcset="../img/san-hero-mob-760.webp 760w, ../img/san-hero-mob.webp 1024w" sizes="100vw" width="1024" height="768"><img class="f-hero-img" src="../img/san-hero.webp" srcset="../img/san-hero-1440.webp 1440w, ../img/san-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="Санитарный врач с планшетом проверяет термометром температуру в холодильнике на кухне ресторана" fetchpriority="high" decoding="async"></picture><div class="fx-lit" aria-hidden="true"><picture><source media="(max-width:760px)" srcset="../img/san-hero-mob-760.webp 760w, ../img/san-hero-mob.webp 1024w" sizes="100vw" width="1024" height="768"><img class="f-hero-img fx-lit-img" src="../img/san-hero.webp" srcset="../img/san-hero-1440.webp 1440w, ../img/san-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="" decoding="async"></picture></div></div>
       <nav class="f-crumbs" aria-label="Навигационная цепочка" data-h><a href="../">Главная</a><span aria-hidden="true">→</span><span aria-current="page">Санитарный аудит (<span class="nw">СЭС-аудит</span>)</span></nav>
-      <span class="badge" data-h><span class="dot"></span>Для организаций · Москва и Московская область</span>
+      <span class="badge" data-h><span class="dot"></span><span class="b-txt">Для организаций · Москва и <span class="b-full">Московская область</span><span class="b-mo">МО</span></span></span>
       <h1><span class="ln"><span>Санитарный аудит</span></span> <span class="ln"><span><em>(<span class="nw">СЭС-аудит</span>)</em></span></span> <span class="ln"><span>предприятия</span></span></h1>
-      <p class="lead" data-h>Проверяем объект так же, как это сделает инспектор Роспотребнадзора: по проверочным листам, обновлённым в октябре 2026 года, и по новым СанПиН. В акте — что нарушено, каким пунктом это установлено и что исправить в первую очередь.</p>
+      <p class="lead" data-h>Проверяем объект так же, как это сделает инспектор Роспотребнадзора: по проверочным листам<span class="lead-x">, обновлённым в октябре 2026 года,</span> и по новым СанПиН.<span class="lead-x"> В акте — что нарушено, каким пунктом это установлено и что исправить в первую очередь.</span></p>
+      <div class="hero-ctas" data-h>
+        <a href="#zayavka" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Рассчитать стоимость аудита</span></a>
+        <a href="tel:+74951043570" class="btn btn-o btn-lg" data-magnet><span class="btn-t">+7 (495) <span class="nw">104-35-70</span></span></a>
+      </div>
+    </div>
+    <div class="sa-hero-more">
+      <p class="sa-trust"><span>Лицензия на дезинфекционную деятельность <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211" target="_blank" rel="noopener">№ Л064-00111-77/01942445</a></span><span>Смывы и пробы воздуха входят в стоимость&nbsp;· Акт через 3 рабочих дня</span></p>
       <ul class="sa-hero-list">
         <li>Проверочный лист вашего вида деятельности: общепит, торговля, гостиница, условия труда</li>
         <li>Реестр нарушений с фото, пунктом нормы, уровнем риска и сроком устранения</li>
         <li>Дератизацию и дезинсекцию проверяем глубже всего — это наша основная работа</li>
       </ul>
-      <div class="hero-ctas" data-h>
-        <a href="#zayavka" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Рассчитать стоимость аудита</span></a>
-        <a href="tel:+74951043570" class="btn btn-o btn-lg" data-magnet><span class="btn-t">+7 (495) <span class="nw">104-35-70</span></span></a>
-      </div>
-      <p class="sa-trust"><span>Лицензия на дезинфекционную деятельность <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211" target="_blank" rel="noopener">№ Л064-00111-77/01942445</a></span><span>Смывы и пробы воздуха входят в стоимость&nbsp;· Акт через 3 рабочих дня</span></p>
     </div>
   </div>
 </section>
