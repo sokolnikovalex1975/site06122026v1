@@ -14,8 +14,12 @@ materialy/programma-proizvodstvennogo-kontrolya-haccp/ (решение влад�
     python3 tools/razrabotka-ppk/build_page.py
     python3 tools/site/build_site.py
 
+Опросный лист заказчика (блок #oprosnyy-list, онлайн-форма и два PDF) собирается из tools/razrabotka-ppk/oprosnyy:
+content.py — вопросы, build_pdf.py — PDF, block.py — блок и форма (метка <!--OPROSNYY--> в main.html).
+
 Цели Метрики: заявка — «audit», как на всех страницах (app.js); клик по образцу ППК — «ppk_obrazets»,
-как на странице образца ППК (атрибут data-dl="obrazets"). Новых целей нет.
+как на странице образца ППК (атрибут data-dl="obrazets"). Опросный лист (08.11.2026): отправлен онлайн —
+«audit» и «ppk_oprosnyy_send», скачан PDF — «ppk_oprosnyy_ppk» и «ppk_oprosnyy_haccp» (data-dl).
 Счётчики (Метрика, UIS, Radist) в репозиторий не кладутся — их добавляет tools/site/build_prod.py
 в версию для Timeweb, как и на остальных страницах.
 """
@@ -27,7 +31,10 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / 'tools' / 'legal'))
+sys.path.insert(0, str(HERE / 'oprosnyy'))
 from typo import typo  # noqa: E402  неразрывные пробелы после коротких слов, как на остальных страницах
+import block as oprosnyy  # noqa: E402  опросный лист заказчика: блок на странице и онлайн-форма
+from content import PROGRAMS as OL_PROGRAMS  # noqa: E402
 
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 SLUG = 'razrabotka-ppk/'
@@ -57,7 +64,19 @@ FAQ = [
      'называем её до начала работы. Для сети считаем по количеству и типам объектов.'),
     ('Сколько времени занимает разработка ППК?',
      'ППК — 1 рабочий день, ППК по ХАССП — 3 рабочих дня. Срок считаем с момента, когда получили сведения '
-     'об объекте, а если нужен выезд — после выезда. Для сети объектов срок называем при расчёте.'),
+     'об объекте — заполненный <a href="#oprosnyy-list">опросный лист</a>, а если нужен выезд — после выезда. '
+     'Для сети объектов срок называем при расчёте.'),
+    ('Что нужно для разработки ППК?',
+     'Сведения об объекте: реквизиты и адрес, виды деятельности, площадь и помещения, персонал по должностям, '
+     'водоснабжение, канализация и вентиляция, оборудование, отходы, договоры на дезинсекцию и дератизацию и '
+     'с лабораторией, действующая программа и предписания, если были. Всё это собрано в '
+     '<a href="#oprosnyy-list">опросном листе заказчика</a> — его можно заполнить онлайн на этой странице или в PDF. '
+     'Из документов пригодятся план помещений, штатное расписание и перечень оборудования, но начать можно и без них.'),
+    ('Какие сведения нужны для ППК по ХАССП?',
+     'Всё, что для ППК, и сведения о продукции и технологии: ассортимент или меню, объём выпуска, основное сырьё, '
+     'сроки годности и хранение, операции от приёмки сырья до выдачи, тепловая обработка и охлаждение, цеха, '
+     'холодильное оборудование и действующие документы ХАССП. По ним составляют блок-схемы процессов и определяют '
+     'критические контрольные точки (ТР ТС 021/2011, ст. 10–11). В опросном листе это разделы 5 и 6.'),
     ('Нужно ли согласовывать ППК с Роспотребнадзором?',
      'Нет. По СП 1.1.1058-01 программу утверждает руководитель организации, ИП или уполномоченное лицо (п. 2.6), '
      'согласование с Роспотребнадзором не предусмотрено. При проверке инспектор смотрит и саму программу, '
@@ -88,7 +107,8 @@ FAQ = [
      'Измерения недавней специальной оценки условий труда можно использовать, если они проведены не раньше чем '
      'за шесть месяцев (ст. 32 Федерального закона № 52-ФЗ, п. 1.1).'),
     ('Можно ли разработать ППК без выезда на объект?',
-     'Да, ППК обычно разрабатываем по анкете, планировке и фотографиям помещений. Для ППК по ХАССП нужно разобрать '
+     'Да, ППК обычно разрабатываем по <a href="#oprosnyy-list">опросному листу</a>, планировке и фотографиям помещений. '
+     'Для ППК по ХАССП нужно разобрать '
      'технологические процессы, поэтому нужен ли выезд специалиста, согласуем при расчёте.'),
     ('Нужна ли отдельная ППК для каждого объекта сети?',
      'Программа должна описывать конкретный объект: его помещения, точки отбора проб и ответственных '
@@ -188,17 +208,26 @@ def json_ld():
               'priceSpecification': {'@type': 'PriceSpecification', 'minPrice': 5900, 'priceCurrency': 'RUB'},
               'description': ('Для объектов, где не изготавливают пищевую продукцию: офисы, склады, магазины без '
                               'собственного производства, гостиницы без ресторана. Срок — 1 рабочий день после '
-                              'получения сведений об объекте; лабораторные исследования в стоимость не входят')},
+                              'получения сведений об объекте (опросный лист заказчика); лабораторные исследования '
+                              'в стоимость не входят')},
              {'@type': 'Offer', 'name': 'Разработка ППК по ХАССП',
               'priceSpecification': {'@type': 'PriceSpecification', 'minPrice': 19900, 'priceCurrency': 'RUB'},
               'description': ('Для пищевых производств, ресторанов и кафе, магазинов с кулинарией или пекарней: ППК '
-                              'с процедурами ХАССП. Срок — 3 рабочих дня после получения сведений об объекте; '
-                              'лабораторные исследования в стоимость не входят')}]},
+                              'с процедурами ХАССП. Срок — 3 рабочих дня после получения сведений об объекте '
+                              '(опросный лист заказчика с разделами о продукции и технологии); лабораторные '
+                              'исследования в стоимость не входят')}]},
         {'@type': 'WebPage', '@id': URL + '#webpage', 'url': URL, 'name': TITLE, 'description': DESC, 'inLanguage': 'ru',
          'datePublished': DATE, 'dateModified': DATE, 'author': AUTHOR,
          'about': [{'@id': URL + '#service'}, {'@id': URL + '#ppk'}],
+         'hasPart': [{'@id': URL + '#oprosnyy-' + k} for k in OL_PROGRAMS],
          'primaryImageOfPage': {'@type': 'ImageObject', 'url': SITE + 'img/rppk-hero.webp', 'width': 1920, 'height': 1072}},
         term,
+        *[{'@type': 'DigitalDocument', '@id': URL + '#oprosnyy-' + k, 'name': P['title'], 'url': URL + P['file'],
+           'encodingFormat': 'application/pdf', 'inLanguage': 'ru', 'datePublished': DATE,
+           'description': ('Опросный лист заказчика: сведения об объекте, по которым разрабатываем '
+                           + P['short'] + (' — с разделами о продукции и технологических процессах' if k == 'haccp' else '')
+                           + '. Заполняется онлайн на странице или в PDF.'),
+           'publisher': {'@id': SITE + '#org'}, 'isPartOf': {'@id': URL + '#webpage'}} for k, P in OL_PROGRAMS.items()],
         {'@type': 'FAQPage', '@id': URL + '#faq', 'mainEntity': [
             {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': plain(a)}} for q, a in FAQ]},
     ]
@@ -250,6 +279,7 @@ def main():
     # ---------------- содержимое
     main = (HERE / 'main.html').read_text(encoding='utf-8')
     main = main.replace('<!--FAQ-->', faq_section())
+    main = main.replace('<!--OPROSNYY-->\n', oprosnyy.section_html())
     main = typeset(main)
     main = main.replace('href="LICENSE_URL"', f'href="{LICENSE_URL}"')
     main = re.sub(r'<!--ICON:([a-z-]+)-->', lambda m: icons[m.group(1)], main)
@@ -281,7 +311,8 @@ def main():
                "var g=document.getElementById('f-goal');if(g)g.value=b.getAttribute('data-goal');});\n"
                "/* клик по образцу ППК — цель Метрики ppk_obrazets, как на странице образца */\n"
                "document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-dl]');if(!a)return;"
-               "try{if(window.ym)ym(113675622,'reachGoal','ppk_'+a.getAttribute('data-dl'))}catch(_){}});</script>\n")
+               "try{if(window.ym)ym(113675622,'reachGoal','ppk_'+a.getAttribute('data-dl'))}catch(_){}});</script>\n"
+               + oprosnyy.FORM_JS)
 
     html = (head + '<style>' + css + '</style>\n' + json_ld() + '\n' + top + main + bottom + page_js + '\n'
             + loader + form_js + '</body>\n</html>\n')

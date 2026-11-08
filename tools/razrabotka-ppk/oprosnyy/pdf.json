@@ -1,0 +1,54 @@
+{
+ "ppk": {
+  "file": "oprosnyy-list-ppk.pdf",
+  "pages": 3,
+  "bytes": 261718,
+  "title": "Опросный лист для разработки программы производственного контроля (ППК)",
+  "thumbs": [
+   [
+    "oprosnyy-ppk-p1-240.webp",
+    10606,
+    240,
+    340
+   ],
+   [
+    "oprosnyy-ppk-p1-360.webp",
+    21174,
+    360,
+    509
+   ],
+   [
+    "oprosnyy-ppk-p1-720.webp",
+    60848,
+    720,
+    1019
+   ]
+  ]
+ },
+ "haccp": {
+  "file": "oprosnyy-list-ppk-po-haccp.pdf",
+  "pages": 4,
+  "bytes": 301235,
+  "title": "Опросный лист для разработки программы производственного контроля по ХАССП",
+  "thumbs": [
+   [
+    "oprosnyy-haccp-p1-240.webp",
+    10778,
+    240,
+    340
+   ],
+   [
+    "oprosnyy-haccp-p1-360.webp",
+    21800,
+    360,
+    509
+   ],
+   [
+    "oprosnyy-haccp-p1-720.webp",
+    62650,
+    720,
+    1019
+   ]
+  ]
+ }
+}
