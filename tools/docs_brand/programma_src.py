@@ -6,6 +6,9 @@
                                                           (шапка с телефоном и сайтом, водяной знак — как у образца)
     python3 tools/docs_brand/programma_src.py --check   → печать образца из programma_html.py и сверка
                                                           с src/obrazets-programmy-pest-kontrolya.pdf (текст и картинка страниц)
+    python3 tools/docs_brand/programma_src.py --sample  → src/obrazets-programmy-pest-kontrolya.pdf заново из programma_html.py
+                                                          (после правки текста образца), затем brand_pdf.py programma и снова
+                                                          programma_src.py (шаблон сверяется с новым образцом)
 
 Правило владельца: пустые шаблоны и заполненные образцы на сайте — один макет, шаблон без записей и только в PDF
 (08.11.2026 шаблон Word программы на странице заменён этим PDF). Исходник — HTML образца (programma_html.py).
@@ -158,8 +161,29 @@ def check_sample():
     print('programma_html.py печатается так же, как src/obrazets-programmy-pest-kontrolya.pdf (6 стр.)')
 
 
+SAMPLE_TITLE = 'Образец программы пест-контроля на предприятии — ПЕСТКОНТРОЛЬ Центр'
+SAMPLE_SUBJECT = 'Типовая программа пест-контроля (ПОПМ / PRP) и управления пест-риском по системе IPM и ХАССП'
+
+
+def build_sample():
+    """src образца из programma_html.py (после правки текста образца, 09.11.2026): затем brand_pdf.py programma."""
+    with tempfile.TemporaryDirectory() as t:
+        raw = pathlib.Path(t) / 'raw.pdf'
+        render(sample_html(), raw)
+        d = fitz.open(raw)
+        assert len(d) == 6, f'образец: {len(d)} стр., ожидалось 6'
+        d.set_metadata({'title': SAMPLE_TITLE, 'subject': SAMPLE_SUBJECT, 'author': 'ПЕСТКОНТРОЛЬ Центр', 'keywords': '',
+                        'creator': 'ПЕСТКОНТРОЛЬ Центр · пестконтроль-центр.рф', 'producer': 'ПЕСТКОНТРОЛЬ Центр'})
+        d.save(SRC_SAMPLE, garbage=4, deflate=True)
+    print(SRC_SAMPLE.relative_to(HERE.parents[1]), SRC_SAMPLE.stat().st_size, 'байт')
+
+
 def main():
     if '--check' in sys.argv:
+        check_sample()
+        return
+    if '--sample' in sys.argv:
+        build_sample()
         check_sample()
         return
     with tempfile.TemporaryDirectory() as t:

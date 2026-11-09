@@ -37,7 +37,7 @@
 | `/farmatsevticheskie-proizvodstva/` | Пест-контроль фармацевтического производства по GMP (на сайте с 06.11.2026) |
 | `/sklady-i-logistika/` | Пест-контроль для складов и логистики (на сайте с 06.11.2026) |
 | `/materialy/` | Материалы о пест-контроле для предприятий |
-| `/materialy/programma-pest-kontrolya/` | Программа пест-контроля: образец и пустой шаблон в PDF (шаблон Word снят 08.11.2026) |
+| `/materialy/programma-pest-kontrolya/` | Программа пест-контроля: образец и пустой шаблон в PDF (шаблон Word снят 08.11.2026); формула пест-риска по СТО 55003215.002-2015 со шкалой от 0 до 1 (09.11.2026) |
 | `/materialy/zhurnal-pest-kontrolya/` | Журнал пест-контроля: образец заполнения и шаблон (PDF) |
 | `/materialy/pest-menedzhment-ili-razovaya-obrabotka/` | Пест-менеджмент или разовая обработка |
 | `/razrabotka-ppk/` | Разработка программы производственного контроля (ППК) и ППК по ХАССП — одна страница услуги: ППК от 5 900 ₽ за 1 рабочий день, ППК по ХАССП для объектов, где изготавливают пищевую продукцию, — от 19 900 ₽ за 3 рабочих дня (на сайте с 08.11.2026; эта версия — с 02:14 МСК) |
@@ -136,6 +136,9 @@ python3 tools/site/build_site.py
 
 Исходники для правок: `style.css`, `app.js`, HTML страниц. Генераторы отдельных страниц (`tools/food/`, `tools/dezinsektsiya/`, `tools/farma/`,
 `tools/magaziny-i-torgovye-seti/`, `tools/zhurnal/`, `tools/build_programma.py`, `tools/ppk/build_ppk.py`) — после них снова запустите `tools/site/build_site.py`.
+`tools/build_programma.py` отстаёт от страницы программы пест-контроля (например, в нём нет ссылки на образец ППК в блоке ссылок
+внизу): правки 09.11.2026 в нём повторены, но страницу правьте в `materialy/programma-pest-kontrolya/index.html`, а генератор
+без сверки `git diff` не запускайте — он откатит поздние правки.
 Страницы гостиниц, санитарного аудита, складов (`tools/sklady/assemble.py`), дезинфекции (`tools/dezinfektsiya/build_page.py`)
 и раздела «Нормативная база» (`tools/normativnaya-baza/build_pages.py`) `build_site.py` собирает сам.
 
@@ -344,7 +347,7 @@ python3 tools/qa/check_live.py           # без пересборки исхо�
 
 | Документ | Шапка | Как собирается |
 |---|---|---|
-| `materialy/programma-pest-kontrolya/obrazets-programmy-pest-kontrolya.pdf` (6 стр.) | полная — стр. 1, 3, 5 (начало программы и приложений), компактная строка с телефоном и сайтом — стр. 2, 4, 6 | `brand_pdf.py` |
+| `materialy/programma-pest-kontrolya/obrazets-programmy-pest-kontrolya.pdf` (6 стр.) | полная — стр. 1, 3, 5 (начало программы и приложений), компактная строка с телефоном и сайтом — стр. 2, 4, 6 | `programma_src.py --sample` → `brand_pdf.py programma` |
 | `materialy/programma-pest-kontrolya/shablon-programmy-pest-kontrolya.pdf` (6 стр., с 08.11.2026 вместо Word) | как у образца программы: полная — стр. 1, 3, 5, компактная — стр. 2, 4, 6 | `programma_src.py` → `brand_pdf.py shablon` |
 | `dogovor-deratizatsiya-dezinsektsiya/obrazets-dogovora-pestkontrol-tsentr.pdf` (6 стр.) | полная — стр. 1, 5, 6 (договор и приложения), компактная — стр. 2–4 | `brand_pdf.py` |
 | `materialy/programma-proizvodstvennogo-kontrolya-haccp/obrazets-…pdf` (27 стр.) | полная на титуле, колонтитул с телефоном и сайтом на стр. 2–27 | `tools/ppk/sample/build_sample.py` |
@@ -366,11 +369,16 @@ python3 tools/qa/check_live.py           # без пересборки исхо�
   таблицы и высота строк как у образца. Пусто: п. 2.3 (виды и зоны; группы вредителей остаются), матрица Приложения № 1 (6 строк
   без кодов A_1…F_6), реестр Приложения № 2 (категории средств остаются), даты «20__ г.»; в колонтитуле «Шаблон программы…».
   Результат — `src/shablon-programmy-pest-kontrolya.pdf`, оформление — `brand_pdf.py shablon`. `--check` — сверка печати образца.
+  `--sample` (с 09.11.2026) — после правки текста образца в `programma_html.py`: заново `src/obrazets-programmy-pest-kontrolya.pdf`
+  (печать Chromium, метаданные образца) и сразу `--check`; затем `brand_pdf.py programma`, снова `programma_src.py` и `brand_pdf.py shablon`.
 - `brand_docx.py` — шаблон Word программы из `src/shablon-programmy-pest-kontrolya.docx` — только для файлов проекта, на сайте
   его нет с 08.11.2026 (правило владельца: шаблоны и образцы на сайте — один макет и только PDF); результат — во временной папке
-  `/tmp/docs_brand_build/`, проверка — PDF LibreOffice в `/tmp/docs_brand_docx_check.pdf`.
+  `/tmp/docs_brand_build/`, проверка — PDF LibreOffice в `/tmp/docs_brand_docx_check.pdf`. Текст Word правится в самом `src/*.docx`
+  (09.11.2026 — номер СТО 55003215.002-2015 и зона E_5, как в PDF); результат кладётся в файлы проекта «Страница Программа
+  пест-контроля» под именами «Шаблон…» и «Образец… — ПЕСТКОНТРОЛЬ Центр.docx».
 
 ```bash
+NODE_PATH=/home/user/node_modules python3 tools/docs_brand/programma_src.py --sample && NODE_PATH=/home/user/node_modules python3 tools/docs_brand/brand_pdf.py programma   # только если менялся текст образца
 NODE_PATH=/home/user/node_modules python3 tools/docs_brand/programma_src.py && NODE_PATH=/home/user/node_modules python3 tools/docs_brand/brand_pdf.py shablon
 NODE_PATH=/home/user/node_modules python3 tools/docs_brand/brand_pdf.py programma   # и dogovor — только если менялись их src/*.pdf
 ```
