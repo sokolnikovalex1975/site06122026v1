@@ -147,8 +147,10 @@ python3 tools/site/build_prod.py     # версия для Timeweb со счёт
   комментарий и прокручивает к форме (совместимо с Lenis); «Распечатать» печатает только список. С отраслевых страниц ссылка
   ведёт с параметром `?obekt=` (`pishchevoe-proizvodstvo`, `restorany`, `magaziny`, `sklady`, `farmproizvodstvo`, `gostinitsy`,
   `uslugi`, `drugoy`) — конструктор открывается с этим видом объекта.
-- **Цели Метрики (113675622) — создать в интерфейсе Метрики до выкладки:** `dokumenty_spisok` (JavaScript-событие: «Отправить список»
-  и «Распечатать»), `dokumenty_pdf` (скачивание чек-листа, `[data-dl="pdf"]`). Цель формы `audit` и остальные счётчики — без изменений.
+- **Цели Метрики (113675622), созданы 09.11.2026** (тип «Целевое событие», условие «совпадает»): 679884650 «Документы для
+  Роспотребнадзора — список в заявку или печать» — `dokumenty_spisok` («Отправить список» и «Распечатать»); 679884697 «Документы
+  для Роспотребнадзора — скачан чек-лист PDF» — `dokumenty_pdf` (`[data-dl="pdf"]`). Цель формы `audit` и остальные счётчики —
+  без изменений. Без целей в Метрике пока `akt_obrazets` и `akt_shablon` (образец и бланк акта, `[data-dl="akt"]`, `[data-dl="akt-blank"]`).
 - **Чек-лист PDF:** `normativnaya-baza/dokumenty-dlya-rospotrebnadzora/chek-list-dokumentov-dlya-rospotrebnadzora.pdf` (10 страниц,
   316 806 байт), собирается в файлах проекта («Чек-лист PDF/исходники»: `content.py` → `build_checklist.py` → `render.mjs`).
   Данные страницы — из того же `content.py`: `SITE_ROOT=<репозиторий> python3 export_site_json.py` → `data/dokumenty.json`.

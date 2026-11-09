@@ -304,7 +304,7 @@ PAGES = [
                                         'показывает на пронумерованный контейнер для мониторинга грызунов на складе',
         'faq': LISTY_FAQ, 'faq_h2': 'Вопросы <em>о проверочных листах</em>',
         'types': TYPES_LISTY, 'name': 'Проверочные листы 2026', 'comment_ph': 'Комментарий: вид деятельности, дата проверки, что смущает',
-        'date_published': DATE,
+        'date_published': DATE, 'date_modified': '2026-11-09',  # 09.11 — короче вводный абзац
     },
     {
         'src': 'dokumenty.html', 'out': 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html',
@@ -554,8 +554,8 @@ def json_ld(p):
                             'url': SITE + DK.PDF.replace('@/', ''), 'author': AUTHOR, 'publisher': {'@id': SITE + '#org'}}}
     else:
         page = {'@type': 'Article', '@id': url + '#article', 'headline': p['h1'], 'description': p['desc'],
-                'inLanguage': 'ru', 'datePublished': p['date_published'], 'dateModified': DATE, 'author': AUTHOR,
-                'publisher': {'@id': SITE + '#org'}, 'mainEntityOfPage': url, 'image': [hero, image],
+                'inLanguage': 'ru', 'datePublished': p['date_published'], 'dateModified': p.get('date_modified', DATE),
+                'author': AUTHOR, 'publisher': {'@id': SITE + '#org'}, 'mainEntityOfPage': url, 'image': [hero, image],
                 'about': [{'@type': 'Legislation', 'legislationIdentifier': 'Приказ Роспотребнадзора № 578',
                            'legislationDate': '2026-07-20', 'legislationLegalForce': IN, 'url': 'https://base.garant.ru/414956074/'},
                           {'@type': 'Legislation', 'legislationIdentifier': 'Приказ Роспотребнадзора № 580',
