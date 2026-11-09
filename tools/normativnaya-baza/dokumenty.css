@@ -174,21 +174,13 @@
 @media (max-width:1180px){
   /* телефон и планшет (решение владельца 08.11.2026, «вариант 1»): заголовок → фото → кнопки → PDF → абзац-ответ.
      В HTML порядок прежний (абзац сразу после фото) — меняется только показ */
-  .dk-hero .d-btns{order:3}
-  .dk-hero .dk-pdf-line{order:4}
-  .dk-hero p.lead{order:5;margin-top:26px}
-  .dk-hero .nb-byline{order:6}
-  .dk-hero .f-crumbs{order:7}
+  .dk-hero .dk-pdf-line{order:4}  /* общий порядок (кнопки 3, абзац 5, автор 6, крошки 7) — в page.css */
   .dk-hero .d-hero-media::before{background:linear-gradient(0deg,#000 0,rgba(0,0,0,0) 24%)}
 }
 @media (max-width:860px){
-  /* фото 16:9, на низких экранах (iPhone SE, встроенные браузеры) ниже — чтобы обе кнопки были на первом экране */
-  .dk-hero .d-hero-media{aspect-ratio:auto;height:min(56.25vw,calc(100vh - 400px));min-height:140px;max-height:none}
-  @supports (height:100svh){.dk-hero .d-hero-media{height:min(56.25vw,calc(100svh - 400px))}}
-  .dk-hero .d-btns{margin-top:18px}
+  /* высота фото и отступы кнопок и абзаца — общие, в page.css */
   .dk-hero .d-btns .btn{font-size:15px}  /* «Проверить папку с санитарным врачом» — в одну строку от 375 px */
   .dk-hero .dk-pdf-line{margin-top:16px}
-  .dk-hero p.lead{margin-top:24px}
 }
 @media (max-width:374px){
   .dk-hero .d-btns .btn{padding-left:10px;padding-right:10px}

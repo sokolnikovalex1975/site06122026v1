@@ -70,8 +70,9 @@
 .nb-toc a{display:inline-block;padding:9px 16px;border:1px solid var(--line2);border-radius:999px;font-size:14px;color:var(--t2);background:rgba(0,0,0,.45);transition:border-color .2s,color .2s}
 .nb-toc a:hover,.nb-toc a:focus-visible{border-color:var(--acc);color:var(--t1)}
 @media (min-width:1600px){.nb-hero p.lead,.nb-byline{max-width:820px}}
-/* планшет и телефон (до 1180 px): заголовок → фото → текст → кнопки; при наложении текста на фото на этих ширинах
-   люди на снимке уходили бы под текст */
+/* планшет и телефон (до 1180 px): заголовок → фото → кнопки → абзац-ответ (решение владельца 08–09.11.2026, «вариант 1»):
+   обе кнопки на первом экране телефона. При наложении текста на фото на этих ширинах люди на снимке уходили бы под текст.
+   В HTML порядок прежний (абзац сразу после фото) — меняется только показ */
 @media (max-width:1180px){
   .d-hero.nb-hero{display:block;min-height:0;padding:calc(clamp(68px,6vw,115px) + 18px) 0 clamp(32px,6vw,48px)}
   .nb-hero .wrap{display:block}
@@ -82,18 +83,23 @@
   .nb-hero .d-hero-media{order:2;position:relative;inset:auto;aspect-ratio:16/9;max-height:min(560px,52vh);margin:22px calc(var(--pad) * -1) 0}
   .nb-hero .d-hero-media::before{background:linear-gradient(0deg,#000 0,rgba(0,0,0,0) 24%)}
   .nb-hero .d-hero-img{object-position:50% 15%}
-  .nb-hero p.lead{order:3;margin:18px 0 0;max-width:820px}
-  .nb-hero .d-btns{order:4;margin-top:24px}
-  .nb-hero .nb-byline{order:5;max-width:820px}
-  .nb-hero .f-crumbs{order:6;margin:18px 0 0}
+  .nb-hero .d-btns{order:3;margin-top:24px}
+  .nb-hero p.lead{order:5;margin:26px 0 0;max-width:820px}
+  .nb-hero .nb-byline{order:6;max-width:820px}
+  .nb-hero .f-crumbs{order:7;margin:18px 0 0}
   .nb-hero .nb-toc{margin-top:28px}
 }
 @media (max-width:860px){
   .d-hero.nb-hero h1{font-size:clamp(28px,7.8vw,36px);line-height:1.08}
-  .nb-hero .d-hero-media{aspect-ratio:4/3;max-height:min(560px,70vh);margin-top:18px}
+  /* фото 16:9, на низких экранах (iPhone SE, встроенные браузеры) ниже — чтобы обе кнопки были на первом экране;
+     --nb-hero-rsv — место под шапку, заголовок и кнопки (у страниц с длинным заголовком больше) */
+  .nb-hero .d-hero-media{aspect-ratio:auto;height:min(56.25vw,calc(100vh - var(--nb-hero-rsv,400px)));min-height:140px;max-height:none;margin-top:18px}
+  @supports (height:100svh){.nb-hero .d-hero-media{height:min(56.25vw,calc(100svh - var(--nb-hero-rsv,400px)))}}
+  .nb-hub-hero{--nb-hero-rsv:430px}  /* заголовок хаба на 360–375 px — в 5 строк */
   .nb-hero .d-hero-img{object-position:50% 40%}
-  .nb-hero p.lead{margin:14px 0 0;font-size:15px;line-height:1.55;max-width:none}
-  .nb-hero .d-btns{margin-top:22px;gap:10px}
+  .nb-listy-hero .d-hero-img{object-position:50% 12%}  /* на низком фото не срезать головы */
+  .nb-hero p.lead{margin:24px 0 0;font-size:15px;line-height:1.55;max-width:none}
+  .nb-hero .d-btns{margin-top:18px;gap:10px}
   .nb-hero .nb-byline{margin-top:14px}
   .nb-hero .nb-toc{margin-top:26px}
 }
@@ -488,7 +494,7 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
 </nav>
 
 <main id="main" tabindex="-1">
-<section class="d-hero nb-hero" id="hero">
+<section class="d-hero nb-hero nb-listy-hero" id="hero">
   <div class="wrap">
     <div class="d-hero-copy">
       <nav class="f-crumbs" aria-label="Навигационная цепочка" data-h><a href="../../">Главная</a><span aria-hidden="true">→</span><a href="../../normativnaya-baza/">Нормативная база</a><span aria-hidden="true">→</span><span aria-current="page">Проверочные листы 2026</span></nav>
