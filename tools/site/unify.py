@@ -363,10 +363,10 @@ PAGES = {
     'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html': dict(key='dok', root='../../', related=['pl', 'prog', 'zhur', 'san'], strip=(
         'Коротко о документах для Роспотребнадзора', [
             ('lucide-list-checks', '41 документ', '— общий список для любого объекта'),
-            ('lucide-factory', '8 видов объектов', '— свои дополнения'),
+            ('lucide-factory', '15 видов объектов', '— свои дополнения'),
             ('lucide-notebook-pen', 'Кто готовит', '— у каждого документа'),
             ('lucide-clipboard-check', 'Конструктор', '— отметки «Есть», «Нет», «Не нужно»'),
-            ('lucide-file-down', 'Чек-лист PDF', '— 10 страниц'),
+            ('lucide-file-down', 'Чек-лист PDF', '— 14 страниц'),
             ('lucide-clock', '10 рабочих дней', '— при документарной проверке'),
             ('lucide-file-signature', 'Договоры и акты', '— по дезинсекции и дератизации'),
             ('lucide-shield-check', 'Сверка папки', '— бесплатно, дистанционно'),

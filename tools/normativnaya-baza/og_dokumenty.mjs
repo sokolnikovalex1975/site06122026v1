@@ -25,7 +25,7 @@ h1 em{font-style:italic;font-weight:600}
 <div class="k">Нормативная база · чек-лист PDF</div>
 <h1>Документы для Роспотребнадзора: <em>полный перечень для&nbsp;проверки</em></h1>
 <img class="doc" src="${f('img/dok-cover-720.webp')}" alt="">
-<div class="foot"><span>41 общий документ и разделы для 8 видов объектов</span><b>пестконтроль-центр.рф</b></div>
+<div class="foot"><span>41 общий документ и разделы для 15 видов объектов</span><b>пестконтроль-центр.рф</b></div>
 </body></html>`;
 const tmp = '/tmp/dok_og.html';
 fs.writeFileSync(tmp, html);
