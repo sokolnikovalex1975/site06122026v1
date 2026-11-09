@@ -97,6 +97,15 @@ PAGE_NAMES = {
 OURS = '<span class="dk-ours" title="Делаем мы">●<span class="sr-only"> — делаем мы</span></span>'
 
 
+def docs_word(n):
+    """«41 документ», «44 документа», «49 документов»."""
+    if n % 10 == 1 and n % 100 != 11:
+        return 'документ'
+    if n % 10 in (2, 3, 4) and n % 100 not in (12, 13, 14):
+        return 'документа'
+    return 'документов'
+
+
 def esc(s):
     return html.escape(s, quote=False)
 
@@ -170,7 +179,7 @@ def objects():
                 if o['page'] else '')
         panels.append(
             f'      <details class="dk-o" id="obj-{c}" data-obj="{c}"{" open" if i == 0 else ""}>'
-            f'<summary>{esc(o["name"])}<small>{o["count"]} документов</small></summary>'
+            f'<summary>{esc(o["name"])}<small>{o["count"]} {docs_word(o["count"])}</small></summary>'
             f'<div class="dk-o-b" role="tabpanel" aria-labelledby="dk-tab-{c}">'
             f'<div class="dk-o-col"><p class="dk-o-k">Добавьте к общему списку</p>{add}'
             f'<p class="dk-o-k">Проверочный лист</p><p class="dk-o-cl">{esc(o["checklist"])}</p></div>'

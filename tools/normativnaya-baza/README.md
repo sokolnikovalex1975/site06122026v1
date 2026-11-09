@@ -152,7 +152,8 @@ python3 tools/site/build_prod.py     # версия для Timeweb со счёт
 - **Цели Метрики (113675622), созданы 09.11.2026** (тип «Целевое событие», условие «совпадает»): 679884650 «Документы для
   Роспотребнадзора — список в заявку или печать» — `dokumenty_spisok` («Отправить список» и «Распечатать»); 679884697 «Документы
   для Роспотребнадзора — скачан чек-лист PDF» — `dokumenty_pdf` (`[data-dl="pdf"]`). Цель формы `audit` и остальные счётчики —
-  без изменений. Без целей в Метрике пока `akt_obrazets` и `akt_shablon` (образец и бланк акта, `[data-dl="akt"]`, `[data-dl="akt-blank"]`).
+  без изменений. Образец и бланк акта (`[data-dl="akt"]`, `[data-dl="akt-blank"]`) — цели 679900382 «Документы для
+  Роспотребнадзора — скачан образец акта» (`akt_obrazets`) и 679900386 «… — скачан бланк акта» (`akt_shablon`), созданы 09.11.2026.
 - **Чек-лист PDF:** `normativnaya-baza/dokumenty-dlya-rospotrebnadzora/chek-list-dokumentov-dlya-rospotrebnadzora.pdf` (14 страниц,
   411 548 байт), собирается в файлах проекта («Чек-лист PDF/исходники»: `content.py` → `build_checklist.py` → `render.mjs`).
   Данные страницы — из того же `content.py`: `SITE_ROOT=<репозиторий> python3 export_site_json.py` → `data/dokumenty.json`.
@@ -191,5 +192,6 @@ python3 tools/site/build_prod.py     # версия для Timeweb со счёт
 - Файлы: `normativnaya-baza/dokumenty-dlya-rospotrebnadzora/obrazets-akta-dezinsektsii-i-deratizatsii.pdf` и
   `blank-akta-dezinsektsii-i-deratizatsii.pdf` (форма АПК-01, 2 листа: шапка с пестконтроль-центр.рф и телефоном, водяной знак,
   заказчик обезличен) — `tools/akt/build_akt.py`; превью `img/akt-obrazets-p1-360.webp`, `-720.webp`.
-- Цели Метрики: `akt_obrazets` (образец), `akt_shablon` (бланк) — `dokumenty.js`, по `[data-dl="akt"]` и `[data-dl="akt-blank"]`.
+- Цели Метрики: `akt_obrazets` (образец, 679900382), `akt_shablon` (бланк, 679900386) — `dokumenty.js`, по `[data-dl="akt"]`
+  и `[data-dl="akt-blank"]`.
 - Строка перечня, к которой перешли по ссылке `#p3-4` или из поиска по сайту, подсвечивается (`:target` и `.dk-hl`).
