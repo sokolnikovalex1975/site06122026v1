@@ -544,12 +544,13 @@
         <div class="fg">
 <div class="field"><label class="sr-only" for="f-name">Ваше имя</label><input id="f-name" type="text" name="name" placeholder="Ваше имя *" required autocomplete="name"><small class="ferr">Укажите имя</small></div>
 <div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__ *" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>
+<div class="field full"><label class="sr-only" for="f-type">Тип объекта</label><select id="f-type" name="type" required><option value="" disabled selected>Тип объекта *</option><option>Пищевое производство</option><option>Магазин или торговая сеть</option><option>Ресторан или кафе</option><option>Склад, логистика</option><option>Фармацевтическое производство</option><option>Гостиница</option><option>Другое</option></select><small class="ferr">Выберите тип объекта</small></div>
 <div class="field full"><label class="sr-only" for="f-rooms">Номерной фонд</label><select id="f-rooms" name="rooms"><option value="" selected>Номерной фонд</option><option>До 20 номеров</option><option>20–50 номеров</option><option>50–150 номеров</option><option>150–300 номеров</option><option>Больше 300 номеров</option></select></div>
 <div class="field full"><label class="sr-only" for="f-task">Задача</label><select id="f-task" name="task"><option value="" selected>Задача</option><option>Плановое обслуживание по договору</option><option>Срочно: гость пожаловался на клопов</option><option>Тараканы или грызуны на кухне</option><option>Подготовка к проверке Роспотребнадзора</option><option>Другое</option></select></div>
 <div class="field full"><label class="sr-only" for="f-msg">Комментарий</label><textarea id="f-msg" name="comment" placeholder="Комментарий: адрес, ресторан, сроки"></textarea></div>
 <input type="hidden" name="msg" value="">
 <div class="field" hidden><input type="hidden" name="email" value=""></div>
-<div class="field" hidden><input type="hidden" name="type" value="Гостиница"></div>
+
 <input type="hidden" name="page" value="Пест-контроль гостиниц и отелей">
 </div>
         <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Заказать обследование</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>

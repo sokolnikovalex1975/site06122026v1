@@ -12,7 +12,8 @@
   • у обязательного списка (тип или вид объекта — сфера деятельности) « *» добавляется к первому пункту-подсказке:
     «Тип объекта *»;
   • скрытая подпись для экранных дикторов не меняется — они и так объявляют поле обязательным по атрибуту required.
-Какие поля обязательны, не меняется: правило только показывает то, что уже проверяет форма.
+Дополнение владельца: тип объекта обязателен во всех формах. Вместо скрытого фиксированного типа добавляется
+обычный список после телефона; тип не выбирается заранее. Проверка type уже есть в общем JS и send.php.
 Опросный лист на /razrabotka-ppk/ (в <template>, без data-form) не трогается — звёздочки там уже есть в подписях.
 
 Скрипт идемпотентен. Запускается из tools/site/build_site.py после hero_fold.py; та же функция apply() используется
@@ -31,6 +32,28 @@ FIELD_RE = re.compile(r'<input\b[^>]*>|<select\b[^>]*>.*?</select>', re.S)
 REQ_RE = re.compile(r'\srequired(?=[\s>/=])')
 PH_RE = re.compile(r'(\splaceholder=")([^"]*)(")')
 OPT_RE = re.compile(r'(<option\b[^>]*\bvalue=""[^>]*>)([^<]*)(</option>)')
+TYPE_HIDDEN_RE = re.compile(r'<div class="field" hidden><input type="hidden" name="type" value="[^"]*"></div>')
+TYPE_OPTIONS = (
+    'Пищевое производство', 'Магазин или торговая сеть', 'Ресторан или кафе',
+    'Склад, логистика', 'Фармацевтическое производство', 'Гостиница', 'Другое',
+)
+TYPE_FIELD = (
+    '<div class="field full"><label class="sr-only" for="f-type">Тип объекта</label>'
+    '<select id="f-type" name="type" required><option value="" disabled selected>Тип объекта *</option>'
+    + ''.join('<option>' + value + '</option>' for value in TYPE_OPTIONS)
+    + '</select><small class="ferr">Выберите тип объекта</small></div>'
+)
+
+
+def _ensure_type(s):
+    if TYPE_HIDDEN_RE.search(s):
+        s = TYPE_HIDDEN_RE.sub('', s)
+        s, count = re.subn(
+            r'(<div class="field"><label\b[^>]*for="phone"[^>]*>.*?</div>)',
+            lambda m: m.group(0) + '\n' + TYPE_FIELD, s, count=1, flags=re.S,
+        )
+        assert count == 1, 'Не найдена строка телефона для размещения типа объекта'
+    return s
 
 
 def _mark(text):
@@ -45,6 +68,10 @@ def _field(m, n):
     if t.startswith('<input'):
         new = PH_RE.sub(lambda p: p.group(1) + _mark(p.group(2)) + p.group(3), t, count=1)
     else:
+        if re.search(r'\bname="type"', head):
+            # Выбор должен быть самостоятельным, в том числе на странице фармпроизводств.
+            t = re.sub(r'(<option\b[^>]*?)\sselected(?:="[^"]*")?', r'\1', t)
+            t = re.sub(r'(<option\b[^>]*\bvalue=""[^>]*)(>)', r'\1 selected\2', t, count=1)
         new = OPT_RE.sub(lambda p: p.group(1) + _mark(p.group(2)) + p.group(3), t, count=1)
     if new != t:
         n[0] += 1
@@ -58,7 +85,7 @@ def apply(s):
 
     def form(m):
         forms[0] += 1
-        return FIELD_RE.sub(lambda f: _field(f, n), m.group(0))
+        return FIELD_RE.sub(lambda f: _field(f, n), _ensure_type(m.group(0)))
 
     return FORM_RE.sub(form, s), n[0], forms[0]
 
