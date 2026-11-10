@@ -115,6 +115,7 @@ URL = {
     'rest': 'restorany-i-kafe/',
     'san': 'sanitarnyy-audit/',
     'rppk': 'razrabotka-ppk/',
+    'lab': 'laboratornye-issledovaniya/',
     'ppkobr': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',  # та же страница, что 'ppk', — карточка «Образец ППК» для страницы услуги
     'dezinf': 'dezinfektsiya/',
     'nb': 'normativnaya-baza/', 'pl': 'normativnaya-baza/proverochnye-listy/',
@@ -154,6 +155,8 @@ CARD = {
              'ППК под ваш объект — от 5\u00a0900\u00a0₽ за 1 рабочий день, ППК по ХАССП для общепита и пищевых производств — от 19\u00a0900\u00a0₽ за 3 рабочих дня.'),
     'ppkobr': ('Материал', 'Образец ППК по ХАССП',
                'Полная программа для пищевого производства в PDF, 27 страниц, и разбор раздела о дезинсекции и дератизации.'),
+    'lab': ('Услуга', 'Лабораторные исследования',
+            'Смывы, воздух, вода, продукция и замеры по ППК — своя лаборатория, прайс и расчёт онлайн. От 2\u00a0600\u00a0₽.'),
     'san': ('Услуга', 'Санитарный аудит (СЭС-аудит)',
             'Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.'),
     'dezinf': ('Услуга', 'Дезинфекция для организаций',
@@ -370,6 +373,18 @@ PAGES = {
             ('lucide-clock', '10 рабочих дней', '— при документарной проверке'),
             ('lucide-file-signature', 'Договоры и акты', '— по дезинсекции и дератизации'),
             ('lucide-shield-check', 'Сверка папки', '— бесплатно, дистанционно'),
+        ])),
+    # «Лабораторные исследования» (tools/laboratornye-issledovaniya), с 10.11.2026 — превью
+    'laboratornye-issledovaniya/index.html': dict(key='lab', root='../', related=['san', 'rppk', 'dok', 'vent'], strip=(
+        'Коротко о лабораторных исследованиях', [
+            ('lucide-flask-conical', 'Своя лаборатория', '— 14 направлений'),
+            ('lucide-calculator', 'Лабораторный контроль по ППК', '— от 2\u00a0600\u00a0₽'),
+            ('lucide-scan-search', 'Смывы', '— от 310\u00a0₽ за точку'),
+            ('lucide-list-checks', 'Прайс и расчёт', '— онлайн'),
+            ('lucide-map-pinned', 'Отбор проб', '— на вашем объекте'),
+            ('lucide-file-badge', 'Протоколы', '— для папки к проверке'),
+            ('lucide-clipboard-check', 'По плану ППК', '— СП 1.1.1058-01'),
+            ('lucide-factory', 'Наборы', '— по видам объектов'),
         ])),
     'sanitarnyy-audit/index.html': dict(key='san', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
         'Коротко о санитарном аудите', [
