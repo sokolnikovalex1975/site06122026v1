@@ -65,15 +65,18 @@
 .lb-upd{margin:20px 0 0;font-size:14px;line-height:1.6;color:var(--t3)}
 
 /* направления — плитки */
-.lb-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.lb-tile{display:flex;flex-direction:column;gap:8px;padding:clamp(18px,1.6vw,24px);color:var(--t1);transition:border-color .2s,transform .2s,background .2s}
-.lb-tile:hover{border-color:rgba(124,134,255,.6);transform:translateY(-2px)}
-.lb-tile-img{display:block;margin:calc(-1*clamp(18px,1.6vw,24px)) calc(-1*clamp(18px,1.6vw,24px)) 6px;border-radius:calc(var(--r) - 1px) calc(var(--r) - 1px) 0 0;overflow:hidden;background:#000;aspect-ratio:4/3}
-.lb-tile-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.lb-tile:hover .lb-tile-img img{transform:scale(1.04)}
-.lb-tile b{font-weight:500;font-size:clamp(16px,1.05vw,18px);line-height:1.3}
-.lb-tile-d{color:var(--t3);font-size:14px;line-height:1.45}
-.lb-tile-p{margin-top:auto;padding-top:10px;font-size:clamp(18px,1.3vw,22px);letter-spacing:-.02em;color:var(--t1)}
+.lb-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.lb-tile{display:grid;grid-template-columns:96px minmax(0,1fr);grid-template-rows:auto auto 1fr;column-gap:18px;row-gap:4px;align-items:start;padding:14px 18px 14px 14px;color:var(--t1);transition:border-color .2s,background .2s}
+.lb-tile:hover{border-color:rgba(124,134,255,.6)}
+.lb-tile-ic{grid-row:1/4;display:block;width:96px;height:96px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.lb-tile:hover .lb-tile-ic{transform:scale(1.06)}
+.lb-tile b{grid-column:2;font-weight:500;font-size:16px;line-height:1.3;padding-top:4px}
+.lb-tile-d{grid-column:2;color:var(--t3);font-size:13.5px;line-height:1.45}
+.lb-tile-p{grid-column:2;padding-top:6px;font-size:17px;letter-spacing:-.02em;color:var(--t1)}
+.lb-steps li{display:flex;flex-direction:column;border-top:0;padding-top:0}
+.lb-steps .lb-step-ic{order:0;display:block;width:120px;height:120px;margin:0 0 14px -6px}
+.lb-steps li::before{order:1;border-top:2px solid rgba(124,134,255,.35);padding-top:14px}
+.lb-steps li b{order:2}.lb-steps li span{order:3}
 
 /* прайс — группы */
 .lb-price{display:grid;gap:12px}
@@ -208,11 +211,16 @@ body.lb-has-bar .float-btns,body.lb-has-bar .fab{bottom:96px}
 .lb-bar-clear{display:none}
 }
 @media (max-width:600px){
-.lb-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.lb-tile{padding:16px 14px}
+.lb-tiles{grid-template-columns:minmax(0,1fr);gap:8px}
+.lb-tile{grid-template-columns:64px minmax(0,1fr);grid-template-rows:auto auto;column-gap:14px;row-gap:2px;align-items:center;padding:8px 14px 8px 8px}
+.lb-tile-ic{grid-row:1/3;width:64px;height:64px}
 .lb-tile-d{display:none}
-.lb-tile-img{margin:-16px -14px 4px}
-.lb-tile b{font-size:15px;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.lb-tile b{font-size:15px;padding-top:0}
+.lb-tile-p{padding-top:0;font-size:14px;color:var(--t2)}
+.lb-steps li{display:grid;grid-template-columns:72px minmax(0,1fr);column-gap:14px;align-content:start}
+.lb-steps .lb-step-ic{grid-row:1/4;width:72px;height:72px;margin:0}
+.lb-steps li::before{grid-column:2;border-top:0;padding-top:0;margin-bottom:4px}
+.lb-steps li b,.lb-steps li span{grid-column:2}
 .lb-sets,.lb-with{grid-template-columns:minmax(0,1fr)}
 .lb-set-f .lb-set-b{width:100%}
 .lb-short th{display:block;width:100%;border:0;padding:12px 0 2px;font-size:13px}
@@ -351,20 +359,20 @@ body.lb-has-bar .float-btns,body.lb-has-bar .fab{bottom:96px}
   <div class="wrap">
     <div class="head"><div class="eyebrow" data-eyebrow>Направления</div><h2 data-split>Что исследует <em>наша лаборатория</em></h2><p class="sub" data-fade>Нажмите на направление — откроется его прайс. Цена «от» — за точку, элемент, комплекс или услугу, как указано в прайсе.</p></div>
     <div class="lb-tiles" data-group="cards">
-      <a class="card lb-tile" href="#g-ppk" data-open="ppk"><span class="lb-tile-img"><img src="../img/lab-t-ppk-640.webp" srcset="../img/lab-t-ppk-360.webp 360w, ../img/lab-t-ppk-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Лабораторный контроль по ППК</b><span class="lb-tile-d">Все исследования по <span class="nw">плану-графику</span> программы за один выезд</span><span class="lb-tile-p">от 2 600 ₽</span></a>
-      <a class="card lb-tile" href="#g-smyvy" data-open="smyvy"><span class="lb-tile-img"><img src="../img/lab-t-smyvy-640.webp" srcset="../img/lab-t-smyvy-360.webp 360w, ../img/lab-t-smyvy-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Анализ смывов</b><span class="lb-tile-d">Поверхности, оборудование, инвентарь, руки персонала</span><span class="lb-tile-p">от 310 ₽</span></a>
-      <a class="card lb-tile" href="#g-vozduh" data-open="vozduh"><span class="lb-tile-img"><img src="../img/lab-t-vozduh-640.webp" srcset="../img/lab-t-vozduh-360.webp 360w, ../img/lab-t-vozduh-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Анализ воздуха</b><span class="lb-tile-d">Микробиология, химический и аэроионный состав</span><span class="lb-tile-p">от 300 ₽</span></a>
-      <a class="card lb-tile" href="#g-voda" data-open="voda"><span class="lb-tile-img"><img src="../img/lab-t-voda-640.webp" srcset="../img/lab-t-voda-360.webp 360w, ../img/lab-t-voda-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Анализ воды</b><span class="lb-tile-d">Водопровод, скважина, бутилированная вода, бассейн, стоки</span><span class="lb-tile-p">от 737 ₽</span></a>
-      <a class="card lb-tile" href="#g-pishcha" data-open="pishcha"><span class="lb-tile-img"><img src="../img/lab-t-pishcha-640.webp" srcset="../img/lab-t-pishcha-360.webp 360w, ../img/lab-t-pishcha-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Анализ пищевых продуктов</b><span class="lb-tile-d">Сырьё, продукция и готовые блюда</span><span class="lb-tile-p">от 194 ₽</span></a>
-      <a class="card lb-tile" href="#g-faktory" data-open="faktory"><span class="lb-tile-img"><img src="../img/lab-t-faktory-640.webp" srcset="../img/lab-t-faktory-360.webp 360w, ../img/lab-t-faktory-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Замеры производственных факторов</b><span class="lb-tile-d">Микроклимат, освещённость, шум, вибрация, ЭМИ</span><span class="lb-tile-p">от 350 ₽</span></a>
-      <a class="card lb-tile" href="#g-rabochie-mesta" data-open="rabochie-mesta"><span class="lb-tile-img"><img src="../img/lab-t-rabochie-mesta-640.webp" srcset="../img/lab-t-rabochie-mesta-360.webp 360w, ../img/lab-t-rabochie-mesta-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Измерения на рабочих местах</b><span class="lb-tile-d">Комплекс замеров условий труда на рабочих местах</span><span class="lb-tile-p">от 2 600 ₽</span></a>
-      <a class="card lb-tile" href="#g-radiaciya" data-open="radiaciya"><span class="lb-tile-img"><img src="../img/lab-t-radiaciya-640.webp" srcset="../img/lab-t-radiaciya-360.webp 360w, ../img/lab-t-radiaciya-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Измерение радиации</b><span class="lb-tile-d">Радиационный фон в помещениях</span><span class="lb-tile-p">от 400 ₽</span></a>
-      <a class="card lb-tile" href="#g-sterilnost" data-open="sterilnost"><span class="lb-tile-img"><img src="../img/lab-t-sterilnost-640.webp" srcset="../img/lab-t-sterilnost-360.webp 360w, ../img/lab-t-sterilnost-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Анализ на стерильность</b><span class="lb-tile-d">Инструменты, материалы, изделия медицинского назначения</span><span class="lb-tile-p">от 1 003 ₽</span></a>
-      <a class="card lb-tile" href="#g-sterilizatory" data-open="sterilizatory"><span class="lb-tile-img"><img src="../img/lab-t-sterilizatory-640.webp" srcset="../img/lab-t-sterilizatory-360.webp 360w, ../img/lab-t-sterilizatory-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Контроль работы стерилизаторов</b><span class="lb-tile-d">Автоклавы и сухожаровые шкафы — салоны, клиники</span><span class="lb-tile-p">от 1 600 ₽</span></a>
-      <a class="card lb-tile" href="#g-obluchateli" data-open="obluchateli"><span class="lb-tile-img"><img src="../img/lab-t-obluchateli-640.webp" srcset="../img/lab-t-obluchateli-360.webp 360w, ../img/lab-t-obluchateli-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Эффективность бактерицидных установок</b><span class="lb-tile-d">Облучатели и рециркуляторы воздуха</span><span class="lb-tile-p">от 1 600 ₽</span></a>
-      <a class="card lb-tile" href="#g-pochva" data-open="pochva"><span class="lb-tile-img"><img src="../img/lab-t-pochva-640.webp" srcset="../img/lab-t-pochva-360.webp 360w, ../img/lab-t-pochva-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Анализ почвы</b><span class="lb-tile-d">Микробиология, химия, радиология, плодородие</span><span class="lb-tile-p">от 690 ₽</span></a>
-      <a class="card lb-tile" href="#g-ispytaniya" data-open="ispytaniya"><span class="lb-tile-img"><img src="../img/lab-t-ispytaniya-640.webp" srcset="../img/lab-t-ispytaniya-360.webp 360w, ../img/lab-t-ispytaniya-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Испытания продукции</b><span class="lb-tile-d">Пищевая продукция, косметика, текстиль, мебель, упаковка</span><span class="lb-tile-p">от 194 ₽</span></a>
-      <a class="card lb-tile" href="#g-elektro" data-open="elektro"><span class="lb-tile-img"><img src="../img/lab-t-elektro-640.webp" srcset="../img/lab-t-elektro-360.webp 360w, ../img/lab-t-elektro-640.webp 640w" sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span><b>Измерение сопротивления электросетей</b><span class="lb-tile-d">Замеры сопротивления в электросетях здания</span><span class="lb-tile-p">от 1 600 ₽</span></a>
+      <a class="card lb-tile" href="#g-ppk" data-open="ppk"><img class="lb-tile-ic" src="../img/lab-i-ppk.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Лабораторный контроль по ППК</b><span class="lb-tile-d">Все исследования по <span class="nw">плану-графику</span> программы за один выезд</span><span class="lb-tile-p">от 2 600 ₽</span></a>
+      <a class="card lb-tile" href="#g-smyvy" data-open="smyvy"><img class="lb-tile-ic" src="../img/lab-i-smyvy.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Анализ смывов</b><span class="lb-tile-d">Поверхности, оборудование, инвентарь, руки персонала</span><span class="lb-tile-p">от 310 ₽</span></a>
+      <a class="card lb-tile" href="#g-vozduh" data-open="vozduh"><img class="lb-tile-ic" src="../img/lab-i-vozduh.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Анализ воздуха</b><span class="lb-tile-d">Микробиология, химический и аэроионный состав</span><span class="lb-tile-p">от 300 ₽</span></a>
+      <a class="card lb-tile" href="#g-voda" data-open="voda"><img class="lb-tile-ic" src="../img/lab-i-voda.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Анализ воды</b><span class="lb-tile-d">Водопровод, скважина, бутилированная вода, бассейн, стоки</span><span class="lb-tile-p">от 737 ₽</span></a>
+      <a class="card lb-tile" href="#g-pishcha" data-open="pishcha"><img class="lb-tile-ic" src="../img/lab-i-pishcha.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Анализ пищевых продуктов</b><span class="lb-tile-d">Сырьё, продукция и готовые блюда</span><span class="lb-tile-p">от 194 ₽</span></a>
+      <a class="card lb-tile" href="#g-faktory" data-open="faktory"><img class="lb-tile-ic" src="../img/lab-i-faktory.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Замеры производственных факторов</b><span class="lb-tile-d">Микроклимат, освещённость, шум, вибрация, ЭМИ</span><span class="lb-tile-p">от 350 ₽</span></a>
+      <a class="card lb-tile" href="#g-rabochie-mesta" data-open="rabochie-mesta"><img class="lb-tile-ic" src="../img/lab-i-rabochie-mesta.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Измерения на рабочих местах</b><span class="lb-tile-d">Комплекс замеров условий труда на рабочих местах</span><span class="lb-tile-p">от 2 600 ₽</span></a>
+      <a class="card lb-tile" href="#g-radiaciya" data-open="radiaciya"><img class="lb-tile-ic" src="../img/lab-i-radiaciya.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Измерение радиации</b><span class="lb-tile-d">Радиационный фон в помещениях</span><span class="lb-tile-p">от 400 ₽</span></a>
+      <a class="card lb-tile" href="#g-sterilnost" data-open="sterilnost"><img class="lb-tile-ic" src="../img/lab-i-sterilnost.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Анализ на стерильность</b><span class="lb-tile-d">Инструменты, материалы, изделия медицинского назначения</span><span class="lb-tile-p">от 1 003 ₽</span></a>
+      <a class="card lb-tile" href="#g-sterilizatory" data-open="sterilizatory"><img class="lb-tile-ic" src="../img/lab-i-sterilizatory.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Контроль работы стерилизаторов</b><span class="lb-tile-d">Автоклавы и сухожаровые шкафы — салоны, клиники</span><span class="lb-tile-p">от 1 600 ₽</span></a>
+      <a class="card lb-tile" href="#g-obluchateli" data-open="obluchateli"><img class="lb-tile-ic" src="../img/lab-i-obluchateli.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Эффективность бактерицидных установок</b><span class="lb-tile-d">Облучатели и рециркуляторы воздуха</span><span class="lb-tile-p">от 1 600 ₽</span></a>
+      <a class="card lb-tile" href="#g-pochva" data-open="pochva"><img class="lb-tile-ic" src="../img/lab-i-pochva.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Анализ почвы</b><span class="lb-tile-d">Микробиология, химия, радиология, плодородие</span><span class="lb-tile-p">от 690 ₽</span></a>
+      <a class="card lb-tile" href="#g-ispytaniya" data-open="ispytaniya"><img class="lb-tile-ic" src="../img/lab-i-ispytaniya.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Испытания продукции</b><span class="lb-tile-d">Пищевая продукция, косметика, текстиль, мебель, упаковка</span><span class="lb-tile-p">от 194 ₽</span></a>
+      <a class="card lb-tile" href="#g-elektro" data-open="elektro"><img class="lb-tile-ic" src="../img/lab-i-elektro.webp" width="96" height="96" alt="" loading="lazy" decoding="async"><b>Измерение сопротивления электросетей</b><span class="lb-tile-d">Замеры сопротивления в электросетях здания</span><span class="lb-tile-p">от 1 600 ₽</span></a>
     </div>
   </div>
 </section>
@@ -501,11 +509,11 @@ body.lb-has-bar .float-btns,body.lb-has-bar .fab{bottom:96px}
   <div class="wrap">
     <div class="head"><div class="eyebrow" data-eyebrow>Порядок работы</div><h2 data-split>Как проходят <em>лабораторные исследования</em></h2></div>
     <ol class="d-steps lb-steps" data-group="steps">
-      <li><b>Заявка и план</b><span>Пришлите программу производственного контроля или опишите объект. Сверим <span class="nw">план-график</span>, составим перечень исследований и точек отбора и назовём стоимость.</span></li>
-      <li><b>Выезд и отбор проб</b><span>Специалист лаборатории приезжает в согласованное время, берёт смывы, пробы воздуха, воды и продукции, проводит замеры на рабочих местах.</span></li>
-      <li><b>Исследования</b><span>Пробы доставляем в лабораторию с соблюдением условий хранения и транспортировки и исследуем по утверждённым методикам.</span></li>
-      <li><b>Протоколы</b><span>Передаём протоколы с результатами по каждой точке. Если показатель не в норме, объясняем, что это значит и что сделать.</span></li>
-      <li><b>Папка к проверке</b><span>Протоколы складываются в папку производственного контроля — по ним инспектор сверяет выполнение <span class="nw">плана-графика</span> ППК.</span></li>
+      <li><img class="lb-step-ic" src="../img/lab-s1.webp" width="120" height="120" alt="" loading="lazy" decoding="async"><b>Заявка и план</b><span>Пришлите программу производственного контроля или опишите объект. Сверим <span class="nw">план-график</span>, составим перечень исследований и точек отбора и назовём стоимость.</span></li>
+      <li><img class="lb-step-ic" src="../img/lab-s2.webp" width="120" height="120" alt="" loading="lazy" decoding="async"><b>Выезд и отбор проб</b><span>Специалист лаборатории приезжает в согласованное время, берёт смывы, пробы воздуха, воды и продукции, проводит замеры на рабочих местах.</span></li>
+      <li><img class="lb-step-ic" src="../img/lab-s3.webp" width="120" height="120" alt="" loading="lazy" decoding="async"><b>Исследования</b><span>Пробы доставляем в лабораторию с соблюдением условий хранения и транспортировки и исследуем по утверждённым методикам.</span></li>
+      <li><img class="lb-step-ic" src="../img/lab-s4.webp" width="120" height="120" alt="" loading="lazy" decoding="async"><b>Протоколы</b><span>Передаём протоколы с результатами по каждой точке. Если показатель не в норме, объясняем, что это значит и что сделать.</span></li>
+      <li><img class="lb-step-ic" src="../img/lab-s5.webp" width="120" height="120" alt="" loading="lazy" decoding="async"><b>Папка к проверке</b><span>Протоколы складываются в папку производственного контроля — по ним инспектор сверяет выполнение <span class="nw">плана-графика</span> ППК.</span></li>
     </ol>
   </div>
 </section>

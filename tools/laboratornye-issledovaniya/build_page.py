@@ -105,8 +105,7 @@ def gmin(g):
 def tiles(icons):
     out = ['    <div class="lb-tiles">']
     for code, name, ico, desc, its in D.GROUPS:
-        img = (f'<span class="lb-tile-img"><img src="../img/lab-t-{code}-640.webp" srcset="../img/lab-t-{code}-360.webp 360w, ../img/lab-t-{code}-640.webp 640w" '
-               f'sizes="(max-width:600px) 46vw, (max-width:1180px) 31vw, 320px" width="640" height="480" alt="" loading="lazy" decoding="async"></span>')
+        img = (f'<img class="lb-tile-ic" src="../img/lab-i-{code}.webp" width="96" height="96" alt="" loading="lazy" decoding="async">')
         out.append(f'      <a class="card lb-tile" href="#g-{code}" data-open="{code}">{img}'
                    f'<b>{name}</b><span class="lb-tile-d">{desc}</span><span class="lb-tile-p">от {rub(gmin((code, name, ico, desc, its)))}</span></a>')
     out.append('    </div>')
