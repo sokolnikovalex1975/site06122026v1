@@ -13,7 +13,8 @@
     «Тип объекта *»;
   • скрытая подпись для экранных дикторов не меняется — они и так объявляют поле обязательным по атрибуту required.
 Дополнение владельца: тип объекта обязателен во всех формах. Вместо скрытого фиксированного типа добавляется
-обычный список после телефона; тип не выбирается заранее. Проверка type уже есть в общем JS и send.php.
+обычный список после телефона. На отраслевых страницах тип автоматически выбран по отрасли (последнее указание
+владельца); на остальных страницах выбор пустой. Проверка type уже есть в общем JS и send.php.
 Опросный лист на /razrabotka-ppk/ (в <template>, без data-form) не трогается — звёздочки там уже есть в подписях.
 
 Скрипт идемпотентен. Запускается из tools/site/build_site.py после hero_fold.py; та же функция apply() используется
@@ -37,6 +38,14 @@ TYPE_OPTIONS = (
     'Пищевое производство', 'Магазин или торговая сеть', 'Ресторан или кафе',
     'Склад, логистика', 'Фармацевтическое производство', 'Гостиница', 'Другое',
 )
+INDUSTRY_TYPES = {
+    'pishchevoe-proizvodstvo': 'Пищевое производство',
+    'magaziny-i-torgovye-seti': 'Магазин или торговая сеть',
+    'restorany-i-kafe': 'Ресторан или кафе',
+    'sklady-i-logistika': 'Склад, логистика',
+    'farmatsevticheskie-proizvodstva': 'Фармацевтическое производство',
+    'gostinitsy': 'Гостиница',
+}
 TYPE_FIELD = (
     '<div class="field full"><label class="sr-only" for="f-type">Тип объекта</label>'
     '<select id="f-type" name="type" required><option value="" disabled selected>Тип объекта *</option>'
@@ -60,6 +69,34 @@ def _mark(text):
     return text if text.rstrip().endswith('*') else text.rstrip() + MARK
 
 
+def _industry_default(s):
+    canonical = re.search(r'<link\b[^>]*rel="canonical"[^>]*href="[^"]*/([^/"]+)/"', s)
+    value = INDUSTRY_TYPES.get(canonical.group(1)) if canonical else None
+    if not value:
+        return s
+
+    def select(m):
+        t = re.sub(r'(<option\b[^>]*?)\sselected(?:="[^"]*")?', r'\1', m.group(0))
+        found = [0]
+
+        def option(o):
+            attrs, text = o.group(1), o.group(2)
+            explicit = re.search(r'\bvalue="([^"]*)"', attrs)
+            option_value = explicit.group(1) if explicit else text
+            if option_value != value:
+                return o.group(0)
+            found[0] += 1
+            if not explicit:
+                attrs += ' value="' + value + '"'
+            return '<option' + attrs + ' selected>' + _mark(text) + '</option>'
+
+        t = re.sub(r'<option([^>]*)>([^<]*)</option>', option, t)
+        assert found[0] == 1, ('Не найден единственный тип отрасли', value)
+        return t
+
+    return re.sub(r'<select\b[^>]*name="type"[^>]*>.*?</select>', select, s, flags=re.S)
+
+
 def _field(m, n):
     t = m.group(0)
     head = re.match(r'<(input|select)\b[^>]*>', t).group(0)
@@ -69,7 +106,7 @@ def _field(m, n):
         new = PH_RE.sub(lambda p: p.group(1) + _mark(p.group(2)) + p.group(3), t, count=1)
     else:
         if re.search(r'\bname="type"', head):
-            # Выбор должен быть самостоятельным, в том числе на странице фармпроизводств.
+            # Общая форма пустая; отраслевой выбор восстанавливается в _industry_default().
             t = re.sub(r'(<option\b[^>]*?)\sselected(?:="[^"]*")?', r'\1', t)
             t = re.sub(r'(<option\b[^>]*\bvalue=""[^>]*)(>)', r'\1 selected\2', t, count=1)
         new = OPT_RE.sub(lambda p: p.group(1) + _mark(p.group(2)) + p.group(3), t, count=1)
@@ -87,7 +124,7 @@ def apply(s):
         forms[0] += 1
         return FIELD_RE.sub(lambda f: _field(f, n), _ensure_type(m.group(0)))
 
-    return FORM_RE.sub(form, s), n[0], forms[0]
+    return _industry_default(FORM_RE.sub(form, s)), n[0], forms[0]
 
 
 def main():
