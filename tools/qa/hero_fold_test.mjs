@@ -8,6 +8,7 @@ const PAGES = (process.env.PAGES || `/
 /dezinfektsiya/
 /deratizatsiya/
 /dezinsektsiya/
+/deratizatsiya-i-dezinsektsiya/
 /sanitarnyy-audit/
 /razrabotka-ppk/
 /dogovor-deratizatsiya-dezinsektsiya/

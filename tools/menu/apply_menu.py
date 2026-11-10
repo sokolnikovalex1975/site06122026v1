@@ -26,6 +26,7 @@ USLUGI = [
     ('dezinfektsiya', 'Дезинфекция для организаций'),
     ('deratizatsiya', 'Дератизация для организаций'),
     ('dezinsektsiya', 'Дезинсекция для организаций'),
+    ('deratizatsiya-i-dezinsektsiya', 'Дератизация и дезинсекция'),  # с 11.11.2026 — комплекс по одному договору
     ('sanitarnyy-audit', 'Санитарный аудит <span class="nw">(СЭС-аудит)</span>'),
     ('laboratornye-issledovaniya', 'Лабораторные исследования'),  # с 10.11.2026
     ('razrabotka-ppk', 'Разработка ППК'),  # с 08.11.2026 — ППК без ХАССП и по ХАССП на одной странице /razrabotka-ppk/
@@ -48,6 +49,7 @@ VENT = 'ochistka-dezinfektsiya-ventilyatsii'
 SAN = 'sanitarnyy-audit'
 RPPK = 'razrabotka-ppk'
 LAB = 'laboratornye-issledovaniya'  # «Лабораторные исследования» (с 10.11.2026)
+DD = 'deratizatsiya-i-dezinsektsiya'  # «Дератизация и дезинсекция для организаций» (с 11.11.2026)
 MATERIALS = [  # слова через дефис не переносим (класс nw, как в остальных текстах сайта)
     ('normativnaya-baza', 'Нормативная база'),  # раздел «Нормативная база» (tools/normativnaya-baza)
     ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora', 'Документы для Роспотребнадзора'),  # с 08.11.2026; в подвале — после «Проверочных листов»
@@ -73,6 +75,7 @@ PAGES = [
     ('dezinfektsiya/index.html', '../', 'dezinfektsiya'),
     (DERAT + '/index.html', '../', DERAT),
     ('dezinsektsiya/index.html', '../', 'dezinsektsiya'),
+    (DD + '/index.html', '../', DD),
     (VENT + '/index.html', '../', VENT),
     (SAN + '/index.html', '../', SAN),
     (RPPK + '/index.html', '../', RPPK),
@@ -141,7 +144,7 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', VENT, SAN, RPPK, LAB) or cur.startswith(LAB + '/')
+    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', DD, VENT, SAN, RPPK, LAB) or cur.startswith(LAB + '/')
     in_ind = any(s == cur for s, _ in INDUSTRIES)
     in_mat = cur.startswith('materialy') or cur.startswith('normativnaya-baza')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾

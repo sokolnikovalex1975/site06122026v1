@@ -123,6 +123,7 @@ URL = {
     'lab-steril': 'laboratornye-issledovaniya/kontrol-sterilizatorov/',
     'mat-smyvy': 'materialy/kak-berut-smyvy/', 'mat-zamery': 'materialy/zamer-osveshchennosti-i-mikroklimata/',
     'mat-steril': 'materialy/kontrol-raboty-sterilizatorov/',
+    'dd': 'deratizatsiya-i-dezinsektsiya/',
     'ppkobr': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',  # та же страница, что 'ppk', — карточка «Образец ППК» для страницы услуги
     'dezinf': 'dezinfektsiya/',
     'nb': 'normativnaya-baza/', 'pl': 'normativnaya-baza/proverochnye-listy/',
@@ -134,6 +135,8 @@ CARD = {
               'Три контура защиты от крыс и мышей, контейнеры КИК и ловушки без яда в цехах, схема точек и акты.'),
     'dezins': ('Услуга', 'Дезинсекция для организаций',
                'Контроль насекомых по IPM без остановки работы, ротация средств, журнал и акты по СанПиН.'),
+    'dd': ('Услуга', 'Дератизация и дезинсекция комплексом',
+           'Грызуны и насекомые по одному договору: общий график визитов и один комплект документов. От 4\u00a0900\u00a0₽/мес.'),
     'dogovor': ('Обслуживание', 'Договор на дератизацию и дезинсекцию',
                 'Одно или оба направления в одном договоре: график визитов, акт после выезда, цена до подписания.'),
     'food': ('Отрасль', 'Пест-контроль на пищевом производстве',
@@ -209,8 +212,8 @@ PAGES = {
             ('lucide-crosshair', 'Пест-контроль', 'по системе IPM'),
             ('lucide-clock', 'Ночью и в выходные', 'без наценки'),
         ])),
-    'deratizatsiya/index.html': dict(key='derat', root='../', related=['dezins', 'dogovor', 'prog', 'san']),
-    'dezinsektsiya/index.html': dict(key='dezins', root='../', related=['derat', 'dogovor', 'prog', 'san'], strip=(
+    'deratizatsiya/index.html': dict(key='derat', root='../', related=['dd', 'dezins', 'dogovor', 'san']),
+    'dezinsektsiya/index.html': dict(key='dezins', root='../', related=['dd', 'derat', 'dogovor', 'san'], strip=(
         'Коротко о дезинсекции', [
             ('lucide-crosshair', 'IPM', 'контроль насекомых'),
             ('lucide-scan-search', 'Бесплатный осмотр', 'и расчёт до договора'),
@@ -524,6 +527,18 @@ PAGES = {
             ('lucide-ban', 'Ошибки', '— и что делать при росте'),
             ('lucide-flask-conical', 'Контроль стерилизатора', '— от 1\u00a0600\u00a0₽'),
         ])),
+    # «Дератизация и дезинсекция для организаций» (tools/deratizatsiya-i-dezinsektsiya), с 11.11.2026
+    'deratizatsiya-i-dezinsektsiya/index.html': dict(key='dd', root='../', related=['derat', 'dezins', 'dogovor', 'san'], strip=(
+        'Коротко о дератизации и дезинсекции', [
+            ('lucide-file-signature', 'Один договор', '— грызуны и насекомые'),
+            ('lucide-calculator', 'Комплекс', '— от 4\u00a0900\u00a0₽/мес'),
+            ('lucide-scan-search', 'Бесплатный выезд', 'и расчёт'),
+            ('lucide-activity', 'Общий график', 'визитов на год'),
+            ('lucide-notebook-pen', 'Журнал и акт', 'после каждого визита'),
+            ('lucide-file-badge', 'СанПиН 3.3686-21', '— пп. 101 и 110'),
+            ('lucide-shield-check', 'Лицензия', 'Роспотребнадзора'),
+            ('lucide-list-checks', 'Документы', 'для отдела закупок'),
+        ])),
     'sanitarnyy-audit/index.html': dict(key='san', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
         'Коротко о санитарном аудите', [
             ('lucide-clipboard-check', 'Проверочные листы', '— приказы № 578 и № 580'),
@@ -752,6 +767,9 @@ HOTEL_LINKS = {  # карточки гостиниц на страницах у�
 
 
 SAN_REL = ('deratizatsiya/index.html', 'dezinsektsiya/index.html', 'pishchevoe-proizvodstvo/index.html')
+# с 11.11.2026 у дератизации и дезинсекции первая карточка «Смотрите также» — комплекс «Дератизация и дезинсекция»
+# (вместо «Программы пест-контроля»): уже собранный блок пересобирается по related страницы
+DD_REL = ('deratizatsiya/index.html', 'dezinsektsiya/index.html')
 
 # ссылка «Для проверки → Полный перечень документов для Роспотребнадзора» в конце блока документов (id="dokumenty");
 # с отраслевых страниц — с параметром ?obekt=: конструктор на странице документов откроется с этим видом объекта
@@ -783,6 +801,21 @@ def rel_card(root, k):
     return (f'<a class="card rel-card" href="{root}{URL[k]}">'
             f'<span class="rel-k">{kind}</span><span class="rel-t">{tp(title)}</span>'
             f'<span class="rel-d">{tp(desc)}</span><span class="rel-a" aria-hidden="true">{ARR}</span></a>')
+
+
+def dd_related(rel, s):
+    """Карточки уже собранного «Смотрите также» — как в related страницы (DD_REL); повторный запуск ничего не меняет."""
+    if rel not in DD_REL or 'id="smotrite-takzhe"' not in s:
+        return s
+    i = s.index('id="smotrite-takzhe"')
+    j = s.index('</section>', i)
+    if f'href="../{URL["dd"]}"' in s[i:j]:
+        return s
+    a = s.index('<div class="rel-grid" data-group="cards">\n', i, j) + len('<div class="rel-grid" data-group="cards">\n')
+    b = s.index('\n    </div>\n  </div>\n', a, j)
+    assert s[a:b].count('<a class="card rel-card"') == 4, rel + ': в «Смотрите также» не 4 карточки'
+    cards = '\n'.join('      ' + rel_card('../', k) for k in PAGES[rel]['related'])
+    return s[:a] + cards + s[b:]
 
 
 def page_specific(rel, s):
@@ -862,6 +895,7 @@ def process_inner(rel, cfg):
     s = f.read_text(encoding='utf-8')
     root = cfg['root']
     s = page_specific(rel, s)
+    s = dd_related(rel, s)
     s = dok_link(rel, s, root)
     s = fix_head(s, root)
     s = fix_body_start(s)
