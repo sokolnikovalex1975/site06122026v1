@@ -13,7 +13,8 @@
 Образец и бланк печатаются из одного HTML: бланк — тот же документ с <body class="tpl">, записи (.ink), подписи (.sg)
 и отметка «Образец заполнения» (.only-s) скрыты через visibility:hidden — листы совпадают геометрически.
 Шапка на каждом листе — как в журнале: крупно телефон и пестконтроль-центр.рф; водяной знак — диагональная надпись
-«пестконтроль-центр.рф» контурами букв (tools/zhurnal/wm.py).
+«пестконтроль-центр.рф» контурами букв (tools/zhurnal/wm.py), поверх содержимого (стили журнала: .wm z-index 5);
+перед записью файлов сайта сборка проверяет это tools/docs_brand/check_watermark.py и при закрытом знаке останавливается.
 
 Нужны: Node.js с playwright (/home/user/node_modules или NODE_PATH), PyMuPDF, Pillow, fontTools.
 """
@@ -337,9 +338,24 @@ def node(*args):
     return r.stdout
 
 
+def check_wm():
+    """Знак поверх содержимого на каждом листе (правило владельца 08.11.2026): иначе файлы сайта не перезаписываются.
+
+    10.11.2026: PDF на сайте были собраны 07.11.2026 со стилями журнала до правки знака (.wm z-index 5, 08.11.2026) —
+    знак лежал под заливкой шапок таблиц, выделенной ячейки «превышение» и мест для печати; пересборка кладёт его поверх."""
+    sys.path.insert(0, str(ROOT / 'tools' / 'docs_brand'))
+    from check_watermark import audit
+    for key, (fn, _, _) in META.items():
+        bad = [r for r in audit(str(OUT / f'{key}.pdf')) if r[1] != 'поверх']
+        if bad:
+            raise SystemExit(f'{fn}: водяной знак закрыт или отсутствует {bad} — знак должен лежать поверх содержимого')
+    print('  водяной знак поверх содержимого на всех листах (tools/docs_brand/check_watermark.py)')
+
+
 def finalize():
     import pymupdf
     from PIL import Image
+    check_wm()
     DST.mkdir(parents=True, exist_ok=True)
     for key, (fn, title, subject) in META.items():
         d = pymupdf.open(OUT / f'{key}.pdf')

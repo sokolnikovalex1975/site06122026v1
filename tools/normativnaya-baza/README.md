@@ -191,7 +191,9 @@ python3 tools/site/build_prod.py     # версия для Timeweb со счёт
   только если в выгрузке `data/dokumenty.json` графа пуста) и в таблице проверочных листов («Обработки без персонала…»).
 - Файлы: `normativnaya-baza/dokumenty-dlya-rospotrebnadzora/obrazets-akta-dezinsektsii-i-deratizatsii.pdf` и
   `blank-akta-dezinsektsii-i-deratizatsii.pdf` (форма АПК-01, 2 листа: шапка с пестконтроль-центр.рф и телефоном, водяной знак,
-  заказчик обезличен) — `tools/akt/build_akt.py`; превью `img/akt-obrazets-p1-360.webp`, `-720.webp`.
+  заказчик обезличен) — `tools/akt/build_akt.py`; превью `img/akt-obrazets-p1-360.webp`, `-720.webp`. Водяной знак — поверх
+  содержимого (с 10.11.2026: прежние файлы были собраны до правки знака в журнале и знак лежал под заливкой шапок таблиц);
+  сборка проверяет это `tools/docs_brand/check_watermark.py` и при закрытом знаке останавливается до записи файлов.
 - Цели Метрики: `akt_obrazets` (образец, 679900382), `akt_shablon` (бланк, 679900386) — `dokumenty.js`, по `[data-dl="akt"]`
   и `[data-dl="akt-blank"]`.
 - Строка перечня, к которой перешли по ссылке `#p3-4` или из поиска по сайту, подсвечивается (`:target` и `.dk-hl`).

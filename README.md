@@ -342,7 +342,7 @@ python3 tools/qa/check_live.py           # без пересборки исхо�
 текста PDF не мешает). Наименований реальных юрлиц заказчиков в образцах нет: только ООО «Центр дезинфекционных услуг» — исполнитель.
 
 Знак всегда лежит поверх содержимого (с 08.11.2026, замечание владельца): заливка ячеек, плашек, таблиц и шапки не должна его
-закрывать. В HTML-документах `.wm` — выше всех блоков (журнал — `z-index: 5`, ППК — `z-index: 30`); в PDF, собранных из Word
+закрывать. В HTML-документах `.wm` — выше всех блоков (журнал и акт АПК-01 — `z-index: 5`, ППК — `z-index: 30`); в PDF, собранных из Word
 (бланки вентиляции), и в `brand_pdf.py` знак накладывается на готовую страницу (`show_pdf_page(overlay=True)`), подложка Word
 в PDF не используется. Перед выкладкой любого документа: `python3 tools/docs_brand/check_watermark.py` (без аргументов — все PDF
 сайта; код выхода 1, если на какой-то странице знака нет или он закрыт).
@@ -354,6 +354,7 @@ python3 tools/qa/check_live.py           # без пересборки исхо�
 | `dogovor-deratizatsiya-dezinsektsiya/obrazets-dogovora-pestkontrol-tsentr.pdf` (6 стр.) | полная — стр. 1, 5, 6 (договор и приложения), компактная — стр. 2–4 | `brand_pdf.py` |
 | `materialy/programma-proizvodstvennogo-kontrolya-haccp/obrazets-…pdf` (27 стр.) | полная на титуле, колонтитул с телефоном и сайтом на стр. 2–27 | `tools/ppk/sample/build_sample.py` |
 | `materialy/zhurnal-pest-kontrolya/*.pdf` (10 листов) | полная на каждом листе | `tools/zhurnal/` (см. README там) |
+| `normativnaya-baza/dokumenty-dlya-rospotrebnadzora/obrazets-akta-…pdf` и `blank-akta-…pdf` (по 2 листа) | полная на каждом листе | `tools/akt/build_akt.py` (стили журнала; сборка сама проверяет знак `check_watermark.py` и при закрытом знаке не перезаписывает файлы сайта) |
 | `ochistka-dezinfektsiya-ventilyatsii/*.pdf` (9 бланков, комплект) | полная на каждой странице | `tools/ventilyatsiya/docs/build_vent_docs.py` |
 
 - `brand.py` — общие элементы: контакты, логотип и значки, `header_css/header_html` (шапка журнала, масштаб `s`), `runner_*`
