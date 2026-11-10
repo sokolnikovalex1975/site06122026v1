@@ -12,7 +12,7 @@
      или в каких частях отличается (head, шапка, мобильное меню, main, подвал, счётчики);
   3. счётчики на сайте: на каждой странице, кроме политики и согласия, ровно один блок «Яндекс Метрика 113675622 +
      UIS + Radist», байт в байт как в server/counters.html; на политике и согласии счётчиков нет (так задумано);
-  4. style.css, legal.css, app.min.js, robots.txt, а также (без --quick) PDF и DOCX рядом со страницами, картинки,
+  4. style.css, legal.css, app.min.js, robots.txt, ключ IndexNow, а также (без --quick) PDF и DOCX рядом со страницами, картинки,
      шрифты и скрипты, на которые ссылаются страницы: отвечают 200 и совпадают с репозиторием;
   5. sitemap.xml на сайте — те же адреса, даты изменения и приоритеты, что в server/sitemap.xml.
 
@@ -39,7 +39,7 @@ DIST = ROOT / 'dist' / 'timeweb'
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 LEGAL = {'privacy/index.php', 'soglasie/index.php'}
 COUNTERS = re.compile(r'<!-- Yandex\.Metrika counter \+ UIS \+ Radist.*?<!-- /Yandex\.Metrika counter -->', re.S)
-STATIC = ['style.css', 'legal.css', 'app.min.js', 'robots.txt']
+STATIC = ['style.css', 'legal.css', 'app.min.js', 'robots.txt', '6e3f9d70b48c34299ede4719e3b5e4a1.txt']  # + ключ IndexNow
 SITEMAP_RE = re.compile(r'<loc>([^<]*)</loc>\s*<lastmod>([^<]*)</lastmod>\s*<priority>([^<]*)</priority>')
 ASSET_RE = re.compile(r'(?:src|href|srcset|imagesrcset|content|data-src|data-bg)="([^"]+)"|url\(([^)]+)\)')
 ASSET_EXT = ('.webp', '.jpg', '.jpeg', '.png', '.svg', '.ico', '.gif', '.avif', '.woff2', '.woff', '.pdf', '.docx', '.js', '.css')
@@ -192,7 +192,7 @@ def main():
     print(f'   совпадают байт в байт: {len(same)} из {len(pages)}; отличаются: {len(diff)}')
     print('   счётчики: ' + ('OK на всех страницах' if not any('счётчик' in e for e in errors) else 'есть ошибки (выше)'))
 
-    print('== 4. Стили, скрипты, robots.txt' + ('' if '--quick' in args else ', картинки, шрифты, PDF и DOCX'))
+    print('== 4. Стили, скрипты, robots.txt, ключ IndexNow' + ('' if '--quick' in args else ', картинки, шрифты, PDF и DOCX'))
     assets = set(STATIC)
     if '--quick' not in args:
         for p in pages:
