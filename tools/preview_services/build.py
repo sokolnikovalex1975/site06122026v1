@@ -9,6 +9,7 @@ import json
 import pathlib
 import re
 import shutil
+import importlib.util
 from urllib.parse import urljoin
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -23,6 +24,8 @@ GROUPS = [
          'Обследование, программа, точки контроля и регулярный мониторинг. Обработки по показаниям.'),
         ('deratizatsiya', 'Дератизация', 'deratizatsiya/',
          'Защита объекта от мышей и крыс, обследование путей проникновения и контроль активности.'),
+        ('zashchita-gryzuny', 'Защита от проникновения грызунов', 'zashchita-ot-proniknoveniya-gryzunov/',
+         'Герметизация проходок, защита дверей и ворот. Обследование, согласованный объём и фотофиксация.'),
         ('dezinsektsiya', 'Дезинсекция', 'dezinsektsiya/',
          'Работа с тараканами, клопами и другими насекомыми с учётом режима и назначения помещений.'),
     ]),
@@ -45,7 +48,7 @@ GROUPS = [
 ]
 FAQ_QUESTION = 'Какие услуги, кроме пест-контроля, можно заказать?'
 FAQ_ANSWER = (
-    'ПЕСТКОНТРОЛЬ Центр оказывает услуги дератизации, дезинсекции и дезинфекции, очистки и дезинфекции вентиляции, '
+    'ПЕСТКОНТРОЛЬ Центр оказывает услуги дератизации, защиты от проникновения грызунов, дезинсекции и дезинфекции, очистки и дезинфекции вентиляции, '
     'санитарного аудита, разработки ППК и ППК по ХАССП, а также лабораторных исследований. '
     'Помогаем разобраться с документами для Роспотребнадзора: на сайте есть перечень и проверочные списки. '
     'Можно обратиться с одной задачей или обсудить несколько направлений для одного объекта. '
@@ -203,6 +206,9 @@ def main():
     s, count = re.subn(r'<form\b[^>]*>.*?</form>', demo_form, s, count=1, flags=re.S)
     assert count == 1
     s = normalize_links(s)
+    # Новая услуга доступна также внутри прикреплённого превью. Остальные адреса не меняем.
+    s = s.replace('href="' + GITHUB + 'zashchita-ot-proniknoveniya-gryzunov/"',
+                  'href="zashchita-ot-proniknoveniya-gryzunov/"')
     (OUT / 'index.html').write_text(s, encoding='utf-8')
     (OUT / '.nojekyll').touch()
     shutil.copy2(ROOT / 'preview-audit/interactions.js', OUT / 'interactions.js')
@@ -223,6 +229,12 @@ def main():
     forbidden = ['mc.yandex.ru', 'track.radist.me', 'app.uiscom.ru/static/', 'sessionStorage', 'localStorage', "fetch('/send.php"]
     assert not any(word in s for word in forbidden)
     assert (ROOT / 'index.html').read_text() == original
+    module_path = ROOT / 'tools/zashchita-ot-proniknoveniya-gryzunov/build_preview.py'
+    if (ROOT / 'zashchita-ot-proniknoveniya-gryzunov/index.html').exists():
+        spec = importlib.util.spec_from_file_location('proof_preview', module_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.build()
     print('Built', OUT, '| original SHA256:', hashlib.sha256(original.encode()).hexdigest(), '| copied assets:', len(paths))
 
 

@@ -25,7 +25,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 OUT = ROOT / 'dist' / 'timeweb'
 COUNTERS_MARK = '<!-- Yandex.Metrika counter + UIS + Radist'
 PAGES = [
-    'index.html', 'dezinfektsiya/index.html', 'deratizatsiya/index.html', 'dezinsektsiya/index.html', 'deratizatsiya-i-dezinsektsiya/index.html', 'dogovor-deratizatsiya-dezinsektsiya/index.html',
+    'index.html', 'dezinfektsiya/index.html', 'deratizatsiya/index.html', 'zashchita-ot-proniknoveniya-gryzunov/index.html', 'dezinsektsiya/index.html', 'deratizatsiya-i-dezinsektsiya/index.html', 'dogovor-deratizatsiya-dezinsektsiya/index.html',
     'sanitarnyy-audit/index.html', 'razrabotka-ppk/index.html', 'laboratornye-issledovaniya/index.html', 'ochistka-dezinfektsiya-ventilyatsii/index.html',
     'pishchevoe-proizvodstvo/index.html', 'restorany-i-kafe/index.html', 'magaziny-i-torgovye-seti/index.html', 'gostinitsy/index.html', 'farmatsevticheskie-proizvodstva/index.html', 'sklady-i-logistika/index.html',
     'biznes-tsentry-torgovye-tsentry-predpriyatiya/index.html',  # с 11.11.2026 (tools/bctc)

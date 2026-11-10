@@ -104,7 +104,7 @@ ICONS = json.loads((pathlib.Path(__file__).resolve().parent / 'icons.json').read
 # ---------------------------------------------------------------- страницы
 # адрес страницы -> файл
 URL = {
-    'home': '', 'derat': 'deratizatsiya/', 'dezins': 'dezinsektsiya/',
+    'home': '', 'derat': 'deratizatsiya/', 'proof': 'zashchita-ot-proniknoveniya-gryzunov/', 'dezins': 'dezinsektsiya/',
     'dogovor': 'dogovor-deratizatsiya-dezinsektsiya/', 'food': 'pishchevoe-proizvodstvo/',
     'seti': 'magaziny-i-torgovye-seti/', 'hotel': 'gostinitsy/',
     'mat': 'materialy/', 'prog': 'materialy/programma-pest-kontrolya/',
@@ -137,6 +137,8 @@ URL = {
 CARD = {
     'derat': ('Услуга', 'Дератизация для организаций',
               'Три контура защиты от крыс и мышей, контейнеры КИК и ловушки без яда в цехах, схема точек и акты.'),
+    'proof': ('Услуга', 'Защита от проникновения грызунов',
+              'Обследование путей доступа, герметизация проходок, защита дверей и ворот, фотофиксация выполненных работ.'),
     'dezins': ('Услуга', 'Дезинсекция для организаций',
                'Контроль насекомых по IPM без остановки работы, ротация средств, журнал и акты по СанПиН.'),
     'dd': ('Услуга', 'Дератизация и дезинсекция комплексом',
@@ -227,6 +229,7 @@ PAGES = {
             ('lucide-clock', 'Ночью и в выходные', 'без наценки'),
         ])),
     'deratizatsiya/index.html': dict(key='derat', root='../', related=['dd', 'dezins', 'dogovor', 'san']),
+    'zashchita-ot-proniknoveniya-gryzunov/index.html': dict(key='proof', root='../', related=['derat', 'sklady', 'prog', 'san']),
     'dezinsektsiya/index.html': dict(key='dezins', root='../', related=['dd', 'derat', 'dogovor', 'san'], strip=(
         'Коротко о дезинсекции', [
             ('lucide-crosshair', 'IPM', 'контроль насекомых'),
@@ -909,6 +912,17 @@ def page_specific(rel, s):
             assert old in s, rel + ': нет карточки гостиниц'
             s = s.replace(old, new, 1)
     if rel == 'deratizatsiya/index.html':
+        # Новая услуга раскрывается отдельно; шапка, формы и существующие блоки не меняются.
+        s = re.sub(r'\n<div class="wrap" id="proof-service-link">.*?</div>\n', '\n', s, count=1, flags=re.S)
+        if 'id="proof-service-link"' not in s:
+            link = (
+                ' <span id="proof-service-link">Инженерные работы можно обсудить отдельно: '
+                '<a href="../zashchita-ot-proniknoveniya-gryzunov/" style="color:var(--acc);text-decoration:underline;text-underline-offset:4px">'
+                'защита от проникновения грызунов</a>.</span>')
+            s, n = re.subn(
+                r'(<h3>Предписания по[\s\u00a0]+грызунонепроницаемости здания</h3><p>.*?)(</p>)',
+                lambda m: m[1] + link + m[2], s, count=1, flags=re.S)
+            assert n == 1, 'дератизация: не найден абзац об инженерном барьере'
         # переключатель вариантов фото первого экрана был нужен только для выбора — в сайте оставляем вариант 1
         s = re.sub(r'\n\s*<div class="hero-vbar".*?</div>\n', '\n', s, count=1, flags=re.S)
         s = re.sub(r'\n?/\* Переключатель 4 вариантов Hero-фото \*/\n\(function\(\)\{\n  var img=document\.getElementById\(\'hero-img\'\).*?\n\}\)\(\);', '', s, count=1, flags=re.S)
@@ -993,6 +1007,32 @@ def page_specific(rel, s):
     return s
 
 
+def proof_performance(s):
+    """Локальная экономия анимаций новой услуги; применяется после общего загрузчика.
+
+    Повторная общая сборка не должна возвращать тяжёлые библиотеки на телефон.
+    Общий app.min.js со всеми формами и интеграциями остаётся неизменным.
+    """
+    s = re.sub(r'<script id="proof-mobile-performance">.*?</script>\n?', '', s, flags=re.S)
+    early = (
+        '<script id="proof-mobile-performance">'
+        '(function(d){if(matchMedia("(max-width:860px), (prefers-reduced-motion:reduce)").matches)'
+        'd.classList.add("anim-fail","anim-ready","no-intro")})(document.documentElement)'
+        '</script>\n'
+    )
+    marker = '<script>\n  /* начальные состояния анимаций'
+    assert marker in s
+    s = s.replace(marker, early + marker, 1)
+    desktop = "['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=" + VERSION + "']"
+    mobile = ('matchMedia("(max-width:860px), (prefers-reduced-motion:reduce)").matches'
+              " ? ['app.min.js?v=" + VERSION + "'] : " + desktop)
+    s = s.replace(mobile, desktop)
+    assert desktop in s
+    s = s.replace(desktop, mobile, 1)
+    return s.replace("if(lit&&!mm('(prefers-reduced-motion: reduce)').matches){",
+                     "if(lit&&!mm('(prefers-reduced-motion: reduce)').matches&&!mm('(max-width:860px)').matches){", 1)
+
+
 def process_inner(rel, cfg):
     f = ROOT / rel
     s = f.read_text(encoding='utf-8')
@@ -1039,6 +1079,8 @@ def process_inner(rel, cfg):
                        lambda m: m.group(1) + '<div class="cta-orb" id="orb" aria-hidden="true"></div>', s, count=1)
         assert n == 1, rel + ': нет фона блока заявки'
     s, fxinfo = fx.apply(s)  # фонарь на фото первого экрана, подсветка рамки карточек, data-form, параллакс фото
+    if rel == 'zashchita-ot-proniknoveniya-gryzunov/index.html':
+        s = proof_performance(s)
     f.write_text(s, encoding='utf-8')
     print('ok', rel)
 

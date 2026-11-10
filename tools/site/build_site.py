@@ -47,7 +47,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 SITEMAP = [  # адрес, приоритет
     ('', '1.0'),
-    ('dezinfektsiya/', '0.9'), ('deratizatsiya/', '0.9'), ('dezinsektsiya/', '0.9'), ('deratizatsiya-i-dezinsektsiya/', '0.9'), ('sanitarnyy-audit/', '0.9'), ('razrabotka-ppk/', '0.9'), ('laboratornye-issledovaniya/', '0.9'), ('dogovor-deratizatsiya-dezinsektsiya/', '0.9'),
+    ('dezinfektsiya/', '0.9'), ('deratizatsiya/', '0.9'), ('zashchita-ot-proniknoveniya-gryzunov/', '0.9'), ('dezinsektsiya/', '0.9'), ('deratizatsiya-i-dezinsektsiya/', '0.9'), ('sanitarnyy-audit/', '0.9'), ('razrabotka-ppk/', '0.9'), ('laboratornye-issledovaniya/', '0.9'), ('dogovor-deratizatsiya-dezinsektsiya/', '0.9'),
     ('ochistka-dezinfektsiya-ventilyatsii/', '0.9'),
     ('pishchevoe-proizvodstvo/', '0.8'), ('restorany-i-kafe/', '0.8'), ('magaziny-i-torgovye-seti/', '0.8'), ('gostinitsy/', '0.8'), ('farmatsevticheskie-proizvodstva/', '0.8'), ('sklady-i-logistika/', '0.8'), ('biznes-tsentry-torgovye-tsentry-predpriyatiya/', '0.8'),
     ('materialy/', '0.6'), ('materialy/programma-pest-kontrolya/', '0.7'),
@@ -94,6 +94,7 @@ def old_lastmod():
 def main():
     keep = '--keep-lastmod' in sys.argv[1:]
     before = {u: page_hash(u) for u, _ in SITEMAP}
+    run('tools/zashchita-ot-proniknoveniya-gryzunov/build_page.py')  # новая услуга инженерной защиты, GitHub-превью с 11.11.2026
     run('tools/gostinitsy/build_page.py')  # страница гостиниц собирается из своих исходников (tools/gostinitsy)
     run('tools/sanitarnyy-audit/build_page.py')  # санитарный аудит — из своих исходников (tools/sanitarnyy-audit)
     run('tools/razrabotka-ppk/build_page.py')  # разработка ППК — из своих исходников (tools/razrabotka-ppk)
