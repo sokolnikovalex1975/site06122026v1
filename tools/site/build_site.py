@@ -15,6 +15,7 @@
   2. tools/site/legal_pages.py  — шапка и подвал сайта на страницах политики и согласия;
   3. tools/menu/apply_menu.py   — одинаковые шапка, мобильное меню и подвал на всех страницах;
      tools/site/mobile_crumbs.py — хлебные крошки на телефоне (до 900 px) скрыты на всех страницах;
+     tools/site/table_inset.py — отступ первой и последней колонки таблиц от края (шире 900 px) на всех страницах;
   4. tools/build.py             — сжатие app.js в app.min.js и встраивание style.css в главную;
      tools/search/build_index.py — поиск по сайту: search-index.json из готовых страниц и search.min.js;
   5. server/sitemap.xml         — все страницы сайта для поисковиков. Дата изменения (lastmod) берётся из прежнего
@@ -80,6 +81,7 @@ def main():
     run('tools/site/legal_pages.py')
     run('tools/menu/apply_menu.py')
     run('tools/site/mobile_crumbs.py')  # хлебные крошки на телефоне не показываются (правило владельца)
+    run('tools/site/table_inset.py')  # отступ текста в таблицах от края (правило владельца, 10.11.2026)
     run('tools/build.py')
     run('tools/search/build_index.py')  # поиск по сайту: индекс из готовых страниц (после меню и разметки)
     today = datetime.date.today().isoformat()
