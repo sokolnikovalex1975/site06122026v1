@@ -196,8 +196,10 @@
 .p-fig{margin:0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);background:var(--card)}
 .p-fig img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
 .p-fig figcaption{padding:12px 16px;font-size:13px;color:var(--t3);line-height:1.5;border-top:1px solid var(--line)}
-.p-fig-wide{margin:0 0 24px}
-.p-fig-wide img{aspect-ratio:21/8;object-position:50% 60%}
+.p-resp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"fig head";gap:20px;align-items:center;margin-bottom:20px}
+.p-resp .head{grid-area:head;margin-bottom:0;padding:0 0 0 clamp(24px,2.4vw,36px)}
+.p-resp-fig{grid-area:fig}
+.p-resp-fig img{aspect-ratio:16/9;object-position:50% 45%}
 .p-fill{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(24px,3.4vw,56px);align-items:start}
 .p-fill-steps{list-style:none;padding:0;margin:0;display:grid;gap:12px;counter-reset:fs}
 .p-fill-steps li{position:relative;background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:18px 20px 18px 64px;counter-increment:fs}
@@ -227,11 +229,12 @@
   .p-toc a{padding:8px 12px;font-size:13px}
   .p-obr-pages{gap:10px}
   .p-obr-page{font-size:12px}
-  .p-fig-wide img{aspect-ratio:4/3}
+  .p-resp{grid-template-columns:minmax(0,1fr);grid-template-areas:"head" "fig";gap:28px}
+  .p-resp .head{padding:0}
   .p-fill-steps li{padding:16px 16px 16px 58px}
   .p-fill-steps li::before{left:14px}
 }
-@media (max-width:600px){.p-obr-btns .btn{width:100%;white-space:normal;text-align:center;line-height:1.25}.p-obr-page b{font-size:12px}.p-obr-page small{display:none}}
+@media (max-width:600px){.p-resp-fig img{aspect-ratio:3/2}.p-obr-btns .btn{width:100%;white-space:normal;text-align:center;line-height:1.25}.p-obr-page b{font-size:12px}.p-obr-page small{display:none}}
 @media (max-width:1100px){
   .p-hero-grid,.f-check-in,.p-duties{grid-template-columns:minmax(0,1fr)}
   .p-formula-grid{grid-template-columns:minmax(0,1fr)}
@@ -723,12 +726,14 @@
 
 <section class="s" id="otvetstvennost">
   <div class="wrap">
-    <div class="head">
-      <div class="eyebrow" data-eyebrow>Регламент взаимодействия сторон</div>
-      <h2 data-split>Что в программе делает <em>служба <span class="nw">пест-контроля</span></em>, а что — предприятие</h2>
-      <p class="sub" data-fade>Аудиторы FSSC 22000 и торговых сетей проверяют не только акты подрядчика, но и выполнение предприятием своих санитарно-технических обязанностей. В рабочей программе эти перечни разделены.</p>
+    <div class="p-resp">
+      <div class="head">
+        <div class="eyebrow" data-eyebrow>Регламент взаимодействия сторон</div>
+        <h2 data-split>Что в программе делает <em>служба <span class="nw">пест-контроля</span></em>, а что — предприятие</h2>
+        <p class="sub" data-fade>Аудиторы FSSC 22000 и торговых сетей проверяют не только акты подрядчика, но и выполнение предприятием своих санитарно-технических обязанностей. В рабочей программе эти перечни разделены.</p>
+      </div>
+      <figure class="p-fig p-resp-fig" data-fade><img src="../../img/programma-kik-rampa-720.webp" srcset="../../img/programma-kik-rampa-720.webp 720w, ../../img/programma-kik-rampa.webp 1200w" sizes="(max-width:860px) calc(100vw - 40px), (max-width:1930px) 45vw, 872px" width="1200" height="800" loading="lazy" decoding="async" alt="Специалист по пест-контролю проверяет контрольно-истребительный контейнер у погрузочной рампы и вносит данные в планшет"><figcaption>Плановый обход внешнего контура: специалист открывает контейнер КИК у рампы и сразу вносит состояние точки в журнал.</figcaption></figure>
     </div>
-    <figure class="p-fig p-fig-wide" data-fade><img src="../../img/programma-kik-rampa-720.webp" srcset="../../img/programma-kik-rampa-720.webp 720w, ../../img/programma-kik-rampa.webp 1200w" sizes="100vw" width="1200" height="800" loading="lazy" decoding="async" alt="Специалист по пест-контролю проверяет контрольно-истребительный контейнер у погрузочной рампы и вносит данные в планшет"><figcaption>Плановый обход внешнего контура: специалист открывает контейнер КИК у рампы и сразу вносит состояние точки в журнал.</figcaption></figure>
     <div class="p-duties" data-group="cards">
       <div class="p-duty-box isp">
         <h3>Мероприятия ПЕСТКОНТРОЛЬ Центра (Исполнитель)</h3>
