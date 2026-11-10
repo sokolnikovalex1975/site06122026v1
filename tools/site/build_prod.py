@@ -9,7 +9,7 @@
     тот же блок, что стоит на рабочей главной;
   * убирается <meta name="robots" content="noindex, nofollow"> — он нужен только превью;
     страницы политики и согласия остаются «noindex, follow», как на рабочем сайте, и без счётчиков (как сейчас);
-  * рядом кладутся .htaccess, robots.txt, sitemap.xml и файл ключа IndexNow (<ключ>.txt, с 11.11.2026) из server/.
+  * рядом кладутся .htaccess, robots.txt и sitemap.xml из server/.
 
 send.php и composer.json в пакет НЕ входят: на сервере уже стоит send.php с настоящим паролем почты,
 его нельзя перезаписывать версией из репозитория (в ней пароль заменён заглушкой).
@@ -37,8 +37,7 @@ PAGES = [
 LEGAL = ['privacy/index.html', 'soglasie/index.html']
 STATIC = ['style.css', 'legal.css', 'app.min.js', 'search.min.js', 'search-index.json', 'vendor', 'fonts', 'img']
 FILES = ['*.pdf', '*.docx']  # образцы документов рядом со страницами
-# 6e3f9d70….txt — ключ IndexNow для Яндекса (с 11.11.2026, в корне сайта; отправка адресов — tools/seo/indexnow.py)
-SERVER = ['.htaccess', 'robots.txt', 'sitemap.xml', '6e3f9d70b48c34299ede4719e3b5e4a1.txt']
+SERVER = ['.htaccess', 'robots.txt', 'sitemap.xml']
 ROBOTS_RE = re.compile(r'<meta name="robots" content="noindex, nofollow">(?:<!--[^>]*-->)?\n?')
 
 
