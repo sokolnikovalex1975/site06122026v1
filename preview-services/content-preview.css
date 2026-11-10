@@ -1,0 +1,88 @@
+/* Только новое контентное превью. Действующие страницы и production-интеграции не меняются. */
+:root { --content-toolbar-h: 36px; }
+body { padding-top: var(--content-toolbar-h); }
+html { scroll-padding-top: 124px; }
+.hdr { top: var(--content-toolbar-h); }
+.progress { top: var(--content-toolbar-h); }
+.intro, .cursor { display: none !important; }
+.content-toolbar {
+  position: fixed; inset: 0 0 auto; z-index: 10000; min-height: var(--content-toolbar-h);
+  display: flex; align-items: center; justify-content: center; gap: 26px;
+  padding: 8px 16px; background: #171627; color: #e4e3f6;
+  border-bottom: 1px solid #7c86ff40; font: 400 12px/1.5 Inter, sans-serif;
+}
+.content-toolbar a, .content-toolbar button {
+  background: none; border: 0; color: #fff; font: inherit; cursor: pointer;
+  text-decoration: underline; text-underline-offset: 4px;
+}
+.content-toolbar button[aria-pressed="true"] { color: #fdc700; }
+.content-mark { display: none; }
+.show-content-notes .content-mark {
+  display: inline-block; padding: 3px 7px; margin: 0 7px 6px 0;
+  background: #fdc700; color: #171627; border-radius: 4px;
+  font: 500 11px/1.4 Inter, sans-serif; letter-spacing: 0; text-transform: none;
+}
+.hero-scope {
+  margin-top: 24px; max-width: 640px; color: #b4b4bd;
+  font-size: clamp(13px, .95vw, 17px); font-weight: 400; line-height: 1.65;
+}
+.hero-scope a { display: inline-flex; align-items: center; gap: 7px; color: #b7baff; }
+.hero-scope svg, .company-license svg, .service-contract svg { flex: none; width: 17px; height: 17px; }
+.services-s { padding-top: clamp(64px, 6vw, 110px); padding-bottom: clamp(64px, 6vw, 110px); scroll-margin-top: -70px; }
+.service-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.service-group { --t2: #b4b4bd; padding: clamp(22px, 2.1vw, 38px); min-width: 0; }
+.service-group-top { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
+.service-group h3 { margin: 0; font-size: clamp(20px, 1.55vw, 28px); line-height: 1.25; font-weight: 500; letter-spacing: -.025em; }
+.service-number { color: #b7baff; font: 400 12px/1.5 Inter, sans-serif; padding-top: 4px; }
+.service-group-sub { font-size: 14px; color: var(--t2); line-height: 1.6; margin-bottom: 22px; }
+.service-group ul { list-style: none; }
+.service-group li + li { border-top: 1px solid var(--line2); }
+.service-link { display: block; padding: 19px 0; }
+.service-link-title {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+  font-size: clamp(16px, 1.1vw, 20px); line-height: 1.4; font-weight: 500; color: #fff;
+}
+.service-link-title svg { flex: none; width: 18px; height: 18px; margin-top: 3px; color: #b7baff; transition: transform .2s; }
+.service-link-desc { display: block; margin-top: 8px; font-size: 14px; line-height: 1.65; color: var(--t2); font-weight: 400; }
+.service-link:hover .service-link-title { color: #b7baff; }
+.service-link:hover svg { transform: translateX(3px); }
+.service-link:focus-visible { outline-offset: 5px; }
+.service-contract {
+  display: flex; gap: 12px; align-items: center; border-top: 1px solid var(--line2);
+  padding-top: 18px; margin-top: 4px; color: #b7baff; font-size: 13px; line-height: 1.6;
+}
+.company-scope { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; border-top: 1px solid var(--line2); margin-top: 64px; padding-top: 42px; }
+.company-scope h3 { font-size: clamp(28px, 2.6vw, 48px); font-weight: 400; line-height: 1.2; letter-spacing: -.03em; }
+.company-scope-text p { color: #b4b4bd; font-size: 16px; line-height: 1.8; font-weight: 400; }
+.company-scope-text p + p { margin-top: 16px; }
+.company-license { display: flex; align-items: flex-start; gap: 12px; color: #b7baff; font-size: 13px; line-height: 1.7; margin-top: 24px; overflow-wrap: anywhere; }
+.service-faq .ans a { color: #b7baff; text-decoration: underline; text-underline-offset: 3px; }
+.form fieldset { min-width: 0; padding: 0; border: 0; margin: 0; }
+.content-form-result { font-size: 14px; line-height: 1.65; color: #ffc6c6; margin-top: 18px; white-space: pre-line; }
+.content-form-result:empty { display: none; }
+.content-form-result.is-valid { padding: 16px; border-radius: 12px; background: #05df7212; color: #b1f4cd; }
+.content-form-reset { display: block; margin-top: 15px; border: 0; background: none; border-bottom: 1px solid #b7baff; padding: 0 0 3px; color: #b7baff; font-size: 13px; cursor: pointer; }
+.content-form-reset[hidden] { display: none; }
+.form noscript { display: block; color: #fdc700; font-size: 13px; line-height: 1.6; margin-top: 16px; }
+.content-at-services .fab, .content-at-form .fab { display: none; }
+@media (prefers-reduced-motion: reduce) { .service-link-title svg { transition: none; } }
+@media (max-width: 1000px) {
+  .service-groups { grid-template-columns: 1fr; }
+  .service-group { padding: 28px; }
+  .service-group h3 { font-size: 25px; }
+  .service-link-title { font-size: 19px; }
+  .company-scope { gap: 32px; }
+}
+@media (max-width: 760px) {
+  .content-toolbar { justify-content: space-between; gap: 10px; font-size: 10px; padding: 9px 12px; }
+  .toolbar-extra { display: none; }
+  .hero-scope { font-size: 13px; margin-top: 20px; }
+  .service-group { padding: 24px; }
+  .service-group h3 { font-size: 23px; }
+  .service-link-title { font-size: 18px; }
+  .service-link-desc { font-size: 14px; }
+  .company-scope { grid-template-columns: 1fr; gap: 24px; margin-top: 42px; padding-top: 32px; }
+  .company-scope-text p { font-size: 15px; }
+  .content-at-form .fab, .content-at-form .mbar,
+  .content-at-services .fab, .content-at-services .mbar { display: none; }
+}
