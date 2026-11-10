@@ -33,6 +33,17 @@ PAGES = [
     'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html',
     'normativnaya-baza/index.html', 'normativnaya-baza/proverochnye-listy/index.html',
     'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html',
+    # страницы направлений и статьи раздела «Лабораторные исследования» (с 11.11.2026)
+    'laboratornye-issledovaniya/analiz-smyvov/index.html',
+    'laboratornye-issledovaniya/izmerenie-mikroklimata/index.html',
+    'laboratornye-issledovaniya/zamer-osveshchennosti/index.html',
+    'laboratornye-issledovaniya/analiz-vozdukha-rabochey-zony/index.html',
+    'laboratornye-issledovaniya/analiz-pishchevykh-produktov/index.html',
+    'laboratornye-issledovaniya/analiz-vody/index.html',
+    'laboratornye-issledovaniya/kontrol-sterilizatorov/index.html',
+    'materialy/kak-berut-smyvy/index.html',
+    'materialy/zamer-osveshchennosti-i-mikroklimata/index.html',
+    'materialy/kontrol-raboty-sterilizatorov/index.html',
 ]
 LEGAL = ['privacy/index.html', 'soglasie/index.html']
 STATIC = ['style.css', 'legal.css', 'app.min.js', 'search.min.js', 'search-index.json', 'vendor', 'fonts', 'img']

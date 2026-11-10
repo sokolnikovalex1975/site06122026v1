@@ -102,13 +102,54 @@ def gmin(g):
     return min(D.price(it) for it in g[4])
 
 
+# Страницы направлений (11.11.2026, build_subpages.py): плитка такого направления ведёт на его страницу,
+# остальные плитки раскрывают прайс, как раньше. Адреса — от страницы раздела.
+TILE_PAGE = {
+    'smyvy': 'analiz-smyvov/', 'voda': 'analiz-vody/', 'pishcha': 'analiz-pishchevykh-produktov/',
+    'sterilizatory': 'kontrol-sterilizatorov/', 'sterilnost': 'kontrol-sterilizatorov/#sterilnost',
+    'obluchateli': 'kontrol-sterilizatorov/#obluchateli',
+}
+# «Подробнее» внутри раскрытого прайса группы: страницы направлений и статьи «Материалов»
+MORE = {
+    'smyvy': [('analiz-smyvov/', 'Анализ смывов'), ('../materialy/kak-berut-smyvy/', 'Как берут смывы')],
+    'vozduh': [('analiz-vozdukha-rabochey-zony/', 'Анализ воздуха рабочей зоны')],
+    'voda': [('analiz-vody/', 'Анализ воды')],
+    'pishcha': [('analiz-pishchevykh-produktov/', 'Анализ пищевых продуктов')],
+    'faktory': [('izmerenie-mikroklimata/', 'Измерение микроклимата'), ('zamer-osveshchennosti/', 'Замер освещённости'),
+                ('../materialy/zamer-osveshchennosti-i-mikroklimata/', 'Как проходят замеры')],
+    'rabochie-mesta': [('izmerenie-mikroklimata/', 'Измерение микроклимата'), ('zamer-osveshchennosti/', 'Замер освещённости')],
+    'sterilnost': [('kontrol-sterilizatorov/#sterilnost', 'Анализ на стерильность')],
+    'sterilizatory': [('kontrol-sterilizatorov/', 'Контроль работы стерилизаторов'),
+                      ('../materialy/kontrol-raboty-sterilizatorov/', 'Методы, периодичность, журнал')],
+    'obluchateli': [('kontrol-sterilizatorov/#obluchateli', 'Бактерицидные облучатели')],
+}
+# Все страницы направлений — строка ссылок под плитками
+DIRECTIONS = [('analiz-smyvov/', 'Анализ смывов'), ('izmerenie-mikroklimata/', 'Измерение микроклимата'),
+              ('zamer-osveshchennosti/', 'Замер освещённости'), ('analiz-vozdukha-rabochey-zony/', 'Анализ воздуха рабочей зоны'),
+              ('analiz-pishchevykh-produktov/', 'Анализ пищевых продуктов'), ('analiz-vody/', 'Анализ воды'),
+              ('kontrol-sterilizatorov/', 'Контроль работы стерилизаторов')]
+ARR = ('<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" '
+       'stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+
+
+def more_nav(links, label='Подробнее', key='Подробнее'):
+    a = ''.join(f'<a href="{h}"><span>{t}</span>{ARR}</a>' for h, t in links)
+    return f'<nav class="more" aria-label="{label}"><span class="more-k">{key}</span>{a}</nav>'
+
+
 def tiles(icons):
     out = ['    <div class="lb-tiles">']
     for code, name, ico, desc, its in D.GROUPS:
         img = (f'<img class="lb-tile-ic" src="../img/lab-i-{code}.webp" width="96" height="96" alt="" loading="lazy" decoding="async">')
-        out.append(f'      <a class="card lb-tile" href="#g-{code}" data-open="{code}">{img}'
-                   f'<b>{name}</b><span class="lb-tile-d">{desc}</span><span class="lb-tile-p">от {rub(gmin((code, name, ico, desc, its)))}</span></a>')
+        low = rub(gmin((code, name, ico, desc, its)))
+        if code in TILE_PAGE:
+            out.append(f'      <a class="card lb-tile lb-tile-pg" href="{TILE_PAGE[code]}">{img}'
+                       f'<b>{name}</b><span class="lb-tile-d">{desc}</span><span class="lb-tile-p">от {low}{ARR}</span></a>')
+        else:
+            out.append(f'      <a class="card lb-tile" href="#g-{code}" data-open="{code}">{img}'
+                       f'<b>{name}</b><span class="lb-tile-d">{desc}</span><span class="lb-tile-p">от {low}</span></a>')
     out.append('    </div>')
+    out.append('    ' + more_nav(DIRECTIONS, 'Страницы направлений', 'Подробно о направлениях'))
     return '\n'.join(out)
 
 
@@ -130,6 +171,8 @@ def prices(icons):
                        f'<td data-l="Цена" class="lb-tp">{pr(it)}</td><td class="lb-tc"><button type="button" class="lb-add" data-add="{iid}" '
                        f'aria-label="Добавить в расчёт: {H.escape(iname)}"><span aria-hidden="true">+</span></button></td></tr>')
         out.append('        </tbody></table>')
+        if code in MORE:
+            out.append('        ' + more_nav(MORE[code]))
         out.append('      </details>')
     out.append('    </div>')
     return '\n'.join(out)

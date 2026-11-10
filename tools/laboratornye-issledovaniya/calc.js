@@ -1,7 +1,9 @@
 /* Расчёт «Лабораторные исследования»: позиции из прайса (+, количество), наборы по видам объектов,
-   панель внизу экрана, список в заявке и в поле msg для send.php. window.LB = {код: [название, единица, цена, «от»]} */
+   панель внизу экрана, список в заявке и в поле msg для send.php. window.LB = {код: [название, единица, цена, «от»]},
+   window.LBP = {n: название страницы, p: адрес} — для строки «Страница:» в заявке (страницы направлений, с 11.11.2026).
+   Расчёт общий для всех страниц раздела (sessionStorage 'lb-calc'). */
 (function(){
-var L=window.LB||{},S={},K='lb-calc',sent={};
+var L=window.LB||{},S={},K='lb-calc',sent={},P=window.LBP||{n:'Лабораторные исследования',p:'/laboratornye-issledovaniya/'};
 try{S=JSON.parse(sessionStorage.getItem(K))||{};}catch(_){S={};}
 for(var k in S){if(!L[k]||!(S[k]>0))delete S[k];}
 function goal(g){if(sent[g])return;sent[g]=1;try{if(window.ym)ym(113675622,'reachGoal',g)}catch(_){}}
@@ -60,7 +62,7 @@ document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='f
   g=e.goal.value||'не выбрано',a=e.address.value.trim()||'не указан',c=e.comment.value.trim(),
   o=e.type.options[e.type.selectedIndex],k=o&&o.value&&o.text!==o.value?'Вид объекта: '+o.text+'\n':'',r='',t=total();
   if(t.n){r='\nРасчёт:';for(var id in S){r+='\n— '+L[id][0]+': '+S[id]+' ('+L[id][1]+') × '+(L[id][3]?'от ':'')+L[id][2]+' ₽';}r+='\nИтого: от '+t.s+' ₽';}
-  var m=k+'Что нужно: '+g+'\nАдрес: '+a+(c?'\nКомментарий: '+c:'')+r+'\nСтраница: Лабораторные исследования (/laboratornye-issledovaniya/)';
+  var m=k+'Что нужно: '+g+'\nАдрес: '+a+(c?'\nКомментарий: '+c:'')+r+'\nСтраница: '+P.n+' ('+P.p+')';
   e.msg.value=m.length>3000?m.slice(0,2990)+'…':m;},true);
 document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-goal]');if(!b)return;
   var g=document.getElementById('f-goal');if(g)g.value=b.getAttribute('data-goal');});

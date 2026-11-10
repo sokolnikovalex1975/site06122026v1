@@ -8,6 +8,7 @@
      tools/sanitarnyy-audit/build_page.py — страница «Санитарный аудит (СЭС-аудит)» из своих исходников;
      tools/razrabotka-ppk/build_page.py — страница «Разработка ППК» из своих исходников;
      tools/laboratornye-issledovaniya/build_page.py — «Лабораторные исследования» (с 10.11.2026);
+     tools/laboratornye-issledovaniya/build_subpages.py — 7 страниц направлений раздела и 3 статьи в «Материалах» (с 11.11.2026);
      tools/dezinfektsiya/build_page.py — страница «Дезинфекция для организаций» из своих исходников;
      tools/normativnaya-baza/build_pages.py — раздел «Нормативная база» (хаб, «Проверочные листы 2026»
        и «Документы для Роспотребнадзора»);
@@ -48,6 +49,17 @@ SITEMAP = [  # адрес, приоритет
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/', '0.7'),
     ('normativnaya-baza/', '0.7'), ('normativnaya-baza/proverochnye-listy/', '0.7'),
     ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', '0.7'),
+    # страницы направлений и статьи раздела «Лабораторные исследования» (с 11.11.2026)
+    ('laboratornye-issledovaniya/analiz-smyvov/', '0.8'),
+    ('laboratornye-issledovaniya/izmerenie-mikroklimata/', '0.8'),
+    ('laboratornye-issledovaniya/zamer-osveshchennosti/', '0.8'),
+    ('laboratornye-issledovaniya/analiz-vozdukha-rabochey-zony/', '0.8'),
+    ('laboratornye-issledovaniya/analiz-pishchevykh-produktov/', '0.8'),
+    ('laboratornye-issledovaniya/analiz-vody/', '0.8'),
+    ('laboratornye-issledovaniya/kontrol-sterilizatorov/', '0.8'),
+    ('materialy/kak-berut-smyvy/', '0.7'),
+    ('materialy/zamer-osveshchennosti-i-mikroklimata/', '0.7'),
+    ('materialy/kontrol-raboty-sterilizatorov/', '0.7'),
 ]
 
 
@@ -77,6 +89,7 @@ def main():
     run('tools/sanitarnyy-audit/build_page.py')  # санитарный аудит — из своих исходников (tools/sanitarnyy-audit)
     run('tools/razrabotka-ppk/build_page.py')  # разработка ППК — из своих исходников (tools/razrabotka-ppk)
     run('tools/laboratornye-issledovaniya/build_page.py')  # «Лабораторные исследования» — из своих исходников (с 10.11.2026)
+    run('tools/laboratornye-issledovaniya/build_subpages.py')  # страницы направлений и статьи раздела (с 11.11.2026)
     run('tools/sklady/assemble.py')  # страница складов и логистики — из своих исходников (tools/sklady)
     run('tools/dezinfektsiya/build_page.py')  # дезинфекция для организаций — из своих исходников (tools/dezinfektsiya)
     run('tools/normativnaya-baza/build_pages.py')  # нормативная база и проверочные листы (tools/normativnaya-baza)

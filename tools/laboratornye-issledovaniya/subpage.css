@@ -1,0 +1,52 @@
+/* ===== Страницы направлений и статьи раздела «Лабораторные исследования» (11.11.2026): дополнения к page.css ===== */
+.lbs-p{max-width:980px;margin:0 0 18px;color:var(--t2);line-height:1.7;font-size:clamp(16px,1.02vw,18px)}
+.lbs-p b{color:var(--t1);font-weight:500}
+.lbs-p:last-child{margin-bottom:0}
+.lbs-page .lbs-p a,.lbs-page .d-card a,.lbs-page .lbs-t a,.lbs-page .d-ticks a,.lbs-page .d-terms a,.lbs-page .d-note a,.lbs-page .lb-def a,.lbs-page #normativnaya-baza .sub a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+.lbs-page .lbs-p a:hover,.lbs-page .d-card a:hover,.lbs-page .lbs-t a:hover,.lbs-page .d-ticks a:hover,.lbs-page .d-terms a:hover,.lbs-page .d-note a:hover,.lbs-page .lb-def a:hover{border-color:var(--t1)}
+.lbs-h3{margin:clamp(30px,3vw,46px) 0 16px;font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;color:var(--t1)}
+.lbs-h3:first-child{margin-top:0}
+
+/* таблицы с содержанием (показатели, нормы, периодичность) */
+.d-table.lbs-t{max-width:1200px}
+.d-table.lbs-t thead th{font-size:13px;color:var(--t3);font-weight:400}
+.d-table.lbs-t td{color:var(--t2)}
+.d-table.lbs-t td:first-child{color:var(--t1)}
+.lbs-t td.lbs-n{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--t1)}
+.lbs-cap{max-width:1200px;margin:12px 0 0;font-size:14px;color:var(--t3);line-height:1.5}
+.lbs-t+.d-ticks,.lbs-cap+.d-ticks,.lbs-t+.lbs-p,.lbs-cap+.lbs-p,.lbs-cards+.lbs-p,.d-ticks+.lbs-h3,.lbs-t+.lbs-h3{margin-top:28px}
+
+/* карточки и списки */
+.d-cards.lbs-cards{margin-top:4px}
+.d-cards.lbs-c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.d-card.lbs-card h3{font-size:clamp(18px,1.3vw,22px)}
+.d-card.lbs-card p+p,.d-card.lbs-card p+ul,.d-card.lbs-card ul+p{margin-top:10px}
+.d-card.lbs-card ul{margin:10px 0 0;padding-left:18px;color:var(--t2);line-height:1.55}
+.d-card.lbs-card li+li{margin-top:4px}
+.lbs-k{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin:0 0 10px}
+.d-ticks.lbs-ticks{margin:0;max-width:1000px}
+.d-ticks.lbs-ticks li{color:var(--t2)}
+.d-ticks.lbs-ticks b{color:var(--t1);font-weight:500}
+.d-terms.lbs-terms{max-width:1100px}
+.d-terms.lbs-terms li{grid-template-columns:44px minmax(0,.4fr) minmax(0,1fr)}
+.lbs-split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,3vw,56px);align-items:start}
+.lbs-split>*{min-width:0}
+
+/* переход со статьи на страницу услуги */
+.lbs-go{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 32px;align-items:center;margin-top:clamp(28px,3vw,44px);padding:clamp(22px,2vw,32px);border-left:2px solid var(--acc)}
+.lbs-go p{margin:0;color:var(--t2);line-height:1.6}
+.lbs-go b{display:block;color:var(--t1);font-weight:500;font-size:clamp(18px,1.3vw,22px);margin-bottom:6px;letter-spacing:-.01em}
+.lbs-go .btn{margin:0;white-space:nowrap}
+.lbs-go-b{display:flex;flex-wrap:wrap;gap:10px}
+
+
+@media (max-width:900px){
+.d-cards.lbs-c2,.lbs-split{grid-template-columns:minmax(0,1fr)}
+.lbs-t td.lbs-n{white-space:normal}
+.d-terms.lbs-terms li{grid-template-columns:36px minmax(0,1fr)}
+}
+@media (max-width:600px){
+.lbs-go{grid-template-columns:minmax(0,1fr)}
+.lbs-go .btn{width:100%;white-space:normal;text-align:center}
+.lbs-go-b .btn{flex:1 1 100%}
+}

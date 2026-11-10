@@ -116,6 +116,13 @@ URL = {
     'san': 'sanitarnyy-audit/',
     'rppk': 'razrabotka-ppk/',
     'lab': 'laboratornye-issledovaniya/',
+    # страницы направлений и статьи раздела «Лабораторные исследования» (tools/laboratornye-issledovaniya/build_subpages.py), с 11.11.2026
+    'lab-smyvy': 'laboratornye-issledovaniya/analiz-smyvov/', 'lab-mikroklimat': 'laboratornye-issledovaniya/izmerenie-mikroklimata/',
+    'lab-svet': 'laboratornye-issledovaniya/zamer-osveshchennosti/', 'lab-vrz': 'laboratornye-issledovaniya/analiz-vozdukha-rabochey-zony/',
+    'lab-pishcha': 'laboratornye-issledovaniya/analiz-pishchevykh-produktov/', 'lab-voda': 'laboratornye-issledovaniya/analiz-vody/',
+    'lab-steril': 'laboratornye-issledovaniya/kontrol-sterilizatorov/',
+    'mat-smyvy': 'materialy/kak-berut-smyvy/', 'mat-zamery': 'materialy/zamer-osveshchennosti-i-mikroklimata/',
+    'mat-steril': 'materialy/kontrol-raboty-sterilizatorov/',
     'ppkobr': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',  # та же страница, что 'ppk', — карточка «Образец ППК» для страницы услуги
     'dezinf': 'dezinfektsiya/',
     'nb': 'normativnaya-baza/', 'pl': 'normativnaya-baza/proverochnye-listy/',
@@ -157,6 +164,26 @@ CARD = {
                'Полная программа для пищевого производства в PDF, 27 страниц, и разбор раздела о дезинсекции и дератизации.'),
     'lab': ('Услуга', 'Лабораторные исследования',
             'Смывы, воздух, вода, продукция и замеры по ППК — своя лаборатория, прайс и расчёт онлайн. От 2\u00a0600\u00a0₽.'),
+    'lab-smyvy': ('Услуга', 'Анализ смывов',
+                  'Смывы с поверхностей, оборудования и рук на БГКП, S. aureus и ОМЧ по МР 4.2.0220-20 — от 310\u00a0₽ за точку.'),
+    'lab-mikroklimat': ('Услуга', 'Измерение микроклимата',
+                        'Температура, влажность и скорость движения воздуха на рабочих местах по МУК 4.3.4120-25 — от 350\u00a0₽ за точку.'),
+    'lab-svet': ('Услуга', 'Замер освещённости',
+                 'Освещённость рабочих мест поверенным люксметром по ГОСТ 24940-2016 и нормам СанПиН — от 350\u00a0₽ за точку.'),
+    'lab-vrz': ('Услуга', 'Анализ воздуха рабочей зоны',
+                'Отбор проб в зоне дыхания по ГОСТ 12.1.005-88 и сравнение с ПДК — от 600\u00a0₽ за вещество.'),
+    'lab-pishcha': ('Услуга', 'Анализ пищевых продуктов',
+                    'Микробиология, химия и пищевая ценность сырья, продукции и готовых блюд по ТР ТС 021/2011 — от 194\u00a0₽.'),
+    'lab-voda': ('Услуга', 'Анализ воды',
+                 'Водопровод, скважина, горячая вода, бассейн и стоки: микробиология от 2\u00a0350\u00a0₽, химия от 737\u00a0₽.'),
+    'lab-steril': ('Услуга', 'Контроль работы стерилизаторов',
+                   'Бактериологический контроль автоклавов и сухожаровых шкафов, стерильность и облучатели — от 1\u00a0003\u00a0₽.'),
+    'mat-smyvy': ('Материал', 'Как берут смывы с поверхностей и рук',
+                  'Порядок по МР 4.2.0220-20: время, площадь, руки и спецодежда, доставка и типичные ошибки.'),
+    'mat-zamery': ('Материал', 'Как проходит замер освещённости и микроклимата',
+                   'Периодичность по СП 2.2.4285-26, подготовка помещений, число точек и отличие от спецоценки.'),
+    'mat-steril': ('Материал', 'Контроль работы стерилизаторов',
+                   'Три метода, периодичность, записи о циклах и хранение инструментов в салоне красоты.'),
     'san': ('Услуга', 'Санитарный аудит (СЭС-аудит)',
             'Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.'),
     'dezinf': ('Услуга', 'Дезинфекция для организаций',
@@ -386,6 +413,117 @@ PAGES = {
             ('lucide-clipboard-check', 'По плану ППК', '— СП 1.1.1058-01'),
             ('lucide-factory', 'Наборы', '— по видам объектов'),
         ])),
+    # страницы направлений и статьи раздела «Лабораторные исследования» (build_subpages.py), с 11.11.2026
+    'laboratornye-issledovaniya/analiz-smyvov/index.html': dict(key='lab-smyvy', root='../../', related=['mat-smyvy', 'lab', 'dezinf', 'san'], strip=(
+        'Коротко об анализе смывов', [
+            ('lucide-flask-conical', 'Анализ смывов', '— от 310\u00a0₽ за точку'),
+            ('lucide-file-badge', 'МР 4.2.0220-20', '— порядок отбора'),
+            ('lucide-scan-search', 'БГКП, S. aureus, ОМЧ', '— основные показатели'),
+            ('lucide-map-pinned', 'Отбор на объекте', '— специалист лаборатории'),
+            ('lucide-clock', 'Доставка', '— не позднее 6 часов'),
+            ('lucide-utensils', 'Общепит и производства', '— по плану ХАССП'),
+            ('lucide-clipboard-check', 'По плану ППК', '— точки и кратность'),
+            ('lucide-notebook-pen', 'Протоколы', '— для папки к проверке'),
+        ])),
+    'laboratornye-issledovaniya/izmerenie-mikroklimata/index.html': dict(key='lab-mikroklimat', root='../../', related=['mat-zamery', 'lab-svet', 'lab', 'vent'], strip=(
+        'Коротко об измерении микроклимата', [
+            ('lucide-activity', 'Микроклимат', '— от 350\u00a0₽ за точку'),
+            ('lucide-file-badge', 'МУК 4.3.4120-25', '— методика замеров'),
+            ('lucide-clock', 'Не реже 1 раза в год', '— п. 15 СП 2.2.4285-26'),
+            ('lucide-list-checks', 'Нормы СанПиН 1.2.3685-21', '— по категориям работ'),
+            ('lucide-map-pinned', 'Замеры на рабочих местах', '— на нужных высотах'),
+            ('lucide-factory', 'Офисы, цеха, склады', '— кухни и салоны'),
+            ('lucide-clipboard-check', 'По плану ППК', '— условия труда'),
+            ('lucide-notebook-pen', 'Протоколы', '— для папки к проверке'),
+        ])),
+    'laboratornye-issledovaniya/zamer-osveshchennosti/index.html': dict(key='lab-svet', root='../../', related=['mat-zamery', 'lab-mikroklimat', 'lab', 'rppk'], strip=(
+        'Коротко о замере освещённости', [
+            ('lucide-lightbulb', 'Освещённость', '— от 350\u00a0₽ за точку'),
+            ('lucide-file-badge', 'ГОСТ 24940-2016', '— методы измерения'),
+            ('lucide-badge-check', 'Поверенный люксметр', '— погрешность до 10\u00a0%'),
+            ('lucide-clock', 'Вечером', '— или при зашторенных окнах'),
+            ('lucide-list-checks', '300\u00a0лк в офисе', '— при общем освещении'),
+            ('lucide-map-pinned', 'План точек', '— под светильниками и между ними'),
+            ('lucide-clipboard-check', 'По плану ППК', '— условия труда'),
+            ('lucide-notebook-pen', 'Протоколы', '— для папки к проверке'),
+        ])),
+    'laboratornye-issledovaniya/analiz-vozdukha-rabochey-zony/index.html': dict(key='lab-vrz', root='../../', related=['lab-mikroklimat', 'lab', 'vent', 'rppk'], strip=(
+        'Коротко об анализе воздуха рабочей зоны', [
+            ('lucide-flask-conical', 'Воздух рабочей зоны', '— от 600\u00a0₽ за вещество'),
+            ('lucide-file-badge', 'ГОСТ 12.1.005-88', '— порядок контроля'),
+            ('lucide-crosshair', 'Зона дыхания', '— пробы у рабочего места'),
+            ('lucide-list-checks', 'ПДК', '— СанПиН 1.2.3685-21'),
+            ('lucide-clock', 'Периодичность', '— по классу опасности'),
+            ('lucide-factory', 'Цеха и склады', '— лаборатории, автосервисы'),
+            ('lucide-clipboard-check', 'По плану ППК', '— пп. 13–14 СП 2.2.4285-26'),
+            ('lucide-notebook-pen', 'Протоколы', '— для папки к проверке'),
+        ])),
+    'laboratornye-issledovaniya/analiz-pishchevykh-produktov/index.html': dict(key='lab-pishcha', root='../../', related=['lab-smyvy', 'lab', 'rppk', 'ppk'], strip=(
+        'Коротко об анализе пищевых продуктов', [
+            ('lucide-utensils', 'Пищевые продукты', '— химия от 194\u00a0₽ за показатель'),
+            ('lucide-flask-conical', 'Микробиология', '— от 690\u00a0₽'),
+            ('lucide-file-badge', 'ТР ТС 021/2011', '— нормативы по группам'),
+            ('lucide-chart-column', 'Пищевая ценность', '— от 980\u00a0₽'),
+            ('lucide-shield-check', 'ХАССП', '— п. 4 СанПиН 2.3/2.4.4282-26'),
+            ('lucide-map-pinned', 'Отбор проб', '— на вашем объекте'),
+            ('lucide-factory', 'Общепит и производства', '— школы, больницы'),
+            ('lucide-notebook-pen', 'Протоколы', '— для папки к проверке'),
+        ])),
+    'laboratornye-issledovaniya/analiz-vody/index.html': dict(key='lab-voda', root='../../', related=['lab-smyvy', 'lab', 'rppk', 'dok'], strip=(
+        'Коротко об анализе воды', [
+            ('lucide-flask-conical', 'Химия воды', '— от 737\u00a0₽ за показатель'),
+            ('lucide-activity', 'Микробиология', '— от 2\u00a0350\u00a0₽'),
+            ('lucide-file-badge', 'СанПиН 1.2.3685-21', '— нормативы питьевой воды'),
+            ('lucide-map-pinned', 'Скважина', '— 4 раза в год по сезонам'),
+            ('lucide-shield-check', 'Бассейн', '— прил. 6 СП 2.1.4284-26'),
+            ('lucide-badge-check', 'Отбор проб', '— по ГОСТ 31942-2012'),
+            ('lucide-factory', 'Общепит, производства', '— гостиницы'),
+            ('lucide-notebook-pen', 'Протоколы', '— для папки к проверке'),
+        ])),
+    'laboratornye-issledovaniya/kontrol-sterilizatorov/index.html': dict(key='lab-steril', root='../../', related=['mat-steril', 'lab-smyvy', 'lab', 'dezinf'], strip=(
+        'Коротко о контроле стерилизаторов', [
+            ('lucide-shield-check', 'Стерилизатор', '— от 1\u00a0600\u00a0₽'),
+            ('lucide-flask-conical', 'Биологические индикаторы', '— под ваши режимы'),
+            ('lucide-clock', 'Не реже 2 раз в год', '— и после ремонта'),
+            ('lucide-scan-search', 'Анализ на стерильность', '— от 1\u00a0003\u00a0₽ за точку'),
+            ('lucide-lightbulb', 'Облучатели', '— эффективность от 1\u00a0600\u00a0₽'),
+            ('lucide-file-badge', 'СанПиН 3.3686-21', '— п. 125'),
+            ('lucide-pill', 'Салоны, клиники', '— стоматологии'),
+            ('lucide-notebook-pen', 'Протоколы', '— для папки к проверке'),
+        ])),
+    'materialy/kak-berut-smyvy/index.html': dict(key='mat-smyvy', root='../../', related=['lab-smyvy', 'lab', 'dezinf', 'rppk'], strip=(
+        'Коротко о том, как берут смывы', [
+            ('lucide-file-badge', 'МР 4.2.0220-20', '— простыми словами'),
+            ('lucide-clock', 'До работы', '— или после обработки'),
+            ('lucide-map-pinned', '10×10 см', '— площадь смыва'),
+            ('lucide-crosshair', 'Руки', '— ладони не менее 5 раз'),
+            ('lucide-clock', '6 часов', '— на доставку'),
+            ('lucide-scan-search', 'БГКП и стафилококк', '— что означает находка'),
+            ('lucide-ban', 'Ошибки', '— из-за которых результат ложный'),
+            ('lucide-flask-conical', 'Анализ смывов', '— от 310\u00a0₽ за точку'),
+        ])),
+    'materialy/zamer-osveshchennosti-i-mikroklimata/index.html': dict(key='mat-zamery', root='../../', related=['lab-mikroklimat', 'lab-svet', 'lab', 'rppk'], strip=(
+        'Коротко о замерах на рабочих местах', [
+            ('lucide-clock', 'Микроклимат', '— не реже 1 раза в год'),
+            ('lucide-lightbulb', 'Освещённость', '— по программе ППК'),
+            ('lucide-file-badge', 'СП 2.2.4285-26', '— пп. 10–15'),
+            ('lucide-list-checks', 'Чек-лист', '— подготовки к замерам'),
+            ('lucide-map-pinned', 'До 100\u00a0м²', '— 4 участка микроклимата'),
+            ('lucide-scan-search', 'Спецоценка', '— зачёт за 6 месяцев'),
+            ('lucide-notebook-pen', 'Протокол', '— что в нём будет'),
+            ('lucide-flask-conical', 'Замеры', '— от 350\u00a0₽ за точку'),
+        ])),
+    'materialy/kontrol-raboty-sterilizatorov/index.html': dict(key='mat-steril', root='../../', related=['lab-steril', 'lab', 'dezinf', 'san'], strip=(
+        'Коротко о контроле стерилизаторов', [
+            ('lucide-list-checks', 'Три метода', '— физический, химический, бактериологический'),
+            ('lucide-clock', 'Не реже 2 раз в год', '— бактериологический контроль'),
+            ('lucide-notebook-pen', 'Записи', '— по каждому циклу'),
+            ('lucide-lock', 'Упаковка', '— с датой стерилизации'),
+            ('lucide-file-badge', 'СанПиН 3.3686-21', '— п. 125'),
+            ('lucide-shield-check', 'СП 2.1.4284-26', '— п. 99.38'),
+            ('lucide-ban', 'Ошибки', '— и что делать при росте'),
+            ('lucide-flask-conical', 'Контроль стерилизатора', '— от 1\u00a0600\u00a0₽'),
+        ])),
     'sanitarnyy-audit/index.html': dict(key='san', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
         'Коротко о санитарном аудите', [
             ('lucide-clipboard-check', 'Проверочные листы', '— приказы № 578 и № 580'),
@@ -590,7 +728,7 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
             {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': SITE},
             {'@type': 'ListItem', 'position': 2, 'name': 'Материалы', 'item': SITE + 'materialy/'}]},
         {'@type': 'CollectionPage', 'name': 'Материалы о пест-контроле для предприятий', 'url': SITE + 'materialy/', 'inLanguage': 'ru-RU',
-         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка, образец программы производственного контроля по ХАССП (PDF) и её раздел пест-контроля, нормативная база дезинсекции и дератизации и разбор проверочных листов Роспотребнадзора 2026 года.',
+         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка, образец программы производственного контроля по ХАССП (PDF) и её раздел пест-контроля, нормативная база дезинсекции и дератизации, разбор проверочных листов Роспотребнадзора 2026 года, перечень документов для Роспотребнадзора, а также порядок лабораторного контроля: как берут смывы, как проходят замеры освещённости и микроклимата, как контролируют работу стерилизаторов.',
          'isPartOf': {'@type': 'WebSite', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE},
          'mainEntity': {'@type': 'ItemList', 'itemListElement': [
              {'@type': 'ListItem', 'position': 1, 'url': SITE + 'materialy/programma-pest-kontrolya/', 'name': 'Программа пест-контроля на предприятии: образец и шаблон в PDF, пример заполнения'},
@@ -599,7 +737,10 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
              {'@type': 'ListItem', 'position': 4, 'url': SITE + 'materialy/programma-proizvodstvennogo-kontrolya-haccp/', 'name': 'Программа производственного контроля по ХАССП: образец и раздел пест-контроля'},
              {'@type': 'ListItem', 'position': 5, 'url': SITE + 'normativnaya-baza/', 'name': 'Нормативная база: СанПиН и требования к дезинсекции и дератизации'},
              {'@type': 'ListItem', 'position': 6, 'url': SITE + 'normativnaya-baza/proverochnye-listy/', 'name': 'Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации'},
-             {'@type': 'ListItem', 'position': 7, 'url': SITE + 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', 'name': 'Документы для Роспотребнадзора: полный перечень для проверки'}]},
+             {'@type': 'ListItem', 'position': 7, 'url': SITE + 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', 'name': 'Документы для Роспотребнадзора: полный перечень для проверки'},
+             {'@type': 'ListItem', 'position': 8, 'url': SITE + 'materialy/kak-berut-smyvy/', 'name': 'Как берут смывы с поверхностей и рук: порядок по МР 4.2.0220-20'},
+             {'@type': 'ListItem', 'position': 9, 'url': SITE + 'materialy/zamer-osveshchennosti-i-mikroklimata/', 'name': 'Как проходит замер освещённости и микроклимата на рабочих местах'},
+             {'@type': 'ListItem', 'position': 10, 'url': SITE + 'materialy/kontrol-raboty-sterilizatorov/', 'name': 'Контроль работы стерилизаторов: методы, периодичность, журнал'}]},
          'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE, 'telephone': '+7-495-104-35-70', 'email': 'b2b@pestcontrol-center.ru'}},
     ]}, ensure_ascii=False) + '</script>'
 
@@ -767,7 +908,7 @@ def process_inner(rel, cfg):
 
 # ---------------------------------------------------------------- главная
 OTRASL_IDS = [  # карточки блока «Отрасли» на главной — якоря для меню (по началу заголовка карточки)
-    ('Пищев', 'otrasl-pishchevye'), ('Торгов', 'otrasl-seti'), ('Ресторан', 'otrasl-restorany'),
+    ('Пищев', 'otrasl-pishchevye'), ('Торгов', 'otrasl-seti'), ('Магазин', 'otrasl-seti'), ('Ресторан', 'otrasl-restorany'),  # «Магазины и торговые сети» — с 11.11.2026
     ('Склад', 'otrasl-sklady'), ('Фармацевт', 'otrasl-farma'), ('Гостиниц', 'otrasl-gostinitsy'),
 ]
 
