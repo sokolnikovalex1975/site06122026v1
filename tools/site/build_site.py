@@ -17,6 +17,7 @@
      tools/site/mobile_crumbs.py — хлебные крошки на телефоне (до 900 px) скрыты на всех страницах;
      tools/site/table_inset.py — отступ первой и последней колонки таблиц от края (шире 900 px) на всех страницах;
      tools/site/hero_fold.py   — кнопки первого экрана целиком видны на телефонах, планшетах и ноутбуках;
+     tools/site/required_marks.py — звёздочка « *» у обязательных полей во всех формах заявки;
   4. tools/build.py             — сжатие app.js в app.min.js и встраивание style.css в главную;
      tools/search/build_index.py — поиск по сайту: search-index.json из готовых страниц и search.min.js;
   5. server/sitemap.xml         — все страницы сайта для поисковиков. Дата изменения (lastmod) берётся из прежнего
@@ -84,6 +85,7 @@ def main():
     run('tools/site/mobile_crumbs.py')  # хлебные крошки на телефоне не показываются (правило владельца)
     run('tools/site/table_inset.py')  # отступ текста в таблицах от края (правило владельца, 10.11.2026)
     run('tools/site/hero_fold.py')  # кнопки первого экрана видны целиком на любом экране (правило владельца, 10.11.2026)
+    run('tools/site/required_marks.py')  # звёздочки у обязательных полей во всех формах (правило владельца, 10.11.2026)
     run('tools/build.py')
     run('tools/search/build_index.py')  # поиск по сайту: индекс из готовых страниц (после меню и разметки)
     today = datetime.date.today().isoformat()
