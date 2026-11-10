@@ -2,7 +2,7 @@
 
 Шапка — как в журнале пест-контроля (tools/zhurnal): логотип, «ПЕСТКОНТРОЛЬ ЦЕНТР», строка о компании и справа
 крупно телефон и адрес сайта с фиолетовыми значками, под шапкой фиолетовая линия. Водяной знак — диагональная надпись
-«пестконтроль-центр.рф» контурами букв Inter (tools/zhurnal/wm.py): цвет #7c4dff, прозрачность 12 %, −45°.
+«пестконтроль-центр.рф» контурами букв Inter (tools/zhurnal/wm.py): цвет #7c4dff, прозрачность 18 % (с 10.11.2026, было 12 %), −45°.
 
 Используется в сборке образца ППК (tools/ppk/sample), в tools/docs_brand/brand_pdf.py (образец и пустой шаблон программы
 пест-контроля, договор) и в tools/docs_brand/brand_docx.py (шаблон Word программы — только для файлов проекта, на сайте с 08.11.2026 нет).
@@ -22,7 +22,7 @@ CO = {
     'mail': 'b2b@pestcontrol-center.ru',
 }
 VIOLET = '#615fff'
-WM = dict(length_mm=232, color='#7c4dff', opacity=0.12, angle=-45)
+WM = dict(length_mm=232, color='#7c4dff', opacity=0.18, angle=-45)
 
 LOGO = ('<svg class="lg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#09090b"/>'
         '<g transform="translate(12 12)" fill="none" stroke-width="1.6" stroke-linejoin="round">'

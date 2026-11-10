@@ -378,7 +378,7 @@ def finalize():
 def main():
     global WM
     OUT.mkdir(parents=True, exist_ok=True)
-    WM = watermark_svg(FONTS, length_mm=232, color='#7c4dff', opacity=0.12)
+    WM = watermark_svg(FONTS, length_mm=232, color='#7c4dff', opacity=0.18)
     (OUT / 'akt.html').write_text(akt_html(), encoding='utf-8')
     qa = node('pdf', OUT)
     print(qa.strip())

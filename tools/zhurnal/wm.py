@@ -42,7 +42,7 @@ def text_path(fonts_dir, text='пестконтроль-центр.рф', wght=6
     return d, (xmin, ymin, xmax - xmin, ymax - ymin)
 
 
-def watermark_svg(fonts_dir, length_mm=232, color='#7c4dff', opacity=0.12):
+def watermark_svg(fonts_dir, length_mm=232, color='#7c4dff', opacity=0.18):  # 18 % — владелец, 10.11.2026
     d, (x, y, w, h) = text_path(fonts_dir)
     pad = h * 0.1
     vb = f'{x - pad:.0f} {y - pad:.0f} {w + 2 * pad:.0f} {h + 2 * pad:.0f}'

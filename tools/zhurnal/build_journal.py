@@ -601,7 +601,7 @@ def p10():
     return page(body, 10)
 
 
-WM = watermark_svg(FONTS, length_mm=232, color='#7c4dff', opacity=0.12)
+WM = watermark_svg(FONTS, length_mm=232, color='#7c4dff', opacity=0.18)
 
 
 def build():
