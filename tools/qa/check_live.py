@@ -10,13 +10,15 @@
   1. (--build) полная сборка не меняет файлы репозитория — исходники, страницы и server/sitemap.xml согласованы;
   2. каждая страница сборки для Timeweb (dist/timeweb/**/index.php) против страницы на сайте: совпадает байт в байт
      или в каких частях отличается (head, шапка, мобильное меню, main, подвал, счётчики);
-  3. счётчики на сайте: на каждой странице, кроме политики и согласия, ровно один блок «Яндекс Метрика 113675622 +
-     UIS + Radist», байт в байт как в server/counters.html; на политике и согласии счётчиков нет (так задумано);
+  3. ЗАКОН ВЛАДЕЛЬЦА (с 11.11.2026, tools/site/tracking_laws.py): на каждой странице сайта, кроме политики и согласия,
+     официальные коды Метрики 113675622, UIS и Radist из server/counters.html — каждый ровно один раз, байт в байт и на своём
+     месте, без отложенной загрузки; телефон и почта в ссылках без лишних тегов и &nbsp;. На политике и согласии
+     счётчиков нет (так задумано);
   4. style.css, legal.css, app.min.js, robots.txt, ключ IndexNow, а также (без --quick) PDF и DOCX рядом со страницами, картинки,
      шрифты и скрипты, на которые ссылаются страницы: отвечают 200 и совпадают с репозиторием;
   5. sitemap.xml на сайте — те же адреса, даты изменения и приоритеты, что в server/sitemap.xml.
 
-Код выхода 1 — ошибки: нет или сломан блок счётчиков, файл не открывается, сборка меняет файлы. Отличия страниц —
+Код выхода 1 — ошибки: нарушен закон владельца (счётчики, разметка телефона и почты), файл не открывается, сборка меняет файлы. Отличия страниц —
 сведения, а не ошибка: в main может лежать согласованное, но ещё не выложенное. Перед выкладкой список отличий
 должен совпадать с тем, что выкладка меняет; после выкладки все выложенные файлы должны совпасть.
 send.php и .htaccess не сверяются: на сервере send.php с настоящим паролем почты, .htaccess по HTTPS не отдаётся.
@@ -35,10 +37,11 @@ import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'tools' / 'site'))
+import tracking_laws  # noqa: E402  закон владельца: счётчики сразу, телефон и почта без лишних тегов (11.11.2026)
 DIST = ROOT / 'dist' / 'timeweb'
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 LEGAL = {'privacy/index.php', 'soglasie/index.php'}
-COUNTERS = re.compile(r'<!-- Yandex\.Metrika counter \+ UIS \+ Radist.*?<!-- /Yandex\.Metrika counter -->', re.S)
 STATIC = ['style.css', 'legal.css', 'app.min.js', 'robots.txt', '6e3f9d70b48c34299ede4719e3b5e4a1.txt']  # + ключ IndexNow
 SITEMAP_RE = re.compile(r'<loc>([^<]*)</loc>\s*<lastmod>([^<]*)</lastmod>\s*<priority>([^<]*)</priority>')
 ASSET_RE = re.compile(r'(?:src|href|srcset|imagesrcset|content|data-src|data-bg)="([^"]+)"|url\(([^)]+)\)')
@@ -75,15 +78,12 @@ def sha(b):
     return hashlib.sha256(b).hexdigest()
 
 
-def canonical_counters():
-    c = (ROOT / 'server' / 'counters.html').read_text(encoding='utf-8')
-    i = c.index('<!-- Yandex.Metrika counter + UIS + Radist')
-    return c[i:].strip()
-
-
 def region(s, pos):
     """В какой части страницы позиция: head, шапка, мобильное меню, main, подвал, счётчики."""
-    for name, a, b in (('счётчики', '<!-- Yandex.Metrika counter + UIS + Radist', '<!-- /Yandex.Metrika counter -->'),
+    for name, a, b in (('счётчики (Метрика)', '<!-- Yandex.Metrika counter -->', '<!-- /Yandex.Metrika counter -->'),
+                       ('счётчики (UIS)', '<!-- UIS -->', '</head>'),
+                       ('счётчики (noscript)', '<!-- Yandex.Metrika counter: noscript -->', '<!-- /Yandex.Metrika counter -->'),
+                       ('счётчики (Radist)', '<!-- Radist -->', '<!-- /Radist -->'),
                        ('head', '<head', '</head>'), ('шапка', '<header', '</header>'),
                        ('мобильное меню', '<nav class="mmenu"', '</nav>'), ('main', '<main', '</main>'),
                        ('подвал', '<footer', '</footer>')):
@@ -156,7 +156,7 @@ def main():
         err('нет dist/timeweb — запустите без --no-prod')
         return finish()
 
-    block = canonical_counters()
+    parts = tracking_laws.counter_parts()
     pages = sorted(str(p.relative_to(DIST)) for p in DIST.rglob('index.php'))
     print(f'== 2–3. Страницы ({len(pages)}) и счётчики на сайте')
     same, diff = [], []
@@ -170,17 +170,8 @@ def main():
             err(f'{url}: ответ {code}')
             continue
         text = body.decode('utf-8', 'replace')
-        found = COUNTERS.findall(text)
-        if p in LEGAL:
-            if found:
-                notes.append(f'{url}: на странице документа есть счётчики (по задумке их там нет)')
-        elif len(found) != 1:
-            err(f'{url}: блоков счётчиков на сайте — {len(found)} (нужен ровно один)')
-        elif found[0] != block:
-            err(f'{url}: блок счётчиков на сайте отличается от server/counters.html — выяснить, какой верный,'
-                ' и не выкладывать страницу, пока не решено')
-        elif "ym(113675622, 'init'" not in found[0] or 'uiscom' not in found[0] or 'radist' not in found[0]:
-            err(f'{url}: в блоке счётчиков нет Метрики 113675622, UIS или Radist')
+        for b in tracking_laws.check_page(text, counters=p not in LEGAL, parts=parts):
+            err(f'{url}: нарушение закона владельца — {b}')  # счётчики не как server/counters.html или разметка телефона/почты
         if sha(body) == sha(built):
             same.append(url)
         else:
@@ -190,7 +181,7 @@ def main():
             for l in lines:
                 print(l)
     print(f'   совпадают байт в байт: {len(same)} из {len(pages)}; отличаются: {len(diff)}')
-    print('   счётчики: ' + ('OK на всех страницах' if not any('счётчик' in e for e in errors) else 'есть ошибки (выше)'))
+    print('   закон владельца (счётчики, телефон, почта): ' + ('OK на всех страницах' if not any('закона' in e for e in errors) else 'есть нарушения (выше)'))
 
     print('== 4. Стили, скрипты, robots.txt, ключ IndexNow' + ('' if '--quick' in args else ', картинки, шрифты, PDF и DOCX'))
     assets = set(STATIC)

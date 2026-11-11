@@ -12,9 +12,11 @@
 #   bash run_all.sh rollback  — вернуть прежние файлы из копии
 #   bash run_all.sh cleanup   — удалить временный .netrc и архив
 #   bash run_all.sh counters  — без подключения: счётчики в pkg/ (и сверка с backup/, если копия уже есть)
-# Счётчики (с 08.11.2026): перед загрузкой на каждой странице пакета (*index.php, кроме политики и согласия) должен
-# быть ровно один блок «Метрика 113675622 + UIS + Radist», у заменяемых страниц — байт в байт как в копии с сервера;
-# иначе выкладка останавливается до загрузки. Намеренная правка счётчиков: ALLOW_COUNTERS_CHANGE=1 bash run_all.sh deploy
+# Счётчики (с 08.11.2026; с 11.11.2026 — по ЗАКОНУ ВЛАДЕЛЬЦА, см. laws_check): перед загрузкой на каждой странице пакета
+# (*index.php, кроме политики и согласия) должны быть официальные коды Метрики 113675622, UIS и Radist на своих местах,
+# без отложенной загрузки, а телефон и почта в ссылках — без лишних тегов и &nbsp;; у заменяемых страниц коды — байт в байт
+# как в копии с сервера. Иначе выкладка останавливается до загрузки. Намеренная правка счётчиков:
+# ALLOW_COUNTERS_CHANGE=1 bash run_all.sh deploy
 set -u
 D="$(cd "$(dirname "$0")" && pwd)"
 cd "$D" || exit 1
@@ -68,27 +70,63 @@ finish() {
   echo "== backup and log kept in: $KEEP"
   echo "== EXIT CODE $rc"
 }
-# Счётчики Метрики 113675622, UIS и Radist — обязательны на всех страницах, кроме политики и согласия
+# Счётчики Метрики 113675622, UIS и Radist — обязательны на всех страницах, кроме политики и согласия.
+# ЗАКОН ВЛАДЕЛЬЦА (11.11.2026, tools/site/tracking_laws.py, README «Закон владельца»): счётчики — официальными кодами
+# и сразу вместе со страницей (Метрика в <head> сразу после <meta name="viewport">, UIS прямо перед </head>, noscript
+# сразу после <body>, Radist в конце <body>), без отложенной загрузки; в ссылках телефона и почты — только номер
+# «+7 (495) 104-35-70» обычными пробелами и адрес, без тегов и &nbsp; внутри. Нарушение — выкладка останавливается (код 19).
 NO_COUNTERS_PAGES="${NO_COUNTERS_PAGES:-privacy/index.php soglasie/index.php}"
-cblock() { perl -0777 -ne 'print $1 if /(<!-- Yandex\.Metrika counter \+ UIS \+ Radist.*?<!-- \/Yandex\.Metrika counter -->)/s' "$1"; }
+cblock() { perl -0777 -ne 'while (/(<!-- Yandex\.Metrika counter.*?<!-- \/Yandex\.Metrika counter -->|<!-- UIS -->.*?<!-- UIS -->|<!-- Radist -->.*?<!-- \/Radist -->)/sg) { print "$1\n" }' "$1"; }
+laws_check() {  # laws_check <файл> <1 — страница со счётчиками | 0 — без них>: печатает нарушения закона, код 1 — есть нарушения
+  LAWS_COUNTERS="$2" perl -0777 -ne '
+    my @bad; my $s = $_; my $cnt = $ENV{LAWS_COUNTERS};
+    my $n = sub { my $re = shift; my $k = () = $s =~ /$re/g; $k };
+    for my $f ("waitForTrackViewAndRun", "counter + UIS + Radist", "setTimeout(load", "requestIdleCallback(load") {
+      push @bad, "deferred counters loading: $f" if index($s, $f) >= 0;
+    }
+    if ($cnt) {
+      push @bad, "Metrika init must be 1, found " . $n->(qr/ym\(113675622, .init./) if $n->(qr/ym\(113675622, .init./) != 1;
+      push @bad, "Metrika tag.js must be 1" if $n->(qr{mc\.yandex\.ru/metrika/tag\.js\?id=113675622}) != 1;
+      push @bad, "Metrika not right after <meta name=viewport> in <head>" unless $s =~ /<meta name="viewport"[^>]*>\s*<!-- Yandex\.Metrika counter -->\s*<script/;
+      push @bad, "UIS must be 1 and right before </head>" unless $n->(qr/cs\.min\.js\?k=/) == 1
+        && $s =~ m{<!-- UIS -->\s*<script type="text/javascript" async src="https://app\.uiscom\.ru/static/cs\.min\.js\?k=ICWycQx6m3NSBe3WlCeDAdAKMTmNhMHC"></script>\s*<!-- UIS -->\s*</head>};
+      push @bad, "Metrika noscript not right after <body>" unless $n->(qr{mc\.yandex\.ru/watch/113675622}) == 1
+        && $s =~ m{<body[^>]*>\s*<!-- Yandex\.Metrika counter: noscript -->\s*<noscript><div><img src="https://mc\.yandex\.ru/watch/113675622"};
+      push @bad, "Radist must be 1 and at the end of <body>" unless $n->(qr{track\.radist\.me/tracker\.min\.js}) == 1
+        && $s =~ m{<!-- /Radist -->\s*</body>};
+    } else {
+      push @bad, "counters on a page that must have none" if $s =~ m{mc\.yandex\.ru/metrika|cs\.min\.js\?k=|tracker\.min\.js};
+    }
+    while ($s =~ m{<a\b([^>]*?)\bhref="tel:([^"]*)"([^>]*)>(.*?)</a>}sg) {
+      my ($attrs, $in) = ("$1 $3", $4); (my $t = $in) =~ s/<svg\b.*?<\/svg>//sg; $t =~ s/<[^>]+>//g;
+      next unless $t =~ /\d/;
+      push @bad, "phone link inner must be exactly +7 (XXX) XXX-XX-XX with plain spaces: $in" unless $in =~ /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+      push @bad, "phone number copy in an attribute: $attrs" if $attrs =~ /(?:aria-label|title|data-t)="[^"]*\d{3}/;
+    }
+    while ($s =~ m{<a\b[^>]*?\bhref="mailto:([^"?]*)[^"]*"[^>]*>(.*?)</a>}sg) {
+      my ($addr, $in) = ($1, $2); (my $t = $in) =~ s/<[^>]+>//g;
+      push @bad, "email link inner must be exactly the address: $in" if $t =~ /@/ && $in ne $addr;
+    }
+    push @bad, "non-breaking space inside a phone number" if $s =~ /\+7(?:\xc2\xa0|&nbsp;|&#160;)\(|\)(?:\xc2\xa0|&nbsp;|&#160;)\d{3}-\d{2}-\d{2}/;
+    push @bad, "email split by a tag (\@<wbr>, \@<span>)" if $s =~ /\@\s*<(?:wbr|span)/;
+    print "  LAW: $_\n" for @bad; exit(@bad ? 1 : 0);' "$1"
+}
 counters_check() {
-  local f n bad=0 pages=0
+  local f bad=0 pages=0 docs=0
   for f in $ORDER; do
     case "$f" in *index.php) ;; *) continue ;; esac
-    case " $NO_COUNTERS_PAGES " in *" $f "*) continue ;; esac
-    pages=$((pages + 1))
     [ -f "pkg/$f" ] || { echo "ERROR: pkg/$f missing"; bad=1; continue; }
-    n=$(perl -0777 -ne '$n = () = /ym\(113675622, .init./g; print $n' "pkg/$f")
-    if [ "$n" != 1 ] || ! grep -q 'uiscom' "pkg/$f" || ! grep -q 'radist' "pkg/$f" \
-       || ! grep -q '<!-- /Yandex.Metrika counter -->' "pkg/$f"; then
-      echo "ERROR: counters block missing or broken in pkg/$f (ym init: ${n:-0})"; bad=1; continue
-    fi
+    case " $NO_COUNTERS_PAGES " in
+      *" $f "*) docs=$((docs + 1)); laws_check "pkg/$f" 0 || { echo "ERROR: owner law violated in pkg/$f (page without counters)"; bad=1; }; continue ;;
+    esac
+    pages=$((pages + 1))
+    laws_check "pkg/$f" 1 || { echo "ERROR: owner law violated in pkg/$f (counters / phone / email markup)"; bad=1; continue; }
     if [ -s "backup/$f" ] && [ "$(cblock "backup/$f" | shasum -a 256)" != "$(cblock "pkg/$f" | shasum -a 256)" ]; then
       if [ "${ALLOW_COUNTERS_CHANGE:-0}" = 1 ]; then echo "WARNING: counters block changed in $f (ALLOW_COUNTERS_CHANGE=1)"
       else echo "ERROR: counters block in pkg/$f differs from the server copy backup/$f"; bad=1; fi
     fi
   done
-  [ $bad = 0 ] && echo "== counters OK: Metrika 113675622 + UIS + Radist on $pages page(s) of the package"
+  [ $bad = 0 ] && echo "== counters OK (owner law): Metrika 113675622 + UIS + Radist loaded immediately on $pages page(s), plain phone/email markup; $docs document page(s) without counters"
   return $bad
 }
 if [ "$MODE" = counters ]; then counters_check; exit $?; fi

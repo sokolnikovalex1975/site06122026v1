@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools/site'))
 import unify
+import tracking_laws  # закон владельца 11.11.2026: общие страницы меняются им намеренно (телефон, почта, счётчики)
 SLUG = 'zashchita-ot-proniknoveniya-gryzunov'
 BASELINE = '0fca92a'  # актуальные общие файлы и параллельные изменения сохранены при интеграции
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
@@ -39,7 +40,14 @@ def field_signature(form):
 
 
 for path in ['server/counters.html', 'app.js', 'app.min.js', 'style.css', 'server/send.php', 'index.html']:
-    check(digest((ROOT / path).read_bytes()) == digest(git_file(path)), path + ' совпадает с базовой версией')
+    if path == 'server/counters.html':  # изменён законом владельца 11.11.2026: проверяем части, а не базовую версию
+        check(set(tracking_laws.counter_parts()) == {'metrika', 'uis', 'noscript', 'radist'},
+              path + ': официальные коды счётчиков по закону владельца')
+        continue
+    base = git_file(path)
+    if path.endswith('.html'):
+        base = tracking_laws.normalize_contacts(base.decode()).encode()  # с учётом правки закона (телефон и почта)
+    check(digest((ROOT / path).read_bytes()) == digest(base), path + ' совпадает с базовой версией')
 
 new = ROOT / SLUG / 'index.html'
 s = new.read_text(encoding='utf-8')
@@ -49,7 +57,7 @@ derat_soup = BeautifulSoup((ROOT / 'deratizatsiya/index.html').read_text(), 'htm
 derat_without_link = re.sub(
     r' <span id="proof-service-link">.*?</span>', '',
     (ROOT / 'deratizatsiya/index.html').read_text(), count=1)
-check(derat_without_link == git_file('deratizatsiya/index.html').decode(),
+check(derat_without_link == tracking_laws.normalize_contacts(git_file('deratizatsiya/index.html').decode()),
       'на дератизации добавлена только контекстная ссылка, прочая разметка сохранена')
 check(str(derat_soup.select_one('#form')) == str(base_soup.select_one('#form')),
       'существующая форма дератизации сохранена без изменений')
@@ -120,9 +128,10 @@ check(SITE + SLUG + '/' in (ROOT / 'server/sitemap.xml').read_text(), 'адре�
 prod = ROOT / 'dist/timeweb' / SLUG / 'index.php'
 if prod.exists():
     p = prod.read_text()
-    counters = (ROOT / 'server/counters.html').read_text()
-    block = counters[counters.index('<!-- Yandex.Metrika counter + UIS + Radist'):].strip()
-    check(p.count(block) == 1, 'производственная сборка: блок счётчиков неизменен и вставлен один раз')
+    sys.path.insert(0, str(ROOT / 'tools' / 'site'))
+    import tracking_laws  # закон владельца 11.11.2026: официальные коды счётчиков на своих местах, телефон и почта без тегов
+    laws = tracking_laws.check_page(p)
+    check(not laws, 'производственная сборка: счётчики и разметка телефона/почты по закону владельца ' + str(laws))
     check('noindex' not in p, 'производственная сборка: noindex удалён')
     check(digest(re.search(r'<form class="form".*?</form>', p, re.S)[0].encode())
           == digest(re.search(r'<form class="form".*?</form>', s, re.S)[0].encode()),

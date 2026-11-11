@@ -26,6 +26,9 @@
      tools/site/hero_fold.py   — кнопки первого экрана целиком видны на телефонах, планшетах и ноутбуках;
      tools/site/required_marks.py — звёздочка « *» у обязательных полей во всех формах заявки;
      tools/site/industry_links.py — ссылки с отраслевых плиток на профильные страницы (с 11.11.2026);
+     tools/site/tracking_laws.py — ЗАКОН ВЛАДЕЛЬЦА (11.11.2026): в ссылках телефона и почты только номер и адрес, обычными
+       пробелами, без <span>, <wbr>, <i>, <svg> и &nbsp; — иначе UIS (CoMagic) не находит и не подменяет их; значок
+       телефона в шапке — стилем <style id="tel-plain">. Последний шаг правки страниц, после всех генераторов;
   4. tools/build.py             — сжатие app.js в app.min.js и встраивание style.css в главную;
      tools/search/build_index.py — поиск по сайту: search-index.json из готовых страниц и search.min.js;
   5. server/sitemap.xml         — все страницы сайта для поисковиков. Дата изменения (lastmod) берётся из прежнего
@@ -34,7 +37,8 @@
      (например, если поменялись только меню и подвал).
 
 Счётчики (Метрика, UIS, Radist) в репозитории не вставляются — они в server/counters.html
-и добавляются только в версию для Timeweb: python3 tools/site/build_prod.py.
+и добавляются только в версию для Timeweb: python3 tools/site/build_prod.py — официальными кодами, сразу вместе
+со страницей, без отложенной загрузки (ЗАКОН ВЛАДЕЛЬЦА, tools/site/tracking_laws.py).
 """
 import datetime
 import hashlib
@@ -115,6 +119,7 @@ def main():
     run('tools/site/hero_fold.py')  # кнопки первого экрана видны целиком на любом экране (правило владельца, 10.11.2026)
     run('tools/site/required_marks.py')  # звёздочки у обязательных полей во всех формах (правило владельца, 10.11.2026)
     run('tools/site/industry_links.py')  # ссылки с отраслевых плиток на профильные страницы (правило владельца, 11.11.2026)
+    run('tools/site/tracking_laws.py')  # ЗАКОН ВЛАДЕЛЬЦА 11.11.2026: телефон и почта в ссылках без лишних тегов и &nbsp; (для UIS)
     run('tools/build.py')
     run('tools/search/build_index.py')  # поиск по сайту: индекс из готовых страниц (после меню и разметки)
     today = datetime.date.today().isoformat()

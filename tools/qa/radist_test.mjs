@@ -19,9 +19,12 @@ function buildPage() {
   if (process.env.PAGE) return fs.readFileSync(process.env.PAGE, 'utf8');
   const h = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const c = fs.readFileSync(path.join(ROOT, 'server', 'counters.html'), 'utf8');
-  const a = c.indexOf('<!-- Yandex.Metrika counter + UIS'), b = c.indexOf('<!-- /Yandex.Metrika counter -->') + '<!-- /Yandex.Metrika counter -->'.length;
-  const i = h.lastIndexOf('</body>');
-  return h.slice(0, i) + '\n' + c.slice(a, b) + '\n' + h.slice(i);
+  // части server/counters.html на своих местах — как tools/site/build_prod.py (закон владельца 11.11.2026)
+  const part = n => c.match(new RegExp('<!-- @part ' + n + '[^\\n]*-->\\n([\\s\\S]*?)(?=<!-- @part |$)'))[1].trim();
+  let s = h.replace(/(<meta name="viewport"[^>]*>\n?)/, m => m + part('metrika') + '\n');
+  s = s.replace('</head>', part('uis') + '\n</head>').replace(/(<body\b[^>]*>\n?)/, m => m + part('noscript') + '\n');
+  const i = s.lastIndexOf('</body>');
+  return s.slice(0, i) + part('radist') + '\n' + s.slice(i);
 }
 const LIVE = !!process.env.LIVE;
 const HTML = LIVE ? '' : buildPage();
@@ -74,17 +77,16 @@ const allCode = (L, id) => L.tg.length === 4 && L.max.length === 4 && L.tg.every
 const firstAction = page => page.evaluate(() => window.scrollBy(0, 400));
 
 const browser = await puppeteer.launch({ executablePath: CHROME, headless: 'new', args: ['--no-sandbox'] });
-// 1–3. Сразу после открытия, после первого действия, идентификатор Метрики
+// 1–3. Сразу после открытия (скрипт Radist грузится сразу — закон владельца 11.11.2026), идентификатор Метрики
 {
   const { page, log } = await open(browser);
   const L = await links(page);
   const id = L.sid;
   ok(/^ro[A-Za-z0-9]{10}$/.test(id || ''), 'код заявки создан сразу при открытии', { id });
   ok(allCode(L, id), 'все 4 ссылки Telegram и 4 ссылки MAX содержат код до загрузки скрипта Radist', { tg: L.tg[0], max: L.max[0] });
-  ok(log.tracker.length === 0, 'скрипт Radist до первого действия не загружается', { n: log.tracker.length });
-  await firstAction(page); await sleep(2600);
+  await sleep(2600);  // закон владельца 11.11.2026: скрипт Radist грузится сразу, без действий посетителя
   const L2 = await links(page);
-  ok(log.tracker.length === 1, 'после первого действия скрипт Radist загружен один раз', { n: log.tracker.length });
+  ok(log.tracker.length === 1, 'скрипт Radist загружен сразу и один раз, без действий посетителя', { n: log.tracker.length });
   ok(L2.getId === id && allCode(L2, id), 'скрипт Radist взял тот же код, ссылки не изменились', { getId: L2.getId });
   const p0 = log.posts[0] && log.posts[0].body;
   ok(!!p0 && p0.id === id && p0.url === SITE, 'данные визита ушли в Radist с тем же кодом и адресом страницы', p0);
