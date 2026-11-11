@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Сборка раздела «Нормативная база»: три страницы.
+"""Сборка раздела «Нормативная база»: четыре страницы.
 
     normativnaya-baza/index.html                    — хаб «СанПиН и требования к дезинсекции и дератизации» (hub.html)
     normativnaya-baza/proverochnye-listy/index.html — «Проверочные листы Роспотребнадзора 2026» (listy.html)
     normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html — «Документы для Роспотребнадзора» (dokumenty.html):
         таблицы, конструктор «Соберите папку» и чек-лист PDF из одних данных data/dokumenty.json
         (блоки — dokumenty_blocks.py, скрипт конструктора — dokumenty.js, свои стили — dokumenty.css)
+    normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.html — «Оценка эффективности дератизации
+        и дезинсекции» (effektivnost.html, с 11.11.2026): сроки, методы учёта, критерии; в форме — пункт «Что нужно»
 
 Шаблон — готовая отраслевая страница pishchevoe-proizvodstvo/index.html (как у санитарного аудита): из неё берутся
 <head> без заголовков, шапка, мобильное меню, подвал, плавающие кнопки, ранний скрипт и загрузчик анимаций, общие стили.
@@ -136,6 +138,34 @@ LISTY_FAQ = [
      'в системе «Гарант», ссылки — в таблице «Какие вопросы зададут на вашем объекте» и в источниках.'),
 ]
 
+EF_FAQ = [  # «Оценка эффективности дератизации и дезинсекции»: согласованный текст блока 9 (11.11.2026; вопрос 7 — без цены)
+    ('Как оценивают эффективность дератизации?',
+     'Сравнивают учёт грызунов до и после обработки: ловушко-сутками или контрольно-пылевыми площадками '
+     '(п. 114 СанПиН 3.3686-21). В зданиях показатель эффективности — доля площади, освобождённой от грызунов (п. 115).'),
+    ('Через сколько дней проверяют эффективность дератизации?',
+     'Через 1–2 календарных дня, если использовали приманки на острых родентицидах, и через 10–30 дней — если '
+     'на антикоагулянтах (п. 114 СанПиН 3.3686-21).'),
+    ('Какая дератизация считается эффективной?',
+     'Та, после которой грызунов на объекте нет не менее трёх месяцев при условии защиты объекта от проникновения '
+     '(п. 116 СанПиН 3.3686-21). На пищевых объектах, в общепите и торговле продуктами грызунов быть не должно вообще (п. 128).'),
+    ('Как проверить эффективность дезинсекции от тараканов?',
+     'Клеевыми ловушками: 3–5 штук на 10 м² до и после обработки, учёт через 1–2 дня (Р 3.5.2.2487-09, п. 5.6.2.8). '
+     'Объект считают свободным, если тараканов не находят в течение месяца ни одним методом ни в одном помещении (п. 5.6.4.2).'),
+    ('Что делать, если после дезинсекции насекомые остались?',
+     'Проверить качество препарата и повторить обработку инсектицидом другой группы химических веществ '
+     '(п. 99 СанПиН 3.3686-21). Одновременно нужно устранить причины: щели, доступ к воде и пище, занос с поставками.'),
+    ('Кто отвечает за контроль эффективности — заказчик или исполнитель?',
+     'Обеспечить контроль обязан владелец объекта (п. 88 СанПиН 3.3686-21). Проводить его можно своими силами, '
+     'силами исполнителя или сторонней организацией (п. 99).'),
+    ('Когда назначают контрольный визит после обработки?',
+     'По грызунам — через 1–2 дня после приманок на острых родентицидах или через 10–30 дней после антикоагулянтов '
+     '(п. 114 СанПиН 3.3686-21), по тараканам — через 10–14 дней, когда из оотек выходит молодняк. По договору учёт '
+     'проводим на плановых визитах.'),
+    ('Какие документы подтверждают эффективность на проверке?',
+     'Записи учёта до и после обработки в журнале или контрольно-учётной карте объекта (МР 3.5.3.0374-25, п. 4.39), '
+     'акты с результатом контроля и схема точек контроля. Если эффекта не было — запись о повторной обработке и смене средства.'),
+]
+
 DOK_FAQ = [  # «Документы для Роспотребнадзора»: согласованный текст блока 17 (08.11.2026)
     ('Какие документы нужны для проверки Роспотребнадзора?',
      'Программа производственного контроля, приказы об ответственных, договоры и акты по дезинсекции и дератизации, '
@@ -240,6 +270,8 @@ LAWS = [  # документы хаба для разметки ItemList (Legisl
      'http://www.pravo.gov.ru/proxy/ips/?docbody=&prevDoc=602107773&backlink=1&nd=607119571&rdk='),
     ('МР 3.5.3.0374-25', 'Дератизация. Организация и проведение дератизационных мероприятий', '2025-04-28', IN, None,
      'https://legalacts.ru/doc/mr-3530374-25-353-deratizatsija-organizatsija-i-provedenie-deratizatsionnykh-meroprijatii/'),
+    ('Р 3.5.2.2487-09', 'Руководство по медицинской дезинсекции', '2009-02-26', IN, None,
+     'https://base.garant.ru/70655720/'),  # с 11.11.2026: учёт тараканов и критерии освобождения объекта
     ('ТР ТС 021/2011', 'О безопасности пищевой продукции', '2011-12-09', IN, None, 'https://docs.cntd.ru/document/902320560'),
     ('ГОСТ Р 51705.1-2024', 'Управление качеством и безопасностью пищевых продуктов на основе принципов ХАССП. '
      'Общие требования', None, IN, None, 'https://base.garant.ru/409077162/'),
@@ -274,6 +306,10 @@ TYPES_DOK = [('Пищевое производство', 'Пищевое про�
              ('Другое', 'Салон красоты, парикмахерская'), ('Другое', 'Баня, сауна'), ('Другое', 'Прачечная, химчистка'),
              ('Другое', 'Спорт, бассейн, фитнес'), ('Магазин или торговая сеть', 'Непродовольственный магазин'),
              ('Другое', 'Другой объект')]  # тексты — как кнопки конструктора (с 09.11.2026 — 15 видов)
+TYPES_EF = [('Пищевое производство', 'Пищевое производство'), ('Ресторан или кафе', 'Ресторан или кафе'),
+            ('Магазин или торговая сеть', 'Магазин'), ('Склад, логистика', 'Склад'), ('Гостиница', 'Гостиница'),
+            ('Другое', 'Другое')]
+NEED_EF = ['Контрольный визит после обработки', 'Проверить работу подрядчика', 'Оценка заселённости перед договором']
 SEND_TYPES = {'Пищевое производство', 'Фармацевтическое производство', 'Ресторан или кафе', 'Гостиница',
               'Магазин или торговая сеть', 'Склад, логистика', 'Элеватор, комбикормовый завод', 'Другое'}  # как в send.php
 
@@ -329,6 +365,25 @@ PAGES = [
         # сверка норм — 09.11.2026 (видна на странице); при публикации поменяйте datePublished на дату выкладки
         'date_published': '2026-11-08', 'date_modified': '2026-11-10', 'dok': True,  # 09.11 — короче вводный абзац; 15 видов объектов
     },
+    {
+        'src': 'effektivnost.html', 'out': 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.html',
+        'slug': 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/', 'root': '../../',
+        'title': 'Оценка эффективности дератизации и дезинсекции: критерии СанПиН',
+        'og_title': 'Оценка эффективности дератизации и дезинсекции: сроки и критерии',
+        'desc': 'Как оценивают эффективность дератизационных и дезинсекционных мероприятий: сроки контроля, методы учёта, '
+                'критерии СанПиН 3.3686-21 и документы для проверки.',
+        'h1': 'Оценка эффективности дератизации и дезинсекции: сроки и критерии',
+        'crumbs': [('Главная', ''), ('Нормативная база', 'normativnaya-baza/'),
+                   ('Оценка эффективности', 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/')],
+        'og_image': 'ef-og.jpg', 'og_alt': 'Оценка эффективности дератизации и дезинсекции: сроки и критерии',
+        'hero': 'ef-hero', 'hero_alt': 'Специалист по пест-контролю в синей форме проверяет клеевую ловушку у стеллажа '
+                                        'на складе пищеблока, менеджер по качеству записывает результат учёта',
+        'faq': EF_FAQ, 'faq_h2': 'Вопросы <em>об оценке эффективности</em>', 'faq_open': True,  # ответы открыты (блок 9)
+        'types': TYPES_EF, 'need': NEED_EF, 'name': 'Оценка эффективности',
+        'comment_ph': 'Комментарий: какой вредитель, когда была обработка, кто её проводил',
+        # сверка норм — 11.11.2026; при выкладке поставьте datePublished на дату выкладки
+        'date_published': '2026-11-11', 'date_modified': '2026-11-11', 'ef': True,
+    },
 ]
 
 # короткое слово перед словом через дефис входит в тот же span: «к\u00a0пест-контролю» не разрывается и в анимации заголовков
@@ -350,8 +405,12 @@ def loosen(text):
                       else re.sub(r'(?<=\d)\u00a0(?=[А-Яа-яЁё])', ' ', m.group(0)), text)
 
 
-def typeset(html):
+RANGE_RE = re.compile(r'(?<![\w.,–-])(\d+(?:,\d+)?–\d+(?:,\d+)?)(?![\w–-])')  # «1–2», «10–30», «0,1–0,5»
+
+
+def typeset(html, ranges=False):
     """Типографика только в тексте: неразрывные пробелы и слова через дефис без переноса (класс nw).
+    ranges — диапазоны «1–2 дня» не рвутся на тире (страница оценки эффективности, где сроки — главное).
     Атрибуты, svg, option и скрипты не трогаем."""
     out, stack = [], []
     for part in re.split(r'(<[^>]+>)', html):
@@ -375,6 +434,8 @@ def typeset(html):
         t = NW_RE.sub(r'<span class="nw">\1</span>', t)
         t = CODE_RE.sub(r'<span class="nw">\1</span>', t)
         t = TRTS_RE.sub(lambda m: '<span class="nw">ТР\u00a0ТС\u00a0' + m.group(1) + '</span>', t)
+        if ranges:
+            t = RANGE_RE.sub(r'<span class="nw">\1</span>', t)
         out.append(t)
     return ''.join(out)
 
@@ -500,10 +561,16 @@ def form_fields(p):
     for value, _ in p['types']:
         assert value in SEND_TYPES, 'send.php не примет тип объекта: ' + value
     opts = ''.join(f'<option value="{v}">{t}</option>' if v != t else f'<option>{t}</option>' for v, t in p['types'])
+    need = ''
+    if p.get('need'):  # «Что нужно» — в send.php такого поля нет, текст уходит в msg (form_js)
+        need = ('<div class="field full"><label class="sr-only" for="f-need">Что нужно</label><select id="f-need" name="need">'
+                '<option value="" selected>Что нужно</option>' + ''.join(f'<option>{t}</option>' for t in p['need'])
+                + '</select></div>')
     return '\n'.join([
         '<div class="field"><label class="sr-only" for="f-name">Ваше имя</label><input id="f-name" name="name" placeholder="Ваше имя" required autocomplete="name"><small class="ferr">Укажите имя</small></div>',
         '<div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>',
         '<div class="field full"><label class="sr-only" for="f-company">Компания</label><input id="f-company" name="company" placeholder="Компания (необязательно)" autocomplete="organization"></div>',
+    ] + ([need] if need else []) + [
         f'<div class="field full"><label class="sr-only" for="f-type">Вид объекта</label><select id="f-type" name="type" required><option value="" selected>Вид объекта</option>{opts}</select><small class="ferr">Выберите вид объекта</small></div>',
         f'<div class="field full"><label class="sr-only" for="f-msg">Комментарий</label><textarea id="f-msg" name="comment" placeholder="{p["comment_ph"]}"></textarea></div>',
         '<input type="hidden" name="msg" value="">',
@@ -514,12 +581,21 @@ def form_fields(p):
 
 def form_js(p):
     # Вид объекта — текст выбранного пункта: «Медицинская организация» и «Аптека» уходят в send.php как «Другое»,
-    # а в письмо попадает то, что выбрал посетитель
+    # а в письмо попадает то, что выбрал посетитель. На странице оценки эффективности ещё пункт «Что нужно» (p['need'])
+    need = p.get('need')
     return ("<script>/* Форма: вид объекта, комментарий и страница — в поле msg, которое читает send.php */\n"
             "document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,"
-            "s=e.type,o=s&&s.selectedIndex>0?s.options[s.selectedIndex].text:'не выбран',c=e.comment.value.trim();"
-            "e.msg.value='Вид объекта: '+o+(c?'\\nКомментарий: '+c:'')+"
-            f"'\\nСтраница: {p['name']} (/{p['slug']})';}},true);</script>\n")
+            "s=e.type,o=s&&s.selectedIndex>0?s.options[s.selectedIndex].text:'не выбран',c=e.comment.value.trim()"
+            + (",n=e.need,w=n&&n.selectedIndex>0?n.options[n.selectedIndex].text:'не выбрано';" if need else ';')
+            + "e.msg.value=" + ("'Что нужно: '+w+'\\n'+" if need else '')
+            + "'Вид объекта: '+o+(c?'\\nКомментарий: '+c:'')+"
+            f"'\\nСтраница: {p['name']} (/{p['slug']})';}},true);</script>\n"
+            + (NEED_JS if need else ''))
+
+
+NEED_JS = ("<script>/* Кнопки «Заказать контрольный визит» и «Проверить работу подрядчика» выбирают пункт «Что нужно» в форме */\n"
+           "document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('[data-need]'),"
+           "s=document.getElementById('f-need');if(a&&s)s.value=a.getAttribute('data-need');},true);</script>\n")
 
 
 def json_ld(p):
@@ -547,6 +623,18 @@ def json_ld(p):
                 'about': ['Дезинсекция', 'Дератизация', 'СанПиН 3.3686-21', 'Проверочные листы Роспотребнадзора'],
                 'mainEntity': {'@type': 'ItemList', 'name': 'Документы о дезинсекции и дератизации',
                                'numberOfItems': len(items), 'itemListElement': items}}
+    elif p.get('ef'):
+        laws = [('СанПиН 3.3686-21', '2021-01-28', 'http://pravo.gov.ru/proxy/ips/?docbody=&nd=602107773'),
+                ('МР 3.5.3.0374-25', '2025-04-28',
+                 'https://legalacts.ru/doc/mr-3530374-25-353-deratizatsija-organizatsija-i-provedenie-deratizatsionnykh-meroprijatii/'),
+                ('Р 3.5.2.2487-09', '2009-02-26', 'https://base.garant.ru/70655720/')]
+        page = {'@type': 'Article', '@id': url + '#article', 'headline': p['h1'], 'description': p['desc'],
+                'inLanguage': 'ru', 'datePublished': p['date_published'], 'dateModified': p['date_modified'],
+                'author': AUTHOR, 'publisher': {'@id': SITE + '#org'}, 'mainEntityOfPage': url, 'image': [hero, image],
+                'about': [{'@type': 'Legislation', 'legislationIdentifier': i, 'legislationDate': d,
+                           'legislationJurisdiction': 'RU', 'legislationLegalForce': IN, 'url': u} for i, d, u in laws]
+                + ['Оценка эффективности дератизации', 'Оценка эффективности дезинсекции'],
+                'isPartOf': {'@id': SITE + 'normativnaya-baza/#webpage'}}
     elif p.get('dok'):
         page = {'@type': 'Article', '@id': url + '#article', 'headline': p['h1'], 'description': p['desc'],
                 'inLanguage': 'ru', 'datePublished': p['date_published'], 'dateModified': p['date_modified'],
@@ -638,6 +726,8 @@ def build(p, tpl, icons):
     css += '\n' + (HERE / 'page.css').read_text(encoding='utf-8').strip()
     if p.get('dok'):
         css += '\n' + (HERE / 'dokumenty.css').read_text(encoding='utf-8').strip()
+    if p.get('ef'):
+        css += '\n' + (HERE / 'effektivnost.css').read_text(encoding='utf-8').strip()
 
     # ---------------- шапка, меню (общее меню потом пересобирает tools/menu/apply_menu.py)
     top = tpl[tpl.index('</head>'):tpl.index('<main id="main"')]
@@ -670,13 +760,16 @@ def build(p, tpl, icons):
         # обозначение документа не отрывается от номера: «СП 1.1.1058-01», «СанПиН 2.1.3684-21», «МР 5.1.0098-14»
         main = re.sub(r'(?<![\w-])(СП|СанПиН|МР|ГОСТ Р|ТР ТС) (?=\d)', lambda m: m.group(1).replace(' ', '\u00a0') + '\u00a0', main)
     main = main.replace('<!--FAQ-->', faq_section(p['faq'], p['faq_h2'], p.get('faq_open', False)))
+    if p.get('ef'):
+        # обозначение документа не отрывается от номера: «Р 3.5.2.2487-09», «МР 3.5.3.0374-25», «СанПиН 3.3686-21»
+        main = re.sub(r'(?<![\w-])(СанПиН|МР|Р) (?=\d)', lambda m: m.group(1) + '\u00a0', main)
     main = main.replace('<!--TIMELINE-->', timeline_html())
     main = main.replace('<!--ROADMAP-->', roadmap_html())
     main = main.replace('<!--HERO_PHOTO-->', hero_photo(p))
     main = main.replace('<!--FORM_FIELDS-->', form_fields(p))
     main = re.sub(r'<!--OBJ:([a-z0-9-]+):([^>]*?)-->', obj_link('@/'), main)
     main = main.replace('<!--INDLINKS-->', ind_links('@/'))
-    main = typeset(main)
+    main = typeset(main, ranges=bool(p.get('ef')))
     main = main.replace('href="LICENSE_URL"', f'href="{LICENSE_URL}"')
     main = re.sub(r'<!--ICON:([a-z-]+)-->', lambda m: icons[m.group(1)], main)
     main = main.replace('<!--CTA_CONTACTS-->\n', contacts.rstrip('\n') + '\n')

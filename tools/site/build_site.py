@@ -53,6 +53,7 @@ SITEMAP = [  # адрес, приоритет
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/', '0.7'),
     ('normativnaya-baza/', '0.7'), ('normativnaya-baza/proverochnye-listy/', '0.7'),
     ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', '0.7'),
+    ('normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/', '0.7'),  # с 11.11.2026
     # страницы направлений и статьи раздела «Лабораторные исследования» (с 11.11.2026)
     ('dezinsektsiya/restorany-i-kafe/', '0.8'), ('deratizatsiya/restorany-i-kafe/', '0.8'),
     ('laboratornye-issledovaniya/analiz-smyvov/', '0.8'),

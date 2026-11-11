@@ -27,7 +27,7 @@ from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 IMG = ROOT / 'img'
 # (имя, левая граница кадра 4:3 в мастере 2752×1536)
-HEROES = [('nb-hero', 704), ('pl-hero', 704), ('dok-hero', 704)]
+HEROES = [('nb-hero', 704), ('pl-hero', 704), ('dok-hero', 704), ('ef-hero', 704)]
 Q = 80  # как у остальных фото первого экрана (42–97 КБ при 1920 px)
 
 

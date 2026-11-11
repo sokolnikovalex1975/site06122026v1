@@ -112,6 +112,7 @@ PAGES = [
     ('normativnaya-baza/index.html', '../', 'normativnaya-baza'),
     ('normativnaya-baza/proverochnye-listy/index.html', '../../', 'normativnaya-baza/proverochnye-listy'),
     ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html', '../../', 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora'),
+    ('normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.html', '../../', 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii'),
 ]
 LEGAL = [('privacy/index.html', '../', 'privacy'), ('soglasie/index.html', '../', 'soglasie')]
 

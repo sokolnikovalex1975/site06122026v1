@@ -1,0 +1,53 @@
+/* «Оценка эффективности дератизации и дезинсекции» (effektivnost.html, класс ef-), с 11.11.2026 */
+.ef-tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0 clamp(14px,1.4vw,24px);position:relative}
+.ef-tl::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,rgba(124,134,255,.55),rgba(124,134,255,.12))}
+.ef-tl li{position:relative;padding-top:34px;min-width:0}
+.ef-tl li::before{content:"";position:absolute;left:0;top:2px;width:16px;height:16px;border-radius:50%;background:#000;border:2px solid var(--acc)}
+.ef-tl li.is-ins::before{border-color:var(--yel)}
+.ef-tl-d{display:block;font-size:clamp(24px,2vw,34px);font-weight:300;letter-spacing:-.03em;line-height:1.1;color:var(--t1)}
+.ef-tl-k{display:inline-block;margin:10px 0 8px;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.ef-tl li.is-ins .ef-tl-k{color:var(--yel)}
+.ef-tl p{margin:0;color:var(--t2);font-size:15px;line-height:1.55}
+.ef-tl small{display:block;margin-top:8px;color:var(--t3);font-size:13px;line-height:1.45}
+.ef-cmp td b{font-weight:500;color:var(--t1)}
+/* крошки на компьютере стоят под кнопками: ссылки не ниже 24 px (Lighthouse, target-size) */
+.ef-hero .f-crumbs a{display:inline-block;padding:4px 0}
+.ef-q{margin:0}
+.ef-q .nb-dl dt:first-of-type,.ef-q .nb-dl dd:first-of-type{border-top:0}
+.nb-h3#intensivnost{margin-top:clamp(40px,3.4vw,60px)}
+.nb-h3 em{font-style:italic;font-weight:500}
+.ef-ol{margin:4px 0 0;padding:0 0 0 22px;display:grid;gap:10px}
+.ef-ol li{padding-left:4px}
+.ef-ol li::marker{color:var(--acc)}
+.ef-who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ef-who-c{display:flex;flex-direction:column;gap:12px;padding:clamp(24px,2.2vw,34px);color:var(--t2);line-height:1.6}
+.ef-who-c .nb-ic{margin-bottom:6px}
+.ef-who-c h3{margin:0;color:var(--t1);font-size:clamp(19px,1.4vw,24px);font-weight:400;letter-spacing:-.015em;line-height:1.3}
+.ef-who-c p{margin:0}
+.ef-ul{margin:0;padding:0 0 0 18px;display:grid;gap:8px}
+.ef-ul li::marker{color:var(--acc)}
+.ef-who-btns{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:auto;padding-top:8px}
+.ef-who-c>.ef-who-btn,.ef-who-c>.ef-who-go{margin-top:auto}
+.ef-who-btn{align-self:flex-start;height:auto;min-height:52px;padding:12px 26px;font-size:15px;white-space:normal;text-align:center;color:var(--t1)}
+/* слова через дефис (span.nw) внутри жирного начала пункта — цвета пункта, а не серого пояснения */
+.d-terms b .nw,.d-steps b .nw{color:inherit}
+.ef-who-go{color:var(--t1);font-size:15px;border-bottom:1px solid rgba(124,134,255,.45);align-self:flex-start;transition:border-color .25s}
+.ef-who-go:hover{border-color:var(--t1)}
+@media (min-width:901px){
+  .ef-cmp td:nth-child(1){width:18%}
+  .ef-cmp td:nth-child(2),.ef-cmp td:nth-child(3){width:41%}
+  .ef-int td:nth-child(1){width:22%}
+}
+@media (max-width:1100px){
+  .ef-who{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:860px){
+  .ef-hero{--nb-hero-rsv:430px}  /* заголовок на 360–375 px — в 5 строк */
+  .ef-hero .d-hero-img{object-position:50% 14%}
+}
+@media (max-width:900px){
+  .ef-tl{grid-template-columns:minmax(0,1fr);gap:22px}
+  .ef-tl::before{left:7px;right:auto;top:6px;bottom:6px;width:2px;height:auto;background:linear-gradient(180deg,rgba(124,134,255,.55),rgba(124,134,255,.12))}
+  .ef-tl li{padding:0 0 0 34px}
+  .ef-tl-k{margin:6px 0 6px}
+}

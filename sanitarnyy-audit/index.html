@@ -85,6 +85,15 @@
 
 /* типовые нарушения */
 .sa-viol{margin-top:clamp(52px,4.6vw,84px);padding:clamp(24px,2.4vw,40px)}
+/* «Проверим работу вашего подрядчика» (#podryadchik, с 11.11.2026) — ссылка на разбор оценки эффективности */
+.sa-pc{margin-top:clamp(52px,4.6vw,84px);padding:clamp(24px,2.4vw,40px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,56px);align-items:start}
+.sa-pc .sa-h3{margin:0 0 16px}
+.sa-pc-text>p{color:var(--t2);line-height:1.65;margin:0 0 14px;max-width:620px}
+.sa-pc .d-ticks{margin:0}
+.sa-pc .d-ticks li{color:#c4c4cc}
+.sa-pc-go{display:inline-block;margin-top:6px;color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+.sa-pc-go:hover{border-color:var(--t1)}
+@media (max-width:900px){.sa-pc{grid-template-columns:minmax(0,1fr)}}
 .sa-viol .sa-h3{margin:0 0 10px}
 .sa-src{margin:0 0 6px;font-size:14px;line-height:1.6;color:var(--t3);max-width:900px}
 .sa-viol ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 44px}
@@ -482,6 +491,21 @@
       <li><b>Отходы</b><span>контейнеры и площадка, пищевые отходы, периодичность вывоза</span></li>
       <li><b><span class="nw">Пест-контроль</span></b><span>договор и лицензия исполнителя, схема точек контроля, журнал и акты, ежемесячная оценка на объектах особого эпидемиологического значения (п. 110 СанПиН <span class="nw">3.3686-21</span>), сетки, уплотнители и доводчики, следы грызунов и насекомых</span></li>
     </ol>
+    <div class="card sa-pc" id="podryadchik">
+      <div class="sa-pc-text" data-fade>
+        <h3 class="sa-h3">Проверим работу вашего подрядчика <em>по дезинсекции и дератизации</em></h3>
+        <p>Если обработки на объекте ведёт другая организация, в разделе «<span class="nw">Пест-контроль</span>» проверяем, подтверждает ли её работа результат. Проверка подрядчика входит в стоимость аудита.</p>
+        <p>При необходимости выставляем пылевые площадки и ловушки и снимаем учёт на повторном выезде. В акте — вывод по работе подрядчика и что исправить в документах, на объекте и в договоре.</p>
+        <a class="sa-pc-go" href="../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/">Как оценивают эффективность →</a>
+      </div>
+      <ul class="d-ticks" data-group="ctalist">
+        <li>Лицензию исполнителя — по реестру Роспотребнадзора</li>
+        <li>Учёт до и после обработок и сроки контроля (пп. 99 и 114 СанПиН <span class="nw">3.3686-21</span>)</li>
+        <li>Кратность обследований на насекомых (п. 101) и ежемесячную оценку по грызунам (п. 110)</li>
+        <li>Смену средства, если эффекта не было (п. 99)</li>
+        <li>На объекте — точки контроля, ловушки и следы вредителей</li>
+      </ul>
+    </div>
     <div class="sa-lab" id="laboratoriya">
       <div class="sa-lab-text">
         <h3 class="sa-h3" data-fade>Смывы и пробы воздуха — <em>в стоимости аудита</em></h3>
@@ -547,6 +571,7 @@
         <tr><td data-l="№">3</td><td data-l="Зона">Меню</td><td data-l="Что обнаружено">Нет сведений об аллергенах в готовых блюдах</td><td data-l="Требование">СанПиН <span class="nw">2.3/2.4.4282-26</span>, п. 43</td><td data-l="Риск"><span class="sa-risk sa-mid">Средний</span></td><td data-l="Что сделать">Дополнить меню и технологические карты</td><td data-l="Срок">7 дней</td></tr>
         <tr><td data-l="№">4</td><td data-l="Зона">Склад</td><td data-l="Что обнаружено">Ежемесячной оценки численности грызунов нет, журнал не ведётся</td><td data-l="Требование">СанПиН <span class="nw">3.3686-21</span>, п. 110</td><td data-l="Риск"><span class="sa-risk sa-hi">Высокий</span></td><td data-l="Что сделать">Ввести схему точек контроля, журнал и ежемесячную оценку</td><td data-l="Срок">7 дней</td></tr>
         <tr><td data-l="№">5</td><td data-l="Зона">Договоры</td><td data-l="Что обнаружено">Дератизацию выполняет организация без лицензии</td><td data-l="Требование">Федеральный закон № <span class="nw">99-ФЗ</span>, ст. 12, ч. 1, п. 59</td><td data-l="Риск"><span class="sa-risk sa-hi">Высокий</span></td><td data-l="Что сделать">Сменить исполнителя, проверить лицензию в реестре Роспотребнадзора</td><td data-l="Срок">Сразу</td></tr>
+        <tr><td data-l="№">6</td><td data-l="Зона"><span class="nw">Пест-контроль</span></td><td data-l="Что обнаружено">В актах подрядчика нет учёта до и после обработки, контроль эффективности не проводится</td><td data-l="Требование">СанПиН <span class="nw">3.3686-21</span>, пп. 99, 114</td><td data-l="Риск"><span class="sa-risk sa-mid">Средний</span></td><td data-l="Что сделать">Ввести учёт до и после, назначить контрольные визиты или вести учёт своими силами</td><td data-l="Срок">30 дней</td></tr>
       </tbody>
     </table>
   </div>
@@ -660,7 +685,7 @@
 
 <section class="s" id="normativnaya-baza">
   <div class="wrap">
-    <div class="head"><div class="eyebrow" data-eyebrow>Источники</div><h2 data-split>Нормативная база <em>(проверено 06.11.2026)</em></h2><p class="sub" data-fade>Все действующие и отменённые документы о дезинсекции и дератизации со сроками — в разделе <a href="../normativnaya-baza/">«Нормативная база»</a>, вопросы о вредителях по видам объектов — в <a href="../normativnaya-baza/proverochnye-listy/">разборе проверочных листов 2026</a>.</p></div>
+    <div class="head"><div class="eyebrow" data-eyebrow>Источники</div><h2 data-split>Нормативная база <em>(проверено 06.11.2026)</em></h2><p class="sub" data-fade>Все действующие и отменённые документы о дезинсекции и дератизации со сроками — в разделе <a href="../normativnaya-baza/">«Нормативная база»</a>, вопросы о вредителях по видам объектов — в <a href="../normativnaya-baza/proverochnye-listy/">разборе проверочных листов 2026</a>, сроки и критерии оценки эффективности обработок — в <a href="../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/">разборе «Оценка эффективности дератизации и дезинсекции»</a>.</p></div>
     <ul class="sa-base" data-fade>
       <li>Федеральный закон от 30.03.1999 № <span class="nw">52-ФЗ</span> «О <span class="nw">санитарно-эпидемиологическом</span> благополучии населения» — <a href="https://www.consultant.ru/document/cons_doc_LAW_22481/" target="_blank" rel="noopener">ст. 11, 32</a></li>
       <li>Федеральный закон от 31.07.2020 № <span class="nw">248-ФЗ</span> «О государственном контроле (надзоре) и муниципальном контроле в РФ» — <a href="https://www.consultant.ru/document/cons_doc_LAW_358750/" target="_blank" rel="noopener">ст. 25, 52, 52.1, 57</a></li>

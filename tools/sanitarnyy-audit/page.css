@@ -36,6 +36,15 @@
 
 /* типовые нарушения */
 .sa-viol{margin-top:clamp(52px,4.6vw,84px);padding:clamp(24px,2.4vw,40px)}
+/* «Проверим работу вашего подрядчика» (#podryadchik, с 11.11.2026) — ссылка на разбор оценки эффективности */
+.sa-pc{margin-top:clamp(52px,4.6vw,84px);padding:clamp(24px,2.4vw,40px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,56px);align-items:start}
+.sa-pc .sa-h3{margin:0 0 16px}
+.sa-pc-text>p{color:var(--t2);line-height:1.65;margin:0 0 14px;max-width:620px}
+.sa-pc .d-ticks{margin:0}
+.sa-pc .d-ticks li{color:#c4c4cc}
+.sa-pc-go{display:inline-block;margin-top:6px;color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+.sa-pc-go:hover{border-color:var(--t1)}
+@media (max-width:900px){.sa-pc{grid-template-columns:minmax(0,1fr)}}
 .sa-viol .sa-h3{margin:0 0 10px}
 .sa-src{margin:0 0 6px;font-size:14px;line-height:1.6;color:var(--t3);max-width:900px}
 .sa-viol ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 44px}

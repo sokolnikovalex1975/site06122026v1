@@ -130,6 +130,7 @@ URL = {
     'dezinf': 'dezinfektsiya/',
     'nb': 'normativnaya-baza/', 'pl': 'normativnaya-baza/proverochnye-listy/',
     'dok': 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/',
+    'ef': 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/',  # с 11.11.2026 — превью
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -203,6 +204,8 @@ CARD = {
            'Вопросы о насекомых и грызунах по приказам № 578 и № 580 — по видам объектов и с документами для ответа.'),
     'dok': ('Перечень', 'Документы для Роспотребнадзора',
             'Что должно быть в папке к проверке: 41 общий документ, разделы по видам объектов, конструктор и чек-лист PDF.'),
+    'ef': ('Разбор', 'Оценка эффективности дератизации и дезинсекции',
+           'Когда проверять результат обработки, чем считают вредителей и что считается эффектом по СанПиН 3.3686-21.'),
 }
 
 STRIP_LABELS = {}
@@ -409,6 +412,18 @@ PAGES = {
             ('lucide-clock', '10 рабочих дней', '— при документарной проверке'),
             ('lucide-file-signature', 'Договоры и акты', '— по дезинсекции и дератизации'),
             ('lucide-shield-check', 'Сверка папки', '— бесплатно, дистанционно'),
+        ])),
+    # «Оценка эффективности дератизации и дезинсекции» (tools/normativnaya-baza/effektivnost.html), с 11.11.2026 — превью
+    'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.html': dict(key='ef', root='../../', related=['nb', 'derat', 'dezins', 'san'], strip=(
+        'Коротко об оценке эффективности', [
+            ('lucide-clock', '1–2 дня', '— учёт после острых родентицидов'),
+            ('lucide-chart-line', '10–30 дней', '— после антикоагулянтов'),
+            ('lucide-scan-search', '10–14 дней', '— контроль по тараканам'),
+            ('lucide-shield-check', '3 месяца без грызунов', '— критерий п. 116'),
+            ('lucide-list-checks', 'Клеевые ловушки', '— 3–5 на 10 м²'),
+            ('lucide-map-pinned', 'Пылевые площадки', '— 20×30 см'),
+            ('lucide-notebook-pen', 'Учёт до и после', '— в журнале и акте'),
+            ('lucide-ban', 'Нет эффекта', '— другая группа инсектицидов'),
         ])),
     # «Лабораторные исследования» (tools/laboratornye-issledovaniya), с 10.11.2026 — превью
     'laboratornye-issledovaniya/index.html': dict(key='lab', root='../', related=['san', 'rppk', 'dok', 'vent'], strip=(

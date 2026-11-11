@@ -1,4 +1,4 @@
-// Картинки для соцсетей раздела «Нормативная база»: img/nb-og.jpg и img/pl-og.jpg (1200×630).
+// Картинки для соцсетей раздела «Нормативная база»: img/nb-og.jpg, img/pl-og.jpg и img/ef-og.jpg (1200×630).
 //   node tools/normativnaya-baza/og/render.mjs          (из корня репозитория; нужен playwright)
 // Фото — img/nb-hero.webp и img/pl-hero.webp (их делает make_images.py), тексты — ниже.
 import { chromium } from '/home/user/node_modules/playwright/index.mjs';
@@ -14,10 +14,15 @@ const cards = [
   { out: 'img/pl-og.jpg', photo: 'img/pl-hero.webp', ey: 'Нормативная база · приказы № 578 и № 580',
     h1: 'Проверочные листы Роспотребнадзора 2026: <em>вопросы о дезинсекции и дератизации</em>',
     ft: 'Вопросы по видам объектов и документы для ответа' },
+  { out: 'img/ef-og.jpg', photo: 'img/ef-hero.webp', ey: 'Нормативная база · проверено 11.11.2026',
+    h1: 'Оценка эффективности дератизации и дезинсекции: <em>сроки и критерии</em>',
+    ft: 'Учёт до и после обработки, пункты СанПиН и МР' },
 ];
+// node render.mjs ef-og — только одна картинка (остальные не пересобираются)
+const only = process.argv[2];
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
-for (const c of cards) {
+for (const c of cards.filter((c) => !only || c.out.includes(only))) {
   await page.goto('file://' + path.join(here, 'og.html'));
   await page.evaluate(({ c, root }) => {
     document.getElementById('ph').src = 'file://' + root + '/' + c.photo;

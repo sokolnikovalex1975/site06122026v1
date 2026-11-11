@@ -34,6 +34,7 @@ PAGES = [
     'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html',
     'normativnaya-baza/index.html', 'normativnaya-baza/proverochnye-listy/index.html',
     'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html',
+    'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.html',  # с 11.11.2026
     # страницы направлений и статьи раздела «Лабораторные исследования» (с 11.11.2026)
     # страницы «услуга + сфера» для общепита (с 11.11.2026)
     'dezinsektsiya/restorany-i-kafe/index.html', 'deratizatsiya/restorany-i-kafe/index.html',
