@@ -9,6 +9,8 @@ import html
 import json
 import pathlib
 import re
+import shutil
+import subprocess
 import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -21,6 +23,7 @@ import mobile_crumbs
 import hero_fold
 import required_marks
 import table_inset
+import tracking_laws
 
 SLUG = 'zashchita-ot-proniknoveniya-gryzunov'
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
@@ -30,7 +33,7 @@ TITLE = 'Защита от проникновения грызунов в Мос
 DESC = ('Защита от проникновения грызунов в Москве и МО: обследование, герметизация '
         'проходок, защита ворот и дверей, фотоотчёт. Расчёт после осмотра объекта.')
 OUT = ROOT / SLUG / 'index.html'
-COUNTERS_HASH = '3c4a1e15f773b49bbde7e69f5f8168aaa1c51f22a1d3dc338798e53be47fb652'
+COUNTERS_HASH = '8c87da2e63722b152d6d1e9c8b3c1b4d6e8861631fc36e89eb4a651c04450d36'
 
 
 def replace_once(pattern, replacement, text):
@@ -48,6 +51,9 @@ def build():
     assert hashlib.sha256((ROOT / 'server/counters.html').read_bytes()).hexdigest() == COUNTERS_HASH
     template = (ROOT / 'deratizatsiya/index.html').read_text(encoding='utf-8')
     main = (HERE / 'main.html').read_text(encoding='utf-8')
+    subprocess.run(['node', str(HERE / 'build_contours.mjs')], check=True)
+    contours = (HERE / 'contours.svg').read_text(encoding='utf-8')
+    contours = contours.replace('role="img"', 'id="proof-contours-svg" role="img"', 1)
     hero = re.search(r'<div class="d-hero-media".*?</div>\s*</div>', template, re.S).group(0)
     contacts = re.search(r'<div class="cta-contacts".*?</div>\s*</div>', template, re.S).group(0)
     form = re.search(r'<form class="form".*?</form>', template, re.S).group(0)
@@ -69,7 +75,8 @@ def build():
     ])
     for key, value in {
         'hero-media': hero, 'contacts': contacts, 'form': form, 'check': check,
-        'strip': strip, 'related': unify.related_html('../', ['derat', 'sklady', 'prog', 'san'])
+        'strip': strip, 'related': unify.related_html('../', ['derat', 'sklady', 'prog', 'san']),
+        'contours': contours
     }.items():
         main = main.replace('{{' + key + '}}', value)
     assert '{{' not in main
@@ -97,6 +104,7 @@ def build():
     # Удаляем только старый локальный скрипт дератизации; общий обработчик, FX и loader сохранены.
     script = (HERE / 'page.js').read_text(encoding='utf-8').strip()
     s = replace_once(r'<script>\s*/\* Предпросмотр: вне рабочего домена.*?</script>', '<script>\n' + script + '\n</script>', s)
+    s = s.replace('</body>', '<script type="module" src="contours.js"></script>\n</body>', 1)
     pairs = re.findall(
         r'<div class="card qa"><button[^>]*>(.*?)<span class="pm"></span></button>'
         r'<div class="ans"[^>]*><div><p>(.*?)</p></div></div></div>', main, flags=re.S)
@@ -128,6 +136,8 @@ def build():
     assert 'noindex, nofollow' in s and 'ym(113675622' not in s
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(s, encoding='utf-8')
+    shutil.copy2(HERE / 'contours.svg', OUT.parent / 'contours.svg')
+    shutil.copy2(HERE / 'contours.js', OUT.parent / 'contours.js')
     unify.process_inner(str(OUT.relative_to(ROOT)), unify.PAGES[str(OUT.relative_to(ROOT))])
     # Тот же порядок локальных правил, что и в общей сборке сайта.
     s = OUT.read_text(encoding='utf-8')
@@ -140,6 +150,9 @@ def build():
     if ind_rule:
         s = s[:ind_rule.start()] + s[ind_rule.end():]
         s = s.replace('</head>', ind_rule.group(0).rstrip() + '\n</head>', 1)
+    # Последний шаг: утверждённая разметка контактов, без задержки или изменения счётчиков.
+    s = tracking_laws.normalize_contacts(s)
+    assert not tracking_laws.check_page(s, counters=False)
     OUT.write_text(s, encoding='utf-8')
     print('ok', OUT.relative_to(ROOT), len(s), 'символов; title', len(TITLE), '; description', len(DESC))
 

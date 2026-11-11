@@ -1,0 +1,338 @@
+{
+  "solids": 81,
+  "projection": {
+    "origin": [
+      380,
+      251.67323849800948
+    ],
+    "scale": 1.445019287707989,
+    "azimuth": 49,
+    "elevation": 32
+  },
+  "parts": [
+    {
+      "name": "stand.site",
+      "key": -5.299192642332049
+    },
+    {
+      "name": "approach.left",
+      "key": -5.279192642332049
+    },
+    {
+      "name": "approach.back",
+      "key": -5.259192642332049
+    },
+    {
+      "name": "foundation",
+      "key": -2.384636689049422
+    },
+    {
+      "name": "floor",
+      "key": -0.26495963211660245
+    },
+    {
+      "name": "wall.back",
+      "key": -0.24495963211660246
+    },
+    {
+      "name": "cabinet.plinth",
+      "key": -0.24495963211660246
+    },
+    {
+      "name": "wall.left",
+      "key": -0.22495963211660247
+    },
+    {
+      "name": "cabinet.body",
+      "key": -0.20495963211660248
+    },
+    {
+      "name": "cabinet.door.left",
+      "key": -0.1849596321166025
+    },
+    {
+      "name": "cabinet.cap",
+      "key": -0.1849596321166025
+    },
+    {
+      "name": "cabinet.door.right",
+      "key": -0.1649596321166025
+    },
+    {
+      "name": "inside.partition.long",
+      "key": -0.1449596321166025
+    },
+    {
+      "name": "wall.front.left-jamb",
+      "key": 3.732770615145615
+    },
+    {
+      "name": "door.threshold",
+      "key": 3.752770615145615
+    },
+    {
+      "name": "door.leaf",
+      "key": 4.6065443808683835
+    },
+    {
+      "name": "door.plate",
+      "key": 4.626544380868383
+    },
+    {
+      "name": "door.handle",
+      "key": 11.072805988250892
+    },
+    {
+      "name": "inside.partition.left",
+      "key": 20.575307479256026
+    },
+    {
+      "name": "inside.door.threshold",
+      "key": 22.722540379438946
+    },
+    {
+      "name": "wall.front.door-lintel",
+      "key": 23.68363789326376
+    },
+    {
+      "name": "wall.front.door-right",
+      "key": 23.70363789326376
+    },
+    {
+      "name": "door.frame.left",
+      "key": 23.70363789326376
+    },
+    {
+      "name": "door.frame.top",
+      "key": 23.72363789326376
+    },
+    {
+      "name": "door.frame.right",
+      "key": 23.74363789326376
+    },
+    {
+      "name": "inside.door.left",
+      "key": 26.438576139929108
+    },
+    {
+      "name": "inside.door.right",
+      "key": 36.453229128958505
+    },
+    {
+      "name": "wall.right.back",
+      "key": 40.098026201418264
+    },
+    {
+      "name": "inside.partition.lintel",
+      "key": 40.76422787379003
+    },
+    {
+      "name": "wall.right.vent-bottom",
+      "key": 42.87489874943126
+    },
+    {
+      "name": "inside.partition.right",
+      "key": 46.168309562331146
+    },
+    {
+      "name": "approach.front",
+      "key": 48.782787264579554
+    },
+    {
+      "name": "vent.frame.back",
+      "key": 52.72173877556906
+    },
+    {
+      "name": "vent.frame.bottom",
+      "key": 54.97283694782293
+    },
+    {
+      "name": "vent.louver.0",
+      "key": 56.00617951307767
+    },
+    {
+      "name": "vent.louver.1",
+      "key": 57.436961526507325
+    },
+    {
+      "name": "vent.louver.2",
+      "key": 58.86774353993698
+    },
+    {
+      "name": "vent.louver.3",
+      "key": 60.29852555336663
+    },
+    {
+      "name": "vent.louver.4",
+      "key": 61.72930756679628
+    },
+    {
+      "name": "vent.louver.5",
+      "key": 63.160089580225936
+    },
+    {
+      "name": "vent.frame.top",
+      "key": 64.93531911540717
+    },
+    {
+      "name": "vent.frame.front",
+      "key": 67.18641728766104
+    },
+    {
+      "name": "wall.right.vent-top",
+      "key": 67.25118490415869
+    },
+    {
+      "name": "wall.right.middle",
+      "key": 67.27118490415869
+    },
+    {
+      "name": "roof",
+      "key": 67.27118490415869
+    },
+    {
+      "name": "roof.parapet",
+      "key": 67.29118490415868
+    },
+    {
+      "name": "roof.seam.-65",
+      "key": 67.29118490415868
+    },
+    {
+      "name": "roof.seam.-39",
+      "key": 67.29118490415868
+    },
+    {
+      "name": "roof.seam.-13",
+      "key": 67.29118490415868
+    },
+    {
+      "name": "roof.seam.13",
+      "key": 67.29118490415868
+    },
+    {
+      "name": "roof.seam.39",
+      "key": 67.29118490415868
+    },
+    {
+      "name": "roof.seam.65",
+      "key": 67.29118490415868
+    },
+    {
+      "name": "gate.rail.back",
+      "key": 67.29118490415868
+    },
+    {
+      "name": "gate.slat.0",
+      "key": 67.29118490415868
+    },
+    {
+      "name": "gate.seal",
+      "key": 67.31118490415868
+    },
+    {
+      "name": "gate.apron",
+      "key": 67.54148764834872
+    },
+    {
+      "name": "approach.right",
+      "key": 67.56148764834872
+    },
+    {
+      "name": "gate.slat.1",
+      "key": 69.38872613871672
+    },
+    {
+      "name": "gate.slat.2",
+      "key": 72.35627401842268
+    },
+    {
+      "name": "gate.slat.3",
+      "key": 75.32382189812861
+    },
+    {
+      "name": "gate.slat.4",
+      "key": 78.29136977783457
+    },
+    {
+      "name": "gate.slat.5",
+      "key": 81.25891765754052
+    },
+    {
+      "name": "gate.slat.6",
+      "key": 84.22646553724647
+    },
+    {
+      "name": "wall.front.right-a",
+      "key": 85.51910335888569
+    },
+    {
+      "name": "wall.front.inlet-bottom",
+      "key": 85.53910335888568
+    },
+    {
+      "name": "inlet.collar.left",
+      "key": 85.55910335888568
+    },
+    {
+      "name": "inlet.collar.bottom",
+      "key": 85.57910335888567
+    },
+    {
+      "name": "gate.slat.7",
+      "key": 87.19401341695242
+    },
+    {
+      "name": "inlet.support",
+      "key": 87.39231983382098
+    },
+    {
+      "name": "inlet.channel",
+      "key": 87.41231983382097
+    },
+    {
+      "name": "inlet.collar.top",
+      "key": 87.43231983382097
+    },
+    {
+      "name": "inlet.collar.right",
+      "key": 88.89105342984182
+    },
+    {
+      "name": "gate.slat.8",
+      "key": 90.16156129665836
+    },
+    {
+      "name": "gate.slat.9",
+      "key": 93.12910917636431
+    },
+    {
+      "name": "inlet.cap",
+      "key": 95.03347450272685
+    },
+    {
+      "name": "gate.top",
+      "key": 96.00253024210117
+    },
+    {
+      "name": "gate.rail.front",
+      "key": 96.02253024210117
+    },
+    {
+      "name": "wall.right.lintel",
+      "key": 98.23758562390427
+    },
+    {
+      "name": "wall.front.inlet-top",
+      "key": 99.45525013712727
+    },
+    {
+      "name": "wall.right.front",
+      "key": 101.86092338800572
+    },
+    {
+      "name": "wall.front.right-b",
+      "key": 104.15748531069039
+    }
+  ]
+}

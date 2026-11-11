@@ -56,6 +56,8 @@ PAGES = [
 ]
 LEGAL = ['privacy/index.html', 'soglasie/index.html']
 STATIC = ['style.css', 'legal.css', 'app.min.js', 'search.min.js', 'search-index.json', 'vendor', 'fonts', 'img']
+STATIC += ['zashchita-ot-proniknoveniya-gryzunov/contours.js',
+           'zashchita-ot-proniknoveniya-gryzunov/contours.svg']  # только подготовка пакета; не выгрузка
 FILES = ['*.pdf', '*.docx']  # образцы документов рядом со страницами
 # 6e3f9d70….txt — ключ IndexNow для Яндекса (с 11.11.2026, в корне сайта; отправка адресов — tools/seo/indexnow.py)
 SERVER = ['.htaccess', 'robots.txt', 'sitemap.xml', '6e3f9d70b48c34299ede4719e3b5e4a1.txt']

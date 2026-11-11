@@ -54,6 +54,8 @@ def build():
     dest.mkdir(parents=True, exist_ok=True)
     (dest / 'index.html').write_text(s, encoding='utf-8')
     shutil.copy2(ROOT / 'tools' / SLUG / 'preview.js', dest / 'preview.js')
+    shutil.copy2(ROOT / SLUG / 'contours.js', dest / 'contours.js')
+    shutil.copy2(ROOT / SLUG / 'contours.svg', dest / 'contours.svg')
     shutil.copy2(ROOT / 'style.css', OUT / 'style.css')
     paths = set(re.findall(r'(?:img|fonts)/[A-Za-z0-9_.-]+\.(?:webp|woff2)', s + (ROOT / 'style.css').read_text()))
     for path in paths:

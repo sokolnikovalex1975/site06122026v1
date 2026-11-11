@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / 'tools/site'))
 import unify
 import tracking_laws  # закон владельца 11.11.2026: общие страницы меняются им намеренно (телефон, почта, счётчики)
 SLUG = 'zashchita-ot-proniknoveniya-gryzunov'
-BASELINE = '0fca92a'  # актуальные общие файлы и параллельные изменения сохранены при интеграции
+BASELINE = 'cf2277b'  # сохраняет утверждённый закон счётчиков, контактов и актуальное меню
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 failures = []
 
@@ -43,10 +43,11 @@ for path in ['server/counters.html', 'app.js', 'app.min.js', 'style.css', 'serve
     if path == 'server/counters.html':  # изменён законом владельца 11.11.2026: проверяем части, а не базовую версию
         check(set(tracking_laws.counter_parts()) == {'metrika', 'uis', 'noscript', 'radist'},
               path + ': официальные коды счётчиков по закону владельца')
+        check(digest((ROOT / path).read_bytes()) == digest(git_file(path)),
+              path + ': утверждённые коды не изменены дополнением схемы')
         continue
     base = git_file(path)
-    if path.endswith('.html'):
-        base = tracking_laws.normalize_contacts(base.decode()).encode()  # с учётом правки закона (телефон и почта)
+    # Актуальная база уже содержит закон владельца: защищённые файлы сравниваем байт в байт.
     check(digest((ROOT / path).read_bytes()) == digest(base), path + ' совпадает с базовой версией')
 
 new = ROOT / SLUG / 'index.html'
@@ -57,7 +58,9 @@ derat_soup = BeautifulSoup((ROOT / 'deratizatsiya/index.html').read_text(), 'htm
 derat_without_link = re.sub(
     r' <span id="proof-service-link">.*?</span>', '',
     (ROOT / 'deratizatsiya/index.html').read_text(), count=1)
-check(derat_without_link == tracking_laws.normalize_contacts(git_file('deratizatsiya/index.html').decode()),
+base_derat_without_link = re.sub(r' <span id="proof-service-link">.*?</span>', '',
+                                git_file('deratizatsiya/index.html').decode(), count=1)
+check(derat_without_link == base_derat_without_link,
       'на дератизации добавлена только контекстная ссылка, прочая разметка сохранена')
 check(str(derat_soup.select_one('#form')) == str(base_soup.select_one('#form')),
       'существующая форма дератизации сохранена без изменений')
@@ -76,7 +79,14 @@ check(soup.select_one('link[rel=canonical]')['href'] == SITE + SLUG + '/', 'cano
 check(soup.select_one('meta[name=robots]')['content'] == 'noindex, nofollow', 'GitHub-превью закрыто от индексации')
 check('ym(113675622' not in s and 'track.radist.me' not in s and 'app.uiscom.ru/static/' not in s,
       'производственные счётчики не запущены на превью')
+check(not tracking_laws.check_page(s, counters=False),
+      'телефон и почта превью соответствуют закону владельца')
 check('{{' not in s and 'TODO' not in s, 'нет незаменённых плейсхолдеров')
+check(soup.select_one('#proof-contours-svg') is not None and
+      len(soup.select('#proof-contours [data-contour-button]')) == 4,
+      'схема здания и управление всеми тремя контурами присутствуют')
+check(soup.select_one('script[type=module][src="contours.js"]') is not None,
+      'небольшой модуль схемы подключён отдельно, без 3D-библиотек')
 check(s.count('id="proof-mobile-performance"') == 1 and unify.proof_performance(s) == s,
       'мобильная оптимизация присутствует и идемпотентна')
 text = soup.get_text(' ', strip=True).lower()

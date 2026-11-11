@@ -50,6 +50,38 @@
       <h2 data-split>Защита от проникновения грызунов: <em>уязвимые зоны</em></h2>
       <p class="sub" data-fade>Осматриваем доступные конструкции вместе с представителем объекта. Решение выбираем для конкретного узла: не закрываем вентиляцию, дренаж и технологические отверстия вслепую.</p>
     </div>
+    <div class="proof-map" id="proof-contours" data-fade>
+      <figure class="card proof-map-plan">
+        <div class="proof-map-top"><span>Схема 01</span><h3>Три контура защиты</h3></div>
+        {{contours}}
+        <figcaption>
+          <p id="proof-contour-hint">Условный разрез: часть кровли и стены не показана, чтобы были видны внутренние зоны.</p>
+          <div class="proof-map-bottom">
+            <span id="proof-contour-status" role="status" aria-live="polite">Показаны все три контура</span>
+            <button type="button" data-contour-button="0" aria-pressed="true" aria-controls="proof-contours-svg" hidden disabled>Все контуры</button>
+            <a href="contours.svg" target="_blank" rel="noopener">Открыть крупно<span class="sr-only"> в новой вкладке</span></a>
+          </div>
+        </figcaption>
+      </figure>
+      <div class="proof-contour-list" role="group" aria-label="Контуры инженерной защиты">
+        <button type="button" class="proof-contour-option" data-contour-button="1" aria-pressed="false" aria-controls="proof-contours-svg" disabled>
+          <span class="proof-contour-key"><i class="proof-key-1" aria-hidden="true"></i>Контур 1</span>
+          <b>Территория и подходы</b>
+          <span>Осматриваем примыкания к зданию и доступ к цоколю. С владельцем обсуждаем хранение материалов, укрытия и эксплуатационные меры.</span>
+        </button>
+        <button type="button" class="proof-contour-option" data-contour-button="2" aria-pressed="false" aria-controls="proof-contours-svg" disabled>
+          <span class="proof-contour-key"><i class="proof-key-2" aria-hidden="true"></i>Контур 2</span>
+          <b>Оболочка здания</b>
+          <span>Двери, ворота, вентиляционные решётки, цоколь и вводы коммуникаций. Защитные элементы и закрытие проходов согласуем по каждому узлу.</span>
+        </button>
+        <button type="button" class="proof-contour-option" data-contour-button="3" aria-pressed="false" aria-controls="proof-contours-svg" disabled>
+          <span class="proof-contour-key"><i class="proof-key-3" aria-hidden="true"></i>Контур 3</span>
+          <b>Внутренние помещения</b>
+          <span>Проверяем технические помещения и связи между зонами. Если грызуны уже внутри, контроль заселённости и дератизацию согласуем отдельно.</span>
+        </button>
+      </div>
+    </div>
+    <p class="d-note proof-map-note">Это пояснение уровней обследования, а не проект конкретного объекта и не универсальная схема расстановки ловушек. Ниже перечислены узлы, которые проверяем на месте.</p>
     <div class="d-cards" data-group="cards">
       <article class="d-card"><span class="f-lbl">01 · Входные группы</span><h3>Двери и пороги</h3><p>Проверяем зазоры по периметру полотна, состояние порога и закрывание двери. Подбираем уплотнение и защиту нижней части с учётом конструкции и режима эксплуатации.</p></article>
       <article class="d-card"><span class="f-lbl">02 · Погрузочные зоны</span><h3>Ворота, рампы и доки</h3><p>Осматриваем прилегание ворот, боковые и нижние уплотнения, стыки у докового оборудования. Отдельно обсуждаем режим открывания при приёмке и отгрузке.</p></article>
