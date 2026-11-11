@@ -124,6 +124,8 @@ URL = {
     'mat-smyvy': 'materialy/kak-berut-smyvy/', 'mat-zamery': 'materialy/zamer-osveshchennosti-i-mikroklimata/',
     'mat-steril': 'materialy/kontrol-raboty-sterilizatorov/',
     'dd': 'deratizatsiya-i-dezinsektsiya/',
+    # страницы «услуга + сфера» для общепита (tools/restorany-uslugi/build_pages.py), с 11.11.2026
+    'dzr': 'dezinsektsiya/restorany-i-kafe/', 'drr': 'deratizatsiya/restorany-i-kafe/',
     'ppkobr': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',  # та же страница, что 'ppk', — карточка «Образец ППК» для страницы услуги
     'dezinf': 'dezinfektsiya/',
     'nb': 'normativnaya-baza/', 'pl': 'normativnaya-baza/proverochnye-listy/',
@@ -137,6 +139,10 @@ CARD = {
                'Контроль насекомых по IPM без остановки работы, ротация средств, журнал и акты по СанПиН.'),
     'dd': ('Услуга', 'Дератизация и дезинсекция комплексом',
            'Грызуны и насекомые по одному договору: общий график визитов и один комплект документов. От 4\u00a0900\u00a0₽/мес.'),
+    'dzr': ('Услуга', 'Дезинсекция кафе, ресторанов и столовых',
+            'Тараканы, мухи и дрозофилы: что делать при находке, гели без закрытия кухни и ночная обработка без наценки.'),
+    'drr': ('Услуга', 'Дератизация ресторанов и кафе',
+            'Мыши и крысы: ловушки без яда на кухне, станции на ключ снаружи, пути захода и журнал по точкам.'),
     'dogovor': ('Обслуживание', 'Договор на дератизацию и дезинсекцию',
                 'Одно или оба направления в одном договоре: график визитов, акт после выезда, цена до подписания.'),
     'food': ('Отрасль', 'Пест-контроль на пищевом производстве',
@@ -292,7 +298,7 @@ PAGES = {
             ('lucide-pill', 'ТЛФ, стерильные, АФС', 'и фитопрепараты'),
             ('lucide-clock', 'Выезд за 3 часа', 'по сигналу'),
         ])),
-    'restorany-i-kafe/index.html': dict(key='rest', root='../', related=['dezins', 'derat', 'dogovor', 'zhur'], strip=(
+    'restorany-i-kafe/index.html': dict(key='rest', root='../', related=['dzr', 'drr', 'dogovor', 'zhur'], strip=(
         'Коротко о пест-контроле ресторанов', [
             ('lucide-clock', 'После закрытия', 'визиты ночью и до открытия'),
             ('lucide-map-pinned', 'Точки контроля', 'на кухне, в баре и на складе'),
@@ -538,6 +544,29 @@ PAGES = {
             ('lucide-file-badge', 'СанПиН 3.3686-21', '— пп. 101 и 110'),
             ('lucide-shield-check', 'Лицензия', 'Роспотребнадзора'),
             ('lucide-list-checks', 'Документы', 'для отдела закупок'),
+        ])),
+    # страницы «услуга + сфера» для общепита (tools/restorany-uslugi/build_pages.py), с 11.11.2026
+    'dezinsektsiya/restorany-i-kafe/index.html': dict(key='dzr', root='../../', related=['rest', 'drr', 'dezins', 'zhur'], strip=(
+        'Коротко о дезинсекции общепита', [
+            ('lucide-clock', 'Ночью и в выходные', '— без наценки'),
+            ('lucide-utensils', 'Гели', '— кухня не останавливается'),
+            ('lucide-map-pinned', 'Мониторы', 'на схеме точек'),
+            ('lucide-ban', 'Без распыления', 'при гостях и персонале'),
+            ('lucide-notebook-pen', 'Акт и журнал', 'после каждого визита'),
+            ('lucide-file-badge', 'СанПиН 3.3686-21', '— пп. 98 и 101'),
+            ('lucide-shield-check', 'Лицензия', 'Роспотребнадзора'),
+            ('lucide-calculator', 'От 3\u00a0500\u00a0₽', '— обследование бесплатно'),
+        ])),
+    'deratizatsiya/restorany-i-kafe/index.html': dict(key='drr', root='../../', related=['rest', 'dzr', 'derat', 'zhur'], strip=(
+        'Коротко о дератизации ресторанов', [
+            ('lucide-ban', 'Без яда', 'на кухне и у продуктов'),
+            ('lucide-lock', 'Станции на ключ', 'снаружи и в подвале'),
+            ('lucide-map-pinned', 'Точки с номерами', 'на схеме'),
+            ('lucide-door-open', 'Пути захода', '— список для техслужбы'),
+            ('lucide-notebook-pen', 'Журнал и карта', 'по каждой точке'),
+            ('lucide-file-badge', 'СанПиН 3.3686-21', '— пп. 110 и 111'),
+            ('lucide-clock', 'Выезд за 3 часа', 'по договору'),
+            ('lucide-calculator', 'От 3\u00a0500\u00a0₽/мес', '— обследование бесплатно'),
         ])),
     'sanitarnyy-audit/index.html': dict(key='san', root='../', related=['derat', 'dezins', 'prog', 'zhur'], strip=(
         'Коротко о санитарном аудите', [
@@ -852,6 +881,33 @@ def page_specific(rel, s):
     if rel in ('dezinsektsiya/index.html', 'dogovor-deratizatsiya-dezinsektsiya/index.html'):
         # отраслевая карточка общепита — на страницу «Рестораны и кафе» (раньше вела к блоку «Отрасли» на главной)
         s = re.sub(r'<a href="\.\./#otrasli">(Рестораны(?:,| и)[^<]*)</a>', r'<a href="../restorany-i-kafe/">\1</a>', s)
+    # страницы «услуга + сфера» для общепита (tools/restorany-uslugi), с 11.11.2026: отраслевые карточки услуг ведут на них,
+    # страница ресторанов — на обе страницы (карточки вредителей и «Смотрите также»)
+    if rel == 'dezinsektsiya/index.html':
+        s = s.replace('<h3><a href="../restorany-i-kafe/">Рестораны, кафе и&nbsp;столовые</a></h3>',
+                      '<h3><a href="restorany-i-kafe/">Рестораны, кафе и&nbsp;столовые</a></h3>')
+    if rel == 'deratizatsiya/index.html':
+        s = s.replace('<a class="ind-more" href="../restorany-i-kafe/">Пест-контроль ресторанов и\u00a0кафе',
+                      '<a class="ind-more" href="restorany-i-kafe/">Дератизация ресторанов и\u00a0кафе')
+    if rel == 'restorany-i-kafe/index.html':
+        if 'id="smotrite-takzhe"' in s and f'href="../{URL["dzr"]}"><span class="rel-k">' not in s:
+            i = s.index('id="smotrite-takzhe"')
+            j = s.index('</section>', i)
+            block = s[i:j]
+            for old, new in (('dezins', 'dzr'), ('derat', 'drr')):
+                block, n = re.subn(r'<a class="card rel-card" href="\.\./' + re.escape(URL[old]) + r'">.*?</a>',
+                                   lambda m, k=new: rel_card('../', k), block, count=1, flags=re.S)
+                assert n == 1, rel + ': нет карточки ' + old + ' в «Смотрите также»'
+            s = s[:i] + block + s[j:]
+        more = ('<a class="pest-more" href="../{0}" style="display:inline-block;margin-top:12px;font-size:14px;color:var(--t1);'
+                'border-bottom:1px solid rgba(124,134,255,.45)">{1}&nbsp;→</a>')
+        for h3, k, text in (('Рыжие тараканы', 'dzr', 'Подробнее о дезинсекции'), ('Мыши', 'drr', 'Подробнее о дератизации'),
+                            ('Крысы', 'drr', 'Подробнее о дератизации')):
+            a = s.find('<h3>' + h3 + '</h3>')
+            assert a > 0, rel + ': нет карточки «' + h3 + '»'
+            b = s.index('</div></article>', a)
+            if 'class="pest-more"' not in s[a:b]:
+                s = s[:b] + more.format(URL[k], text) + s[b:]
     if rel == 'dogovor-deratizatsiya-dezinsektsiya/index.html':
         s = s.replace('<div class="d-kind-b"><h3>Дезинсекция</h3>',
                       '<div class="d-kind-b"><h3><a href="../dezinsektsiya/" style="color:inherit;border-bottom:1px solid var(--line2)">Дезинсекция</a></h3>')

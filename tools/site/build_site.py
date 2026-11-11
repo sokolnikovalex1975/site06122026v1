@@ -9,6 +9,8 @@
      tools/razrabotka-ppk/build_page.py — страница «Разработка ППК» из своих исходников;
      tools/laboratornye-issledovaniya/build_page.py — «Лабораторные исследования» (с 10.11.2026);
      tools/laboratornye-issledovaniya/build_subpages.py — 7 страниц направлений раздела и 3 статьи в «Материалах» (с 11.11.2026);
+     tools/restorany-uslugi/build_pages.py — «Дезинсекция кафе, ресторанов и столовых» и «Дератизация ресторанов
+     и кафе» (с 11.11.2026);
      tools/deratizatsiya-i-dezinsektsiya/build_page.py — «Дератизация и дезинсекция для организаций» (с 11.11.2026);
      tools/bctc/build_page.py — «Пест-контроль бизнес-центров, торговых центров и промышленных предприятий» (с 11.11.2026);
      tools/dezinfektsiya/build_page.py — страница «Дезинфекция для организаций» из своих исходников;
@@ -52,6 +54,7 @@ SITEMAP = [  # адрес, приоритет
     ('normativnaya-baza/', '0.7'), ('normativnaya-baza/proverochnye-listy/', '0.7'),
     ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', '0.7'),
     # страницы направлений и статьи раздела «Лабораторные исследования» (с 11.11.2026)
+    ('dezinsektsiya/restorany-i-kafe/', '0.8'), ('deratizatsiya/restorany-i-kafe/', '0.8'),
     ('laboratornye-issledovaniya/analiz-smyvov/', '0.8'),
     ('laboratornye-issledovaniya/izmerenie-mikroklimata/', '0.8'),
     ('laboratornye-issledovaniya/zamer-osveshchennosti/', '0.8'),
@@ -92,6 +95,7 @@ def main():
     run('tools/razrabotka-ppk/build_page.py')  # разработка ППК — из своих исходников (tools/razrabotka-ppk)
     run('tools/laboratornye-issledovaniya/build_page.py')  # «Лабораторные исследования» — из своих исходников (с 10.11.2026)
     run('tools/laboratornye-issledovaniya/build_subpages.py')  # страницы направлений и статьи раздела (с 11.11.2026)
+    run('tools/restorany-uslugi/build_pages.py')  # дезинсекция и дератизация общепита — «услуга + сфера» (с 11.11.2026)
     run('tools/deratizatsiya-i-dezinsektsiya/build_page.py')  # «Дератизация и дезинсекция» — из своих исходников (с 11.11.2026)
     run('tools/sklady/assemble.py')  # страница складов и логистики — из своих исходников (tools/sklady)
     run('tools/bctc/build_page.py')  # «Бизнес-центры, ТЦ и предприятия» — из готовой страницы складов и tools/bctc (с 11.11.2026)

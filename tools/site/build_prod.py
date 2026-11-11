@@ -35,6 +35,8 @@ PAGES = [
     'normativnaya-baza/index.html', 'normativnaya-baza/proverochnye-listy/index.html',
     'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html',
     # страницы направлений и статьи раздела «Лабораторные исследования» (с 11.11.2026)
+    # страницы «услуга + сфера» для общепита (с 11.11.2026)
+    'dezinsektsiya/restorany-i-kafe/index.html', 'deratizatsiya/restorany-i-kafe/index.html',
     'laboratornye-issledovaniya/analiz-smyvov/index.html',
     'laboratornye-issledovaniya/izmerenie-mikroklimata/index.html',
     'laboratornye-issledovaniya/zamer-osveshchennosti/index.html',

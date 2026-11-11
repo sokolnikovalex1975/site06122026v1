@@ -90,6 +90,9 @@ PAGES = [
     (LAB + '/analiz-vody/index.html', '../../', LAB + '/analiz-vody'),
     (LAB + '/kontrol-sterilizatorov/index.html', '../../', LAB + '/kontrol-sterilizatorov'),
     (DOGOVOR + '/index.html', '../', DOGOVOR),
+    # страницы «услуга + сфера» для общепита (tools/restorany-uslugi), с 11.11.2026 — в меню не добавляются
+    ('dezinsektsiya/restorany-i-kafe/index.html', '../../', 'dezinsektsiya/restorany-i-kafe'),
+    (DERAT + '/restorany-i-kafe/index.html', '../../', DERAT + '/restorany-i-kafe'),
     ('pishchevoe-proizvodstvo/index.html', '../', 'pishchevoe-proizvodstvo'),
     ('restorany-i-kafe/index.html', '../', 'restorany-i-kafe'),
     ('magaziny-i-torgovye-seti/index.html', '../', 'magaziny-i-torgovye-seti'),
@@ -146,7 +149,7 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', DD, VENT, SAN, RPPK, LAB) or cur.startswith(LAB + '/')
+    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', DD, VENT, SAN, RPPK, LAB) or cur.startswith(LAB + '/') or cur.startswith('dezinsektsiya/') or cur.startswith(DERAT + '/')
     in_ind = any(s == cur for s, _ in INDUSTRIES)
     in_mat = cur.startswith('materialy') or cur.startswith('normativnaya-baza')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
