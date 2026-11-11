@@ -1,0 +1,498 @@
+{
+  "scope": "Published GitHub preview, not Timeweb production; one cold Lighthouse run per profile",
+  "pages_build": {
+    "commit": "896e3d68d6fb1c429c117e344fec352bf3ff7211",
+    "error": {
+      "message": null
+    },
+    "status": "built",
+    "updated_at": "2026-11-11T11:30:41Z"
+  },
+  "github_browser": {
+    "url": "https://sokolnikovalex1975.github.io/site06122026v1/zashchita-ot-proniknoveniya-gryzunov/",
+    "checks": [
+      {
+        "check": "GitHub Pages: HTTP 200",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: опубликована нужная страница",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: десктоп без переполнения",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: FAQ раскрывается",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: FAQ закрывается",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: самопроверка реагирует",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: обязательные поля проверяются",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: тестовое подтверждение формы работает",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: ни заявка, ни счётчики не отправлены",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: ссылка из дератизации работает",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: поиск открывает услугу",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: телефон без переполнения",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: мобильная кнопка доступна",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: мобильное меню открывается",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: мобильное меню закрывается",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: без ошибок JavaScript",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: каталог открывает новую услугу",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: вложенная страница возвращает в каталог",
+        "pass": true
+      },
+      {
+        "check": "GitHub Pages: каталог без ошибок JavaScript",
+        "pass": true
+      }
+    ],
+    "errors": [],
+    "forbiddenRequests": [],
+    "checkedAt": "2026-11-11T11:34:13.983Z"
+  },
+  "attached_preview_browser": {
+    "asset_id": "f2e012a5-802b-4a3a-b317-09ca252e68bf",
+    "checks": [
+      {
+        "check": "Приложение: каталог открывает вложенную страницу",
+        "pass": true
+      },
+      {
+        "check": "Приложение: на телефоне нет переполнения",
+        "pass": true
+      },
+      {
+        "check": "Приложение: FAQ работает",
+        "pass": true
+      },
+      {
+        "check": "Приложение: обязательные поля проверяются",
+        "pass": true
+      },
+      {
+        "check": "Приложение: безопасное подтверждение формы",
+        "pass": true
+      },
+      {
+        "check": "Приложение: возврат в каталог работает",
+        "pass": true
+      },
+      {
+        "check": "Приложение: прежняя форма главной работает в деморежиме",
+        "pass": true
+      },
+      {
+        "check": "Приложение: очистка тестовых данных работает",
+        "pass": true
+      },
+      {
+        "check": "Приложение: поиск открывает реальную страницу GitHub",
+        "pass": true
+      },
+      {
+        "check": "Приложение: нет ошибок JavaScript",
+        "pass": true
+      },
+      {
+        "check": "Приложение: нет отправки заявок и производственных счётчиков",
+        "pass": true
+      }
+    ],
+    "errors": [],
+    "forbiddenRequests": [],
+    "checkedAt": "2026-11-11T11:33:04.874Z"
+  },
+  "comet": {
+    "url": "https://sokolnikovalex1975.github.io/site06122026v1/zashchita-ot-proniknoveniya-gryzunov/",
+    "h1": "Защита от проникновения грызунов",
+    "viewport": {
+      "width": 1910,
+      "height": 990
+    },
+    "horizontalOverflow": false,
+    "html_sha256": "25554c04c64e4db497131c1e6b6df330115e637c5ff27128586b6e53f2c527a8",
+    "matches_release_source": true
+  },
+  "lighthouse": [
+    {
+      "url": "https://sokolnikovalex1975.github.io/site06122026v1/zashchita-ot-proniknoveniya-gryzunov/",
+      "fetchTime": "2026-11-11T11:34:51.513Z",
+      "lighthouseVersion": "12.8.2",
+      "formFactor": "mobile",
+      "settings": {
+        "formFactor": "mobile",
+        "throttlingMethod": "simulate",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        }
+      },
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "lcp_ms": 1899.9610000000002,
+      "cls": 0,
+      "tbt_ms": 0,
+      "numeric_audits": {
+        "first-contentful-paint": {
+          "value": 1374.961,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 1899.9610000000002,
+          "unit": "millisecond"
+        },
+        "speed-index": {
+          "value": 1374.961,
+          "unit": "millisecond"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "max-potential-fid": {
+          "value": 50,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "unit": "unitless"
+        },
+        "server-response-time": {
+          "value": 103.47200000000001,
+          "unit": "millisecond"
+        },
+        "interactive": {
+          "value": 1922.4610000000002,
+          "unit": "millisecond"
+        },
+        "redirects": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "mainthread-work-breakdown": {
+          "value": 1738.9839999999901,
+          "unit": "millisecond"
+        },
+        "bootup-time": {
+          "value": 44.683999999999976,
+          "unit": "millisecond"
+        },
+        "uses-rel-preconnect": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "network-rtt": {
+          "value": 4.294,
+          "unit": "millisecond"
+        },
+        "network-server-latency": {
+          "value": 24.961000000000002,
+          "unit": "millisecond"
+        },
+        "metrics": {
+          "value": 1922,
+          "unit": "millisecond"
+        },
+        "prioritize-lcp-image": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "uses-long-cache-ttl": {
+          "value": 150185.75,
+          "unit": "byte"
+        },
+        "total-byte-weight": {
+          "value": 192996,
+          "unit": "byte"
+        },
+        "offscreen-images": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "render-blocking-resources": {
+          "value": 408,
+          "unit": "millisecond"
+        },
+        "unminified-css": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "unminified-javascript": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "unused-css-rules": {
+          "value": 150,
+          "unit": "millisecond"
+        },
+        "unused-javascript": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "modern-image-formats": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "uses-optimized-images": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "uses-text-compression": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "uses-responsive-images": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "efficient-animated-content": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "duplicated-javascript": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "legacy-javascript": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "dom-size": {
+          "value": 872,
+          "unit": "element"
+        },
+        "uses-http2": {
+          "value": 0,
+          "unit": "millisecond"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "url": "https://sokolnikovalex1975.github.io/site06122026v1/zashchita-ot-proniknoveniya-gryzunov/",
+      "fetchTime": "2026-11-11T11:35:05.398Z",
+      "lighthouseVersion": "12.8.2",
+      "formFactor": "desktop",
+      "settings": {
+        "formFactor": "desktop",
+        "throttlingMethod": "simulate",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1350,
+          "height": 940,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        }
+      },
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "lcp_ms": 515.5,
+      "cls": 0,
+      "tbt_ms": 0,
+      "numeric_audits": {
+        "first-contentful-paint": {
+          "value": 327,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 515.5,
+          "unit": "millisecond"
+        },
+        "speed-index": {
+          "value": 1224.9492361302387,
+          "unit": "millisecond"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "max-potential-fid": {
+          "value": 52,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "unit": "unitless"
+        },
+        "server-response-time": {
+          "value": 12.93,
+          "unit": "millisecond"
+        },
+        "interactive": {
+          "value": 518.35,
+          "unit": "millisecond"
+        },
+        "redirects": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "mainthread-work-breakdown": {
+          "value": 986.7990000000016,
+          "unit": "millisecond"
+        },
+        "bootup-time": {
+          "value": 185.29100000000042,
+          "unit": "millisecond"
+        },
+        "uses-rel-preconnect": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "network-rtt": {
+          "value": 13.187,
+          "unit": "millisecond"
+        },
+        "network-server-latency": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "metrics": {
+          "value": 518,
+          "unit": "millisecond"
+        },
+        "prioritize-lcp-image": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "uses-long-cache-ttl": {
+          "value": 205963.08333333334,
+          "unit": "byte"
+        },
+        "total-byte-weight": {
+          "value": 253844,
+          "unit": "byte"
+        },
+        "offscreen-images": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "render-blocking-resources": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "unminified-css": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "unminified-javascript": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "unused-css-rules": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "unused-javascript": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "modern-image-formats": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "uses-optimized-images": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "uses-text-compression": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "uses-responsive-images": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "efficient-animated-content": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "duplicated-javascript": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "legacy-javascript": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "dom-size": {
+          "value": 976,
+          "unit": "element"
+        },
+        "uses-http2": {
+          "value": 0,
+          "unit": "millisecond"
+        }
+      },
+      "warnings": []
+    }
+  ]
+}
