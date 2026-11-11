@@ -23,6 +23,10 @@ from typo import typo  # неразрывный пробел после коро
 
 # Услуги (выпадающий список «Услуги ▾» в шапке и раскрывающийся блок в мобильном меню)
 USLUGI = [
+    # с 11.11.2026 — первый пункт: главная (основная услуга сайта). На главной он отмечен как текущая страница
+    # (href="./", aria-current) — услуга остаётся в общем списке. Заменил якорь «Пест-контроль по системе IPM» (#podhod):
+    # тот же блок открывает пункт шапки «Метод IPM»
+    ('', '<span class="nw">Пест-контроль</span> для бизнеса'),
     ('dezinfektsiya', 'Дезинфекция для организаций'),
     ('deratizatsiya', 'Дератизация для организаций'),
     ('dezinsektsiya', 'Дезинсекция для организаций'),
@@ -97,6 +101,8 @@ PAGES = [
     (LAB + '/analiz-vody/index.html', '../../', LAB + '/analiz-vody'),
     (LAB + '/kontrol-sterilizatorov/index.html', '../../', LAB + '/kontrol-sterilizatorov'),
     (DOGOVOR + '/index.html', '../', DOGOVOR),
+    # «Защита от проникновения грызунов» (11.11.2026, пока только GitHub): в «Услуги» меню не добавлена до выкладки на сайт
+    ('zashchita-ot-proniknoveniya-gryzunov/index.html', '../', 'zashchita-ot-proniknoveniya-gryzunov'),
     # страницы «услуга + сфера» для общепита (tools/restorany-uslugi), с 11.11.2026 — в меню не добавляются
     ('dezinsektsiya/restorany-i-kafe/index.html', '../../', 'dezinsektsiya/restorany-i-kafe'),
     (DERAT + '/restorany-i-kafe/index.html', '../../', DERAT + '/restorany-i-kafe'),
@@ -133,6 +139,8 @@ def page_link(root, cur, slug, text, cls=''):
     c = f' class="{cls}"' if cls else ''
     if slug == cur:
         return f'<a href="./"{c} aria-current="page">{text}</a>'
+    if slug == '':  # главная
+        return f'<a href="{root or "./"}"{c}>{text}</a>'
     return f'<a href="{root}{slug}/"{c}>{text}</a>'
 
 
@@ -160,12 +168,11 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', DD, VENT, SAN, RPPK, LAB) or cur.startswith(LAB + '/') or cur.startswith('dezinsektsiya/') or cur.startswith(DERAT + '/')
+    in_usl = cur != '' and cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', DD, VENT, SAN, RPPK, LAB) or cur.startswith(LAB + '/') or cur.startswith('dezinsektsiya/') or cur.startswith(DERAT + '/')
     in_ind = any(s == cur for s, _ in INDUSTRIES)
     in_mat = cur.startswith('materialy') or cur.startswith('normativnaya-baza')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
     usl_items = ''.join(page_link(root, cur, s, one(t) + ARR) for s, t in USLUGI)
-    usl_items += anchor(root, 'podhod', '<span>Пест-контроль по системе IPM</span>' + ARR, 'nav-dd-all')
     ind_items = ''.join(page_link(root, cur, s, t + ARR) + ''.join(page_link(root, cur, s2, t2 + ARR, 'nav-sub') for s2, t2 in INDUSTRY_SUB.get(s, []))
                         for s, t in INDUSTRIES)
     ind_items += anchor(root, 'otrasli', 'Все отрасли' + ARR, 'nav-dd-all')
@@ -181,7 +188,7 @@ def build(root, cur, cta_mobile):
         + dropdown('materialy', 'Материалы', mat_items, in_mat) + '\n    </nav>'
     )
     # мобильное меню
-    sub_usl = ''.join(page_link(root, cur, s, one(t)) for s, t in USLUGI) + anchor(root, 'podhod', '<span class="nw">Пест-контроль</span> по системе IPM')
+    sub_usl = ''.join(page_link(root, cur, s, one(t)) for s, t in USLUGI)
     sub_ind = ''.join(page_link(root, cur, s, t) + ''.join(page_link(root, cur, s2, t2, 'nav-sub') for s2, t2 in INDUSTRY_SUB.get(s, []))
                       for s, t in INDUSTRIES) + anchor(root, 'otrasli', 'Все отрасли')
     sub_mat = ''.join(page_link(root, cur, s, one(t)) for s, t in MATERIALS) + page_link(root, cur, 'materialy', 'Все материалы')
@@ -201,7 +208,6 @@ def build(root, cur, cta_mobile):
     # и без обёртки пробел перед вложенным тегом пропал бы
     wrap = lambda t: f'<span>{t}</span>' if '<' in t else t
     ft_srv = (''.join(li(page_link(root, cur, s, wrap(t) if s != DOGOVOR else 'Договор на дератизацию и дезинсекцию')) for s, t in USLUGI)
-              + li(anchor(root, 'podhod', wrap('<span class="nw">Пест-контроль</span> по системе IPM')))
               + ''.join(li(anchor(root, s, t)) for s, t in SERVICE))
     ft_ind = ''.join(li(page_link(root, cur, s, t)) + ''.join(f'<li class="ft-sub">{page_link(root, cur, s2, t2)}</li>' for s2, t2 in INDUSTRY_SUB.get(s, []))
                      for s, t in INDUSTRIES)
@@ -257,7 +263,9 @@ SRCH_CSS = ('<style id="srch-st">/* лупа поиска в шапке и ра�
             '.nav-dd-panel a.nav-sub{position:relative}.nav-dd-panel a.nav-sub:hover,.nav-dd-panel a.nav-sub[aria-current]{color:#fff}'
             '.mm-sub a.nav-sub{padding-left:40px;font-size:16px;color:var(--t3)}'
             '.ft li.ft-sub{padding-left:14px;font-size:14px;position:relative}'
-            '.ft li.ft-sub::before{content:"";position:absolute;left:0;top:50%;width:7px;height:1px;background:var(--line2)}</style>')
+            '.ft li.ft-sub::before{content:"";position:absolute;left:0;top:50%;width:7px;height:1px;background:var(--line2)}'
+            # с 11.11.2026 в «Услугах» нет итоговой ссылки «Все …» — последний пункт мобильного списка не красим акцентом
+            '#mm-uslugi a:last-child:not([aria-current]){color:var(--t2)}</style>')
 SRCH_JS = ('<script id="srch-js">/* поиск по сайту: движок и индекс загружаются по первому нажатию на лупу или «/» (tools/search) */'
            '(function(r,v){var d=document,ld=0,w=null;function go(o){if(window.PCSearch)return window.PCSearch.open(r,v,o);w=o;if(ld)return;ld=1;'
            'var s=d.createElement("script");s.src=r+"search.min.js?v="+v;s.async=true;s.onload=function(){window.PCSearch&&window.PCSearch.open(r,v,w)};'
