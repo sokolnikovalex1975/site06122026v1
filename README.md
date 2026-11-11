@@ -49,6 +49,17 @@
 - `tools/deploy/run_all.sh` перед загрузкой проверяет каждую страницу пакета (`laws_check`) и не выкладывает нарушения (код 19).
 - `tools/qa/check_live.py` проверяет закон на страницах сайта по HTTPS.
 
+## Люди на фото и текст во flex-ссылках (правило владельца с 11.11.2026)
+
+- **Человек на фото — целиком, голова не обрезана** ни на одном экране и не уходит под шапку. `tools/site/focal_points.py`
+  ставит `data-fp` (рамка людей и голов из `tools/site/focal_points.json`) и скрипт `tools/site/focal.js`, который подбирает
+  object-position под фактический размер рамки. Новое фото с людьми: `python3 tools/qa/focal/detect_people.py`
+  → `make_focal_json.py` → скопировать JSON в `tools/site/` → сборка. Фото, где человек обрезан самим кадром или видны
+  только руки, заменяются (мастера — `tools/foto/masters-*`, нарезка — `tools/foto/derive_sizes.py`).
+  Проверка: `node tools/qa/people_crop_test.mjs` (все страницы × 12 экранов, 320–2560 px).
+- **Текст во flex-ссылках одним куском:** `tools/site/flex_text.py` (иначе «Подробнее о пест-контроле по GMP» на телефоне
+  разъезжается на колонки). Проверка: `node tools/qa/flex_split_test.mjs`.
+
 ## Страницы
 
 | Адрес | Страница |

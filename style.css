@@ -382,6 +382,8 @@ html:not(.js) .bar-f,.anim-fail .bar-f{width:var(--w)}
 .ind{overflow:hidden;display:flex;flex-direction:column}
 .ind-img{aspect-ratio:556/275;overflow:hidden;position:relative}
 .ind-img img,.case-img img,.tl-img img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;will-change:transform}
+/* фото с людьми (data-fp): параллакс ±3,5 % — запас 4,5 % сверху и снизу вместо 9 %, голова не уходит за край (11.11.2026) */
+.ind-img img[data-fp],.case-img img[data-fp],.tl-img img[data-fp]{top:-4.5%;height:109%}
 .ind-img img{filter:saturate(.85);transition:filter .6s}
 .ind:hover .ind-img img{filter:saturate(1.05)}
 .ind-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#121214 0%,rgba(18,18,20,0) 55%)}

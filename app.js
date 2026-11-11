@@ -759,7 +759,9 @@
   /* ---------- параллакс изображений и фонов ---------- */
   defer(function () {
   $$('img[data-parallax]').forEach(function (img) {
-    gsap.fromTo(img, { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+    // фото с людьми (data-fp, tools/site/focal.js) — меньший ход ±3,5 %, чтобы голова не уходила за край (11.11.2026)
+    var a = img.hasAttribute('data-fp') ? 3.5 : 6;
+    gsap.fromTo(img, { yPercent: -a }, { yPercent: a, ease: 'none', scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
   });
   $$('[data-parallax-bg]').forEach(function (bg) {
     gsap.fromTo(bg, { yPercent: -8 }, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: bg.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
