@@ -8,6 +8,7 @@
 // Телефон (360×740, 390×844, 768×1024, 900×1000): крошки скрыты или стоят ниже кнопок первого экрана
 // (не меньше 24 px) — первый экран не занимают.
 // Список страниц — tools/menu/apply_menu.PAGES. Код выхода 1, если есть нарушения.
+// ONLY=normativnaya-baza/,materialy/ — проверить только эти страницы.
 // Playwright: переменная PW (по умолчанию /home/user/node_modules/playwright/index.mjs).
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
@@ -16,9 +17,11 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const BASE = process.argv[2] || 'http://localhost:8833/';
 const { chromium } = await import(process.env.PW || '/home/user/node_modules/playwright/index.mjs');
-const pages = JSON.parse(execFileSync('python3', ['-c',
+const all = JSON.parse(execFileSync('python3', ['-c',
   "import sys,json;sys.path.insert(0,'tools/menu');import apply_menu as A;print(json.dumps([f[:-len('index.html')] for f,_,_ in A.PAGES]))"],
   { cwd: ROOT, encoding: 'utf-8' }));
+// ONLY=адрес1,адрес2 — только эти страницы (например, при проверке рабочего сайта: он не любит сотни запросов подряд)
+const pages = process.env.ONLY ? process.env.ONLY.split(',') : all;
 const DESK = [[1024, 768], [1280, 720], [1440, 900], [1920, 1080]];
 const MOB = [[360, 740], [390, 844], [768, 1024], [900, 1000]];
 const MIN = 24;
@@ -50,10 +53,15 @@ let checked = 0;
 for (const [mode, sizes] of [['desk', DESK], ['mob', MOB]]) {
   for (const [w, h] of sizes) {
     const ctx = await b.newContext({ viewport: { width: w, height: h } });
+    // счётчики не загружаем: замеры не должны попадать в Метрику, UIS и Radist рабочего сайта
+    await ctx.route(/mc\.yandex\.(ru|com)|yandex\.ru\/metrika|uiscom|comagic|radist/, (r) => r.abort());
     for (const p of pages) {
       const pg = await ctx.newPage();
       try {
-        await pg.goto(BASE + p, { waitUntil: 'networkidle', timeout: 45000 });
+        for (let t = 0; ; t++) {  // рабочий сайт отвечает 502 на частые запросы — повтор через 6 с
+          try { await pg.goto(BASE + p, { waitUntil: 'networkidle', timeout: 45000 }); break; }
+          catch (e) { if (t >= 4) throw e; await pg.waitForTimeout(6000); }
+        }
         await pg.waitForTimeout(1200);
         const r = await pg.evaluate(measure);
         checked++;
