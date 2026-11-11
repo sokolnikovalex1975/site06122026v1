@@ -333,7 +333,7 @@ def build(key, p, tpl, icons):
                 .replace('<!--ZONES-->\n', blocks.zones_html(key)).replace('<!--TIMELINE-->\n', blocks.timeline_html() + '\n')
                 .replace('<!--SIZES-->\n', blocks.sizes_html() + '\n').replace('<!--CONTOURS-->\n', blocks.contours_html() + '\n')
                 .replace('<!--CALC-->\n', blocks.calc_html(key, AREAS, AREA_PRICES[key]) + '\n')
-                .replace('<!--SAMPLES-->\n', blocks.samples_html(key, LIC)).replace('<!--MORE-->\n', blocks.more_html(key, icons)))
+                .replace('<!--DOCS-->\n', blocks.docs_html(key)).replace('<!--SAMPLES-->\n', blocks.samples_html(key, LIC)).replace('<!--MORE-->\n', blocks.more_html(key, icons)))
     main = main.replace('href="https://fp.rospotrebnadzor.ru/licen/"', f'href="{LIC}"')
     main = typeset(main)
     main = re.sub(r'<!--ICON:([a-z0-9-]+)-->', lambda m: icons[m.group(1)], main)

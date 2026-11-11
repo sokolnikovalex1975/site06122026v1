@@ -264,3 +264,12 @@
 .rk-page .nw{white-space:nowrap}
 .rk-zdoc{margin:14px 0 0;color:var(--t2);font-size:14px;line-height:1.5}
 .rk-page .rk-zdoc a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45)}
+/* документы в блоке «Что вы получите…» (docs_html) */
+.rk-dg-h{margin:clamp(22px,2.4vw,34px) 0 12px!important}
+.rk-dg-h:first-of-type{margin-top:0!important}
+.rk-smp-im{display:block;line-height:0}
+.rk-smp-ln{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline}
+.rk-page .rk-smp-ln a{font-size:14px;color:var(--acc);border-bottom:1px solid rgba(124,134,255,.45)}
+.rk-page .rk-smp-ln a:hover{color:var(--t1);border-color:var(--t1)}
+.rk-docs-2{margin-top:clamp(32px,3.4vw,52px)}
+.rk-smp:hover{border-color:rgba(124,134,255,.5)}

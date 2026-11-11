@@ -237,22 +237,15 @@ NORMS = {
 
 
 def samples_html(key, lic):
-    cards = []
-    for t, d, img, w, h, page, pdf in SAMPLES:
-        cards.append(f'        <div class="card rk-smp"><img src="@/img/{img}.webp" width="{w}" height="{h}" alt="" loading="lazy" decoding="async">'
-                     f'<div class="rk-smp-t"><a href="{page}"><b>{t}</b></a><span>{d}</span><a class="rk-smp-pdf" href="{pdf}" download>Скачать PDF</a></div></div>')
+    """Нормы и где их прочитать (образцы документов с 11.11.2026 — в блоке «Что вы получите», docs_html)."""
     rows = []
     for name, what, links in NORMS[key]:
         ln = ' · '.join(f'<a href="{lic if u == "LIC" else u}"' + (' target="_blank" rel="noopener"' if ext else '') + f'>{t}</a>' for t, u, ext in links)
         rows.append(f'        <li><b>{name}</b><span>{what}</span><span class="rk-nl">{ln}</span></li>')
-    head = {'dzr': 'Образцы документов и нормы <em>по дезинсекции общепита</em>', 'drr': 'Образцы документов и нормы <em>по дератизации общепита</em>'}[key]
-    return f'''<section class="s" id="obraztsy">
+    head = {'dzr': 'Нормы по дезинсекции общепита <em>и где их прочитать</em>', 'drr': 'Нормы по дератизации общепита <em>и где их прочитать</em>'}[key]
+    return f'''<section class="s" id="normy">
   <div class="wrap">
-    <div class="head"><div class="eyebrow">Образцы и нормы</div><h2>{head}</h2><p class="sub">Так выглядят документы, которые остаются у вас после визитов, и нормы, на которые смотрит инспектор. Образцы можно скачать.</p></div>
-    <div class="rk-smps">
-{chr(10).join(cards)}
-    </div>
-    <p class="rk-h3 rk-norms-h">Нормы и где их прочитать</p>
+    <div class="head"><div class="eyebrow">Нормы</div><h2>{head}</h2><p class="sub">На эти документы опирается инспектор. Рядом — официальный текст и наш разбор простыми словами.</p></div>
     <ul class="rk-norms">
 {chr(10).join(rows)}
     </ul>
@@ -284,3 +277,73 @@ def more_html(key, icons):
   </div>
 </section>
 '''
+
+
+# ------------------------------------------------- документы: «Что вы получите… и что спросит инспектор»
+# с 11.11.2026 (запрос владельца: «привести образцы документов здесь, с возможностью перейти на страницу,
+# посвящённую этому документу»): каждый документ — карточка с превью, ссылкой на страницу документа и PDF.
+# Отдельный блок образцов после этого убран, остались только нормы (samples_html).
+DOC = {
+    'akt': ('Акт дезинсекции и дератизации', 'akt-obrazets-p1-360', '@/materialy/akt-deratizatsii-i-dezinsektsii/',
+            '@/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/obrazets-akta-dezinsektsii-i-deratizatsii.pdf'),
+    'zhur': ('Журнал пест-контроля', 'zhurnal-obrazets-p1-360', '@/materialy/zhurnal-pest-kontrolya/',
+             '@/materialy/zhurnal-pest-kontrolya/obrazets-zhurnala-pest-kontrolya.pdf'),
+    'dog': ('Договор на дератизацию и дезинсекцию', 'dogovor-sample-p1-360', '@/dogovor-deratizatsiya-dezinsektsiya/',
+            '@/dogovor-deratizatsiya-dezinsektsiya/obrazets-dogovora-pestkontrol-tsentr.pdf'),
+    'prog': ('Программа пест-контроля', 'programma-sample-p1-360', '@/materialy/programma-pest-kontrolya/',
+             '@/materialy/programma-pest-kontrolya/obrazets-programmy-pest-kontrolya.pdf'),
+    'skh': ('Схема точек пест-контроля', 'skhema-obrazets-p1-360', '@/materialy/skhema-tochek-pest-kontrolya/',
+            '@/materialy/skhema-tochek-pest-kontrolya/obrazets-skhemy-tochek-pest-kontrolya.pdf'),
+    'ppk': ('Программа производственного контроля по ХАССП', 'ppk-sample-p1-360', '@/materialy/programma-proizvodstvennogo-kontrolya-haccp/',
+            '@/materialy/programma-proizvodstvennogo-kontrolya-haccp/obrazets-programmy-proizvodstvennogo-kontrolya.pdf'),
+    'dok': ('Документы для Роспотребнадзора', 'dok-cover-360', '@/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/',
+            '@/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/chek-list-dokumentov-dlya-rospotrebnadzora.pdf'),
+}
+DOCS = {
+    'dzr': [
+        ('После каждого визита', [
+            ('akt', 'дата и время, зоны, найденные насекомые, средство и номер СГР, рекомендации персоналу и техслужбе'),
+            ('zhur', 'запись по каждой точке контроля; номера мониторов и УФ-ловушек совпадают со схемой'),
+        ]),
+        ('По договору', [
+            ('dog', 'перечень работ, график визитов, стоимость'),
+            ('prog', 'зоны, точки контроля, оценка пест-риска и план работ'),
+            ('skh', 'план помещений с номерами мониторов, УФ-ловушек и мест обработки'),
+        ]),
+        ('К проверке', [
+            ('ppk', 'раздел о дезинсекции и дератизации — на него ссылается вопрос № 11 проверочного листа'),
+            ('dok', 'чек-лист папки документов, которую смотрит инспектор'),
+        ]),
+    ],
+    'drr': [
+        ('После каждого визита', [
+            ('akt', 'дата и время, проверенные точки, что нашли, какие средства применили, замечания для персонала и техслужбы'),
+            ('zhur', 'запись по каждой точке — в журнале и в контрольно-учётной карте объекта, как предлагают МР 3.5.3.0374-25'),
+        ]),
+        ('По договору', [
+            ('skh', 'станции и ловушки с номерами — снаружи, по границе здания и внутри'),
+            ('dog', 'перечень работ, график визитов, стоимость'),
+            ('prog', 'зоны, точки контроля, оценка пест-риска и план работ'),
+        ]),
+        ('К проверке', [
+            ('ppk', 'раздел о дератизации — на него ссылается вопрос № 11 проверочного листа'),
+            ('dok', 'чек-лист папки документов, которую смотрит инспектор'),
+        ]),
+    ],
+}
+
+
+def doc_card(k, d):
+    t, img, page, pdf = DOC[k]
+    return (f'<div class="card rk-smp"><a class="rk-smp-im" href="{page}" tabindex="-1" aria-hidden="true">'
+            f'<img src="@/img/{img}.webp" width="360" height="509" alt="" loading="lazy" decoding="async"></a>'
+            f'<div class="rk-smp-t"><a href="{page}"><b>{t}</b></a><span>{d}</span>'
+            f'<span class="rk-smp-ln"><a href="{page}">О документе →</a><a class="rk-smp-pdf" href="{pdf}" download>Образец PDF</a></span></div></div>')
+
+
+def docs_html(key):
+    out = []
+    for h, items in DOCS[key]:
+        out.append(f'      <p class="rk-h3 rk-dg-h">{h}</p>\n      <div class="rk-smps">\n'
+                   + '\n'.join('        ' + doc_card(k, d) for k, d in items) + '\n      </div>')
+    return '\n'.join(out) + '\n'
