@@ -487,6 +487,10 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
 @media (max-width:760px){.sk-plan{min-width:680px}}
 .sk-pt{cursor:pointer;outline:none;transition:opacity .25s}
 .sk-pt.is-dim{opacity:.16}
+.sk-pt .sk-hit{transition:fill .25s,stroke .25s,stroke-width .25s}
+.is-filt .sk-pt:not(.is-dim):not(.is-sel) .sk-hit{fill:rgba(97,95,255,.10);stroke:rgba(97,95,255,.75);stroke-width:2}
+@media(hover:hover) and (pointer:fine){.sk-types li[data-t]{transition:color .2s}.sk-types li[data-t]:hover{color:var(--t1)}}
+@media(prefers-reduced-motion:reduce){.sk-pt,.sk-pt .sk-hit,.sk-types li{transition:none!important}}
 .sk-pt:focus-visible .sk-hit,.sk-pt.is-sel .sk-hit{fill:rgba(97,95,255,.16);stroke:#615fff;stroke-width:2.5}
 .sk-layout{display:grid;grid-template-columns:minmax(0,720px) minmax(280px,330px) minmax(210px,250px);justify-content:space-between;gap:clamp(16px,1.6vw,24px);align-items:start}
 .sk-side{padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px}
@@ -739,7 +743,7 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
 <p class="sk-side-h">Контуры защиты</p>
 <div class="sk-fs" role="group" aria-label="Показать точки контура"><button type="button" class="sk-f is-on" data-f="" aria-pressed="true"><span class="sk-sw" aria-hidden="true"><i class="dt" style="background:#16a34a"></i><i class="dt" style="background:#64748b"></i><i class="dt" style="background:#2563eb"></i></span><span class="sk-f-t"><b>Все точки</b></span><span class="sk-f-n">30</span></button><button type="button" class="sk-f" data-f="К1" aria-pressed="false"><span class="sk-sw" aria-hidden="true"><i class="ln" style="border-color:#16a34a"></i></span><span class="sk-f-t"><b>К1 · Территория</b><small>ограждение, отмостка, площадка ТКО</small></span><span class="sk-f-n">8</span></button><button type="button" class="sk-f" data-f="К2" aria-pressed="false"><span class="sk-sw" aria-hidden="true"><i class="ln" style="border-color:#64748b"></i></span><span class="sk-f-t"><b>К2 · Периметр здания</b><small>ворота, доки, входы</small></span><span class="sk-f-n">8</span></button><button type="button" class="sk-f" data-f="К3" aria-pressed="false"><span class="sk-sw" aria-hidden="true"><i class="ln dot" style="border-color:#2563eb"></i></span><span class="sk-f-t"><b>К3 · Внутренние помещения</b><small>цех, склады, АБК</small></span><span class="sk-f-n">14</span></button></div>
 <p class="sk-side-h">Типы точек</p>
-<ul class="sk-types"><li><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2.5" fill="#dc2626"/></svg></span><span class="sk-ty-t"><span><b>КИК</b> — станция с приманкой, запираемая</span><small>контур К1 · 8 шт.</small></span></li><li><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="#7c3aed"/></svg></span><span class="sk-ty-t"><span><b>МЛ</b> — ловушка механическая / клеевая</span><small>контур К2, К3 · 10 шт.</small></span></li><li><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3.5L20.5 12L12 20.5L3.5 12Z" fill="#0d9488"/></svg></span><span class="sk-ty-t"><span><b>ИМ</b> — клеевой монитор насекомых</span><small>контур К3 · 6 шт.</small></span></li><li><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3L20.5 18.5L3.5 18.5Z" fill="#d97706"/></svg></span><span class="sk-ty-t"><span><b>ИЛ</b> — световая <span class="nw">УФ-ловушка</span></span><small>контур К3 · 4 шт.</small></span></li><li><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><polygon points="12.0,4.0 19.0,8.5 19.0,15.5 12.0,20.0 5.0,15.5 5.0,8.5" fill="#db2777"/></svg></span><span class="sk-ty-t"><span><b>ФЛ</b> — феромонная ловушка (пищевые огнёвки)</span><small>контур К3 · 2 шт.</small></span></li></ul>
+<ul class="sk-types"><li data-t="КИК"><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2.5" fill="#dc2626"/></svg></span><span class="sk-ty-t"><span><b>КИК</b> — станция с приманкой, запираемая</span><small>контур К1 · 8 шт.</small></span></li><li data-t="МЛ"><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="#7c3aed"/></svg></span><span class="sk-ty-t"><span><b>МЛ</b> — ловушка механическая / клеевая</span><small>контур К2, К3 · 10 шт.</small></span></li><li data-t="ИМ"><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3.5L20.5 12L12 20.5L3.5 12Z" fill="#0d9488"/></svg></span><span class="sk-ty-t"><span><b>ИМ</b> — клеевой монитор насекомых</span><small>контур К3 · 6 шт.</small></span></li><li data-t="ИЛ"><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3L20.5 18.5L3.5 18.5Z" fill="#d97706"/></svg></span><span class="sk-ty-t"><span><b>ИЛ</b> — световая <span class="nw">УФ-ловушка</span></span><small>контур К3 · 4 шт.</small></span></li><li data-t="ФЛ"><span class="sk-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><polygon points="12.0,4.0 19.0,8.5 19.0,15.5 12.0,20.0 5.0,15.5 5.0,8.5" fill="#db2777"/></svg></span><span class="sk-ty-t"><span><b>ФЛ</b> — феромонная ловушка (пищевые огнёвки)</span><small>контур К3 · 2 шт.</small></span></li></ul>
           <div class="sk-info" id="skInfo" aria-live="polite"><p class="sk-info-e">Нажмите на точку на плане — здесь появятся её тип, контур, место установки и порог из реестра.</p></div>
         </div>
         <div class="sk-pdf card">
@@ -1065,8 +1069,21 @@ info.innerHTML='<div class="sk-info-g"><b class="sk-info-c" style="color:'+c+'">
 +'<span class="sk-info-th">Порог: '+esc(p[3])+'</span></div>';}
 pts.forEach(function(g,i){g.addEventListener('click',function(){show(i);});
 g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(i);}});});
-[].forEach.call(document.querySelectorAll('.sk-f'),function(b){b.addEventListener('click',function(){var f=b.getAttribute('data-f');
-[].forEach.call(document.querySelectorAll('.sk-f'),function(x){var on=x===b;x.classList.toggle('is-on',on);x.setAttribute('aria-pressed',on?'true':'false');});
-pts.forEach(function(g){g.classList.toggle('is-dim',!!f&&g.getAttribute('data-k')!==f);});});});})();</script>
+var fs=[].slice.call(document.querySelectorAll('.sk-f')),pin='',tIn=0,tOut=0,fine=window.matchMedia('(hover:hover) and (pointer:fine)');
+function fv(el){try{return el.matches(':focus-visible');}catch(_){return true;}}
+function dim(test){root.classList.toggle('is-filt',!!test);pts.forEach(function(g){g.classList.toggle('is-dim',!!test&&!test(g));});}
+function byK(f){return f?function(g){return g.getAttribute('data-k')===f;}:null;}
+function byT(t){return function(g){return P[+g.getAttribute('data-i')][0].split('-')[0]===t;};}
+function look(test){clearTimeout(tOut);clearTimeout(tIn);tIn=setTimeout(function(){dim(test);},90);}
+function back(d){clearTimeout(tIn);clearTimeout(tOut);tOut=setTimeout(function(){dim(byK(pin));},d);}
+fs.forEach(function(b){var f=b.getAttribute('data-f');
+b.addEventListener('click',function(){clearTimeout(tIn);clearTimeout(tOut);pin=f;
+fs.forEach(function(x){var on=x===b;x.classList.toggle('is-on',on);x.setAttribute('aria-pressed',on?'true':'false');});dim(byK(f));});
+b.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse'&&fine.matches)look(byK(f));});
+b.addEventListener('focus',function(){if(fv(b)){clearTimeout(tOut);clearTimeout(tIn);dim(byK(f));}});
+b.addEventListener('blur',function(){back(150);});});
+[].forEach.call(document.querySelectorAll('.sk-types li[data-t]'),function(li){var t=li.getAttribute('data-t');
+li.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse'&&fine.matches)look(byT(t));});});
+[].forEach.call(document.querySelectorAll('.sk-fs,.sk-types'),function(g){g.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse')back(250);});});})();</script>
 </body>
 </html>

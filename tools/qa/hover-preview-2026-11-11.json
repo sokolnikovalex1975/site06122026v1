@@ -1,0 +1,421 @@
+{
+  "date": "2026-11-11",
+  "scope": "Наведение на легенду переключает схему: защита от грызунов и план точек; проверка 10 отраслевых схем",
+  "contoursFirstRun": [
+    {
+      "check": "исходно все контуры",
+      "pass": true,
+      "extra": {
+        "c": "0",
+        "p": "0",
+        "prev": "",
+        "s": "Показаны все три контура",
+        "hint": "Наведите курсор на контур в списке — схема подсветит его, нажатие закрепит выбор. Часть кровли и стены условно снята."
+      }
+    },
+    {
+      "check": "подсказка про наведение на компьютере",
+      "pass": true
+    },
+    {
+      "check": "сокращение движения: без анимации",
+      "pass": true,
+      "extra": {
+        "a": "none",
+        "t": "0s"
+      }
+    },
+    {
+      "check": "телефон: касание закрепляет, без залипания наведения",
+      "pass": true,
+      "extra": {
+        "c": "2",
+        "prev": 0,
+        "hint": "Выберите контур в списке. Часть кровли и стены условно снята, чтобы показать внутренние зоны.",
+        "ow": false
+      }
+    }
+  ],
+  "contours": [
+    {
+      "check": "наведение на контур 1 без нажатия",
+      "pass": true,
+      "extra": {
+        "c": "1",
+        "p": "0",
+        "prev": "1",
+        "s": "Показаны все три контура"
+      }
+    },
+    {
+      "check": "анимация пунктира и свечение контура 1",
+      "pass": true,
+      "extra": {
+        "a": "proof-march-1",
+        "f": "drop-shadow(rgba(124, 189, 183, 0.43) 0px 0px 1.72799px)",
+        "dim": "0.527684"
+      }
+    },
+    {
+      "check": "наведение на контур 2",
+      "pass": true,
+      "extra": {
+        "c": "2",
+        "p": "0",
+        "prev": "2",
+        "s": "Показаны все три контура"
+      }
+    },
+    {
+      "check": "наведение на контур 3",
+      "pass": true,
+      "extra": {
+        "c": "3",
+        "p": "0",
+        "prev": "3",
+        "s": "Показаны все три контура"
+      }
+    },
+    {
+      "check": "уход курсора возвращает вид",
+      "pass": true,
+      "extra": {
+        "c": "0",
+        "p": "0",
+        "prev": "",
+        "s": "Показаны все три контура"
+      }
+    },
+    {
+      "check": "быстрый пролёт не переключает",
+      "pass": true,
+      "extra": {
+        "c": "0",
+        "p": "0",
+        "prev": "",
+        "s": "Показаны все три контура"
+      }
+    },
+    {
+      "check": "нажатие закрепляет 2",
+      "pass": true,
+      "extra": {
+        "c": "2",
+        "p": "2",
+        "prev": "",
+        "s": "Контур 2: оболочка и уязвимые узлы здания"
+      }
+    },
+    {
+      "check": "наведение на 3 при закреплённом 2",
+      "pass": true,
+      "extra": {
+        "c": "3",
+        "p": "2",
+        "prev": "3",
+        "s": "Контур 2: оболочка и уязвимые узлы здания"
+      }
+    },
+    {
+      "check": "возврат к закреплённому 2",
+      "pass": true,
+      "extra": {
+        "c": "2",
+        "p": "2",
+        "prev": "",
+        "s": "Контур 2: оболочка и уязвимые узлы здания"
+      }
+    },
+    {
+      "check": "сброс «Все контуры»",
+      "pass": true,
+      "extra": {
+        "c": "0",
+        "p": "0",
+        "prev": "",
+        "s": "Показаны все три контура"
+      }
+    },
+    {
+      "check": "фокус Tab показывает контур 1",
+      "pass": true,
+      "extra": {
+        "k1": {
+          "c": "1",
+          "p": "0",
+          "prev": "1",
+          "s": "Показаны все три контура"
+        },
+        "ff": "1"
+      }
+    },
+    {
+      "check": "Enter закрепляет 1",
+      "pass": true,
+      "extra": {
+        "c": "1",
+        "p": "1",
+        "prev": "",
+        "s": "Контур 1: территория и подходы к зданию"
+      }
+    },
+    {
+      "check": "Tab к 2 — просмотр",
+      "pass": true,
+      "extra": {
+        "c": "2",
+        "p": "1",
+        "prev": "2",
+        "s": "Контур 1: территория и подходы к зданию"
+      }
+    },
+    {
+      "check": "уход фокуса — закреплённый 1",
+      "pass": true,
+      "extra": {
+        "c": "1",
+        "p": "1",
+        "prev": "",
+        "s": "Контур 1: территория и подходы к зданию"
+      }
+    }
+  ],
+  "skhemaAndIndustry": [
+    {
+      "check": "исходно все 30 точек",
+      "pass": true,
+      "extra": {
+        "lit": "К1,К2,К3",
+        "litTypes": "КИК,МЛ,ИМ,ИЛ,ФЛ",
+        "nlit": 30,
+        "pressed": "",
+        "filt": false
+      }
+    },
+    {
+      "check": "наведение на К1 — только точки К1, без закрепления",
+      "pass": true,
+      "extra": {
+        "lit": "К1",
+        "litTypes": "КИК",
+        "nlit": 8,
+        "pressed": "",
+        "filt": true
+      }
+    },
+    {
+      "check": "наведение на К2",
+      "pass": true,
+      "extra": {
+        "lit": "К2",
+        "litTypes": "МЛ",
+        "nlit": 8,
+        "pressed": "",
+        "filt": true
+      }
+    },
+    {
+      "check": "уход курсора — снова все точки",
+      "pass": true,
+      "extra": {
+        "lit": "К1,К2,К3",
+        "litTypes": "КИК,МЛ,ИМ,ИЛ,ФЛ",
+        "nlit": 30,
+        "pressed": "",
+        "filt": false
+      }
+    },
+    {
+      "check": "нажатие закрепляет К3",
+      "pass": true,
+      "extra": {
+        "lit": "К3",
+        "litTypes": "МЛ,ИМ,ИЛ,ФЛ",
+        "nlit": 14,
+        "pressed": "К3",
+        "filt": true
+      }
+    },
+    {
+      "check": "наведение на К1 при закреплённом К3",
+      "pass": true,
+      "extra": {
+        "lit": "К1",
+        "litTypes": "КИК",
+        "nlit": 8,
+        "pressed": "К3",
+        "filt": true
+      }
+    },
+    {
+      "check": "наведение на тип точки КИК — только эти точки",
+      "pass": true,
+      "extra": {
+        "lit": "К1",
+        "litTypes": "КИК",
+        "nlit": 8,
+        "pressed": "К3",
+        "filt": true
+      }
+    },
+    {
+      "check": "после ухода — закреплённый К3",
+      "pass": true,
+      "extra": {
+        "lit": "К3",
+        "litTypes": "МЛ,ИМ,ИЛ,ФЛ",
+        "nlit": 14,
+        "pressed": "К3",
+        "filt": true
+      }
+    },
+    {
+      "check": "фокус Tab на К1 — просмотр",
+      "pass": true,
+      "extra": {
+        "lit": "К1",
+        "litTypes": "КИК",
+        "nlit": 8,
+        "pressed": "",
+        "filt": true
+      }
+    },
+    {
+      "check": "Enter закрепляет К1",
+      "pass": true,
+      "extra": {
+        "lit": "К1",
+        "litTypes": "КИК",
+        "nlit": 8,
+        "pressed": "К1",
+        "filt": true
+      }
+    },
+    {
+      "check": "нажатие на точку открывает карточку",
+      "pass": true,
+      "extra": "КИК-04\nСтанция с приманкой, запираемая\nК1 · ТЕРРИТОРИЯ\nРампа"
+    },
+    {
+      "check": "отраслевая схема: наведение — deratizatsiya",
+      "pass": true,
+      "extra": {
+        "p": "deratizatsiya",
+        "n": 3,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0.3s, 0.3s"
+      }
+    },
+    {
+      "check": "отраслевая схема: наведение — deratizatsiya/restorany-i-kafe",
+      "pass": true,
+      "extra": {
+        "p": "deratizatsiya/restorany-i-kafe",
+        "n": 7,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0.3s, 0.3s"
+      }
+    },
+    {
+      "check": "отраслевая схема: наведение — dezinsektsiya/restorany-i-kafe",
+      "pass": true,
+      "extra": {
+        "p": "dezinsektsiya/restorany-i-kafe",
+        "n": 7,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0.3s, 0.3s"
+      }
+    },
+    {
+      "check": "отраслевая схема: наведение — restorany-i-kafe",
+      "pass": true,
+      "extra": {
+        "p": "restorany-i-kafe",
+        "n": 7,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0.3s, 0.3s"
+      }
+    },
+    {
+      "check": "отраслевая схема: наведение — pishchevoe-proizvodstvo",
+      "pass": true,
+      "extra": {
+        "p": "pishchevoe-proizvodstvo",
+        "n": 6,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0.3s, 0.3s"
+      }
+    },
+    {
+      "check": "отраслевая схема: наведение — gostinitsy",
+      "pass": true,
+      "extra": {
+        "p": "gostinitsy",
+        "n": 6,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0.3s, 0.3s"
+      }
+    },
+    {
+      "check": "отраслевая схема: наведение — sklady-i-logistika",
+      "pass": true,
+      "extra": {
+        "p": "sklady-i-logistika",
+        "n": 7,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0.3s, 0.3s"
+      }
+    },
+    {
+      "check": "отраслевая схема: наведение — magaziny-i-torgovye-seti",
+      "pass": true,
+      "extra": {
+        "p": "magaziny-i-torgovye-seti",
+        "n": 8,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0.3s, 0.3s"
+      }
+    },
+    {
+      "check": "отраслевая схема: наведение — farmatsevticheskie-proizvodstva",
+      "pass": true,
+      "extra": {
+        "p": "farmatsevticheskie-proizvodstva",
+        "n": 6,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0s"
+      }
+    },
+    {
+      "check": "отраслевая схема: наведение — biznes-tsentry-torgovye-tsentry-predpriyatiya",
+      "pass": true,
+      "extra": {
+        "p": "biznes-tsentry-torgovye-tsentry-predpriyatiya",
+        "n": 8,
+        "z": "3",
+        "on": "3",
+        "pass": true,
+        "trans": "0.3s, 0.3s"
+      }
+    }
+  ],
+  "errors": []
+}

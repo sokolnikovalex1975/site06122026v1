@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / 'tools/site'))
 import unify
 import tracking_laws  # закон владельца 11.11.2026: общие страницы меняются им намеренно (телефон, почта, счётчики)
 SLUG = 'zashchita-ot-proniknoveniya-gryzunov'
-BASELINE = 'cf2277b'  # сохраняет утверждённый закон счётчиков, контактов и актуальное меню
+BASELINE = '02a04ee'  # сохраняет утверждённый закон счётчиков, контактов и актуальное меню
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 failures = []
 

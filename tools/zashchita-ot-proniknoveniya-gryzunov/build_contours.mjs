@@ -126,9 +126,21 @@ const localCSS = `
 .proof-level-3 .proof-outline{stroke:#dabd89;stroke-dasharray:2 3}
 .proof-node-2 .iso-edge{stroke:#8f9bff;stroke-width:1.1}
 .proof-node-3 .iso-edge{stroke:#dabd89;stroke-width:1.1}
-.proof-level,.proof-node .iso-edge{transition:opacity .2s ease}
+.proof-level,.proof-node .iso-edge{transition:opacity .25s ease,filter .25s ease,stroke-width .25s ease}
+.proof-outline{transition:stroke-width .25s ease}
+.proof-drawing[data-contour="1"] .proof-level-1 .proof-outline,.proof-drawing[data-contour="2"] .proof-level-2 .proof-outline,.proof-drawing[data-contour="3"] .proof-level-3 .proof-outline{stroke-width:3.4!important}
+.proof-drawing[data-contour="1"] .proof-level-1{filter:drop-shadow(0 0 3px rgba(124,189,183,.75))}
+.proof-drawing[data-contour="2"] .proof-level-2,.proof-drawing[data-contour="2"] .proof-node-2{filter:drop-shadow(0 0 3px rgba(143,155,255,.8))}
+.proof-drawing[data-contour="3"] .proof-level-3,.proof-drawing[data-contour="3"] .proof-node-3{filter:drop-shadow(0 0 3px rgba(218,189,137,.75))}
+.proof-drawing[data-contour="2"] .proof-node-2 .iso-edge,.proof-drawing[data-contour="3"] .proof-node-3 .iso-edge{stroke-width:1.7}
+.proof-drawing[data-contour="1"] .proof-level-1 .proof-outline{animation:proof-march-1 1.1s linear infinite}
+.proof-drawing[data-contour="3"] .proof-level-3 .proof-outline{animation:proof-march-3 .9s linear infinite}
+.proof-drawing[data-contour="2"] .proof-level-2,.proof-drawing[data-contour="2"] .proof-node-2{animation:proof-pulse .7s ease-in-out 2 alternate}
+@keyframes proof-march-1{to{stroke-dashoffset:-18}}
+@keyframes proof-march-3{to{stroke-dashoffset:-10}}
+@keyframes proof-pulse{to{filter:drop-shadow(0 0 7px rgba(143,155,255,.95))}}
 .proof-drawing[data-contour="1"] .proof-level:not(.proof-level-1),.proof-drawing[data-contour="1"] .proof-node .iso-edge,.proof-drawing[data-contour="2"] .proof-level:not(.proof-level-2),.proof-drawing[data-contour="2"] .proof-node-3 .iso-edge,.proof-drawing[data-contour="3"] .proof-level:not(.proof-level-3),.proof-drawing[data-contour="3"] .proof-node-2 .iso-edge{opacity:.18}
-@media(prefers-reduced-motion:reduce){.proof-level,.proof-node .iso-edge{transition:none!important}}
+@media(prefers-reduced-motion:reduce){.proof-level,.proof-node,.proof-node .iso-edge,.proof-outline{transition:none!important;animation:none!important}}
 `;
 const body = R.items.map(i=>i.svg).join('');
 for(const theme of ['dark','light']) {

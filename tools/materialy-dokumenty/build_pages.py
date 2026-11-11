@@ -217,7 +217,7 @@ def side_html():
     for t, (name, kind) in S.T.items():
         ks = sorted(used.get(t, []))
         icons = f'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">{S.mark(kind, 12, 12, S.TC[t], 7)}</svg>'
-        types.append(f'<li><span class="sk-ico">{icons}</span><span class="sk-ty-t"><span><b>{t}</b> — {name[0].lower() + name[1:]}</span>'
+        types.append(f'<li data-t="{t}"><span class="sk-ico">{icons}</span><span class="sk-ty-t"><span><b>{t}</b> — {name[0].lower() + name[1:]}</span>'
                      f'<small>контур {", ".join(ks)} · {sum(1 for x in S.POINTS if x[0].startswith(t + "-"))} шт.</small></span></li>')
     return ('<p class="sk-side-h">Контуры защиты</p>\n<div class="sk-fs" role="group" aria-label="Показать точки контура">'
             + ''.join(rows) + '</div>\n<p class="sk-side-h">Типы точек</p>\n<ul class="sk-types">' + ''.join(types) + '</ul>')
@@ -233,9 +233,22 @@ info.innerHTML='<div class="sk-info-g"><b class="sk-info-c" style="color:'+c+'">
 +'<span class="sk-info-th">Порог: '+esc(p[3])+'</span></div>';}
 pts.forEach(function(g,i){g.addEventListener('click',function(){show(i);});
 g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(i);}});});
-[].forEach.call(document.querySelectorAll('.sk-f'),function(b){b.addEventListener('click',function(){var f=b.getAttribute('data-f');
-[].forEach.call(document.querySelectorAll('.sk-f'),function(x){var on=x===b;x.classList.toggle('is-on',on);x.setAttribute('aria-pressed',on?'true':'false');});
-pts.forEach(function(g){g.classList.toggle('is-dim',!!f&&g.getAttribute('data-k')!==f);});});});})();"""
+var fs=[].slice.call(document.querySelectorAll('.sk-f')),pin='',tIn=0,tOut=0,fine=window.matchMedia('(hover:hover) and (pointer:fine)');
+function fv(el){try{return el.matches(':focus-visible');}catch(_){return true;}}
+function dim(test){root.classList.toggle('is-filt',!!test);pts.forEach(function(g){g.classList.toggle('is-dim',!!test&&!test(g));});}
+function byK(f){return f?function(g){return g.getAttribute('data-k')===f;}:null;}
+function byT(t){return function(g){return P[+g.getAttribute('data-i')][0].split('-')[0]===t;};}
+function look(test){clearTimeout(tOut);clearTimeout(tIn);tIn=setTimeout(function(){dim(test);},90);}
+function back(d){clearTimeout(tIn);clearTimeout(tOut);tOut=setTimeout(function(){dim(byK(pin));},d);}
+fs.forEach(function(b){var f=b.getAttribute('data-f');
+b.addEventListener('click',function(){clearTimeout(tIn);clearTimeout(tOut);pin=f;
+fs.forEach(function(x){var on=x===b;x.classList.toggle('is-on',on);x.setAttribute('aria-pressed',on?'true':'false');});dim(byK(f));});
+b.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse'&&fine.matches)look(byK(f));});
+b.addEventListener('focus',function(){if(fv(b)){clearTimeout(tOut);clearTimeout(tIn);dim(byK(f));}});
+b.addEventListener('blur',function(){back(150);});});
+[].forEach.call(document.querySelectorAll('.sk-types li[data-t]'),function(li){var t=li.getAttribute('data-t');
+li.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse'&&fine.matches)look(byT(t));});});
+[].forEach.call(document.querySelectorAll('.sk-fs,.sk-types'),function(g){g.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse')back(250);});});})();"""
 GOALS_JS = ("document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-dl]');if(!a)return;"
             "var g={'akt':'akt_obrazets','akt-blank':'akt_shablon','skhema':'skhema_obrazets'}[a.getAttribute('data-dl')];"
             "if(g)try{if(typeof ym==='function')ym(113675622,'reachGoal',g);}catch(_){}});")

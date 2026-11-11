@@ -487,6 +487,10 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
 @media (max-width:760px){.sk-plan{min-width:680px}}
 .sk-pt{cursor:pointer;outline:none;transition:opacity .25s}
 .sk-pt.is-dim{opacity:.16}
+.sk-pt .sk-hit{transition:fill .25s,stroke .25s,stroke-width .25s}
+.is-filt .sk-pt:not(.is-dim):not(.is-sel) .sk-hit{fill:rgba(97,95,255,.10);stroke:rgba(97,95,255,.75);stroke-width:2}
+@media(hover:hover) and (pointer:fine){.sk-types li[data-t]{transition:color .2s}.sk-types li[data-t]:hover{color:var(--t1)}}
+@media(prefers-reduced-motion:reduce){.sk-pt,.sk-pt .sk-hit,.sk-types li{transition:none!important}}
 .sk-pt:focus-visible .sk-hit,.sk-pt.is-sel .sk-hit{fill:rgba(97,95,255,.16);stroke:#615fff;stroke-width:2.5}
 .sk-layout{display:grid;grid-template-columns:minmax(0,720px) minmax(280px,330px) minmax(210px,250px);justify-content:space-between;gap:clamp(16px,1.6vw,24px);align-items:start}
 .sk-side{padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px}
