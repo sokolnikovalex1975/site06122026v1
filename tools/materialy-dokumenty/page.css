@@ -43,12 +43,13 @@
 .md-chain .is-here{border-color:rgba(124,134,255,.45);background:rgba(97,95,255,.08)}
 /* интерактивная план-схема */
 .sk-fig{margin:0}
-.sk-paper{background:#fff;border-radius:var(--r);padding:clamp(8px,1vw,16px);overflow-x:auto;-webkit-overflow-scrolling:touch;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
-.sk-plan{display:block;width:100%;height:auto;min-width:720px}
+.sk-paper{background:#fff;border-radius:var(--r);padding:clamp(14px,1.4vw,22px);box-shadow:0 0 0 1px rgba(255,255,255,.08);color:#18181b}
+.sk-plan{display:block;width:100%;height:auto}
+@media (max-width:760px){.sk-plan{min-width:680px}}
 .sk-pt{cursor:pointer;outline:none;transition:opacity .25s}
 .sk-pt.is-dim{opacity:.16}
 .sk-pt:focus-visible .sk-hit,.sk-pt.is-sel .sk-hit{fill:rgba(97,95,255,.16);stroke:#615fff;stroke-width:2.5}
-.sk-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,330px);gap:clamp(16px,1.6vw,24px);align-items:start}
+.sk-layout{display:grid;grid-template-columns:minmax(0,720px) minmax(280px,360px);justify-content:start;gap:clamp(16px,1.6vw,24px);align-items:start}
 .sk-side{padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px}
 .sk-side-h{margin:4px 0 0;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t3)}
 .sk-fs{display:grid;gap:6px}
@@ -119,3 +120,31 @@
 .md-price-l svg{flex:none;width:18px;height:18px;margin-top:2px;color:var(--acc)}
 .md-price .btn{width:100%;justify-content:center}
 @media (max-width:900px){.md-order{grid-template-columns:minmax(0,1fr)}}
+/* фирменный бланк вокруг плана (как PDF-образец СТПК-01), с 11.11.2026 */
+.skb{position:relative;overflow:hidden;font-family:Inter,Arial,sans-serif}
+.skb-wm{position:absolute;left:50%;top:55%;transform:translate(-50%,-50%) rotate(-28deg);font-size:clamp(34px,5.4vw,72px);font-weight:700;color:#615fff;opacity:.06;white-space:nowrap;pointer-events:none;z-index:2}
+.skb-hd{display:flex;justify-content:space-between;align-items:center;gap:12px 20px;flex-wrap:wrap;padding-bottom:10px;border-bottom:2px solid #18181b}
+.skb-brand{display:flex;align-items:center;gap:10px}
+.skb-brand .lg{width:38px;height:38px;flex:none}
+.skb-bn{margin:0;font-size:17px;font-weight:700;letter-spacing:-.01em;color:#09090b;line-height:1.1}
+.skb-bn small{margin-left:5px;font-size:9px;font-weight:600;letter-spacing:.12em;color:#615fff}
+.skb-bt{margin:2px 0 0;font-size:10.5px;color:#71717a}
+.skb-ct{display:flex;flex-direction:column;gap:3px;align-items:flex-end}
+.skb-ct span{display:inline-flex;align-items:center;gap:6px}
+.skb-ct svg{width:16px;height:16px;flex:none}
+.skb-ct b{font-size:14px;font-weight:600;color:#09090b}
+.skb-ct span+span b{color:#615fff}
+.skb-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;padding:8px 0;border-bottom:1px solid #e4e4e7;font-size:11px;color:#52525b}
+.skb-meta i{font-style:italic;color:#1d4ed8}
+.skb-badge{padding:2px 8px;border-radius:3px;background:#fdc700;color:#18181b;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.skb-form{margin-left:auto;font-weight:600;color:#18181b}
+.skb-title{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:10px 0 8px}
+.skb-ey{margin:0;font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#615fff}
+.skb-h{margin:2px 0 0;font-size:clamp(20px,2vw,26px);font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#09090b;line-height:1.1}
+.skb-sub{margin:3px 0 0;font-size:11.5px;color:#3f3f46}
+.skb-red{margin:0;padding:4px 10px;border:1.4px solid #18181b;border-radius:6px;font-size:11px;color:#52525b;white-space:nowrap}
+.skb-red i{color:#1d4ed8}
+.skb-plan{border:1px solid #d4d4d8;border-radius:6px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.skb-ft{margin-top:10px;padding-top:8px;border-top:1px solid #e4e4e7;font-size:9.5px;line-height:1.5;color:#71717a}
+.skb-ft b{color:#18181b}
+@media (max-width:640px){.skb-ct{align-items:flex-start}.skb-form{margin-left:0}.skb-title{flex-wrap:wrap}}

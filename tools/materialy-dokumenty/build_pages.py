@@ -27,6 +27,9 @@ ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 import skhema_data as S  # noqa: E402
 
+sys.path.insert(0, str(ROOT / 'tools' / 'akt'))
+import build_akt as A  # noqa: E402  логотип, иконки и реквизиты бланка — как в PDF-образцах
+
 # сборщик нормативной базы — тоже build_pages.py, поэтому загружаем его по пути, под другим именем
 _spec = importlib.util.spec_from_file_location('nb_build_pages', ROOT / 'tools' / 'normativnaya-baza' / 'build_pages.py')
 NB = importlib.util.module_from_spec(_spec)
@@ -213,20 +216,19 @@ def side_html():
     types = []
     for t, (name, kind) in S.T.items():
         ks = sorted(used.get(t, []))
-        icons = ''.join(f'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">{S.mark(kind, 12, 12, S.K[k][1], 7)}</svg>'
-                        for k in ks)
+        icons = f'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">{S.mark(kind, 12, 12, S.TC[t], 7)}</svg>'
         types.append(f'<li><span class="sk-ico">{icons}</span><span class="sk-ty-t"><span><b>{t}</b> — {name[0].lower() + name[1:]}</span>'
-                     f'<small>{", ".join(ks)}</small></span></li>')
+                     f'<small>контур {", ".join(ks)} · {sum(1 for x in S.POINTS if x[0].startswith(t + "-"))} шт.</small></span></li>')
     return ('<p class="sk-side-h">Контуры защиты</p>\n<div class="sk-fs" role="group" aria-label="Показать точки контура">'
             + ''.join(rows) + '</div>\n<p class="sk-side-h">Типы точек</p>\n<ul class="sk-types">' + ''.join(types) + '</ul>')
 
 
 # скрипт плана: фильтр по контуру и карточка точки из реестра; цели Метрики на скачивание PDF
-PLAN_JS = """(function(){var P=%s,K=%s,T=%s,root=document.getElementById('skPlan'),info=document.getElementById('skInfo');
+PLAN_JS = """(function(){var P=%s,K=%s,T=%s,C=%s,root=document.getElementById('skPlan'),info=document.getElementById('skInfo');
 if(!root||!info)return;var pts=[].slice.call(root.querySelectorAll('.sk-pt')),sel=null;
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-function show(i){var p=P[i],k=K[p[1]];if(sel)sel.classList.remove('is-sel');sel=pts[i];sel.classList.add('is-sel');
-info.innerHTML='<div class="sk-info-g"><b class="sk-info-c" style="color:'+k[2]+'">'+esc(p[0])+'</b><span class="sk-info-t">'+esc(T[p[0].split('-')[0]])+'</span>'
+function show(i){var p=P[i],k=K[p[1]],c=C[p[0].split('-')[0]];if(sel)sel.classList.remove('is-sel');sel=pts[i];sel.classList.add('is-sel');
+info.innerHTML='<div class="sk-info-g"><b class="sk-info-c" style="color:'+c+'">'+esc(p[0])+'</b><span class="sk-info-t">'+esc(T[p[0].split('-')[0]])+'</span>'
 +'<span class="sk-info-k" style="color:'+k[2]+'">'+esc(p[1])+' · '+esc(k[0])+'</span><span class="sk-info-p">'+esc(p[2])+'</span>'
 +'<span class="sk-info-th">Порог: '+esc(p[3])+'</span></div>';}
 pts.forEach(function(g,i){g.addEventListener('click',function(){show(i);});
@@ -251,9 +253,28 @@ def plan_js():
     pts = [[c, k, place, thr_text(thr)] for c, k, place, thr, *_ in S.POINTS]
     short = {'К1': 'территория', 'К2': 'периметр здания', 'К3': 'помещения'}
     ks = {k: [short[k], None, c] for k, (n, c) in S.K.items()}
-    ks['К1'][2], ks['К2'][2], ks['К3'][2] = '#4ade80', '#fb923c', '#7ca5ff'  # светлее — на тёмном фоне карточки
+    ks['К1'][2], ks['К2'][2], ks['К3'][2] = '#4ade80', '#94a3b8', '#7ca5ff'  # светлее — на тёмном фоне карточки
     ts = {t: n for t, (n, _) in S.T.items()}
-    return PLAN_JS % tuple(json.dumps(x, ensure_ascii=False) for x in (pts, ks, ts))
+    tc = {'КИК': '#f87171', 'МЛ': '#a78bfa', 'ИМ': '#2dd4bf', 'ИЛ': '#fbbf24', 'ФЛ': '#f472b6'}  # цвета типов S.TC, светлее
+    return PLAN_JS % tuple(json.dumps(x, ensure_ascii=False) for x in (pts, ks, ts, tc))
+
+
+def blank_html():
+    """План на фирменном бланке ПЕСТКОНТРОЛЬ Центра — шапка и подвал как у PDF-образца (форма СТПК-01, tools/akt/build_akt.py)."""
+    co = A.CO
+    return ('<div class="skb">'
+            '<div class="skb-wm" aria-hidden="true">пестконтроль-центр.рф</div>'
+            f'<div class="skb-hd"><div class="skb-brand">{A.LOGO}<div><p class="skb-bn">ПЕСТКОНТРОЛЬ<small>ЦЕНТР</small></p>'
+            '<p class="skb-bt">Пест-контроль для организаций · IPM / ХАССП</p></div></div>'
+            f'<div class="skb-ct"><span>{A.IC_PHONE}<b>{co["phone"]}</b></span><span>{A.IC_GLOBE}<b>{co["site"]}</b></span></div></div>'
+            '<div class="skb-meta"><span>Схема №&nbsp;<i>ПК-0917/26-С</i></span><span>Объект <i>Хлебопекарный цех, г.&nbsp;о.&nbsp;Химки</i></span>'
+            '<span class="skb-badge">Образец заполнения</span><span class="skb-form">Форма СТПК-01 · ред.&nbsp;11.2026</span></div>'
+            '<div class="skb-title"><div><p class="skb-ey">Пест-контроль · ГОСТ Р&nbsp;54762-2011, п.&nbsp;12.5</p>'
+            '<p class="skb-h">План-схема</p><p class="skb-sub">точек пест-контроля (ТПК) объекта · приложение 1 к журналу пест-контроля №&nbsp;ПК-0917/26</p></div>'
+            '<p class="skb-red">ред. <i>2 · 21.10.2026</i></p></div>'
+            '<div class="skb-plan" id="skPlan"><!--SK_SVG--></div>'
+            f'<div class="skb-ft"><b>ПЕСТКОНТРОЛЬ Центр</b> · {co["legal"]} · Лицензия Роспотребнадзора {co["lic"]} · {co["phone"]} · {co["site"]}</div>'
+            '</div>')
 
 
 def main():
@@ -266,7 +287,7 @@ def main():
         for p in PAGES:
             src = (HERE / p['src']).read_text(encoding='utf-8')
             if p['key'] == 'skhema':
-                src = src.replace('<!--SK_PLAN-->', S.plan_svg(web=True)).replace('<!--SK_SIDE-->', side_html())
+                src = src.replace('<!--SK_PLAN-->', blank_html().replace('<!--SK_SVG-->', S.plan_svg(web=True))).replace('<!--SK_SIDE-->', side_html())
             f = pathlib.Path(tmp) / p['src']
             f.write_text(src, encoding='utf-8')
             q = dict(p, src=str(f))
