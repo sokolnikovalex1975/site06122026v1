@@ -33,6 +33,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / 'tools' / 'legal'))
 sys.path.insert(0, str(HERE))
 from textlib import typeset, plain, cut  # noqa: E402
+import blocks  # noqa: E402
 
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 DATE = '2026-11-11'
@@ -41,11 +42,14 @@ FORMATS = ('Ресторан', 'Кафе или кофейня', 'Бар', 'Ст
 TYPES = ('Пищевое производство', 'Магазин или торговая сеть', 'Ресторан или кафе', 'Склад, логистика',
          'Фармацевтическое производство', 'Гостиница', 'Другое')
 
-# ---------------------------------------------------------------- цены по площади (предложение, медиана рынка 11.11.2026)
+# ---------------------------------------------------------------- цены по площади (предложение владельцу, 11.11.2026)
+# Указание владельца: «не по средней цене по Москве … нижний сегмент взять, и середину этого нижнего сегмента».
+# Нижний сегмент — цены 11 прайсов не выше медианы; берём его медиану, округляем до 500 ₽ (половина — вниз),
+# нижняя граница — наш минимум 3 500 ₽. Расчёт и источники — файлы проекта, «SEO/Цены по площади — рынок 2026-11-11.md».
 AREAS = ('до 100 м²', '100–200 м²', '200–300 м²', '300–500 м²', '500–1000 м²')
 AREA_PRICES = {
-    'dzr': [(3500, 3500), (5000, 3500), (8000, 5500), (10000, 7000), (12500, 10000)],
-    'drr': [(3500, 3500), (4500, 3500), (7500, 3500), (9000, 5000), (11000, 9500)],
+    'dzr': [(3500, 3500), (3500, 3500), (6000, 4500), (8500, 7000), (10500, 8000)],
+    'drr': [(3500, 3500), (4000, 3500), (6000, 3500), (7000, 4500), (9000, 8000)],
 }
 
 PAGES = {
@@ -100,7 +104,8 @@ PAGES = {
             ('Работаете с кафе в торговых центрах и на фуд-кортах?',
              'Да. Работаем в часы, которые разрешает управляющая компания центра, — обычно до открытия или после '
              'закрытия. Если тараканы приходят по общим коммуникациям, пишем об этом в акте: общие зоны обычно '
-             'обслуживает управляющая компания, и одной обработки своего кафе тогда мало.'),
+             'обслуживает управляющая компания, и одной обработки своего кафе тогда мало. Общие зоны центра можно передать нам по '
+             'договору с управляющей компанией — <a href="@/biznes-tsentry-torgovye-tsentry-predpriyatiya/">пест-контроль бизнес-центров и ТЦ</a>.'),
             ('Чем дезинсекция отличается от пест-контроля?',
              'Дезинсекция — работа с насекомыми: обследование, обработка и контроль результата. Пест-контроль — система '
              'по договору против насекомых и грызунов: точки контроля, график визитов, журнал и документы для проверок. '
@@ -324,7 +329,11 @@ def build(key, p, tpl, icons):
 
     main = (HERE / p['main']).read_text(encoding='utf-8')
     main = (main.replace('<!--FAQ-->', faq_section(p)).replace('<!--FORM-->', form_html(p))
-                .replace('<!--AREA_PRICES-->', area_html(key, p)))
+                .replace('<!--AREA_PRICES-->', area_html(key, p))
+                .replace('<!--ZONES-->\n', blocks.zones_html(key)).replace('<!--TIMELINE-->\n', blocks.timeline_html() + '\n')
+                .replace('<!--SIZES-->\n', blocks.sizes_html() + '\n').replace('<!--CONTOURS-->\n', blocks.contours_html() + '\n')
+                .replace('<!--CALC-->\n', blocks.calc_html(key, AREAS, AREA_PRICES[key]) + '\n')
+                .replace('<!--SAMPLES-->\n', blocks.samples_html(key, LIC)).replace('<!--MORE-->\n', blocks.more_html(key, icons)))
     main = main.replace('href="https://fp.rospotrebnadzor.ru/licen/"', f'href="{LIC}"')
     main = typeset(main)
     main = re.sub(r'<!--ICON:([a-z0-9-]+)-->', lambda m: icons[m.group(1)], main)
@@ -334,7 +343,7 @@ def build(key, p, tpl, icons):
     assert '<!--' not in main.replace('<!-- ', ''), p['slug'] + ': остались метки'
 
     html = (head + '<style>' + css + '</style>\n' + json_ld(p).replace('"@/', '"' + SITE) + '\n' + top + main + bottom + pjs + '\n'
-            + loader + page_js(p) + '</body>\n</html>\n')
+            + loader + page_js(p) + blocks.ZONE_JS + blocks.CALC_JS + '</body>\n</html>\n')
     out = ROOT / p['slug'] / 'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding='utf-8')

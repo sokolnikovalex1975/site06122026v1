@@ -44,6 +44,12 @@ INDUSTRIES = [
     ('gostinitsy', 'Гостиницы и отели'),
     ('biznes-tsentry-torgovye-tsentry-predpriyatiya', 'Бизнес-центры, ТЦ и предприятия'),  # с 11.11.2026 (tools/bctc)
 ]
+# Подпункты отрасли (с 11.11.2026, решение владельца «найти место в меню, в верхнем и в нижнем»): страницы «услуга +
+# сфера» стоят под своей отраслью — в шапке, мобильном меню и подвале, с отступом (класс nav-sub / ft-sub)
+INDUSTRY_SUB = {
+    'restorany-i-kafe': [('dezinsektsiya/restorany-i-kafe', 'Дезинсекция кафе и ресторанов'),
+                         ('deratizatsiya/restorany-i-kafe', 'Дератизация ресторанов и кафе')],
+}
 DOGOVOR = 'dogovor-deratizatsiya-dezinsektsiya'
 DERAT = 'deratizatsiya'
 VENT = 'ochistka-dezinfektsiya-ventilyatsii'
@@ -160,7 +166,8 @@ def build(root, cur, cta_mobile):
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
     usl_items = ''.join(page_link(root, cur, s, one(t) + ARR) for s, t in USLUGI)
     usl_items += anchor(root, 'podhod', '<span>Пест-контроль по системе IPM</span>' + ARR, 'nav-dd-all')
-    ind_items = ''.join(page_link(root, cur, s, t + ARR) for s, t in INDUSTRIES)
+    ind_items = ''.join(page_link(root, cur, s, t + ARR) + ''.join(page_link(root, cur, s2, t2 + ARR, 'nav-sub') for s2, t2 in INDUSTRY_SUB.get(s, []))
+                        for s, t in INDUSTRIES)
     ind_items += anchor(root, 'otrasli', 'Все отрасли' + ARR, 'nav-dd-all')
     mat_items = ''.join(page_link(root, cur, s, one(t) + ARR) for s, t in MATERIALS)
     mat_items += page_link(root, cur, 'materialy', 'Все материалы' + ARR, 'nav-dd-all')
@@ -175,7 +182,8 @@ def build(root, cur, cta_mobile):
     )
     # мобильное меню
     sub_usl = ''.join(page_link(root, cur, s, one(t)) for s, t in USLUGI) + anchor(root, 'podhod', '<span class="nw">Пест-контроль</span> по системе IPM')
-    sub_ind = ''.join(page_link(root, cur, s, t) for s, t in INDUSTRIES) + anchor(root, 'otrasli', 'Все отрасли')
+    sub_ind = ''.join(page_link(root, cur, s, t) + ''.join(page_link(root, cur, s2, t2, 'nav-sub') for s2, t2 in INDUSTRY_SUB.get(s, []))
+                      for s, t in INDUSTRIES) + anchor(root, 'otrasli', 'Все отрасли')
     sub_mat = ''.join(page_link(root, cur, s, one(t)) for s, t in MATERIALS) + page_link(root, cur, 'materialy', 'Все материалы')
     dog_text = 'Договор <small>на дератизацию и дезинсекцию</small>'
     mm = (
@@ -195,7 +203,8 @@ def build(root, cur, cta_mobile):
     ft_srv = (''.join(li(page_link(root, cur, s, wrap(t) if s != DOGOVOR else 'Договор на дератизацию и дезинсекцию')) for s, t in USLUGI)
               + li(anchor(root, 'podhod', wrap('<span class="nw">Пест-контроль</span> по системе IPM')))
               + ''.join(li(anchor(root, s, t)) for s, t in SERVICE))
-    ft_ind = ''.join(li(page_link(root, cur, s, t)) for s, t in INDUSTRIES)
+    ft_ind = ''.join(li(page_link(root, cur, s, t)) + ''.join(f'<li class="ft-sub">{page_link(root, cur, s2, t2)}</li>' for s2, t2 in INDUSTRY_SUB.get(s, []))
+                     for s, t in INDUSTRIES)
     ft_mat = ''.join(li(page_link(root, cur, s, wrap(t)))
                      + (li(page_link(root, cur, *FOOTER_MAT_EXTRA[s][:1], wrap(FOOTER_MAT_EXTRA[s][1]))) if s in FOOTER_MAT_EXTRA else '')
                      for s, t in MATERIALS) + li(page_link(root, cur, 'materialy', 'Все материалы'))
@@ -241,7 +250,14 @@ SRCH_CSS = ('<style id="srch-st">/* лупа поиска в шапке и ра�
             '@media (max-width:760px){.hdr .wrap{gap:12px}.hdr-right{gap:8px}}'
             '@media (max-width:400px){.hdr .wrap{gap:10px}.srch-btn{width:40px;height:40px}}'
             '@media (max-width:360px){.hdr .wrap{gap:8px}.hdr-right{gap:6px}.srch-btn,.phone i,.burger{width:38px;height:38px}}'
-            '@media (max-width:340px){.logo-mark{display:none}.logo-sub{display:block}}</style>')
+            '@media (max-width:340px){.logo-mark{display:none}.logo-sub{display:block}}'
+            # подпункты отрасли (INDUSTRY_SUB): с отступом и чуть мельче
+            '.nav-dd-panel a.nav-sub{padding:8px 14px 8px 30px;font-size:14px;color:var(--t3)}'
+            '.nav-dd-panel a.nav-sub::before{content:"";position:absolute;left:16px;top:50%;width:7px;height:1px;background:var(--line2)}'
+            '.nav-dd-panel a.nav-sub{position:relative}.nav-dd-panel a.nav-sub:hover,.nav-dd-panel a.nav-sub[aria-current]{color:#fff}'
+            '.mm-sub a.nav-sub{padding-left:40px;font-size:16px;color:var(--t3)}'
+            '.ft li.ft-sub{padding-left:14px;font-size:14px;position:relative}'
+            '.ft li.ft-sub::before{content:"";position:absolute;left:0;top:50%;width:7px;height:1px;background:var(--line2)}</style>')
 SRCH_JS = ('<script id="srch-js">/* поиск по сайту: движок и индекс загружаются по первому нажатию на лупу или «/» (tools/search) */'
            '(function(r,v){var d=document,ld=0,w=null;function go(o){if(window.PCSearch)return window.PCSearch.open(r,v,o);w=o;if(ld)return;ld=1;'
            'var s=d.createElement("script");s.src=r+"search.min.js?v="+v;s.async=true;s.onload=function(){window.PCSearch&&window.PCSearch.open(r,v,w)};'
