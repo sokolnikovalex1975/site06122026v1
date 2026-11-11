@@ -14,7 +14,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools/site'))
 import unify
 SLUG = 'zashchita-ot-proniknoveniya-gryzunov'
-BASELINE = 'd2eddd4'  # актуальное меню и параллельные изменения сохранены при интеграции
+BASELINE = 'fd7a780'  # актуальные общие файлы и параллельные изменения сохранены при интеграции
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 failures = []
 
@@ -46,6 +46,11 @@ s = new.read_text(encoding='utf-8')
 soup = BeautifulSoup(s, 'html.parser')
 base_soup = BeautifulSoup(git_file('deratizatsiya/index.html'), 'html.parser')
 derat_soup = BeautifulSoup((ROOT / 'deratizatsiya/index.html').read_text(), 'html.parser')
+derat_without_link = re.sub(
+    r' <span id="proof-service-link">.*?</span>', '',
+    (ROOT / 'deratizatsiya/index.html').read_text(), count=1)
+check(derat_without_link == git_file('deratizatsiya/index.html').decode(),
+      'на дератизации добавлена только контекстная ссылка, прочая разметка сохранена')
 check(str(derat_soup.select_one('#form')) == str(base_soup.select_one('#form')),
       'существующая форма дератизации сохранена без изменений')
 check(field_signature(soup.select_one('#form')) == field_signature(base_soup.select_one('#form')),
@@ -106,7 +111,7 @@ check(not broken, 'все внутренние ссылки, якоря и ре�
 check(derat_soup.select_one('#proof-service-link a')['href'] == '../' + SLUG + '/',
       'дератизация ссылается на новую услугу')
 catalog = BeautifulSoup((ROOT / 'preview-services/index.html').read_text(), 'html.parser')
-check(catalog.select_one('[data-service=zashchita-gryzuny]')['href'] == SLUG + '/',
+check(catalog.select_one('[data-service=zashchita-gryzuny]')['href'] == SLUG + '/index.html',
       'каталог тестовой главной ссылается на новую услугу')
 index = json.loads((ROOT / 'search-index.json').read_text())
 check(any(SLUG + '/' == p[1] for p in index['p']), 'страница присутствует во внутреннем поиске')

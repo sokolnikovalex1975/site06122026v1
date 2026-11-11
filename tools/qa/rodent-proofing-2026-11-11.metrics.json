@@ -1,0 +1,139 @@
+{
+  "scope": "GitHub preview without production counters; sequential cold local runs",
+  "integration_base": "fd7a780",
+  "conditions": {
+    "server": "local HTTP with gzip",
+    "mobile": {
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      }
+    },
+    "desktop": {
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      }
+    }
+  },
+  "asset_sha256": {
+    "zashchita-ot-proniknoveniya-gryzunov/index.html": "4cf4c4bd4605d951f519fb43e10e68e43333acad700bbe1243f9c1a34d468c77",
+    "app.min.js": "515421c18b0c2480a1ec5b1676ba3ec3259da0badf94e481574f0ccc6e4ad4ab",
+    "style.css": "1adaeb1d57fb6ff0a23ef1b6f9a6c8ace7bd204cb5e765806af22be165e90235",
+    "server/counters.html": "3c4a1e15f773b49bbde7e69f5f8168aaa1c51f22a1d3dc338798e53be47fb652"
+  },
+  "runs": [
+    {
+      "url": "http://127.0.0.1:3027/zashchita-ot-proniknoveniya-gryzunov/",
+      "fetchTime": "2026-11-11T11:24:36.784Z",
+      "lighthouseVersion": "12.8.2",
+      "formFactor": "mobile",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "lcp_ms": 1882.7526,
+      "cls": 0,
+      "tbt_ms": 0,
+      "warnings": []
+    },
+    {
+      "url": "http://127.0.0.1:3027/zashchita-ot-proniknoveniya-gryzunov/",
+      "fetchTime": "2026-11-11T11:24:50.470Z",
+      "lighthouseVersion": "12.8.2",
+      "formFactor": "mobile",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "lcp_ms": 1878.396,
+      "cls": 0,
+      "tbt_ms": 0,
+      "warnings": []
+    },
+    {
+      "url": "http://127.0.0.1:3027/zashchita-ot-proniknoveniya-gryzunov/",
+      "fetchTime": "2026-11-11T11:25:03.921Z",
+      "lighthouseVersion": "12.8.2",
+      "formFactor": "mobile",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "lcp_ms": 1737.1692,
+      "cls": 0,
+      "tbt_ms": 0,
+      "warnings": []
+    },
+    {
+      "url": "http://127.0.0.1:3027/zashchita-ot-proniknoveniya-gryzunov/",
+      "fetchTime": "2026-11-11T11:25:17.350Z",
+      "lighthouseVersion": "12.8.2",
+      "formFactor": "desktop",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "lcp_ms": 523.6598,
+      "cls": 0,
+      "tbt_ms": 0,
+      "warnings": []
+    }
+  ],
+  "mobile_medians": {
+    "performance": 99,
+    "lcp_ms": 1878.396,
+    "cls": 0,
+    "tbt_ms": 0
+  },
+  "desktop": {
+    "url": "http://127.0.0.1:3027/zashchita-ot-proniknoveniya-gryzunov/",
+    "fetchTime": "2026-11-11T11:25:17.350Z",
+    "lighthouseVersion": "12.8.2",
+    "formFactor": "desktop",
+    "scores": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 66
+    },
+    "lcp_ms": 523.6598,
+    "cls": 0,
+    "tbt_ms": 0,
+    "warnings": []
+  }
+}

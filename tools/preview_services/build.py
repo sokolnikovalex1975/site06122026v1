@@ -208,7 +208,7 @@ def main():
     s = normalize_links(s)
     # Новая услуга доступна также внутри прикреплённого превью. Остальные адреса не меняем.
     s = s.replace('href="' + GITHUB + 'zashchita-ot-proniknoveniya-gryzunov/"',
-                  'href="zashchita-ot-proniknoveniya-gryzunov/"')
+                  'href="zashchita-ot-proniknoveniya-gryzunov/index.html"')
     (OUT / 'index.html').write_text(s, encoding='utf-8')
     (OUT / '.nojekyll').touch()
     shutil.copy2(ROOT / 'preview-audit/interactions.js', OUT / 'interactions.js')

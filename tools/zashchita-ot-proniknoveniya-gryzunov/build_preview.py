@@ -38,7 +38,7 @@ def build():
         if href and not re.match(r'^(#|https?:|tel:|mailto:|data:)', href):
             dest = urljoin(GITHUB + SLUG + '/', href)
             if dest == GITHUB:
-                dest = '../'
+                dest = '../index.html'
             tag = tag.replace('href="' + href + '"', 'href="' + dest + '"')
         return tag
     s = re.sub(r'<a\b[^>]*>', link, s)
