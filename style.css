@@ -738,3 +738,15 @@ html .d-hero h1 em,html .p-hero h1 em,html .f-hero h1 em{font-style:italic;font-
 .ind-more svg{width:14px;height:14px;transition:transform .4s var(--ease)}
 .ind-more:hover,.ind-more:focus-visible{color:var(--acc);border-color:var(--acc)}
 .ind-more:hover svg,.ind-more:focus-visible svg{transform:translateX(3px)}
+
+/* ===== Вход первого экрана — встроенный скрипт tools/site/hero_in.js (с 11.11.2026) =====
+   Класс hero-in на <html> скрипт ставит в начале входа: начальные состояния первого экрана снимаются, а сами появления
+   рисуют анимации браузера (каждая до своего старта держит начальное состояние). app.js первый экран больше не трогает,
+   поэтому текст первого экрана не ждёт GSAP и счётчиков. Без скрипта, при сбое и prefers-reduced-motion — как раньше. */
+html.js.hero-in #hero [data-h],html.js.hero-in #panel,html.js.hero-in #hero .scroll-cue,html.js.hero-in #hero .p-stack>a{opacity:1}
+html.js.hero-in #hero h1 .ln>span{transform:none;opacity:1}
+html.js.hero-in #hero .d-hero-img,html.js.hero-in #hero .f-hero-img,html.js.hero-in #hero .hero-bg,html.js.hero-in #hero .hero-lit{transform:none}
+html.js.hero-in #hero [data-hin]{opacity:1}
+/* «фонарь» главной под входом стоит на 0,01 вместо 0 (глазом не отличить): то же фото первого экрана (.hero-bg) уже
+   видно, и браузер отмечает LCP при его загрузке, а не когда app.js начнёт проявлять фонарь; GSAP ведёт его от 0,01 к 1 */
+html.js.hero-in #hero .hero-lit{opacity:.01}

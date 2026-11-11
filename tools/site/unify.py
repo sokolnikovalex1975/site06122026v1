@@ -40,7 +40,7 @@ def nw(text):
 def tp(text):
     return typo(nw(text))
 
-VERSION = '20261106s2'  # общая версия style.css и app.min.js для сброса кэша
+VERSION = '20261111hero'  # общая версия style.css и app.min.js для сброса кэша
 
 HEAD_SCRIPT = (
     "<script>\n"
@@ -61,9 +61,13 @@ LOADER = (
     "<script>\n"
     "  /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */\n"
     "  (function (r, l) {\n"
-    "    var go = function () { l.forEach(function (u) { var e = document.createElement('script'); e.src = r + u; e.async = false; document.body.appendChild(e); }); };\n"
+    "    var go = function () { var u = l; l = null; if (u) u.forEach(function (s) { var e = document.createElement('script'); e.src = r + s; e.async = false; document.body.appendChild(e); }); };\n"
+    "    var raf = function () { requestAnimationFrame(function () { setTimeout(go, 0); }); }, P = window.PerformanceObserver, t = P && P.supportedEntryTypes;\n"
     "    if (document.visibilityState === 'hidden' || !window.requestAnimationFrame) setTimeout(go, 0);\n"
-    "    else requestAnimationFrame(function () { setTimeout(go, 0); });\n"
+    "    else if (t && t.indexOf('paint') > -1) { /* после того как браузер показал первую отрисовку (FCP); страховка — 3 с */\n"
+    "      try { new P(function (x, o) { o.disconnect(); setTimeout(go, 0); }).observe({ type: 'paint', buffered: true }); } catch (e) { raf(); }\n"
+    "      setTimeout(go, 3000);\n"
+    "    } else raf();\n"
     "  })('{root}', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v={version}']);\n"
     "</script>"
 )

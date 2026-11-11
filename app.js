@@ -458,7 +458,9 @@
     if (fine && panel) {
       var mX = gsap.quickTo(media, 'x', { duration: 1.4, ease: 'power3' }), mY = gsap.quickTo(media, 'y', { duration: 1.4, ease: 'power3' });
       var pY = gsap.quickTo(panel, 'rotationY', { duration: 1.1, ease: 'power3' }), pX = gsap.quickTo(panel, 'rotationX', { duration: 1.1, ease: 'power3' });
-      gsap.set(panel, { transformPerspective: 1200 });
+      /* нули — явно: вход панели может ещё идти анимацией браузера (tools/site/hero_in.js), её промежуточное положение
+         GSAP не должен принять за исходное */
+      gsap.set(panel, { transformPerspective: 1200, x: 0, y: 0, rotationX: 0, rotationY: 0 });
       hero.addEventListener('pointermove', function (e) {
         var px = e.clientX / innerWidth - 0.5, py = e.clientY / innerHeight - 0.5;
         mX(-px * 30); mY(-py * 20); pY(px * 9); pX(-py * 9);
@@ -493,13 +495,17 @@
     }
   }
 
-  /* вход первого экрана */
+  /* вход первого экрана. С 11.11.2026 его рисует встроенный скрипт сразу после разметки первого экрана
+     (tools/site/hero_in.js, window.pcHero) — не дожидаясь этого файла, GSAP и счётчиков. Код ниже (heroIn и заставка)
+     работает, только если встроенного скрипта нет или он не запустился (старый браузер без element.animate) */
+  var pcHero = window.pcHero;
   var heroLines = $$('.hero h1 .ln>span');
-  if (heroLines.length) gsap.set(heroLines, { y: 0, yPercent: 110, rotation: 3 });
+  if (heroLines.length && !pcHero) gsap.set(heroLines, { y: 0, yPercent: 110, rotation: 3 });
   /* фото первого экрана — сразу в начальном масштабе входа (до скрипта его держит style.css), чтобы под уходящей
      заставкой оно не дёргалось из 1 в 1.12 */
   var heroImgs = dHero ? $$('.d-hero-img, .f-hero-img', dHero) : [];
-  if (heroImgs.length) gsap.set(heroImgs, { scale: 1.12 });
+  if (pcHero) { /* вход уже идёт или прошёл */ }
+  else if (heroImgs.length) gsap.set(heroImgs, { scale: 1.12 });
   else if (hero && $('.hero-bg')) gsap.set('.hero-bg,.hero-lit', { scale: 1.18 });
   function heroIn() {
     if (dHero) {
@@ -539,7 +545,21 @@
 
   /* ---------- заставка ---------- */
   var intro = $('#intro');
-  if (!intro || location.hash || html.classList.contains('no-intro')) {
+  if (pcHero) {
+    /* заставку и вход ведёт встроенный скрипт; здесь — только то, что требует GSAP и Lenis:
+       «фонарь» главной загорается через 0,4 с после начала входа, плавный скролл ждёт подъёма заставки */
+    var litStart = function () {
+      if (dHero || !lit) return;
+      litOn = true;
+      gsap.to(lit, { opacity: 1, duration: 2, ease: 'expo.out', delay: Math.max(0, pcHero.t0 + 400 - performance.now()) / 1000 });
+    };
+    if (pcHero.t0 !== null) litStart();
+    else document.addEventListener('pc:hero', litStart);
+    if (intro && intro.parentNode) {
+      if (lenis) lenis.stop();
+      document.addEventListener('pc:intro', function () { if (lenis) lenis.start(); });
+    }
+  } else if (!intro || location.hash || html.classList.contains('no-intro')) {
     if (intro) intro.remove();
     heroIn();
   } else {
@@ -689,6 +709,7 @@
   group('cards').forEach(function (g) {
     var items = $$(':scope>*', g), cols = Math.max(1, Math.round(g.offsetWidth / Math.max(1, items[0] ? items[0].offsetWidth : 1)));
     items.forEach(function (card, i) {
+      if (card.hasAttribute('data-hin')) return; /* уже проявлена встроенным скриптом первого экрана (tools/site/hero_in.js) */
       var box = $('.ind-img, .d-obj-img, .d-kind-img, .d-swap-img, .pm-img, [data-reveal]', card), pic = box ? $('img', box) : null;
       onceST(card, function () {
         var d = (i % cols) * 0.1;

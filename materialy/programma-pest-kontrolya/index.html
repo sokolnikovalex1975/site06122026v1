@@ -34,7 +34,7 @@
     setTimeout(function () { if (!d.classList.contains('anim-ready')) d.classList.add('anim-fail'); }, 4000);
   })(document.documentElement);
 </script>
-<link rel="stylesheet" href="../../style.css?v=20261106s2">
+<link rel="stylesheet" href="../../style.css?v=20261111hero">
 <style>html{scroll-behavior:auto}
 .d-page .s{padding:clamp(64px,7vw,128px) 0;border-top:1px solid var(--line)}
 .d-crumbs{font-size:14px;color:var(--t3);display:flex;flex-wrap:wrap;gap:8px;margin:0 0 clamp(20px,2.4vw,32px)}
@@ -359,6 +359,7 @@
     <div aria-hidden="true"></div>
   </div>
 </section>
+<script id="hero-in">(function(d,m){var h=d.documentElement;if(!h.classList.contains("js")||h.classList.contains("anim-fail")||!h.animate||m.matchMedia("(prefers-reduced-motion: reduce)").matches)return;var e=function(t,r){return(r||d).querySelector(t)},u=function(t,r){return[].slice.call((r||d).querySelectorAll(t))},p=e("#hero"),c=e(".d-hero")||e(".p-hero")||e(".f-hero");if(!p)return;var b=m.matchMedia("(hover: hover) and (pointer: fine)").matches,H=b&&!m.matchMedia("(max-width: 760px)").matches,E="cubic-bezier(.19,1,.22,1)",S="cubic-bezier(.87,0,.13,1)",o=.01,y=m.pcHero={t0:null},g=[];function n(t,r,a,i,l){t&&g.push(t.animate([r,a],{duration:i*1e3,delay:l*1e3,easing:E,fill:"backwards"}))}function s(t,r){return H&&(t.filter="blur("+r+"px)"),t}function M(t){var r=d.createEvent("Event");r.initEvent(t,!1,!1),d.dispatchEvent(r)}var T=!1,A=c&&e(".eyebrow",c);function L(){if(!T)if(T=!0,h.classList.add("hero-in"),c)u(".d-hero-img, .f-hero-img",c).forEach(function(a){n(a,{transform:"scale(1.12)"},{transform:"scale(1)"},2.2,0)}),u("h1 .ln>span",c).forEach(function(a,i){var l=.12+i*.1;getComputedStyle(a.parentNode).display!=="inline"?n(a,{transform:"translate(0,110%) rotate(3deg)"},{transform:"translate(0,0) rotate(0deg)"},1.3,l):n(a,{opacity:o,transform:"translate(0,22px)"},{opacity:1,transform:"translate(0,0)"},1.1,l)}),u("[data-h]",c).forEach(function(a,i){n(a,s({opacity:o,transform:"translate(0,18px)"},6),s({opacity:1,transform:"translate(0,0)"},0),1,.26+i*.06)}),u(".p-stack > a",c).forEach(function(a,i){n(a,s({opacity:o,translate:"0 70px"},8),s({opacity:1,translate:"0 0"},0),1.5,.3+i*.14)});else{u(".hero-bg, .hero-lit",p).forEach(function(a){n(a,{transform:"scale(1.18)"},{transform:"scale(1)"},2.6,0)}),n(e(".badge",p),s({opacity:o,transform:"translate(0,20px)"},8),s({opacity:1,transform:"translate(0,0)"},0),1.1,.1),u("h1 .ln>span",p).forEach(function(a,i){n(a,{transform:"translate(0,110%) rotate(3deg)"},{transform:"translate(0,0) rotate(0deg)"},1.4,.15+i*.11)}),n(e(".lead",p),s({opacity:o,transform:"translate(0,24px)"},8),s({opacity:1,transform:"translate(0,0)"},0),1.2,.4),n(e(".hero-ctas",p),{opacity:o,transform:"translate(0,24px)"},{opacity:1,transform:"translate(0,0)"},1.1,.5);var t=e("#panel");if(t){var r=b?"perspective(1200px) ":"";n(t,s({opacity:o,transform:r+"translate(70px,0) rotateY(-14deg)"},10),s({opacity:1,transform:r+"translate(0,0) rotateY(0deg)"},0),1.6,.3),u("li",t).forEach(function(a,i){n(a,{opacity:o,transform:"translate(24px,0)"},{opacity:1,transform:"translate(0,0)"},.9,.6+i*.08)})}n(e(".scroll-cue",p),{opacity:o},{opacity:1},1,1.1)}}function N(){if(c){var t=m.innerHeight||h.clientHeight;u('[data-group="cards"]',c).forEach(function(r){var a=[].slice.call(r.children);if(a.length){var i=Math.max(1,Math.round(r.offsetWidth/Math.max(1,a[0].offsetWidth)));a.forEach(function(l,I){l.getBoundingClientRect().top>t*.9||e(".ind-img, .d-obj-img, .d-kind-img, .d-swap-img, .pm-img, [data-reveal]",l)||(l.setAttribute("data-hin",""),l.animate([{opacity:o,transform:"translate(0,60px)"},{opacity:1,transform:"translate(0,0)"}],{duration:1300,delay:I%i*100,easing:E,fill:"backwards"}))})}})}}function k(){y.t0===null&&(L(),y.t0=m.performance.now(),A&&A.classList.add("in"),g.forEach(function(t){t.playState==="paused"&&t.play()}),M("pc:hero"))}var f=e("#intro");if(!f||m.location.hash||h.classList.contains("no-intro")){f&&f.parentNode.removeChild(f),k(),N();return}L(),g.forEach(function(t){t.pause()}),N();var w=!1,v=function(){if(!w){w=!0;var t=f.animate([{clipPath:"inset(0% 0% 0% 0%)"},{clipPath:"inset(0% 0% 100% 0%)"}],{duration:750,easing:S,fill:"forwards"}),r=function(){f.parentNode&&(f.parentNode.removeChild(f),y.introDone=!0,M("pc:intro"))};t.onfinish=r,setTimeout(k,300),setTimeout(r,2500)}},x=e(".intro-bar i",f),C=x&&x.getAnimations?x.getAnimations():[];C.length?Promise.all(C.map(function(t){return t.finished})).then(v,v):setTimeout(v,900),setTimeout(v,1500)})(document,window);</script>
 
 <div class="strip" aria-label="Коротко о программе пест-контроля">
   <div class="strip-track" id="stripTrack">
@@ -1011,10 +1012,14 @@ document.addEventListener('change',function(e){if(!e.target.closest('.f-check-li
 <script>
   /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */
   (function (r, l) {
-    var go = function () { l.forEach(function (u) { var e = document.createElement('script'); e.src = r + u; e.async = false; document.body.appendChild(e); }); };
+    var go = function () { var u = l; l = null; if (u) u.forEach(function (s) { var e = document.createElement('script'); e.src = r + s; e.async = false; document.body.appendChild(e); }); };
+    var raf = function () { requestAnimationFrame(function () { setTimeout(go, 0); }); }, P = window.PerformanceObserver, t = P && P.supportedEntryTypes;
     if (document.visibilityState === 'hidden' || !window.requestAnimationFrame) setTimeout(go, 0);
-    else requestAnimationFrame(function () { setTimeout(go, 0); });
-  })('../../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261106s2']);
+    else if (t && t.indexOf('paint') > -1) { /* после того как браузер показал первую отрисовку (FCP); страховка — 3 с */
+      try { new P(function (x, o) { o.disconnect(); setTimeout(go, 0); }).observe({ type: 'paint', buffered: true }); } catch (e) { raf(); }
+      setTimeout(go, 3000);
+    } else raf();
+  })('../../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261111hero']);
 </script>
 </body>
 </html>
