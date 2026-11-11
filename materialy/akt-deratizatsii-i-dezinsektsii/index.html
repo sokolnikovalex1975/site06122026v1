@@ -492,8 +492,6 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
 @media(hover:hover) and (pointer:fine){.sk-types li[data-t]{transition:color .2s}.sk-types li[data-t]:hover{color:var(--t1)}}
 @media(prefers-reduced-motion:reduce){.sk-pt,.sk-pt .sk-hit,.sk-types li{transition:none!important}}
 .sk-pt:focus-visible .sk-hit,.sk-pt.is-sel .sk-hit{fill:rgba(97,95,255,.16);stroke:#615fff;stroke-width:2.5}
-.sk-layout{display:grid;grid-template-columns:minmax(0,720px) minmax(280px,330px) minmax(210px,250px);justify-content:space-between;gap:clamp(16px,1.6vw,24px);align-items:start}
-.sk-side{padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px}
 .sk-side-h{margin:4px 0 0;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t3)}
 .sk-fs{display:grid;gap:6px}
 .sk-f{display:flex;align-items:center;gap:12px;width:100%;padding:8px 10px;border:1px solid var(--line2);border-radius:10px;background:none;color:var(--t2);font:inherit;font-size:14px;text-align:left;cursor:pointer;transition:border-color .2s,background .2s}
@@ -523,10 +521,6 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
 .sk-info-k{font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
 .sk-info-th{color:var(--t2);font-size:13.5px}
 .sk-scroll{display:none;margin:8px 0 0;color:var(--t3);font-size:13px}
-@media (max-width:1100px){
-  .sk-layout{grid-template-columns:minmax(0,1fr)}
-  .sk-info{order:-1;margin:0 0 4px;padding:2px 2px 14px;border-top:0;border-bottom:1px solid var(--line2);min-height:0}
-}
 @media (max-width:1200px){
   .md-facts{grid-template-columns:repeat(3,minmax(0,1fr))}
   .md-kinds{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -590,29 +584,55 @@ a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(
 .skb-ft{margin-top:10px;padding-top:8px;border-top:1px solid #e4e4e7;font-size:9.5px;line-height:1.5;color:#71717a}
 .skb-ft b{color:#18181b}
 @media (max-width:640px){.skb-ct{align-items:flex-start}.skb-form{margin-left:0}.skb-title{flex-wrap:wrap}}
-/* карточка PDF-образца — третьей колонкой справа от плана (решение владельца 11.11.2026), ниже 1360 px — под панелью */
-.sk-pdf{padding:18px;display:flex;flex-direction:column;gap:16px}
-.sk-pdf-cover{display:block;border-radius:5px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.1);transform:rotate(-2deg);transition:transform .4s var(--ease)}
-.sk-pdf:hover .sk-pdf-cover{transform:rotate(0) translateY(-2px)}
-.sk-pdf-cover img{display:block;width:100%;height:auto;background:#fff}
-.sk-pdf-k{margin:0 0 8px;font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.3;color:var(--t1)}
-.sk-pdf-t>p:not(.sk-pdf-k){margin:0 0 16px;color:var(--t2);font-size:14px;line-height:1.55}
-.sk-pdf .btn{width:100%;justify-content:center;padding-inline:16px;white-space:normal;text-align:center}
-@media (max-width:1359px){
-  .sk-layout{grid-template-columns:minmax(0,720px) minmax(280px,330px);justify-content:start}
-  .sk-pdf{grid-column:2;flex-direction:row;align-items:flex-start}
-  .sk-pdf-cover{flex:none;width:96px}
-}
-@media (max-width:1100px){
-  .sk-layout{grid-template-columns:minmax(0,1fr)}
-  .sk-pdf{grid-column:auto}
-  .sk-pdf-cover{width:112px}
-}
 .md-price-n{margin:0 0 20px;color:var(--acc);font-size:14px;font-weight:500}
-@media (max-width:600px){
-  .sk-pdf{flex-direction:column}
-  .sk-pdf-cover{width:132px}
-}</style>
+/* блок «Образец план-схемы» — вариант А «плотная сетка» (выбран владельцем 11.11.2026):
+   план · обозначения · образец PDF вплотную и одной высоты; ниже 1600 px PDF — полосой под планом и обозначениями */
+.skg{display:grid;grid-template-columns:minmax(0,720px) 320px minmax(250px,1fr);grid-template-areas:"plan side pdf";gap:24px;align-items:stretch}
+.skg-plan{grid-area:plan;min-width:0;display:flex;flex-direction:column}
+.skg-plan .sk-paper{flex:1}
+.skg-side{grid-area:side;padding:18px;display:flex;flex-direction:column;gap:14px;height:auto}
+.skg-grp{display:flex;flex-direction:column;gap:8px}
+.skg .sk-fs .sk-f{padding:7px 10px}
+.skg .sk-types{gap:4px}
+.skg .sk-types li{gap:12px;padding:5px 0;line-height:1.3}
+.skg .sk-types .sk-ico{min-width:40px;height:24px}
+.skg-ty{flex:1;min-width:0}.skg-ty b{color:var(--t1);font-weight:600}
+.skg-n{font-size:13px;color:var(--t3);font-variant-numeric:tabular-nums}
+.skg-pdf{grid-area:pdf;container-type:inline-size;padding:20px;display:flex;flex-direction:column;gap:18px;height:auto}
+.skg-sheets{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:start}
+.skg-sheets img{display:block;width:100%;height:auto;background:#fff;border-radius:4px;box-shadow:0 18px 40px -18px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.12);transition:transform .4s var(--ease)}
+.skg-sheets:hover img{transform:translateY(-2px)}
+.skg-sheets img+img{display:none}
+@container (max-width:290px){.skg-x{display:none}}
+@container (min-width:500px){.skg-sheets{grid-template-columns:repeat(2,minmax(0,1fr))}.skg-sheets img+img{display:block}}
+.skg-k{margin:0;font-size:19px;font-weight:500;letter-spacing:-.01em;color:var(--t1);line-height:1.25}
+.skg-m{margin:4px 0 0;font-size:14px;color:var(--acc)}
+.skg-d{margin:10px 0 0;font-size:14px;line-height:1.55;color:var(--t2)}
+.skg-dl{margin-top:auto;width:100%;justify-content:center;white-space:nowrap!important;padding-inline:18px}
+@media (max-width:1599px){
+  .skg{grid-template-columns:minmax(0,800px) minmax(320px,1fr);grid-template-areas:"plan side" "pdf pdf"}
+  .skg-pdf{flex-direction:row;align-items:center;gap:22px;padding:16px 20px}
+  .skg-sheets{flex:none;grid-template-columns:76px 76px;gap:10px}
+  .skg-sheets img+img{display:block}
+  .skg-t{flex:1;min-width:0}
+  .skg-d{margin-top:6px}
+  .skg-dl{margin:0;width:auto;flex:none}
+}
+@media (max-width:1279px){.skg .sk-f-t small{display:none}.skg .sk-fs .sk-f{padding:9px 10px}}
+@media (min-width:1000px){.skg-side .sk-info{order:0;flex:1 0 auto;display:flex;align-items:center;margin:4px 0 0;padding:14px 16px;border:1px dashed var(--line2);border-radius:12px;background:rgba(255,255,255,.02);min-height:110px}.skg-side .sk-info-g{width:100%}}
+@media (max-width:999px){
+  .skg{grid-template-columns:minmax(0,1fr);grid-template-areas:"plan" "side" "pdf"}
+  .skg .sk-f-t small{display:block}
+  .skg-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px}
+  .skg-side .sk-info{grid-column:1/-1;order:-1;margin:0;padding:2px 2px 14px;border-top:0;border-bottom:1px solid var(--line2);min-height:0}
+}
+@media (max-width:640px){
+  .skg-side{display:flex}
+  .skg-pdf{flex-direction:column;align-items:stretch}
+  .skg-sheets{grid-template-columns:repeat(2,minmax(0,1fr));max-width:300px}
+  .skg-dl{width:100%}
+}
+@media (min-width:761px){.skg .sk-scroll{display:none}}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org", "name": "ПЕСТКОНТРОЛЬ Центр", "legalName": "ООО «Центр дезинфекционных услуг»", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/", "telephone": "+7 495 104-35-70", "email": "b2b@pestcontrol-center.ru"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, {"@type": "ListItem", "position": 2, "name": "Материалы", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/"}, {"@type": "ListItem", "position": 3, "name": "Акт дератизации и дезинсекции", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/akt-deratizatsii-i-dezinsektsii/"}]}, {"@type": "Article", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/akt-deratizatsii-i-dezinsektsii/#article", "headline": "Акт дератизации и дезинсекции: образец и что в нём указать", "description": "Что указать в акте дератизации и дезинсекции: реквизиты, средства с СГР, результаты по точкам, подписи. Образец и бланк PDF. Акт по вашему объекту — после обследования, 3 000 ₽ с выездом.", "inLanguage": "ru", "datePublished": "2026-11-11", "dateModified": "2026-11-11", "author": {"@type": "Person", "name": "Марианна Семерина", "jobTitle": "Санитарный врач"}, "publisher": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org"}, "mainEntityOfPage": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/akt-deratizatsii-i-dezinsektsii/", "image": [{"@type": "ImageObject", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/akt-hero.webp", "width": 1920, "height": 1072, "caption": "Специалист по пест-контролю в синей форме показывает акт обследования менеджеру по качеству в хлебопекарном цехе, на столе станция контроля грызунов"}, {"@type": "ImageObject", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/akt-og.jpg", "width": 1200, "height": 630}], "about": ["Акт дезинсекции", "Акт дератизации", "Акт выполненных работ", "Документы для Роспотребнадзора"], "isPartOf": {"@type": "CollectionPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/#webpage", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/", "name": "Материалы о пест-контроле"}, "hasPart": [{"@type": "DigitalDocument", "name": "Образец акта обследования и выполненных работ по дезинсекции и дератизации", "encodingFormat": "application/pdf", "inLanguage": "ru", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/obrazets-akta-dezinsektsii-i-deratizatsii.pdf", "publisher": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org"}}, {"@type": "DigitalDocument", "name": "Бланк акта обследования и выполненных работ по дезинсекции и дератизации", "encodingFormat": "application/pdf", "inLanguage": "ru", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/blank-akta-dezinsektsii-i-deratizatsii.pdf", "publisher": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org"}}]}, {"@type": "FAQPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/akt-deratizatsii-i-dezinsektsii/#faq", "mainEntity": [{"@type": "Question", "name": "Можно ли заказать акт без выезда на объект?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Мы не продаём акты как документ: акт выдаём только после выезда специалиста и обследования объекта. В нём отражаем реальную ситуацию — что нашли, где и что рекомендуем. Акт без обследования не выдержит сверки с журналом и точками контроля на месте."}}, {"@type": "Question", "name": "Сколько стоит акт дератизации и дезинсекции?", "acceptedAnswer": {"@type": "Answer", "text": "Акт по итогам обследования — 3 000 ₽, выезд специалиста входит в стоимость. Выезд обязателен: акт составляем по результатам осмотра помещений и территории. Если понадобится обработка, её рассчитаем отдельно."}}, {"@type": "Question", "name": "Есть ли утверждённая форма акта дезинсекции и дератизации?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. СанПиН 3.3686-21 не устанавливает единого бланка, форму согласуют в договоре. Чтобы акт подтвердил работу, в нём указывают дату и время, помещения, результаты обследования по точкам контроля, средство с номером СГР и концентрацией, исполнителя с номером лицензии и подписи обеих сторон."}}, {"@type": "Question", "name": "Как часто составляют акт?", "acceptedAnswer": {"@type": "Answer", "text": "По каждому визиту: плановому обследованию, обработке по показаниям, внеплановому выезду. На объектах из п. 98 СанПиН 3.3686-21 — пищевых, торговых, гостиницах, медицинских и детских организациях — обследования на насекомых проводят не реже 2 раз в месяц (п. 101), поэтому актов в месяц не меньше двух."}}, {"@type": "Question", "name": "Можно ли оформить один акт за месяц?", "acceptedAnswer": {"@type": "Answer", "text": "Сводный акт для бухгалтерии оформить можно, но каждый визит всё равно нужно подтвердить по дате — актом визита или записью в журнале пест-контроля. Один акт без дат визитов не показывает кратность обследований, которую проверяет инспектор."}}, {"@type": "Question", "name": "Нужно ли указывать в акте номер СГР средства?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Номер свидетельства о госрегистрации, действующее вещество и концентрация позволяют проверить, что средство зарегистрировано и применено по инструкции. Копии свидетельств и инструкций хранят в папке объекта."}}, {"@type": "Question", "name": "Кто подписывает акт со стороны заказчика?", "acceptedAnswer": {"@type": "Answer", "text": "Работник, ответственный за пест-контроль или производственный контроль: менеджер по качеству, заведующий производством, администратор. Его удобно назначить приказом и указать в договоре — тогда подпись в акте не вызывает вопросов."}}, {"@type": "Question", "name": "Можно ли оформлять акты в электронном виде?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Первичный учётный документ можно составить в электронном виде и подписать электронными подписями (ч. 5 ст. 9 402-ФЗ). На объекте держите распечатку или доступ к системе электронного документооборота, чтобы показать акт инспектору сразу."}}, {"@type": "Question", "name": "Сколько хранить акты дезинсекции и дератизации?", "acceptedAnswer": {"@type": "Answer", "text": "Как первичные учётные документы — не менее пяти лет после отчётного года (ч. 1 ст. 29 402-ФЗ). Храните их в папке объекта вместе с журналом, договором и схемой точек."}}, {"@type": "Question", "name": "Чем акт отличается от журнала пест-контроля?", "acceptedAnswer": {"@type": "Answer", "text": "Журнал ведут на объекте постоянно: в нём записи по каждой точке за все визиты. Акт подводит итог одного визита и подтверждает объём работ для заказчика и бухгалтерии. Номер акта ставят в журнале рядом с записью визита."}}]}, {"@type": "Service", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/akt-deratizatsii-i-dezinsektsii/#service", "name": "Обследование объекта с выдачей акта дератизации и дезинсекции", "description": "Стоимость 3 000 ₽ включает выезд специалиста. Акт выдаём только после обследования объекта: в нём — реальная ситуация на объекте, находки по точкам контроля и рекомендации. Документ без обследования не продаём.", "serviceType": "Дератизация и дезинсекция", "provider": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org"}, "areaServed": [{"@type": "City", "name": "Москва"}, {"@type": "AdministrativeArea", "name": "Московская область"}], "offers": {"@type": "Offer", "price": "3000", "priceCurrency": "RUB", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/materialy/akt-deratizatsii-i-dezinsektsii/#zakazat", "availability": "https://schema.org/InStock"}}]}</script>
 <style id="srch-st">/* лупа поиска в шапке и раскладка шапки с ней (tools/menu/apply_menu.py) */.srch-btn{flex:none;width:44px;height:44px;padding:0;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff;cursor:pointer;transition:color .25s,border-color .3s,background .3s,transform .35s cubic-bezier(.16,1,.3,1)}.srch-btn:hover{border-color:#7c86ff;background:rgba(97,95,255,.2);transform:translateY(-2px)}.srch-btn:focus-visible{outline:2px solid #7c86ff;outline-offset:2px}.srch-btn svg{width:18px;height:18px;display:block}@media (min-width:761px){.hdr .wrap{gap:16px}.hdr .msg{display:none}.srch-btn{width:38px;height:38px;background:none;border-color:transparent;color:var(--t2);margin-right:calc(4px - clamp(14px,2vw,40px))}.srch-btn svg{width:20px;height:20px}.srch-btn:hover{color:#fff;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);transform:none}}@media (min-width:761px) and (max-width:1440px){.hdr-right{gap:18px}.srch-btn{margin-right:-14px}}@media (min-width:761px) and (max-width:1000px){.hdr-right{gap:12px}.srch-btn{margin-right:-8px}}@media (max-width:900px){.logo-txt{display:flex;flex-direction:column;align-items:flex-start}.logo-sub{margin:0}}@media (max-width:760px){.hdr .wrap{gap:12px}.hdr-right{gap:8px}}@media (max-width:400px){.hdr .wrap{gap:10px}.srch-btn{width:40px;height:40px}}@media (max-width:360px){.hdr .wrap{gap:8px}.hdr-right{gap:6px}.srch-btn,.phone i,.burger{width:38px;height:38px}}@media (max-width:340px){.logo-mark{display:none}.logo-sub{display:block}}.nav-dd-panel a.nav-sub{padding:8px 14px 8px 30px;font-size:14px;color:var(--t3)}.nav-dd-panel a.nav-sub::before{content:"";position:absolute;left:16px;top:50%;width:7px;height:1px;background:var(--line2)}.nav-dd-panel a.nav-sub{position:relative}.nav-dd-panel a.nav-sub:hover,.nav-dd-panel a.nav-sub[aria-current]{color:#fff}.mm-sub a.nav-sub{padding-left:40px;font-size:16px;color:var(--t3)}.ft li.ft-sub{padding-left:14px;font-size:14px;position:relative}.ft li.ft-sub::before{content:"";position:absolute;left:0;top:50%;width:7px;height:1px;background:var(--line2)}</style><script id="srch-js">/* поиск по сайту: движок и индекс загружаются по первому нажатию на лупу или «/» (tools/search) */(function(r,v){var d=document,ld=0,w=null;function go(o){if(window.PCSearch)return window.PCSearch.open(r,v,o);w=o;if(ld)return;ld=1;var s=d.createElement("script");s.src=r+"search.min.js?v="+v;s.async=true;s.onload=function(){window.PCSearch&&window.PCSearch.open(r,v,w)};s.onerror=function(){ld=0};d.head.appendChild(s)}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-srch]");if(b){e.preventDefault();go({btn:b})}});d.addEventListener("keydown",function(e){if(e.key!=="/"||e.ctrlKey||e.metaKey||e.altKey)return;var t=e.target,n=t&&t.tagName;if(n==="INPUT"||n==="TEXTAREA"||n==="SELECT"||t.isContentEditable)return;e.preventDefault();go({})});if(/^#q\d+$/.test(location.hash)){var c=0,t=setInterval(function(){var b=d.getElementById(location.hash.slice(1));if(b&&d.documentElement.classList.contains("anim-ready")){clearInterval(t);if(b.getAttribute("aria-expanded")==="false")b.click()}else if(++c>60)clearInterval(t)},150)}})("../../","20261108");</script>
 <style data-fx>

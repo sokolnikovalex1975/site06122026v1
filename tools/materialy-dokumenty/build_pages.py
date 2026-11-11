@@ -197,30 +197,28 @@ def json_ld(p):
 
 
 def side_html():
-    """Панель сбоку от плана: контуры (они же фильтр точек) и типы точек — значки тех же цветов, что на плане."""
+    """Панель между планом и образцом PDF (вариант А «плотная сетка», выбран владельцем 11.11.2026): контуры — они же фильтр
+    точек — и типы точек со значками тех же цветов, что на плане, и числом точек; карточка точки — внизу панели (в разметке)."""
     c = S.counts()
-    short = {'К1': 'Территория', 'К2': 'Периметр здания', 'К3': 'Внутренние помещения'}
-    note = {'К1': 'ограждение, отмостка, площадка ТКО', 'К2': 'ворота, доки, входы', 'К3': 'цех, склады, АБК'}
-    rows = [f'<button type="button" class="sk-f is-on" data-f="" aria-pressed="true"><span class="sk-sw" aria-hidden="true">' + ''.join(f'<i class="dt" style="background:{col}"></i>' for _, col in S.K.values()) + '</span>'
+    short = {'К1': 'Территория', 'К2': 'Периметр', 'К3': 'Помещения'}
+    note = {'К1': 'ограждение, отмостка, ТКО', 'К2': 'ворота, доки, входы', 'К3': 'цех, склады, АБК'}
+    tshort = {'КИК': 'станция с приманкой', 'МЛ': 'ловушка механическая / клеевая', 'ИМ': 'клеевой монитор насекомых',
+              'ИЛ': 'световая УФ-ловушка', 'ФЛ': 'феромонная ловушка'}
+    rows = ['<button type="button" class="sk-f is-on" data-f="" aria-pressed="true"><span class="sk-sw" aria-hidden="true">'
+            + ''.join(f'<i class="dt" style="background:{col}"></i>' for _, col in S.K.values()) + '</span>'
             f'<span class="sk-f-t"><b>Все точки</b></span><span class="sk-f-n">{len(S.POINTS)}</span></button>']
     for k, (n, col) in S.K.items():
         rows.append(f'<button type="button" class="sk-f" data-f="{k}" aria-pressed="false"><span class="sk-sw" aria-hidden="true">'
                     f'<i class="ln{" dot" if k == "К3" else ""}" style="border-color:{col}"></i></span>'
                     f'<span class="sk-f-t"><b>{k} · {short[k]}</b><small>{note[k]}</small></span><span class="sk-f-n">{c[k]}</span></button>')
-    used = {}
-    for code, k, *_ in S.POINTS:
-        t = code.split('-')[0]
-        used.setdefault(t, [])
-        if k not in used[t]:
-            used[t].append(k)
     types = []
     for t, (name, kind) in S.T.items():
-        ks = sorted(used.get(t, []))
-        icons = f'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">{S.mark(kind, 12, 12, S.TC[t], 7)}</svg>'
-        types.append(f'<li data-t="{t}"><span class="sk-ico">{icons}</span><span class="sk-ty-t"><span><b>{t}</b> — {name[0].lower() + name[1:]}</span>'
-                     f'<small>контур {", ".join(ks)} · {sum(1 for x in S.POINTS if x[0].startswith(t + "-"))} шт.</small></span></li>')
-    return ('<p class="sk-side-h">Контуры защиты</p>\n<div class="sk-fs" role="group" aria-label="Показать точки контура">'
-            + ''.join(rows) + '</div>\n<p class="sk-side-h">Типы точек</p>\n<ul class="sk-types">' + ''.join(types) + '</ul>')
+        icon = f'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">{S.mark(kind, 12, 12, S.TC[t], 7)}</svg>'
+        types.append(f'<li data-t="{t}"><span class="sk-ico">{icon}</span><span class="skg-ty"><b>{t}</b> — {tshort[t]}</span>'
+                     f'<span class="skg-n">{sum(1 for x in S.POINTS if x[0].startswith(t + "-"))}</span></li>')
+    return ('<div class="skg-grp"><p class="sk-side-h">Контуры защиты</p><div class="sk-fs" role="group" aria-label="Показать точки контура">'
+            + ''.join(rows) + '</div></div>\n<div class="skg-grp"><p class="sk-side-h">Типы точек</p><ul class="sk-types">'
+            + ''.join(types) + '</ul></div>')
 
 
 # скрипт плана: фильтр по контуру и карточка точки из реестра; цели Метрики на скачивание PDF

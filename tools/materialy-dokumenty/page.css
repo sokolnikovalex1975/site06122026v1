@@ -53,8 +53,6 @@
 @media(hover:hover) and (pointer:fine){.sk-types li[data-t]{transition:color .2s}.sk-types li[data-t]:hover{color:var(--t1)}}
 @media(prefers-reduced-motion:reduce){.sk-pt,.sk-pt .sk-hit,.sk-types li{transition:none!important}}
 .sk-pt:focus-visible .sk-hit,.sk-pt.is-sel .sk-hit{fill:rgba(97,95,255,.16);stroke:#615fff;stroke-width:2.5}
-.sk-layout{display:grid;grid-template-columns:minmax(0,720px) minmax(280px,330px) minmax(210px,250px);justify-content:space-between;gap:clamp(16px,1.6vw,24px);align-items:start}
-.sk-side{padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px}
 .sk-side-h{margin:4px 0 0;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t3)}
 .sk-fs{display:grid;gap:6px}
 .sk-f{display:flex;align-items:center;gap:12px;width:100%;padding:8px 10px;border:1px solid var(--line2);border-radius:10px;background:none;color:var(--t2);font:inherit;font-size:14px;text-align:left;cursor:pointer;transition:border-color .2s,background .2s}
@@ -84,10 +82,6 @@
 .sk-info-k{font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
 .sk-info-th{color:var(--t2);font-size:13.5px}
 .sk-scroll{display:none;margin:8px 0 0;color:var(--t3);font-size:13px}
-@media (max-width:1100px){
-  .sk-layout{grid-template-columns:minmax(0,1fr)}
-  .sk-info{order:-1;margin:0 0 4px;padding:2px 2px 14px;border-top:0;border-bottom:1px solid var(--line2);min-height:0}
-}
 @media (max-width:1200px){
   .md-facts{grid-template-columns:repeat(3,minmax(0,1fr))}
   .md-kinds{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -151,26 +145,52 @@
 .skb-ft{margin-top:10px;padding-top:8px;border-top:1px solid #e4e4e7;font-size:9.5px;line-height:1.5;color:#71717a}
 .skb-ft b{color:#18181b}
 @media (max-width:640px){.skb-ct{align-items:flex-start}.skb-form{margin-left:0}.skb-title{flex-wrap:wrap}}
-/* карточка PDF-образца — третьей колонкой справа от плана (решение владельца 11.11.2026), ниже 1360 px — под панелью */
-.sk-pdf{padding:18px;display:flex;flex-direction:column;gap:16px}
-.sk-pdf-cover{display:block;border-radius:5px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.1);transform:rotate(-2deg);transition:transform .4s var(--ease)}
-.sk-pdf:hover .sk-pdf-cover{transform:rotate(0) translateY(-2px)}
-.sk-pdf-cover img{display:block;width:100%;height:auto;background:#fff}
-.sk-pdf-k{margin:0 0 8px;font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.3;color:var(--t1)}
-.sk-pdf-t>p:not(.sk-pdf-k){margin:0 0 16px;color:var(--t2);font-size:14px;line-height:1.55}
-.sk-pdf .btn{width:100%;justify-content:center;padding-inline:16px;white-space:normal;text-align:center}
-@media (max-width:1359px){
-  .sk-layout{grid-template-columns:minmax(0,720px) minmax(280px,330px);justify-content:start}
-  .sk-pdf{grid-column:2;flex-direction:row;align-items:flex-start}
-  .sk-pdf-cover{flex:none;width:96px}
-}
-@media (max-width:1100px){
-  .sk-layout{grid-template-columns:minmax(0,1fr)}
-  .sk-pdf{grid-column:auto}
-  .sk-pdf-cover{width:112px}
-}
 .md-price-n{margin:0 0 20px;color:var(--acc);font-size:14px;font-weight:500}
-@media (max-width:600px){
-  .sk-pdf{flex-direction:column}
-  .sk-pdf-cover{width:132px}
+/* блок «Образец план-схемы» — вариант А «плотная сетка» (выбран владельцем 11.11.2026):
+   план · обозначения · образец PDF вплотную и одной высоты; ниже 1600 px PDF — полосой под планом и обозначениями */
+.skg{display:grid;grid-template-columns:minmax(0,720px) 320px minmax(250px,1fr);grid-template-areas:"plan side pdf";gap:24px;align-items:stretch}
+.skg-plan{grid-area:plan;min-width:0;display:flex;flex-direction:column}
+.skg-plan .sk-paper{flex:1}
+.skg-side{grid-area:side;padding:18px;display:flex;flex-direction:column;gap:14px;height:auto}
+.skg-grp{display:flex;flex-direction:column;gap:8px}
+.skg .sk-fs .sk-f{padding:7px 10px}
+.skg .sk-types{gap:4px}
+.skg .sk-types li{gap:12px;padding:5px 0;line-height:1.3}
+.skg .sk-types .sk-ico{min-width:40px;height:24px}
+.skg-ty{flex:1;min-width:0}.skg-ty b{color:var(--t1);font-weight:600}
+.skg-n{font-size:13px;color:var(--t3);font-variant-numeric:tabular-nums}
+.skg-pdf{grid-area:pdf;container-type:inline-size;padding:20px;display:flex;flex-direction:column;gap:18px;height:auto}
+.skg-sheets{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:start}
+.skg-sheets img{display:block;width:100%;height:auto;background:#fff;border-radius:4px;box-shadow:0 18px 40px -18px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.12);transition:transform .4s var(--ease)}
+.skg-sheets:hover img{transform:translateY(-2px)}
+.skg-sheets img+img{display:none}
+@container (max-width:290px){.skg-x{display:none}}
+@container (min-width:500px){.skg-sheets{grid-template-columns:repeat(2,minmax(0,1fr))}.skg-sheets img+img{display:block}}
+.skg-k{margin:0;font-size:19px;font-weight:500;letter-spacing:-.01em;color:var(--t1);line-height:1.25}
+.skg-m{margin:4px 0 0;font-size:14px;color:var(--acc)}
+.skg-d{margin:10px 0 0;font-size:14px;line-height:1.55;color:var(--t2)}
+.skg-dl{margin-top:auto;width:100%;justify-content:center;white-space:nowrap!important;padding-inline:18px}
+@media (max-width:1599px){
+  .skg{grid-template-columns:minmax(0,800px) minmax(320px,1fr);grid-template-areas:"plan side" "pdf pdf"}
+  .skg-pdf{flex-direction:row;align-items:center;gap:22px;padding:16px 20px}
+  .skg-sheets{flex:none;grid-template-columns:76px 76px;gap:10px}
+  .skg-sheets img+img{display:block}
+  .skg-t{flex:1;min-width:0}
+  .skg-d{margin-top:6px}
+  .skg-dl{margin:0;width:auto;flex:none}
 }
+@media (max-width:1279px){.skg .sk-f-t small{display:none}.skg .sk-fs .sk-f{padding:9px 10px}}
+@media (min-width:1000px){.skg-side .sk-info{order:0;flex:1 0 auto;display:flex;align-items:center;margin:4px 0 0;padding:14px 16px;border:1px dashed var(--line2);border-radius:12px;background:rgba(255,255,255,.02);min-height:110px}.skg-side .sk-info-g{width:100%}}
+@media (max-width:999px){
+  .skg{grid-template-columns:minmax(0,1fr);grid-template-areas:"plan" "side" "pdf"}
+  .skg .sk-f-t small{display:block}
+  .skg-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px}
+  .skg-side .sk-info{grid-column:1/-1;order:-1;margin:0;padding:2px 2px 14px;border-top:0;border-bottom:1px solid var(--line2);min-height:0}
+}
+@media (max-width:640px){
+  .skg-side{display:flex}
+  .skg-pdf{flex-direction:column;align-items:stretch}
+  .skg-sheets{grid-template-columns:repeat(2,minmax(0,1fr));max-width:300px}
+  .skg-dl{width:100%}
+}
+@media (min-width:761px){.skg .sk-scroll{display:none}}
