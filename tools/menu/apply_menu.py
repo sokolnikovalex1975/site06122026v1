@@ -54,6 +54,7 @@ DD = 'deratizatsiya-i-dezinsektsiya'  # «Дератизация и дезинс
 MATERIALS = [  # слова через дефис не переносим (класс nw, как в остальных текстах сайта)
     ('normativnaya-baza', 'Нормативная база'),  # раздел «Нормативная база» (tools/normativnaya-baza)
     ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora', 'Документы для Роспотребнадзора'),  # с 08.11.2026; в подвале — после «Проверочных листов»
+    ('normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii', 'Оценка эффективности дератизации и дезинсекции'),  # с 11.11.2026
     ('materialy/programma-pest-kontrolya', 'Программа <span class="nw">пест-контроля</span>'),
     ('materialy/zhurnal-pest-kontrolya', 'Журнал <span class="nw">пест-контроля</span>'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka', '<span class="nw">Пест-менеджмент</span> или разовая обработка'),

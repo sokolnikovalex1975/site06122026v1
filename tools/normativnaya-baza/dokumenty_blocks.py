@@ -78,7 +78,7 @@ AFTER = {
              'width="360" height="509" alt="" loading="lazy" decoding="async"></a>'
              '<div class="dk-pdfcard-t"><p class="dk-pdfcard-k">Образец акта · PDF, 2 листа</p>'
              '<p>Так выглядит наш акт по каждому визиту: время работ, обследование по точкам контроля, средства с концентрацией и номером СГР, '
-             'условия обработки, контроль эффективности и рекомендации — всё из списка выше. Данные заказчика в образце скрыты, бланк — та же форма без записей. '
+             'условия обработки, <a href="@/normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/" style="color:var(--acc);text-decoration:underline;text-underline-offset:3px">контроль эффективности</a> и рекомендации — всё из списка выше. Данные заказчика в образце скрыты, бланк — та же форма без записей. '
              'Разбор реквизитов и частых ошибок — на странице <a href="@/materialy/akt-deratizatsii-i-dezinsektsii/">«Акт дератизации и дезинсекции»</a>.</p></div>'
              f'<div class="dk-aktcard-b"><a class="btn btn-w btn-lg" href="{AKT_PDF}" download data-dl="akt"><span class="btn-t">Скачать образец</span></a>'
              f'<a class="btn btn-o btn-lg" href="{AKT_BLANK}" download data-dl="akt-blank"><span class="btn-t">Бланк для печати</span></a></div></div>'),

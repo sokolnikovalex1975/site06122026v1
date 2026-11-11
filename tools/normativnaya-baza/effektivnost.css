@@ -28,6 +28,8 @@
 .ef-ul li::marker{color:var(--acc)}
 .ef-who-btns{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:auto;padding-top:8px}
 .ef-who-c>.ef-who-btn,.ef-who-c>.ef-who-go{margin-top:auto}
+.ef-who-price{margin:auto 0 0;color:var(--t2);font-size:15px}.ef-who-price b{color:var(--t1);font-weight:500;font-size:clamp(18px,1.3vw,21px);white-space:nowrap}
+.ef-who-price+.ef-who-btn{margin-top:4px}
 .ef-who-btn{align-self:flex-start;height:auto;min-height:52px;padding:12px 26px;font-size:15px;white-space:normal;text-align:center;color:var(--t1)}
 /* слова через дефис (span.nw) внутри жирного начала пункта — цвета пункта, а не серого пояснения */
 .d-terms b .nw,.d-steps b .nw{color:inherit}
