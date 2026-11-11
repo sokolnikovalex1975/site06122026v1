@@ -11,7 +11,7 @@
 .ef-tl small{display:block;margin-top:8px;color:var(--t3);font-size:13px;line-height:1.45}
 .ef-cmp td b{font-weight:500;color:var(--t1)}
 /* крошки на компьютере стоят под кнопками: ссылки не ниже 24 px (Lighthouse, target-size) */
-.ef-hero .f-crumbs a{display:inline-block;padding:4px 0}
+.ef-hero .f-crumbs>*{display:inline-block;padding:4px 0;vertical-align:middle}
 .ef-q{margin:0}
 .ef-q .nb-dl dt:first-of-type,.ef-q .nb-dl dd:first-of-type{border-top:0}
 .nb-h3#intensivnost{margin-top:clamp(40px,3.4vw,60px)}
