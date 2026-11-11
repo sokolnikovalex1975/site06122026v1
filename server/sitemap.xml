@@ -71,17 +71,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/biznes-tsentry-torgovye-tsentry-predpriyatiya/</loc>
-    <lastmod>2026-11-11</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/farmatsevticheskie-proizvodstva/</loc>
     <lastmod>2026-11-10</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/sklady-i-logistika/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/biznes-tsentry-torgovye-tsentry-predpriyatiya/</loc>
     <lastmod>2026-11-11</lastmod>
     <priority>0.8</priority>
   </url>
@@ -120,7 +120,11 @@
     <lastmod>2026-11-10</lastmod>
     <priority>0.7</priority>
   </url>
-  <url><loc>https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url>
+    <loc>https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/dezinsektsiya/restorany-i-kafe/</loc>
     <lastmod>2026-11-11</lastmod>
