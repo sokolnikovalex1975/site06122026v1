@@ -14,7 +14,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools/site'))
 import unify
 SLUG = 'zashchita-ot-proniknoveniya-gryzunov'
-BASELINE = 'fd7a780'  # актуальные общие файлы и параллельные изменения сохранены при интеграции
+BASELINE = '0fca92a'  # актуальные общие файлы и параллельные изменения сохранены при интеграции
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 failures = []
 
