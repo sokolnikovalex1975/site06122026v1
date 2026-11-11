@@ -54,7 +54,6 @@ PRICE_PAGES = [
 
 # минимальная стоимость заказа под таблицей #stoimost, чтобы цены «от … ₽ за м²/м. п.» не спорили с прайсом
 MIN_NOTES = {
-    'dezinfektsiya': 'Минимальная стоимость выезда на дезинфекцию помещений — 3 500 ₽.',
     'ochistka-dezinfektsiya-ventilyatsii': 'Минимальная стоимость заказа на очистку и дезинфекцию вентиляции — 25 000 ₽.',
 }
 
@@ -211,8 +210,8 @@ def patch(s, rel):
         assert n == 1 or 'Типовые задачи <em>наших клиентов</em>' in s, 'главная: блок #usloviya не найден'
         i = s.index('<section class="s" id="etapy">')
         s = s[:i] + block('', '', home=True) + s[i:]
+    s = re.sub(r'\n    <p class="d-note pr-min"[^>]*>.*?</p>', '', s)  # на дезинфекции строка снята 11.11.2026 (price_laws)
     if cur in MIN_NOTES:
-        s = re.sub(r'\n    <p class="d-note pr-min"[^>]*>.*?</p>', '', s)
         i = s.index('id="stoimost"')
         j = s.index('</table>', i) + len('</table>')
         s = s[:j] + f'\n    <p class="d-note pr-min" data-fade>{MIN_NOTES[cur]}</p>' + s[j:]
