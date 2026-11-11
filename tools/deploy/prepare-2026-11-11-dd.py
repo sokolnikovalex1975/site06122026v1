@@ -15,7 +15,7 @@
     <header>, <nav class="mmenu">, <footer> из сборки; без ссылок на новую страницу они должны совпадать с сайтом
     байт в байт);
   * «Дератизация» и «Дезинсекция» — блок «Смотрите также» из сборки (первая карточка — комплекс; на сайте блок должен
-    совпадать с прежней сборкой — git HEAD);
+    совпадать с прежней сборкой — коммит BASE);
   * «Договор» — цены и ссылка «Комплекс» функцией tools/deratizatsiya-i-dezinsektsiya/dogovor_prices.py apply().
 Новые файлы: страница deratizatsiya-i-dezinsektsiya/index.php из сборки и её 5 картинок.
 sitemap.xml — с сайта + адрес новой страницы (после дезинсекции), lastmod 2026-11-11 у договора;
@@ -38,6 +38,7 @@ SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 DD = 'deratizatsiya-i-dezinsektsiya/'
 DOG = 'dogovor-deratizatsiya-dezinsektsiya/index.php'
 REL_PAGES = ('deratizatsiya/index.php', 'dezinsektsiya/index.php')
+BASE = '0dbd121'  # последний коммит в GitHub до страницы «Дератизация и дезинсекция»
 NEW_FILES = ['img/dd-hero.webp', 'img/dd-hero-1440.webp', 'img/dd-hero-mob.webp', 'img/dd-hero-mob-760.webp',
              'img/dd-og.jpg']
 BLOCKS = [re.compile(r'<header\b.*?</header>', re.S), re.compile(r'<nav class="mmenu".*?</nav>', re.S),
@@ -70,8 +71,8 @@ def ops(a, b):
 
 
 def old_rel(rel):
-    """блок «Смотрите также» прежней сборки (git HEAD) — таким он должен быть на сайте"""
-    html = subprocess.run(['git', '-C', str(ROOT), 'show', 'HEAD:' + rel[:-len('index.php')] + 'index.html'],
+    """блок «Смотрите также» прежней сборки (BASE — последний коммит до новой страницы) — таким он должен быть на сайте"""
+    html = subprocess.run(['git', '-C', str(ROOT), 'show', BASE + ':' + rel[:-len('index.php')] + 'index.html'],
                           capture_output=True, text=True, check=True).stdout
     r = REL.findall(html)
     assert len(r) == 1, rel
@@ -122,7 +123,12 @@ def main():
     live_dir, pkg = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2])
     pages = sorted(str(p.relative_to(live_dir)) for p in live_dir.rglob('index.php'))
     built = sorted(str(p.relative_to(DIST)) for p in DIST.rglob('index.php'))
-    assert pages == [p for p in built if not p.startswith(DD)], 'набор страниц на сайте и в сборке разный'
+    # в сборке могут быть страницы, которые пока только в превью (с 11.11.2026 — направления и статьи раздела
+    # «Лабораторные исследования»): они не выкладываются, ссылок на них в переносимых блоках быть не должно
+    extra = [p for p in built if p not in pages and not p.startswith(DD)]
+    assert set(pages) <= set(built) and DD + 'index.php' in built, 'на сайте есть страницы, которых нет в сборке'
+    if extra:
+        print('только в превью, не выкладываются: ' + ', '.join(extra))
     cblock = (ROOT / 'server' / 'counters.html').read_text(encoding='utf-8')
     files = {}
     for rel in pages:
@@ -159,12 +165,18 @@ def main():
         td = pathlib.Path(td)
         for rel in build_prod.PAGES:
             php = rel[:-len('index.html')] + 'index.php'
+            if php not in files:
+                continue  # страница только в превью — в поиск сайта не попадает
             d = td / rel
             d.parent.mkdir(parents=True, exist_ok=True)
             d.write_bytes(files[php])
         out = td / 'search-index.json'
-        r = subprocess.run([sys.executable, str(ROOT / 'tools' / 'search' / 'build_index.py'), '--pages', str(td),
-                            '--out', str(out)], capture_output=True, text=True)
+        # индекс — только из страниц пакета (страницы превью в поиск сайта не попадают): build_index.py с PAGES пакета
+        keep = [rel for rel in build_prod.PAGES if rel[:-len('index.html')] + 'index.php' in files]
+        code = ('import sys; sys.path.insert(0, %r); import build_prod; build_prod.PAGES = %r; sys.path.insert(0, %r); '
+                'sys.argv = ["build_index.py", "--pages", %r, "--out", %r]; import build_index; build_index.main()'
+                % (str(ROOT / 'tools' / 'site'), keep, str(ROOT / 'tools' / 'search'), str(td), str(out)))
+        r = subprocess.run([sys.executable, '-c', code], capture_output=True, text=True)
         assert r.returncode == 0, r.stderr
         print(r.stdout.strip())
         files['search-index.json'] = out.read_bytes()
