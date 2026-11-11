@@ -4,6 +4,7 @@
     python3 tools/materialy-dokumenty/build_skhema.py
         → materialy/skhema-tochek-pest-kontrolya/obrazets-skhemy-tochek-pest-kontrolya.pdf
         → img/skhema-obrazets-p1-360.webp, img/skhema-obrazets-p1-720.webp (превью первого листа для страницы)
+        и img/skhema-obrazets-p2-*.webp (второй лист — реестр); только превью: build_skhema.py --previews
 
 Объект, номера и места 30 точек — как в образцах журнала (tools/zhurnal, журнал № ПК-0917/26, раздел 2) и акта
 (tools/akt, акт 0917-04): данные — skhema_data.py, тот же план, что на странице сайта. Шапка, подвал, водяной знак
@@ -174,15 +175,27 @@ def finalize():
                     'creator': 'ПЕСТКОНТРОЛЬ Центр · пестконтроль-центр.рф', 'producer': 'ПЕСТКОНТРОЛЬ Центр'})
     d.save(DST / PDF, garbage=4, deflate=True)
     print(f'  {PDF}: {d.page_count} стр., {os.path.getsize(DST / PDF)} байт')
-    pix = pymupdf.open(DST / PDF)[0].get_pixmap(dpi=200)
-    im = Image.frombytes('RGB', (pix.width, pix.height), pix.samples)
-    for w in (360, 720):
-        out = ROOT / 'img' / f'skhema-obrazets-p1-{w}.webp'
-        im.resize((w, round(w * 509 / 360)), Image.LANCZOS).save(out, 'WEBP', quality=80, method=6)
-        print('  ', out.name, os.path.getsize(out) // 1024, 'КБ')
+    previews()
+
+
+def previews():
+    """Превью листов PDF для страницы: лист 1 (план) и лист 2 (реестр точек; с 11.11.2026 — для варианта блока
+    с двумя листами). Только картинки из готового PDF: python3 tools/materialy-dokumenty/build_skhema.py --previews"""
+    import pymupdf
+    from PIL import Image
+    doc = pymupdf.open(DST / PDF)
+    for n in (1, 2):
+        pix = doc[n - 1].get_pixmap(dpi=200)
+        im = Image.frombytes('RGB', (pix.width, pix.height), pix.samples)
+        for w in (360, 720):
+            out = ROOT / 'img' / f'skhema-obrazets-p{n}-{w}.webp'
+            im.resize((w, round(w * 509 / 360)), Image.LANCZOS).save(out, 'WEBP', quality=80, method=6)
+            print('  ', out.name, os.path.getsize(out) // 1024, 'КБ')
 
 
 def main():
+    if '--previews' in sys.argv:
+        return previews()
     OUT.mkdir(parents=True, exist_ok=True)
     A.WM = watermark_svg(A.FONTS, length_mm=232, color='#7c4dff', opacity=0.18)
     (OUT / 'skhema.html').write_text(html(), encoding='utf-8')

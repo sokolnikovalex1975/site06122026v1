@@ -1,0 +1,78 @@
+/* Блок «Образец план-схемы», вариант Б «просмотрщик с реестром» (превью 11.11.2026, preview-skhema/variant-b/):
+   одна панель — фильтр контуров и кнопка PDF сверху, план слева, реестр 30 точек справа; до 1200 px реестр под планом */
+.skv{padding:0;gap:0;overflow:hidden;height:auto}
+.skv-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;padding:14px 16px;border-bottom:1px solid var(--line2)}
+.skv-fs{display:flex;flex-wrap:wrap;gap:8px}
+.skv-f{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border:1px solid var(--line2);border-radius:999px;background:none;color:var(--t2);font:inherit;font-size:14px;cursor:pointer;white-space:nowrap;transition:border-color .2s,background .2s,color .2s}
+.skv-f:hover{border-color:var(--acc);color:var(--t1)}
+.skv-f.is-on{color:#fff;border-color:var(--acc);background:rgba(124,134,255,.14)}
+.skv-f .n{font-size:12.5px;color:var(--t3);font-variant-numeric:tabular-nums}
+.skv-f .ln{width:16px;height:0;border-top:3px solid;border-radius:2px}.skv-f .ln.dot{border-top-style:dotted}
+.skv-dl{flex:none;margin-left:auto;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 20px;white-space:nowrap!important;width:auto}
+.skv-dl svg{flex:none}
+.skv-y{display:none}
+.skv-body{display:grid;grid-template-columns:minmax(0,720px) minmax(360px,1fr)}
+.skv-left{padding:16px;border-right:1px solid var(--line2);min-width:0}
+.skv-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:14px 0 0;padding:0;list-style:none;font-size:13px;color:var(--t2)}
+.skv-legend li{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;transition:color .2s}
+@media(hover:hover) and (pointer:fine){.skv-legend li:hover{color:var(--t1)}}
+.skv-legend svg{background:#fff;border-radius:4px;padding:1px}
+.skv-legend b{color:var(--t1);font-weight:600}
+.skv-pick{display:none;margin:12px 0 0;padding:12px 14px;border:1px solid var(--line2);border-radius:10px;font-size:14px;line-height:1.45;color:var(--t2)}
+.skv-pick b{font-weight:600}
+.skv-reg{position:relative;min-width:0;min-height:420px}
+.skv-reg-h{flex:none;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:16px 18px 12px}
+.skv-reg-h b{font-size:15px;font-weight:500;color:var(--t1);white-space:nowrap}
+.skv-reg-h span{font-size:12.5px;color:var(--t3);text-align:right}
+.skv-reg-in{position:absolute;inset:0;display:flex;flex-direction:column}
+.skv-tbl{flex:1;min-height:0;overflow:auto;scrollbar-width:thin;overscroll-behavior:contain}
+.skv-tbl table{width:100%;border-collapse:collapse;font-size:13.5px;table-layout:fixed}
+.skv-w-c{width:112px}.skv-w-t{width:34%}.skv-w-k{width:76px}.skv-w-th{width:96px}
+.skv-tbl th{position:sticky;top:0;z-index:1;background:#0e0e11;text-align:left;font-weight:500;color:var(--t3);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap}
+.skv-tbl td{padding:8px 12px;border-bottom:1px solid var(--line);color:var(--t2);vertical-align:middle;line-height:1.35}
+.skv-tbl tbody tr{cursor:pointer;outline:none}
+.skv-tbl tbody tr:hover td{background:rgba(255,255,255,.03)}
+.skv-tbl tbody tr:focus-visible td{box-shadow:inset 0 0 0 2px var(--acc)}
+.skv-c{white-space:nowrap}.skv-c svg{vertical-align:-2px;margin-right:8px;background:#fff;border-radius:3px;padding:1px}
+.skv-c b{color:var(--t1);font-weight:600;font-variant-numeric:tabular-nums}
+.skv-k{white-space:nowrap}.skv-k i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.skv-th{white-space:nowrap;text-align:right}
+.skv-tbl tr.is-sel td{background:rgba(124,134,255,.16);color:var(--t1)}
+.skv-tbl tr.is-sel td:first-child{box-shadow:inset 3px 0 0 var(--acc)}
+.skv-tbl tr.is-off{display:none}
+.skv-note{flex:none;margin:0;padding:12px 18px;border-top:1px solid var(--line2);font-size:12.5px;line-height:1.35;color:var(--t3)}
+.skv-more{display:none}
+@media (max-width:1599px){.skv-t{display:none}}
+@media (max-width:1439px){.skv-k{display:none}}
+@media (max-width:1199px){
+  .skv-body{grid-template-columns:minmax(0,1fr)}
+  .skv-left{border-right:0;border-bottom:1px solid var(--line2)}
+  .skv-left>.sk-paper,.skv-left>.skv-legend,.skv-left>.skv-pick{max-width:760px;margin-left:auto;margin-right:auto}
+  .skv-legend{justify-content:center}
+  .skv-pick.is-on{display:block}
+  .skv-reg{min-height:0}
+  .skv-reg-in{position:static}
+  .skv-tbl{overflow:visible}
+  .skv-tbl tr.is-more{display:none}
+  .skv-note{border-top:0}
+  .skv-more{display:block;width:calc(100% - 32px);margin:4px 16px 16px;height:46px;border:1px solid var(--line2);border-radius:999px;background:none;color:var(--t1);font:inherit;font-size:15px;cursor:pointer}
+  .skv-more:hover{border-color:var(--acc)}
+  .skv-more[hidden]{display:none}
+  th.skv-t,td.skv-t,th.skv-k,td.skv-k{display:table-cell}
+  col.skv-t,col.skv-k{display:table-column}
+}
+@media (max-width:900px){
+  .skv-tbl .skv-t{display:none}
+  .skv-fs{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:0 16px;scrollbar-width:none;width:calc(100% + 32px)}
+  .skv-fs::-webkit-scrollbar{display:none}
+  .skv-legend{justify-content:flex-start}
+}
+@media (max-width:700px){
+  .skv-x,.skv-reg-h span{display:none}.skv-y{display:inline}
+  .skv-w-c{width:96px}.skv-w-th{width:74px}
+  .skv-dl{width:100%;justify-content:center}
+  .skv-tbl .skv-t,.skv-tbl .skv-k{display:none}
+  .skv-tbl td{padding:8px 10px}
+}
+@media (min-width:761px){.skv .sk-scroll{display:none}}
+@media(prefers-reduced-motion:reduce){.skv-f,.skv-legend li{transition:none!important}}
