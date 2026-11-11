@@ -436,7 +436,7 @@ PAGES = {
     # «Акт дератизации и дезинсекции» и «Схема точек пест-контроля» (tools/materialy-dokumenty), с 11.11.2026 — превью
     'materialy/akt-deratizatsii-i-dezinsektsii/index.html': dict(key='akt', root='../../', related=['zhur', 'skhema', 'dok', 'ef'], strip=(
         'Коротко об акте дератизации и дезинсекции', [
-            ('lucide-scan-search', '3 000 ₽', '— акт после обследования объекта'),
+            ('lucide-scan-search', '3 000 ₽', '— выезд, обследование и акт'),
             ('lucide-clipboard-check', 'Акт', '— по каждому визиту'),
             ('lucide-clock', 'Не реже 2 раз в месяц', '— на объектах из п. 98'),
             ('lucide-file-badge', 'Средства', '— с номером СГР'),
