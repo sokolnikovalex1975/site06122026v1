@@ -42,6 +42,7 @@ INDUSTRIES = [
     ('sklady-i-logistika', 'Склады и логистика'),
     ('farmatsevticheskie-proizvodstva', 'Фармацевтические производства'),
     ('gostinitsy', 'Гостиницы и отели'),
+    ('biznes-tsentry-torgovye-tsentry-predpriyatiya', 'Бизнес-центры, ТЦ и предприятия'),  # с 11.11.2026 (tools/bctc)
 ]
 DOGOVOR = 'dogovor-deratizatsiya-dezinsektsiya'
 DERAT = 'deratizatsiya'
@@ -95,6 +96,7 @@ PAGES = [
     ('gostinitsy/index.html', '../', 'gostinitsy'),
     ('farmatsevticheskie-proizvodstva/index.html', '../', 'farmatsevticheskie-proizvodstva'),
     ('sklady-i-logistika/index.html', '../', 'sklady-i-logistika'),
+    ('biznes-tsentry-torgovye-tsentry-predpriyatiya/index.html', '../', 'biznes-tsentry-torgovye-tsentry-predpriyatiya'),
     ('materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html', '../../', 'materialy/pest-menedzhment-ili-razovaya-obrabotka'),
     ('materialy/index.html', '../', 'materialy'),
     ('materialy/programma-pest-kontrolya/index.html', '../../', 'materialy/programma-pest-kontrolya'),

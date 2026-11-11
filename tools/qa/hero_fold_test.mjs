@@ -19,6 +19,7 @@ const PAGES = (process.env.PAGES || `/
 /gostinitsy/
 /farmatsevticheskie-proizvodstva/
 /sklady-i-logistika/
+/biznes-tsentry-torgovye-tsentry-predpriyatiya/
 /materialy/
 /materialy/programma-pest-kontrolya/
 /materialy/zhurnal-pest-kontrolya/

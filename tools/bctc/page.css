@@ -1,0 +1,78 @@
+/* ===== Бизнес-центры, ТЦ и предприятия (/biznes-tsentry-torgovye-tsentry-predpriyatiya/): дополнения к стилям отраслевой страницы ===== */
+
+/* Первый экран: длинный заголовок в три строки */
+.b-page .d-hero h1{font-size:clamp(34px,3vw,58px);line-height:1.08}
+.b-page .d-hero-img{object-position:78% 50%}
+
+/* «Коротко»: прямые ответы для поиска и ИИ-чатов */
+.b-kor{padding-bottom:0}
+.b-short{border:1px solid var(--line2);border-left:2px solid var(--acc);border-radius:var(--r);background:var(--card);padding:clamp(22px,2.4vw,44px)}
+.b-short-lead{margin:0 0 clamp(18px,1.8vw,30px);font-size:clamp(17px,1.25vw,22px);line-height:1.55;color:var(--t1);max-width:1100px}
+.b-ans{margin:0;display:grid;border-top:1px solid var(--line)}
+.b-ans>div{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr);gap:6px 28px;padding:16px 0;border-bottom:1px solid var(--line)}
+.b-ans dt{color:var(--acc);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;padding-top:3px}
+.b-ans dd{margin:0;color:var(--t2);line-height:1.6}
+.b-upd{margin:16px 0 0;font-size:13px;color:var(--t3)}
+.b-short a,.b-note a,.b-xlinks a,.faq .ans a{color:var(--t1);border-bottom:1px solid var(--line2);transition:color .25s,border-color .25s}
+.b-short a:hover,.b-note a:hover,.b-xlinks a:hover,.faq .ans a:hover{color:#fff;border-color:var(--acc)}
+
+/* Требования: крупная подпись карточки, таблица кратности */
+.b-req .b-num{margin:0 0 12px;font-size:clamp(22px,1.7vw,30px);line-height:1.12;letter-spacing:-.03em;font-weight:300;color:var(--t1)}
+.b-req .d-card p:last-child{margin:0;color:var(--t2);line-height:1.6}
+.b-h3{font-size:clamp(22px,1.8vw,32px);line-height:1.15;font-weight:300;letter-spacing:-.03em;margin:clamp(40px,4vw,68px) 0 18px}
+.b-h3 em{font-style:normal;color:var(--t3)}
+.b-note,.b-xlinks{color:var(--t2);margin:22px 0 0;line-height:1.65;max-width:1000px}
+@media (min-width:761px){.d-table.b-krat td:first-child{width:44%}.d-table.b-krat td:last-child{white-space:nowrap}.d-table.b-resp td:first-child{width:36%}.d-table.b-resp td:nth-child(2){width:22%}}
+
+/* Схема: разрез здания */
+.b-plan .mp{fill:#7c86ff;stroke:#09090b;stroke-width:1.6}
+.lg-rm{width:12px;height:12px;border-radius:3px;background:#38bdf8}
+@media (min-width:1101px){.b-plan{position:sticky;top:96px}}
+
+/* Вредители: без шкалы — текст сразу под заголовком */
+.b-page #vrediteli .pest p{margin:8px 0 0}
+
+/* Кто за что отвечает */
+.b-resp-2{margin-top:16px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.b-resp-2 .b-p{margin:6px 0 0;color:var(--t2);line-height:1.62}
+
+/* Режим работ: шесть карточек в три колонки */
+.w-cards4.b-c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+/* Документы: нумерованный перечень в две колонки */
+.b-docs{list-style:none;margin:0;padding:0;counter-reset:bd;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,3vw,56px);border-top:1px solid var(--line)}
+.b-docs li{counter-increment:bd;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line);color:var(--t1);line-height:1.5;font-size:clamp(16px,1.1vw,19px)}
+.b-docs li::before{content:counter(bd,decimal-leading-zero);color:var(--acc);font-size:14px;font-variant-numeric:tabular-nums}
+.b-docs li:last-child{grid-column:1/-1}
+.b-page .w-samples{margin-top:clamp(24px,2.4vw,40px)}
+
+/* Типовые задачи: пять карточек без пустой ячейки — три и две в ряд */
+@media (min-width:1025px){.b-page .tasks{grid-template-columns:repeat(6,minmax(0,1fr))}.b-page .tasks .task{grid-column:span 2}.b-page .tasks .task:nth-child(n+4){grid-column:span 3}}
+@media (min-width:761px) and (max-width:1024px){.b-page .tasks .task:last-child{grid-column:1/-1}}
+
+/* Стоимость: ссылка «Рассчитать» в карточке */
+.b-calc{margin-top:18px}
+
+/* Фон заявки (паркинг с кабельными трассами) подставляет build_page.py в правило шаблона */
+.b-page .form textarea{min-height:96px}
+
+@media (max-width:1100px){
+  .w-cards4.b-c3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .b-resp-2{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:860px){
+  .b-page .d-hero h1{font-size:clamp(26px,7.2vw,38px);line-height:1.1;letter-spacing:-.04em}
+  .b-docs{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+  .w-cards4.b-c3{grid-template-columns:minmax(0,1fr)}
+  .b-ans>div{grid-template-columns:minmax(0,1fr);gap:4px;padding:14px 0}
+  .b-short{padding:20px 16px}
+  .b-short-lead{font-size:16px}
+  .b-req .d-card{padding:18px 18px 20px}
+  .b-req .b-num{font-size:21px;margin-bottom:8px}
+  .b-docs li{grid-template-columns:34px minmax(0,1fr);gap:10px;padding:14px 0}
+}
+@media (max-width:400px){
+  .b-page #vrediteli .lvl{white-space:normal}
+}

@@ -10,6 +10,7 @@
      tools/laboratornye-issledovaniya/build_page.py — «Лабораторные исследования» (с 10.11.2026);
      tools/laboratornye-issledovaniya/build_subpages.py — 7 страниц направлений раздела и 3 статьи в «Материалах» (с 11.11.2026);
      tools/deratizatsiya-i-dezinsektsiya/build_page.py — «Дератизация и дезинсекция для организаций» (с 11.11.2026);
+     tools/bctc/build_page.py — «Пест-контроль бизнес-центров, торговых центров и промышленных предприятий» (с 11.11.2026);
      tools/dezinfektsiya/build_page.py — страница «Дезинфекция для организаций» из своих исходников;
      tools/normativnaya-baza/build_pages.py — раздел «Нормативная база» (хаб, «Проверочные листы 2026»
        и «Документы для Роспотребнадзора»);
@@ -44,7 +45,7 @@ SITEMAP = [  # адрес, приоритет
     ('', '1.0'),
     ('dezinfektsiya/', '0.9'), ('deratizatsiya/', '0.9'), ('dezinsektsiya/', '0.9'), ('deratizatsiya-i-dezinsektsiya/', '0.9'), ('sanitarnyy-audit/', '0.9'), ('razrabotka-ppk/', '0.9'), ('laboratornye-issledovaniya/', '0.9'), ('dogovor-deratizatsiya-dezinsektsiya/', '0.9'),
     ('ochistka-dezinfektsiya-ventilyatsii/', '0.9'),
-    ('pishchevoe-proizvodstvo/', '0.8'), ('restorany-i-kafe/', '0.8'), ('magaziny-i-torgovye-seti/', '0.8'), ('gostinitsy/', '0.8'), ('farmatsevticheskie-proizvodstva/', '0.8'), ('sklady-i-logistika/', '0.8'),
+    ('pishchevoe-proizvodstvo/', '0.8'), ('restorany-i-kafe/', '0.8'), ('magaziny-i-torgovye-seti/', '0.8'), ('gostinitsy/', '0.8'), ('farmatsevticheskie-proizvodstva/', '0.8'), ('sklady-i-logistika/', '0.8'), ('biznes-tsentry-torgovye-tsentry-predpriyatiya/', '0.8'),
     ('materialy/', '0.6'), ('materialy/programma-pest-kontrolya/', '0.7'),
     ('materialy/zhurnal-pest-kontrolya/', '0.7'), ('materialy/pest-menedzhment-ili-razovaya-obrabotka/', '0.7'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/', '0.7'),
@@ -93,6 +94,7 @@ def main():
     run('tools/laboratornye-issledovaniya/build_subpages.py')  # страницы направлений и статьи раздела (с 11.11.2026)
     run('tools/deratizatsiya-i-dezinsektsiya/build_page.py')  # «Дератизация и дезинсекция» — из своих исходников (с 11.11.2026)
     run('tools/sklady/assemble.py')  # страница складов и логистики — из своих исходников (tools/sklady)
+    run('tools/bctc/build_page.py')  # «Бизнес-центры, ТЦ и предприятия» — из готовой страницы складов и tools/bctc (с 11.11.2026)
     run('tools/dezinfektsiya/build_page.py')  # дезинфекция для организаций — из своих исходников (tools/dezinfektsiya)
     run('tools/normativnaya-baza/build_pages.py')  # нормативная база и проверочные листы (tools/normativnaya-baza)
     run('tools/site/unify.py')

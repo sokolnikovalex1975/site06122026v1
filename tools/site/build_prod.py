@@ -28,6 +28,7 @@ PAGES = [
     'index.html', 'dezinfektsiya/index.html', 'deratizatsiya/index.html', 'dezinsektsiya/index.html', 'deratizatsiya-i-dezinsektsiya/index.html', 'dogovor-deratizatsiya-dezinsektsiya/index.html',
     'sanitarnyy-audit/index.html', 'razrabotka-ppk/index.html', 'laboratornye-issledovaniya/index.html', 'ochistka-dezinfektsiya-ventilyatsii/index.html',
     'pishchevoe-proizvodstvo/index.html', 'restorany-i-kafe/index.html', 'magaziny-i-torgovye-seti/index.html', 'gostinitsy/index.html', 'farmatsevticheskie-proizvodstva/index.html', 'sklady-i-logistika/index.html',
+    'biznes-tsentry-torgovye-tsentry-predpriyatiya/index.html',  # с 11.11.2026 (tools/bctc)
     'materialy/index.html', 'materialy/programma-pest-kontrolya/index.html',
     'materialy/zhurnal-pest-kontrolya/index.html', 'materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html',
     'materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html',
