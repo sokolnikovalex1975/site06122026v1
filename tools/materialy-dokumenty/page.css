@@ -108,8 +108,7 @@
   .md-doc-sm .md-doc-cover{width:112px}
   .md-doc-b .btn{width:100%;justify-content:center}
 }
-/* с 11.11.2026: крошки под кнопками первого экрана — с отступом; блок «Заказать акт» (услуга, 3 000 ₽) */
-@media (min-width:861px){.md-hero .d-hero-copy>.f-crumbs{margin-top:24px}}
+/* блок «Заказать акт» (услуга, 3 000 ₽); крошки первого экрана — вверху, над заголовком (tools/site/hero_fold.py, 11.11.2026) */
 .md-order{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:clamp(24px,3.4vw,64px);align-items:start}
 .md-order .md-check{grid-template-columns:minmax(0,1fr)}
 .md-price{padding:clamp(24px,2.4vw,36px);border-color:rgba(124,140,255,.45)}
