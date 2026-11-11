@@ -72,20 +72,36 @@ html:not(.js) .intro,html.anim-fail .intro,html.no-intro .intro{display:none}
 .intro~.grain{animation-play-state:paused} /* под заставкой зерно не видно — не анимируем */
 @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
 .cursor{display:none}
+/* курсор: на тёмном — белая точка и кольцо, на светлых объектах (план, документ, светлая картинка) — фиолетовый прицел
+   как в логотипе, на ссылке-документе — фиолетовый круг с подписью «Скачать PDF» / «Открыть» (вариант В, выбран владельцем
+   11.11.2026; светлый объект определяет app.js по фону или яркости картинки, вручную — data-cursor="light|dark") */
 @media (hover:hover) and (pointer:fine){
   html.has-cursor,html.has-cursor a,html.has-cursor button,html.has-cursor [role=button]{cursor:none}
   html.has-cursor input,html.has-cursor textarea,html.has-cursor select{cursor:text}
   html.has-cursor select{cursor:pointer}
   .has-cursor .cursor{display:block;position:fixed;left:0;top:0;z-index:250;pointer-events:none}
   .cursor-dot,.cursor-ring{position:fixed;left:0;top:0;border-radius:50%;pointer-events:none;will-change:transform}
-  .cursor-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:#fff}
-  .cursor-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1px solid rgba(255,255,255,.35);transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s,border-color .35s,opacity .3s}
-  .cursor.link .cursor-ring{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(99,102,241,.14);border-color:rgba(124,134,255,.6)}
+  .cursor-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:#fff;box-shadow:0 0 0 1px rgba(9,9,11,.5);transition:width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease),background .3s,box-shadow .3s,opacity .3s}
+  .cursor-ring{width:38px;height:38px;margin:-19px 0 0 -19px;color:#615fff;border:1px solid rgba(255,255,255,.5);box-shadow:0 0 0 1px rgba(9,9,11,.22);transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s,border-color .35s,box-shadow .35s,opacity .3s}
+  .cursor-ring::before,.cursor-ring::after{content:"";position:absolute;background:currentColor;opacity:0;transition:opacity .25s}
+  .cursor-lbl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 8px;text-align:center;font:600 10px/1.15 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .2s}
+  .cursor.link .cursor-ring{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(99,102,241,.14);border-color:rgba(255,255,255,.75)}
   .cursor.link .cursor-dot{opacity:0}
   .cursor.text .cursor-ring{opacity:0}
   .cursor.down .cursor-ring{width:30px;height:30px;margin:-15px 0 0 -15px}
   .cursor.hidden .cursor-dot,.cursor.hidden .cursor-ring{opacity:0}
+  .cursor.light .cursor-dot{width:8px;height:8px;margin:-4px 0 0 -4px;background:#615fff;box-shadow:0 0 0 2px #fff;opacity:1}
+  .cursor.light .cursor-ring{width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid #615fff;background:rgba(97,95,255,.06);box-shadow:none}
+  .cursor.light .cursor-ring::before{opacity:1;left:50%;top:-8px;width:2px;height:calc(100% + 16px);margin-left:-1px;-webkit-mask:linear-gradient(#000 0 9px,transparent 9px calc(100% - 9px),#000 calc(100% - 9px));mask:linear-gradient(#000 0 9px,transparent 9px calc(100% - 9px),#000 calc(100% - 9px))}
+  .cursor.light .cursor-ring::after{opacity:1;top:50%;left:-8px;height:2px;width:calc(100% + 16px);margin-top:-1px;-webkit-mask:linear-gradient(90deg,#000 0 9px,transparent 9px calc(100% - 9px),#000 calc(100% - 9px));mask:linear-gradient(90deg,#000 0 9px,transparent 9px calc(100% - 9px),#000 calc(100% - 9px))}
+  .cursor.light.link .cursor-ring{width:44px;height:44px;margin:-22px 0 0 -22px;background:rgba(97,95,255,.16)}
+  .cursor.light.doc .cursor-ring{width:84px;height:84px;margin:-42px 0 0 -42px;background:#615fff;border-color:#615fff;box-shadow:0 10px 30px -8px rgba(97,95,255,.7)}
+  .cursor.light.doc .cursor-ring::before,.cursor.light.doc .cursor-ring::after{opacity:0}
+  .cursor.light.doc .cursor-dot{opacity:0}
+  .cursor.light.doc .cursor-lbl{opacity:1}
+  .cursor.light.text .cursor-ring{opacity:0}
 }
+@media (prefers-reduced-motion:reduce){.cursor-dot,.cursor-lbl,.cursor-ring::before,.cursor-ring::after{transition:none!important}}
 
 /* ===== header ===== */
 .hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s,transform .5s var(--ease);border-bottom:1px solid transparent}

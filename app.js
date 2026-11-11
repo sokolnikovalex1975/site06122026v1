@@ -323,22 +323,72 @@
     if (later.length) setTimeout(runLater, 0);
   };
 
-  /* ---------- курсор ---------- */
+  /* ---------- курсор ----------
+     На светлых объектах (белый план, лист документа, светлая картинка) курсор становится фиолетовым прицелом,
+     на ссылке-документе — кругом с подписью (вариант В, выбран владельцем 11.11.2026). Светлый объект — по цвету фона
+     ближайшего непрозрачного предка или по средней яркости картинки (считается один раз); вручную — data-cursor="light|dark".
+     Кнопки .btn — всегда обычный курсор (при наведении они сами меняют цвет). */
   if (fine) {
     html.classList.add('has-cursor');
     var cur = $('.cursor'), dot = $('.cursor-dot'), ring = $('.cursor-ring');
-    var cx = -100, cy = -100, rx = -100, ry = -100;
+    var lbl = document.createElement('b');
+    lbl.className = 'cursor-lbl';
+    ring.appendChild(lbl);
+    var cx = -100, cy = -100, rx = -100, ry = -100, lastT = null;
+    var lightCache = new WeakMap(), imgCache = new WeakMap();
+    var lum = function (r, g, b) { return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255; };
+    var imgLight = function (im) {
+      if (imgCache.has(im)) return imgCache.get(im);
+      if (!im.complete || !im.naturalWidth) return false; /* не загрузилась — проверим при следующем наведении */
+      var v = false;
+      try {
+        var c = document.createElement('canvas'); c.width = c.height = 8;
+        var x = c.getContext('2d'); x.drawImage(im, 0, 0, 8, 8);
+        var d = x.getImageData(0, 0, 8, 8).data, s = 0;
+        for (var i = 0; i < d.length; i += 4) s += lum(d[i], d[i + 1], d[i + 2]);
+        v = s / 64 > 0.62;
+      } catch (_) { v = false; }
+      imgCache.set(im, v);
+      return v;
+    };
+    var isLight = function (el) {
+      for (var n = el, k = 0; n && n.nodeType === 1 && k < 14; n = n.parentElement, k++) {
+        var m = n.getAttribute('data-cursor');
+        if (m === 'light') return true;
+        if (m === 'dark') return false;
+        if (n.classList.contains('btn')) return false;
+        if (n.tagName === 'IMG') return imgLight(n);
+        var p = getComputedStyle(n).backgroundColor.match(/[\d.]+/g);
+        if (p && (p.length < 4 || +p[3] > 0.5)) return lum(+p[0], +p[1], +p[2]) > 0.62;
+      }
+      return false;
+    };
+    var docLabel = function (t) {
+      var a = t.closest('a[href]');
+      if (!a || a.classList.contains('btn')) return '';
+      if (a.hasAttribute('download') || /\.pdf($|[?#])/i.test(a.getAttribute('href'))) return 'Скачать PDF';
+      return a.querySelector('img') ? 'Открыть' : '';
+    };
     addEventListener('pointermove', function (e) {
       cx = e.clientX; cy = e.clientY;
       dot.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
       var t = e.target;
-      cur.classList.toggle('link', !!(t.closest && t.closest('a,button,select,label')));
-      cur.classList.toggle('text', !!(t.closest && t.closest('input,textarea')));
       cur.classList.remove('hidden');
+      if (t === lastT || !t.closest) return;
+      lastT = t;
+      cur.classList.toggle('link', !!t.closest('a,button,select,label,[role=button]'));
+      cur.classList.toggle('text', !!t.closest('input,textarea'));
+      var l = lightCache.has(t) ? lightCache.get(t) : isLight(t);
+      if (t.tagName !== 'IMG' || imgCache.has(t)) lightCache.set(t, l);
+      var d = l ? docLabel(t) : '';
+      cur.classList.toggle('light', l);
+      cur.classList.toggle('doc', !!d);
+      if (d) lbl.textContent = d;
     }, { passive: true });
+    addEventListener('scroll', function () { lastT = null; }, { passive: true });
     addEventListener('pointerdown', function () { cur.classList.add('down'); });
     addEventListener('pointerup', function () { cur.classList.remove('down'); });
-    document.addEventListener('pointerleave', function () { cur.classList.add('hidden'); });
+    document.addEventListener('pointerleave', function () { cur.classList.add('hidden'); lastT = null; });
     gsap.ticker.add(function () {
       rx += (cx - rx) * 0.2; ry += (cy - ry) * 0.2;
       ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
