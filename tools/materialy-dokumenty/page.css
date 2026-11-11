@@ -1,0 +1,96 @@
+/* «Акт дератизации и дезинсекции» и «Схема точек пест-контроля» (tools/materialy-dokumenty, классы md- и sk-), с 11.11.2026 */
+.md-hero .f-crumbs>*{display:inline-block;padding:4px 0;vertical-align:middle}
+.md-facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.md-facts li{padding:clamp(20px,1.8vw,28px) clamp(18px,1.6vw,24px)}
+.md-facts b{display:block;margin:0 0 10px;color:var(--t1);font-size:clamp(17px,1.2vw,21px);font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.md-facts p{margin:0;color:var(--t2);font-size:15px;line-height:1.58}
+/* карточка образца документа */
+.md-doc{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:clamp(28px,4vw,72px);align-items:start}
+.md-doc-sm{grid-template-columns:minmax(0,200px) minmax(0,1fr);align-items:center;margin-top:clamp(28px,2.6vw,44px);padding:clamp(22px,2.2vw,34px) clamp(22px,2.8vw,48px);border:1.4px solid var(--line);border-radius:var(--r);background:var(--card)}
+.md-doc-cover{display:block;border-radius:6px;overflow:hidden;box-shadow:0 22px 50px -18px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.1);transform:rotate(-2deg);transition:transform .4s var(--ease)}
+.md-doc:hover .md-doc-cover{transform:rotate(0) translateY(-2px)}
+.md-doc-cover img{display:block;width:100%;height:auto;background:#fff}
+.md-doc-k{margin:0 0 16px;font-size:clamp(19px,1.4vw,24px);font-weight:400;letter-spacing:-.02em;line-height:1.3;color:var(--t1)}
+.md-doc-t>p:not(.md-doc-k):not(.md-doc-n){margin:0;color:var(--t2);line-height:1.62;max-width:820px}
+.md-ol{margin:0;padding:0;list-style:none;counter-reset:md;display:grid;gap:12px}
+.md-ol li{counter-increment:md;position:relative;padding-left:40px;color:var(--t2);line-height:1.6}
+.md-ol li::before{content:counter(md);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:13px;font-weight:600;color:var(--t1);background:rgba(97,95,255,.18)}
+.md-ol b{color:var(--t1);font-weight:500}
+.md-doc-b{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.md-doc-n{margin:16px 0 0;color:var(--t3);font-size:13px;line-height:1.5}
+/* виды актов */
+.md-kinds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.md-kind{display:flex;flex-direction:column;gap:10px;padding:clamp(22px,2vw,30px);color:var(--t2);line-height:1.6}
+.md-kind .nb-ic{margin-bottom:6px}
+.md-kind h3{margin:0;color:var(--t1);font-size:clamp(18px,1.3vw,22px);font-weight:400;letter-spacing:-.015em;line-height:1.3}
+.md-kind p{margin:0}
+.md-kind a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45)}
+/* что на схеме — пронумерованный чек-лист в две колонки */
+.md-check{margin:0;padding:0;list-style:none;counter-reset:mc;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,3vw,56px)}
+.md-check li{counter-increment:mc;position:relative;padding:18px 0 18px 48px;border-top:1px solid var(--line2);color:var(--t2);line-height:1.6}
+.md-check li::before{content:counter(mc,decimal-leading-zero);position:absolute;left:0;top:19px;font-size:13px;font-weight:600;color:var(--acc);font-variant-numeric:tabular-nums}
+.md-check b{display:block;color:var(--t1);font-weight:500;margin-bottom:2px}
+.md-ul{margin:4px 0 0;padding:0 0 0 18px;display:grid;gap:8px}
+.md-ul li::marker{color:var(--acc)}
+.md-ex{margin:16px 0 0;padding:12px 14px;border-radius:10px;background:rgba(253,199,0,.08);border:1px solid rgba(253,199,0,.25);color:var(--t2);font-size:14px;line-height:1.55}
+/* цепочка документов */
+.md-chain{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:ch}
+.md-chain li{position:relative}
+.md-chain li+li::before{content:"→";position:absolute;left:-14px;top:50%;transform:translate(-50%,-50%);color:var(--t4);font-size:16px}
+.md-chain .card{display:flex;flex-direction:column;gap:8px;height:100%;padding:clamp(20px,1.8vw,28px);color:var(--t2);line-height:1.5}
+.md-chain .card b{color:var(--t1);font-weight:500;font-size:clamp(17px,1.2vw,20px);letter-spacing:-.01em}
+.md-chain .card span:last-child{font-size:14px;color:var(--t3)}
+.md-chain .is-here{border-color:rgba(124,134,255,.45);background:rgba(97,95,255,.08)}
+/* интерактивная план-схема */
+.sk-fig{margin:0}
+.sk-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.sk-f{cursor:pointer;font:inherit;font-size:13px;color:var(--t2);display:inline-flex;align-items:center;gap:8px;min-height:36px}
+.sk-f i{width:9px;height:9px;border-radius:50%;flex:none}
+.sk-f:hover{border-color:var(--acc)}
+.sk-f.is-on{color:var(--t1);border-color:var(--acc);background:rgba(124,134,255,.12)}
+.sk-paper{background:#fff;border-radius:var(--r);padding:clamp(8px,1vw,16px);overflow-x:auto;-webkit-overflow-scrolling:touch;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+.sk-plan{display:block;width:100%;height:auto;min-width:720px}
+.sk-pt{cursor:pointer;outline:none;transition:opacity .25s}
+.sk-pt.is-dim{opacity:.16}
+.sk-pt:focus-visible .sk-hit,.sk-pt.is-sel .sk-hit{fill:rgba(97,95,255,.16);stroke:#615fff;stroke-width:2.5}
+.sk-info{margin-top:12px;padding:16px 20px;min-height:76px;display:flex;align-items:center}
+.sk-info-e{margin:0;color:var(--t3);font-size:14.5px;line-height:1.5}
+.sk-info-g{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 20px;align-items:center;width:100%}
+.sk-info-c{font-size:clamp(22px,1.8vw,28px);font-weight:500;letter-spacing:-.02em;color:var(--t1);grid-row:span 2}
+.sk-info-t{color:var(--t1);font-weight:500}
+.sk-info-p{color:var(--t2);font-size:14.5px}
+.sk-info-k{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.sk-info-th{color:var(--t2);font-size:14px;white-space:nowrap}
+.sk-leg{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:18px;color:var(--t2);font-size:14px}
+.sk-leg span{display:inline-flex;align-items:center;gap:8px}
+.sk-leg svg{flex:none}
+.sk-leg .ln{width:22px;height:0;border-top:3px solid;border-radius:2px}
+.sk-leg .ln.dot{border-top-style:dotted}
+.sk-scroll{display:none;margin:8px 0 0;color:var(--t3);font-size:13px}
+@media (max-width:1200px){
+  .md-facts{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .md-kinds{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .md-doc{grid-template-columns:minmax(0,1fr)}
+  .md-doc-cover{max-width:300px;margin:0 auto}
+  .md-doc-sm{grid-template-columns:96px minmax(0,1fr);gap:18px}
+  .md-doc-sm .md-doc-cover{max-width:none;margin:0}
+  .md-check{grid-template-columns:minmax(0,1fr)}
+  .md-chain{grid-template-columns:minmax(0,1fr);gap:22px}
+  .md-chain li+li::before{content:"↓";left:50%;top:-11px}
+  .sk-info-g{grid-template-columns:auto minmax(0,1fr)}
+  .sk-info-c{grid-row:auto}
+  .sk-info-k,.sk-info-th{grid-column:1/-1}
+  .sk-scroll{display:block}
+}
+@media (max-width:860px){
+  .md-hero{--nb-hero-rsv:430px}
+  .md-hero .d-hero-img{object-position:60% 20%}
+}
+@media (max-width:640px){
+  .md-facts,.md-kinds{grid-template-columns:minmax(0,1fr)}
+  .md-doc-sm{grid-template-columns:minmax(0,1fr);gap:20px}
+  .md-doc-sm .md-doc-cover{width:112px}
+  .md-doc-b .btn{width:100%;justify-content:center}
+}

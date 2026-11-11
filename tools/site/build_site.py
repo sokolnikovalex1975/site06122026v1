@@ -16,6 +16,8 @@
      tools/dezinfektsiya/build_page.py — страница «Дезинфекция для организаций» из своих исходников;
      tools/normativnaya-baza/build_pages.py — раздел «Нормативная база» (хаб, «Проверочные листы 2026»
        и «Документы для Роспотребнадзора»);
+     tools/materialy-dokumenty/build_pages.py — «Акт дератизации и дезинсекции» и «Схема точек пест-контроля»
+       в «Материалах» (с 11.11.2026);
   1. tools/site/unify.py        — анимации и заголовки в стиле главной, бегущая строка, «Смотрите также», ссылки «Подробнее»;
   2. tools/site/legal_pages.py  — шапка и подвал сайта на страницах политики и согласия;
   3. tools/menu/apply_menu.py   — одинаковые шапка, мобильное меню и подвал на всех страницах;
@@ -54,6 +56,7 @@ SITEMAP = [  # адрес, приоритет
     ('normativnaya-baza/', '0.7'), ('normativnaya-baza/proverochnye-listy/', '0.7'),
     ('normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', '0.7'),
     ('normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/', '0.7'),  # с 11.11.2026
+    ('materialy/akt-deratizatsii-i-dezinsektsii/', '0.7'), ('materialy/skhema-tochek-pest-kontrolya/', '0.7'),  # акт и схема точек (tools/materialy-dokumenty), с 11.11.2026
     # страницы направлений и статьи раздела «Лабораторные исследования» (с 11.11.2026)
     ('dezinsektsiya/restorany-i-kafe/', '0.8'), ('deratizatsiya/restorany-i-kafe/', '0.8'),
     ('laboratornye-issledovaniya/analiz-smyvov/', '0.8'),
@@ -102,6 +105,7 @@ def main():
     run('tools/bctc/build_page.py')  # «Бизнес-центры, ТЦ и предприятия» — из готовой страницы складов и tools/bctc (с 11.11.2026)
     run('tools/dezinfektsiya/build_page.py')  # дезинфекция для организаций — из своих исходников (tools/dezinfektsiya)
     run('tools/normativnaya-baza/build_pages.py')  # нормативная база и проверочные листы (tools/normativnaya-baza)
+    run('tools/materialy-dokumenty/build_pages.py')  # «Акт дератизации и дезинсекции» и «Схема точек пест-контроля» (с 11.11.2026)
     run('tools/site/unify.py')
     run('tools/site/legal_pages.py')
     run('tools/menu/apply_menu.py')

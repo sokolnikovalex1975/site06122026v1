@@ -104,6 +104,9 @@ PAGES = [
     ('materialy/index.html', '../', 'materialy'),
     ('materialy/programma-pest-kontrolya/index.html', '../../', 'materialy/programma-pest-kontrolya'),
     ('materialy/zhurnal-pest-kontrolya/index.html', '../../', 'materialy/zhurnal-pest-kontrolya'),
+    # акт и схема точек (tools/materialy-dokumenty), с 11.11.2026 — в выпадающее меню не добавляются, ссылки — с главной и из «Материалов»
+    ('materialy/akt-deratizatsii-i-dezinsektsii/index.html', '../../', 'materialy/akt-deratizatsii-i-dezinsektsii'),
+    ('materialy/skhema-tochek-pest-kontrolya/index.html', '../../', 'materialy/skhema-tochek-pest-kontrolya'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html', '../../', 'materialy/programma-proizvodstvennogo-kontrolya-haccp'),
     # статьи о лабораторном контроле (с 11.11.2026)
     ('materialy/kak-berut-smyvy/index.html', '../../', 'materialy/kak-berut-smyvy'),

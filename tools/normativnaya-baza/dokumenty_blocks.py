@@ -24,7 +24,7 @@ AKT_BLANK = '@/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/blank-akta-dezi
 # ссылки сайта в графе «Образец или услуга», которых нет в выгрузке data/dokumenty.json (подставляются, только если графа пуста)
 LINK_EXTRA = {
     '3.2': '<a href="#obrazets-akta">Образец акта</a>',
-    '3.4': '<a href="#obrazets-akta">Образец акта</a>',
+    '3.4': '<a href="#obrazets-akta">Образец акта</a>, <a href="@/materialy/akt-deratizatsii-i-dezinsektsii/">что в нём указать</a>',  # страница акта — с 11.11.2026
 }
 
 # заголовки H2 разделов: акцент курсивом, как на остальных страницах; тексты H2 — из согласованного черновика
@@ -78,7 +78,8 @@ AFTER = {
              'width="360" height="509" alt="" loading="lazy" decoding="async"></a>'
              '<div class="dk-pdfcard-t"><p class="dk-pdfcard-k">Образец акта · PDF, 2 листа</p>'
              '<p>Так выглядит наш акт по каждому визиту: время работ, обследование по точкам контроля, средства с концентрацией и номером СГР, '
-             'условия обработки, контроль эффективности и рекомендации — всё из списка выше. Данные заказчика в образце скрыты, бланк — та же форма без записей.</p></div>'
+             'условия обработки, контроль эффективности и рекомендации — всё из списка выше. Данные заказчика в образце скрыты, бланк — та же форма без записей. '
+             'Разбор реквизитов и частых ошибок — на странице <a href="@/materialy/akt-deratizatsii-i-dezinsektsii/">«Акт дератизации и дезинсекции»</a>.</p></div>'
              f'<div class="dk-aktcard-b"><a class="btn btn-w btn-lg" href="{AKT_PDF}" download data-dl="akt"><span class="btn-t">Скачать образец</span></a>'
              f'<a class="btn btn-o btn-lg" href="{AKT_BLANK}" download data-dl="akt-blank"><span class="btn-t">Бланк для печати</span></a></div></div>'),
     'protokoly': '<p class="nb-after">Все исследования из этой таблицы выполняет наша лаборатория: отбираем пробы на объекте и передаём протоколы. Цены и расчёт — на странице <a href="@/laboratornye-issledovaniya/">«Лабораторные исследования»</a>. Смывы и пробы воздуха входят и в <a href="@/sanitarnyy-audit/">санитарный аудит</a>.</p>',

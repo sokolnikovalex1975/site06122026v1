@@ -95,7 +95,7 @@
      "who": "Мы",
      "ours": true,
      "basis_html": "<a href=\"http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773\" target=\"_blank\" rel=\"noopener\">СанПиН 3.3686-21</a>, пп. 88, 101, 110",
-     "link_html": "<a href=\"@/materialy/programma-pest-kontrolya/\">Образец программы</a>",
+     "link_html": "<a href=\"@/materialy/programma-pest-kontrolya/\">Образец программы</a>, <a href=\"@/materialy/skhema-tochek-pest-kontrolya/\">схема точек</a>",
      "for_whom": "все объекты",
      "obj": "all",
      "cond": "",

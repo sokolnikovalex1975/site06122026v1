@@ -221,7 +221,14 @@
     submitBtn.disabled = true;
     submitBtn.classList.add('is-loading');
     if (DEMO) { setTimeout(function () { form.classList.add('sent'); refreshLater(); }, 700); return; }
-    fetch('/send.php', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }, credentials: 'same-origin' })
+    /* вид объекта: если подпись пункта отличается от значения для send.php («Медицинская организация» уходит
+       как «Другое»), подпись попадает в комментарий заявки — если страница не добавила её сама */
+    var fd = new FormData(form), ts = form.elements.type, to = ts && ts.options ? ts.options[ts.selectedIndex] : null;
+    if (to && to.value && to.text !== to.value) {
+      var mv = String(fd.get('msg') || '');
+      if (mv.indexOf('Вид объекта: ') < 0) fd.set('msg', 'Вид объекта: ' + to.text + (mv ? '\n' + mv : ''));
+    }
+    fetch('/send.php', { method: 'POST', body: fd, headers: { 'Accept': 'application/json' }, credentials: 'same-origin' })
       .then(function (res) {
         return res.text().then(function (txt) {
           var json = null;

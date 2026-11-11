@@ -1,0 +1,224 @@
+<main id="main" tabindex="-1">
+<section class="d-hero nb-hero md-hero" id="hero">
+  <div class="wrap">
+    <div class="d-hero-copy">
+      <nav class="f-crumbs" aria-label="Навигационная цепочка"><a href="@/">Главная</a><span aria-hidden="true">→</span><a href="@/materialy/">Материалы</a><span aria-hidden="true">→</span><span aria-current="page">Схема точек пест-контроля</span></nav>
+      <div class="eyebrow">Материалы · Образец PDF</div>
+      <h1><span class="ln"><span>Схема точек</span></span> <span class="ln"><span>пест-контроля:</span></span> <span class="ln"><span><em>образец и правила</em></span></span></h1>
+      <!--HERO_PHOTO-->
+      <p class="lead">Схема точек пест-контроля (план-схема ТПК) — план объекта, на котором пронумерована каждая станция, ловушка и световая лампа. По ней специалист обходит точки, а инспектор и аудитор сверяют журнал с тем, что видят на месте. План размещения ловушек прямо требует ГОСТ Р 54762-2011 (п. 12.5). Ниже — интерактивный образец для хлебопекарного цеха на 30 точек и PDF.</p>
+      <div class="d-btns">
+        <a href="@/materialy/skhema-tochek-pest-kontrolya/obrazets-skhemy-tochek-pest-kontrolya.pdf" class="btn btn-w btn-lg" download data-dl="skhema"><span class="btn-t">Скачать образец схемы</span></a>
+        <a href="#zayavka" class="btn btn-o btn-lg" data-need="Составить схему точек для объекта"><span class="btn-t">Составить схему для объекта</span></a>
+      </div>
+      <p class="nb-byline p-hero-note">Подготовила Марианна Семерина, санитарный врач · нормы сверены 11.11.2026</p>
+    </div>
+    <nav class="p-toc nb-toc" aria-label="Разделы страницы"><a href="#korotko">Коротко</a><a href="#obrazets">Образец</a><a href="#na-skheme">Что на схеме</a><a href="#oboznacheniya">Обозначения</a><a href="#rasstanovka">Как расставляют</a><a href="#izmeneniya">Изменения</a><a href="#oshibki">Ошибки</a><a href="#voprosy">Вопросы</a></nav>
+  </div>
+</section>
+
+<section class="s" id="korotko">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Коротко</div><h2>Схема точек пест-контроля <em>в пяти фактах</em></h2></div>
+    <ul class="md-facts">
+      <li class="card"><b>Требование ГОСТ</b><p>«Необходимо иметь план размещения датчиков обнаружения и ловушек» — п. 12.5 ГОСТ Р 54762-2011. На него опираются аудиты ХАССП, FSSC 22000 и торговых сетей.</p></li>
+      <li class="card"><b>Один номер везде</b><p>Номер точки на схеме, на настенном указателе и в журнале один и тот же — так проверяющий сверяет записи с местом.</p></li>
+      <li class="card"><b>Три контура</b><p>Территория, периметр здания и внутренние помещения. В каждом контуре — свои устройства и пороги.</p></li>
+      <li class="card"><b>Без ядов у продукции</b><p>Станции с приманкой — запираемые, на территории и в зонах без пищевой продукции. У продукции — ловушки и мониторы без родентицидов.</p></li>
+      <li class="card"><b>Редакция с датой</b><p>Перенесли или добавили точку — запись в журнале и новая редакция схемы с подписями сторон.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="obrazets">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Образец</div><h2>Образец план-схемы: <em>хлебопекарный цех, 30 точек</em></h2><p class="sub">Тот же объект, что в образцах <a href="@/materialy/zhurnal-pest-kontrolya/">журнала пест-контроля</a> и <a href="@/materialy/akt-deratizatsii-i-dezinsektsii/">акта</a>: номера, места и пороги точек совпадают. Нажмите на точку, чтобы увидеть её в реестре.</p></div>
+    <figure class="nb-fig sk-fig">
+      <div class="sk-bar" role="group" aria-label="Показать контур">
+        <button type="button" class="nb-chip sk-f is-on" data-f="" aria-pressed="true">Все точки · 30</button>
+        <button type="button" class="nb-chip sk-f" data-f="К1" aria-pressed="false"><i style="background:#22c55e"></i>К1 · территория · 8</button>
+        <button type="button" class="nb-chip sk-f" data-f="К2" aria-pressed="false"><i style="background:#f97316"></i>К2 · периметр здания · 8</button>
+        <button type="button" class="nb-chip sk-f" data-f="К3" aria-pressed="false"><i style="background:#60a5fa"></i>К3 · помещения · 14</button>
+      </div>
+      <div class="sk-paper" id="skPlan"><!--SK_PLAN--></div>
+      <p class="sk-scroll">План шире экрана — листайте его вбок.</p>
+      <div class="sk-info card" id="skInfo" aria-live="polite"><p class="sk-info-e">Нажмите на точку на плане — здесь появятся её тип, контур, место установки и порог из реестра.</p></div>
+      <div class="sk-leg">
+        <!--SK_LEGEND-->
+      </div>
+      <figcaption class="nb-fig-note">Масштаб условный. Цвет точки — контур защиты, форма — тип устройства. В PDF — план на первом листе и реестр всех 30 точек на втором.</figcaption>
+    </figure>
+    <div class="md-doc md-doc-sm">
+      <a class="md-doc-cover" href="@/materialy/skhema-tochek-pest-kontrolya/obrazets-skhemy-tochek-pest-kontrolya.pdf" download data-dl="skhema" tabindex="-1" aria-hidden="true"><img src="@/img/skhema-obrazets-p1-720.webp" srcset="@/img/skhema-obrazets-p1-360.webp 360w, @/img/skhema-obrazets-p1-720.webp 720w" sizes="(max-width:760px) 70vw, 240px" width="360" height="509" alt="" loading="lazy" decoding="async"></a>
+      <div class="md-doc-t">
+        <p class="md-doc-k">Образец план-схемы · PDF, 2 листа</p>
+        <p>План объекта с контурами защиты и 30 точками, легенда, история редакций с подписями сторон и реестр точек: номер, тип, контур, место установки и порог. Форма СТПК-01 — наша рабочая форма, заказчик в образце обезличен.</p>
+        <div class="md-doc-b"><a class="btn btn-w btn-lg" href="@/materialy/skhema-tochek-pest-kontrolya/obrazets-skhemy-tochek-pest-kontrolya.pdf" download data-dl="skhema"><span class="btn-t">Скачать образец · PDF</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="na-skheme">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Что на схеме</div><h2>Что должно быть <em>на схеме точек</em></h2><p class="sub">Единой формы нет. Проверяющему важно, чтобы по схеме можно было найти любую точку на объекте и в журнале.</p></div>
+    <ol class="md-check">
+      <li><b>План территории и этажей</b><span>с названиями помещений и зон: склад сырья, цех, моечная, экспедиция, площадка ТКО.</span></li>
+      <li><b>Контуры защиты</b><span>цветом: территория, периметр здания, внутренние помещения.</span></li>
+      <li><b>Каждая точка с номером</b><span>префикс типа и порядковый номер: КИК-05, МЛ-10, ИМ-03. Номера не повторяются.</span></li>
+      <li><b>Места риска захода</b><span>ворота, доки, входы, вентшахты, вводы коммуникаций, контейнерная площадка.</span></li>
+      <li><b>Легенда</b><span>какой значок — станция с приманкой, ловушка, клеевой монитор, световая или феромонная ловушка.</span></li>
+      <li><b>Реестр точек</b><span>место установки и порог по каждой точке — в приложении к схеме или в журнале.</span></li>
+      <li><b>Номер, редакция и дата</b><span>и ссылка на программу пест-контроля и журнал, к которым относится схема.</span></li>
+      <li><b>Подписи сторон</b><span>исполнитель составил, заказчик согласовал — по каждой редакции.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="oboznacheniya">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Обозначения</div><h2>Типы точек контроля <em>и где их ставят</em></h2></div>
+    <table class="d-table nb-tbl md-tbl">
+      <thead><tr><th scope="col">Обозначение</th><th scope="col">Что это</th><th scope="col">Где ставят</th><th scope="col">Что записывают</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Обозначение"><b class="nb-val">КИК</b></td><td data-l="Что это">Станция контроля грызунов с приманкой, запираемая и закреплённая</td><td data-l="Где ставят">Ограждение, отмостка, контейнерная площадка, снаружи у ворот и входов</td><td data-l="Что записывают">Поедаемость приманки, следы, состояние и доступность станции</td></tr>
+        <tr><td data-l="Обозначение"><b class="nb-val">МЛ</b></td><td data-l="Что это">Механическая или клеевая ловушка для грызунов, без яда</td><td data-l="Где ставят">Изнутри у ворот, доков и входов, на складах, в помещениях с продукцией</td><td data-l="Что записывают">Поимки, следы, замену пластины</td></tr>
+        <tr><td data-l="Обозначение"><b class="nb-val">ИМ</b></td><td data-l="Что это">Клеевой монитор ползающих насекомых</td><td data-l="Где ставят">Под оборудованием, у моек и трапов, в кабель-каналах, в комнатах приёма пищи</td><td data-l="Что записывают">Вид и число насекомых, оотеки</td></tr>
+        <tr><td data-l="Обозначение"><b class="nb-val">ИЛ</b></td><td data-l="Что это">Световая УФ-ловушка для летающих насекомых</td><td data-l="Где ставят">У входов в цех, в экспедиции и на складе — не над открытым продуктом и не на виду из открытых ворот</td><td data-l="Что записывают">Число насекомых за период, замену экрана и ламп</td></tr>
+        <tr><td data-l="Обозначение"><b class="nb-val">ФЛ</b></td><td data-l="Что это">Феромонная ловушка для пищевой моли и огнёвок</td><td data-l="Где ставят">Склады муки, круп и сухих ингредиентов</td><td data-l="Что записывают">Число бабочек за период, замену капсулы</td></tr>
+      </tbody>
+    </table>
+    <p class="nb-after">Обозначения — как в наших образцах; у другого исполнителя префиксы могут быть другими. Главное — чтобы легенда на схеме объясняла каждый значок.</p>
+  </div>
+</section>
+
+<section class="s" id="rasstanovka">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Как расставляют</div><h2>Как расставляют точки <em>и составляют схему</em></h2></div>
+    <ol class="d-steps nb-steps">
+      <li><span class="nb-ic" aria-hidden="true"><!--ICON:lucide-scan-search--></span><b>Обследование.</b><span>Пути захода вредителей, источники корма и воды, зоны риска. Результат — акт первичного обследования.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><!--ICON:lucide-map--></span><b>Контуры.</b><span>К1 — станции по ограждению, у площадки ТКО и вдоль стен; К2 — по обе стороны ворот, доков и входов; К3 — в помещениях вдоль стен и у оборудования.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><!--ICON:lucide-crosshair--></span><b>Плотность по риску.</b><span>У входов, доков, складов сырья и мест сбора отходов точек больше. Устройства ставят на путях передвижения и проникновения грызунов (МР 3.5.3.0374-25).</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><!--ICON:lucide-list-checks--></span><b>Нумерация.</b><span>Префикс типа и порядковый номер, без повторов. У каждой точки — настенный указатель с тем же номером.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><!--ICON:lucide-file-signature--></span><b>Схема и реестр.</b><span>Точки наносят на план, в реестр — место и порог. Стороны подписывают схему, она становится приложением к программе и журналу.</span></li>
+    </ol>
+    <p class="nb-after">Ориентир для раскладки приманок в помещениях при дератизации — 3–5 точек на 100 м² (МР 3.5.3.0374-25, раздел IV). Число мониторинговых точек считают не по метрам, а по риску зоны: это решение фиксируют в <a href="@/materialy/programma-pest-kontrolya/#razdely">программе пест-контроля</a>.</p>
+  </div>
+</section>
+
+<section class="s" id="izmeneniya">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Изменения</div><h2>Когда и как <em>обновлять схему</em></h2></div>
+    <div class="nb-grid2">
+      <div class="card nb-fact"><b>Когда</b>
+        <ul class="md-ul">
+          <li>Точку перенесли, добавили или сняли.</li>
+          <li>Перепланировка, новая зона хранения или новое оборудование.</li>
+          <li>Сезонное уплотнение точек на территории.</li>
+          <li>Замечание аудитора или инспектора по расстановке.</li>
+          <li>Ежегодный пересмотр программы пест-контроля.</li>
+        </ul>
+      </div>
+      <div class="card nb-fact"><b>Как</b>
+        <ul class="md-ul">
+          <li>Запись в журнале: дата, номер точки, что изменили и почему.</li>
+          <li>Новая редакция схемы с номером, датой и подписями сторон.</li>
+          <li>Настенный указатель переносят вместе с точкой.</li>
+          <li>Прежнюю редакцию хранят вместе с новой — по ней видна история.</li>
+        </ul>
+        <p class="md-ex">В образце: редакция 2 от 21.10.2026 — МЛ-10 перенесена на 0,5 м к углу стеллажа А-2, ближе к вводу кабеля.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="oshibki">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Ошибки</div><h2>Ошибки в схеме, которые <em>видны на проверке</em></h2></div>
+    <div class="nb-errs-wrap">
+      <ul class="nb-errs">
+        <li>Номера на схеме не совпадают с настенными указателями и журналом.</li>
+        <li>Точка есть на схеме, но её нет на месте, или наоборот.</li>
+        <li>Схема не обновлена после перепланировки или переноса точек.</li>
+        <li>Нет легенды: непонятно, где станция с приманкой, а где ловушка без яда.</li>
+        <li>Станции с родентицидом стоят в помещениях с открытой пищевой продукцией.</li>
+        <li>Световая ловушка висит над открытым продуктом или видна снаружи через ворота.</li>
+        <li>Нет даты, редакции и подписей — неясно, действует ли схема.</li>
+      </ul>
+      <figure class="nb-errs-ph"><img src="@/img/dez-ipm-kontrol-720.webp" srcset="@/img/dez-ipm-kontrol-720.webp 720w, @/img/dez-ipm-kontrol.webp 1200w" sizes="(max-width:900px) 100vw, 40vw" width="720" height="538" loading="lazy" decoding="async" alt="Специалист в перчатке проверяет клеевую ловушку у стены под табличкой точки контроля, рядом журнал осмотра"><figcaption>Номер на стене, ловушка и запись в журнале — инспектор сверяет их со схемой.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="svyaz">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Документы объекта</div><h2>Как схема связана <em>с другими документами</em></h2></div>
+    <ol class="md-chain">
+      <li><a class="card" href="@/materialy/programma-pest-kontrolya/"><span class="nb-link-k">Программа</span><b>Зоны, пороги, кратность</b><span>Схема — раздел 4 программы</span></a></li>
+      <li><div class="card is-here"><span class="nb-link-k">Схема</span><b>Где стоит каждая точка</b><span>Вы на этой странице</span></div></li>
+      <li><a class="card" href="@/materialy/zhurnal-pest-kontrolya/"><span class="nb-link-k">Журнал</span><b>Что нашли в каждой точке</b><span>Реестр точек — раздел 2</span></a></li>
+      <li><a class="card" href="@/materialy/akt-deratizatsii-i-dezinsektsii/"><span class="nb-link-k">Акт</span><b>Что сделали за визит</b><span>Находки по номерам точек</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="avtor">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Автор и сверка</div><h2>Кто подготовил <em>материал</em></h2></div>
+    <div class="nb-author-wrap">
+      <div class="card nb-author">
+        <img class="nb-avatar" src="@/img/san-author-photo-240.webp" srcset="@/img/san-author-photo-240.webp 240w, @/img/san-author-photo-480.webp 480w" sizes="(max-width:600px) 80px, 112px" width="240" height="240" loading="lazy" decoding="async" alt="Иллюстративное фото санитарного врача, изображение сгенерировано">
+        <div><p class="nb-author-name">Марианна Семерина</p><p class="nb-author-role">Санитарный врач, автор материала</p><p class="nb-author-date">Нормы сверены — 11.11.2026</p><p class="nb-author-note">Фото иллюстративное</p></div>
+      </div>
+      <p class="nb-author-text">Материал подготовила Марианна Семерина, санитарный врач. Требования сверены с текстами ГОСТ Р 54762-2011, СанПиН 3.3686-21 и МР 3.5.3.0374-25 11.11.2026. Если вы заметили неточность, напишите нам — исправим.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="istochniki">
+  <div class="wrap">
+    <details class="nb-src">
+      <summary><span class="eyebrow">Источники</span><span class="nb-src-t">Официальные тексты (проверено 11.11.2026)</span></summary>
+      <ul class="nb-base">
+        <li>ГОСТ Р 54762-2011 / ISO/TS 22002-1:2009, раздел 12 «Борьба с вредителями», п. 12.5 — <a href="https://meganorm.ru/mega_doc/norm/gost-r_gosudarstvennyj-standart/18/gost_r_54762-2011_ISO_TS_22002-1_2009_natsionalnyy_standart.html" target="_blank" rel="noopener">МегаНорм</a>, <a href="https://protect.gost.ru/gost/details/5d852293-d8ae-4426-95db-006437874225" target="_blank" rel="noopener">Росстандарт</a></li>
+        <li>МР 3.5.3.0374-25 «Организация и проведение дератизационных мероприятий», раздел IV — <a href="https://www.consultant.ru/document/cons_doc_LAW_504695/55cfb304e2ccfc6b42b8fc9ca20aca4dca17c28b/" target="_blank" rel="noopener">КонсультантПлюс</a>; раздел V (запираемые приманочные станции) — <a href="https://cepportal.ru/regulations/1118/" target="_blank" rel="noopener">ЦЭП-портал</a></li>
+        <li>СанПиН 3.3686-21, пп. 98–116 — <a href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773" target="_blank" rel="noopener">pravo.gov.ru</a></li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+<!--FAQ-->
+
+<section class="cta" id="zayavka"><div class="cta-bg f-lazy" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Заявка</div>
+      <h2>Составим схему точек <em>для вашего объекта</em></h2>
+      <p class="sub">Приедем на бесплатное обследование, найдём пути захода и зоны риска и предложим расстановку точек. Схема точек и реестр входят в пакет документов по договору вместе с программой, журналом и актами.</p>
+      <ul class="cta-list">
+        <li><!--ICON:lucide-circle-check--><span>Три контура защиты и номера точек</span></li>
+        <li><!--ICON:lucide-circle-check--><span>Реестр точек с местами и порогами</span></li>
+        <li><!--ICON:lucide-circle-check--><span>Новая редакция при каждом переносе</span></li>
+      </ul>
+<!--CTA_CONTACTS-->
+    </div>
+    <form class="form" id="form" novalidate data-form>
+      <div class="fbody">
+        <h3>Оставить заявку</h3>
+        <p class="fs">Заполнение займёт меньше минуты</p>
+        <div class="fg">
+<!--FORM_FIELDS-->
+</div>
+        <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Отправить заявку</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>
+        <p class="legal">Нажимая кнопку, вы даёте <a href="@/soglasie/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаете, что ознакомились с <a href="@/privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+        <p class="legal nb-lic">Работы выполняет ООО «Центр дезинфекционных услуг», лицензия на дезинфекционную деятельность <a href="LICENSE_URL" target="_blank" rel="noopener">№ Л064-00111-77/01942445</a></p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg class="ok-ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M15 27l7 7 15-16"/></svg>
+        <h3>Заявка отправлена</h3><p>Перезвоним в ближайшее рабочее время и согласуем дату выезда.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>

@@ -131,6 +131,7 @@ URL = {
     'nb': 'normativnaya-baza/', 'pl': 'normativnaya-baza/proverochnye-listy/',
     'dok': 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/',
     'ef': 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/',  # с 11.11.2026 — превью
+    'akt': 'materialy/akt-deratizatsii-i-dezinsektsii/', 'skhema': 'materialy/skhema-tochek-pest-kontrolya/',  # tools/materialy-dokumenty, с 11.11.2026 — превью
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -206,6 +207,10 @@ CARD = {
             'Что должно быть в папке к проверке: 41 общий документ, разделы по видам объектов, конструктор и чек-лист PDF.'),
     'ef': ('Разбор', 'Оценка эффективности дератизации и дезинсекции',
            'Когда проверять результат обработки, чем считают вредителей и что считается эффектом по СанПиН 3.3686-21.'),
+    'akt': ('Образец', 'Акт дератизации и дезинсекции',
+            'Что указать в акте по каждому визиту: реквизиты, средства с СГР, результаты по точкам, подписи. Образец и бланк PDF.'),
+    'skhema': ('Образец', 'Схема точек пест-контроля',
+               'Три контура защиты, нумерация и обозначения точек, реестр и редакции схемы. Интерактивный план и PDF.'),
 }
 
 STRIP_LABELS = {}
@@ -424,6 +429,29 @@ PAGES = {
             ('lucide-map-pinned', 'Пылевые площадки', '— 20×30 см'),
             ('lucide-notebook-pen', 'Учёт до и после', '— в журнале и акте'),
             ('lucide-ban', 'Нет эффекта', '— другая группа инсектицидов'),
+        ])),
+    # «Акт дератизации и дезинсекции» и «Схема точек пест-контроля» (tools/materialy-dokumenty), с 11.11.2026 — превью
+    'materialy/akt-deratizatsii-i-dezinsektsii/index.html': dict(key='akt', root='../../', related=['zhur', 'skhema', 'dok', 'ef'], strip=(
+        'Коротко об акте дератизации и дезинсекции', [
+            ('lucide-clipboard-check', 'Акт', '— по каждому визиту'),
+            ('lucide-clock', 'Не реже 2 раз в месяц', '— на объектах из п. 98'),
+            ('lucide-file-badge', 'Средства', '— с номером СГР'),
+            ('lucide-map-pinned', 'Результаты', '— по точкам контроля'),
+            ('lucide-file-signature', 'Подписи', '— исполнитель и заказчик'),
+            ('lucide-notebook-pen', 'Номер акта', '— в журнале'),
+            ('lucide-file-down', 'Образец и бланк', '— в PDF'),
+            ('lucide-shield-check', '5 лет', '— срок хранения'),
+        ])),
+    'materialy/skhema-tochek-pest-kontrolya/index.html': dict(key='skhema', root='../../', related=['zhur', 'akt', 'prog', 'derat'], strip=(
+        'Коротко о схеме точек пест-контроля', [
+            ('lucide-map-pinned', '3 контура', '— территория, периметр, помещения'),
+            ('lucide-crosshair', '30 точек', '— в образце на 1 850 м²'),
+            ('lucide-list-checks', 'Нумерация', '— КИК-01, МЛ-10, ИМ-03'),
+            ('lucide-notebook-pen', 'Реестр', '— место и порог каждой точки'),
+            ('lucide-file-badge', 'ГОСТ Р 54762-2011', '— п. 12.5'),
+            ('lucide-scan-search', 'Сверка', '— схема, указатель, журнал'),
+            ('lucide-file-signature', 'Новая редакция', '— при каждом переносе'),
+            ('lucide-file-down', 'Образец', '— PDF на 2 листа'),
         ])),
     # «Лабораторные исследования» (tools/laboratornye-issledovaniya), с 10.11.2026 — превью
     'laboratornye-issledovaniya/index.html': dict(key='lab', root='../', related=['san', 'rppk', 'dok', 'vent'], strip=(
@@ -787,7 +815,7 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
             {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': SITE},
             {'@type': 'ListItem', 'position': 2, 'name': 'Материалы', 'item': SITE + 'materialy/'}]},
         {'@type': 'CollectionPage', 'name': 'Материалы о пест-контроле для предприятий', 'url': SITE + 'materialy/', 'inLanguage': 'ru-RU',
-         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, пест-менеджмент или разовая обработка, образец программы производственного контроля по ХАССП (PDF) и её раздел пест-контроля, нормативная база дезинсекции и дератизации, разбор проверочных листов Роспотребнадзора 2026 года, перечень документов для Роспотребнадзора, а также порядок лабораторного контроля: как берут смывы, как проходят замеры освещённости и микроклимата, как контролируют работу стерилизаторов.',
+         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, схема точек пест-контроля, акт дератизации и дезинсекции, пест-менеджмент или разовая обработка, образец программы производственного контроля по ХАССП (PDF) и её раздел пест-контроля, нормативная база дезинсекции и дератизации, разбор проверочных листов Роспотребнадзора 2026 года, перечень документов для Роспотребнадзора, а также порядок лабораторного контроля: как берут смывы, как проходят замеры освещённости и микроклимата, как контролируют работу стерилизаторов.',
          'isPartOf': {'@type': 'WebSite', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE},
          'mainEntity': {'@type': 'ItemList', 'itemListElement': [
              {'@type': 'ListItem', 'position': 1, 'url': SITE + 'materialy/programma-pest-kontrolya/', 'name': 'Программа пест-контроля на предприятии: образец и шаблон в PDF, пример заполнения'},
@@ -799,7 +827,10 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
              {'@type': 'ListItem', 'position': 7, 'url': SITE + 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/', 'name': 'Документы для Роспотребнадзора: полный перечень для проверки'},
              {'@type': 'ListItem', 'position': 8, 'url': SITE + 'materialy/kak-berut-smyvy/', 'name': 'Как берут смывы с поверхностей и рук: порядок по МР 4.2.0220-20'},
              {'@type': 'ListItem', 'position': 9, 'url': SITE + 'materialy/zamer-osveshchennosti-i-mikroklimata/', 'name': 'Как проходит замер освещённости и микроклимата на рабочих местах'},
-             {'@type': 'ListItem', 'position': 10, 'url': SITE + 'materialy/kontrol-raboty-sterilizatorov/', 'name': 'Контроль работы стерилизаторов: методы, периодичность, журнал'}]},
+             {'@type': 'ListItem', 'position': 10, 'url': SITE + 'materialy/kontrol-raboty-sterilizatorov/', 'name': 'Контроль работы стерилизаторов: методы, периодичность, журнал'},
+             # с 11.11.2026 (tools/materialy-dokumenty)
+             {'@type': 'ListItem', 'position': 11, 'url': SITE + 'materialy/skhema-tochek-pest-kontrolya/', 'name': 'Схема точек пест-контроля: образец и правила'},
+             {'@type': 'ListItem', 'position': 12, 'url': SITE + 'materialy/akt-deratizatsii-i-dezinsektsii/', 'name': 'Акт дератизации и дезинсекции: образец и что в нём указать'}]},
          'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE, 'telephone': '+7-495-104-35-70', 'email': 'b2b@pestcontrol-center.ru'}},
     ]}, ensure_ascii=False) + '</script>'
 
@@ -1077,9 +1108,8 @@ def process_home():
     # ссылки «Подробнее» в блоках главной
     adds = [
         ('podhod', more_html('Подробнее', [('materialy/pest-menedzhment-ili-razovaya-obrabotka/', 'Пест-менеджмент или разовая обработка')])),
-        ('dokumenty', more_html('Образцы документов', [('materialy/programma-pest-kontrolya/', 'Программа пест-контроля'),
-                                                       ('materialy/zhurnal-pest-kontrolya/', 'Журнал пест-контроля'),
-                                                       ('dogovor-deratizatsiya-dezinsektsiya/', 'Договор на обслуживание')])),
+        # с 11.11.2026 плитки блока сами ведут на образцы (программа, схема, журнал, акт), под ними — перечень и договор
+        ('dokumenty', more_html('Образцы документов', [('dogovor-deratizatsiya-dezinsektsiya/', 'Договор на обслуживание')])),
         ('vrediteli', more_html('Подробнее', [('deratizatsiya/', 'Дератизация для организаций'), ('dezinsektsiya/', 'Дезинсекция для организаций')])),
         ('usloviya', more_html('Условия', [('dogovor-deratizatsiya-dezinsektsiya/', 'Договор на дератизацию и дезинсекцию')])),
     ]
