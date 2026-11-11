@@ -42,7 +42,7 @@ DK = json.loads((ROOT / 'tools' / 'normativnaya-baza' / 'data' / 'dokumenty.json
 AKT_PDF = 'obrazets-akta-dezinsektsii-i-deratizatsii.pdf'  # tools/akt/build_akt.py
 AKT_BLANK = 'blank-akta-dezinsektsii-i-deratizatsii.pdf'
 CHECKLIST_PDF = 'chek-list-dokumentov-dlya-rospotrebnadzora.pdf'  # чек-лист страницы (собирается в файлах проекта)
-SKIP_SECTIONS = {'hero', 'zayavka', 'smotrite-takzhe', 'avtor', 'istochniki', 'main', 'korotko'}
+SKIP_SECTIONS = {'hero', 'zayavka', 'smotrite-takzhe', 'vse-uslugi', 'avtor', 'istochniki', 'main', 'korotko'}
 SN = 190   # длина описания в индексе
 KWN = 320  # длина ключевых слов раздела
 

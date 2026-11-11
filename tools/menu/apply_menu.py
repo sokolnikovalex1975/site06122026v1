@@ -175,6 +175,10 @@ def build(root, cur, cta_mobile):
     in_mat = cur.startswith('materialy') or cur.startswith('normativnaya-baza')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
     usl_items = ''.join(page_link(root, cur, s, one(t) + ARR) for s, t in USLUGI)
+    # «Все услуги» (с 11.11.2026) — блок #vse-uslugi перед заявкой (tools/site/services_block.py) на этой же странице;
+    # на политике и согласии блока нет — ссылка ведёт к блоку на главной
+    vu = (root + '#vse-uslugi') if cur in ('privacy', 'soglasie') else '#vse-uslugi'
+    usl_items += f'<a href="{vu}" class="nav-dd-all">Все услуги{ARR}</a>'
     ind_items = ''.join(page_link(root, cur, s, t + ARR) + ''.join(page_link(root, cur, s2, t2 + ARR, 'nav-sub') for s2, t2 in INDUSTRY_SUB.get(s, []))
                         for s, t in INDUSTRIES)
     ind_items += anchor(root, 'otrasli', 'Все отрасли' + ARR, 'nav-dd-all')
@@ -190,7 +194,7 @@ def build(root, cur, cta_mobile):
         + dropdown('materialy', 'Материалы', mat_items, in_mat) + '\n    </nav>'
     )
     # мобильное меню
-    sub_usl = ''.join(page_link(root, cur, s, one(t)) for s, t in USLUGI)
+    sub_usl = ''.join(page_link(root, cur, s, one(t)) for s, t in USLUGI) + f'<a href="{vu}">Все услуги</a>'
     sub_ind = ''.join(page_link(root, cur, s, t) + ''.join(page_link(root, cur, s2, t2, 'nav-sub') for s2, t2 in INDUSTRY_SUB.get(s, []))
                       for s, t in INDUSTRIES) + anchor(root, 'otrasli', 'Все отрасли')
     sub_mat = ''.join(page_link(root, cur, s, one(t)) for s, t in MATERIALS) + page_link(root, cur, 'materialy', 'Все материалы')
@@ -265,9 +269,7 @@ SRCH_CSS = ('<style id="srch-st">/* лупа поиска в шапке и ра�
             '.nav-dd-panel a.nav-sub{position:relative}.nav-dd-panel a.nav-sub:hover,.nav-dd-panel a.nav-sub[aria-current]{color:#fff}'
             '.mm-sub a.nav-sub{padding-left:40px;font-size:16px;color:var(--t3)}'
             '.ft li.ft-sub{padding-left:14px;font-size:14px;position:relative}'
-            '.ft li.ft-sub::before{content:"";position:absolute;left:0;top:50%;width:7px;height:1px;background:var(--line2)}'
-            # с 11.11.2026 в «Услугах» нет итоговой ссылки «Все …» — последний пункт мобильного списка не красим акцентом
-            '#mm-uslugi a:last-child:not([aria-current]){color:var(--t2)}</style>')
+            '.ft li.ft-sub::before{content:"";position:absolute;left:0;top:50%;width:7px;height:1px;background:var(--line2)}</style>')
 SRCH_JS = ('<script id="srch-js">/* поиск по сайту: движок и индекс загружаются по первому нажатию на лупу или «/» (tools/search) */'
            '(function(r,v){var d=document,ld=0,w=null;function go(o){if(window.PCSearch)return window.PCSearch.open(r,v,o);w=o;if(ld)return;ld=1;'
            'var s=d.createElement("script");s.src=r+"search.min.js?v="+v;s.async=true;s.onload=function(){window.PCSearch&&window.PCSearch.open(r,v,w)};'
