@@ -77,7 +77,7 @@ FOOTER_MAT_EXTRA = {  # в подвале под пунктом — ещё од�
 }
 SERVICE = [  # блоки главной («Документы для проверок» → страница «Документы для Роспотребнадзора» в «Материалах», 08.11.2026)
     ('etapy', 'Этапы работы'), ('vrediteli', 'Вредители'),
-    ('usloviya', 'Цена'), ('voprosy', 'Вопросы'),
+    ('tseny', 'Цена'), ('voprosy', 'Вопросы'),
 ]
 CHEV = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 CHEV_M = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -190,7 +190,7 @@ def build(root, cur, cta_mobile):
         + dropdown('uslugi', 'Услуги', usl_items, in_usl)
         + dropdown('otrasli', 'Отрасли', ind_items, in_ind, spy)
         + (f'<a href="./" class="active" aria-current="page">Договор</a>' if cur == DOGOVOR else f'<a href="{root}{DOGOVOR}/">Договор</a>')
-        + anchor(root, 'podhod', 'Метод IPM') + anchor(root, 'usloviya', 'Цена')
+        + anchor(root, 'podhod', 'Метод IPM') + anchor(root, 'tseny', 'Цена')
         + dropdown('materialy', 'Материалы', mat_items, in_mat) + '\n    </nav>'
     )
     # мобильное меню
@@ -204,7 +204,7 @@ def build(root, cur, cta_mobile):
         + mm_group('uslugi', 'Услуги', sub_usl, in_usl)
         + mm_group('otrasli', 'Отрасли', sub_ind, in_ind)
         + (f'<a href="./" aria-current="page">{dog_text}</a>' if cur == DOGOVOR else f'<a href="{root}{DOGOVOR}/">{dog_text}</a>')
-        + anchor(root, 'podhod', 'Метод IPM') + anchor(root, 'usloviya', 'Цена')
+        + anchor(root, 'podhod', 'Метод IPM') + anchor(root, 'tseny', 'Цена')
         + mm_group('materialy', 'Материалы', sub_mat, in_mat) + '\n'
         f'  {cta_mobile}\n</nav>'
     )
