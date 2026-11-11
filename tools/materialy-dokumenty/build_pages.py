@@ -46,6 +46,13 @@ AKT_BLANK = 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/blank-akta-dezins
 SK_PDF = 'materialy/skhema-tochek-pest-kontrolya/obrazets-skhemy-tochek-pest-kontrolya.pdf'
 
 AKT_FAQ = [
+    ('Можно ли заказать акт без выезда на объект?',
+     'Нет. Мы не продаём акты как документ: акт выдаём только после выезда специалиста и обследования объекта. '
+     'В нём отражаем реальную ситуацию — что нашли, где и что рекомендуем. Акт без обследования не выдержит '
+     'сверки с журналом и точками контроля на месте.'),
+    ('Сколько стоит акт дератизации и дезинсекции?',
+     'Акт по итогам обследования — 3 000 ₽. Выезд специалиста на объект обязателен: акт составляем по результатам '
+     'осмотра помещений и территории. Если понадобится обработка, её рассчитаем отдельно.'),
     ('Есть ли утверждённая форма акта дезинсекции и дератизации?',
      'Нет. СанПиН 3.3686-21 не устанавливает единого бланка, форму согласуют в договоре. Чтобы акт подтвердил работу, '
      'в нём указывают дату и время, помещения, результаты обследования по точкам контроля, средство с номером СГР '
@@ -111,18 +118,22 @@ PAGES = [
         'slug': 'materialy/akt-deratizatsii-i-dezinsektsii/', 'root': '../../',
         'title': 'Акт дератизации и дезинсекции: образец и бланк, что указать',
         'og_title': 'Акт дератизации и дезинсекции: образец и что в нём указать',
-        'desc': 'Что указать в акте дератизации и дезинсекции, чтобы он подтвердил работу на проверке: реквизиты, '
-                'средства с СГР, результаты по точкам, подписи. Образец и бланк PDF.',
+        'desc': 'Что указать в акте дератизации и дезинсекции: реквизиты, средства с СГР, результаты по точкам, подписи. '
+                'Образец и бланк PDF. Акт по вашему объекту — после обследования, 3 000 ₽.',
         'h1': 'Акт дератизации и дезинсекции: образец и что в нём указать',
         'crumbs': [('Главная', ''), ('Материалы', 'materialy/'),
                    ('Акт дератизации и дезинсекции', 'materialy/akt-deratizatsii-i-dezinsektsii/')],
         'og_image': 'akt-og.jpg', 'og_alt': 'Акт дератизации и дезинсекции: образец и что в нём указать',
-        'hero': 'akt-hero', 'hero_alt': 'Специалист по пест-контролю в синей форме передаёт акт на планшете менеджеру '
-                                        'по качеству, она подписывает его в хлебопекарном цехе',
+        'hero': 'akt-hero', 'hero_alt': 'Специалист по пест-контролю в синей форме показывает акт обследования менеджеру '
+                                        'по качеству в хлебопекарном цехе, на столе станция контроля грызунов',
         'faq': AKT_FAQ, 'faq_h2': 'Вопросы <em>об акте дератизации и дезинсекции</em>', 'faq_open': True,
         'types': TYPES, 'name': 'Акт дератизации и дезинсекции',
-        'need': ['Договор на обслуживание с актами', 'Проверить акты и журнал подрядчика', 'Разовая обработка с актом'],
-        'comment_ph': 'Комментарий: площадь, вредители, кто сейчас обслуживает',
+        'need': ['Акт по итогам обследования', 'Договор на обслуживание с актами', 'Проверить акты и журнал подрядчика'],
+        # услуга: акт выдаём только после выезда и обследования объекта (решение владельца 11.11.2026)
+        'service': {'name': 'Обследование объекта с выдачей акта дератизации и дезинсекции', 'price': '3000',
+                    'desc': 'Акт выдаём только после выезда специалиста и обследования объекта: в нём — реальная ситуация '
+                            'на объекте, находки по точкам контроля и рекомендации. Документ без обследования не продаём.'},
+        'comment_ph': 'Комментарий: адрес, площадь, когда удобен выезд',
         'date_published': '2026-11-11', 'date_modified': '2026-11-11',
         'docs': [('Образец акта обследования и выполненных работ по дезинсекции и дератизации', AKT_PDF),
                  ('Бланк акта обследования и выполненных работ по дезинсекции и дератизации', AKT_BLANK)],
@@ -143,7 +154,7 @@ PAGES = [
                                            'контроля грызунов у стены, менеджер по качеству сверяет её с план-схемой точек',
         'faq': SK_FAQ, 'faq_h2': 'Вопросы <em>о схеме точек</em>', 'faq_open': True,
         'types': TYPES, 'name': 'Схема точек пест-контроля',
-        'need': ['Составить схему точек для объекта', 'Проверить схему и журнал подрядчика', 'Договор на обслуживание'],
+        'need': ['Заказать схему точек для объекта', 'Проверить схему и журнал подрядчика', 'Договор на обслуживание'],
         'comment_ph': 'Комментарий: площадь, этажи, есть ли схема сейчас',
         'date_published': '2026-11-11', 'date_modified': '2026-11-11',
         'docs': [('Образец план-схемы точек пест-контроля (форма СТПК-01)', SK_PDF)],
@@ -171,16 +182,43 @@ def json_ld(p):
                                               'url': SITE + 'materialy/', 'name': 'Материалы о пест-контроле'},
             'hasPart': docs if len(docs) > 1 else docs[0]}
     graph = [NB.ORG, crumbs, page, faq]
+    if p.get('service'):
+        sv = p['service']
+        graph.append({'@type': 'Service', '@id': url + '#service', 'name': sv['name'], 'description': sv['desc'],
+                      'serviceType': 'Дератизация и дезинсекция', 'provider': {'@id': SITE + '#org'},
+                      'areaServed': [{'@type': 'City', 'name': 'Москва'}, {'@type': 'AdministrativeArea', 'name': 'Московская область'}],
+                      'offers': {'@type': 'Offer', 'price': sv['price'], 'priceCurrency': 'RUB', 'url': url + '#zakazat',
+                                 'availability': 'https://schema.org/InStock'}})
     return ('<script type="application/ld+json">'
             + json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False) + '</script>')
 
 
-def legend_html():
-    cont = ''.join(f'<span><i class="ln{" dot" if k == "К3" else ""}" style="border-color:{c}"></i>{k} — {n.lower() if k != "К2" else "периметр здания"}</span>'
-                   for k, (n, c) in S.K.items())
-    types = ''.join(f'<span>{svg.replace("#3f3f46", "currentColor")}<b>{t}</b>&nbsp;— {n[0].lower() + n[1:]}</span>'
-                    for t, n, svg in S.legend_items())
-    return cont + types
+def side_html():
+    """Панель сбоку от плана: контуры (они же фильтр точек) и типы точек — значки тех же цветов, что на плане."""
+    c = S.counts()
+    short = {'К1': 'Территория', 'К2': 'Периметр здания', 'К3': 'Внутренние помещения'}
+    note = {'К1': 'ограждение, отмостка, площадка ТКО', 'К2': 'ворота, доки, входы', 'К3': 'цех, склады, АБК'}
+    rows = [f'<button type="button" class="sk-f is-on" data-f="" aria-pressed="true"><span class="sk-sw" aria-hidden="true">' + ''.join(f'<i class="dt" style="background:{col}"></i>' for _, col in S.K.values()) + '</span>'
+            f'<span class="sk-f-t"><b>Все точки</b></span><span class="sk-f-n">{len(S.POINTS)}</span></button>']
+    for k, (n, col) in S.K.items():
+        rows.append(f'<button type="button" class="sk-f" data-f="{k}" aria-pressed="false"><span class="sk-sw" aria-hidden="true">'
+                    f'<i class="ln{" dot" if k == "К3" else ""}" style="border-color:{col}"></i></span>'
+                    f'<span class="sk-f-t"><b>{k} · {short[k]}</b><small>{note[k]}</small></span><span class="sk-f-n">{c[k]}</span></button>')
+    used = {}
+    for code, k, *_ in S.POINTS:
+        t = code.split('-')[0]
+        used.setdefault(t, [])
+        if k not in used[t]:
+            used[t].append(k)
+    types = []
+    for t, (name, kind) in S.T.items():
+        ks = sorted(used.get(t, []))
+        icons = ''.join(f'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">{S.mark(kind, 12, 12, S.K[k][1], 7)}</svg>'
+                        for k in ks)
+        types.append(f'<li><span class="sk-ico">{icons}</span><span class="sk-ty-t"><span><b>{t}</b> — {name[0].lower() + name[1:]}</span>'
+                     f'<small>{", ".join(ks)}</small></span></li>')
+    return ('<p class="sk-side-h">Контуры защиты</p>\n<div class="sk-fs" role="group" aria-label="Показать точки контура">'
+            + ''.join(rows) + '</div>\n<p class="sk-side-h">Типы точек</p>\n<ul class="sk-types">' + ''.join(types) + '</ul>')
 
 
 # скрипт плана: фильтр по контуру и карточка точки из реестра; цели Метрики на скачивание PDF
@@ -228,7 +266,7 @@ def main():
         for p in PAGES:
             src = (HERE / p['src']).read_text(encoding='utf-8')
             if p['key'] == 'skhema':
-                src = src.replace('<!--SK_PLAN-->', S.plan_svg(web=True)).replace('<!--SK_LEGEND-->', legend_html())
+                src = src.replace('<!--SK_PLAN-->', S.plan_svg(web=True)).replace('<!--SK_SIDE-->', side_html())
             f = pathlib.Path(tmp) / p['src']
             f.write_text(src, encoding='utf-8')
             q = dict(p, src=str(f))

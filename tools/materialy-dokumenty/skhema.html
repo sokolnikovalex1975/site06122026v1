@@ -9,9 +9,8 @@
       <p class="lead">Схема точек пест-контроля (план-схема ТПК) — план объекта, на котором пронумерована каждая станция, ловушка и световая лампа. По ней специалист обходит точки, а инспектор и аудитор сверяют журнал с тем, что видят на месте. План размещения ловушек прямо требует ГОСТ Р 54762-2011 (п. 12.5). Ниже — интерактивный образец для хлебопекарного цеха на 30 точек и PDF.</p>
       <div class="d-btns">
         <a href="@/materialy/skhema-tochek-pest-kontrolya/obrazets-skhemy-tochek-pest-kontrolya.pdf" class="btn btn-w btn-lg" download data-dl="skhema"><span class="btn-t">Скачать образец схемы</span></a>
-        <a href="#zayavka" class="btn btn-o btn-lg" data-need="Составить схему точек для объекта"><span class="btn-t">Составить схему для объекта</span></a>
+        <a href="#zayavka" class="btn btn-o btn-lg" data-need="Заказать схему точек для объекта"><span class="btn-t">Заказать схему для объекта</span></a>
       </div>
-      <p class="nb-byline p-hero-note">Подготовила Марианна Семерина, санитарный врач · нормы сверены 11.11.2026</p>
     </div>
     <nav class="p-toc nb-toc" aria-label="Разделы страницы"><a href="#korotko">Коротко</a><a href="#obrazets">Образец</a><a href="#na-skheme">Что на схеме</a><a href="#oboznacheniya">Обозначения</a><a href="#rasstanovka">Как расставляют</a><a href="#izmeneniya">Изменения</a><a href="#oshibki">Ошибки</a><a href="#voprosy">Вопросы</a></nav>
   </div>
@@ -34,17 +33,15 @@
   <div class="wrap">
     <div class="head"><div class="eyebrow">Образец</div><h2>Образец план-схемы: <em>хлебопекарный цех, 30 точек</em></h2><p class="sub">Тот же объект, что в образцах <a href="@/materialy/zhurnal-pest-kontrolya/">журнала пест-контроля</a> и <a href="@/materialy/akt-deratizatsii-i-dezinsektsii/">акта</a>: номера, места и пороги точек совпадают. Нажмите на точку, чтобы увидеть её в реестре.</p></div>
     <figure class="nb-fig sk-fig">
-      <div class="sk-bar" role="group" aria-label="Показать контур">
-        <button type="button" class="nb-chip sk-f is-on" data-f="" aria-pressed="true">Все точки · 30</button>
-        <button type="button" class="nb-chip sk-f" data-f="К1" aria-pressed="false"><i style="background:#22c55e"></i>К1 · территория · 8</button>
-        <button type="button" class="nb-chip sk-f" data-f="К2" aria-pressed="false"><i style="background:#f97316"></i>К2 · периметр здания · 8</button>
-        <button type="button" class="nb-chip sk-f" data-f="К3" aria-pressed="false"><i style="background:#60a5fa"></i>К3 · помещения · 14</button>
-      </div>
-      <div class="sk-paper" id="skPlan"><!--SK_PLAN--></div>
-      <p class="sk-scroll">План шире экрана — листайте его вбок.</p>
-      <div class="sk-info card" id="skInfo" aria-live="polite"><p class="sk-info-e">Нажмите на точку на плане — здесь появятся её тип, контур, место установки и порог из реестра.</p></div>
-      <div class="sk-leg">
-        <!--SK_LEGEND-->
+      <div class="sk-layout">
+        <div class="sk-main">
+          <div class="sk-paper" id="skPlan"><!--SK_PLAN--></div>
+          <p class="sk-scroll">План шире экрана — листайте его вбок.</p>
+        </div>
+        <div class="sk-side card">
+<!--SK_SIDE-->
+          <div class="sk-info" id="skInfo" aria-live="polite"><p class="sk-info-e">Нажмите на точку на плане — здесь появятся её тип, контур, место установки и порог из реестра.</p></div>
+        </div>
       </div>
       <figcaption class="nb-fig-note">Масштаб условный. Цвет точки — контур защиты, форма — тип устройства. В PDF — план на первом листе и реестр всех 30 точек на втором.</figcaption>
     </figure>

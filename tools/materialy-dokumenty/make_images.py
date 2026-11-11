@@ -4,7 +4,7 @@
     python3 tools/materialy-dokumenty/make_images.py akt-hero=<мастер.png> skhema-hero=<мастер.png>
 
 Мастер-файлы (PNG 2752×1536, Nano Banana Pro, без сжатия) — в файлах проекта, папка «Страницы Акт и Схема точек/Визуалы v1»:
-    akt-hero-v1-master.png    — специалист передаёт акт менеджеру по качеству в хлебопекарном цехе;
+    akt-hero-v2-master.png    — специалист показывает акт обследования менеджеру по качеству в хлебопекарном цехе (с 11.11.2026, v1 заменён);
     skhema-hero-v1-master.png — на складе сверяют станцию контроля грызунов с план-схемой точек.
 Размеры и кадр для телефона — как в tools/normativnaya-baza/make_images.py (1920×1072, 1440×804, 1024×768, 760×570).
 Картинки для соцсетей (img/akt-og.jpg, img/skhema-og.jpg) — node tools/materialy-dokumenty/og.mjs.

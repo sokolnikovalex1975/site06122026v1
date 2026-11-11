@@ -10,7 +10,7 @@ const root = path.resolve(here, '../..');
 const tpl = path.join(root, 'tools/normativnaya-baza/og/og.html');
 const cards = [
   { out: 'img/akt-og.jpg', photo: 'img/akt-hero.webp', ey: 'Материалы · образец и бланк PDF',
-    h1: 'Акт дератизации и дезинсекции: <em>образец и что в нём указать</em>', ft: 'Реквизиты акта, ошибки и хранение' },
+    h1: 'Акт дератизации и дезинсекции: <em>образец и что в нём указать</em>', ft: 'Образец и бланк · акт по объекту — после обследования, 3 000 ₽' },
   { out: 'img/skhema-og.jpg', photo: 'img/skhema-hero.webp', ey: 'Материалы · образец PDF',
     h1: 'Схема точек пест-контроля: <em>образец и правила</em>', ft: 'Контуры защиты, нумерация и обозначения точек' },
 ];
