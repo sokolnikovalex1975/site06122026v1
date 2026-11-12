@@ -40,7 +40,7 @@ def nw(text):
 def tp(text):
     return typo(nw(text))
 
-VERSION = '20261111foto'  # общая версия style.css и app.min.js для сброса кэша
+VERSION = '20261112fon'  # общая версия style.css и app.min.js для сброса кэша
 
 HEAD_SCRIPT = (
     "<script>\n"
