@@ -1,0 +1,232 @@
+{
+ "agrostan": {
+  "w": 132,
+  "h": 140,
+  "src": [
+   95,
+   101
+  ],
+  "mode": "light",
+  "bytes": 3322
+ },
+ "atelika": {
+  "w": 188,
+  "h": 140,
+  "src": [
+   106,
+   79
+  ],
+  "mode": "light",
+  "bytes": 5820
+ },
+ "avenyu": {
+  "w": 179,
+  "h": 140,
+  "src": [
+   105,
+   82
+  ],
+  "mode": "light",
+  "bytes": 5464
+ },
+ "azimut": {
+  "w": 178,
+  "h": 140,
+  "src": [
+   98,
+   77
+  ],
+  "mode": "light",
+  "bytes": 3576
+ },
+ "brusnichka": {
+  "w": 141,
+  "h": 140,
+  "src": [
+   108,
+   107
+  ],
+  "mode": "mix",
+  "bytes": 5506
+ },
+ "fizkult": {
+  "w": 360,
+  "h": 136,
+  "src": [
+   111,
+   42
+  ],
+  "mode": "light",
+  "bytes": 8392
+ },
+ "gerkules": {
+  "w": 208,
+  "h": 140,
+  "src": [
+   126,
+   85
+  ],
+  "mode": "tonal",
+  "bytes": 12706
+ },
+ "grand-otel-uyut": {
+  "w": 196,
+  "h": 140,
+  "src": [
+   98,
+   70
+  ],
+  "mode": "light",
+  "bytes": 9566
+ },
+ "infit": {
+  "w": 206,
+  "h": 140,
+  "src": [
+   109,
+   74
+  ],
+  "mode": "light",
+  "bytes": 5398
+ },
+ "orange-club": {
+  "w": 260,
+  "h": 140,
+  "src": [
+   119,
+   64
+  ],
+  "mode": "light",
+  "bytes": 6908
+ },
+ "ris": {
+  "w": 190,
+  "h": 140,
+  "src": [
+   95,
+   70
+  ],
+  "mode": "light",
+  "bytes": 7832
+ },
+ "shchepka": {
+  "w": 71,
+  "h": 140,
+  "src": [
+   55,
+   109
+  ],
+  "mode": "dark",
+  "bytes": 3130
+ },
+ "siti-med": {
+  "w": 276,
+  "h": 140,
+  "src": [
+   126,
+   64
+  ],
+  "mode": "light",
+  "bytes": 6922
+ },
+ "sotsagroprodukt": {
+  "w": 207,
+  "h": 140,
+  "src": [
+   127,
+   86
+  ],
+  "mode": "tonal",
+  "bytes": 7306
+ },
+ "spice": {
+  "w": 256,
+  "h": 140,
+  "src": [
+   130,
+   71
+  ],
+  "mode": "light",
+  "bytes": 5068
+ },
+ "status": {
+  "w": 155,
+  "h": 140,
+  "src": [
+   122,
+   110
+  ],
+  "mode": "mix",
+  "bytes": 3572
+ },
+ "stolitsa": {
+  "w": 152,
+  "h": 140,
+  "src": [
+   100,
+   92
+  ],
+  "mode": "light",
+  "bytes": 4014
+ },
+ "ukrop": {
+  "w": 158,
+  "h": 140,
+  "src": [
+   123,
+   109
+  ],
+  "mode": "light",
+  "bytes": 6806
+ },
+ "veer": {
+  "w": 128,
+  "h": 140,
+  "src": [
+   108,
+   118
+  ],
+  "mode": "mix",
+  "bytes": 4218
+ },
+ "vita": {
+  "w": 132,
+  "h": 140,
+  "src": [
+   81,
+   86
+  ],
+  "mode": "light",
+  "bytes": 4178
+ },
+ "yandex-market": {
+  "w": 360,
+  "h": 73,
+  "src": [
+   1272,
+   258
+  ],
+  "mode": "light",
+  "bytes": 3398
+ },
+ "yandex-taxi": {
+  "w": 360,
+  "h": 76,
+  "src": [
+   2560,
+   538
+  ],
+  "mode": "light",
+  "bytes": 2600
+ },
+ "yandex": {
+  "w": 353,
+  "h": 140,
+  "src": [
+   1197,
+   475
+  ],
+  "mode": "light",
+  "bytes": 2776
+ }
+}
