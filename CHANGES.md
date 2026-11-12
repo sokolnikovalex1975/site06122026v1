@@ -13,6 +13,9 @@
   фактура не запрашивается, ошибок JavaScript и горизонтальной прокрутки нет; `tracking_laws.py --check` — OK.
 - **Timeweb:** точечный пакет из актуального сайта `tools/deploy/prepare-2026-11-12-pests-map.py`, серверный скрипт
   `tools/deploy/publish_pests_map.py`; другие правки из GitHub не переносятся. Журнал и откат — `tools/site/pests-map-2026-11-12.md`.
+- **Опубликовано на Timeweb** 12.11.2026 в 23:25 МСК: `PUBLISHED: 44/44 checksums verified` (рисунок, `style.css`, 42 страницы),
+  HTTPS-сверка 44/44, `tracking_laws` 42/42 без нарушений, тест на рабочем сайте 18/18. Откат —
+  `python3 "$HOME/pestcontrol-pests-map-2026-11-12/publish_pests_map.py" --rollback`.
 
 ## 12.11.2026: превью блока «Наши клиенты» (только GitHub; рабочие страницы и Timeweb не менялись)
 
