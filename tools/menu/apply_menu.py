@@ -302,6 +302,33 @@ def search_ui(s, root):
     return s
 
 
+COMPANY_STYLE = (
+    '<style id="ft-company-st">'
+    'footer .ft-company{--ft-company-size:.5625rem;margin-top:16px;'
+    'font-size:var(--ft-company-size);font-weight:400;line-height:1.5;'
+    'letter-spacing:0;color:#858589;overflow-wrap:anywhere}'
+    'footer .ft-company p{margin:0;font:inherit;color:inherit}'
+    'footer .ft-company p+p{margin-top:4px}'
+    '</style>'
+)
+COMPANY_BLOCK = (
+    '<div class="wrap ft-company" id="requisites">'
+    '<p>ООО «Центр дезинфекционных услуг» · ИНН 7714462211 · КПП 771401001 · ОГРН 1207700257775</p>'
+    '<p>Адрес склада: 123007, г. Москва, 2-й Хорошёвский проезд, д. 7, к. 1, помещ. 1.</p>'
+    '</div>'
+)
+
+
+def company_footer(s):
+    """Общие реквизиты; адрес склада подтверждён владельцем 12.11.2026."""
+    s = re.sub(r'<style id="ft-company-st">.*?</style>\n?', '', s, flags=re.S)
+    s = re.sub(r'\n?  <div class="wrap ft-company" id="requisites">.*?</div>\n?', '\n', s, flags=re.S)
+    assert s.count('</head>') == 1, 'не один </head>'
+    assert s.count('</footer>') == 1, 'не один </footer>'
+    s = s.replace('</head>', COMPANY_STYLE + '\n</head>', 1)
+    return s.replace('</footer>', '  ' + COMPANY_BLOCK + '\n</footer>', 1)
+
+
 def apply_page(s, root, cur):
     """Шапка, мобильное меню, подвал и поиск одной страницы (тот же код правит страницы, снятые с сайта)."""
     cta = re.search(r'<nav class="mmenu"[^>]*>.*?(<a href="(?:\.\./)*#zayavka" class="btn btn-w btn-lg">.*?</a>)\s*</nav>', s, re.S).group(1)
@@ -309,13 +336,18 @@ def apply_page(s, root, cur):
     s = sub1(r'<nav class="nav" aria-label="Основное меню">.*?</nav>', nav, s)
     s = sub1(r'<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">.*?</nav>', mm, s)
     s = sub1(r'<div><h4>(?:Объекты|Отрасли|Услуги)</h4>.*?(?=\n\s*<div><h4>Контакты</h4>)', cols, s)
-    return search_ui(s, root)
+    return company_footer(search_ui(s, root))
 
 
 def main():
     for rel, root, cur in PAGES + LEGAL:
         f = ROOT / rel
         s = f.read_text(encoding='utf-8')
+        if '--footer-only' in sys.argv[1:]:
+            # Точечный патч без пересборки меню, текста, фотографий и счётчиков.
+            f.write_text(company_footer(s), encoding='utf-8')
+            print('footer', rel)
+            continue
         s = apply_page(s, root, cur)
         # нижняя строка подвала: ссылка на согласие рядом с политикой
         if not re.search('Согласие на[ \u00a0]обработку данных</a>', s):  # с неразрывным пробелом тоже
