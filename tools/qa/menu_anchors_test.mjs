@@ -40,7 +40,13 @@ for (const [vn, w, h, mob] of VP) {
         if (!mob) { for (let i = 0; i < 90; i++) { await page.mouse.wheel(0, 700); await page.waitForTimeout(35); } }
         await page.waitForTimeout(1200);
         await a.evaluate(el => { const r = el.getBoundingClientRect(); if (r.top < 0 || r.bottom > innerHeight) window.scrollTo(0, r.top + scrollY - innerHeight / 2); });
-        await page.waitForTimeout(1200);
+        // без Lenis (политика, согласие) браузер прокручивает плавно — ждём, пока прокрутка остановится, иначе касание
+        // попадёт в соседнюю ссылку (13.11.2026)
+        for (let i = 0, last = -1, same = 0; i < 50 && same < 3; i++) {
+          await page.waitForTimeout(150);
+          const y = await page.evaluate(() => scrollY);
+          same = y === last ? same + 1 : 0; last = y;
+        }
         const b = await a.boundingBox();
         if (mob) await page.touchscreen.tap(b.x + b.width / 2, b.y + b.height / 2);
         else await page.mouse.click(b.x + b.width / 2, b.y + b.height / 2);

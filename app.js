@@ -152,9 +152,14 @@
      Ссылки на другие страницы не отслеживаются; текущая страница отмечена в HTML (aria-current) */
   var links = $$('.nav > a[href^="#"], .nav [data-spy]');
   var spyId = function (l) { return (l.getAttribute('data-spy') || l.getAttribute('href')).slice(1); };
+  /* блок дошёл до середины экрана — подсветить его пункт (остальные погасить); ушёл из середины — погасить его пункт.
+     Раньше подсветка гасла только у следующего отслеживаемого блока: «Цена» горела и у вопросов, и у формы (13.11.2026) */
   var so = new IntersectionObserver(function (es) {
     es.forEach(function (e) {
-      if (e.isIntersecting) links.forEach(function (l) { l.classList.toggle('active', spyId(l) === e.target.id); });
+      links.forEach(function (l) {
+        if (e.isIntersecting) l.classList.toggle('active', spyId(l) === e.target.id);
+        else if (spyId(l) === e.target.id) l.classList.remove('active');
+      });
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
   links.forEach(function (l) { var s = document.getElementById(spyId(l)); if (s) so.observe(s); });
@@ -846,4 +851,46 @@
   });
 
   setTimeout(runLater, 0);
+})();
+
+/* ---------- переход по ссылке с якорем с другой страницы (13.11.2026) ----------
+   Ссылки вида /#tseny («Цена» на странице политики), ../#podhod («Метод IPM» на страницах услуг), ../#etapy,
+   ../#vrediteli, ../#voprosy. Раньше браузер начинал плавную прокрутку к блоку ещё до запуска скриптов, а запуск
+   Lenis и пересчёт ScrollTrigger её обрывали: блок оставался ниже середины экрана, на телефоне до него не доходило.
+   Теперь браузер сразу ставит страницу на блок (style.css: html:has(:target) — без плавной прокрутки), а здесь
+   положение держится, пока страница догружается: верх блока на scroll-padding-top (+ scroll-margin-top блока)
+   от верха окна — там же, куда ставит браузер. Поправка — после загрузки страницы и шрифтов, после каждого пересчёта
+   ScrollTrigger и при сдвиге прокрутки не посетителем (картинки и шрифты сдвигают блок, пересчёт возвращает старое
+   место), но только до первого действия посетителя (колесо, касание, клавиша, нажатие) и не дольше 2,5 с после
+   загрузки. При «Назад» и обновлении страницы браузер сам возвращает прежнее место — тогда раздел ничего не делает.
+   Этот раздел без изменений дописан в app.min.js рабочего сайта (tools/deploy/prepare-2026-11-13-yakor.py). */
+(function () {
+  var w = window, d = document, h = w.location.hash, t = null;
+  if (!h || h.length < 2 || h === '#top') return;
+  var nav = w.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+  if (nav && nav.type && nav.type !== 'navigate') return;
+  try { t = d.getElementById(decodeURIComponent(h.slice(1))); } catch (e) { t = null; }
+  if (!t) return;
+  var root = d.documentElement, done = false, until = 0, ST = w.ScrollTrigger && ScrollTrigger.addEventListener ? ScrollTrigger : null;
+  var stop = function () { done = true; };
+  ['wheel', 'touchstart', 'keydown', 'mousedown', 'pointerdown'].forEach(function (n) { w.addEventListener(n, stop, { passive: true, capture: true }); });
+  var land = function () {
+    if (done || (until && Date.now() > until)) { w.removeEventListener('scroll', land); return; }
+    var r = t.getBoundingClientRect();
+    if (!r.width && !r.height) return; /* блок скрыт */
+    var off = (parseFloat(getComputedStyle(root).scrollPaddingTop) || 0) + (parseFloat(getComputedStyle(t).scrollMarginTop) || 0);
+    var y = Math.max(0, Math.min(Math.round(r.top + w.pageYOffset - off), root.scrollHeight - w.innerHeight));
+    if (Math.abs(w.pageYOffset - y) < 2) return;
+    try { w.scrollTo({ top: y, left: 0, behavior: 'instant' }); } catch (e) { w.scrollTo(0, y); }
+  };
+  var settle = function () {
+    until = Date.now() + 2500;
+    land();
+    [300, 1000, 2000].forEach(function (ms) { setTimeout(land, ms); });
+  };
+  land();
+  w.addEventListener('scroll', land, { passive: true });
+  if (d.readyState === 'complete') settle(); else w.addEventListener('load', settle);
+  if (d.fonts && d.fonts.ready) d.fonts.ready.then(land);
+  if (ST) ST.addEventListener('refresh', land);
 })();

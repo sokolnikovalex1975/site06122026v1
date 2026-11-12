@@ -29,6 +29,10 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:96px}
+/* переход по ссылке с якорем с другой страницы (/#tseny, ../#podhod): браузер сразу ставит страницу на блок, а не плывёт
+   к нему от верха — плавную прокрутку обрывали запуск скриптов и пересчёт анимаций (app.js, раздел «переход по ссылке
+   с якорем», 13.11.2026) */
+html:has(:target){scroll-behavior:auto}
 html.lenis,html.lenis body{height:auto}
 html.lenis{scroll-behavior:auto}
 .lenis.lenis-stopped{overflow:clip}
