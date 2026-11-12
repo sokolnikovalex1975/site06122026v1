@@ -772,3 +772,10 @@ html.js.hero-in #hero .hero-lit{opacity:.01}
 .pests-bg{background:url(img/pests-map.svg) 0 0/1200px 1200px repeat,radial-gradient(38% 30% at 80% 22%,rgba(99,102,241,.2),transparent 70%),radial-gradient(34% 28% at 16% 80%,rgba(124,134,255,.12),transparent 70%),#050508}
 .pests-s::before{content:none}
 .pests-s::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,#000,rgba(0,0,0,0) 120px,rgba(0,0,0,0) calc(100% - 120px),#000)}
+
+/* ===== Первый экран главной на телефоне: отступ до бегущей строки (13.11.2026) =====
+   Решение владельца 13.11.2026 (превью по скриншотам 12.11.2026). Под панелью «Что покажет бесплатный аудит» было 80 px
+   пустоты до бегущей строки, при прокрутке панель ещё уезжала вверх — до 145–175 px чёрного поля. Уход первого экрана
+   при прокрутке теперь только шире 1280 px (app.js), а на телефоне нижний отступ героя 32 px — как промежуток между
+   текстом первого экрана и панелью. Только главная: у внутренних страниц .f-hero / .d-hero / .p-hero свои отступы. */
+@media (max-width:760px){#hero.hero:not(.f-hero){padding-bottom:32px}}

@@ -1,0 +1,535 @@
+{
+ "name": "hero-scroll-2026-11-13",
+ "old_version": "20261112fon",
+ "new_version": "20261113hero",
+ "pages": 42,
+ "files": [
+  {
+   "file": "style.css",
+   "before": "34701ea16b659b9a141a2ce84fd68e29c97ff20b282ece9e9de84c76f2b03a7b",
+   "after": "c8fce4d603ec233910869ea74e7cb152e1d0f82aa007198eaa7526d2fa08ee21",
+   "append": "\n/* ===== Первый экран главной на телефоне: отступ до бегущей строки (13.11.2026) =====\n   Решение владельца 13.11.2026 (превью по скриншотам 12.11.2026). Под панелью «Что покажет бесплатный аудит» было 80 px\n   пустоты до бегущей строки, при прокрутке панель ещё уезжала вверх — до 145–175 px чёрного поля. Уход первого экрана\n   при прокрутке теперь только шире 1280 px (app.js), а на телефоне нижний отступ героя 32 px — как промежуток между\n   текстом первого экрана и панелью. Только главная: у внутренних страниц .f-hero / .d-hero / .p-hero свои отступы. */\n@media (max-width:760px){#hero.hero:not(.f-hero){padding-bottom:32px}}\n"
+  },
+  {
+   "file": "app.min.js",
+   "before": "54b05c9551f29c36922fcf85e2c0b0c0f46e87255d6d63d3f2a357ec65d711f1",
+   "after": "7955721307d2608c34ffa906a0f616d15f352131332d300c85bd7525c529834f",
+   "replace": [
+    [
+     "gsap.timeline({scrollTrigger:{trigger:P,start:\"top top\",end:\"bottom top\",scrub:!0}}).to(F,{yPercent:14,scale:1.1,ease:\"none\"},0).to(\".hero .wrap\",{y:-110,opacity:.1,ease:\"none\"},0)",
+     "gsap.matchMedia().add(\"(min-width: 1281px)\",function(){gsap.timeline({scrollTrigger:{trigger:P,start:\"top top\",end:\"bottom top\",scrub:!0}}).to(F,{yPercent:14,scale:1.1,ease:\"none\"},0).to(\".hero .wrap\",{y:-110,opacity:.1,ease:\"none\"},0)})",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "biznes-tsentry-torgovye-tsentry-predpriyatiya/index.php",
+   "before": "7d4d80fd53a1b5cbb19d1d790cf2121ad7b4b39bec93e1e98ada2d546757a02a",
+   "after": "2a33d14c2923e719e5c69f3b96c872a84c52a07a23d8fb76f4c022c562c50412",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya-i-dezinsektsiya/index.php",
+   "before": "aa681878c9e118a75527902bc585b5ba6ef0484ce8deff62513f664a6c10ccd5",
+   "after": "0ca2aca03632f9807b45ca78dfd264156d252e967146f7e0dc9cf1bf68101b5b",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya/index.php",
+   "before": "462811a13693568523282a28d86c66bddcac62bb7f28269061a7ded355485a01",
+   "after": "b38b041ebeedf6635631e1e473213e1a06b78ed88975bae85b34ad7a2e68af3b",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya/restorany-i-kafe/index.php",
+   "before": "147c95f171edd6840ffa1fc5cced99fdf55746dc5e3b83c13dc49faf4bb965f5",
+   "after": "09901ee82a1da69768c997e78645f14646bb2be9de44261796a1bc9b4eadc4fa",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "dezinfektsiya/index.php",
+   "before": "35bc856f4acd93e63cce10afc71400cfe1cddd7e882457cb33ee7e062da4c461",
+   "after": "c236e9ac20945b78cb22e31c7eed01cba57738256a9d8e1df3425535d372e23a",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/index.php",
+   "before": "86f9e09cd5612e7b30ccab2f3635c4606738899322d20e4fc13b5f56829c315d",
+   "after": "20f506c6b72af98678f343d110a1ad80c05c6a2f9319ff2368ece8de82a54c16",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/restorany-i-kafe/index.php",
+   "before": "c114ed535706cc0d0305885514a9f34ec3baa293a83befd413243cd60a0f7701",
+   "after": "8369e7d7ae8ccf7364d797fb758c4e4f75cc9b828bf862a213e5bcc5309aa2e9",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "dogovor-deratizatsiya-dezinsektsiya/index.php",
+   "before": "6257b39dd71937d903466baaf8feff5627f287f51a724f4d98a02442e38976d3",
+   "after": "d4c9cda90f2e9e23ef1eb5adae581a040c1bcca6af95e85a5648a4b153f8f53a",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "farmatsevticheskie-proizvodstva/index.php",
+   "before": "0849a1dccf4f68e0242f1835bc20efff20fb91963abb2bb9ecefdbffb1e8859e",
+   "after": "a7fd485686191b5e723837852ed7e8c9185d6bddd43800616d9e2b74082763bd",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "gostinitsy/index.php",
+   "before": "fb025d5c97630bf38f528836259fd22451996887e0aa406e71249b532477f495",
+   "after": "db8796a71a79578decf4182a8688ff960c74d1e22088cf7484f5757ae3dfd402",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "index.php",
+   "before": "34747c28e95a3a5d14f9c02772479c2e87328e81ef9fe0314c73f9f904b0728a",
+   "after": "18017e0ed93cf8d6fde1959818a61010cd85dc9adec12a63d65f319218fd3b67",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     1
+    ],
+    [
+     "</style>\n<!-- UIS -->",
+     "</style><style id=\"hero-scroll-st\">@media (max-width:760px){#hero.hero:not(.f-hero){padding-bottom:32px}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-pishchevykh-produktov/index.php",
+   "before": "df237333f0c93100fac41e95905607f40276b2b022274bb4953c067c88772e1d",
+   "after": "519e25c7de100ac2e72e1649fb276ace3ee0debff1325e523c3b050fb841383b",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-smyvov/index.php",
+   "before": "be3a3b908b38809056b3ebac78454c144fc1913fa07f36f19afc942e7495b477",
+   "after": "ab2efb818ab669a331f49556cc40b3eccacd3bc7a9c3581ac50b525137bedc89",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-vody/index.php",
+   "before": "ed7879fabc5f11c9f240840a423366faaac931f657486ed4747a9fde313badcc",
+   "after": "733f6879aee8cb4bb0293649e87ef805bb2c2981820927efdcea6e5b08d34588",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-vozdukha-rabochey-zony/index.php",
+   "before": "20d2f9d15abc5568692f8f6ad58e8a259ea57741ad8acbdeb749db1c0954ce57",
+   "after": "e47d45d69c9be587ce4c15041b5ac1914cbd5c6eed0826baaca80e14546fcdf3",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/index.php",
+   "before": "00128a52af0d65aab22acf998fce800083a7e0f144c600fdbb36599ace557be0",
+   "after": "fa7f364de00feda371df4e6757720f3113cf4e7a5d4499b75acb504fa94213eb",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/izmerenie-mikroklimata/index.php",
+   "before": "d261afa6d32af3e68e7aad338abd3304e70fdd15711a69e11184c6ca5001a35c",
+   "after": "9368b8d57cd842c300fd0a4f1df728380fb1f60ac1e8b8cd7da7685f6594aa14",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/kontrol-sterilizatorov/index.php",
+   "before": "2b27662ecab422a937cf8b2a3b956923214dc3dad05a1af60260c22e5b15f116",
+   "after": "b89010c6177c079478593733c91017c1a7c2c5357c1bf4751ebbf3422995ef7c",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/zamer-osveshchennosti/index.php",
+   "before": "b313f6e0a5f5c0c8eb528278b93691c706c1f8a29db0294974ade960e538bd41",
+   "after": "4a16693d3dabe4911814ea2b5c722d5d2dbea914038f1d81a024e664190d6718",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "magaziny-i-torgovye-seti/index.php",
+   "before": "1aa826e2a4501015f04c358b33c4e2b8c7ddc1a77733bf1d363411f76ebbcf6c",
+   "after": "d524832fe53f736b0194a1cb38b17f3e2a7eb94c01ade74c6b80719d70f2a54e",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/akt-deratizatsii-i-dezinsektsii/index.php",
+   "before": "5d3d34ad1c758ee12491ccef786795e0d411cccb080b8af74fad87ddd43f25a7",
+   "after": "ab623f3029f96c9043cf17c988f61d61cd0b1288aa67733f3ec7558e92a6c150",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/index.php",
+   "before": "7bdc908ccdbd6f6bd2e5f2d612c827a64deae65a08a7d1cfd38a10f861d71231",
+   "after": "70d7413606bb7b39416f2ece08e1dab98a24af83df23e20024f3bab2eb1b32b1",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/kak-berut-smyvy/index.php",
+   "before": "f7b6085a3854b07df179de7812c61386c251ccc75fcece845b5f701032a2e48c",
+   "after": "06531939fc7e69ec7ef31eea4b52e0c4bcabd7bca5e8df2d935ead383ff26e42",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/kontrol-raboty-sterilizatorov/index.php",
+   "before": "20192756c8ab6fcf38b09a945467fdca8a1494a585074d032dc5de698bac7c59",
+   "after": "7a9f1868b93ec54d975f645f72b0b1ad783165fdb8456d13f23c523eda28e1f8",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/pest-menedzhment-ili-razovaya-obrabotka/index.php",
+   "before": "60699a56ba9591b64f0fdb9315132121de881405fbc24a5d24249c69382b54b8",
+   "after": "d5fb87e11a9c3a77ac727f2692ed3045a607375e57ceadf5edfd9ace92008ec4",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-pest-kontrolya/index.php",
+   "before": "53af68c6762a22c21f1fab903ff7d8bcf3cef49038ead4b65d0bf8937338e3ae",
+   "after": "b7aaede6e13a9c0473c6ef686ae85391ba8cec9932fcbc2fff4e47fd28d95299",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-proizvodstvennogo-kontrolya-haccp/index.php",
+   "before": "07bee448041f594b16c2ae0ce7904edd78421493d86de4051d1d9d9920a716ba",
+   "after": "571f962c667d9b108384fbed9b7b664731a891ae06aedf30dd9b434a1c9fa108",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/skhema-tochek-pest-kontrolya/index.php",
+   "before": "88ca22a8bc5dd37e222df7b74285003415484158a45ddc4305e13b4401678f5d",
+   "after": "53ecfaf843fad7455f268ebec268ac5232a700e528006af78d32172d0237ce18",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/zamer-osveshchennosti-i-mikroklimata/index.php",
+   "before": "158a23ad048777d17a9158ef6cb78b53fe5332f455954100ddb84574d08b049b",
+   "after": "5831c822da636b0967246db036f840516427944776ec476c46fbe7057ddf15f7",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "materialy/zhurnal-pest-kontrolya/index.php",
+   "before": "3a1fde57055753645340900d84b3789c255fe59300cf7e225cb0a2db78aa45c6",
+   "after": "3fba60c17e50ede9a5b172aab0d9e7cc0660c2bb43af016c29d4bf23ee21a42d",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.php",
+   "before": "a47aca9a3da7af05158c5e4bda74c97d279acf514dd589780a377ae10e4b240e",
+   "after": "3748783d0e1ab8677e0a5e4b04e799ebd6a46046c12e270017def72b18f5f571",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.php",
+   "before": "08425226f6c639fee0986e235f3087f0db3f8d6cc513bb3db29baba93d620993",
+   "after": "910becd8a91610c0ca99e1b78fd58882503d2030a5994f573aec4cad581bfb42",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/index.php",
+   "before": "8bbcea0c26e2be63b74ceadc147f5442fbc44781e59894b11e0e4398698a8e19",
+   "after": "6d379e5008d592a886eb535bf3accc58c7de62f1d523ef4cd7fa7cae6467ff20",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/proverochnye-listy/index.php",
+   "before": "17b4dff81b7dd6afce18b74381f98e46bc5ddb8694f54b8752d1a0ed95d3cf94",
+   "after": "88cc0948593deb05310375df59877e24118a675cb2c60f33f1c9af807cc0c430",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "ochistka-dezinfektsiya-ventilyatsii/index.php",
+   "before": "279ab0389e1396c54f8c7fa1127ab4c97ef47e92997d327da07943651db475ab",
+   "after": "9fd95108a73df594e7cdded675568fdd3f867d0d4bcc0dbb7c96ac56af5e2148",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "pishchevoe-proizvodstvo/index.php",
+   "before": "fec8c189de0bbbaf2f098df131e93380645b22bb7e51271bdf204697ed2fee1c",
+   "after": "39b446053aed15b8b30749d7fd492dabd91ab9bb4007513341246c3d82c72ad2",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "privacy/index.php",
+   "before": "674dc54f200e67ad52d2ebf371188a20eba55090e43d043c665ad7577a2f92d3",
+   "after": "115f926905d37535bcab1f6f610f074168a17b10cb8556a1893a433c9a6b1ce2",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "razrabotka-ppk/index.php",
+   "before": "2f6ab56ac401ac3ae90f6f62e9d94e7589927055306ae6d113b011267c9de86b",
+   "after": "cf6a3963eff946ca9ecfd0cede64cc56214c56ad3006831965c125a365788c2e",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "restorany-i-kafe/index.php",
+   "before": "47cec6dee3c9e32e3ccd984ab434769e9128a96ebb22c9c4eda876b885cb18b6",
+   "after": "904044f4893d0aa92b10db55b801c6600a897499d249abc954122330270be03b",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "sanitarnyy-audit/index.php",
+   "before": "fd79036402878cfd35c9384836e23f328d0d3a06e5d1d99a83aa3a96c0f04887",
+   "after": "562dc102dfd790e59f24fac7b289a78c54212d2d054a3627f01815bf538d179a",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "sklady-i-logistika/index.php",
+   "before": "b4d50967f91adaf9d133393fb4f7b1a6b07b32f4490c7db66db8fa8be07654da",
+   "after": "b01c53df5a6192a0bda6e4153ee8429ec52d0249332f668f0f595435c0342973",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "soglasie/index.php",
+   "before": "e325340bfab2febcee2bf07c31b541577a7610f536f200978bd7964f29b313fe",
+   "after": "0bcc51dcc1701ef7e49349f9c81380e7aa67cc6218dc7a614932e9263b376afe",
+   "replace": [
+    [
+     "?v=20261112fon",
+     "?v=20261113hero",
+     2
+    ]
+   ]
+  }
+ ]
+}

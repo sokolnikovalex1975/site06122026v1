@@ -469,10 +469,15 @@
       });
       hero.addEventListener('pointerleave', function () { mX(0); mY(0); pX(0); pY(0); });
     }
-    /* уход первого экрана при прокрутке */
-    gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true } })
-      .to(media, { yPercent: 14, scale: 1.1, ease: 'none' }, 0)
-      .to('.hero .wrap', { y: -110, opacity: 0.1, ease: 'none' }, 0);
+    /* уход первого экрана при прокрутке — только шире 1280 px, где панель «Что покажет бесплатный аудит» стоит рядом
+       с текстом и видна целиком сразу. До 1280 px (телефоны, планшеты, небольшие ноутбуки) панель под текстом, её читают
+       во время прокрутки — первый экран не гаснет и не уезжает (решение владельца 13.11.2026). При смене ширины окна
+       gsap.matchMedia сам снимает и возвращает эффект. */
+    gsap.matchMedia().add('(min-width: 1281px)', function () {
+      gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true } })
+        .to(media, { yPercent: 14, scale: 1.1, ease: 'none' }, 0)
+        .to('.hero .wrap', { y: -110, opacity: 0.1, ease: 'none' }, 0);
+    });
   } else if (dHero && dMedia) {
     if (fine && desk) {
       var dmX = gsap.quickTo(dMedia, 'x', { duration: 1.4, ease: 'power3' }), dmY = gsap.quickTo(dMedia, 'y', { duration: 1.4, ease: 'power3' });
