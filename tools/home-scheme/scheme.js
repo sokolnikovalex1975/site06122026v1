@@ -1,0 +1,5 @@
+/* Схема объекта на главной: вкладки и подсветка зон */
+(function(){var r=document.getElementById('shema');if(!r)return;var tabs=r.querySelectorAll('.hz-tab');
+function zone(p,z){p.querySelectorAll('.f-plan [data-z]').forEach(function(g){g.classList.toggle('on',g.getAttribute('data-z')===z)});p.querySelectorAll('.hz-zl li').forEach(function(l){l.classList.toggle('on',l.getAttribute('data-z')===z)})}
+r.querySelectorAll('.hz-pan').forEach(function(p){zone(p,'1');p.addEventListener('mouseover',function(e){var t=e.target.closest('[data-z]');if(t&&p.contains(t))zone(p,t.getAttribute('data-z'))});p.addEventListener('click',function(e){var t=e.target.closest('[data-z]');if(t)zone(p,t.getAttribute('data-z'))});p.addEventListener('focusin',function(e){var t=e.target.closest('li[data-z]');if(t)zone(p,t.getAttribute('data-z'))})});
+tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){var on=x===b;x.classList.toggle('is-on',on);x.setAttribute('aria-selected',on);document.getElementById('hz-p-'+x.dataset.o).hidden=!on})})})})();

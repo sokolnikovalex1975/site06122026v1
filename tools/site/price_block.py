@@ -139,6 +139,8 @@ def block(root, cur, home=False):
         cls = 'card pr-card' + (' pr-main' if n == 0 else '')
         here = (slug == cur) and not home
         mark = '<span class="pr-here">Вы здесь</span>' if here else f'<span class="pr-go" aria-hidden="true">{ARR}</span>'
+        if home and slug == '':  # главная и есть «Пест-контроль по системе IPM»: зелёная метка вместо стрелки (12.11.2026), стиль — tools/home-scheme/scheme.css
+            mark = '<span class="pr-here pr-here-g">Вы здесь</span>'
         inner = f'<div class="pr-num">{num}{mark}</div><h3>{title}</h3><p>{desc}</p>{_amt(a, u)}'
         if here:
             cards.append(f'<div class="{cls}" aria-current="page">{inner}</div>')
