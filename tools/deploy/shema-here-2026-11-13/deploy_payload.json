@@ -1,0 +1,591 @@
+{
+ "name": "shema-here-2026-11-13",
+ "pages": 40,
+ "files": [
+  {
+   "file": "index.php",
+   "before": "34747c28e95a3a5d14f9c02772479c2e87328e81ef9fe0314c73f9f904b0728a",
+   "after": "06cfea1e9294bf5fae3fb8da06e2fe57f058f4effad308ea576a39cb9fbc3068",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     "<a class=\"card pr-card pr-main\" href=\"#podhod\"><div class=\"pr-num\">01 / Постоянная защита<span class=\"pr-go\" aria-hidden=\"true\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></div><h3>Пест-контроль<br>по системе IPM</h3><p>Мониторинг и защита объекта по графику, журнал и акты.</p><div class=\"pr-price\"><span class=\"pr-amt\"><span class=\"pr-from\">от</span>3 900 ₽</span><span class=\"pr-unit\">в месяц</span></div></a>",
+     "<div class=\"card pr-card pr-main\" aria-current=\"page\"><div class=\"pr-num\">01 / Постоянная защита<span class=\"pr-here\">Вы здесь</span></div><h3>Пест-контроль<br>по системе IPM</h3><p>Мониторинг и защита объекта по графику, журнал и акты.</p><div class=\"pr-price\"><span class=\"pr-amt\"><span class=\"pr-from\">от</span>3 900 ₽</span><span class=\"pr-unit\">в месяц</span></div></div>",
+     1
+    ],
+    [
+     "<section class=\"s\" id=\"dokumenty\">",
+     "<!-- home-scheme:start -->\n<section class=\"s\" id=\"shema\" aria-labelledby=\"hz-h\">\n  <div class=\"wrap\">\n    <div class=\"head\"><div class=\"eyebrow\" data-eyebrow>Схема объекта</div><h2 id=\"hz-h\" data-split>Где на объекте <em>появляются вредители</em></h2><p class=\"sub\" data-fade>Так выглядит схема точек контроля, которую мы составляем после бесплатного аудита. Выберите тип объекта и нажмите на зону — покажем, откуда приходят вредители и чем каждую зону контролируем.</p></div>\n    <div class=\"hz-tabs\" role=\"tablist\" aria-label=\"Тип объекта\"><button class=\"hz-tab is-on\" type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"hz-p-food\" id=\"hz-t-food\" data-o=\"food\"><b>Пищевое производство</b><span>6 зон · Цеха, склад сырья, упаковка</span></button><button class=\"hz-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"hz-p-rest\" id=\"hz-t-rest\" data-o=\"rest\"><b>Ресторан и кафе</b><span>7 зон · Кухня, бар, зал, подвал</span></button><button class=\"hz-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"hz-p-sklad\" id=\"hz-t-sklad\" data-o=\"sklad\"><b>Склад и логистика</b><span>7 зон · Доки, стеллажи, периметр</span></button><button class=\"hz-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"hz-p-bc\" id=\"hz-t-bc\" data-o=\"bc\"><b>БЦ, ТЦ, предприятие</b><span>8 зон · Паркинг, подвал, фуд-корт</span></button></div>\n    <div class=\"hz-pan hz-food is-on\" id=\"hz-p-food\" role=\"tabpanel\" aria-labelledby=\"hz-t-food\">\n      <figure class=\"card f-plan\">\n        <svg viewBox=\"0 0 960 600\" role=\"img\" aria-labelledby=\"hz-food-plan-t\">\n          <title id=\"hz-food-plan-t\">Схема пищевого производства: шесть зон риска, точки контроля и движение продукта</title>\n          <defs><marker id=\"hz-food-f-arw\" viewBox=\"0 0 10 10\" refX=\"7\" refY=\"5\" markerWidth=\"8\" markerHeight=\"8\" orient=\"auto\"><path d=\"M0 0L10 5L0 10z\" fill=\"#7c86ff\"/></marker></defs>\n          <g class=\"z z6\" data-z=\"6\"><rect class=\"zf\" x=\"8\" y=\"8\" width=\"944\" height=\"584\" rx=\"22\" stroke=\"rgba(255,255,255,.2)\" stroke-width=\"1.5\" stroke-dasharray=\"7 9\"/></g>\n          <rect x=\"110\" y=\"96\" width=\"740\" height=\"408\" rx=\"6\" fill=\"#0d0d10\"/>\n          <g class=\"z\" data-z=\"1\"><rect class=\"zf\" x=\"110\" y=\"96\" width=\"130\" height=\"408\"/></g>\n          <g class=\"z\" data-z=\"2\"><rect class=\"zf\" x=\"240\" y=\"96\" width=\"180\" height=\"408\"/></g>\n          <g class=\"z\" data-z=\"3\"><rect class=\"zf\" x=\"420\" y=\"96\" width=\"270\" height=\"270\"/></g>\n          <g class=\"z\" data-z=\"4\"><rect class=\"zf\" x=\"420\" y=\"366\" width=\"270\" height=\"138\"/></g>\n          <g class=\"z\" data-z=\"5\"><rect class=\"zf\" x=\"690\" y=\"96\" width=\"160\" height=\"408\"/></g>\n          <g fill=\"none\" stroke=\"rgba(255,255,255,.26)\" stroke-width=\"2.5\" stroke-linecap=\"round\">\n            <path d=\"M110 284V96H850V176M850 216V504H650M610 504H110V324\"/>\n            <path d=\"M240 96V284M240 324V504M420 96V284M420 324V504M690 96V176M690 216V504M420 366H520M560 366H690\"/>\n          </g>\n          <g stroke=\"rgba(255,255,255,.55)\" stroke-width=\"5\" stroke-linecap=\"round\"><path d=\"M110 150V190M110 400V440\"/></g>\n          <g fill=\"rgba(255,255,255,.04)\" stroke=\"rgba(255,255,255,.16)\" stroke-width=\"1.5\">\n            <rect x=\"300\" y=\"168\" width=\"36\" height=\"98\" rx=\"3\"/><rect x=\"364\" y=\"168\" width=\"36\" height=\"98\" rx=\"3\"/>\n            <rect x=\"300\" y=\"342\" width=\"36\" height=\"128\" rx=\"3\"/><rect x=\"364\" y=\"342\" width=\"36\" height=\"128\" rx=\"3\"/>\n            <rect x=\"496\" y=\"146\" width=\"170\" height=\"24\" rx=\"12\"/><rect x=\"496\" y=\"222\" width=\"170\" height=\"24\" rx=\"12\"/>\n            <rect x=\"598\" y=\"286\" width=\"72\" height=\"50\" rx=\"6\"/>\n            <rect x=\"498\" y=\"440\" width=\"72\" height=\"26\" rx=\"4\"/>\n            <rect x=\"716\" y=\"246\" width=\"60\" height=\"50\" rx=\"6\"/>\n            <rect x=\"716\" y=\"334\" width=\"30\" height=\"30\" rx=\"3\"/><rect x=\"756\" y=\"334\" width=\"30\" height=\"30\" rx=\"3\"/><rect x=\"796\" y=\"334\" width=\"30\" height=\"30\" rx=\"3\"/>\n            <rect x=\"716\" y=\"376\" width=\"30\" height=\"30\" rx=\"3\"/><rect x=\"756\" y=\"376\" width=\"30\" height=\"30\" rx=\"3\"/><rect x=\"796\" y=\"376\" width=\"30\" height=\"30\" rx=\"3\"/>\n            <rect x=\"606\" y=\"526\" width=\"36\" height=\"30\" rx=\"3\"/><rect x=\"650\" y=\"526\" width=\"36\" height=\"30\" rx=\"3\"/>\n          </g>\n          <g fill=\"none\" stroke=\"rgba(255,255,255,.3)\" stroke-width=\"1.5\"><circle cx=\"604\" cy=\"446\" r=\"9\"/><circle cx=\"650\" cy=\"412\" r=\"9\"/><path d=\"M598 446H610M604 440V452M644 412H656M650 406V418\"/></g>\n          <path d=\"M26 304H470V196H936\" fill=\"none\" stroke=\"#7c86ff\" stroke-width=\"2.5\" stroke-dasharray=\"9 8\" marker-end=\"url(#hz-food-f-arw)\" opacity=\".85\"/>\n          <g fill=\"#fdc700\" stroke=\"#09090b\" stroke-width=\"2\">\n            <rect x=\"164\" y=\"74\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"324\" y=\"74\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"494\" y=\"74\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"664\" y=\"74\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"804\" y=\"74\" width=\"13\" height=\"13\" rx=\"2\"/>\n            <rect x=\"164\" y=\"513\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"324\" y=\"513\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"474\" y=\"513\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"784\" y=\"513\" width=\"13\" height=\"13\" rx=\"2\"/>\n            <rect x=\"88\" y=\"114\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"88\" y=\"470\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"859\" y=\"114\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"859\" y=\"470\" width=\"13\" height=\"13\" rx=\"2\"/>\n          </g>\n          <g fill=\"#7c86ff\"><circle cx=\"128\" cy=\"360\" r=\"6\"/><circle cx=\"224\" cy=\"244\" r=\"6\"/><circle cx=\"258\" cy=\"484\" r=\"6\"/><circle cx=\"404\" cy=\"116\" r=\"6\"/><circle cx=\"438\" cy=\"344\" r=\"6\"/><circle cx=\"672\" cy=\"116\" r=\"6\"/><circle cx=\"672\" cy=\"486\" r=\"6\"/><circle cx=\"708\" cy=\"484\" r=\"6\"/><circle cx=\"832\" cy=\"484\" r=\"6\"/></g>\n          <g fill=\"#c4b5fd\"><rect x=\"122\" y=\"226\" width=\"22\" height=\"8\" rx=\"4\"/><rect x=\"590\" y=\"106\" width=\"22\" height=\"8\" rx=\"4\"/><rect x=\"818\" y=\"236\" width=\"22\" height=\"8\" rx=\"4\"/></g>\n          <g class=\"lbl\"><text x=\"124\" y=\"492\">Рампа</text><text x=\"254\" y=\"324\">Склад сырья</text><text x=\"496\" y=\"352\">Цех и линии</text><text x=\"520\" y=\"494\">Мойка, отходы</text><text x=\"704\" y=\"492\">Упаковка</text><text x=\"40\" y=\"578\">Территория и кровля</text></g>\n          <g class=\"bdgs\">\n            <g class=\"bdg\" data-z=\"1\"><circle cx=\"146\" cy=\"132\" r=\"22\"/><text x=\"146\" y=\"133\">1</text></g>\n            <g class=\"bdg\" data-z=\"2\"><circle cx=\"276\" cy=\"132\" r=\"22\"/><text x=\"276\" y=\"133\">2</text></g>\n            <g class=\"bdg\" data-z=\"3\"><circle cx=\"456\" cy=\"132\" r=\"22\"/><text x=\"456\" y=\"133\">3</text></g>\n            <g class=\"bdg\" data-z=\"4\"><circle cx=\"456\" cy=\"402\" r=\"22\"/><text x=\"456\" y=\"403\">4</text></g>\n            <g class=\"bdg\" data-z=\"5\"><circle cx=\"726\" cy=\"132\" r=\"22\"/><text x=\"726\" y=\"133\">5</text></g>\n            <g class=\"bdg\" data-z=\"6\"><circle cx=\"50\" cy=\"50\" r=\"22\"/><text x=\"50\" y=\"51\">6</text></g>\n          </g>\n        </svg>\n        <figcaption class=\"f-legend\"><span><i class=\"lg-st\"></i>Станция с приманкой — снаружи</span><span><i class=\"lg-tr\"></i>Ловушка без яда — внутри</span><span><i class=\"lg-uv\"></i>Световая ловушка</span><span><i class=\"lg-fl\"></i>Движение продукта</span></figcaption>\n      </figure>\n      <div class=\"hz-side\"><ol class=\"hz-zl\"><li data-z=\"1\" tabindex=\"0\"><b>Рампа и приёмка</b><span class=\"hz-d\">Грызуны и насекомые заходят с поставками и через открытые ворота.</span></li><li data-z=\"2\" tabindex=\"0\"><b>Склад сырья и тары</b><span class=\"hz-d\">Мука, крупы, сахар, упаковка: пищевая моль, грызуны.</span></li><li data-z=\"3\" tabindex=\"0\"><b>Цех и линии</b><span class=\"hz-d\">Тепло, влага, остатки продукта под оборудованием: тараканы, муравьи.</span></li><li data-z=\"4\" tabindex=\"0\"><b>Мойка, трапы, отходы</b><span class=\"hz-d\">Мухи и дрозофилы, крысы у контейнеров.</span></li><li data-z=\"5\" tabindex=\"0\"><b>Упаковка и готовая продукция</b><span class=\"hz-d\">Последний рубеж перед претензией покупателя.</span></li><li data-z=\"6\" tabindex=\"0\"><b>Территория и кровля</b><span class=\"hz-d\">Норы по периметру, птицы на кровле и рампе.</span></li></ol><a class=\"hz-more\" href=\"pishchevoe-proizvodstvo/\">Подробнее: пищевое производство<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div>\n    </div>\n    <div class=\"hz-pan hz-rest\" id=\"hz-p-rest\" role=\"tabpanel\" aria-labelledby=\"hz-t-rest\" hidden>\n      <figure class=\"card f-plan\">\n        <svg viewBox=\"0 0 960 600\" role=\"img\" aria-labelledby=\"hz-rest-plan-t\">\n          <title id=\"hz-rest-plan-t\">Схема ресторана: семь зон риска, точки контроля и путь продуктов от приёмки до зала</title>\n          <defs><marker id=\"hz-rest-r-arw\" viewBox=\"0 0 10 10\" refX=\"7\" refY=\"5\" markerWidth=\"8\" markerHeight=\"8\" orient=\"auto\"><path d=\"M0 0L10 5L0 10z\" fill=\"#7c86ff\"/></marker></defs>\n          <g class=\"z z7\" data-z=\"7\"><rect class=\"zf\" x=\"8\" y=\"8\" width=\"944\" height=\"584\" rx=\"22\" stroke=\"rgba(255,255,255,.2)\" stroke-width=\"1.5\" stroke-dasharray=\"7 9\"/><rect class=\"zf\" x=\"20\" y=\"330\" width=\"78\" height=\"142\" rx=\"8\" stroke=\"rgba(255,255,255,.2)\" stroke-width=\"1.5\" stroke-dasharray=\"5 6\"/></g>\n          <rect x=\"110\" y=\"86\" width=\"740\" height=\"428\" rx=\"6\" fill=\"#0d0d10\"/>\n          <g class=\"z\" data-z=\"1\"><rect class=\"zf\" x=\"110\" y=\"86\" width=\"160\" height=\"214\"/></g>\n          <g class=\"z\" data-z=\"3\"><rect class=\"zf\" x=\"270\" y=\"86\" width=\"150\" height=\"214\"/></g>\n          <g class=\"z\" data-z=\"2\"><rect class=\"zf\" x=\"420\" y=\"86\" width=\"220\" height=\"214\"/></g>\n          <g class=\"z\" data-z=\"4\"><rect class=\"zf\" x=\"640\" y=\"86\" width=\"210\" height=\"214\"/></g>\n          <g class=\"z\" data-z=\"5\"><rect class=\"zf\" x=\"640\" y=\"300\" width=\"210\" height=\"214\"/></g>\n          <g class=\"z\" data-z=\"6\"><rect class=\"zf\" x=\"110\" y=\"300\" width=\"530\" height=\"214\"/><rect class=\"zf\" x=\"300\" y=\"530\" width=\"340\" height=\"52\" rx=\"8\" stroke=\"rgba(255,255,255,.18)\" stroke-width=\"1.5\" stroke-dasharray=\"5 7\"/></g>\n          <g fill=\"none\" stroke=\"rgba(255,255,255,.26)\" stroke-width=\"2.5\" stroke-linecap=\"round\">\n            <path d=\"M110 240V86H850V514H360M300 514H110V280\"/>\n            <path d=\"M110 300H480M580 300H690M730 300H850M270 86V190M270 230V300M420 86V180M420 250V300M640 86V130M640 170V300\"/>\n          </g>\n          <path d=\"M640 306V508\" stroke=\"rgba(255,255,255,.12)\" stroke-width=\"1.5\" stroke-dasharray=\"4 6\"/>\n          <g stroke=\"rgba(255,255,255,.55)\" stroke-width=\"5\" stroke-linecap=\"round\"><path d=\"M110 246V274M306 514H354\"/></g>\n          <rect x=\"480\" y=\"295\" width=\"100\" height=\"10\" rx=\"3\" fill=\"rgba(255,255,255,.08)\" stroke=\"rgba(255,255,255,.22)\" stroke-width=\"1.5\"/>\n          <g fill=\"rgba(255,255,255,.04)\" stroke=\"rgba(255,255,255,.16)\" stroke-width=\"1.5\">\n            <rect x=\"184\" y=\"100\" width=\"72\" height=\"18\" rx=\"3\"/><rect x=\"238\" y=\"132\" width=\"18\" height=\"96\" rx=\"3\"/>\n            <rect x=\"334\" y=\"104\" width=\"72\" height=\"22\" rx=\"3\"/><rect x=\"300\" y=\"226\" width=\"106\" height=\"22\" rx=\"3\"/>\n            <rect x=\"486\" y=\"100\" width=\"140\" height=\"30\" rx=\"3\"/><rect x=\"600\" y=\"190\" width=\"28\" height=\"58\" rx=\"3\"/>\n            <rect x=\"706\" y=\"100\" width=\"56\" height=\"40\" rx=\"4\"/><rect x=\"772\" y=\"100\" width=\"64\" height=\"30\" rx=\"4\"/><rect x=\"786\" y=\"160\" width=\"50\" height=\"80\" rx=\"3\"/>\n            <rect x=\"716\" y=\"320\" width=\"34\" height=\"20\" rx=\"3\"/><rect x=\"700\" y=\"360\" width=\"130\" height=\"22\" rx=\"4\"/><rect x=\"808\" y=\"382\" width=\"22\" height=\"98\" rx=\"4\"/>\n            <rect x=\"200\" y=\"340\" width=\"34\" height=\"34\" rx=\"4\"/><rect x=\"280\" y=\"340\" width=\"34\" height=\"34\" rx=\"4\"/><rect x=\"360\" y=\"340\" width=\"34\" height=\"34\" rx=\"4\"/>\n            <rect x=\"150\" y=\"428\" width=\"34\" height=\"34\" rx=\"4\"/><rect x=\"230\" y=\"428\" width=\"34\" height=\"34\" rx=\"4\"/><rect x=\"310\" y=\"428\" width=\"34\" height=\"34\" rx=\"4\"/><rect x=\"390\" y=\"428\" width=\"34\" height=\"34\" rx=\"4\"/><rect x=\"470\" y=\"428\" width=\"34\" height=\"34\" rx=\"4\"/><rect x=\"550\" y=\"428\" width=\"34\" height=\"34\" rx=\"4\"/>\n            <rect x=\"34\" y=\"346\" width=\"50\" height=\"32\" rx=\"4\"/><rect x=\"34\" y=\"386\" width=\"50\" height=\"32\" rx=\"4\"/><rect x=\"34\" y=\"426\" width=\"50\" height=\"32\" rx=\"4\"/>\n          </g>\n          <g fill=\"rgba(255,255,255,.04)\" stroke=\"rgba(255,255,255,.16)\" stroke-width=\"1.5\"><circle cx=\"420\" cy=\"556\" r=\"11\"/><circle cx=\"480\" cy=\"556\" r=\"11\"/><circle cx=\"540\" cy=\"556\" r=\"11\"/><circle cx=\"600\" cy=\"556\" r=\"11\"/><circle cx=\"716\" cy=\"402\" r=\"7\"/><circle cx=\"744\" cy=\"402\" r=\"7\"/><circle cx=\"772\" cy=\"402\" r=\"7\"/></g>\n          <g fill=\"none\" stroke=\"rgba(255,255,255,.3)\" stroke-width=\"1.5\"><circle cx=\"716\" cy=\"236\" r=\"9\"/><circle cx=\"778\" cy=\"430\" r=\"9\"/><path d=\"M710 236H722M716 230V242M772 430H784M778 424V436\"/></g>\n          <path d=\"M26 260H190V210H548V392\" fill=\"none\" stroke=\"#7c86ff\" stroke-width=\"2.5\" stroke-dasharray=\"9 8\" marker-end=\"url(#hz-rest-r-arw)\" opacity=\".85\"/>\n          <g fill=\"#fdc700\" stroke=\"#09090b\" stroke-width=\"2\">\n            <rect x=\"164\" y=\"58\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"330\" y=\"58\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"500\" y=\"58\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"680\" y=\"58\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"800\" y=\"58\" width=\"13\" height=\"13\" rx=\"2\"/>\n            <rect x=\"84\" y=\"104\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"84\" y=\"296\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"28\" y=\"486\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"72\" y=\"486\" width=\"13\" height=\"13\" rx=\"2\"/>\n            <rect x=\"863\" y=\"110\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"863\" y=\"296\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"863\" y=\"474\" width=\"13\" height=\"13\" rx=\"2\"/>\n            <rect x=\"140\" y=\"524\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"250\" y=\"524\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"680\" y=\"524\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"800\" y=\"524\" width=\"13\" height=\"13\" rx=\"2\"/>\n          </g>\n          <g fill=\"#7c86ff\"><circle cx=\"128\" cy=\"196\" r=\"6\"/><circle cx=\"200\" cy=\"160\" r=\"6\"/><circle cx=\"258\" cy=\"290\" r=\"6\"/><circle cx=\"410\" cy=\"104\" r=\"6\"/><circle cx=\"284\" cy=\"170\" r=\"6\"/><circle cx=\"432\" cy=\"164\" r=\"6\"/><circle cx=\"632\" cy=\"104\" r=\"6\"/><circle cx=\"652\" cy=\"200\" r=\"6\"/><circle cx=\"840\" cy=\"290\" r=\"6\"/><circle cx=\"652\" cy=\"470\" r=\"6\"/><circle cx=\"840\" cy=\"502\" r=\"6\"/><circle cx=\"124\" cy=\"502\" r=\"6\"/><circle cx=\"628\" cy=\"502\" r=\"6\"/></g>\n          <g fill=\"#c4b5fd\"><rect x=\"116\" y=\"212\" width=\"8\" height=\"22\" rx=\"4\"/><rect x=\"276\" y=\"250\" width=\"8\" height=\"22\" rx=\"4\"/><rect x=\"770\" y=\"282\" width=\"22\" height=\"8\" rx=\"4\"/></g>\n          <g fill=\"#4ade80\" stroke=\"#09090b\" stroke-width=\"1.5\"><rect x=\"495\" y=\"135\" width=\"10\" height=\"10\" transform=\"rotate(45 500 140)\"/><rect x=\"595\" y=\"135\" width=\"10\" height=\"10\" transform=\"rotate(45 600 140)\"/><rect x=\"585\" y=\"257\" width=\"10\" height=\"10\" transform=\"rotate(45 590 262)\"/><rect x=\"723\" y=\"145\" width=\"10\" height=\"10\" transform=\"rotate(45 728 150)\"/><rect x=\"795\" y=\"135\" width=\"10\" height=\"10\" transform=\"rotate(45 800 140)\"/><rect x=\"755\" y=\"327\" width=\"10\" height=\"10\" transform=\"rotate(45 760 332)\"/><rect x=\"787\" y=\"387\" width=\"10\" height=\"10\" transform=\"rotate(45 792 392)\"/></g>\n          <g class=\"lbl\"><text x=\"124\" y=\"288\">Приёмка, склад</text><text x=\"290\" y=\"288\">Холодный цех</text><text x=\"440\" y=\"288\">Горячий цех</text><text x=\"660\" y=\"288\">Мойка</text><text x=\"660\" y=\"502\">Бар</text><text x=\"200\" y=\"502\">Зал</text><text x=\"316\" y=\"561\">Веранда</text><text x=\"22\" y=\"320\">Отходы</text></g>\n          <g class=\"bdgs\">\n            <g class=\"bdg\" data-z=\"1\"><circle cx=\"146\" cy=\"122\" r=\"22\"/><text x=\"146\" y=\"123\">1</text></g>\n            <g class=\"bdg\" data-z=\"2\"><circle cx=\"456\" cy=\"122\" r=\"22\"/><text x=\"456\" y=\"123\">2</text></g>\n            <g class=\"bdg\" data-z=\"3\"><circle cx=\"300\" cy=\"122\" r=\"22\"/><text x=\"300\" y=\"123\">3</text></g>\n            <g class=\"bdg\" data-z=\"4\"><circle cx=\"676\" cy=\"122\" r=\"22\"/><text x=\"676\" y=\"123\">4</text></g>\n            <g class=\"bdg\" data-z=\"5\"><circle cx=\"676\" cy=\"336\" r=\"22\"/><text x=\"676\" y=\"337\">5</text></g>\n            <g class=\"bdg\" data-z=\"6\"><circle cx=\"146\" cy=\"336\" r=\"22\"/><text x=\"146\" y=\"337\">6</text></g>\n            <g class=\"bdg\" data-z=\"7\"><circle cx=\"50\" cy=\"50\" r=\"22\"/><text x=\"50\" y=\"51\">7</text></g>\n          </g>\n        </svg>\n        <figcaption class=\"f-legend\"><span><i class=\"lg-st\"></i>Станция с приманкой — снаружи</span><span><i class=\"lg-tr\"></i>Ловушка или монитор — внутри</span><span><i class=\"lg-uv\"></i>Световая ловушка</span><span><i class=\"lg-gel\"></i>Гелевая приманка</span><span><i class=\"lg-fl\"></i>Путь продуктов</span></figcaption>\n      </figure>\n      <div class=\"hz-side\"><ol class=\"hz-zl\"><li data-z=\"1\" tabindex=\"0\"><b>Приёмка и склад</b><span class=\"hz-d\">Тараканы и мыши приезжают с поставками в коробках, моль — в муке и крупах. Ловушки без яда, феромонные ловушки для моли.</span></li><li data-z=\"2\" tabindex=\"0\"><b>Горячий цех</b><span class=\"hz-d\">Тепло под плитами, пароконвектоматами и фритюрницами — главное место рыжих тараканов. Гели в щели, мониторы под оборудованием.</span></li><li data-z=\"3\" tabindex=\"0\"><b>Холодный цех и заготовка</b><span class=\"hz-d\">Здесь открытый продукт, поэтому без распыления: мониторы и гели только в недоступных местах.</span></li><li data-z=\"4\" tabindex=\"0\"><b>Мойка и трапы</b><span class=\"hz-d\">Влага и остатки еды: тараканы в посудомоечных машинах, дрозофилы и бабочницы в трапах. Ищем места выплода.</span></li><li data-z=\"5\" tabindex=\"0\"><b>Бар и кофейная станция</b><span class=\"hz-d\">Сиропы, фрукты и пивные линии притягивают дрозофил, кофемашины и льдогенераторы — тараканов.</span></li><li data-z=\"6\" tabindex=\"0\"><b>Зал и веранда</b><span class=\"hz-d\">То, что видит гость: мухи у входа и на летней веранде, мыши в подвесных потолках. Световые ловушки — вне зоны выдачи блюд.</span></li><li data-z=\"7\" tabindex=\"0\"><b>Мусорная площадка и подвал</b><span class=\"hz-d\">Отходы и коммуникации — путь крыс и мышей. Станции с приманкой снаружи, щели и проёмы — в замечаниях к акту.</span></li></ol><a class=\"hz-more\" href=\"restorany-i-kafe/\">Подробнее: рестораны и кафе<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div>\n    </div>\n    <div class=\"hz-pan hz-sklad\" id=\"hz-p-sklad\" role=\"tabpanel\" aria-labelledby=\"hz-t-sklad\" hidden>\n      <figure class=\"card f-plan w-plan\">\n        <svg viewBox=\"0 0 800 560\" role=\"img\" aria-labelledby=\"hz-sklad-plan-sklad-t\">\n          <title id=\"hz-sklad-plan-sklad-t\">Схема склада с семью зонами риска: периметр и площадка ТКО, доки и ворота, приёмка, стеллажное хранение, отгрузка и возвраты, бытовые помещения, навесы и кровля</title>\n          <rect class=\"wfence\" x=\"12\" y=\"12\" width=\"776\" height=\"536\" rx=\"18\"/>\n          <g class=\"z\" data-z=\"1\">\n            <path class=\"zf\" fill-rule=\"evenodd\" d=\"M24 24H776V536H24Z M90 112H710V484H90Z\"/>\n          </g>\n          <rect class=\"wt\" x=\"722\" y=\"402\" width=\"44\" height=\"64\" rx=\"5\"/>\n          <rect x=\"729\" y=\"410\" width=\"30\" height=\"20\" rx=\"3\" fill=\"#24242c\"/><rect x=\"729\" y=\"438\" width=\"30\" height=\"20\" rx=\"3\" fill=\"#24242c\"/>\n          <g class=\"wt\"><rect x=\"276\" y=\"36\" width=\"40\" height=\"70\" rx=\"4\"/><rect x=\"408\" y=\"36\" width=\"40\" height=\"70\" rx=\"4\"/><rect x=\"540\" y=\"36\" width=\"40\" height=\"70\" rx=\"4\"/></g>\n          <g class=\"z\" data-z=\"7\">\n            <rect class=\"zf\" x=\"250\" y=\"114\" width=\"430\" height=\"34\" rx=\"4\"/>\n          </g>\n          <rect class=\"wc\" x=\"250\" y=\"114\" width=\"430\" height=\"34\" rx=\"4\"/>\n          <rect class=\"wf\" x=\"90\" y=\"150\" width=\"620\" height=\"334\" rx=\"6\"/>\n          <g class=\"z\" data-z=\"2\">\n            <rect class=\"zf\" x=\"250\" y=\"152\" width=\"430\" height=\"36\" rx=\"3\"/>\n          </g>\n          <g class=\"wd\"><rect x=\"272\" y=\"146\" width=\"48\" height=\"10\" rx=\"2\"/><rect x=\"338\" y=\"146\" width=\"48\" height=\"10\" rx=\"2\"/><rect x=\"404\" y=\"146\" width=\"48\" height=\"10\" rx=\"2\"/><rect x=\"470\" y=\"146\" width=\"48\" height=\"10\" rx=\"2\"/><rect x=\"536\" y=\"146\" width=\"48\" height=\"10\" rx=\"2\"/><rect x=\"602\" y=\"146\" width=\"48\" height=\"10\" rx=\"2\"/></g>\n          <g class=\"z\" data-z=\"3\"><rect class=\"zf\" x=\"250\" y=\"192\" width=\"208\" height=\"70\" rx=\"4\"/></g>\n          <g class=\"z\" data-z=\"5\"><rect class=\"zf\" x=\"472\" y=\"192\" width=\"208\" height=\"70\" rx=\"4\"/></g>\n          <rect x=\"250\" y=\"192\" width=\"208\" height=\"70\" rx=\"4\" fill=\"none\" stroke=\"#2a2a33\" stroke-dasharray=\"4 4\"/>\n          <rect x=\"472\" y=\"192\" width=\"208\" height=\"70\" rx=\"4\" fill=\"none\" stroke=\"#2a2a33\" stroke-dasharray=\"4 4\"/>\n          <g class=\"z\" data-z=\"4\"><rect class=\"zf\" x=\"250\" y=\"274\" width=\"448\" height=\"200\" rx=\"4\"/></g>\n          <g class=\"wr\"><rect x=\"266\" y=\"290\" width=\"416\" height=\"14\" rx=\"2\"/><rect x=\"266\" y=\"322\" width=\"416\" height=\"14\" rx=\"2\"/><rect x=\"266\" y=\"354\" width=\"416\" height=\"14\" rx=\"2\"/><rect x=\"266\" y=\"386\" width=\"416\" height=\"14\" rx=\"2\"/><rect x=\"266\" y=\"418\" width=\"416\" height=\"14\" rx=\"2\"/><rect x=\"266\" y=\"450\" width=\"416\" height=\"14\" rx=\"2\"/></g>\n          <g class=\"z\" data-z=\"6\"><rect class=\"zf\" x=\"94\" y=\"154\" width=\"146\" height=\"196\" rx=\"4\"/></g>\n          <g fill=\"none\" stroke=\"#3f3f46\" stroke-width=\"1.6\"><path d=\"M240 152V482M92 252H240M92 350H240\"/></g>\n          <g class=\"lbl\">\n            <text x=\"30\" y=\"530\">Периметр</text>\n            <text x=\"728\" y=\"394\">ТКО</text>\n            <text x=\"268\" y=\"136\">Навес над доками</text>\n            <text x=\"104\" y=\"186\">Бытовые</text>\n            <text x=\"104\" y=\"284\">Столовая</text>\n            <text x=\"104\" y=\"384\">Техзона</text>\n            <text x=\"262\" y=\"214\">Приёмка</text>\n            <text x=\"484\" y=\"214\">Отгрузка и возвраты</text>\n          </g>\n          <g class=\"ms\" stroke=\"#09090b\" stroke-width=\"2\">\n            <rect x=\"72\" y=\"176\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"72\" y=\"306\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"72\" y=\"436\" width=\"12\" height=\"12\" rx=\"3\"/>\n            <rect x=\"150\" y=\"490\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"330\" y=\"490\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"510\" y=\"490\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"660\" y=\"490\" width=\"12\" height=\"12\" rx=\"3\"/>\n            <rect x=\"716\" y=\"200\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"716\" y=\"320\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"700\" y=\"474\" width=\"12\" height=\"12\" rx=\"3\"/>\n            <rect x=\"232\" y=\"120\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"688\" y=\"120\" width=\"12\" height=\"12\" rx=\"3\"/>\n          </g>\n          <g class=\"mr\" stroke=\"#09090b\" stroke-width=\"2\">\n            <rect x=\"258\" y=\"162\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"324\" y=\"162\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"390\" y=\"162\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"456\" y=\"162\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"522\" y=\"162\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"588\" y=\"162\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"654\" y=\"162\" width=\"11\" height=\"11\" rx=\"2\"/>\n            <rect x=\"244\" y=\"300\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"244\" y=\"420\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"694\" y=\"214\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"694\" y=\"330\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"694\" y=\"440\" width=\"11\" height=\"11\" rx=\"2\"/>\n            <rect x=\"160\" y=\"230\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"160\" y=\"326\" width=\"11\" height=\"11\" rx=\"2\"/>\n          </g>\n          <g class=\"mp\"><circle cx=\"272\" cy=\"313\" r=\"5\"/><circle cx=\"676\" cy=\"345\" r=\"5\"/><circle cx=\"272\" cy=\"377\" r=\"5\"/><circle cx=\"676\" cy=\"409\" r=\"5\"/><circle cx=\"272\" cy=\"441\" r=\"5\"/></g>\n          <g class=\"mu\"><rect x=\"330\" y=\"252\" width=\"22\" height=\"6\" rx=\"2\"/><rect x=\"560\" y=\"252\" width=\"22\" height=\"6\" rx=\"2\"/><rect x=\"120\" y=\"296\" width=\"22\" height=\"6\" rx=\"2\"/></g>\n          <g class=\"bdgs\">\n            <g class=\"bdg\" data-z=\"1\"><circle cx=\"54\" cy=\"64\" r=\"20\"/><text x=\"54\" y=\"65\">1</text></g>\n            <g class=\"bdg\" data-z=\"2\"><circle cx=\"694\" cy=\"172\" r=\"16\"/><text x=\"694\" y=\"173\">2</text></g>\n            <g class=\"bdg\" data-z=\"3\"><circle cx=\"420\" cy=\"234\" r=\"18\"/><text x=\"420\" y=\"235\">3</text></g>\n            <g class=\"bdg\" data-z=\"4\"><circle cx=\"474\" cy=\"380\" r=\"20\"/><text x=\"474\" y=\"381\">4</text></g>\n            <g class=\"bdg\" data-z=\"5\"><circle cx=\"642\" cy=\"234\" r=\"18\"/><text x=\"642\" y=\"235\">5</text></g>\n            <g class=\"bdg\" data-z=\"6\"><circle cx=\"200\" cy=\"230\" r=\"18\"/><text x=\"200\" y=\"231\">6</text></g>\n            <g class=\"bdg\" data-z=\"7\"><circle cx=\"232\" cy=\"96\" r=\"16\"/><text x=\"232\" y=\"97\">7</text></g>\n          </g>\n        </svg>\n        <figcaption class=\"f-legend\">\n          <span><i class=\"lg-st\"></i>Контейнеры КИК с приманкой — снаружи</span>\n          <span><i class=\"lg-rm\"></i>Ловушки без яда — внутри</span>\n          <span><i class=\"lg-tr\"></i>Феромонные ловушки на стеллажах</span>\n          <span><i class=\"lg-uv\"></i>Световые ловушки вдали от ворот</span>\n        </figcaption>\n      </figure>\n      <div class=\"hz-side\"><ol class=\"hz-zl\"><li data-z=\"1\" tabindex=\"0\"><b>Периметр и площадка ТКО</b><span class=\"hz-d\">Крысы живут у мусорных контейнеров, в теплотрассах и на соседних участках и идут к зданию вдоль стен. Здесь проходит первый барьер.<small>КИК с приманкой по периметру · осмотр нор</small></span></li><li data-z=\"2\" tabindex=\"0\"><b>Доки, ворота и рампы</b><span class=\"hz-d\">Главный вход для грызунов, птиц и летающих насекомых: щели под воротами, изношенные уплотнители и герметизаторы, ворота, открытые дольше погрузки.<small>Ловушки у каждых ворот · список щелей для эксплуатации</small></span></li><li data-z=\"3\" tabindex=\"0\"><b>Приёмка и карантин партий</b><span class=\"hz-d\">С паллетами, тарой и сырьём завозятся мыши, моль и жуки. Партию с признаками вредителей нужно остановить на приёмке, а не найти потом в стеллаже.<small>Чек-лист осмотра партий · ловушки без яда</small></span></li><li data-z=\"4\" tabindex=\"0\"><b>Стеллажное хранение</b><span class=\"hz-d\">Мыши селятся в нижних ярусах и коробах, вредители запасов — в продуктах, кормах и сухофруктах. Нужен проход вдоль стен для осмотра и ротация партий.<small>Ловушки у оснований стеллажей · феромонные ловушки</small></span></li><li data-z=\"5\" tabindex=\"0\"><b>Отгрузка, возвраты и брак</b><span class=\"hz-d\">В зоне возвратов копятся повреждённые упаковки и просыпи — корм для грызунов и насекомых. Поэтому её держим на отдельном контроле.<small>Ловушки без яда · световые ловушки</small></span></li><li data-z=\"6\" tabindex=\"0\"><b>Бытовые помещения и столовая</b><span class=\"hz-d\">Тараканы и муравьи появляются там, где сотрудники едят и хранят еду: в комнатах приёма пищи, раздевалках, у кофемашин и холодильников.<small>Клеевые ловушки · точечные обработки по показаниям</small></span></li><li data-z=\"7\" tabindex=\"0\"><b>Навесы, кровля и фермы</b><span class=\"hz-d\">Голуби и воробьи садятся на навесы над доками и фермы внутри склада, помёт попадает на товар, паллеты и технику.<small>Места присады на схеме · рекомендации по защите</small></span></li></ol><a class=\"hz-more\" href=\"sklady-i-logistika/\">Подробнее: склады и логистика<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div>\n    </div>\n    <div class=\"hz-pan hz-bc\" id=\"hz-p-bc\" role=\"tabpanel\" aria-labelledby=\"hz-t-bc\" hidden>\n      <figure class=\"card f-plan w-plan b-plan\">\n        <svg viewBox=\"0 92 800 424\" role=\"img\" aria-labelledby=\"hz-bc-plan-bctc-t\">\n          <title id=\"hz-bc-plan-bctc-t\">Разрез здания с восемью зонами риска: территория и контейнерная площадка, зона загрузки, подземный паркинг, подвал с тепловым пунктом, щитовые и кабельная шахта, мусорокамера, фуд-корт, офисные этажи</title>\n          <rect x=\"12\" y=\"400\" width=\"776\" height=\"112\" fill=\"rgba(255,255,255,.02)\"/>\n          <path d=\"M12 400H788\" stroke=\"#52525b\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n          <g class=\"z\" data-z=\"1\"><rect class=\"zf\" x=\"16\" y=\"286\" width=\"150\" height=\"112\" rx=\"4\"/></g>\n          <g class=\"wt\"><rect x=\"30\" y=\"362\" width=\"36\" height=\"36\" rx=\"4\"/><rect x=\"74\" y=\"362\" width=\"36\" height=\"36\" rx=\"4\"/></g>\n          <path d=\"M26 362H114\" stroke=\"#52525b\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n          <rect class=\"wf\" x=\"170\" y=\"110\" width=\"460\" height=\"290\" rx=\"4\"/>\n          <rect class=\"wf\" x=\"110\" y=\"400\" width=\"580\" height=\"100\"/>\n          <g class=\"z\" data-z=\"8\"><path class=\"zf\" d=\"M172 112H374V318H172Z M426 112H628V318H426Z\"/></g>\n          <g class=\"z\" data-z=\"6\"><rect class=\"zf\" x=\"172\" y=\"322\" width=\"76\" height=\"76\"/></g>\n          <g class=\"z\" data-z=\"7\"><rect class=\"zf\" x=\"252\" y=\"322\" width=\"122\" height=\"76\"/></g>\n          <g class=\"z\" data-z=\"2\"><rect class=\"zf\" x=\"522\" y=\"322\" width=\"254\" height=\"76\" rx=\"3\"/></g>\n          <g class=\"z\" data-z=\"3\"><rect class=\"zf\" x=\"112\" y=\"402\" width=\"336\" height=\"96\"/></g>\n          <g class=\"z\" data-z=\"4\"><rect class=\"zf\" x=\"452\" y=\"402\" width=\"236\" height=\"96\"/></g>\n          <g class=\"z\" data-z=\"5\"><rect class=\"zf\" x=\"378\" y=\"112\" width=\"44\" height=\"286\"/></g>\n          <g fill=\"none\" stroke=\"#3f3f46\" stroke-width=\"2\">\n            <path d=\"M170 180H376M424 180H630M170 250H376M424 250H630M170 320H630\"/>\n            <path d=\"M376 110V400M424 110V400M250 320V400M520 320V400M450 400V500\"/>\n          </g>\n          <path class=\"wc\" d=\"M176 124H372M430 124H624M176 194H372M430 194H624M176 264H372M430 264H624\"/>\n          <path d=\"M392 118V394M400 118V394M408 118V394\" fill=\"none\" stroke=\"#71717a\" stroke-width=\"1.4\" stroke-dasharray=\"3 5\"/>\n          <g class=\"wr\"><rect x=\"446\" y=\"140\" width=\"34\" height=\"26\" rx=\"2\"/><rect x=\"494\" y=\"140\" width=\"34\" height=\"26\" rx=\"2\"/><rect x=\"542\" y=\"140\" width=\"34\" height=\"26\" rx=\"2\"/><rect x=\"590\" y=\"140\" width=\"26\" height=\"26\" rx=\"2\"/><rect x=\"446\" y=\"210\" width=\"34\" height=\"26\" rx=\"2\"/><rect x=\"494\" y=\"210\" width=\"34\" height=\"26\" rx=\"2\"/><rect x=\"542\" y=\"210\" width=\"34\" height=\"26\" rx=\"2\"/><rect x=\"590\" y=\"210\" width=\"26\" height=\"26\" rx=\"2\"/><rect x=\"446\" y=\"280\" width=\"34\" height=\"26\" rx=\"2\"/><rect x=\"494\" y=\"280\" width=\"34\" height=\"26\" rx=\"2\"/><rect x=\"542\" y=\"280\" width=\"34\" height=\"26\" rx=\"2\"/><rect x=\"590\" y=\"280\" width=\"26\" height=\"26\" rx=\"2\"/></g>\n          <path d=\"M160 110H640\" stroke=\"#71717a\" stroke-width=\"4\" stroke-linecap=\"round\"/>\n          <rect class=\"wd\" x=\"630\" y=\"384\" width=\"40\" height=\"16\" rx=\"2\"/>\n          <g class=\"wt\"><rect x=\"676\" y=\"342\" width=\"92\" height=\"44\" rx=\"4\"/><circle cx=\"696\" cy=\"392\" r=\"7\"/><circle cx=\"750\" cy=\"392\" r=\"7\"/></g>\n          <g class=\"wt\"><rect x=\"150\" y=\"468\" width=\"60\" height=\"24\" rx=\"9\"/><rect x=\"232\" y=\"468\" width=\"60\" height=\"24\" rx=\"9\"/><rect x=\"314\" y=\"468\" width=\"60\" height=\"24\" rx=\"9\"/></g>\n          <rect x=\"396\" y=\"492\" width=\"40\" height=\"8\" fill=\"#38bdf8\" opacity=\".55\"/>\n          <g class=\"wt\"><rect x=\"482\" y=\"452\" width=\"40\" height=\"44\" rx=\"4\"/><rect x=\"536\" y=\"442\" width=\"30\" height=\"54\" rx=\"15\"/><rect x=\"592\" y=\"458\" width=\"72\" height=\"38\" rx=\"4\"/></g>\n          <g class=\"lbl\">\n            <text x=\"24\" y=\"308\">Территория</text>\n            <text x=\"186\" y=\"154\">Офисы</text>\n            <text x=\"186\" y=\"224\">Офисные кухни</text>\n            <text x=\"186\" y=\"294\">Серверная</text>\n            <text x=\"262\" y=\"344\">Фуд-корт</text>\n            <text x=\"436\" y=\"364\">Галерея</text>\n            <text x=\"532\" y=\"344\">Загрузка</text>\n            <text x=\"124\" y=\"428\">Паркинг</text>\n            <text x=\"462\" y=\"428\">Тепловой пункт</text>\n          </g>\n          <g class=\"ms\" stroke=\"#09090b\" stroke-width=\"2\">\n            <rect x=\"118\" y=\"386\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"152\" y=\"386\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"774\" y=\"386\" width=\"12\" height=\"12\" rx=\"3\"/>\n            <rect x=\"114\" y=\"440\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"264\" y=\"404\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"434\" y=\"440\" width=\"12\" height=\"12\" rx=\"3\"/>\n            <rect x=\"454\" y=\"484\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"674\" y=\"440\" width=\"12\" height=\"12\" rx=\"3\"/>\n          </g>\n          <g class=\"mr\" stroke=\"#09090b\" stroke-width=\"2\">\n            <rect x=\"380\" y=\"166\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"380\" y=\"306\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"409\" y=\"384\" width=\"11\" height=\"11\" rx=\"2\"/>\n            <rect x=\"526\" y=\"385\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"560\" y=\"385\" width=\"11\" height=\"11\" rx=\"2\"/>\n            <rect x=\"176\" y=\"385\" width=\"11\" height=\"11\" rx=\"2\"/><rect x=\"234\" y=\"385\" width=\"11\" height=\"11\" rx=\"2\"/>\n          </g>\n          <g class=\"mp\"><circle cx=\"268\" cy=\"390\" r=\"5\"/><circle cx=\"362\" cy=\"390\" r=\"5\"/><circle cx=\"300\" cy=\"390\" r=\"5\"/><circle cx=\"352\" cy=\"242\" r=\"5\"/><circle cx=\"200\" cy=\"312\" r=\"5\"/><circle cx=\"352\" cy=\"172\" r=\"5\"/><circle cx=\"440\" cy=\"312\" r=\"5\"/><circle cx=\"440\" cy=\"242\" r=\"5\"/></g>\n          <g class=\"bdgs\">\n            <g class=\"bdg\" data-z=\"1\"><circle cx=\"134\" cy=\"322\" r=\"18\"/><text x=\"134\" y=\"323\">1</text></g>\n            <g class=\"bdg\" data-z=\"2\"><circle cx=\"600\" cy=\"372\" r=\"16\"/><text x=\"600\" y=\"373\">2</text></g>\n            <g class=\"bdg\" data-z=\"3\"><circle cx=\"330\" cy=\"436\" r=\"18\"/><text x=\"330\" y=\"437\">3</text></g>\n            <g class=\"bdg\" data-z=\"4\"><circle cx=\"640\" cy=\"424\" r=\"16\"/><text x=\"640\" y=\"425\">4</text></g>\n            <g class=\"bdg\" data-z=\"5\"><circle cx=\"400\" cy=\"232\" r=\"16\"/><text x=\"400\" y=\"233\">5</text></g>\n            <g class=\"bdg\" data-z=\"6\"><circle cx=\"210\" cy=\"352\" r=\"16\"/><text x=\"210\" y=\"353\">6</text></g>\n            <g class=\"bdg\" data-z=\"7\"><circle cx=\"346\" cy=\"364\" r=\"16\"/><text x=\"346\" y=\"365\">7</text></g>\n            <g class=\"bdg\" data-z=\"8\"><circle cx=\"330\" cy=\"150\" r=\"18\"/><text x=\"330\" y=\"151\">8</text></g>\n          </g>\n        </svg>\n        <figcaption class=\"f-legend\">\n          <span><i class=\"lg-st\"></i>Станции с приманкой — снаружи и в паркинге</span>\n          <span><i class=\"lg-rm\"></i>Ловушки без яда — щитовые, загрузка, мусорокамеры</span>\n          <span><i class=\"lg-tr\"></i>Клеевые мониторы — кухни и фуд-корт</span>\n        </figcaption>\n      </figure>\n      <div class=\"hz-side\"><ol class=\"hz-zl\"><li data-z=\"1\" tabindex=\"0\"><b>Территория и контейнерная площадка</b><span class=\"hz-d\">Отходы и газоны у фундамента притягивают серых крыс.<small>Станции с приманкой по периметру и у контейнеров · тампонирование нор</small></span></li><li data-z=\"2\" tabindex=\"0\"><b>Зона загрузки и дебаркадер</b><span class=\"hz-d\">Мыши заезжают с поставками арендаторов, ворота подолгу открыты.<small>Ловушки без яда внутри · уплотнители ворот — в замечаниях к акту</small></span></li><li data-z=\"3\" tabindex=\"0\"><b>Подземный паркинг и приямки</b><span class=\"hz-d\">Вода в приямках и лотках — место выплода подвальных комаров и бабочниц; вдоль стен ходят крысы.<small>Станции по периметру · осмотр приямков и дренажа</small></span></li><li data-z=\"4\" tabindex=\"0\"><b>Подвал, тепловой пункт, венткамеры</b><span class=\"hz-d\">Тепло, тишина и вводы коммуникаций. Отсюда грызуны поднимаются по шахтам на этажи.<small>Станции и ловушки у вводов · список проходок на заделку</small></span></li><li data-z=\"5\" tabindex=\"0\"><b>Щитовые, серверные, кабельные шахты</b><span class=\"hz-d\">Крысы и мыши грызут изоляцию кабелей — риск короткого замыкания и остановки оборудования.<small>Ловушки без приманки с ядом · контроль кабельных лотков и вводов</small></span></li><li data-z=\"6\" tabindex=\"0\"><b>Мусорокамеры и камеры отходов</b><span class=\"hz-d\">Тараканы, мухи и грызуны. При находке — обработка сразу.<small>Осмотр не реже раза в месяц (п. 133)</small></span></li><li data-z=\"7\" tabindex=\"0\"><b>Фуд-корт, столовая, кафе</b><span class=\"hz-d\">Тёплое оборудование, мойки и трапы: рыжие тараканы, дрозофилы, мыши.<small>Гели и мониторы · работы после закрытия</small></span></li><li data-z=\"8\" tabindex=\"0\"><b>Офисные кухни, кофепойнты, пространство над потолком</b><span class=\"hz-d\">Тараканы в кофемашинах и холодильниках, муравьи, мыши над подвесным потолком и под фальшполом.<small>Мониторы и гели — в рабочее время, без запаха</small></span></li></ol><a class=\"hz-more\" href=\"biznes-tsentry-torgovye-tsentry-predpriyatiya/\">Подробнее: бизнес-центры, ТЦ и предприятия<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div>\n    </div>\n    <div class=\"hz-foot\"><p>Гостиница, магазин или фармпроизводство? Схему под ваш объект — с зонами, точками и нормами — составим на бесплатном аудите. Смотрите также: <a href=\"gostinitsy/\">гостиницы</a>, <a href=\"magaziny-i-torgovye-seti/\">магазины и торговые сети</a>, <a href=\"farmatsevticheskie-proizvodstva/\">фармацевтические производства</a>.</p><a class=\"btn btn-w btn-lg\" href=\"#zayavka\"><span class=\"btn-t\">Получить схему для своего объекта</span></a></div>\n  </div>\n</section>\n<!-- home-scheme:end -->\n\n<section class=\"s\" id=\"dokumenty\">",
+     1
+    ],
+    [
+     "</style>\n<!-- UIS -->",
+     "</style><style id=\"hz-st\">/* Главная: блок «Схема объекта» (tools/home-scheme/build.py) */\n#shema .hz-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:clamp(18px,1.6vw,28px)}\n#shema .hz-tab{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:4px;padding:16px 20px;border:1.4px solid var(--line2);border-radius:var(--r);background:var(--card);transition:border-color .3s,background .3s}\n#shema .hz-tab b{font-weight:500;font-size:clamp(15px,1vw,18px);letter-spacing:-.01em;color:var(--t1)}\n#shema .hz-tab span{font-size:13px;color:var(--t3)}\n#shema .hz-tab:hover{border-color:rgba(124,134,255,.45)}\n#shema .hz-tab:focus-visible{outline:2px solid var(--acc);outline-offset:2px}\n#shema .hz-tab.is-on{border-color:var(--acc);background:rgba(124,134,255,.1)}\n#shema .hz-tab.is-on span{color:var(--acc)}\n#shema .hz-pan{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(18px,2vw,36px);align-items:stretch}\n#shema .hz-pan[hidden]{display:none}\n#shema .f-plan{margin:0}\n#shema .hz-side{display:flex;flex-direction:column;gap:14px}\n#shema .hz-zl{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:hz}\n#shema .hz-zl li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:0 14px;align-items:center;padding:12px 16px;border:1.4px solid var(--line);border-radius:12px;background:var(--card);cursor:pointer;outline:none;transition:border-color .3s,background .3s}\n#shema .hz-zl li::before{counter-increment:hz;content:counter(hz);grid-row:1/span 2;align-self:start;width:30px;height:30px;border-radius:50%;border:1.4px solid var(--acc);color:var(--acc);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;transition:background .3s,color .3s}\n#shema .hz-zl b{font-weight:500;font-size:clamp(15px,.98vw,17px);line-height:1.3;color:var(--t1);min-height:30px;display:flex;align-items:center}\n#shema .hz-d{grid-column:2;display:none;color:var(--t2);font-size:14.5px;line-height:1.5;margin-top:6px}\n#shema .hz-d small{display:block;margin-top:8px;color:var(--acc);font-size:12.5px;letter-spacing:.03em}\n#shema .hz-zl li.on{border-color:var(--acc);background:rgba(124,134,255,.08)}\n#shema .hz-zl li.on .hz-d{display:block}\n#shema .hz-zl li.on::before,#shema .hz-zl li:hover::before{background:var(--acc);color:#fff}\n#shema .hz-zl li:hover{border-color:rgba(124,134,255,.45)}\n#shema .hz-more{margin-top:auto;display:inline-flex;align-items:center;gap:10px;color:var(--acc);font-size:15px;text-decoration:none;padding:6px 2px}\n#shema .hz-more svg{width:16px;height:16px}\n#shema .hz-more:hover{color:#fff}\n#shema .hz-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;margin-top:clamp(20px,2vw,32px);padding:20px 24px;border:1.4px dashed var(--line2);border-radius:var(--r)}\n#shema .hz-foot p{color:var(--t2);font-size:15px;line-height:1.5;max-width:70ch}\n#shema .hz-foot p a{color:var(--t1);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}\n#shema .hz-foot .btn{flex:none}\n@media (max-width:1100px){#shema .hz-pan{grid-template-columns:minmax(0,1fr)}#shema .hz-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}\n@media (max-width:600px){#shema .hz-tabs{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 0 14px;padding:0 0 2px;scrollbar-width:none}#shema .f-plan .bdg{transform:scale(1.6);transform-box:fill-box;transform-origin:center}#shema .w-plan .bdg{transform:scale(1.7)}#shema .hz-tabs::-webkit-scrollbar{display:none}#shema .hz-tab{flex:0 0 auto;scroll-snap-align:start;padding:12px 16px}#shema .hz-tab span{display:none}#shema .f-plan{padding:10px}#shema .hz-zl li{padding:11px 12px}#shema .hz-foot{padding:18px}#shema .hz-foot .btn{width:100%;justify-content:center}}\n#shema .hz-food .f-plan{margin:0;padding:clamp(14px,1.4vw,26px)}#shema .hz-food .f-plan svg{display:block;width:100%;height:auto}#shema .hz-food .f-plan svg *{pointer-events:none}#shema .hz-food .f-plan .zf,#shema .hz-food .f-plan .bdg{pointer-events:all}#shema .hz-food .f-plan .zf{fill:transparent;transition:fill .3s,stroke .3s}#shema .hz-food .f-plan .z.on .zf{fill:rgba(124,134,255,.14)}#shema .hz-food .f-plan .z6.on .zf{fill:rgba(124,134,255,.05);stroke:#7c86ff}#shema .hz-food .f-plan .bdg circle{fill:#09090b;stroke:#7c86ff;stroke-width:2;transition:fill .3s}#shema .hz-food .f-plan .bdg text{fill:#7c86ff;font:500 22px Inter,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central;transition:fill .3s}#shema .hz-food .f-plan .bdg.on circle{fill:#7c86ff}#shema .hz-food .f-plan .bdg.on text{fill:#fff}#shema .hz-food .f-plan .lbl text{fill:#84848e;font:400 15px Inter,system-ui,sans-serif}#shema .hz-food .f-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 4px 2px;font-size:13px;color:var(--t3)}#shema .hz-food .f-legend span{display:inline-flex;align-items:center;gap:9px}#shema .hz-food .f-legend i{flex:none;display:inline-block}#shema .hz-food .lg-st{width:11px;height:11px;border-radius:2px;background:var(--yel)}#shema .hz-food .lg-tr{width:11px;height:11px;border-radius:50%;background:var(--acc)}#shema .hz-food .lg-uv{width:20px;height:7px;border-radius:4px;background:#c4b5fd;box-shadow:0 0 8px rgba(167,139,250,.9)}#shema .hz-food .lg-fl{width:24px;border-top:2px dashed var(--acc)}@media (max-width:600px){#shema .hz-food .f-plan .lbl{display:none}}#shema .hz-rest .f-plan{margin:0;padding:clamp(14px,1.4vw,26px)}#shema .hz-rest .f-plan svg{display:block;width:100%;height:auto}#shema .hz-rest .f-plan svg *{pointer-events:none}#shema .hz-rest .f-plan .zf,#shema .hz-rest .f-plan .bdg{pointer-events:all}#shema .hz-rest .f-plan .zf{fill:transparent;transition:fill .3s,stroke .3s}#shema .hz-rest .f-plan .z.on .zf{fill:rgba(124,134,255,.14)}#shema .hz-rest .f-plan .z6.on .zf{fill:rgba(124,134,255,.05);stroke:#7c86ff}#shema .hz-rest .f-plan .bdg circle{fill:#09090b;stroke:#7c86ff;stroke-width:2;transition:fill .3s}#shema .hz-rest .f-plan .bdg text{fill:#7c86ff;font:500 22px Inter,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central;transition:fill .3s}#shema .hz-rest .f-plan .bdg.on circle{fill:#7c86ff}#shema .hz-rest .f-plan .bdg.on text{fill:#fff}#shema .hz-rest .f-plan .lbl text{fill:#84848e;font:400 15px Inter,system-ui,sans-serif}#shema .hz-rest .f-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 4px 2px;font-size:13px;color:var(--t3)}#shema .hz-rest .f-legend span{display:inline-flex;align-items:center;gap:9px}#shema .hz-rest .f-legend i{flex:none;display:inline-block}#shema .hz-rest .lg-st{width:11px;height:11px;border-radius:2px;background:var(--yel)}#shema .hz-rest .lg-tr{width:11px;height:11px;border-radius:50%;background:var(--acc)}#shema .hz-rest .lg-uv{width:20px;height:7px;border-radius:4px;background:#c4b5fd;box-shadow:0 0 8px rgba(167,139,250,.9)}#shema .hz-rest .lg-fl{width:24px;border-top:2px dashed var(--acc)}@media (max-width:600px){#shema .hz-rest .f-plan .lbl{display:none}}#shema .hz-rest .lg-gel{width:9px;height:9px;background:var(--grn);transform:rotate(45deg);margin:0 1px}#shema .hz-rest .f-plan .z7.on .zf{fill:rgba(124,134,255,.05);stroke:#7c86ff}#shema .hz-sklad .f-plan{margin:0;padding:clamp(14px,1.4vw,26px)}#shema .hz-sklad .f-plan svg{display:block;width:100%;height:auto}#shema .hz-sklad .f-plan svg *{pointer-events:none}#shema .hz-sklad .f-plan .zf,#shema .hz-sklad .f-plan .bdg{pointer-events:all;cursor:pointer}#shema .hz-sklad .f-plan .zf{fill:transparent;transition:fill .3s,stroke .3s}#shema .hz-sklad .f-plan .z.on .zf{fill:rgba(124,134,255,.15);stroke:#7c86ff}#shema .hz-sklad .f-plan .bdg circle{fill:#09090b;stroke:#7c86ff;stroke-width:2;transition:fill .3s}#shema .hz-sklad .f-plan .bdg text{fill:#7c86ff;font:600 20px Inter,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central;transition:fill .3s}#shema .hz-sklad .f-plan .bdg.on circle{fill:#7c86ff}#shema .hz-sklad .f-plan .bdg.on text{fill:#fff}#shema .hz-sklad .f-plan .lbl text{fill:#9f9fa9;font:400 14px Inter,system-ui,sans-serif}#shema .hz-sklad .f-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 4px 2px;font-size:13px;color:var(--t3)}#shema .hz-sklad .f-legend span{display:inline-flex;align-items:center;gap:9px}#shema .hz-sklad .f-legend i{flex:none;display:inline-block}#shema .hz-sklad .lg-st{width:12px;height:12px;border-radius:3px;background:var(--yel)}#shema .hz-sklad .lg-rm{width:12px;height:12px;border-radius:3px;background:#38bdf8}#shema .hz-sklad .lg-tr{width:12px;height:12px;border-radius:50%;background:var(--acc)}#shema .hz-sklad .lg-br{width:22px;border-top:2px dashed var(--grn)}@media (max-width:600px){#shema .hz-sklad .f-plan .lbl{display:none}}#shema .hz-sklad .w-plan .wl{fill:none;stroke:#3f3f46;stroke-width:2}#shema .hz-sklad .w-plan .wf{fill:#0e0e12;stroke:#3f3f46;stroke-width:2}#shema .hz-sklad .w-plan .wr{fill:#16161c;stroke:#2a2a33;stroke-width:1}#shema .hz-sklad .w-plan .wd{fill:#1d1d24;stroke:#52525b;stroke-width:1.4}#shema .hz-sklad .w-plan .wt{fill:#121217;stroke:#3f3f46;stroke-width:1.2}#shema .hz-sklad .w-plan .wc{fill:none;stroke:#52525b;stroke-width:1.2;stroke-dasharray:5 5}#shema .hz-sklad .w-plan .wfence{fill:none;stroke:#3f3f46;stroke-width:1.4;stroke-dasharray:2 7;stroke-linecap:round}#shema .hz-sklad .w-plan .ms{fill:#facc15}#shema .hz-sklad .w-plan .mr{fill:#38bdf8}#shema .hz-sklad .w-plan .mp{fill:#7c86ff}#shema .hz-sklad .w-plan .mu{fill:#c084fc}#shema .hz-sklad .w-plan .mb{fill:none;stroke:#22c55e;stroke-width:2.4;stroke-dasharray:7 6}#shema .hz-sklad .w-plan .wtxt{fill:#71717a;font:500 11px Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}#shema .hz-sklad .w-plan .z .zf{stroke:transparent;stroke-width:2}#shema .hz-sklad .lg-uv{width:16px;height:6px;border-radius:2px;background:#c084fc}@media (max-width:600px){#shema .hz-sklad .w-plan .bdg{transform:scale(1.7);transform-box:fill-box;transform-origin:center}}#shema .hz-bc .f-plan{margin:0;padding:clamp(14px,1.4vw,26px)}#shema .hz-bc .f-plan svg{display:block;width:100%;height:auto}#shema .hz-bc .f-plan svg *{pointer-events:none}#shema .hz-bc .f-plan .zf,#shema .hz-bc .f-plan .bdg{pointer-events:all;cursor:pointer}#shema .hz-bc .f-plan .zf{fill:transparent;transition:fill .3s,stroke .3s}#shema .hz-bc .f-plan .z.on .zf{fill:rgba(124,134,255,.15);stroke:#7c86ff}#shema .hz-bc .f-plan .bdg circle{fill:#09090b;stroke:#7c86ff;stroke-width:2;transition:fill .3s}#shema .hz-bc .f-plan .bdg text{fill:#7c86ff;font:600 20px Inter,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central;transition:fill .3s}#shema .hz-bc .f-plan .bdg.on circle{fill:#7c86ff}#shema .hz-bc .f-plan .bdg.on text{fill:#fff}#shema .hz-bc .f-plan .lbl text{fill:#9f9fa9;font:400 14px Inter,system-ui,sans-serif}#shema .hz-bc .f-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 4px 2px;font-size:13px;color:var(--t3)}#shema .hz-bc .f-legend span{display:inline-flex;align-items:center;gap:9px}#shema .hz-bc .f-legend i{flex:none;display:inline-block}#shema .hz-bc .lg-st{width:12px;height:12px;border-radius:3px;background:var(--yel)}#shema .hz-bc .lg-rm{width:12px;height:12px;border-radius:3px;background:#38bdf8}#shema .hz-bc .lg-tr{width:12px;height:12px;border-radius:50%;background:var(--acc)}#shema .hz-bc .lg-br{width:22px;border-top:2px dashed var(--grn)}@media (max-width:600px){#shema .hz-bc .f-plan .lbl{display:none}}#shema .hz-bc .w-plan .wl{fill:none;stroke:#3f3f46;stroke-width:2}#shema .hz-bc .w-plan .wf{fill:#0e0e12;stroke:#3f3f46;stroke-width:2}#shema .hz-bc .w-plan .wr{fill:#16161c;stroke:#2a2a33;stroke-width:1}#shema .hz-bc .w-plan .wd{fill:#1d1d24;stroke:#52525b;stroke-width:1.4}#shema .hz-bc .w-plan .wt{fill:#121217;stroke:#3f3f46;stroke-width:1.2}#shema .hz-bc .w-plan .wc{fill:none;stroke:#52525b;stroke-width:1.2;stroke-dasharray:5 5}#shema .hz-bc .w-plan .wfence{fill:none;stroke:#3f3f46;stroke-width:1.4;stroke-dasharray:2 7;stroke-linecap:round}#shema .hz-bc .w-plan .ms{fill:#facc15}#shema .hz-bc .w-plan .mr{fill:#38bdf8}#shema .hz-bc .w-plan .mp{fill:#7c86ff}#shema .hz-bc .w-plan .mu{fill:#c084fc}#shema .hz-bc .w-plan .mb{fill:none;stroke:#22c55e;stroke-width:2.4;stroke-dasharray:7 6}#shema .hz-bc .w-plan .wtxt{fill:#71717a;font:500 11px Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}#shema .hz-bc .w-plan .z .zf{stroke:transparent;stroke-width:2}#shema .hz-bc .lg-uv{width:16px;height:6px;border-radius:2px;background:#c084fc}@media (max-width:600px){#shema .hz-bc .w-plan .bdg{transform:scale(1.7);transform-box:fill-box;transform-origin:center}}#shema .hz-bc .b-plan .mp{fill:#7c86ff;stroke:#09090b;stroke-width:1.6}#shema .hz-bc .lg-rm{width:12px;height:12px;border-radius:3px;background:#38bdf8}@media (min-width:1101px){#shema .hz-bc .b-plan{position:sticky;top:96px}}</style>\n<!-- UIS -->",
+     1
+    ],
+    [
+     "<!-- Radist -->",
+     "<script id=\"hz-js\">/* Схема объекта на главной: вкладки и подсветка зон */\n(function(){var r=document.getElementById('shema');if(!r)return;var tabs=r.querySelectorAll('.hz-tab');\nfunction zone(p,z){p.querySelectorAll('.f-plan [data-z]').forEach(function(g){g.classList.toggle('on',g.getAttribute('data-z')===z)});p.querySelectorAll('.hz-zl li').forEach(function(l){l.classList.toggle('on',l.getAttribute('data-z')===z)})}\nr.querySelectorAll('.hz-pan').forEach(function(p){zone(p,'1');p.addEventListener('mouseover',function(e){var t=e.target.closest('[data-z]');if(t&&p.contains(t))zone(p,t.getAttribute('data-z'))});p.addEventListener('click',function(e){var t=e.target.closest('[data-z]');if(t)zone(p,t.getAttribute('data-z'))});p.addEventListener('focusin',function(e){var t=e.target.closest('li[data-z]');if(t)zone(p,t.getAttribute('data-z'))})});\ntabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){var on=x===b;x.classList.toggle('is-on',on);x.setAttribute('aria-selected',on);document.getElementById('hz-p-'+x.dataset.o).hidden=!on})})})})();</script>\n<!-- Radist -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "biznes-tsentry-torgovye-tsentry-predpriyatiya/index.php",
+   "before": "7d4d80fd53a1b5cbb19d1d790cf2121ad7b4b39bec93e1e98ada2d546757a02a",
+   "after": "62ba10ee6987eb8f04e4c120332ab5869399353dc9195e83159645fa54af4a0b",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya-i-dezinsektsiya/index.php",
+   "before": "aa681878c9e118a75527902bc585b5ba6ef0484ce8deff62513f664a6c10ccd5",
+   "after": "f242b95adfe1b40cf1484684cfb1f835eb85b68ce0cd22cc0a802dd9c683300f",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya/index.php",
+   "before": "462811a13693568523282a28d86c66bddcac62bb7f28269061a7ded355485a01",
+   "after": "118e6fff8137fe1db2be91ae2fc78eda62d11bf9af5fecd2d3747e6706271d34",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya/restorany-i-kafe/index.php",
+   "before": "147c95f171edd6840ffa1fc5cced99fdf55746dc5e3b83c13dc49faf4bb965f5",
+   "after": "17f29d4bd6729b6b85579f7e704aa99699e43c68d17d36c0e50745bceca9461e",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinfektsiya/index.php",
+   "before": "35bc856f4acd93e63cce10afc71400cfe1cddd7e882457cb33ee7e062da4c461",
+   "after": "9bee21a481334f30666b55be64d17f5967c1734dd423eaef4d330672005df5dc",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/index.php",
+   "before": "86f9e09cd5612e7b30ccab2f3635c4606738899322d20e4fc13b5f56829c315d",
+   "after": "a2f37cfd9bee2cf2a7b35df76dcbc148e82d260debb4446c3b403bc5cd4d8dfd",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/restorany-i-kafe/index.php",
+   "before": "c114ed535706cc0d0305885514a9f34ec3baa293a83befd413243cd60a0f7701",
+   "after": "b3cee55c702e2bf4996070f34ee4763905a90d3c80b5145133af1caa4440760f",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dogovor-deratizatsiya-dezinsektsiya/index.php",
+   "before": "6257b39dd71937d903466baaf8feff5627f287f51a724f4d98a02442e38976d3",
+   "after": "4dd812630077437a5e86cb9ea83cf8cfd3a46474e68d9322d0f9c9e6a95ce171",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "farmatsevticheskie-proizvodstva/index.php",
+   "before": "0849a1dccf4f68e0242f1835bc20efff20fb91963abb2bb9ecefdbffb1e8859e",
+   "after": "113cd27243a84898f712e3abd32ac07bcf4a670a8e352c1afa1f025f81f7ddd6",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "gostinitsy/index.php",
+   "before": "fb025d5c97630bf38f528836259fd22451996887e0aa406e71249b532477f495",
+   "after": "b75ce08eefe483c46394e18e6baba805ea81c182a97a1edc017321f4bdccbe6c",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-pishchevykh-produktov/index.php",
+   "before": "df237333f0c93100fac41e95905607f40276b2b022274bb4953c067c88772e1d",
+   "after": "021ee612757668af7fa3d65d6261c969a562166ecea420d141773f42e0f14695",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-smyvov/index.php",
+   "before": "be3a3b908b38809056b3ebac78454c144fc1913fa07f36f19afc942e7495b477",
+   "after": "4df5d283970b407d5f9ecf86046719afb10c9f1726cb78dae0abc2185bec0039",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-vody/index.php",
+   "before": "ed7879fabc5f11c9f240840a423366faaac931f657486ed4747a9fde313badcc",
+   "after": "7b5f9ca284db3643ae0faf6905f3ab36bae04cc513cb39d09a3ebb4223d45283",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-vozdukha-rabochey-zony/index.php",
+   "before": "20d2f9d15abc5568692f8f6ad58e8a259ea57741ad8acbdeb749db1c0954ce57",
+   "after": "af4cc452cb6748395203924b9a83544f90c6b65fc477750a9e3198e1ae247073",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/index.php",
+   "before": "00128a52af0d65aab22acf998fce800083a7e0f144c600fdbb36599ace557be0",
+   "after": "b379f6aca8aba80f6e0e95f5ba62cb95c8f7bd38ed8335df11558f836fe6a531",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/izmerenie-mikroklimata/index.php",
+   "before": "d261afa6d32af3e68e7aad338abd3304e70fdd15711a69e11184c6ca5001a35c",
+   "after": "83bab4faafdc6b23f3fc78b6e5191b06cda951b051ee09b5d235c7cdd703a11b",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/kontrol-sterilizatorov/index.php",
+   "before": "2b27662ecab422a937cf8b2a3b956923214dc3dad05a1af60260c22e5b15f116",
+   "after": "da989f8864384d8665e12a458fc6aeb203388ac22378eacb128f04d7c28c00b6",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/zamer-osveshchennosti/index.php",
+   "before": "b313f6e0a5f5c0c8eb528278b93691c706c1f8a29db0294974ade960e538bd41",
+   "after": "f9a4067b839e725bc57831e7132bb8f9658051eac422e2ae9670781721fe3ca5",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "magaziny-i-torgovye-seti/index.php",
+   "before": "1aa826e2a4501015f04c358b33c4e2b8c7ddc1a77733bf1d363411f76ebbcf6c",
+   "after": "8cb39467baa1970d2a9b9b34afaf63f72770cd922cf0d0165c252ea470aa357e",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/akt-deratizatsii-i-dezinsektsii/index.php",
+   "before": "5d3d34ad1c758ee12491ccef786795e0d411cccb080b8af74fad87ddd43f25a7",
+   "after": "a0953735e204463893f2c8dbf043e7910518badd8a8d10d627023c85d216f12f",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/index.php",
+   "before": "7bdc908ccdbd6f6bd2e5f2d612c827a64deae65a08a7d1cfd38a10f861d71231",
+   "after": "ca77342bbd4462ace52c2967d363c4f32388e0e2d6633d1e87c245a38477e057",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/kak-berut-smyvy/index.php",
+   "before": "f7b6085a3854b07df179de7812c61386c251ccc75fcece845b5f701032a2e48c",
+   "after": "a7a8fad57cbc8b0ec595448d16876fbc63c345d8ec27cac00ba0902c241ab1e0",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/kontrol-raboty-sterilizatorov/index.php",
+   "before": "20192756c8ab6fcf38b09a945467fdca8a1494a585074d032dc5de698bac7c59",
+   "after": "132acad1aef641a910686fb5c4f5f9c8050895da1f2d07aa7dee1742076b3db2",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/pest-menedzhment-ili-razovaya-obrabotka/index.php",
+   "before": "60699a56ba9591b64f0fdb9315132121de881405fbc24a5d24249c69382b54b8",
+   "after": "940cebcd1262e531ea6db6dcb8de555081a22bbfded4c2807a07b1377d562322",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-pest-kontrolya/index.php",
+   "before": "53af68c6762a22c21f1fab903ff7d8bcf3cef49038ead4b65d0bf8937338e3ae",
+   "after": "9b5ecef8672f86317dccf8695b854d63f44fc54bb10da534215aa4367583d27c",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-proizvodstvennogo-kontrolya-haccp/index.php",
+   "before": "07bee448041f594b16c2ae0ce7904edd78421493d86de4051d1d9d9920a716ba",
+   "after": "de3bbe248a7172b1c64a48826e245a7f5fb6b07c08aa839e0b86d2fb15e26182",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/skhema-tochek-pest-kontrolya/index.php",
+   "before": "88ca22a8bc5dd37e222df7b74285003415484158a45ddc4305e13b4401678f5d",
+   "after": "cdb6b261eca457d5b7009f62f69b8b68d4d1298fe29f005f48cb7467c8ff1e1b",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/zamer-osveshchennosti-i-mikroklimata/index.php",
+   "before": "158a23ad048777d17a9158ef6cb78b53fe5332f455954100ddb84574d08b049b",
+   "after": "0ac5f16ebdc338a61a2521d4711f563e15177446c3fb214a6b2170e19fa75378",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/zhurnal-pest-kontrolya/index.php",
+   "before": "3a1fde57055753645340900d84b3789c255fe59300cf7e225cb0a2db78aa45c6",
+   "after": "f2787a087db2bd7ca5cbe12ed4ccb253eea9be10e59e02bd7a144ea688f19647",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.php",
+   "before": "a47aca9a3da7af05158c5e4bda74c97d279acf514dd589780a377ae10e4b240e",
+   "after": "82d24964cb67f323fd3281a9f2158c4f6a2c2de3bdcbb77c0644353ea2ec2c6b",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.php",
+   "before": "08425226f6c639fee0986e235f3087f0db3f8d6cc513bb3db29baba93d620993",
+   "after": "657d2af49f1e824fcabee9abc7b07e3d518506005eeb99b5abb1edb4865d6c09",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/index.php",
+   "before": "8bbcea0c26e2be63b74ceadc147f5442fbc44781e59894b11e0e4398698a8e19",
+   "after": "8a77a3df61b72f0e667d50c0440e43f581beb1d594520906f2455aa6225a8bd4",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/proverochnye-listy/index.php",
+   "before": "17b4dff81b7dd6afce18b74381f98e46bc5ddb8694f54b8752d1a0ed95d3cf94",
+   "after": "dff7e6f7bae9100cfc8999744015ae692c0b041e53710c2a777478351cded140",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "ochistka-dezinfektsiya-ventilyatsii/index.php",
+   "before": "279ab0389e1396c54f8c7fa1127ab4c97ef47e92997d327da07943651db475ab",
+   "after": "879ee961e1317506dbf73b5cc81ea0daf58da58153ff8a1127d94233271d73c9",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "pishchevoe-proizvodstvo/index.php",
+   "before": "fec8c189de0bbbaf2f098df131e93380645b22bb7e51271bdf204697ed2fee1c",
+   "after": "38bdf010cd96ed7664a0db6b7d4346be14653dff936197bd34487a99d146cbd3",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "razrabotka-ppk/index.php",
+   "before": "2f6ab56ac401ac3ae90f6f62e9d94e7589927055306ae6d113b011267c9de86b",
+   "after": "5aa9101b2d5d7138162a71352e59881ba123eda2db4772e5b2891a0d90825b44",
+   "replace": [
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "restorany-i-kafe/index.php",
+   "before": "47cec6dee3c9e32e3ccd984ab434769e9128a96ebb22c9c4eda876b885cb18b6",
+   "after": "4952d72ee210756eb798c91c41403d7a302a4896bd306a9ef69fa94c964fd560",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "sanitarnyy-audit/index.php",
+   "before": "fd79036402878cfd35c9384836e23f328d0d3a06e5d1d99a83aa3a96c0f04887",
+   "after": "bc108cc0e451ce8a6c7d87c088dc9f9ab162f15be8d7863c5f4c4a1b89808789",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "sklady-i-logistika/index.php",
+   "before": "b4d50967f91adaf9d133393fb4f7b1a6b07b32f4490c7db66db8fa8be07654da",
+   "after": "b1a62d7275623ca166e76a276969a11bfa9b980ffdb4174e4a116d59000cdaf0",
+   "replace": [
+    [
+     ".pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}",
+     ".pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ],
+    [
+     ".vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}",
+     ".vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:\"\";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}",
+     1
+    ]
+   ]
+  }
+ ]
+}
