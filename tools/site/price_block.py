@@ -81,7 +81,7 @@ CSS = ('<style id="pr-st">/* общий прайс на услуги (tools/site
        '.pr-num{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);margin-bottom:26px}'
        '.pr-go{flex:none;width:28px;height:28px;border:1px solid var(--line2);border-radius:50%;display:grid;place-items:center;color:var(--acc)}'
        '.pr-go svg{width:14px;height:14px}'
-       '.pr-here{flex:none;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--acc);border:1px solid rgba(124,134,255,.4);border-radius:20px;padding:4px 10px}'
+       '.pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}'
        '.pr-card h3{font-size:clamp(20px,1.5vw,24px);font-weight:500;letter-spacing:-.03em;line-height:1.25;margin:0 0 12px}'
        '.pr-card p{margin:0 0 26px;color:var(--t2);font-size:15px;line-height:1.55}'
        '.pr-price{margin-top:auto}'
@@ -140,11 +140,9 @@ def block(root, cur, home=False):
     for n, (slug, num, title, desc, a, u) in enumerate(CARDS):
         cls = 'card pr-card' + (' pr-main' if n == 0 else '')
         # своя услуга — метка «Вы здесь» и без ссылки на себя. Главная и есть «Пест-контроль по системе IPM»: плитка
-        # не ведёт к #podhod через «Этапы работы» (предложение владельца 12.11.2026), метка зелёная (стиль — tools/home-scheme/scheme.css)
+        # не ведёт к #podhod через «Этапы работы» (предложение владельца 12.11.2026), метка «Вы здесь» зелёная на всех страницах (13.11.2026)
         here = slug == cur
         mark = '<span class="pr-here">Вы здесь</span>' if here else f'<span class="pr-go" aria-hidden="true">{ARR}</span>'
-        if home and here:
-            mark = '<span class="pr-here pr-here-g">Вы здесь</span>'
         inner = f'<div class="pr-num">{num}{mark}</div><h3>{title}</h3><p>{desc}</p>{_amt(a, u)}'
         if here:
             cards.append(f'<div class="{cls}" aria-current="page">{inner}</div>')

@@ -75,7 +75,7 @@ CSS = ('<style id="vu-st">/* блок «Все услуги» (tools/site/servic
        'a.vu-i:hover .vu-a,a.vu-i:focus-visible .vu-a{background:var(--t1);border-color:var(--t1);color:#000;transform:translateX(3px)}'
        '.vu-i.is-cur{background:rgba(99,102,241,.1);box-shadow:inset 0 0 0 1px rgba(124,134,255,.35)}'
        '.vu-i.is-cur+.vu-i::before,.vu-i+.vu-i.is-cur::before{display:none}'
-       '.vu-here{align-self:center;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#a5abff;white-space:nowrap}'
+       '.vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}'
        '.vu-cta{padding:clamp(24px,1.8vw,32px);border-radius:20px;display:flex;flex-direction:column;gap:12px;'
        'background:radial-gradient(120% 140% at 100% 0%,rgba(99,102,241,.32),rgba(99,102,241,0) 60%),var(--bg2)}'
        '.vu-cta b{font-size:clamp(19px,1.3vw,24px);font-weight:400;line-height:1.25;letter-spacing:-.02em;color:var(--t1)}'
