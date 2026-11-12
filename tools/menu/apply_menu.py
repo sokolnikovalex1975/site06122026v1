@@ -325,7 +325,12 @@ def company_footer(s):
     s = re.sub(r'\n?  <div class="wrap ft-company" id="requisites">.*?</div>\n?', '\n', s, flags=re.S)
     assert s.count('</head>') == 1, 'не один </head>'
     assert s.count('</footer>') == 1, 'не один </footer>'
-    s = s.replace('</head>', COMPANY_STYLE + '\n</head>', 1)
+    # В production официальный код UIS должен остаться непосредственно перед </head>.
+    uis = s.find('<!-- UIS -->', 0, s.index('</head>'))
+    if uis >= 0:
+        s = s[:uis] + COMPANY_STYLE + '\n' + s[uis:]
+    else:
+        s = s.replace('</head>', COMPANY_STYLE + '\n</head>', 1)
     return s.replace('</footer>', '  ' + COMPANY_BLOCK + '\n</footer>', 1)
 
 
