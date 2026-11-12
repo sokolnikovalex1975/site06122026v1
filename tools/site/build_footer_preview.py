@@ -14,17 +14,21 @@ shutil.copytree(
         '*.md', '__pycache__', '*.pyc'
     )
 )
-old = (
-    "    try { if (location.hash || sessionStorage.getItem('pc-intro')) "
-    "d.classList.add('no-intro'); else sessionStorage.setItem('pc-intro', '1'); }\n"
-    "    catch (e) { if (location.hash) d.classList.add('no-intro'); }"
+store = (
+    '<script>window.__pcPreviewStore={values:Object.create(null),'
+    'getItem:function(k){return this.values[k]??null},'
+    'setItem:function(k,v){this.values[k]=String(v)},'
+    'removeItem:function(k){delete this.values[k]},'
+    'clear:function(){this.values=Object.create(null)}};</script>'
 )
 n = 0
 for f in OUT.rglob('*.html'):
     s = f.read_text(encoding='utf-8')
-    if old in s:
-        s = s.replace(old, "    d.classList.add('no-intro');", 1)
+    if 'sessionStorage' in s or 'localStorage' in s:
+        s = s.replace('sessionStorage', 'window.__pcPreviewStore')
+        s = s.replace('localStorage', 'window.__pcPreviewStore')
+        s = s.replace('<head>', '<head>\n' + store, 1)
         f.write_text(s, encoding='utf-8')
         n += 1
     assert not any(k in s for k in ('sessionStorage', 'localStorage', 'indexedDB')), str(f)
-print(f'Превью: {OUT}; заставка без хранилища на {n} страницах. Исходники не изменены.')
+print(f'Превью: {OUT}; временное состояние в памяти на {n} страницах. Исходники не изменены.')
