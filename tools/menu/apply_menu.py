@@ -314,13 +314,12 @@ COMPANY_STYLE = (
 COMPANY_BLOCK = (
     '<div class="wrap ft-company" id="requisites">'
     '<p>ООО «Центр дезинфекционных услуг» · ИНН 7714462211 · КПП 771401001 · ОГРН 1207700257775</p>'
-    '<p>Адрес склада: 123007, г. Москва, 2-й Хорошёвский проезд, д. 7, к. 1, помещ. 1.</p>'
     '</div>'
 )
 
 
 def company_footer(s):
-    """Общие реквизиты; адрес склада подтверждён владельцем 12.11.2026."""
+    """Общие реквизиты. Строка «Адрес склада» убрана по решению владельца 13.11.2026 (tools/site/no_messengers.py)."""
     s = re.sub(r'<style id="ft-company-st">.*?</style>\n?', '', s, flags=re.S)
     s = re.sub(r'\n?  <div class="wrap ft-company" id="requisites">.*?</div>\n?', '\n', s, flags=re.S)
     assert s.count('</head>') == 1, 'не один </head>'
