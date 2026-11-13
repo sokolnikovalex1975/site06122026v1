@@ -1,0 +1,325 @@
+{
+ "name": "faq-first-2026-11-13",
+ "count": 7,
+ "files": [
+  {
+   "file": "deratizatsiya-i-dezinsektsiya/index.php",
+   "before": "23ce5918180b62df694ef78c0fed29fafbccf286c0c83487646147c202054d0e",
+   "after": "879d56a4bf1f0c8e649b0de80e629c3d3707f24be82673072ecfb32e5770f096",
+   "replace": [
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a2\" id=\"q2\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a2\" id=\"q2\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a3\" id=\"q3\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a3\" id=\"q3\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a4\" id=\"q4\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a4\" id=\"q4\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a5\" id=\"q5\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a5\" id=\"q5\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a6\" id=\"q6\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a6\" id=\"q6\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a7\" id=\"q7\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a7\" id=\"q7\">",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya/restorany-i-kafe/index.php",
+   "before": "c76ba2a87533861fa84d5be216bbcf3ce3457463a3c7950f160c9ec78ce08415",
+   "after": "c8b3004bf957d548fc4be13412ba798db8cc9d658c662d0ab253b56b1b8bd69a",
+   "replace": [
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a2\" id=\"q2\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a2\" id=\"q2\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a3\" id=\"q3\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a3\" id=\"q3\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a4\" id=\"q4\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a4\" id=\"q4\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a5\" id=\"q5\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a5\" id=\"q5\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a6\" id=\"q6\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a6\" id=\"q6\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a7\" id=\"q7\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a7\" id=\"q7\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a8\" id=\"q8\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a8\" id=\"q8\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a9\" id=\"q9\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a9\" id=\"q9\">",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/restorany-i-kafe/index.php",
+   "before": "a1c12b73ec56fa56106f4182f3e8e38eea1c51ab78e78e4325676b3c00118028",
+   "after": "7c2eb9724fd2f8950b792596fcaed0ca076cd9c833ee054dd469b9bf581cee7a",
+   "replace": [
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a2\" id=\"q2\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a2\" id=\"q2\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a3\" id=\"q3\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a3\" id=\"q3\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a4\" id=\"q4\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a4\" id=\"q4\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a5\" id=\"q5\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a5\" id=\"q5\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a6\" id=\"q6\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a6\" id=\"q6\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a7\" id=\"q7\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a7\" id=\"q7\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a8\" id=\"q8\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a8\" id=\"q8\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a9\" id=\"q9\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a9\" id=\"q9\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a10\" id=\"q10\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a10\" id=\"q10\">",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/akt-deratizatsii-i-dezinsektsii/index.php",
+   "before": "574362f9d94cf300c3ea5e3deb776d0831be6ffecd2aa9056aad0cdab3383433",
+   "after": "2759eb85ff9802dac56bc78d9bbea64b177a07123aa81448111bdd23ef4324eb",
+   "replace": [
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a2\" id=\"q2\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a2\" id=\"q2\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a3\" id=\"q3\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a3\" id=\"q3\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a4\" id=\"q4\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a4\" id=\"q4\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a5\" id=\"q5\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a5\" id=\"q5\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a6\" id=\"q6\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a6\" id=\"q6\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a7\" id=\"q7\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a7\" id=\"q7\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a8\" id=\"q8\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a8\" id=\"q8\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a9\" id=\"q9\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a9\" id=\"q9\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a10\" id=\"q10\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a10\" id=\"q10\">",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/skhema-tochek-pest-kontrolya/index.php",
+   "before": "f5b7499ddcb27dc4ddd910a00d95e30a3fbae26c7d057d338dcab81029199e14",
+   "after": "70d6261208b66d51c692268e52fcad559f9b9a7199ebbdbc3e046e3e1624c675",
+   "replace": [
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a2\" id=\"q2\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a2\" id=\"q2\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a3\" id=\"q3\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a3\" id=\"q3\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a4\" id=\"q4\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a4\" id=\"q4\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a5\" id=\"q5\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a5\" id=\"q5\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a6\" id=\"q6\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a6\" id=\"q6\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a7\" id=\"q7\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a7\" id=\"q7\">",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.php",
+   "before": "8ead501561da694334a4969945b349d6df3c23409db0576ec5500992ea6d5160",
+   "after": "6dc131e243fa5a1800068a1b6bd78dc3566f1eecc78831266254fd75cc3b0422",
+   "replace": [
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a2\" id=\"q2\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a2\" id=\"q2\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a3\" id=\"q3\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a3\" id=\"q3\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a4\" id=\"q4\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a4\" id=\"q4\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a5\" id=\"q5\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a5\" id=\"q5\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a6\" id=\"q6\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a6\" id=\"q6\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a7\" id=\"q7\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a7\" id=\"q7\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a8\" id=\"q8\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a8\" id=\"q8\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a9\" id=\"q9\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a9\" id=\"q9\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a10\" id=\"q10\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a10\" id=\"q10\">",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.php",
+   "before": "c821ad624e2f67eade80913560a79f5e952656743956593f8680f607d3773645",
+   "after": "b09cf3ce939e4762ccab004a11ba7f231e4a2a96f184cd43233dcaced270c582",
+   "replace": [
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a2\" id=\"q2\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a2\" id=\"q2\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a3\" id=\"q3\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a3\" id=\"q3\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a4\" id=\"q4\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a4\" id=\"q4\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a5\" id=\"q5\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a5\" id=\"q5\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a6\" id=\"q6\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a6\" id=\"q6\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a7\" id=\"q7\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a7\" id=\"q7\">",
+     1
+    ],
+    [
+     "<div class=\"card qa open\"><button aria-expanded=\"true\" aria-controls=\"a8\" id=\"q8\">",
+     "<div class=\"card qa\"><button aria-expanded=\"false\" aria-controls=\"a8\" id=\"q8\">",
+     1
+    ]
+   ]
+  }
+ ]
+}

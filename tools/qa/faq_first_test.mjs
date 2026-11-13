@@ -105,6 +105,7 @@ for (const [vn, vk, w, h, mob] of VP) {
       await sec.scrollIntoViewIfNeeded();
       await page.waitForTimeout(2500);
       await sec.evaluate((el) => window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - 20));
+      if (!mob) await page.mouse.move(2, 2);  // курсор после щелчка проверки не должен подсвечивать вопрос на снимке
       await page.waitForTimeout(1500);
       const name = p.replace(/^\/|\/$/g, '').replace(/\//g, '__') || 'home';
       await sec.screenshot({ path: `${SHOTS}/${name}--${vk}.png` });
