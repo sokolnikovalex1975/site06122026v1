@@ -122,6 +122,43 @@ def _get(url):
     return 0, ''
 
 
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args, **kwargs):  # noqa: D401 — переадресацию не выполняем, нужен сам ответ
+        return None
+
+
+def _status_noredirect(url):
+    opener = urllib.request.build_opener(_NoRedirect)
+    for attempt in range(4):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (independence_law)'})
+            with opener.open(req, timeout=30) as r:
+                return r.status, r.headers.get('Location', '')
+        except urllib.error.HTTPError as e:
+            if e.code != 502:
+                return e.code, e.headers.get('Location', '') if e.headers else ''
+        except Exception:  # noqa: BLE001
+            pass
+        time.sleep(3)
+    return 0, ''
+
+
+def check_removed_paths():
+    """Служебные адреса другого проекта на сайте должны отвечать 404 (без переадресаций)."""
+    word = _CFG['hard'][0]
+    hard = 0
+    for path in (f'/scripts-{word}/', f'/scripts-{word}', f'/scripts-{word}/index.php'):
+        code, loc = _status_noredirect(SITE + path)
+        if code == 404:
+            continue
+        if code == 0:
+            print('не открылась:', SITE + path, code)
+            continue
+        hard += 1
+        print('НАРУШЕНИЕ: служебный адрес другого проекта отвечает', code, SITE + path, loc)
+    return hard
+
+
 def check_live():
     code, sm = _get(SITE + '/sitemap.xml')
     urls = re.findall(r'<loc>(.*?)</loc>', sm) + [SITE + '/robots.txt', SITE + '/llms.txt', SITE + '/sitemap.xml']
@@ -139,7 +176,8 @@ def check_live():
             warn.setdefault(w, []).append(u)
     for w, where in warn.items():
         print(f'предупреждение: {w} — {len(where)} адрес(ов)')
-    print('проверено адресов:', len(urls))
+    hard += check_removed_paths()
+    print('проверено адресов:', len(urls) + 3)
     return hard
 
 
