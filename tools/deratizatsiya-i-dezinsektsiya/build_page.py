@@ -124,7 +124,9 @@ def year_html():
 
 def faq_section():
     def qa(i, q, a):
-        return (f'        <div class="card qa open"><button aria-expanded="true" aria-controls="a{i}" id="q{i}"><span>{q}</span><span class="pm"></span></button>'
+        # развёрнут только первый вопрос, остальные свёрнуты (решение владельца 13.11.2026, tools/site/faq_first.py)
+        cls, exp = (' open', 'true') if i == 1 else ('', 'false')
+        return (f'        <div class="card qa{cls}"><button aria-expanded="{exp}" aria-controls="a{i}" id="q{i}"><span>{q}</span><span class="pm"></span></button>'
                 f'<div class="ans" id="a{i}" role="region" aria-labelledby="q{i}"><div><p>{a}</p></div></div></div>')
     half = (len(FAQ) + 1) // 2
     html = ['<section class="s" id="voprosy">', '  <div class="wrap">',

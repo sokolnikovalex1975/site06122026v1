@@ -1,5 +1,25 @@
 # Редакция v4 — список правок для проверки
 
+## 13.11.2026: вопросы внизу страницы — развёрнут только первый (GitHub-превью; Timeweb не менялся)
+
+- **Запрос владельца:** на странице «Схема точек пест-контроля» «сразу развёрнуты вопросы в самом низу страницы… должен
+  быть развёрнут только первый вопрос; все остальные должны быть свёрнуты», проверить все страницы сайта и показать превью.
+- **Проверка всех страниц сайта** (39 страниц с вопросами из sitemap рабочего сайта, компьютер 1440 и телефон 390,
+  `tools/qa/faq_first_test.mjs`): все вопросы были развёрнуты на 7 страницах — `/materialy/skhema-tochek-pest-kontrolya/`,
+  `/materialy/akt-deratizatsii-i-dezinsektsii/`, `/deratizatsiya-i-dezinsektsiya/`, `/dezinsektsiya/restorany-i-kafe/`,
+  `/deratizatsiya/restorany-i-kafe/`, `/normativnaya-baza/dokumenty-dlya-rospotrebnadzora/`,
+  `/normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/`. На остальных 32 развёрнут только первый вопрос.
+- **Причина:** генераторы этих страниц ставили всем вопросам `class="card qa open"` и `aria-expanded="true"`
+  (`tools/normativnaya-baza/build_pages.py` с `faq_open` — общий и для акта и схемы точек, `tools/restorany-uslugi/build_pages.py`,
+  `tools/deratizatsiya-i-dezinsektsiya/build_page.py`); `app.js` раскрывает только первый вопрос и чужие не сворачивает.
+- **Стало:** у всех вопросов, кроме первого, убраны `open` и `aria-expanded="true"` → `"false"` (54 вопроса на 7 страницах);
+  тексты, ответы, разметка FAQPage, стили, скрипты, телефон и почта не менялись. Генераторы дают то же самое.
+  Точечная правка готовых страниц и пакета — `tools/site/faq_first.py` (`--check`, `--check-prod`), шаг `build_site.py`
+  после `flex_text.py`. Ответы остаются в коде страницы — роботы и ИИ-ассистенты читают их и в свёрнутом виде.
+- **Проверка:** `tools/qa/faq_first_test.mjs` на превью — 40 страниц × 2 экрана, 0 нарушений (первый открыт, остальные
+  свёрнуты, второй раскрывается и сворачивается щелчком, ошибок JS нет); на рабочем сайте до правки — 14 нарушений
+  (7 страниц × 2 экрана). `tracking_laws.py --check` и `independence_law.py --check` — OK.
+- **Timeweb:** не выкладывалось, ждёт команды владельца.
 ## 13.11.2026: title и description главной — вариант А + описание 1а (GitHub и Timeweb)
 
 - **Решение владельца 13.11.2026:** по документу проекта «SEO/Главная — title и description на согласование 2026-11-13» —
