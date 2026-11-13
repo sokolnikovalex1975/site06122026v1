@@ -98,6 +98,10 @@
   42 страницы; пересобран от `20261113yakor`, исходные суммы = итог пакета `yakor-2026-11-13`), серверный скрипт
   `tools/deploy/publish_hero_scroll.py`; другие правки из GitHub не переносятся.
   Журнал и откат — `tools/site/hero-scroll-2026-11-13.md`.
+- **Опубликовано 13.11.2026 в 03:13 МСК** (пакет коммита `3c0f0c1`, SSH-консоль Timeweb): `PRECHECK OK: 44/44`,
+  `BACKUP OK: 44/44`, `PUBLISHED: 44/44 checksums verified`; в 14:13 — `ALREADY PUBLISHED: 44/44`. HTTPS — 44/44 совпали
+  с пакетом, `tracking_laws` — без нарушений; браузер на рабочем сайте: первый экран 11/11, якоря и подсветка 11/11.
+  Откат: `python3 "$HOME/pestcontrol-hero-scroll-2026-11-13/publish_hero_scroll.py" --rollback`.
 
 ## 13.11.2026: опубликовано на Timeweb — «Схема объекта» на главной и зелёная «Вы здесь» (40 страниц)
 

@@ -46,4 +46,14 @@ PKG=<папка пакета>/pkg VERSION=20261113ekran node tools/qa/hero_scrol
 
 ## Публикация на рабочем сайте
 
-Ожидает выкладки через основную панель Timeweb и встроенную SSH-консоль (без FTP и без паролей в командах), как 12.11.2026.
+13.11.2026, 03:13 МСК — пересобранный пакет (коммит `3c0f0c1`) выложен через встроенную SSH-консоль Timeweb, без FTP и паролей в командах. Папка на сервере — `/home/c/cd59839/pestcontrol-hero-scroll-2026-11-13/`: `deploy_payload.json` и `publish_hero_scroll.py` загружены в 03:12 и совпадают с GitHub (SHA-256 `3319b0aa…639e` и `5b5ffe37…c25f`), `publish.log` и `publication.json` — 03:13.
+
+- `publish.log`: `PRECHECK OK: 44/44 original and resulting checksums verified (style.css, app.min.js, 42 pages)`, `BACKUP OK: 44/44 outside public_html`, `PUBLISHED: 44/44 checksums verified`; резервная копия — `/home/c/cd59839/pestcontrol-hero-scroll-2026-11-13/backup`.
+- `publication.json`: `"status": "published"`, заменены все 44 файла. Повторная проверка 13.11.2026 в 14:13 МСК — `ALREADY PUBLISHED: 44/44 checksums match`.
+- Независимая проверка 13.11.2026 (запись публикации сделана из задачи «переход по якорю», где владелец попросил пересобрать и выложить этот пакет, — к тому времени он уже был выложен, повторно не выкладывался): по HTTPS 44/44 файла HTTP 200 и совпадают с итогом пакета, `tracking_laws` — без нарушений; браузер на рабочем сайте (счётчики заблокированы): `VERSION=20261113ekran node tools/qa/hero_scroll_test.mjs` — 11/11, `anchor_landing_test.mjs` — 11/11 (переходы по якорям и подсветка шапки), `menu_anchors_test.mjs` на главной — 6/6.
+
+Откат через SSH-консоль:
+
+```sh
+python3 "$HOME/pestcontrol-hero-scroll-2026-11-13/publish_hero_scroll.py" --rollback
+```
