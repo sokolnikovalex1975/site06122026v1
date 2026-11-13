@@ -26,6 +26,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / 'tools' / 'site'))
 import tracking_laws  # noqa: E402  закон владельца: счётчики сразу, телефон и почта без лишних тегов (11.11.2026)
+import independence_law  # noqa: E402  закон владельца: сайт не связан с другим проектом владельца (13.11.2026)
 
 OUT = ROOT / 'dist' / 'timeweb'
 PAGES = [
@@ -66,6 +67,7 @@ ROBOTS_RE = re.compile(r'<meta name="robots" content="noindex, nofollow">(?:<!--
 
 def main():
     parts = tracking_laws.counter_parts()  # части server/counters.html: metrika, uis, noscript, radist
+    shared_ids = {}  # общие с другим проектом идентификаторы: предупреждение (закон независимости, 13.11.2026)
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
@@ -81,6 +83,10 @@ def main():
         assert n == 1, rel + ': нет метки robots превью'
         bad = tracking_laws.check_page(s, counters=rel not in LEGAL, parts=parts)
         assert not bad, rel + ': нарушение закона владельца (tools/site/tracking_laws.py) — ' + '; '.join(bad)
+        bad = independence_law.violations(s)
+        assert not bad, rel + ': нарушение закона независимости (tools/site/independence_law.py) — ' + '; '.join(bad)
+        for w in independence_law.shared(s):
+            shared_ids.setdefault(w, []).append(rel)
         dst = OUT / rel.replace('index.html', 'index.php')
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_text(s, encoding='utf-8')
@@ -100,6 +106,11 @@ def main():
             shutil.copy2(f, d)
     for name in SERVER:
         shutil.copy2(ROOT / 'server' / name, OUT / name)
+    for name in SERVER:  # .htaccess, robots.txt, sitemap.xml, ключ IndexNow — тоже по закону независимости
+        bad = independence_law.violations((OUT / name).read_text(encoding='utf-8', errors='replace'))
+        assert not bad, name + ': нарушение закона независимости (tools/site/independence_law.py) — ' + '; '.join(bad)
+    for w, where in shared_ids.items():
+        print(f'закон независимости, предупреждение: {w} — {len(where)} стр. (новых совпадений не добавлять, решает владелец)')
     n = sum(1 for _ in OUT.rglob('*') if _.is_file())
     size = sum(f.stat().st_size for f in OUT.rglob('*') if f.is_file())
     print(f'готово: {OUT.relative_to(ROOT)} — {n} файлов, {size / 1048576:.1f} МБ')
