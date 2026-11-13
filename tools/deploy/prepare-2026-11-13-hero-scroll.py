@@ -12,10 +12,13 @@
     Правится рабочий файл одной заменой, а не собирается из app.js репозитория: в GitHub есть ещё не опубликованные
     правки (схема объекта, фото с людьми, защита от проникновения, «Наши клиенты»);
   * style.css — в конец дописывается блок «Первый экран главной на телефоне» из style.css репозитория (байт в байт);
-  * главная (стили встроены) — тот же блок, сжатый esbuild, отдельным <style id="hero-scroll-st"> перед <!-- UIS -->;
-  * все страницы — версия стилей и скриптов ?v=20261112fon → ?v=20261113hero (у style.css и app.min.js кэш на год,
+  * главная (стили встроены) — тот же блок, сжатый esbuild, отдельным <style id="hero-scroll-st"> после <style id="hz-st">
+    и перед разметкой JSON-LD (UIS остаётся последним в <head>);
+  * все страницы — версия стилей и скриптов ?v=20261113yakor → ?v=20261113ekran (у style.css и app.min.js кэш на год,
     иначе вернувшиеся посетители видели бы прежний первый экран).
 Счётчики — по закону владельца (tracking_laws) до и после: Метрика, UIS и Radist не меняются.
+Пакет пересобран 13.11.2026 после выкладок «Схема объекта», JSON-LD и «Переход по якорю» (версия 20261113yakor):
+прежний пакет от версии 20261112fon не выкладывался.
 """
 import concurrent.futures
 import hashlib
@@ -33,7 +36,7 @@ sys.path.insert(0, str(ROOT / 'tools/site'))
 import tracking_laws  # noqa: E402
 
 NAME = 'hero-scroll-2026-11-13'
-OLD_V, NEW_V = '20261112fon', '20261113hero'
+OLD_V, NEW_V = '20261113yakor', '20261113ekran'
 MARK = '/* ===== Первый экран главной на телефоне: отступ до бегущей строки (13.11.2026) ====='
 STYLE_ID = 'hero-scroll-st'
 JS = 'app.min.js'
@@ -123,11 +126,13 @@ def main():
         if path == '':
             assert 'style.css' not in text and text.count(HERO_CSS) == 1, 'главная: стили встроены, отступ героя прежний'
             assert text.count('id="heroMedia"') == 1 and text.count('id="panel"') == 1 and text.count('class="strip"') == 1
-            anchor = '</style>\n<!-- UIS -->'
-            assert text.count(anchor) == 1 and text.index(anchor) < text.index('</head>')
-            assert text.index('id="pests-map-st"') < text.index(anchor), 'новый стиль — после «Карты очагов», перед UIS'
-            replace.append([anchor, '</style>' + mini + '\n<!-- UIS -->', 1])
-            result = result.replace(anchor, '</style>' + mini + '\n<!-- UIS -->', 1)
+            anchor = '</style>\n<script type="application/ld+json">'
+            assert text.count(anchor) == 1 and text.index(anchor) < text.index('<!-- UIS -->') < text.index('</head>')
+            hz = text.index('<style id="hz-st">')
+            assert text.index('</style>', hz) == text.index(anchor), 'новый стиль — сразу после hz-st, перед JSON-LD и UIS'
+            new = '</style>' + mini + '\n<script type="application/ld+json">'
+            replace.append([anchor, new, 1])
+            result = result.replace(anchor, new, 1)
         bad = tracking_laws.check_page(result, counters=counters, parts=parts)
         assert not bad, path + ': правка нарушает закон о счётчиках: ' + str(bad[:3])
         for k, p in parts.items():
@@ -153,7 +158,7 @@ def main():
 
     js_old = fetch(JS + '?v=' + OLD_V, JS)
     js = js_old.decode('utf-8')
-    assert js.count(JS_OLD) == 1 and 'gsap.matchMedia' not in js, 'app.min.js: ожидаемый участок не найден или правка уже есть'
+    assert js.count(JS_OLD) == 1 and 'gsap.matchMedia().add("(min-width: 1281px)"' not in js, 'app.min.js: участок не найден или правка уже есть'
     js_new = js.replace(JS_OLD, JS_NEW).encode('utf-8')
     assert js_new.decode('utf-8').replace(JS_NEW, JS_OLD) == js
     (out_dir / 'pkg' / JS).write_bytes(js_new)

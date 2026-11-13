@@ -2,22 +2,42 @@
 // и не уезжают, фото не двигается; на телефоне (до 760 px) от низа панели до бегущей строки 32 px. Шире 1280 px —
 // прежний «уход первого экрана» (затемнение, сдвиг вверх, параллакс фото). В конце — смена ширины 1440 → 1200 → 1440.
 // Запуск: BASE=http://127.0.0.1:8090 node tools/qa/hero_scroll_test.mjs   (по умолчанию — рабочий сайт; нужен playwright)
-// VERSION=20261113hero — проверить ещё и версию app.min.js на странице. Счётчики в тесте заблокированы.
+// VERSION=20261113ekran — проверить ещё и версию app.min.js на странице. Счётчики в тесте заблокированы.
+// PKG=<папка пакета>/pkg — до выкладки: страницы, style.css и app.min.js рабочего сайта подменяются файлами пакета.
 import { chromium } from 'playwright';
+import { existsSync, readFileSync } from 'node:fs';
 
 const BASE = (process.env.BASE || 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai').replace(/\/$/, '');
 const VERSION = process.env.VERSION || '';
+const PKG = process.env.PKG || '';
+const TYPES = { php: 'text/html; charset=utf-8', css: 'text/css; charset=utf-8', js: 'application/javascript; charset=utf-8' };
 const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1';
 const SIZES = [[360, 800], [375, 667], [390, 844], [430, 932], [768, 1024], [820, 1180], [1024, 768], [1280, 800], [1440, 900], [1920, 1080]];
 
 const browser = await chromium.launch(process.env.CHROME ? { executablePath: process.env.CHROME } : {});
 let bad = 0;
 
-async function open(w, h) {
+// Timeweb иногда отвечает облаку ложным 502 на vendor/gsap.min.js — тогда страница открывается заново (до 4 раз)
+async function open(w, h, tries = 4) {
+  const r = await open1(w, h);
+  if (tries > 1 && !(await r.page.evaluate(() => !!window.gsap && !!window.ScrollTrigger))) {
+    await r.ctx.close();
+    return open(w, h, tries - 1);
+  }
+  return r;
+}
+
+async function open1(w, h) {
   const touch = w < 1025;
   const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: touch ? 3 : 1, isMobile: touch, hasTouch: touch, ...(touch ? { userAgent: UA } : {}) });
   const page = await ctx.newPage();
   await page.route(/mc\.yandex|uiscom|radist|yandex\.ru\/metrika/, r => r.abort());
+  if (PKG) await page.route(u => u.href.startsWith(BASE + '/'), r => {
+    const path = new URL(r.request().url()).pathname.replace(/^\//, '');
+    const file = PKG + '/' + (path === '' || path.endsWith('/') ? path + 'index.php' : path);
+    if (!existsSync(file)) return r.continue();
+    return r.fulfill({ status: 200, contentType: TYPES[file.split('.').pop()], body: readFileSync(file) });
+  });
   const errors = [];
   page.on('pageerror', e => errors.push(String(e)));
   await page.goto(BASE + '/', { waitUntil: 'load' });

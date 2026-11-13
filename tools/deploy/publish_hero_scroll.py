@@ -30,7 +30,7 @@ assert ROOT.is_dir() and str(ROOT).endswith('/pestcontrol-center/public_html'), 
 assert ROOT not in WORK.parents and ROOT != WORK, 'keep the package outside the public site'
 assert PAYLOAD['name'] == 'hero-scroll-2026-11-13'
 OLD_V, NEW_V = PAYLOAD['old_version'], PAYLOAD['new_version']
-assert (OLD_V, NEW_V) == ('20261112fon', '20261113hero')
+assert (OLD_V, NEW_V) == ('20261113yakor', '20261113ekran')
 ROWS = PAYLOAD['files']
 N = len(ROWS)
 assert N == PAYLOAD['pages'] + 2 and 30 <= PAYLOAD['pages'] <= 60, 'unexpected number of files: %d' % N
@@ -47,9 +47,10 @@ for r in PAGES:
     assert r['file'] == 'index.php' or r['file'].endswith('/index.php'), r['file']
     assert r['replace'][0][:2] == ['?v=' + OLD_V, '?v=' + NEW_V] and r['replace'][0][2] in (1, 2), r['file']
     if r['file'] == 'index.php':
-        assert len(r['replace']) == 2 and r['replace'][1][0] == '</style>\n<!-- UIS -->' and r['replace'][1][2] == 1
+        assert len(r['replace']) == 2 and r['replace'][1][0] == '</style>\n<script type="application/ld+json">'
+        assert r['replace'][1][2] == 1
         assert r['replace'][1][1] == ('</style><style id="hero-scroll-st">@media (max-width:760px){#hero.hero:not(.f-hero)'
-                                      '{padding-bottom:32px}}</style>\n<!-- UIS -->')
+                                      '{padding-bottom:32px}}</style>\n<script type="application/ld+json">')
     else:
         assert len(r['replace']) == 1, r['file']
 
