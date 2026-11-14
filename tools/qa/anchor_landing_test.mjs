@@ -2,9 +2,10 @@
 // Запуск: BASE=http://127.0.0.1:8090 node tools/qa/anchor_landing_test.mjs   (по умолчанию — рабочий сайт)
 // PKG=<папка pkg пакета> — подставить страницы, app.min.js и style.css пакета вместо файлов сайта (проверка до выкладки).
 // 1. Переход: настоящий щелчок (касание) по ссылке «Метод IPM» в шапке, «Цена» на политике, «Этапы работы», «Вредители»,
-//    «Вопросы» в подвале — на главной блок встаёт под шапку (верх блока на scroll-padding-top = 96 px от верха окна,
-//    допуск 80…130 px) и держится там через 1, 2 и 3 с после загрузки. Раньше браузер не доезжал: 300…2500 px,
-//    на телефоне до блока не доходило вовсе.
+//    «Вопросы» в подвале — на главной блок встаёт под шапку и держится там через 1, 2 и 3 с после загрузки. С 13.11.2026
+//    (правка «начало блока сразу под шапкой», tools/qa/anchor_heading_test.mjs) шапка видна, подпись над заголовком блока —
+//    на 20…32 px ниже шапки (допуск 3 px); до этой правки проверялся верх блока на 96 px от верха окна (80…130 px).
+//    Раньше браузер не доезжал: 300…2500 px, на телефоне до блока не доходило вовсе.
 // 2. Подсветка: прокрутка колесом через всю страницу (компьютер) — пункт шапки горит только пока его блок в полосе
 //    45–50 % высоты окна. Раньше «Цена» горела до самого подвала.
 // Счётчики не загружаются (запросы к Метрике, UIS и Radist обрываются). Итог — число нарушений; код выхода 1, если есть.
@@ -73,14 +74,21 @@ for (const [vn, w, h, mob] of VP) {
         mob ? page.touchscreen.tap(b.x + b.width / 2, b.y + b.height / 2) : page.mouse.click(b.x + b.width / 2, b.y + b.height / 2)]);
       await page.waitForLoadState('load');
       const tops = [];
+      let exp = 0;
       for (const t of [1000, 1000, 1000]) {
         await page.waitForTimeout(t);
-        tops.push(await page.evaluate((id) => { const el = document.getElementById(id); return el ? Math.round(el.getBoundingClientRect().top) : null; }, id));
+        const m = await page.evaluate((id) => {
+          const el = document.getElementById(id), hdr = document.getElementById('hdr'); if (!el || !hdr) return null;
+          const hb = hdr.getBoundingClientRect().bottom, head = el.querySelector('.eyebrow, h1, h2') || el;
+          return { gap: hdr.classList.contains('hide') ? null : Math.round(head.getBoundingClientRect().top - hb), exp: Math.round(Math.min(32, Math.max(20, innerWidth * 0.022))) };
+        }, id);
+        exp = m ? m.exp : exp;
+        tops.push(m ? m.gap : null);
       }
       const path = new URL(page.url()).pathname;
-      const ok = path === '/' && tops.every((t) => t !== null && t >= 80 && t <= 130) && !errs.length;
+      const ok = path === '/' && tops.every((t) => t !== null && Math.abs(t - exp) <= 3) && !errs.length;
       if (!ok) bad++;
-      msg = `${ok ? 'OK ' : 'НЕТ'} ${vn} ${from} ${where === 'header' ? 'шапка' : 'подвал'} «${text}» (${href}) → ${path}#${id}: верх блока ${tops.join(' / ')} px${errs.length ? ' JS: ' + errs.join(' | ') : ''}`;
+      msg = `${ok ? 'OK ' : 'НЕТ'} ${vn} ${from} ${where === 'header' ? 'шапка' : 'подвал'} «${text}» (${href}) → ${path}#${id}: подпись блока ниже шапки на ${tops.map((t) => t === null ? 'шапка скрыта' : t).join(' / ')} px (нужно ${exp})${errs.length ? ' JS: ' + errs.join(' | ') : ''}`;
     } catch (e) { bad++; msg = `НЕТ ${vn} ${from} «${text}»: ${String(e).slice(0, 200)}`; }
     lines.push(msg);
     await page.close();

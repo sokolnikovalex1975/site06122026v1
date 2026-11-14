@@ -28,10 +28,16 @@
   --ease:cubic-bezier(.16,1,.3,1);--ease-io:cubic-bezier(.65,0,.35,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
+/* переход к блоку по якорю (13.11.2026): начало блока — сразу под шапкой. Отступ сверху — высота шапки (.hdr .wrap
+   и линия 1 px) и ещё 20…32 px; у разделов вычитается их собственный верхний отступ (и линия-разделитель), поэтому
+   под шапку встаёт подпись над заголовком. Так же считает app.js (раздел «переход к блоку по якорю»). Было: верх
+   раздела на 96 px от верха окна, и над подписью оставалось 180–200 px пустого тёмного поля */
+html{scroll-behavior:smooth;scroll-padding-top:calc(clamp(68px,6vw,115px) + 1px + clamp(20px,2.2vw,32px))}
+section.s[id]{scroll-margin-top:calc(-1px - clamp(80px,7vw,130px))}
+section.cta[id]{scroll-margin-top:calc(-1px - clamp(90px,8vw,150px))}
 /* переход по ссылке с якорем с другой страницы (/#tseny, ../#podhod): браузер сразу ставит страницу на блок, а не плывёт
-   к нему от верха — плавную прокрутку обрывали запуск скриптов и пересчёт анимаций (app.js, раздел «переход по ссылке
-   с якорем», 13.11.2026) */
+   к нему от верха — плавную прокрутку обрывали запуск скриптов и пересчёт анимаций (app.js, раздел «переход к блоку
+   по якорю», 13.11.2026) */
 html:has(:target){scroll-behavior:auto}
 html.lenis,html.lenis body{height:auto}
 html.lenis{scroll-behavior:auto}

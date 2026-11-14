@@ -38,6 +38,8 @@
     }
   }
   var scrollToEl = function (target, isTop) {
+    /* начало блока — сразу под шапкой: раздел «переход к блоку по якорю» в конце файла (13.11.2026) */
+    if (window.pcAnchor) return window.pcAnchor.go(target, isTop, lenis, reduce);
     if (lenis) lenis.scrollTo(isTop ? 0 : target, { offset: isTop ? 0 : -80, duration: 1.5, easing: function (t) { return 1 - Math.pow(1 - t, 4); } });
     else if (isTop) window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
     else target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
@@ -104,7 +106,9 @@
   var prog = $('#progress'), mbar = $('#mbar'), cta = $('#zayavka'), lastY = 0;
   var onScroll = function (y) {
     hdr.classList.toggle('scrolled', y > 30);
-    if (!menuOpen) {
+    /* пока страница едет к блоку по якорю, шапка не прячется (класс hold — раздел «переход к блоку» в конце файла) */
+    if (hdr.classList.contains('hold')) hdr.classList.remove('hide');
+    else if (!menuOpen) {
       if (y > lastY + 4 && y > 500) hdr.classList.add('hide');
       else if (y < lastY - 4 || y < 200) hdr.classList.remove('hide');
     }
@@ -853,41 +857,105 @@
   setTimeout(runLater, 0);
 })();
 
-/* ---------- переход по ссылке с якорем с другой страницы (13.11.2026) ----------
-   Ссылки вида /#tseny («Цена» на странице политики), ../#podhod («Метод IPM» на страницах услуг), ../#etapy,
-   ../#vrediteli, ../#voprosy. Раньше браузер начинал плавную прокрутку к блоку ещё до запуска скриптов, а запуск
-   Lenis и пересчёт ScrollTrigger её обрывали: блок оставался ниже середины экрана, на телефоне до него не доходило.
-   Теперь браузер сразу ставит страницу на блок (style.css: html:has(:target) — без плавной прокрутки), а здесь
-   положение держится, пока страница догружается: верх блока на scroll-padding-top (+ scroll-margin-top блока)
-   от верха окна — там же, куда ставит браузер. Поправка — после загрузки страницы и шрифтов, после каждого пересчёта
-   ScrollTrigger и при сдвиге прокрутки не посетителем (картинки и шрифты сдвигают блок, пересчёт возвращает старое
-   место), но только до первого действия посетителя (колесо, касание, клавиша, нажатие) и не дольше 2,5 с после
-   загрузки. При «Назад» и обновлении страницы браузер сам возвращает прежнее место — тогда раздел ничего не делает.
-   Этот раздел без изменений дописан в app.min.js рабочего сайта (tools/deploy/prepare-2026-11-13-yakor.py). */
+/* ---------- переход к блоку по якорю: начало блока — сразу под шапкой (13.11.2026) ----------
+   Запрос владельца 13.11.2026: пункт меню открывал блок не с заголовка — над ним оставалось пустое тёмное поле.
+   Было: щелчок по ссылке на этой же странице ставил верх раздела на 176 px от верха окна (scroll-padding-top 96 px
+   и поправка Lenis 80 px), переход с другой страницы — на 96 px, и к этому добавлялся собственный верхний отступ
+   раздела (80–130 px). Подпись над заголовком стояла на 278 px от верха окна (компьютер 1440) и 241–257 px
+   (телефон 390), шапка при прокрутке вниз уезжала — сверху оставалось пустое поле.
+   Стало: у раздела (section) под шапку встаёт начало его содержимого — подпись над заголовком (на политике и
+   согласии — заголовок раздела); у карточки, строки таблицы, заголовка — их верх. От верха окна — высота шапки и ещё
+   20…32 px (так же scroll-padding-top и scroll-margin-top разделов в style.css и legal.css, чтобы браузер до запуска
+   скриптов ставил страницу туда же). Пока страница едет к блоку, шапка не прячется: класс hold у #hdr читает раздел
+   «шапка, прогресс…» выше; первое колесо, касание или клавиша посетителя возвращают обычное поведение шапки.
+   - Щелчок по ссылке на этой же странице — window.pcAnchor.go (его вызывает раздел «якоря» выше): Lenis за 1,5 с,
+     в конце — сверка положения; без Lenis — плавная прокрутка браузера, при «уменьшении движения» — сразу.
+   - Переход по ссылке с якорем с другой страницы (/#tseny, ../#podhod, ../#etapy, ../#vrediteli, ../#voprosy):
+     браузер сразу ставит страницу на блок (style.css: html:has(:target) — без плавной прокрутки), а здесь положение
+     держится, пока страница догружается: после загрузки страницы и шрифтов, после каждого пересчёта ScrollTrigger
+     и при сдвиге прокрутки не посетителем — до первого действия посетителя (колесо, касание, клавиша, нажатие)
+     и не дольше 2,5 с после загрузки. При «Назад» и обновлении страницы браузер сам возвращает прежнее место —
+     тогда раздел ничего не делает.
+   В app.min.js рабочего сайта этот раздел заменяет прежний «переход по ссылке с якорем с другой страницы»
+   (tools/deploy/prepare-2026-11-13-zagolovok.py). */
 (function () {
-  var w = window, d = document, h = w.location.hash, t = null;
+  var w = window, d = document, root = d.documentElement, hdr = d.getElementById('hdr'), holdT = 0, seq = 0;
+  /* куда прокрутить страницу, чтобы начало блока t встало сразу под шапкой. У раздела (section) начало — верх первого
+     дочернего блока в потоке (.wrap с подписью и заголовком; у разделов политики — заголовок с его отступом сверху),
+     фон и украшения (position: absolute) не в счёт; у карточки, строки таблицы, заголовка — их верх */
+  var anchorY = function (t) {
+    var top = t.getBoundingClientRect().top;
+    if (t.tagName === 'SECTION') {
+      var s = getComputedStyle(t), c = t.firstElementChild, k, r;
+      top += (parseFloat(s.borderTopWidth) || 0) + (parseFloat(s.paddingTop) || 0);
+      for (; c; c = c.nextElementSibling) {
+        k = getComputedStyle(c).position; r = c.getBoundingClientRect();
+        if (k !== 'absolute' && k !== 'fixed' && r.height) { top = r.top; break; }
+      }
+    }
+    var off = (hdr ? hdr.getBoundingClientRect().height : 0) + Math.min(32, Math.max(20, w.innerWidth * 0.022));
+    return Math.max(0, Math.min(Math.round(top + w.pageYOffset - off), root.scrollHeight - w.innerHeight));
+  };
+  /* шапка не прячется, пока страница едет к блоку (ms — страховка: снять удержание не позже) */
+  var hold = function (on, ms) {
+    clearTimeout(holdT);
+    if (!hdr) return;
+    hdr.classList.toggle('hold', on);
+    if (on) { hdr.classList.remove('hide'); if (ms) holdT = setTimeout(function () { hold(false); }, ms); }
+  };
+  var jump = function (y, smooth) {
+    try { w.scrollTo({ top: y, left: 0, behavior: smooth ? 'smooth' : 'instant' }); } catch (e) { w.scrollTo(0, y); }
+  };
+  ['wheel', 'touchstart', 'keydown'].forEach(function (n) {
+    w.addEventListener(n, function () { if (hdr && hdr.classList.contains('hold')) hold(false); }, { passive: true, capture: true });
+  });
+  var ease = function (k) { return 1 - Math.pow(1 - k, 4); };
+  var go = function (t, isTop, lenis, reduce) {
+    if (isTop) { if (lenis) lenis.scrollTo(0, { duration: 1.5, easing: ease }); else jump(0, !reduce); return; }
+    var my = ++seq, fin = false;
+    hold(true, 3000);
+    var end = function () { /* сверка в конце: картинки и шрифты могли сдвинуть блок за время прокрутки */
+      if (fin || my !== seq) return;
+      fin = true;
+      var y = anchorY(t);
+      if (Math.abs(w.pageYOffset - y) >= 2) { if (lenis) lenis.scrollTo(y, { immediate: true }); else jump(y, false); }
+      setTimeout(function () { if (my === seq) hold(false); }, 150);
+    };
+    if (lenis) { lenis.scrollTo(anchorY(t), { duration: 1.5, easing: ease, onComplete: end }); return; }
+    jump(anchorY(t), !reduce);
+    if (!reduce && 'onscrollend' in w) w.addEventListener('scrollend', end, { once: true });
+    setTimeout(end, reduce ? 60 : 1600);
+  };
+  w.pcAnchor = { y: anchorY, go: go };
+
+  /* переход по ссылке с якорем с другой страницы */
+  var h = w.location.hash, t = null;
   if (!h || h.length < 2 || h === '#top') return;
   var nav = w.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
   if (nav && nav.type && nav.type !== 'navigate') return;
   try { t = d.getElementById(decodeURIComponent(h.slice(1))); } catch (e) { t = null; }
   if (!t) return;
-  var root = d.documentElement, done = false, until = 0, ST = w.ScrollTrigger && ScrollTrigger.addEventListener ? ScrollTrigger : null;
-  var stop = function () { done = true; };
-  ['wheel', 'touchstart', 'keydown', 'mousedown', 'pointerdown'].forEach(function (n) { w.addEventListener(n, stop, { passive: true, capture: true }); });
+  var done = false, ST = w.ScrollTrigger && ScrollTrigger.addEventListener ? ScrollTrigger : null;
   var land = function () {
-    if (done || (until && Date.now() > until)) { w.removeEventListener('scroll', land); return; }
+    if (done) return;
     var r = t.getBoundingClientRect();
     if (!r.width && !r.height) return; /* блок скрыт */
-    var off = (parseFloat(getComputedStyle(root).scrollPaddingTop) || 0) + (parseFloat(getComputedStyle(t).scrollMarginTop) || 0);
-    var y = Math.max(0, Math.min(Math.round(r.top + w.pageYOffset - off), root.scrollHeight - w.innerHeight));
-    if (Math.abs(w.pageYOffset - y) < 2) return;
-    try { w.scrollTo({ top: y, left: 0, behavior: 'instant' }); } catch (e) { w.scrollTo(0, y); }
+    var y = anchorY(t);
+    if (Math.abs(w.pageYOffset - y) >= 2) jump(y, false);
   };
+  var stop = function () {
+    if (done) return;
+    done = true;
+    w.removeEventListener('scroll', land);
+    hold(false);
+  };
+  ['wheel', 'touchstart', 'keydown', 'mousedown', 'pointerdown'].forEach(function (n) { w.addEventListener(n, stop, { passive: true, capture: true }); });
   var settle = function () {
-    until = Date.now() + 2500;
     land();
     [300, 1000, 2000].forEach(function (ms) { setTimeout(land, ms); });
+    setTimeout(stop, 2500);
   };
+  hold(true);
   land();
   w.addEventListener('scroll', land, { passive: true });
   if (d.readyState === 'complete') settle(); else w.addEventListener('load', settle);
