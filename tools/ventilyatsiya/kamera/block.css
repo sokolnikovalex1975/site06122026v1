@@ -1,0 +1,37 @@
+/* Кадры камеры в коробе: три фото одного участка; смена — WebGL (щётка с пылью, затем туман дезсредства), без WebGL — плавно */
+.v-duct-art{grid-area:art;position:relative;border-radius:calc(var(--r) - 4px);overflow:hidden;background:#050608;border:1px solid var(--line2);aspect-ratio:43/24;isolation:isolate}
+/* подписи трёх состояний лежат в одной ячейке: высота блока не меняется при смене кадров (без сдвига страницы) */
+.v-duct figcaption{display:grid}
+.v-duct figcaption [data-cap]{display:block;grid-area:1/1}
+.v-duct figcaption [data-cap][hidden]{display:block;visibility:hidden}
+.vk-f{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease}
+.vk-f.is-on{opacity:1}
+.vk-gl{position:absolute;inset:0;display:block;width:100%;height:100%;opacity:0;transition:opacity .35s ease}
+.vk-gl-on .vk-gl{opacity:1}
+.vk-play{position:absolute;right:12px;bottom:12px;z-index:2;display:grid;place-items:center;width:38px;height:38px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(6,7,10,.55);color:#fff;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background .25s,border-color .25s}
+.vk-play svg{display:block;width:14px;height:14px}
+.vk-play .vk-i-play,.vk-paused .vk-play .vk-i-pause{display:none}
+.vk-paused .vk-play .vk-i-play{display:block}
+.vk-play:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.vk-play:hover{background:rgba(124,134,255,.42);border-color:rgba(124,134,255,.7)}}
+/* время до следующего кадра — тонкая полоска на активной кнопке */
+.v-seg button{position:relative}
+.v-seg button::after{content:"";position:absolute;left:16px;right:16px;bottom:4px;height:2px;border-radius:2px;background:rgba(9,9,11,.3);transform:scaleX(0);transform-origin:left center;opacity:0;pointer-events:none}
+.v-seg button.vk-run::after{opacity:1;animation:vk-pg var(--vk-d,5s) linear forwards}
+.vk-hold .v-seg button.vk-run::after{animation-play-state:paused}
+@keyframes vk-pg{to{transform:scaleX(1)}}
+/* что видно на кадре: убранное — зелёная галочка и зачёркнуто */
+.v-legend i{position:relative;width:12px;height:12px;border-radius:50%;flex:0 0 auto;transition:background-color .4s,box-shadow .4s}
+.v-legend li>span{color:var(--t2);transition:color .4s}
+.v-legend .l-dust i{background-color:#cfc9bc}
+.v-legend .l-grease i{background-color:#c79a44}
+.v-legend .l-micro i{background-color:#7c86ff}
+.v-legend .l-mold i{background-color:#6f8a5b}
+.v-legend i::after{content:"";position:absolute;left:4px;top:1.6px;width:3.2px;height:6.4px;border:solid #4ade80;border-width:0 1.7px 1.7px 0;transform:rotate(45deg);opacity:0;transition:opacity .3s}
+.v-legend .vk-gone{display:none}
+.v-duct[data-state="clean"] .v-legend .l-dust i,.v-duct[data-state="clean"] .v-legend .l-grease i,.v-duct[data-state="dez"] .v-legend li i{background-color:transparent;box-shadow:inset 0 0 0 1.4px rgba(74,222,128,.8)}
+.v-duct[data-state="clean"] .v-legend .l-dust i::after,.v-duct[data-state="clean"] .v-legend .l-grease i::after,.v-duct[data-state="dez"] .v-legend li i::after{opacity:1}
+.v-duct[data-state="clean"] .v-legend .l-dust>span,.v-duct[data-state="clean"] .v-legend .l-grease>span,.v-duct[data-state="dez"] .v-legend li>span{color:var(--t3);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.28)}
+.v-duct[data-state="clean"] .v-legend .l-dust .vk-gone,.v-duct[data-state="clean"] .v-legend .l-grease .vk-gone,.v-duct[data-state="dez"] .v-legend .vk-gone{display:block}
+@media (max-width:600px){.vk-play{right:8px;bottom:8px;width:34px;height:34px}.v-seg button::after{left:10px;right:10px;bottom:3px}}
+@media (prefers-reduced-motion:reduce){.vk-f,.vk-gl{transition:none}}
