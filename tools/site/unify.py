@@ -40,7 +40,7 @@ def nw(text):
 def tp(text):
     return typo(nw(text))
 
-VERSION = '20261113zagolovok'  # общая версия style.css и app.min.js для сброса кэша
+VERSION = '20261115lupa'  # общая версия style.css и app.min.js для сброса кэша
 
 HEAD_SCRIPT = (
     "<script>\n"
@@ -48,6 +48,21 @@ HEAD_SCRIPT = (
     "     Заставка — один раз за посещение: при переходе по ссылке с якорем и между страницами сайта её нет */\n"
     "  (function (d) {\n"
     "    d.classList.add('js');\n"
+    "    /* облегчённый режим для слабых компьютеров (15.11.2026): pcFx.set ставит класс lowfx (style.css) и вызывает pcFx.hooks;\n"
+    "       замер кадров — в app.js и в лупе первого экрана. Решение помнится до конца визита. Вручную: ?fx=lite — облегчённый,\n"
+    "       ?fx=full — полный, ?fx=auto — определить заново */\n"
+    "    var fx = window.pcFx = { mode: '', lite: false, hooks: [], set: function (keep) {\n"
+    "      if (fx.lite) return;\n"
+    "      fx.lite = true; d.classList.add('lowfx');\n"
+    "      if (keep) { try { sessionStorage.setItem('pc-lowfx', '1'); } catch (e) { } }\n"
+    "      for (var i = 0; i < fx.hooks.length; i++) { try { fx.hooks[i](); } catch (e) { } }\n"
+    "      try { document.dispatchEvent(new CustomEvent('pc:fx')); } catch (e) { }\n"
+    "    } };\n"
+    "    try {\n"
+    "      fx.mode = (location.search.match(/[?&]fx=(lite|full|auto)\\b/) || [])[1] || '';\n"
+    "      if (fx.mode && fx.mode !== 'lite') sessionStorage.removeItem('pc-lowfx');\n"
+    "      if (fx.mode === 'lite' || (!fx.mode && sessionStorage.getItem('pc-lowfx') === '1')) fx.set();\n"
+    "    } catch (e) { }\n"
     "    try { if (location.hash || sessionStorage.getItem('pc-intro')) d.classList.add('no-intro'); else sessionStorage.setItem('pc-intro', '1'); }\n"
     "    catch (e) { if (location.hash) d.classList.add('no-intro'); }\n"
     "    setTimeout(function () { if (!d.classList.contains('anim-ready')) d.classList.add('anim-fail'); }, 4000);\n"

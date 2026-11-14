@@ -228,9 +228,14 @@ html:not(.js) .intro,html.anim-fail .intro,html.no-intro .intro{display:none}
    при отступе в процентах верхний край фона съезжал вместе с ним, и браузер засчитывал сдвиг макета (CLS) */
 .hero-media{position:absolute;inset:-40px -4%;will-change:transform}
 @media (max-width:760px){.hero-media{inset:-52px -4%}} /* на телефоне первый экран выше (около 1300px): 52px — как прежние 4% */
-.hero-bg,.hero-lit{position:absolute;inset:0;background:url(img/hero.webp) center/cover}
-.hero-bg{filter:grayscale(.3) brightness(.5)}
-.hero-lit{filter:grayscale(.05) brightness(1.05) contrast(1.05);opacity:0;-webkit-mask-image:radial-gradient(circle var(--sr,300px) at var(--sx,70%) var(--sy,40%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%);mask-image:radial-gradient(circle var(--sr,300px) at var(--sx,70%) var(--sy,40%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%)}
+/* Лупа первого экрана главной (15.11.2026): фото первого экрана заранее затемнено (img/hero-dim.webp, img/hero-m-dim.webp),
+   светлое фото для лупы — img/hero-lit.webp. Круг лупы — блок 2r×2r с неподвижной круглой маской; app.js только сдвигает
+   его и фото внутри (transform), браузер не пересчитывает фильтры и маску в каждом кадре. Только компьютер с мышью */
+.hero-bg{position:absolute;inset:0;background:url(img/hero-dim.webp) center/cover}
+.hero-lens{position:absolute;left:0;top:0;width:0;height:0;opacity:0;pointer-events:none;overflow:hidden;contain:strict;will-change:transform,opacity;-webkit-mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;transition:opacity 2s cubic-bezier(.19,1,.22,1)}
+.hero-lens.on{opacity:1}
+.hero-lens-img{position:absolute;left:0;top:0;background:center/cover no-repeat;will-change:transform}
+@media (max-width:760px),(hover:none),(pointer:coarse){.hero-lens{display:none}}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(9,9,11,.92) 0%,rgba(9,9,11,.55) 50%,rgba(9,9,11,.18) 100%);pointer-events:none}
 .hero::after{content:"";position:absolute;inset:auto 0 0;height:40%;z-index:1;background:linear-gradient(0deg,#000,transparent);pointer-events:none}
 /* Затемнение низа первого экрана показываем, когда первый экран загружен целиком (после него уже есть следующий блок):
@@ -616,7 +621,7 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,4.3vw,82px) 0 36px;ba
   .phone i{width:44px;height:44px}
   .logo-sub{margin-left:4px;font-size:10px}
   .hero{min-height:auto;padding-top:110px;align-items:flex-start}
-  .hero-bg,.hero-lit{background-image:url(img/hero-m.webp)}
+  .hero-bg{background-image:url(img/hero-m-dim.webp)}
   .hero::before{background:linear-gradient(180deg,rgba(9,9,11,.5),rgba(9,9,11,.82) 60%,#000)}
   .hero h1{margin:26px 0 20px;font-size:clamp(36px,10vw,46px)}
   .hero-ctas{flex-direction:column;margin-top:30px}.hero-ctas .btn{width:100%}
@@ -718,7 +723,7 @@ html .d-hero h1 em,html .p-hero h1 em,html .f-hero h1 em{font-style:italic;font-
 /* скрипты анимаций грузятся после первой отрисовки: до их запуска фото первого экрана уже стоит в начальном масштабе входа */
 @media (prefers-reduced-motion:no-preference){
   .js:not(.anim-ready):not(.anim-fail) .d-hero-img,.js:not(.anim-ready):not(.anim-fail) .f-hero-img{transform:scale(1.12)}
-  .js:not(.anim-ready):not(.anim-fail) .hero-bg,.js:not(.anim-ready):not(.anim-fail) .hero-lit{transform:scale(1.18)}
+  .js:not(.anim-ready):not(.anim-fail) .hero-bg{transform:scale(1.18)}
 }
 @media (prefers-reduced-motion:reduce){
   .js .d-hero h1 .ln>span,.js .p-hero h1 .ln>span{transform:none!important;opacity:1!important}
@@ -757,11 +762,8 @@ html .d-hero h1 em,html .p-hero h1 em,html .f-hero h1 em{font-style:italic;font-
    поэтому текст первого экрана не ждёт GSAP и счётчиков. Без скрипта, при сбое и prefers-reduced-motion — как раньше. */
 html.js.hero-in #hero [data-h],html.js.hero-in #panel,html.js.hero-in #hero .scroll-cue,html.js.hero-in #hero .p-stack>a{opacity:1}
 html.js.hero-in #hero h1 .ln>span{transform:none;opacity:1}
-html.js.hero-in #hero .d-hero-img,html.js.hero-in #hero .f-hero-img,html.js.hero-in #hero .hero-bg,html.js.hero-in #hero .hero-lit{transform:none}
+html.js.hero-in #hero .d-hero-img,html.js.hero-in #hero .f-hero-img,html.js.hero-in #hero .hero-bg{transform:none}
 html.js.hero-in #hero [data-hin]{opacity:1}
-/* «фонарь» главной под входом стоит на 0,01 вместо 0 (глазом не отличить): то же фото первого экрана (.hero-bg) уже
-   видно, и браузер отмечает LCP при его загрузке, а не когда app.js начнёт проявлять фонарь; GSAP ведёт его от 0,01 к 1 */
-html.js.hero-in #hero .hero-lit{opacity:.01}
 
 /* ===== Кнопки: ровный контур (11.11.2026) =====
    Фиолетовая заливка для наведения и нажатия лежит под кнопкой вплотную к её нижнему краю; на скруглениях её край
@@ -789,3 +791,14 @@ html.js.hero-in #hero .hero-lit{opacity:.01}
    при прокрутке теперь только шире 1280 px (app.js), а на телефоне нижний отступ героя 32 px — как промежуток между
    текстом первого экрана и панелью. Только главная: у внутренних страниц .f-hero / .d-hero / .p-hero свои отступы. */
 @media (max-width:760px){#hero.hero:not(.f-hero){padding-bottom:32px}}
+
+/* ===== Облегчённый режим для слабых компьютеров (15.11.2026) =====
+   Класс lowfx на <html> ставит скрипт в <head> (?fx=lite или решение, уже принятое на этом визите) или app.js: через 3 с
+   после загрузки 2 с считаются кадры, потом — пока лупа догоняет мышь. Меньше 40 кадров в секунду — без лупы, «зерна»,
+   сканирующей линии, пульсаций и матового стекла (фон таких плашек плотнее), без параллакса, наклона и размытия при
+   появлении, курсор — обычный. Тексты, кнопки, формы и счётчики не меняются. */
+.lowfx .hero-lens,.lowfx .fx-lit,.lowfx .grain,.lowfx .panel-scan{display:none}
+.lowfx .dot:before,.lowfx .phone i:after,.lowfx .phone::after{animation:none;display:none}
+.lowfx .scroll-cue i:after,.lowfx .chip-y:before,.lowfx .cycle-arc,.lowfx .cycle-glow{animation:none}
+.lowfx .hdr,.lowfx .nav-dd-panel,.lowfx .btn-o,.lowfx .badge,.lowfx .panel,.lowfx .form,.lowfx .mbar{-webkit-backdrop-filter:none;backdrop-filter:none}
+.lowfx .panel{background:#18181bf0}.lowfx .hdr.scrolled{background:#000000eb}.lowfx .form{background:#09090bf0}.lowfx .mbar{background:#121214f7}

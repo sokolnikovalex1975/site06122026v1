@@ -66,38 +66,66 @@
     },true);
   }
 })();
-/* Фонарь на фото первого экрана — как на главной: следует за мышью, без движения мыши плавно ходит сам,
-   на сенсорных экранах ходит сам (30 кадров в секунду). Не считаем, пока первый экран не виден или вкладка скрыта.
-   При «уменьшить движение» фонаря нет — фото остаётся как было */
+/* Лупа на фото первого экрана — как на главной (с 15.11.2026 «лёгкая»): светлая копия фото в круглой маске; сдвигаются
+   только круг и фото внутри него (transform), фото и маска не перерисовываются. Кадры — только пока круг догоняет мышь;
+   без мыши круг стоит на открытой части фото и сам не ходит, мышь ушла с первого экрана — плавно возвращается.
+   Только компьютер с мышью шире 860 px; без лупы (и без приглушения фото) — на телефонах, планшетах, при «уменьшить
+   движение» и в облегчённом режиме (window.pcFx, скрипт в <head>): если, пока круг догоняет мышь, кадров меньше 40
+   в секунду, режим включается сам */
 (function(){
   var hero=document.getElementById('hero'),lit=document.getElementById('vLit'),mm=window.matchMedia;
-  if(!hero||!lit||!mm||mm('(prefers-reduced-motion: reduce)').matches)return;
-  var media=lit.parentNode,fine=mm('(hover: hover) and (pointer: fine)').matches,small=mm('(max-width:860px)').matches;
-  lit.style.setProperty('--sr',small?'150px':'clamp(240px, 21vw, 400px)');
-  var cx=small?.5:.74,ax=small?.24:.13,cy=small?.5:.47,ay=small?.2:.17;
-  var sx=cx,sy=cy,tx=cx,ty=cy,last=-1e9,vis=true,on=false,raf=0,lt=0;
+  var F=window.pcFx||{mode:'',lite:false,hooks:[],set:function(){}};
+  if(!hero||!lit||!lit.firstElementChild||!mm||F.lite||mm('(prefers-reduced-motion: reduce)').matches||
+     !mm('(hover: hover) and (pointer: fine)').matches||mm('(max-width:860px)').matches)return;
+  var media=lit.parentNode,box=lit.firstElementChild;
+  var W=0,H=0,r=0,x=0,y=0,tx=0,ty=0,hx=0,hy=0,raf=0,last=0,vis=true,on=false,follow=false,off=false,dts=[];
+  var place=function(){ /* круг и копия фото — ровно навстречу: копия стоит на месте фото до долей пикселя */
+    var X=Math.round((x-r)*10)/10,Y=Math.round((y-r)*10)/10;
+    lit.style.transform='translate3d('+X+'px,'+Y+'px,0)';
+    box.style.transform='translate3d('+(-X)+'px,'+(-Y)+'px,0)';
+  };
+  var size=function(){
+    if(off)return;
+    var cs=getComputedStyle(media); /* точный размер: копия совпадает с фото (offsetWidth/offsetHeight округляют до целых) */
+    W=parseFloat(cs.width)||media.offsetWidth;H=parseFloat(cs.height)||media.offsetHeight;
+    r=Math.round(Math.max(240,Math.min(400,innerWidth*.21))*.72);
+    lit.style.width=lit.style.height=2*r+'px';box.style.width=W+'px';box.style.height=H+'px';
+    hx=W*.74;hy=H*.47;if(!follow){tx=hx;ty=hy;if(!raf){x=hx;y=hy;}}
+    place();
+  };
   var frame=function(now){
     raf=0;
-    if(!on||!vis||document.hidden)return;
-    var dt=now-lt;
-    if(!fine&&dt<30){raf=requestAnimationFrame(frame);return;}
-    lt=now;
-    if(now-last>2600){var t=now/1000;tx=cx+ax*Math.sin(t*.33);ty=cy+ay*Math.sin(t*.47+1.3);}
-    var k=1-Math.pow(.94,Math.min(dt,100)/16.67);
-    sx+=(tx-sx)*k;sy+=(ty-sy)*k;
-    lit.style.setProperty('--sx',(sx*100).toFixed(2)+'%');
-    lit.style.setProperty('--sy',(sy*100).toFixed(2)+'%');
+    if(off||!vis||document.hidden)return;
+    var dt=last?Math.min(Math.max(now-last,0),100):16.67;
+    if(last&&F.mode!=='full'){
+      dts.push(now-last);
+      if(dts.length>=40){
+        dts.sort(function(a,b){return a-b;});
+        var med=dts[20];dts=[];
+        if(med>25){document.documentElement.setAttribute('data-fps',Math.round(1000/med));F.set(true);return;}
+      }
+    }
+    last=now;
+    var k=1-Math.pow(.94,dt/16.67);
+    x+=(tx-x)*k;y+=(ty-y)*k;
+    if(Math.abs(tx-x)<.3&&Math.abs(ty-y)<.3){x=tx;y=ty;place();return;}
+    place();
     raf=requestAnimationFrame(frame);
   };
-  var kick=function(){if(!raf&&on&&vis&&!document.hidden){lt=performance.now();raf=requestAnimationFrame(frame);}};
+  var kick=function(){if(!raf&&!off&&vis&&!document.hidden){last=0;raf=requestAnimationFrame(frame);}};
   hero.addEventListener('pointermove',function(e){
-    if(e.pointerType!=='mouse')return;
-    var r=media.getBoundingClientRect();if(!r.width||!r.height)return;
-    tx=(e.clientX-r.left)/r.width;ty=(e.clientY-r.top)/r.height;last=performance.now();kick();
+    if(e.pointerType!=='mouse'||off)return;
+    var b=media.getBoundingClientRect();if(!b.width||!b.height)return;
+    tx=(e.clientX-b.left)/b.width*W;ty=(e.clientY-b.top)/b.height*H;follow=true;kick();
   },{passive:true});
+  hero.addEventListener('pointerleave',function(){if(off)return;follow=false;tx=hx;ty=hy;kick();});
   if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;kick();}).observe(hero);
   document.addEventListener('visibilitychange',kick);
-  var start=function(){if(on)return;on=true;hero.classList.add('v-lit-on');kick();};
+  if(window.ResizeObserver)new ResizeObserver(function(){size();}).observe(media);
+  addEventListener('resize',size);
+  size();
+  var start=function(){if(on||off)return;on=true;hero.classList.add('v-lit-on');};
+  F.hooks.push(function(){off=true;if(raf)cancelAnimationFrame(raf);raf=0;hero.classList.remove('v-lit-on');});
   /* старт вместе со входом первого экрана (общий скрипт ставит класс in на надзаголовок); страховка — через 5 с */
   var eb=hero.querySelector('.eyebrow');
   if(eb&&'MutationObserver' in window){
@@ -106,10 +134,11 @@
   }
   setTimeout(start,5000);
 })();
-/* подсветка рамки информационных карточек за курсором — как у карточек .card на главной */
+/* подсветка рамки информационных карточек за курсором — как у карточек .card на главной; в облегчённом режиме — нет */
 (function(){
   if(!window.matchMedia||!matchMedia('(hover: hover) and (pointer: fine)').matches)return;
   document.addEventListener('pointermove',function(e){
+    if(window.pcFx&&pcFx.lite)return;
     var c=e.target.closest&&e.target.closest('.d-card');if(!c)return;
     var r=c.getBoundingClientRect();
     c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');

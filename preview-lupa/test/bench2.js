@@ -163,6 +163,8 @@ function optScript() {
   });
   await context.addInitScript(() => { try { sessionStorage.setItem('pc-intro', '1'); } catch (e) { } });
   const page = await context.newPage();
+  // EARLY=1 (со слабым ПК): замедление с самого открытия страницы — замер кадров страницы видит то же, что посетитель
+  if (process.env.EARLY === '1' && profile === 'weak') { const c0 = await context.newCDPSession(page); await c0.send('Emulation.setCPUThrottlingRate', { rate: 4 }); }
   const errors = [];
   page.on('pageerror', e => errors.push(String(e)));
   if (variant === 'off') await context.addInitScript(() => { document.addEventListener('DOMContentLoaded', () => { const s = document.createElement('style'); s.textContent = '#heroLit,.fx-lit{display:none!important}'; document.head.appendChild(s); }); });

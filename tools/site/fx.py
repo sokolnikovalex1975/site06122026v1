@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """Эффекты под курсором, как на главной, для внутренних страниц сайта (повторный запуск ничего не дублирует).
 
-  * «фонарь» на фото первого экрана (.d-hero и .f-hero): вне круга фото приглушено, в круге — в полную яркость;
-    круг следует за мышью, без движения мыши и на телефоне плавно ходит сам. Второй слой фото — копия того же
-    <picture> с теми же адресами, поэтому фото не скачивается второй раз. При «уменьшить движение» фонаря нет;
+  * лупа на фото первого экрана (.d-hero и .f-hero, с 15.11.2026 — «лёгкая», как на главной): вне круга фото приглушено,
+    в круге — в полную яркость; круг следует за мышью, без мыши стоит на открытой части фото и сам не ходит. Круг —
+    блок с неподвижной маской, скрипт только сдвигает его и копию фото внутри (transform). Копия — тот же <picture>
+    с теми же адресами, фото не скачивается второй раз. Только компьютер с мышью шире 860 px; при «уменьшить движение»
+    и в облегчённом режиме (класс lowfx, window.pcFx) лупы нет и фото не приглушается;
   * подсветка рамки информационных карточек за курсором (как у .card на главной) — только мышь, на телефоне нет;
   * плавное появление формы заявки (data-form), если его не было;
   * лёгкий параллакс фото в карточках отраслей, кейсов и этапов (data-parallax), как на главной;
   * наклон карточек отраслей с иконками на странице дезинфекции (data-tilt), как у карточек отраслей.
 
-Главная (#heroLit) и страница вентиляции (#vLit) уже содержат свой фонарь — фонарь на них не добавляется.
+Главная (#heroLens) и страница вентиляции (#vLit) уже содержат свою лупу — лупа на них не добавляется.
 Функция apply(s) работает и с исходником страницы (index.html), и с файлом с сайта (index.php со счётчиками):
 вставки привязаны к концу <head>, к скрипту-загрузчику анимаций и к разметке первого экрана.
 Вызывается из tools/site/unify.py; для выкладки — из скрипта правки файлов, снятых с сайта.
@@ -29,42 +31,62 @@ CSS_GLOW = (
     '@media (hover:hover) and (pointer:fine){:where(' + GLOW_SEL + '):hover::after{opacity:1}}\n'
 )
 CSS_LIT = (
-    '/* «фонарь» на фото первого экрана — как на главной (tools/site/fx.py) */\n'
-    '.fx-lit{position:absolute;inset:0;opacity:0;pointer-events:none;'
-    '-webkit-mask-image:radial-gradient(circle var(--sr,320px) at var(--sx,72%) var(--sy,46%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%);'
-    'mask-image:radial-gradient(circle var(--sr,320px) at var(--sx,72%) var(--sy,46%),#000 0%,rgba(0,0,0,.55) 45%,transparent 72%);'
-    'transition:opacity 1.8s cubic-bezier(.16,1,.3,1)}\n'
+    '/* лупа на фото первого экрана — как на главной (tools/site/fx.py, с 15.11.2026): светлая копия фото в неподвижной\n'
+    '   круглой маске; скрипт только сдвигает круг и фото внутри него (transform), фильтры и маска не пересчитываются.\n'
+    '   Только компьютер с мышью шире 860 px; на телефонах, планшетах и в облегчённом режиме (lowfx) — обычное фото */\n'
+    '.fx-lit{position:absolute;left:0;top:0;width:0;height:0;opacity:0;pointer-events:none;contain:strict;will-change:transform,opacity;'
+    '-webkit-mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);'
+    'mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);'
+    '-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;transition:opacity 1.8s cubic-bezier(.16,1,.3,1)}\n'
+    '.fx-lit-in{position:absolute;left:0;top:0;will-change:transform}\n'
+    '.fx-lit img{filter:brightness(1.08) contrast(1.06) saturate(1.06)}\n'
     '#hero :is(.d-hero-media,.hero-media)>picture>img{transition:filter 1.8s cubic-bezier(.16,1,.3,1)}\n'
     '#hero.fx-lit-on :is(.d-hero-media,.hero-media)>picture>img{filter:grayscale(.3) brightness(.56)}\n'
-    '#hero.fx-lit-on .fx-lit img{filter:brightness(1.08) contrast(1.06) saturate(1.06)}\n'
     '#hero.fx-lit-on .fx-lit{opacity:1}\n'
+    '.lowfx #hero :is(.d-hero-media,.hero-media)>picture>img{transition:none}\n'
+    '@media (max-width:860px),(hover:none),(pointer:coarse){.fx-lit{display:none}}\n'
 )
 
 JS_LIT = (
-    "  /* «фонарь»: следует за мышью, без движения мыши плавно ходит сам; на сенсорных экранах ходит сам (30 кадров в секунду).\n"
-    "     Не считаем, пока первый экран не виден или вкладка скрыта. Старт — вместе со входом первого экрана */\n"
-    "  var hero=document.getElementById('hero'),lit=hero&&hero.querySelector('.fx-lit');\n"
-    "  if(lit&&!mm('(prefers-reduced-motion: reduce)').matches){\n"
-    "    var media=lit.parentNode,small=mm('(max-width:860px)').matches,full=hero.classList.contains('f-hero');\n"
-    "    lit.style.setProperty('--sr',small?'150px':'clamp(240px, 21vw, 400px)');\n"
-    "    var cx=small?.5:(full?.68:.74),ax=small?.24:(full?.16:.13),cy=small?.5:.47,ay=small?.2:.17;\n"
-    "    var sx=cx,sy=cy,tx=cx,ty=cy,last=-1e9,vis=true,on=false,raf=0,lt=0;\n"
-    "    var frame=function(now){\n"
-    "      raf=0;if(!on||!vis||document.hidden)return;\n"
-    "      var dt=now-lt;if(!fine&&dt<30){raf=requestAnimationFrame(frame);return;}\n"
-    "      lt=now;if(now-last>2600){var t=now/1000;tx=cx+ax*Math.sin(t*.33);ty=cy+ay*Math.sin(t*.47+1.3);}\n"
-    "      var k=1-Math.pow(.94,Math.min(dt,100)/16.67);sx+=(tx-sx)*k;sy+=(ty-sy)*k;\n"
-    "      lit.style.setProperty('--sx',(sx*100).toFixed(2)+'%');lit.style.setProperty('--sy',(sy*100).toFixed(2)+'%');\n"
-    "      raf=requestAnimationFrame(frame);\n"
+    "  /* лупа: светлая копия фото в круглой маске; сдвигаются только круг и фото внутри него (transform) — без перерисовки фото.\n"
+    "     Кадры — только пока круг догоняет мышь; без мыши круг стоит на открытой части фото и сам не ходит, мышь ушла с первого\n"
+    "     экрана — плавно возвращается. Только компьютер с мышью шире 860 px; без лупы — при «уменьшить движение» и в облегчённом\n"
+    "     режиме (window.pcFx, скрипт в <head>): если, пока круг догоняет мышь, кадров меньше 40 в секунду, режим включается сам */\n"
+    "  var hero=document.getElementById('hero'),lit=hero&&hero.querySelector('.fx-lit'),F=window.pcFx||{mode:'',lite:false,hooks:[],set:function(){}};\n"
+    "  if(lit&&lit.firstElementChild&&fine&&!F.lite&&!mm('(prefers-reduced-motion: reduce)').matches&&!mm('(max-width:860px)').matches){\n"
+    "    var media=lit.parentNode,box=lit.firstElementChild,full=hero.classList.contains('f-hero');\n"
+    "    var W=0,H=0,r=0,x=0,y=0,tx=0,ty=0,hx=0,hy=0,raf=0,last=0,vis=true,on=false,follow=false,off=false,dts=[];\n"
+    "    var place=function(){ /* круг и копия фото — ровно навстречу: копия стоит на месте фото до долей пикселя */\n"
+    "      var X=Math.round((x-r)*10)/10,Y=Math.round((y-r)*10)/10;\n"
+    "      lit.style.transform='translate3d('+X+'px,'+Y+'px,0)';box.style.transform='translate3d('+(-X)+'px,'+(-Y)+'px,0)';\n"
     "    };\n"
-    "    var kick=function(){if(!raf&&on&&vis&&!document.hidden){lt=performance.now();raf=requestAnimationFrame(frame);}};\n"
+    "    var size=function(){\n"
+    "      if(off)return;var cs=getComputedStyle(media);W=parseFloat(cs.width)||media.offsetWidth;H=parseFloat(cs.height)||media.offsetHeight; /* точный размер: копия совпадает с фото */\n"
+    "      r=Math.round(Math.max(240,Math.min(400,innerWidth*.21))*.72);\n"
+    "      lit.style.width=lit.style.height=2*r+'px';box.style.width=W+'px';box.style.height=H+'px';\n"
+    "      hx=W*(full?.68:.74);hy=H*.47;if(!follow){tx=hx;ty=hy;if(!raf){x=hx;y=hy;}}place();\n"
+    "    };\n"
+    "    var frame=function(now){\n"
+    "      raf=0;if(off||!vis||document.hidden)return;\n"
+    "      var dt=last?Math.min(Math.max(now-last,0),100):16.67;\n"
+    "      if(last&&F.mode!=='full'){dts.push(now-last);if(dts.length>=40){dts.sort(function(a,b){return a-b;});var med=dts[20];dts=[];\n"
+    "        if(med>25){document.documentElement.setAttribute('data-fps',Math.round(1000/med));F.set(true);return;}}}\n"
+    "      last=now;var k=1-Math.pow(.94,dt/16.67);x+=(tx-x)*k;y+=(ty-y)*k;\n"
+    "      if(Math.abs(tx-x)<.3&&Math.abs(ty-y)<.3){x=tx;y=ty;place();return;}\n"
+    "      place();raf=requestAnimationFrame(frame);\n"
+    "    };\n"
+    "    var kick=function(){if(!raf&&!off&&vis&&!document.hidden){last=0;raf=requestAnimationFrame(frame);}};\n"
     "    hero.addEventListener('pointermove',function(e){\n"
-    "      if(e.pointerType!=='mouse')return;var r=media.getBoundingClientRect();if(!r.width||!r.height)return;\n"
-    "      tx=(e.clientX-r.left)/r.width;ty=(e.clientY-r.top)/r.height;last=performance.now();kick();\n"
+    "      if(e.pointerType!=='mouse'||off)return;var b=media.getBoundingClientRect();if(!b.width||!b.height)return;\n"
+    "      tx=(e.clientX-b.left)/b.width*W;ty=(e.clientY-b.top)/b.height*H;follow=true;kick();\n"
     "    },{passive:true});\n"
+    "    hero.addEventListener('pointerleave',function(){if(off)return;follow=false;tx=hx;ty=hy;kick();});\n"
     "    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;kick();}).observe(hero);\n"
     "    document.addEventListener('visibilitychange',kick);\n"
-    "    var start=function(){if(on)return;on=true;hero.classList.add('fx-lit-on');kick();};\n"
+    "    if(window.ResizeObserver)new ResizeObserver(function(){size();}).observe(media);\n"
+    "    addEventListener('resize',size);size();\n"
+    "    var start=function(){if(on||off)return;on=true;hero.classList.add('fx-lit-on');};\n"
+    "    F.hooks.push(function(){off=true;if(raf)cancelAnimationFrame(raf);raf=0;hero.classList.remove('fx-lit-on');});\n"
     "    var eb=hero.querySelector('.eyebrow');\n"
     "    if(eb&&'MutationObserver' in window){\n"
     "      if(eb.classList.contains('in'))start();\n"
@@ -74,9 +96,9 @@ JS_LIT = (
     "  }\n"
 )
 JS_GLOW = (
-    "  /* подсветка рамки карточек за курсором — как у .card на главной */\n"
+    "  /* подсветка рамки карточек за курсором — как у .card на главной; в облегчённом режиме (window.pcFx) — нет */\n"
     "  if(fine)document.addEventListener('pointermove',function(e){\n"
-    "    var c=e.target.closest&&e.target.closest('" + GLOW_SEL + "');if(!c)return;\n"
+    "    if(window.pcFx&&pcFx.lite)return;var c=e.target.closest&&e.target.closest('" + GLOW_SEL + "');if(!c)return;\n"
     "    var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');\n"
     "  },{passive:true});\n"
 )
@@ -95,7 +117,8 @@ def _script(lit):
 
 STYLE_RE = re.compile(r'<style data-fx>.*?</style>\n', re.S)
 SCRIPT_RE = re.compile(r'<script data-fx>.*?</script>\n', re.S)
-LIT_RE = re.compile(r'<div class="fx-lit" aria-hidden="true"><picture>.*?</picture></div>', re.S)
+# прежняя разметка (до 15.11.2026 — без обёртки .fx-lit-in) и нынешняя
+LIT_RE = re.compile(r'<div class="fx-lit" aria-hidden="true">(?:<div class="fx-lit-in">)?<picture>.*?</picture>(?:</div>)?</div>', re.S)
 LOADER_MARK = '<script>\n  /* скрипты анимаций подключаются сразу после первой отрисовки'
 HERO_RE = re.compile(r'<section class="[^"]*\b(?:d-hero|f-hero)\b[^"]*" id="hero">.*?</section>', re.S)
 HERO_PIC_RE = re.compile(r'(<div class="(?:d-hero-media|hero-media)"[^>]*>\s*)'
@@ -103,13 +126,14 @@ HERO_PIC_RE = re.compile(r'(<div class="(?:d-hero-media|hero-media)"[^>]*>\s*)'
 
 
 def lit_layer(pic):
-    """Копия <picture> первого экрана для слоя фонаря: без id, без приоритета загрузки, с пустым alt."""
+    """Копия <picture> первого экрана для лупы: без id, без приоритета загрузки, с пустым alt. Обёртка .fx-lit-in
+    размером с фото сдвигается навстречу кругу — копия стоит ровно на месте фото (tools/site/focal.js кадрирует её так же)."""
     c = re.sub(r'\s(?:id|fetchpriority|loading)="[^"]*"', '', pic)
     c = re.sub(r'\salt="[^"]*"', ' alt=""', c)
     c = re.sub(r'(<img\b[^>]*?class=")([^"]*)"', r'\1\2 fx-lit-img"', c, count=1)
     if 'decoding=' not in c:
         c = c.replace('<img ', '<img decoding="async" ', 1)
-    return '<div class="fx-lit" aria-hidden="true">' + c + '</div>'
+    return '<div class="fx-lit" aria-hidden="true"><div class="fx-lit-in">' + c + '</div></div>'
 
 
 def data_attrs(s):
@@ -136,7 +160,7 @@ def apply(s):
     s = SCRIPT_RE.sub('', s)
     s = LIT_RE.sub('', s)
     s = data_attrs(s)
-    own_lit = 'id="heroLit"' in s or 'id="vLit"' in s  # главная и вентиляция — со своим фонарём и подсветкой
+    own_lit = any(k in s for k in ('id="heroLens"', 'id="heroLit"', 'id="vLit"'))  # главная и вентиляция — своя лупа и подсветка
     if own_lit:
         return s, {'lit': False, 'glow': False, 'own': True}
     m = HERO_RE.search(s)

@@ -292,8 +292,44 @@
   /* ================================================================ */
   var desk = matchMedia('(min-width: 1025px)').matches;
   var mobile = matchMedia('(max-width: 760px)').matches;
+
+  /* ---------- облегчённый режим для слабых компьютеров (15.11.2026) ----------
+     window.pcFx задаёт скрипт в <head> (общий для всех страниц): там же ?fx=lite / ?fx=full / ?fx=auto и решение, уже
+     принятое на этом визите (sessionStorage pc-lowfx). Здесь — замер: через 3 с после загрузки 2 с считаются кадры
+     (и потом, пока лупа догоняет мышь, — см. лупу ниже и лупу внутренних страниц, tools/site/fx.py). Меньше 40 в секунду
+     (середина промежутков между кадрами длиннее 25 мс) — слабый компьютер или браузер без видеоускорения: pcFx.set ставит
+     класс lowfx на <html> (style.css выключает лупу, «зерно», сканирующую линию, пульсации, матовое стекло) и вызывает
+     pcFx.hooks: без параллакса, наклона и блика панели, нарисованный курсор — обычный. */
+  var pcFx = window.pcFx || (window.pcFx = { mode: '', lite: false, hooks: [], set: function () {
+    if (pcFx.lite) return;
+    pcFx.lite = true;
+    html.classList.add('lowfx');
+    pcFx.hooks.forEach(function (f) { try { f(); } catch (e) { } });
+  } });
+  var fxProbe = function () {
+    if (pcFx.lite || pcFx.mode === 'full' || pcFx.mode === 'lite') return;
+    if (document.hidden) { setTimeout(fxProbe, 2000); return; }
+    var ts = [], t0 = 0, hid = false, onVis = function () { hid = true; };
+    document.addEventListener('visibilitychange', onVis);
+    var step = function (t) {
+      if (!t0) t0 = t;
+      ts.push(t);
+      if (t - t0 < 2000 && !hid) { requestAnimationFrame(step); return; }
+      document.removeEventListener('visibilitychange', onVis);
+      if (hid || document.hidden) { setTimeout(fxProbe, 2000); return; } /* вкладку прятали — замер не в счёт */
+      var d = [];
+      for (var i = 1; i < ts.length; i++) d.push(ts[i] - ts[i - 1]);
+      d.sort(function (a, b) { return a - b; });
+      var med = d.length ? d[d.length >> 1] : 1000;
+      html.setAttribute('data-fps', Math.round(1000 / med));
+      if (d.length < 20 || med > 25) pcFx.set(true);
+    };
+    requestAnimationFrame(step);
+  };
+  if (document.readyState === 'complete') setTimeout(fxProbe, 3000);
+  else addEventListener('load', function () { setTimeout(fxProbe, 3000); });
   /* размытие (blur) при появлении — только на компьютерах с мышью: на телефонах и планшетах оно сильно грузит процессор */
-  var richFx = fine && !mobile;
+  var richFx = fine && !mobile && !pcFx.lite;
   var fx = function (o, px) { if (richFx) o.filter = 'blur(' + px + 'px)'; return o; };
 
   /* ---------- разбивка текста на слова ---------- */
@@ -337,8 +373,9 @@
      на ссылке-документе — кругом с подписью (вариант В, выбран владельцем 11.11.2026). Светлый объект — по цвету фона
      ближайшего непрозрачного предка или по средней яркости картинки (считается один раз); вручную — data-cursor="light|dark".
      Кнопки .btn — всегда обычный курсор (при наведении они сами меняют цвет). */
-  if (fine) {
+  if (fine && !pcFx.lite) {
     html.classList.add('has-cursor');
+    pcFx.hooks.push(function () { html.classList.remove('has-cursor'); }); /* облегчённый режим — обычный курсор */
     var cur = $('.cursor'), dot = $('.cursor-dot'), ring = $('.cursor-ring');
     var lbl = document.createElement('b');
     lbl.className = 'cursor-lbl';
@@ -407,6 +444,7 @@
   /* ---------- подсветка карточек за курсором ---------- */
   if (fine) {
     document.addEventListener('pointermove', function (e) {
+      if (pcFx.lite) return;
       var c = e.target.closest && e.target.closest('.card,.form');
       if (!c) return;
       var r = c.getBoundingClientRect();
@@ -436,34 +474,96 @@
     });
   }
 
-  /* ---------- первый экран: «фонарь» инспектора, параллакс, наклон панели ---------- */
-  var hero = $('#hero'), media = $('#heroMedia'), lit = $('#heroLit'), panel = $('#panel');
+  /* ---------- первый экран: лупа инспектора, параллакс, наклон панели ----------
+     Лупа (15.11.2026): светлое фото img/hero-lit.webp в круглой маске только сдвигается (transform) — браузер не
+     перерисовывает фото. Кадры считаются, только пока круг догоняет мышь (та же плавность, что раньше); без мыши круг
+     стоит на открытой части фото над панелью «Что покажет бесплатный аудит» и сам не ходит. Мышь ушла с первого экрана —
+     круг плавно возвращается на место. Телефоны, планшеты и облегчённый режим — без лупы (фото заранее затемнено). */
+  var hero = $('#hero'), media = $('#heroMedia'), lens = $('#heroLens'), panel = $('#panel');
   /* первый экран внутренних страниц: .d-hero (услуги, договор, материалы), .p-hero (раздел и журнал), .f-hero (отрасль) */
   var dHero = $('.d-hero') || $('.p-hero') || $('.f-hero'), dMedia = dHero ? $('.d-hero-media, .hero-media', dHero) : null;
-  var sx = 0.7, sy = 0.42, tx = 0.7, ty = 0.42, lastMove = -1e9, heroVisible = true, litOn = false;
-  if (lit && media && hero) {
-    lit.style.setProperty('--sr', mobile ? '190px' : 'clamp(240px, 21vw, 400px)');
-    new IntersectionObserver(function (en) { heroVisible = en[0].isIntersecting; }).observe(hero);
-    hero.addEventListener('pointermove', function (e) {
-      if (e.pointerType !== 'mouse') return;
-      var r = media.getBoundingClientRect();
-      tx = (e.clientX - r.left) / r.width; ty = (e.clientY - r.top) / r.height; lastMove = performance.now();
-    });
-    var litT = 0;
-    gsap.ticker.add(function () {
-      if (!heroVisible || !litOn) return; /* до входа первого экрана фонарь скрыт под заставкой — не считаем */
-      var now = performance.now(), dt = now - litT;
-      if (!fine && dt < 30) return; /* на сенсорных экранах фонарь движется сам и медленно — 30 обновлений в секунду хватает, нагрузка вдвое ниже */
-      litT = now;
-      if (now - lastMove > 2600) {
-        var t = now / 1000;
-        tx = 0.66 + 0.2 * Math.sin(t * 0.33); ty = 0.46 + 0.17 * Math.sin(t * 0.47 + 1.3);
+  var lensShow = function () { };
+  var initLens = function () {
+    var img = lens.firstElementChild, src = lens.getAttribute('data-src');
+    var W = 0, H = 0, r = 0, x = 0, y = 0, tx = 0, ty = 0, hx = 0, hy = 0;
+    var raf = 0, last = 0, visible = true, follow = false, off = false, ready = false, want = false, dts = [];
+    var home = function () {
+      /* открытая часть фото: над панелью, когда она стоит справа от текста (шире 1280 px), иначе — справа вверху */
+      var p = panel, px = 0, py = 0, el = p;
+      if (p && matchMedia('(min-width: 1281px)').matches) {
+        for (; el && el !== hero; el = el.offsetParent) { px += el.offsetLeft; py += el.offsetTop; }
       }
-      var k = 1 - Math.pow(0.94, Math.min(dt, 100) / 16.67);
-      sx += (tx - sx) * k; sy += (ty - sy) * k;
-      lit.style.setProperty('--sx', (sx * 100).toFixed(2) + '%');
-      lit.style.setProperty('--sy', (sy * 100).toFixed(2) + '%');
-    });
+      if (p && el === hero) {
+        var hdr = $('#hdr'), hh = hdr ? hdr.offsetHeight : 0;
+        hx = px + p.offsetWidth / 2 - media.offsetLeft;
+        hy = (hh + py) / 2 - media.offsetTop;
+      } else { hx = W * 0.78; hy = H * 0.22; }
+    };
+    var apply = function () {
+      /* круг и фото внутри — ровно навстречу друг другу: фото стоит на месте до долей пикселя */
+      var X = Math.round((x - r) * 10) / 10, Y = Math.round((y - r) * 10) / 10;
+      lens.style.transform = 'translate3d(' + X + 'px,' + Y + 'px,0)';
+      img.style.transform = 'translate3d(' + -X + 'px,' + -Y + 'px,0)';
+    };
+    var size = function () {
+      if (off) return;
+      var cs = getComputedStyle(media); /* точный размер фото (offsetWidth/offsetHeight округляют до целых) */
+      W = parseFloat(cs.width) || media.offsetWidth; H = parseFloat(cs.height) || media.offsetHeight;
+      r = Math.round(Math.max(240, Math.min(400, innerWidth * 0.21)) * 0.72); /* как раньше: clamp(240px, 21vw, 400px) */
+      lens.style.width = lens.style.height = 2 * r + 'px';
+      img.style.width = W + 'px'; img.style.height = H + 'px';
+      home();
+      if (!follow) { tx = hx; ty = hy; if (!raf) { x = hx; y = hy; } }
+      apply();
+    };
+    var tick = function (now) {
+      raf = 0;
+      if (off || !visible) return;
+      var dt = last ? Math.min(Math.max(now - last, 0), 100) : 16.67;
+      if (last && pcFx.mode !== 'full') {
+        /* страховка и в движении: середина из 40 кадров длиннее 25 мс (меньше 40 кадров в секунду) — облегчённый режим */
+        dts.push(now - last);
+        if (dts.length >= 40) {
+          dts.sort(function (a, b) { return a - b; });
+          var med = dts[20]; dts = [];
+          if (med > 25) { html.setAttribute('data-fps', Math.round(1000 / med)); pcFx.set(true); return; }
+        }
+      }
+      last = now;
+      var k = 1 - Math.pow(0.94, dt / 16.67);
+      x += (tx - x) * k; y += (ty - y) * k;
+      if (Math.abs(tx - x) < 0.3 && Math.abs(ty - y) < 0.3) { x = tx; y = ty; apply(); return; } /* догнал — кадры не нужны */
+      apply();
+      raf = requestAnimationFrame(tick);
+    };
+    var go = function () { if (!raf && !off && visible) { last = 0; raf = requestAnimationFrame(tick); } };
+    var reveal = function () { if (ready && want && !off) lens.classList.add('on'); };
+    hero.addEventListener('pointermove', function (e) {
+      if (e.pointerType !== 'mouse' || off) return;
+      var b = media.getBoundingClientRect();
+      tx = (e.clientX - b.left) / b.width * W; ty = (e.clientY - b.top) / b.height * H;
+      follow = true; go();
+    }, { passive: true });
+    hero.addEventListener('pointerleave', function () { if (off) return; follow = false; tx = hx; ty = hy; go(); });
+    new IntersectionObserver(function (en) { visible = en[0].isIntersecting; if (visible) go(); }).observe(hero);
+    if (window.ResizeObserver) new ResizeObserver(function () { size(); }).observe(media);
+    addEventListener('resize', size);
+    size();
+    /* светлое фото — после загрузки страницы, чтобы не мешать первому экрану */
+    var loadLit = function () {
+      var im = new Image();
+      im.onload = function () {
+        var set = function () { img.style.backgroundImage = 'url("' + src + '")'; ready = true; reveal(); };
+        if (im.decode) im.decode().then(set, set); else set();
+      };
+      im.src = src;
+    };
+    if (document.readyState === 'complete') loadLit(); else addEventListener('load', loadLit);
+    pcFx.hooks.push(function () { off = true; if (raf) cancelAnimationFrame(raf); raf = 0; lens.classList.remove('on'); });
+    return function () { want = true; reveal(); };
+  };
+  if (lens && media && hero) {
+    if (fine && !mobile && !pcFx.lite) lensShow = initLens();
     if (fine && panel) {
       var mX = gsap.quickTo(media, 'x', { duration: 1.4, ease: 'power3' }), mY = gsap.quickTo(media, 'y', { duration: 1.4, ease: 'power3' });
       var pY = gsap.quickTo(panel, 'rotationY', { duration: 1.1, ease: 'power3' }), pX = gsap.quickTo(panel, 'rotationX', { duration: 1.1, ease: 'power3' });
@@ -471,12 +571,14 @@
          GSAP не должен принять за исходное */
       gsap.set(panel, { transformPerspective: 1200, x: 0, y: 0, rotationX: 0, rotationY: 0 });
       hero.addEventListener('pointermove', function (e) {
+        if (pcFx.lite) return; /* облегчённый режим: без параллакса, наклона и блика панели */
         var px = e.clientX / innerWidth - 0.5, py = e.clientY / innerHeight - 0.5;
         mX(-px * 30); mY(-py * 20); pY(px * 9); pX(-py * 9);
         var r = panel.getBoundingClientRect();
         panel.style.setProperty('--gx', (e.clientX - r.left) + 'px'); panel.style.setProperty('--gy', (e.clientY - r.top) + 'px');
       });
       hero.addEventListener('pointerleave', function () { mX(0); mY(0); pX(0); pY(0); });
+      pcFx.hooks.push(function () { mX(0); mY(0); pX(0); pY(0); });
     }
     /* уход первого экрана при прокрутке — только шире 1280 px, где панель «Что покажет бесплатный аудит» стоит рядом
        с текстом и видна целиком сразу. До 1280 px (телефоны, планшеты, небольшие ноутбуки) панель под текстом, её читают
@@ -491,10 +593,12 @@
     if (fine && desk) {
       var dmX = gsap.quickTo(dMedia, 'x', { duration: 1.4, ease: 'power3' }), dmY = gsap.quickTo(dMedia, 'y', { duration: 1.4, ease: 'power3' });
       dHero.addEventListener('pointermove', function (e) {
+        if (pcFx.lite) return; /* облегчённый режим: без параллакса фото */
         var px = e.clientX / innerWidth - 0.5, py = e.clientY / innerHeight - 0.5;
         dmX(-px * 22); dmY(-py * 14);
       });
       dHero.addEventListener('pointerleave', function () { dmX(0); dmY(0); });
+      pcFx.hooks.push(function () { dmX(0); dmY(0); });
     }
     if (desk) {
       gsap.timeline({ scrollTrigger: { trigger: dHero, start: 'top top', end: 'bottom top', scrub: true } })
@@ -503,6 +607,7 @@
     var fPanel = $('.f-check.panel');
     if (fine && fPanel) {
       fPanel.addEventListener('pointermove', function (e) {
+        if (pcFx.lite) return;
         var r = fPanel.getBoundingClientRect();
         fPanel.style.setProperty('--gx', (e.clientX - r.left) + 'px'); fPanel.style.setProperty('--gy', (e.clientY - r.top) + 'px');
       });
@@ -520,7 +625,7 @@
   var heroImgs = dHero ? $$('.d-hero-img, .f-hero-img', dHero) : [];
   if (pcHero) { /* вход уже идёт или прошёл */ }
   else if (heroImgs.length) gsap.set(heroImgs, { scale: 1.12 });
-  else if (hero && $('.hero-bg')) gsap.set('.hero-bg,.hero-lit', { scale: 1.18 });
+  else if (hero && $('.hero-bg')) gsap.set('.hero-bg', { scale: 1.18 });
   function heroIn() {
     if (dHero) {
       /* внутренние страницы: тот же почерк, что у главной — строки заголовка поднимаются из-под маски,
@@ -544,10 +649,9 @@
       if (dStack.length) tlD.fromTo(dStack, fx({ opacity: 0, y: 70 }, 8), fx({ opacity: 1, y: 0, duration: 1.5, stagger: 0.14, clearProps: 'filter,transform' }, 0), 0.3);
       return;
     }
-    litOn = true;
     var tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
-    tl.fromTo('.hero-bg,.hero-lit', { scale: 1.18 }, { scale: 1, duration: 2.6 }, 0)
-      .to(lit, { opacity: 1, duration: 2 }, 0.4)
+    tl.fromTo('.hero-bg', { scale: 1.18 }, { scale: 1, duration: 2.6 }, 0)
+      .add(lensShow, 2.65)
       .fromTo('.badge', fx({ opacity: 0, y: 20 }, 8), fx({ opacity: 1, y: 0, duration: 1.1 }, 0), 0.1)
       .to(heroLines, { yPercent: 0, rotation: 0, duration: 1.4, stagger: 0.11 }, 0.15)
       .fromTo('.lead', fx({ opacity: 0, y: 24 }, 8), fx({ opacity: 1, y: 0, duration: 1.2 }, 0), 0.4)
@@ -561,11 +665,11 @@
   var intro = $('#intro');
   if (pcHero) {
     /* заставку и вход ведёт встроенный скрипт; здесь — только то, что требует GSAP и Lenis:
-       «фонарь» главной загорается через 0,4 с после начала входа, плавный скролл ждёт подъёма заставки */
+       лупа главной появляется после входа фото (2,6 с), плавный скролл ждёт подъёма заставки */
     var litStart = function () {
-      if (dHero || !lit) return;
-      litOn = true;
-      gsap.to(lit, { opacity: 1, duration: 2, ease: 'expo.out', delay: Math.max(0, pcHero.t0 + 400 - performance.now()) / 1000 });
+      if (dHero) return;
+      /* лупа — после входа фото (2,6 с), иначе круг не совпадёт с фото, которое ещё уменьшается */
+      setTimeout(lensShow, Math.max(0, pcHero.t0 + 2650 - performance.now()));
     };
     if (pcHero.t0 !== null) litStart();
     else document.addEventListener('pc:hero', litStart);
