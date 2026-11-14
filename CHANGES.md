@@ -25,8 +25,10 @@
   `independence_law`, `menu_anchors` — OK.
 - **Timeweb:** `tools/deploy/prepare-2026-11-13-zagolovok.py <новая папка>` — пакет из актуального сайта (`app.min.js`
   три точные замены, `style.css`, `legal.css`, 42 страницы), серверный скрипт `tools/deploy/publish_zagolovok.py`
-  (`--check`, `--publish`, `--rollback`; на копии `public_html` — 45/45, повтор, откат байт в байт). Пакет собирать заново
-  непосредственно перед выкладкой. Журнал — `tools/site/zagolovok-2026-11-13.md`.
+  (`--check`, `--publish`, `--rollback`; на копии `public_html` — 45/45, повтор, откат байт в байт). Пакет
+  `tools/deploy/zagolovok-2026-11-13/` собран 15.11.2026 в 01:13 МСК от рабочего сайта после выкладки 14.11 18:49
+  (без мессенджеров, новые title и description): 45/45 файлов, 85 ссылок с версией. Журнал —
+  `tools/site/zagolovok-2026-11-13.md`.
 
 ## 14.11.2026: вентиляция — «Что видит камера в коробе»: реалистичные кадры с анимацией (только GitHub-превью; Timeweb не менялся)
 

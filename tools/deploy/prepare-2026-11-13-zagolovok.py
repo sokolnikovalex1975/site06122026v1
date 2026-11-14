@@ -42,6 +42,7 @@ sys.path.insert(0, str(ROOT / 'tools/site'))
 import tracking_laws  # noqa: E402
 
 NAME = 'zagolovok-2026-11-13'
+BASE = 'HEAD'  # версия репозитория до правки — задаёт main() через base_rev()
 OLD_V, NEW_V = '20261113ekran', '20261113zagolovok'
 LEGAL_OLD_V = '20261108'
 LEGAL = ('privacy/', 'soglasie/')
@@ -78,8 +79,19 @@ def esbuild(text, loader):
     return subprocess.run(ESBUILD + args, input=text, capture_output=True, text=True, cwd=ROOT, check=True).stdout
 
 
+def base_rev():
+    """Версия репозитория до этой правки: родитель коммита, где в app.js появился раздел NEW_MARK (до коммита — HEAD).
+    BASE_REV=<коммит> — указать явно."""
+    if os.environ.get('BASE_REV'):
+        return os.environ['BASE_REV']
+    found = subprocess.run(['git', 'log', '--format=%H', '-S', NEW_MARK, '--', 'app.js'],
+                           capture_output=True, text=True, cwd=ROOT, check=True).stdout.split()
+    return found[-1] + '~1' if found else 'HEAD'
+
+
 def git_head(rel):
-    return subprocess.run(['git', 'show', 'HEAD:' + rel], capture_output=True, text=True, cwd=ROOT, check=True).stdout
+    """Файл репозитория до этой правки (прежние правила и прежний раздел app.js)."""
+    return subprocess.run(['git', 'show', BASE + ':' + rel], capture_output=True, text=True, cwd=ROOT, check=True).stdout
 
 
 def css_blocks():
@@ -114,6 +126,9 @@ def legal_blocks():
 
 
 def main():
+    global BASE
+    BASE = base_rev()
+    print('исходные файлы репозитория до правки:', BASE)
     out_dir = pathlib.Path(sys.argv[1]).resolve()
     check = '--check' in sys.argv[2:]
     src = os.environ.get('SRC', '')
