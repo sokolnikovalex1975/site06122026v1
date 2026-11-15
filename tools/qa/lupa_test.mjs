@@ -79,7 +79,12 @@ async function open(path, { mobile = false, query = '', w = 1440, h = 900, cpu =
   for (let k = 0; k < 4; k++) {  // Timeweb иногда отвечает облаку ложным 502 — тогда страница открывается заново
     errors.length = 0;
     try { await page.goto(BASE + '/' + path + query, { waitUntil: 'load', timeout: 60000 }); }
-    catch (e) { if (k === 3) throw e; errors.push('502 goto: ' + String(e).slice(0, 80)); continue; }  // сайт не ответил — ещё раз
+    catch (e) {
+      // страница ошибки Timeweb (ложный 502 облаку) сама перезагружается — дождаться её перезагрузки
+      const again = /interrupted by another navigation/.test(String(e)) &&
+        await page.waitForLoadState('load', { timeout: 60000 }).then(() => page.evaluate(() => !!document.getElementById('hdr')), () => false).catch(() => false);
+      if (!again) { if (k === 3) throw e; errors.push('502 goto: ' + String(e).slice(0, 80)); continue; }
+    }
     await page.waitForFunction(() => document.documentElement.classList.contains('anim-ready') ||
       document.documentElement.classList.contains('anim-fail'), null, { timeout: 15000 }).catch(() => {});
     await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});  // все скрипты загружены
