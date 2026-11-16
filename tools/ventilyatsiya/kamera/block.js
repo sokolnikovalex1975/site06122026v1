@@ -50,7 +50,14 @@
       if(v){drop();bar(-1)}
     };
     setStop(stopd);
-    var kick=function(){if(vis&&!stopd&&!tFn&&!busy)auto(true)};
+    /* смена идёт только по загруженным кадрам: при быстром переходе к блоку (меню, якорь) фото ещё грузятся */
+    var loaded=function(){for(var k=0;k<im.length;k++)if(!(im[k].complete&&im[k].naturalWidth))return false;return true},wl=false;
+    var kick=function(){
+      if(!vis||stopd||tFn||busy)return;
+      if(loaded()){auto(true);return}
+      if(wl)return;wl=true;
+      for(var k=0;k<im.length;k++)im[k].addEventListener('load',function(){if(loaded()){wl=false;kick()}});
+    };
     pb.addEventListener('click',function(){
       if(!stopd){setStop(true);return}
       setStop(false);kick();

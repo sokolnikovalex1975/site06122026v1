@@ -54,7 +54,7 @@
 /* Первый экран: пока он не загружен целиком (после него ещё нет следующего блока), содержимое скрыто — как на главной: иначе при постепенной загрузке текст, выровненный по центру высоты экрана, сдвигается (CLS) */
 .d-hero:not(:has(~ *)) .wrap{visibility:hidden}
 
-.v-hero h1{font-size:clamp(40px,3.75vw,74px)}.v-nums{margin-bottom:28px}.v-nums .f-num{display:block}.v-freq td:nth-child(3){white-space:normal;min-width:150px}.v-freq td:nth-child(4){font-size:14.5px;color:var(--t3)}.v-parts .dz-lbl{color:var(--t3);letter-spacing:.12em}.v-swap-r{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);grid-template-areas:"img head" "img ticks"}.v-card-acc{border-color:rgba(124,134,255,.35)}.d-cols2 .d-ticks{margin:14px 0 0;gap:10px;color:var(--t2);line-height:1.55}.v-duct{margin:clamp(28px,3vw,44px) 0 0;background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(18px,2vw,30px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);grid-template-areas:"top top" "art cap" "art leg";column-gap:clamp(22px,3vw,48px);row-gap:18px;align-items:start}.v-duct-top{grid-area:top;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px}.v-duct-k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}.v-seg{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.02)}.v-seg button{appearance:none;border:0;background:transparent;color:var(--t2);font:inherit;font-size:14px;line-height:1.2;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}.v-seg button:hover{color:var(--t1)}.v-seg button[aria-pressed="true"]{background:#fff;color:#09090b}.v-seg button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}.v-duct-art{grid-area:art;border-radius:calc(var(--r) - 4px);overflow:hidden;background:#0b0d12;border:1px solid var(--line2);aspect-ratio:720/400}.v-duct-art svg{display:block;width:100%;height:100%}.v-duct figcaption{grid-area:cap;color:var(--t2);line-height:1.6;min-height:7.5em;align-self:end}.v-duct figcaption [data-cap]{display:block}.v-duct figcaption [data-cap][hidden]{display:none}.v-legend{grid-area:leg;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;font-size:14px;color:var(--t3)}.v-legend li{display:flex;align-items:center;gap:10px}.v-legend i{width:12px;height:12px;border-radius:50%;flex:0 0 auto}.v-duct .v-dust,.v-duct .v-grease,.v-duct .v-germs,.v-duct .v-ok,.v-duct .v-shine{transition:opacity .7s ease}.v-duct .v-ok,.v-duct .v-shine{opacity:0}.v-duct[data-state="clean"] .v-dust,.v-duct[data-state="clean"] .v-grease,.v-duct[data-state="dez"] .v-dust,.v-duct[data-state="dez"] .v-grease,.v-duct[data-state="dez"] .v-germs{opacity:0}.v-duct[data-state="clean"] .v-shine{opacity:.6}.v-duct[data-state="dez"] .v-shine,.v-duct[data-state="dez"] .v-ok{opacity:1}.v-docs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,360px);gap:clamp(28px,4vw,72px);align-items:start}.v-dg+.v-dg{margin-top:clamp(30px,3vw,46px)}.v-dg-t{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 14px;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t3)}.v-chip{display:inline-flex;align-items:center;padding:5px 11px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.03);color:var(--t2);font-size:12px;letter-spacing:.08em}.v-chip.req{color:#d9dcff;border-color:rgba(124,134,255,.45);background:rgba(124,134,255,.14)}.v-dl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line2)}.v-doc{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:6px 20px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line2)}.v-doc-img{display:flex;align-items:center;justify-content:center;width:64px;aspect-ratio:210/297;border-radius:4px;overflow:hidden;background:#f5f5f2;box-shadow:0 12px 28px -14px rgba(0,0,0,.85);transition:transform .45s var(--ease)}.v-doc-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}.v-doc-c{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);margin:2px 0 6px}.v-doc h4{margin:0;font-size:clamp(17px,1.1vw,19px);font-weight:500;line-height:1.35;letter-spacing:-.005em}.v-doc h4 a{color:var(--t1);text-decoration:none}.v-doc h4 a::after{content:"";position:absolute;inset:0;z-index:1}.v-doc h4 a:focus-visible{outline:none}.v-doc:has(h4 a:focus-visible){outline:2px solid var(--acc);outline-offset:4px;border-radius:6px}.v-doc p{margin:8px 0 0;color:var(--t2);line-height:1.55;font-size:15px}.v-doc-f{align-self:center;white-space:nowrap;font-size:13px;color:var(--t2);padding:7px 12px;border:1px solid var(--line2);border-radius:999px;transition:color .3s,border-color .3s,background .3s}.v-dg-note{margin:16px 0 0;color:var(--t2);font-size:14.5px;line-height:1.55;padding-left:14px;border-left:2px solid rgba(124,134,255,.5)}@media (hover:hover) and (pointer:fine){.v-doc:hover .v-doc-f{color:#fff;border-color:rgba(124,134,255,.55);background:rgba(124,134,255,.12)}.v-doc:hover .v-doc-img{transform:translateY(-3px) rotate(-1.5deg)}.v-doc:hover h4 a{text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}}.v-doc-a{display:flex;flex-direction:column;align-items:stretch;gap:8px;align-self:center}.v-doc-a .v-doc-f{align-self:stretch;text-align:center}.v-doc-s{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;font-size:13px;color:#d9dcff;padding:7px 12px;border:1px solid rgba(124,134,255,.45);border-radius:999px;background:rgba(124,134,255,.1);text-decoration:none;transition:color .3s,border-color .3s,background .3s}.v-doc-s:focus-visible{outline:2px solid var(--acc);outline-offset:3px}@media (hover:hover) and (pointer:fine){.v-doc-s:hover{color:#fff;border-color:rgba(124,134,255,.85);background:rgba(124,134,255,.26)}.v-doc:has(.v-doc-s:hover) .v-doc-f{color:var(--t2);border-color:var(--line2);background:none}.v-doc:has(.v-doc-s:hover) .v-doc-img{transform:none}.v-doc:has(.v-doc-s:hover) h4 a{text-decoration:none}}.v-folder .v-folder-btn2{margin-top:18px}.v-folder h3{margin:0}.v-folder-stack{position:relative;display:block;height:262px;margin:2px auto 24px;max-width:300px}.v-folder-stack img{position:absolute;top:0;left:50%;width:176px;height:auto;border-radius:6px;background:#f5f5f2;box-shadow:0 26px 60px -24px rgba(0,0,0,.95)}.v-folder-stack .s1{transform:translateX(-66%) rotate(-3deg);z-index:2}.v-folder-stack .s2{transform:translateX(-30%) translateY(12px) rotate(4deg)}.v-folder .d-ticks{margin:16px 0 0;gap:9px;font-size:15px;color:var(--t2)}.v-folder-note{margin:16px 0 0;color:var(--t3);font-size:14px;line-height:1.5}.v-folder .v-folder-btn{display:flex;width:100%;margin-top:22px;padding:0 20px;font-size:16px}.v-folder-meta{margin:10px 0 0;text-align:center;color:var(--t3);font-size:13px}.v-inds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.v-ind{padding:clamp(20px,1.8vw,28px);display:flex;flex-direction:column;gap:10px}.v-ind svg{width:26px;height:26px;color:var(--acc)}.v-ind h3{font-size:clamp(17px,1.15vw,20px);font-weight:500;letter-spacing:-.01em;margin:6px 0 0;line-height:1.3}.v-ind p{margin:0;color:var(--t2);line-height:1.55;font-size:15px}.v-ind a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}.v-pest{margin-top:16px;border-color:rgba(124,134,255,.35)}.v-pest a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}.v-pest a:hover,.v-ind a:hover{color:var(--acc)}.v-steps{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}@media (max-width:1180px){.v-inds{grid-template-columns:repeat(2,minmax(0,1fr))}.v-duct{grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "art" "cap" "leg"}.v-duct figcaption{min-height:0}.v-legend{grid-template-columns:repeat(4,max-content)}.v-docs{grid-template-columns:minmax(0,1fr) minmax(0,320px)}.v-doc{grid-template-columns:64px minmax(0,1fr)}.v-doc-img{grid-row:1/span 2}.v-doc-a{grid-column:2;flex-direction:row;flex-wrap:wrap;justify-self:start;align-self:start;margin-top:10px}}@media (max-width:860px){.v-hero h1{font-size:clamp(28px,8vw,40px)}.v-swap-r{grid-template-areas:"head" "img" "ticks";grid-template-columns:minmax(0,1fr)}.v-steps{grid-template-columns:minmax(0,1fr)}.v-docs{grid-template-columns:minmax(0,1fr)}.v-folder{max-width:560px}.v-freq td:nth-child(3){min-width:0}.v-legend{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:600px){.v-inds{grid-template-columns:minmax(0,1fr)}.v-seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;border-radius:14px}.v-seg button{padding:9px 6px;font-size:13px;border-radius:10px}.v-doc{grid-template-columns:52px minmax(0,1fr);gap:4px 16px;padding:16px 0}.v-doc-img{width:52px}.v-doc-a{gap:6px}.v-doc-f,.v-doc-s{padding:5px 9px;font-size:12.5px}.v-doc p{font-size:14.5px}.v-folder-stack{height:226px}.v-folder-stack img{width:150px}}@media (max-width:380px){.v-doc-a{flex-direction:column;align-items:stretch}}@media (prefers-reduced-motion:reduce){.v-duct .v-dust,.v-duct .v-grease,.v-duct .v-germs,.v-duct .v-ok,.v-duct .v-shine{transition:none}}.v-lit{position:absolute;left:0;top:0;width:0;height:0;opacity:0;pointer-events:none;contain:strict;will-change:transform,opacity;-webkit-mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;transition:opacity 1.8s cubic-bezier(.16,1,.3,1)}.v-lit-in{position:absolute;left:0;top:0;will-change:transform}.v-lit .d-hero-img{filter:brightness(1.08) contrast(1.06) saturate(1.06)}.d-hero-media>picture .d-hero-img{transition:filter 1.8s cubic-bezier(.16,1,.3,1)}.v-lit-on .d-hero-media>picture .d-hero-img{filter:grayscale(.3) brightness(.56)}.v-lit-on .v-lit{opacity:1}.lowfx .v-lit{display:none}.lowfx .d-hero-media>picture .d-hero-img{transition:none}@media (max-width:860px),(hover:none),(pointer:coarse){.v-lit{display:none}}.d-card{position:relative;transition:border-color .35s,background .35s}.d-card::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;pointer-events:none;background:radial-gradient(360px circle at var(--mx,-999px) var(--my,-999px),rgba(124,134,255,.85),rgba(124,134,255,.15) 35%,transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .4s;z-index:2}@media (hover:hover) and (pointer:fine){.d-card:hover{border-color:rgba(124,134,255,.2)}.d-card:hover::after{opacity:1}}
+.v-hero h1{font-size:clamp(40px,3.75vw,74px)}.v-nums{margin-bottom:28px}.v-nums .f-num{display:block}.v-freq td:nth-child(3){white-space:normal;min-width:150px}.v-freq td:nth-child(4){font-size:14.5px;color:var(--t3)}.v-parts .dz-lbl{color:var(--t3);letter-spacing:.12em}.v-swap-r{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);grid-template-areas:"img head" "img ticks"}.v-card-acc{border-color:rgba(124,134,255,.35)}.d-cols2 .d-ticks{margin:14px 0 0;gap:10px;color:var(--t2);line-height:1.55}.v-duct{margin:clamp(28px,3vw,44px) 0 0;background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(18px,2vw,30px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);grid-template-areas:"top top" "art cap" "art leg";column-gap:clamp(22px,3vw,48px);row-gap:18px;align-items:start}.v-duct-top{grid-area:top;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px}.v-duct-k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}.v-seg{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.02)}.v-seg button{appearance:none;border:0;background:transparent;color:var(--t2);font:inherit;font-size:14px;line-height:1.2;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}.v-seg button:hover{color:var(--t1)}.v-seg button[aria-pressed="true"]{background:#fff;color:#09090b}.v-seg button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}.v-duct-art{grid-area:art;position:relative;border-radius:calc(var(--r) - 4px);overflow:hidden;background:#050608;border:1px solid var(--line2);aspect-ratio:43/24;isolation:isolate}.v-duct figcaption{display:grid}.v-duct figcaption [data-cap]{display:block;grid-area:1/1}.v-duct figcaption [data-cap][hidden]{display:block;visibility:hidden}.vk-f{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease}.vk-f.is-on{opacity:1}.vk-gl{position:absolute;inset:0;display:block;width:100%;height:100%;opacity:0;transition:opacity .35s ease}.vk-gl-on .vk-gl{opacity:1}.vk-play{position:absolute;right:12px;bottom:12px;z-index:2;display:grid;place-items:center;width:38px;height:38px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(6,7,10,.55);color:#fff;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background .25s,border-color .25s}.vk-play svg{display:block;width:14px;height:14px}.vk-play .vk-i-play,.vk-paused .vk-play .vk-i-pause{display:none}.vk-paused .vk-play .vk-i-play{display:block}.vk-play:focus-visible{outline:2px solid var(--acc);outline-offset:2px}@media (hover:hover) and (pointer:fine){.vk-play:hover{background:rgba(124,134,255,.42);border-color:rgba(124,134,255,.7)}}.v-seg button{position:relative}.v-seg button::after{content:"";position:absolute;left:16px;right:16px;bottom:4px;height:2px;border-radius:2px;background:rgba(9,9,11,.3);transform:scaleX(0);transform-origin:left center;opacity:0;pointer-events:none}.v-seg button.vk-run::after{opacity:1;animation:vk-pg var(--vk-d,5s) linear forwards}.vk-hold .v-seg button.vk-run::after{animation-play-state:paused}@keyframes vk-pg{to{transform:scaleX(1)}}.v-legend i{position:relative;width:12px;height:12px;border-radius:50%;flex:0 0 auto;transition:background-color .4s,box-shadow .4s}.v-legend li>span{color:var(--t2);transition:color .4s}.v-legend .l-dust i{background-color:#cfc9bc}.v-legend .l-grease i{background-color:#c79a44}.v-legend .l-micro i{background-color:#7c86ff}.v-legend .l-mold i{background-color:#6f8a5b}.v-legend i::after{content:"";position:absolute;left:4px;top:1.6px;width:3.2px;height:6.4px;border:solid #4ade80;border-width:0 1.7px 1.7px 0;transform:rotate(45deg);opacity:0;transition:opacity .3s}.v-legend .vk-gone{display:none}.v-duct[data-state="clean"] .v-legend .l-dust i,.v-duct[data-state="clean"] .v-legend .l-grease i,.v-duct[data-state="dez"] .v-legend li i{background-color:transparent;box-shadow:inset 0 0 0 1.4px rgba(74,222,128,.8)}.v-duct[data-state="clean"] .v-legend .l-dust i::after,.v-duct[data-state="clean"] .v-legend .l-grease i::after,.v-duct[data-state="dez"] .v-legend li i::after{opacity:1}.v-duct[data-state="clean"] .v-legend .l-dust>span,.v-duct[data-state="clean"] .v-legend .l-grease>span,.v-duct[data-state="dez"] .v-legend li>span{color:var(--t3);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.28)}.v-duct[data-state="clean"] .v-legend .l-dust .vk-gone,.v-duct[data-state="clean"] .v-legend .l-grease .vk-gone,.v-duct[data-state="dez"] .v-legend .vk-gone{display:block}@media (max-width:600px){.vk-play{right:8px;bottom:8px;width:34px;height:34px}.v-seg button::after{left:10px;right:10px;bottom:3px}}@media (prefers-reduced-motion:reduce){.vk-f,.vk-gl{transition:none}}.v-duct figcaption{grid-area:cap;color:var(--t2);line-height:1.6;min-height:7.5em;align-self:end}.v-legend{grid-area:leg;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;font-size:14px;color:var(--t3)}.v-legend li{display:flex;align-items:center;gap:10px}.v-docs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,360px);gap:clamp(28px,4vw,72px);align-items:start}.v-dg+.v-dg{margin-top:clamp(30px,3vw,46px)}.v-dg-t{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 14px;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t3)}.v-chip{display:inline-flex;align-items:center;padding:5px 11px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.03);color:var(--t2);font-size:12px;letter-spacing:.08em}.v-chip.req{color:#d9dcff;border-color:rgba(124,134,255,.45);background:rgba(124,134,255,.14)}.v-dl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line2)}.v-doc{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:6px 20px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line2)}.v-doc-img{display:flex;align-items:center;justify-content:center;width:64px;aspect-ratio:210/297;border-radius:4px;overflow:hidden;background:#f5f5f2;box-shadow:0 12px 28px -14px rgba(0,0,0,.85);transition:transform .45s var(--ease)}.v-doc-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}.v-doc-c{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);margin:2px 0 6px}.v-doc h4{margin:0;font-size:clamp(17px,1.1vw,19px);font-weight:500;line-height:1.35;letter-spacing:-.005em}.v-doc h4 a{color:var(--t1);text-decoration:none}.v-doc h4 a::after{content:"";position:absolute;inset:0;z-index:1}.v-doc h4 a:focus-visible{outline:none}.v-doc:has(h4 a:focus-visible){outline:2px solid var(--acc);outline-offset:4px;border-radius:6px}.v-doc p{margin:8px 0 0;color:var(--t2);line-height:1.55;font-size:15px}.v-doc-f{align-self:center;white-space:nowrap;font-size:13px;color:var(--t2);padding:7px 12px;border:1px solid var(--line2);border-radius:999px;transition:color .3s,border-color .3s,background .3s}.v-dg-note{margin:16px 0 0;color:var(--t2);font-size:14.5px;line-height:1.55;padding-left:14px;border-left:2px solid rgba(124,134,255,.5)}@media (hover:hover) and (pointer:fine){.v-doc:hover .v-doc-f{color:#fff;border-color:rgba(124,134,255,.55);background:rgba(124,134,255,.12)}.v-doc:hover .v-doc-img{transform:translateY(-3px) rotate(-1.5deg)}.v-doc:hover h4 a{text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}}.v-doc-a{display:flex;flex-direction:column;align-items:stretch;gap:8px;align-self:center}.v-doc-a .v-doc-f{align-self:stretch;text-align:center}.v-doc-s{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;font-size:13px;color:#d9dcff;padding:7px 12px;border:1px solid rgba(124,134,255,.45);border-radius:999px;background:rgba(124,134,255,.1);text-decoration:none;transition:color .3s,border-color .3s,background .3s}.v-doc-s:focus-visible{outline:2px solid var(--acc);outline-offset:3px}@media (hover:hover) and (pointer:fine){.v-doc-s:hover{color:#fff;border-color:rgba(124,134,255,.85);background:rgba(124,134,255,.26)}.v-doc:has(.v-doc-s:hover) .v-doc-f{color:var(--t2);border-color:var(--line2);background:none}.v-doc:has(.v-doc-s:hover) .v-doc-img{transform:none}.v-doc:has(.v-doc-s:hover) h4 a{text-decoration:none}}.v-folder .v-folder-btn2{margin-top:18px}.v-folder h3{margin:0}.v-folder-stack{position:relative;display:block;height:262px;margin:2px auto 24px;max-width:300px}.v-folder-stack img{position:absolute;top:0;left:50%;width:176px;height:auto;border-radius:6px;background:#f5f5f2;box-shadow:0 26px 60px -24px rgba(0,0,0,.95)}.v-folder-stack .s1{transform:translateX(-66%) rotate(-3deg);z-index:2}.v-folder-stack .s2{transform:translateX(-30%) translateY(12px) rotate(4deg)}.v-folder .d-ticks{margin:16px 0 0;gap:9px;font-size:15px;color:var(--t2)}.v-folder-note{margin:16px 0 0;color:var(--t3);font-size:14px;line-height:1.5}.v-folder .v-folder-btn{display:flex;width:100%;margin-top:22px;padding:0 20px;font-size:16px}.v-folder-meta{margin:10px 0 0;text-align:center;color:var(--t3);font-size:13px}.v-inds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.v-ind{padding:clamp(20px,1.8vw,28px);display:flex;flex-direction:column;gap:10px}.v-ind svg{width:26px;height:26px;color:var(--acc)}.v-ind h3{font-size:clamp(17px,1.15vw,20px);font-weight:500;letter-spacing:-.01em;margin:6px 0 0;line-height:1.3}.v-ind p{margin:0;color:var(--t2);line-height:1.55;font-size:15px}.v-ind a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}.v-pest{margin-top:16px;border-color:rgba(124,134,255,.35)}.v-pest a{color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}.v-pest a:hover,.v-ind a:hover{color:var(--acc)}.v-steps{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}@media (max-width:1180px){.v-inds{grid-template-columns:repeat(2,minmax(0,1fr))}.v-duct{grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "art" "cap" "leg"}.v-duct figcaption{min-height:0}.v-legend{grid-template-columns:repeat(4,max-content)}.v-docs{grid-template-columns:minmax(0,1fr) minmax(0,320px)}.v-doc{grid-template-columns:64px minmax(0,1fr)}.v-doc-img{grid-row:1/span 2}.v-doc-a{grid-column:2;flex-direction:row;flex-wrap:wrap;justify-self:start;align-self:start;margin-top:10px}}@media (max-width:860px){.v-hero h1{font-size:clamp(28px,8vw,40px)}.v-swap-r{grid-template-areas:"head" "img" "ticks";grid-template-columns:minmax(0,1fr)}.v-steps{grid-template-columns:minmax(0,1fr)}.v-docs{grid-template-columns:minmax(0,1fr)}.v-folder{max-width:560px}.v-freq td:nth-child(3){min-width:0}.v-legend{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:600px){.v-inds{grid-template-columns:minmax(0,1fr)}.v-seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;border-radius:14px}.v-seg button{padding:9px 6px;font-size:13px;border-radius:10px}.v-doc{grid-template-columns:52px minmax(0,1fr);gap:4px 16px;padding:16px 0}.v-doc-img{width:52px}.v-doc-a{gap:6px}.v-doc-f,.v-doc-s{padding:5px 9px;font-size:12.5px}.v-doc p{font-size:14.5px}.v-folder-stack{height:226px}.v-folder-stack img{width:150px}}@media (max-width:380px){.v-doc-a{flex-direction:column;align-items:stretch}}.v-lit{position:absolute;left:0;top:0;width:0;height:0;opacity:0;pointer-events:none;contain:strict;will-change:transform,opacity;-webkit-mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;transition:opacity 1.8s cubic-bezier(.16,1,.3,1)}.v-lit-in{position:absolute;left:0;top:0;will-change:transform}.v-lit .d-hero-img{filter:brightness(1.08) contrast(1.06) saturate(1.06)}.d-hero-media>picture .d-hero-img{transition:filter 1.8s cubic-bezier(.16,1,.3,1)}.v-lit-on .d-hero-media>picture .d-hero-img{filter:grayscale(.3) brightness(.56)}.v-lit-on .v-lit{opacity:1}.lowfx .v-lit{display:none}.lowfx .d-hero-media>picture .d-hero-img{transition:none}@media (max-width:860px),(hover:none),(pointer:coarse){.v-lit{display:none}}.d-card{position:relative;transition:border-color .35s,background .35s}.d-card::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;pointer-events:none;background:radial-gradient(360px circle at var(--mx,-999px) var(--my,-999px),rgba(124,134,255,.85),rgba(124,134,255,.15) 35%,transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .4s;z-index:2}@media (hover:hover) and (pointer:fine){.d-card:hover{border-color:rgba(124,134,255,.2)}.d-card:hover::after{opacity:1}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, {"@type": "ListItem", "position": 2, "name": "Очистка и дезинфекция вентиляции", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/ochistka-dezinfektsiya-ventilyatsii/"}]}, {"@type": "Service", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/ochistka-dezinfektsiya-ventilyatsii/#service", "name": "Очистка и дезинфекция вентиляции для организаций", "serviceType": "Очистка и дезинфекция систем вентиляции и кондиционирования воздуха", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/ochistka-dezinfektsiya-ventilyatsii/", "description": "Очистка воздуховодов, вентиляторов, приточных установок и кухонных вытяжек от пыли, жира и горючих отложений и дезинфекция систем вентиляции и кондиционирования для организаций в Москве и Московской области: видеоинспекция до и после, акт очистки по п. 43 ППР, запись в журнал по МР 3.5.0396-25.", "areaServed": [{"@type": "City", "name": "Москва"}, {"@type": "AdministrativeArea", "name": "Московская область"}], "audience": {"@type": "BusinessAudience", "name": "Юридические лица и ИП"}, "provider": {"@type": "Organization", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org", "name": "ПЕСТКОНТРОЛЬ Центр", "legalName": "ООО «Центр дезинфекционных услуг»", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/", "telephone": "+7 495 104-35-70", "email": "b2b@pestcontrol-center.ru"}, "offers": {"@type": "AggregateOffer", "priceCurrency": "RUB", "lowPrice": "45", "highPrice": "2400", "offerCount": "7", "description": "Ориентиры: очистка воздуховодов от 100 ₽ за м. п., жировая очистка от 136 ₽ за м. п., дезинфекция от 45 ₽ за м. п.; осмотр и смета — 0 ₽"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Как часто нужно чистить и дезинфицировать вентиляцию в организации?", "acceptedAnswer": {"@type": "Answer", "text": "Не реже 1 раза в год. Очистку вентиляционных камер, циклонов, фильтров и воздуховодов от горючих отходов и отложений с составлением акта требует п. 43 Правил противопожарного режима, профилактическую дезинфекцию централизованных систем вентиляции и кондиционирования — п. 132 СанПиН 3.3686-21. В медицинских организациях сплит-системы чистят и дезинфицируют не реже 1 раза в 3 месяца (пп. 22 п. 24 СП 2.1.4284-26). Кухонные вытяжки при ежедневной жарке мы советуем чистить каждые 3–6 месяцев."}}, {"@type": "Question", "name": "Какие документы нужны для пожарной проверки и Роспотребнадзора?", "acceptedAnswer": {"@type": "Answer", "text": "Для пожарной проверки — акт очистки вентиляционных камер, циклонов, фильтров и воздуховодов от горючих отходов и отложений (п. 43 ППР) и запись о проверке огнезадерживающих клапанов в журнале эксплуатации систем противопожарной защиты (п. 42 ППР). Для Роспотребнадзора — акт профилактической дезинфекции (п. 132 СанПиН 3.3686-21), журнал учёта работ по очистке и дезинфекции (рекомендуемая форма — приложение 3 к МР 3.5.0396-25), а для систем кондиционирования и увлажнения — протоколы исследований на легионеллы. Ещё нужны договор, копии лицензии исполнителя и свидетельства о госрегистрации дезсредства. Бланки всех форм и образцы их заполнения в PDF — в разделе «Документы после работ»."}}, {"@type": "Question", "name": "Нужна ли лицензия на дезинфекцию вентиляции?", "acceptedAnswer": {"@type": "Answer", "text": "Если работы выполняет подрядчик — да: с 1 марта 2025 года деятельность по оказанию услуг дезинфекции, дезинсекции и дератизации подлежит обязательному лицензированию (Федеральный закон № 194-ФЗ). Профилактическую дезинфекцию может проводить и персонал самой организации (п. 3.2 МР 3.5.0396-25), если сотрудники прошли специальную подготовку, медосмотр и вакцинацию (п. 3.3). У ООО «Центр дезинфекционных услуг» действующая лицензия Роспотребнадзора № Л064-00111-77/01942445 — проверить запись можно в реестре Роспотребнадзора."}}, {"@type": "Question", "name": "Проверяете ли вы огнезадерживающие клапаны?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Проверяем по технической документации изготовителя вместе с ответственным за пожарную безопасность: внешний осмотр, закрытие от привода или кнопки, сигнал на приёмно-контрольный прибор и возврат в рабочее положение. Результат оформляем актом с готовым текстом записи в журнал эксплуатации систем противопожарной защиты — так требует п. 42 ППР. Техническое обслуживание и ремонт клапанов лицензирует МЧС России — их выполняет организация с такой лицензией по отдельной заявке."}}, {"@type": "Question", "name": "Кто отбирает смывы на легионеллы?", "acceptedAnswer": {"@type": "Answer", "text": "Специалист аккредитованной испытательной лаборатории: он отбирает пробы с поддонов, увлажнителей, теплообменников, решёток и воздуховодов по МУК 4.2.2217-07, а лаборатория выдаёт протокол. Мы согласуем выезд пробоотборщика, фиксируем точки отбора в акте и вносим результат в журнал объекта. Для систем кондиционирования и увлажнения исследование нужно не реже 2 раз в год (п. 132 СанПиН 3.3686-21), при положительном результате очистку и дезинфекцию повторяют (п. 4.3 МР 3.5.0396-25)."}}, {"@type": "Question", "name": "Чем очистка вентиляции отличается от дезинфекции?", "acceptedAnswer": {"@type": "Answer", "text": "Очистка механически удаляет пыль, жир и горючие отложения, а дезинфекция уничтожает микроорганизмы на уже очищенных поверхностях. Поэтому порядок всегда один: подготовка, очистка, дезинфекция и оценка эффективности — так алгоритм работ описан в приложении 1 к МР 3.5.0396-25. Дезинфекция без очистки не убирает ни горючие отложения, ни питательную среду для микробов."}}, {"@type": "Question", "name": "Можно ли чистить вентиляцию без остановки ресторана или производства?", "acceptedAnswer": {"@type": "Answer", "text": "Объект может работать, но очищаемая система на время работ выключается, а включает её после полной просушки ответственный специалист объекта (п. 3.15 МР 3.5.0396-25). Поэтому кухни обслуживаем ночью или в санитарный день, а производства, торговые и бизнес-центры — по участкам, в окна между сменами."}}, {"@type": "Question", "name": "Сколько стоит очистка и дезинфекция вентиляции?", "acceptedAnswer": {"@type": "Answer", "text": "Ориентиры: очистка воздуховодов от пыли — от 100 ₽ за погонный метр, жировая очистка кухонной вытяжки — от 136 ₽ за погонный метр, дезинфекция — от 45 ₽ за погонный метр, очистка радиального вентилятора — от 2 400 ₽. Точную смету даём после бесплатного осмотра: она зависит от длины и сечения коробов, вида отложений, доступа и числа вентиляторов и установок."}}, {"@type": "Question", "name": "Как проверить, что вентиляцию действительно очистили?", "acceptedAnswer": {"@type": "Answer", "text": "Сравнить видео до и после на тех же участках, осмотреть решётки, зонты и рабочие колёса вентиляторов, а для медицинских организаций, гостиниц и офисов с центральным кондиционированием — получить протокол лабораторного исследования смывов. Если результат неудовлетворительный, очистку и дезинфекцию повторяют (п. 4.3 МР 3.5.0396-25)."}}, {"@type": "Question", "name": "Можно ли мыть воздуховоды водой или химией?", "acceptedAnswer": {"@type": "Answer", "text": "Внутренние поверхности воздуховодов чистят без воды и концентрированных кислотных и щелочных растворов. Исключение — кухонные вытяжные системы: при полной разборке или после герметизации короба и остановке приготовления пищи допускаются моющие средства, вода и пар (п. 3.11 МР 3.5.0396-25). Выжигать жировые отложения в воздуховодах запрещено (п. 41 «г» ППР)."}}, {"@type": "Question", "name": "Как часто проводится обследование технического состояния вентиляции?", "acceptedAnswer": {"@type": "Answer", "text": "Перед вводом здания или помещения в эксплуатацию или его реконструкцией, затем через 2 года после ввода и далее не реже 1 раза в 10 лет, с инструментальными замерами объёмов вытяжки (п. 8 СП 2.1.4284-26, действует с 1 сентября 2026 года вместо СП 2.1.3678-20). Обследование не заменяет очистку и дезинфекцию: у этих работ своя периодичность."}}, {"@type": "Question", "name": "Работаете ли вы с НДС и через ЭДО?", "acceptedAnswer": {"@type": "Answer", "text": "Да, мы работаем как с НДС, так и без НДС (УСН). Договоры, акты выполненных работ и УПД направляем через системы электронного документооборота (ЭДО) или на бумажном носителе."}}]}]}</script>
 <style id="srch-st">/* лупа поиска в шапке и раскладка шапки с ней (tools/menu/apply_menu.py) */.srch-btn{flex:none;width:44px;height:44px;padding:0;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff;cursor:pointer;transition:color .25s,border-color .3s,background .3s,transform .35s cubic-bezier(.16,1,.3,1)}.srch-btn:hover{border-color:#7c86ff;background:rgba(97,95,255,.2);transform:translateY(-2px)}.srch-btn:focus-visible{outline:2px solid #7c86ff;outline-offset:2px}.srch-btn svg{width:18px;height:18px;display:block}@media (min-width:761px){.hdr .wrap{gap:16px}.hdr .msg{display:none}.srch-btn{width:38px;height:38px;background:none;border-color:transparent;color:var(--t2);margin-right:calc(4px - clamp(14px,2vw,40px))}.srch-btn svg{width:20px;height:20px}.srch-btn:hover{color:#fff;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);transform:none}}@media (min-width:761px) and (max-width:1440px){.hdr-right{gap:18px}.srch-btn{margin-right:-14px}}@media (min-width:761px) and (max-width:1000px){.hdr-right{gap:12px}.srch-btn{margin-right:-8px}}@media (max-width:900px){.logo-txt{display:flex;flex-direction:column;align-items:flex-start}.logo-sub{margin:0}}@media (max-width:760px){.hdr .wrap{gap:12px}.hdr-right{gap:8px}}@media (max-width:400px){.hdr .wrap{gap:10px}.srch-btn{width:40px;height:40px}}@media (max-width:360px){.hdr .wrap{gap:8px}.hdr-right{gap:6px}.srch-btn,.phone i,.burger{width:38px;height:38px}}@media (max-width:340px){.logo-mark{display:none}.logo-sub{display:block}}.nav-dd-panel a.nav-sub{padding:8px 14px 8px 30px;font-size:14px;color:var(--t3)}.nav-dd-panel a.nav-sub::before{content:"";position:absolute;left:16px;top:50%;width:7px;height:1px;background:var(--line2)}.nav-dd-panel a.nav-sub{position:relative}.nav-dd-panel a.nav-sub:hover,.nav-dd-panel a.nav-sub[aria-current]{color:#fff}.mm-sub a.nav-sub{padding-left:40px;font-size:16px;color:var(--t3)}.ft li.ft-sub{padding-left:14px;font-size:14px;position:relative}.ft li.ft-sub::before{content:"";position:absolute;left:0;top:50%;width:7px;height:1px;background:var(--line2)}</style><script id="srch-js">/* поиск по сайту: движок и индекс загружаются по первому нажатию на лупу или «/» (tools/search) */(function(r,v){var d=document,ld=0,w=null;function go(o){if(window.PCSearch)return window.PCSearch.open(r,v,o);w=o;if(ld)return;ld=1;var s=d.createElement("script");s.src=r+"search.min.js?v="+v;s.async=true;s.onload=function(){window.PCSearch&&window.PCSearch.open(r,v,w)};s.onerror=function(){ld=0};d.head.appendChild(s)}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-srch]");if(b){e.preventDefault();go({btn:b})}});d.addEventListener("keydown",function(e){if(e.key!=="/"||e.ctrlKey||e.metaKey||e.altKey)return;var t=e.target,n=t&&t.tagName;if(n==="INPUT"||n==="TEXTAREA"||n==="SELECT"||t.isContentEditable)return;e.preventDefault();go({})});if(/^#q\d+$/.test(location.hash)){var c=0,t=setInterval(function(){var b=d.getElementById(location.hash.slice(1));if(b&&d.documentElement.classList.contains("anim-ready")){clearInterval(t);if(b.getAttribute("aria-expanded")==="false")b.click()}else if(++c>60)clearInterval(t)},150)}})("../","20261108");</script>
@@ -275,7 +275,7 @@
     </div>
     <figure class="v-duct" id="vduct" data-state="do" aria-labelledby="vduct-cap" data-fade>
       <div class="v-duct-top">
-        <span class="v-duct-k">Схема · что видит камера в коробе</span>
+        <span class="v-duct-k">Иллюстрация · что видит камера в коробе</span>
         <div class="v-seg" role="group" aria-label="Состояние воздуховода">
           <button type="button" data-s="do" aria-pressed="true">До работ</button>
           <button type="button" data-s="clean" aria-pressed="false">После очистки</button>
@@ -283,69 +283,22 @@
         </div>
       </div>
       <div class="v-duct-art">
-        <svg viewBox="0 0 720 400" role="img" aria-label="Схема внутренней поверхности прямоугольного воздуховода: отложения пыли, жировая плёнка и микроорганизмы до работ, после очистки и после дезинфекции">
-          <defs>
-            <linearGradient id="vdF" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3a414f"/><stop offset="1" stop-color="#1c2029"/></linearGradient>
-            <linearGradient id="vdC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#454d5d"/><stop offset="1" stop-color="#222731"/></linearGradient>
-            <linearGradient id="vdL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3d4452"/><stop offset="1" stop-color="#1f232c"/></linearGradient>
-            <linearGradient id="vdR" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#363d4a"/><stop offset="1" stop-color="#1d2129"/></linearGradient>
-            <radialGradient id="vdB" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#05060a"/><stop offset="1" stop-color="#11141b"/></radialGradient>
-            <linearGradient id="vdD" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#b7b2a6"/><stop offset="1" stop-color="#6f6c66"/></linearGradient>
-          </defs>
-          <rect width="720" height="400" fill="#0b0d12"/>
-          <g transform="matrix(1.2 0 0 1.17647 -72 -35.294)">
-          <polygon points="60,30 660,30 420,166 300,166" fill="url(#vdC)"/>
-          <polygon points="60,370 660,370 420,234 300,234" fill="url(#vdF)"/>
-          <polygon points="60,30 300,166 300,234 60,370" fill="url(#vdL)"/>
-          <polygon points="660,30 420,166 420,234 660,370" fill="url(#vdR)"/>
-          <rect x="300" y="166" width="120" height="68" fill="url(#vdB)"/>
-          <g fill="none" stroke="#5a6375" stroke-opacity=".55" stroke-width="2">
-            <rect x="144" y="77.6" width="432" height="244.8"/>
-            <rect x="210" y="115" width="300" height="170"/>
-            <rect x="261" y="143.9" width="198" height="112.2"/>
-          </g>
-          <g stroke="#5a6375" stroke-opacity=".35" stroke-width="1.2">
-            <line x1="60" y1="30" x2="300" y2="166"/><line x1="660" y1="30" x2="420" y2="166"/>
-            <line x1="60" y1="370" x2="300" y2="234"/><line x1="660" y1="370" x2="420" y2="234"/>
-          </g>
-          <g class="v-shine" stroke="#dfe6f2" stroke-linecap="round" fill="none">
-            <path d="M120 54 L262 136" stroke-width="3" stroke-opacity=".22"/>
-            <path d="M600 54 L458 136" stroke-width="2" stroke-opacity=".16"/>
-            <path d="M150 352 L282 268" stroke-width="2" stroke-opacity=".14"/>
-          </g>
-          <g class="v-grease">
-            <path d="M60 210 L300 202 L300 234 L60 370 Z" fill="#a8792f" fill-opacity=".34"/>
-            <path d="M660 214 L420 204 L420 234 L660 370 Z" fill="#a8792f" fill-opacity=".3"/>
-            <path d="M96 214 q4 30 -2 52 q8 -10 10 -52 Z M150 210 q5 22 0 40 q8 -8 8 -40 Z M226 205 q3 16 -1 28 q6 -6 6 -28 Z" fill="#c79a44" fill-opacity=".45"/>
-            <path d="M622 218 q-4 30 2 50 q-9 -10 -10 -50 Z M560 214 q-5 20 0 36 q-8 -8 -8 -36 Z M492 209 q-3 15 1 26 q-6 -6 -6 -26 Z" fill="#c79a44" fill-opacity=".4"/>
-          </g>
-          <g class="v-dust">
-            <path d="M60 370 L660 370 L420 234 L300 234 Z" fill="url(#vdD)" fill-opacity=".62"/>
-            <path d="M60 370 C140 338 220 352 300 330 C380 312 470 346 560 330 C610 322 640 344 660 370 Z" fill="#cfc9bc" fill-opacity=".55"/>
-            <path d="M150 318 c18 -10 40 -8 52 2 c-14 4 -36 6 -52 -2 Z M410 300 c14 -8 34 -6 44 2 c-12 4 -30 5 -44 -2 Z M300 262 c10 -5 24 -4 30 1 c-8 3 -20 4 -30 -1 Z M520 336 c16 -9 36 -7 48 2 c-13 4 -33 5 -48 -2 Z" fill="#e6e0d2" fill-opacity=".65"/>
-            <g fill="#e8e3d8" fill-opacity=".5"><circle cx="110" cy="74" r="2"/><circle cx="180" cy="60" r="1.6"/><circle cx="250" cy="120" r="1.8"/><circle cx="470" cy="118" r="1.6"/><circle cx="560" cy="66" r="2"/><circle cx="620" cy="100" r="1.4"/><circle cx="96" cy="150" r="1.6"/><circle cx="640" cy="170" r="1.8"/></g>
-          </g>
-          <g class="v-germs">
-            <g fill="#7c86ff"><circle cx="96" cy="120" r="4"/><circle cx="112" cy="132" r="3"/><circle cx="88" cy="140" r="2.5"/><circle cx="210" cy="190" r="3.5"/><circle cx="226" cy="178" r="2.5"/><circle cx="604" cy="126" r="4"/><circle cx="590" cy="142" r="3"/><circle cx="620" cy="146" r="2.5"/><circle cx="512" cy="196" r="3.5"/><circle cx="496" cy="186" r="2.5"/><circle cx="250" cy="300" r="3.5"/><circle cx="268" cy="312" r="2.5"/><circle cx="470" cy="290" r="3.5"/><circle cx="452" cy="300" r="2.5"/><circle cx="360" cy="320" r="3"/><circle cx="330" cy="70" r="3"/><circle cx="392" cy="84" r="2.5"/></g>
-            <g fill="#4ade80" fill-opacity=".8"><circle cx="300" cy="170" r="4.5"/><circle cx="292" cy="180" r="3"/><circle cx="306" cy="184" r="2.5"/><circle cx="420" cy="230" r="4"/><circle cx="428" cy="220" r="2.5"/><circle cx="412" cy="222" r="2"/><circle cx="72" cy="356" r="4"/><circle cx="84" cy="346" r="2.5"/><circle cx="646" cy="40" r="3.5"/><circle cx="636" cy="48" r="2.2"/></g>
-          </g>
-          </g>
-          <g class="v-ok" transform="translate(660 56)">
-            <circle r="26" fill="#0f2a1b" stroke="#4ade80" stroke-width="2"/>
-            <path d="M-11 0 l7 8 l15 -16" fill="none" stroke="#4ade80" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-        </svg>
+        <img class="vk-f is-on" data-s="do" src="../img/vent-kadr-1-do-1080.webp" srcset="../img/vent-kadr-1-do-720.webp 720w, ../img/vent-kadr-1-do-1080.webp 1080w, ../img/vent-kadr-1-do.webp 1440w" sizes="(max-width:600px) calc(100vw - 76px), (max-width:1180px) calc(92vw - 40px), (max-width:1920px) 54vw, 1040px" width="1440" height="804" loading="lazy" decoding="async" alt="Иллюстрация: участок прямоугольного воздуховода до работ — на дне слой пыли и пуха, на стенках жировые подтёки, у фланца пятна плесени и паутина">
+        <img class="vk-f" data-s="clean" src="../img/vent-kadr-2-ochistka-1080.webp" srcset="../img/vent-kadr-2-ochistka-720.webp 720w, ../img/vent-kadr-2-ochistka-1080.webp 1080w, ../img/vent-kadr-2-ochistka.webp 1440w" sizes="(max-width:600px) calc(100vw - 76px), (max-width:1180px) calc(92vw - 40px), (max-width:1920px) 54vw, 1040px" width="1440" height="804" loading="lazy" decoding="async" aria-hidden="true" alt="Иллюстрация: тот же участок после механической очистки щётками и пылесосом — пыль, пух и жир сняты, у фланца остались пятна плесени">
+        <img class="vk-f" data-s="dez" src="../img/vent-kadr-3-dezinfektsiya-1080.webp" srcset="../img/vent-kadr-3-dezinfektsiya-720.webp 720w, ../img/vent-kadr-3-dezinfektsiya-1080.webp 1080w, ../img/vent-kadr-3-dezinfektsiya.webp 1440w" sizes="(max-width:600px) calc(100vw - 76px), (max-width:1180px) calc(92vw - 40px), (max-width:1920px) 54vw, 1040px" width="1440" height="804" loading="lazy" decoding="async" aria-hidden="true" alt="Иллюстрация: тот же участок после дезинфекции — чистый сухой металл без пятен плесени">
+        <canvas class="vk-gl" aria-hidden="true"></canvas>
+        <button type="button" class="vk-play" aria-label="Остановить смену кадров"><svg class="vk-i-pause" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3.4 2h2.5v10H3.4zM8.1 2h2.5v10H8.1z" fill="currentColor"/></svg><svg class="vk-i-play" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M4.2 2.1v9.8L11.8 7z" fill="currentColor"/></svg></button>
       </div>
       <figcaption id="vduct-cap">
         <span data-cap="do">Короб, который давно не обслуживали: на дне слой пыли и пуха, на стенках жировая плёнка, на металле колонии микроорганизмов и плесени. Такой участок снимаем на видео ещё на осмотре.</span>
         <span data-cap="clean" hidden>Щётки и пылесос сняли пыль и жир, но микроорганизмы остались на металле. Поэтому следом идёт дезинфекция — по уже чистой поверхности.</span>
         <span data-cap="dez" hidden>Средство с СГР нанесено по режиму для систем вентиляции, короб просушен. Повторное видео того же участка — к акту, запись о работах — в журнал объекта.</span>
       </figcaption>
-      <ul class="v-legend" aria-label="Обозначения на схеме">
-        <li><i style="background:#cfc9bc"></i>Пыль и пух</li>
-        <li><i style="background:#c79a44"></i>Жировая плёнка</li>
-        <li><i style="background:#7c86ff"></i>Микроорганизмы</li>
-        <li><i style="background:#4ade80"></i>Плесень</li>
+      <ul class="v-legend" aria-label="Что видно на кадре">
+        <li class="l-dust"><i></i><span>Пыль и пух<span class="sr-only vk-gone"> — убрано</span></span></li>
+        <li class="l-grease"><i></i><span>Жировая плёнка<span class="sr-only vk-gone"> — убрано</span></span></li>
+        <li class="l-micro"><i></i><span>Микроорганизмы<span class="sr-only vk-gone"> — убрано</span></span></li>
+        <li class="l-mold"><i></i><span>Плесень<span class="sr-only vk-gone"> — убрано</span></span></li>
       </ul>
     </figure>
   </div>
@@ -774,29 +727,218 @@
     };
     for(var i=0;i<cbs.length;i++)cbs[i].addEventListener('change',upd);
   }
-  /* схема воздуховода: до работ → после очистки → после дезинфекции */
+  /* кадры камеры в коробе: до работ → после очистки → после дезинфекции.
+     Три фото одного участка. Смена — WebGL: щётка уходит вглубь короба и поднимает пыль, затем туман дезсредства
+     накрывает участок и оседает. Без WebGL — плавная смена фото. Пока кадр на экране, состояния меняются сами по кругу;
+     кнопка в углу кадра — пауза, щелчок по состоянию — остановка на нём. При «уменьшить движение» сами не меняются,
+     переходы — без эффектов. Пока кадр не виден или вкладка скрыта, ничего не считается */
   var vd=document.getElementById('vduct');
-  if(vd){
-    var bs=vd.querySelectorAll('.v-seg button'),caps=vd.querySelectorAll('[data-cap]'),touched=false,timers=[];
-    var set=function(st){
-      vd.setAttribute('data-state',st);
-      for(var i=0;i<bs.length;i++)bs[i].setAttribute('aria-pressed',bs[i].getAttribute('data-s')===st?'true':'false');
-      for(var j=0;j<caps.length;j++)caps[j].hidden=caps[j].getAttribute('data-cap')!==st;
+  if(vd)(function(){
+    var ST=['do','clean','dez'],HOLD=[2600,2400,3200],FX=[3400,3600,1100],
+      art=vd.querySelector('.v-duct-art'),bs=vd.querySelectorAll('.v-seg button'),caps=vd.querySelectorAll('[data-cap]'),
+      im=vd.querySelectorAll('.vk-f'),cv=vd.querySelector('.vk-gl'),pb=vd.querySelector('.vk-play'),mm=window.matchMedia,
+      calm=!!(mm&&mm('(prefers-reduced-motion: reduce)').matches),
+      cur=0,stopd=calm,vis=false,held=false,busy=false,R=null,tId=0,tFn=null,tLeft=0,tAt=0;
+    if(!art||im.length<3||!pb)return;
+    var ui=function(i){
+      vd.setAttribute('data-state',ST[i]);
+      for(var k=0;k<bs.length;k++)bs[k].setAttribute('aria-pressed',bs[k].getAttribute('data-s')===ST[i]?'true':'false');
+      for(var j=0;j<caps.length;j++)caps[j].hidden=caps[j].getAttribute('data-cap')!==ST[i];
     };
-    for(var k=0;k<bs.length;k++)bs[k].addEventListener('click',function(){
-      touched=true;timers.forEach(clearTimeout);set(this.getAttribute('data-s'));
+    var pic=function(i){
+      for(var k=0;k<im.length;k++){var on=k===i;im[k].classList.toggle('is-on',on);if(on)im[k].removeAttribute('aria-hidden');else im[k].setAttribute('aria-hidden','true')}
+    };
+    var bar=function(i,ms){ /* полоска на кнопке: сколько осталось до следующего кадра */
+      for(var k=0;k<bs.length;k++)bs[k].classList.remove('vk-run');
+      if(i<0)return;
+      for(var n=0;n<bs.length;n++)if(bs[n].getAttribute('data-s')===ST[i]){bs[n].style.setProperty('--vk-d',ms+'ms');void bs[n].offsetWidth;bs[n].classList.add('vk-run')}
+    };
+    /* таймер с паузой: кадр ушёл с экрана — время стоит */
+    var fire=function(){var f=tFn;tFn=null;if(f)f()};
+    var later=function(ms,fn){clearTimeout(tId);tFn=fn;tLeft=ms;tAt=Date.now();if(!held)tId=setTimeout(fire,ms)};
+    var drop=function(){clearTimeout(tId);tFn=null};
+    var hold=function(){if(held)return;held=true;vd.classList.add('vk-hold');if(tFn){clearTimeout(tId);tLeft-=Date.now()-tAt}if(R)R.hold()};
+    var thaw=function(){if(!held)return;held=false;vd.classList.remove('vk-hold');if(tFn){tAt=Date.now();tId=setTimeout(fire,Math.max(0,tLeft))}if(R)R.go()};
+    var go=function(to,mode,ms,cb){
+      var from=cur;cur=to;ui(to);
+      if(R&&ms>0){if(busy)R.cancel();busy=true;R.run(from,to,mode,ms,function(){busy=false;pic(to);if(cb)cb()})}
+      else{pic(to);if(cb)later(ms>0?900:0,cb)}
+    };
+    var auto=function(fresh){
+      if(stopd)return;
+      if(fresh)bar(cur,HOLD[cur]);
+      later(HOLD[cur],function(){
+        var nx=(cur+1)%3,mode=calm?2:(cur===2?3:cur),ms=R?(calm?600:FX[cur]):900;
+        bar(nx,ms+HOLD[nx]);
+        go(nx,mode,ms,function(){auto(false)});
+      });
+    };
+    var setStop=function(v){
+      stopd=v;vd.classList.toggle('vk-paused',v);
+      pb.setAttribute('aria-label',v?'Запустить смену кадров':'Остановить смену кадров');
+      if(v){drop();bar(-1)}
+    };
+    setStop(stopd);
+    /* смена идёт только по загруженным кадрам: при быстром переходе к блоку (меню, якорь) фото ещё грузятся */
+    var loaded=function(){for(var k=0;k<im.length;k++)if(!(im[k].complete&&im[k].naturalWidth))return false;return true},wl=false;
+    var kick=function(){
+      if(!vis||stopd||tFn||busy)return;
+      if(loaded()){auto(true);return}
+      if(wl)return;wl=true;
+      for(var k=0;k<im.length;k++)im[k].addEventListener('load',function(){if(loaded()){wl=false;kick()}});
+    };
+    pb.addEventListener('click',function(){
+      if(!stopd){setStop(true);return}
+      setStop(false);kick();
     });
-    /* один показ всех состояний, когда схема впервые видна (без автопоказа при «уменьшить движение») */
-    var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(!calm&&'IntersectionObserver' in window){
-      var vo=new IntersectionObserver(function(es){
-        if(!es[0].isIntersecting)return;vo.disconnect();
-        timers.push(setTimeout(function(){if(!touched)set('clean')},1800));
-        timers.push(setTimeout(function(){if(!touched)set('dez')},4000));
-      },{threshold:.55});
-      vo.observe(vd);
+    for(var k=0;k<bs.length;k++)bs[k].addEventListener('click',function(){
+      var to=ST.indexOf(this.getAttribute('data-s'));if(to<0)return;
+      setStop(true);
+      if(to===cur&&!busy)return;
+      var fwd=to===cur+1&&!busy,mode=calm?2:(fwd?cur:3),ms=calm?400:(fwd?FX[cur]:900);
+      go(to,mode,ms,null);
+    });
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){
+        vis=es[es.length-1].isIntersecting;
+        if(!vis){hold();return}
+        if(!document.hidden)thaw();
+        kick();
+      },{threshold:.6}).observe(art);
+      /* WebGL готовим заранее, когда кадр подходит к экрану */
+      var near=new IntersectionObserver(function(es){if(es[es.length-1].isIntersecting){near.disconnect();gl()}},{rootMargin:'500px 0px'});
+      near.observe(art);
     }
-  }
+    document.addEventListener('visibilitychange',function(){if(document.hidden)hold();else if(vis)thaw()});
+
+    function gl(){
+      if(!cv||!window.WebGLRenderingContext)return;
+      var g;try{g=cv.getContext('webgl',{alpha:false,antialias:false,depth:false,stencil:false,premultipliedAlpha:false,preserveDrawingBuffer:false,powerPreference:'low-power'})}catch(e){g=null}
+      if(!g)return;
+      var VS='attribute vec2 aP;varying vec2 vUv;void main(){vUv=aP*.5+.5;gl_Position=vec4(aP,0.,1.);}';
+      var FS=[
+        '#ifdef GL_FRAGMENT_PRECISION_HIGH','precision highp float;','#else','precision mediump float;','#endif',
+        'varying vec2 vUv;uniform sampler2D uA,uB;uniform float uP,uT,uM,uAsp;uniform vec2 uRing,uVP;uniform vec4 uMark;',
+        'float h3(vec3 p){p=fract(p*.1031);p+=dot(p,p.zyx+31.32);return fract((p.x+p.y)*p.z);}',
+        'float h2(vec2 p){vec3 q=fract(vec3(p.xyx)*.1031);q+=dot(q,q.yzx+33.33);return fract((q.x+q.y)*q.z);}',
+        'float vn(vec3 p){vec3 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);',
+        'return mix(mix(mix(h3(i),h3(i+vec3(1,0,0)),f.x),mix(h3(i+vec3(0,1,0)),h3(i+vec3(1,1,0)),f.x),f.y),',
+        'mix(mix(h3(i+vec3(0,0,1)),h3(i+vec3(1,0,1)),f.x),mix(h3(i+vec3(0,1,1)),h3(i+vec3(1,1,1)),f.x),f.y),f.z);}',
+        'float sq(float x){return x*x;}',
+        'float fbm(vec3 p){float v=0.,a=.55;for(int i=0;i<4;i++){v+=a*vn(p);p=p*2.02+vec3(5.1,1.7,3.3);a*=.5;}return v;}',
+        'void main(){',
+        ' vec3 A=texture2D(uA,vUv).rgb,B=texture2D(uB,vUv).rgb;',
+        /* q — точка в долях первого фланца; d растёт к камере (≈ 1/расстояние), r — точка на контуре сечения */
+        ' vec2 q=(vUv-uVP)/uRing;float d=max(abs(q.x),abs(q.y))+1e-4;vec2 r=q/d;float lz=log(d);',
+        ' vec2 c=(vUv-.5)*vec2(uAsp,1.);float fx=1.-smoothstep(.9,.975,length(c));',
+        ' fx*=1.-step(uMark.x,vUv.x)*step(vUv.x,uMark.z)*step(uMark.y,vUv.y)*step(vUv.y,uMark.w);',
+        ' float led=clamp(.25+.55*d,.25,1.25);vec3 col;',
+        ' if(uM<.5){',
+        /* щётка уходит вглубь: за ней чистый металл, у щётки — клубы пыли и пылинки, летящие к камере */
+        '  float e=1.-pow(1.-uP,1.3);',
+        '  float dF=3.7*pow(1.-e,1.6)+.04;',
+        '  float n=fbm(vec3(r*2.6,uT*.35));',
+        '  float m=smoothstep(dF*.92,dF*1.08,d*(1.+.18*(n-.5)));m=max(m,smoothstep(.9,1.,uP));',
+        '  col=mix(A,B,m);',
+        '  float env=smoothstep(0.,.06,uP)*(1.-smoothstep(.84,1.,uP));',
+        '  float band=exp(-sq((d-dF*.9)/(.26*dF)));',
+        '  float cl=smoothstep(.3,.8,fbm(vec3(r*3.2,lz*2.6-uT*1.3)));',
+        '  col=mix(col,vec3(.66,.62,.56)*led,clamp(band*env*(.12+.88*cl)*.85,0.,.78)*fx);',
+        '  float an=atan(q.y,q.x)+3.14159;vec2 gg=vec2((lz-uT*.9)*7.6,an*7.6);vec2 gi=floor(gg),gf=fract(gg)-.5;',
+        '  vec2 of=vec2(h2(gi+7.3),h2(gi+3.1))-.5;float rd=.07+.09*h2(gi+5.1);',
+        '  float sp=smoothstep(rd,0.,length((gf-of*.6)*vec2(.55,1.)))*step(.88,h2(gi))*(.35+.65*h2(gi+1.7));',
+        '  col+=vec3(.92,.89,.82)*sp*exp(-sq((d-dF)/(.45*dF)))*env*.5*led*fx;',
+        ' }else if(uM<1.5){',
+        /* туман дезсредства: приходит из глубины, накрывает участок, под ним кадр меняется, потом туман оседает */
+        '  float dM=exp(mix(log(.04),log(4.6),smoothstep(0.,.5,uP)));',
+        '  float n=fbm(vec3(r*2.,lz*1.8-uT*.6));',
+        '  float fr=smoothstep(dM*1.3,dM*.7,d*(1.+.5*(n-.5)));',
+        '  float pk=exp(-sq((uP-.55)/.12));',
+        '  float bl=fbm(vec3(r*2.8+3.,lz*2.4-uT*.8));',
+        '  float dens=(fr*(.45+.55*smoothstep(.25,.85,bl))+.25*pk)*(1.-smoothstep(.62,1.,uP));',
+        '  col=mix(A,B,smoothstep(.42,.68,uP));',
+        '  vec3 fc=vec3(.84,.88,.92)*(.55+.45*clamp(d/2.4,0.,1.))*(.85+.3*bl);',
+        '  col=mix(col,fc,clamp(dens*.85,0.,.86)*fx);',
+        '  vec2 sg=floor(c*150.);col+=vec3(1.)*step(.9985,h2(sg+floor(uT*5.)))*clamp(dens,0.,1.)*.22*fx;',
+        ' }else if(uM<2.5){',
+        '  col=mix(A,B,smoothstep(0.,1.,uP));',
+        ' }else{',
+        /* к началу — через затемнение, как новый проход камеры */
+        '  col=uP<.5?mix(A,vec3(.02),smoothstep(0.,.5,uP)):mix(vec3(.02),B,smoothstep(.5,1.,uP));',
+        ' }',
+        ' gl_FragColor=vec4(col,1.);',
+        '}'].join('\n');
+      var sh=function(t,src){var s=g.createShader(t);g.shaderSource(s,src);g.compileShader(s);return g.getShaderParameter(s,g.COMPILE_STATUS)?s:null};
+      var vs=sh(g.VERTEX_SHADER,VS),fs=sh(g.FRAGMENT_SHADER,FS);if(!vs||!fs)return;
+      var pr=g.createProgram();g.attachShader(pr,vs);g.attachShader(pr,fs);g.linkProgram(pr);
+      if(!g.getProgramParameter(pr,g.LINK_STATUS))return;
+      g.useProgram(pr);
+      var bf=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,bf);g.bufferData(g.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),g.STATIC_DRAW);
+      var loc=g.getAttribLocation(pr,'aP');g.enableVertexAttribArray(loc);g.vertexAttribPointer(loc,2,g.FLOAT,false,0,0);
+      var U=function(n){return g.getUniformLocation(pr,n)},uP=U('uP'),uT=U('uT'),uM=U('uM'),uAsp=U('uAsp');
+      g.uniform1i(U('uA'),0);g.uniform1i(U('uB'),1);
+      g.uniform2f(U('uRing'),.155,.218);g.uniform2f(U('uVP'),.5,.512);
+      g.uniform4f(U('uMark'),.8335,.9089,.9609,.9567); /* плашка «ИЛЛЮСТРАЦИЯ» на кадрах — пыль и туман её не закрывают */
+      g.pixelStorei(g.UNPACK_FLIP_Y_WEBGL,true);
+      var tex=[],ready=0,anim=null,raf=0,last=0,dirty=true;
+      /* ширина выбранного файла из srcset (naturalWidth у srcset-картинок — в CSS-пикселях, не в пикселях файла) */
+      var fileW=function(el){var s=el.currentSrc||el.src,ps=(el.getAttribute('srcset')||'').split(',');
+        for(var i=0;i<ps.length;i++){var t=ps[i].trim().split(/\s+/);if(t[0]&&/w$/.test(t[1]||'')&&s.indexOf(t[0].replace(/^(\.\.\/)+/,''))>-1)return parseInt(t[1],10)}
+        return 1440};
+      var size=function(){
+        var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;
+        var k=Math.min(window.devicePixelRatio||1,2),W=Math.round(w*k),H=Math.round(h*k),mx=fileW(im[0]);
+        if(W>mx){H=Math.round(H*mx/W);W=mx}
+        if(W*H>1.6e6){var s=Math.sqrt(1.6e6/(W*H));W=Math.round(W*s);H=Math.round(H*s)}
+        if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H}
+        g.viewport(0,0,W,H);g.uniform1f(uAsp,W/H);dirty=false;
+      };
+      var draw=function(a,b,mode,p,t){
+        if(dirty)size();
+        g.activeTexture(g.TEXTURE0);g.bindTexture(g.TEXTURE_2D,tex[a]);
+        g.activeTexture(g.TEXTURE1);g.bindTexture(g.TEXTURE_2D,tex[b]);
+        g.uniform1f(uP,p);g.uniform1f(uT,t);g.uniform1f(uM,mode);
+        g.drawArrays(g.TRIANGLES,0,3);
+      };
+      var tick=function(now){
+        raf=0;if(!anim)return;
+        anim.el+=Math.min(now-last,50);last=now;
+        var p=Math.min(anim.el/anim.ms,1);
+        draw(anim.a,anim.b,anim.mode,p,anim.el/1000);
+        if(p>=1){var cb=anim.cb;anim=null;if(cb)cb();return}
+        raf=requestAnimationFrame(tick);
+      };
+      var still=function(){if(!anim&&R)draw(cur,cur,2,1,0)};
+      var up=function(i){
+        var t=g.createTexture();g.bindTexture(g.TEXTURE_2D,t);
+        g.texParameteri(g.TEXTURE_2D,g.TEXTURE_MIN_FILTER,g.LINEAR);g.texParameteri(g.TEXTURE_2D,g.TEXTURE_MAG_FILTER,g.LINEAR);
+        g.texParameteri(g.TEXTURE_2D,g.TEXTURE_WRAP_S,g.CLAMP_TO_EDGE);g.texParameteri(g.TEXTURE_2D,g.TEXTURE_WRAP_T,g.CLAMP_TO_EDGE);
+        try{g.texImage2D(g.TEXTURE_2D,0,g.RGB,g.RGB,g.UNSIGNED_BYTE,im[i])}catch(e){return}
+        tex[i]=t;
+        if(++ready===3){
+          R={
+            run:function(a,b,mode,ms,cb){if(raf)cancelAnimationFrame(raf);raf=0;anim={a:a,b:b,mode:mode,ms:ms,el:0,cb:cb};if(!held){last=performance.now();raf=requestAnimationFrame(tick)}},
+            cancel:function(){if(raf)cancelAnimationFrame(raf);raf=0;anim=null},
+            hold:function(){if(raf)cancelAnimationFrame(raf);raf=0},
+            go:function(){if(anim&&!raf){last=performance.now();raf=requestAnimationFrame(tick)}}
+          };
+          if(!busy)still();
+          vd.classList.add('vk-gl-on');
+        }
+      };
+      for(var i=0;i<3;i++)(function(i){
+        var el=im[i];
+        if(el.complete&&el.naturalWidth)up(i);
+        else el.addEventListener('load',function(){up(i)},{once:true});
+      })(i);
+      var rs=function(){dirty=true;if(!anim)still()};
+      if('ResizeObserver' in window)new ResizeObserver(rs).observe(cv);else window.addEventListener('resize',rs);
+      cv.addEventListener('webglcontextlost',function(e){
+        e.preventDefault();var cb=anim&&anim.cb;if(raf)cancelAnimationFrame(raf);raf=0;anim=null;R=null;
+        vd.classList.remove('vk-gl-on');busy=false;pic(cur);if(cb)cb();
+      });
+    }
+  })();
   var lz=document.querySelectorAll('.f-lazy');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('bg-in');io.unobserve(e.target)}})},{rootMargin:'300px'});
