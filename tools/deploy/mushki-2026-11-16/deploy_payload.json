@@ -1,0 +1,115 @@
+{
+ "name": "mushki-2026-11-16",
+ "count": 7,
+ "files": [
+  {
+   "file": "index.php",
+   "before": "91f518e7d456660e573acb353f6d204d2dbb642cf24fe0369aab4875f177bbe7",
+   "after": "0fcff63c50815a89a5f2295a168084fcd3524678bb38441a5e2392c595da08b0",
+   "replace": [
+    [
+     "Мухи и дрозофилы",
+     "Мухи и мелкие мушки",
+     1
+    ],
+    [
+     "Мухи и дрозофилы",
+     "Мухи и мелкие мушки",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "restorany-i-kafe/index.php",
+   "before": "76e4ce7845f2aad4170176f21d3d2a621bfc5ebc697add32f7e27887fd59d278",
+   "after": "64f87d40fbbf003161894747e11178fba8ed88ce5748fe4dc9f7006df3819f53",
+   "replace": [
+    [
+     "Мухи и дрозофилы",
+     "Мухи и мелкие мушки",
+     1
+    ],
+    [
+     "мухи и дрозофилы",
+     "мухи и мелкие мушки",
+     1
+    ],
+    [
+     "trim():''},rows=[];if(v('format'))",
+     "trim():''},rows=[],t=f.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value)rows.push('Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,''));if(v('format'))",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "pishchevoe-proizvodstvo/index.php",
+   "before": "9ebcfd0b48d9aa6570726990282afd673a2d20fb650e7eddd6cb255a179a9144",
+   "after": "b6c5833188aad34e9bd41514b2849ee18f4e3482ba7144c2afa09040d5b1e711",
+   "replace": [
+    [
+     "Мухи и дрозофилы",
+     "Мухи и мелкие мушки",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/index.php",
+   "before": "d2185406c8aeb603f6dda52625f3ebf2383e76447b0413a04b14ceed1fe02b05",
+   "after": "580b6a956d842b15c7a99c042cf556c9cfaaf3774b3d8aeb901913483aa62711",
+   "replace": [
+    [
+     "Мухи и дрозофилы",
+     "Мухи и мелкие мушки",
+     1
+    ],
+    [
+     "Мухи и&nbsp;дрозофилы",
+     "Мухи и&nbsp;мелкие мушки",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/restorany-i-kafe/index.php",
+   "before": "ce8537ae4d60fe6f151eb14cffb3322962c233ddde556387164331fcbb65bdee",
+   "after": "e34d7ec00e7398cddc1d6ee259827e56d16ac491f0ac9d153fb2c4c225b2ed5b",
+   "replace": [
+    [
+     "trim():''},rows=[];if(v('format'))",
+     "trim():''},rows=[],t=f.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value)rows.push('Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,''));if(v('format'))",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya/restorany-i-kafe/index.php",
+   "before": "ed5175af191146eebee250519379e024b13d707d9dae21e239c3002345df0822",
+   "after": "34ae85cbe917dad41c8c47ca10243641dceb276650d0724939e0c7e6fbd594da",
+   "replace": [
+    [
+     "мухи и дрозофилы",
+     "мухи и мелкие мушки",
+     1
+    ],
+    [
+     "trim():''},rows=[];if(v('format'))",
+     "trim():''},rows=[],t=f.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value)rows.push('Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,''));if(v('format'))",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "search-index.json",
+   "before": "9627eac0884f997d13c67e784f6354d6f3e3a92d2f821e418dbc01f2704ab7ea",
+   "after": "8efd128f795c162c93c71b3d8b1abb573ec2e5a108d94d96ce6365a41bba92b8",
+   "replace": [
+    [
+     "Мухи и дрозофилы",
+     "Мухи и мелкие мушки",
+     4
+    ]
+   ]
+  }
+ ]
+}

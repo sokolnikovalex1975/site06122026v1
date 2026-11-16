@@ -246,7 +246,7 @@ def form_html(p):
 def page_js(p):
     return ("<script>/* Форма: формат заведения, «Что беспокоит», адрес и страница — в поле msg, которое читает send.php */\n"
             "(function(){var f=document.getElementById('form');if(!f)return;f.addEventListener('submit',function(){"
-            "var v=function(n){var el=f.elements[n];return el?String(el.value||'').replace(/\\u00a0/g,' ').trim():''},rows=[];"
+            "var v=function(n){var el=f.elements[n];return el?String(el.value||'').replace(/\\u00a0/g,' ').trim():''},rows=[],t=f.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value)rows.push('Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,''));"
             "if(v('format'))rows.push('Формат заведения: '+v('format'));if(v('task'))rows.push('Что беспокоит: '+v('task'));"
             "if(v('comment'))rows.push('Адрес и комментарий: '+v('comment').slice(0,2500));"
             f"rows.push('Страница: {p['page_name']} (/{p['slug']})');f.elements.msg.value=rows.join('\\n')}},true)}})();</script>\n")
