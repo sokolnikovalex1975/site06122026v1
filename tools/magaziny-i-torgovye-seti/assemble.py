@@ -202,7 +202,7 @@ JS = r"""<script>
         var parts=['Формат магазина: '+((fo&&fo.value)||'не выбран'),'Количество магазинов: '+((co&&co.value)||'не указано')];
         if(cm&&cm.value.trim())parts.push('Адрес / комментарий: '+cm.value.trim());
         parts.push('Страница: Пест-контроль магазинов и торговых сетей (/magaziny-i-torgovye-seti/)');
-        ms.value=parts.join('\n');
+        ms.value=parts.join('\n');(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\u00a0/g,' ').replace(/\s*\*\s*$/,'')+(m.value?'\n'+m.value:'')})(ms);
       }
     },true);
   }

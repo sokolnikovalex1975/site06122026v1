@@ -292,7 +292,7 @@ JS = r"""<script>
         if(pr&&pr.value)parts.push('Профиль производства: '+pr.value);
         if(ins&&ins.value)parts.push('Ближайшая проверка: '+ins.value);
         if(cm&&cm.value.trim())parts.push('Комментарий / адрес: '+cm.value.trim());
-        ms.value=parts.join('\n');
+        ms.value=parts.join('\n');(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\u00a0/g,' ').replace(/\s*\*\s*$/,'')+(m.value?'\n'+m.value:'')})(ms);
       }
     },true);
   }

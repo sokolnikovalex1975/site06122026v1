@@ -1,0 +1,66 @@
+{
+ "name": "zvezdochka-2026-11-17",
+ "count": 5,
+ "files": [
+  {
+   "file": "gostinitsy/index.php",
+   "before": "a0b1210f2899c1bf99dce6515a39e7c34361caeb5194902275eaaaa9d9dceb93",
+   "after": "6cd53f6d7a89a1579f2d5633111826212407d15b48c59a53fff438f459d52ee8",
+   "replace": [
+    [
+     "(/gostinitsy/)';},true);",
+     "(/gostinitsy/)';(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,'')+(m.value?'\\n'+m.value:'')})(e.msg);},true);",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "magaziny-i-torgovye-seti/index.php",
+   "before": "d18cf3cd98afc93124c951aefa05cacbc2158a99d227927b51b0362f1120b695",
+   "after": "5c744205278eb3f102e0d9771806b253779b33a20064c28ba17e7a304c7887d1",
+   "replace": [
+    [
+     "ms.value=parts.join('\\n');",
+     "ms.value=parts.join('\\n');(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,'')+(m.value?'\\n'+m.value:'')})(ms);",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "pishchevoe-proizvodstvo/index.php",
+   "before": "b6c5833188aad34e9bd41514b2849ee18f4e3482ba7144c2afa09040d5b1e711",
+   "after": "bb71d8d96907315ef1354666bf79209bde477dccfabf69043358f7a65404eb6d",
+   "replace": [
+    [
+     "(/pishchevoe-proizvodstvo/)';},true);",
+     "(/pishchevoe-proizvodstvo/)';(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,'')+(m.value?'\\n'+m.value:'')})(e.msg);},true);",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "sklady-i-logistika/index.php",
+   "before": "fe7336b7b128a6e6e530a6f9314aad4cd1085ac6940873097c36fc6e4bc45308",
+   "after": "c313b0bd30ab0e0c54be05a4a8387ef943a8e847e20bfd2ed5f77a34643e37d6",
+   "replace": [
+    [
+     "(/sklady-i-logistika/)';});})();",
+     "(/sklady-i-logistika/)';(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,'')+(m.value?'\\n'+m.value:'')})(e.msg);});})();",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "farmatsevticheskie-proizvodstva/index.php",
+   "before": "aa1be30410f3a68c84fc2c2b3476cc7f96e958378f6557dca283a70b390ea3f8",
+   "after": "dbae28dc36511e1417f9b759fb9424676b4eec4c7cdd1836567f851f7c0be85d",
+   "replace": [
+    [
+     "ms.value=parts.join('\\n');",
+     "ms.value=parts.join('\\n');(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,'')+(m.value?'\\n'+m.value:'')})(ms);",
+     1
+    ]
+   ]
+  }
+ ]
+}

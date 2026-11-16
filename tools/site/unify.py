@@ -96,7 +96,7 @@ FOOD_FORM_JS = (
     "document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,"
     "p=e.production.value||'не выбран',i=e.inspection.value||'не выбрана',c=e.comment.value.trim();"
     "e.msg.value='Вид производства: '+p+'\\nБлижайшая проверка: '+i+(c?'\\nКомментарий: '+c:'')"
-    "+'\\nСтраница: Пест-контроль на пищевом производстве (/pishchevoe-proizvodstvo/)';},true);</script>"
+    "+'\\nСтраница: Пест-контроль на пищевом производстве (/pishchevoe-proizvodstvo/)';(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,'')+(m.value?'\\n'+m.value:'')})(e.msg);},true);</script>"
 )
 HEAD_SCRIPT_RE = re.compile(
     r"<script>\s*(?:/\*[^*]*\*/\s*)?(?:document\.documentElement\.className\+=' js anim-fail no-intro';"

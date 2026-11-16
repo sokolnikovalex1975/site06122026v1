@@ -215,7 +215,7 @@ def main():
                "document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,"
                "r=e.rooms.value||'не указан',t=e.task.value||'не выбрана',c=e.comment.value.trim();"
                "e.msg.value='Номерной фонд: '+r+'\\nЗадача: '+t+(c?'\\nКомментарий: '+c:'')+"
-               "'\\nСтраница: Пест-контроль гостиниц и отелей (/gostinitsy/)';},true);</script>\n")
+               "'\\nСтраница: Пест-контроль гостиниц и отелей (/gostinitsy/)';(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\\u00a0/g,' ').replace(/\\s*\\*\\s*$/,'')+(m.value?'\\n'+m.value:'')})(e.msg);},true);</script>\n")
 
     html = (head + '<style>' + css + '</style>\n' + json_ld() + '\n' + top + main + bottom + page_js + '\n'
             + loader + form_js + '</body>\n</html>\n')
