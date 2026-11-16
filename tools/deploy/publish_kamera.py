@@ -8,6 +8,9 @@
 к ochistka-dezinfektsiya-ventilyatsii/index.php точные замены из пакета: подпись над кадром, содержимое кадра (SVG-схема ->
 три фото, холст WebGL и кнопка паузы), «Что видно на кадре», стили схемы -> стили блока, скрипт схемы -> скрипт блока.
 Счётчики Метрики, UIS и Radist, телефон и почта заменами не затрагиваются (проверяется ниже и при подготовке пакета).
+Страница принимается в одном из двух исходных видов (variants): как на сайте при сборке пакета или после выкладки
+пакета zagolovok-2026-11-13 другой задачи (там на странице меняется только ?v= у style.css и app.min.js); для каждого
+вида свой итоговый SHA-256 — выкладки не мешают друг другу, если эта идёт второй.
 До и после сверяется SHA-256 каждого файла, резервная копия страницы сохраняется вне public_html и не перезаписывается,
 при любой ошибке уже заменённое возвращается, добавленные кадры убираются. Повторный запуск после успешной выкладки только
 сверяет суммы. Без f-строк (на сервере Python 3.6), загрузок, паролей и сторонних пакетов; сообщения — ASCII (LANG=C).
@@ -43,7 +46,12 @@ for r in IMGS:
     data = base64.b64decode(r['content_b64'].encode('ascii'))
     assert data[:4] == b'RIFF' and data[8:12] == b'WEBP' and hashlib.sha256(data).hexdigest() == r['after'], r['file']
     assert 15000 < len(data) < 110000, r['file']
-assert PAGE_ROW['before'] and PAGE_ROW['after'] and 'content_b64' not in PAGE_ROW
+assert 'before' not in PAGE_ROW and 'after' not in PAGE_ROW and 'content_b64' not in PAGE_ROW
+VARIANTS = [tuple(v) for v in PAGE_ROW['variants']]
+assert 1 <= len(VARIANTS) <= 2 and all(len(b) == 64 and len(a) == 64 and a != b for b, a in VARIANTS)
+BEFORES = [b for b, a in VARIANTS]
+AFTERS = [a for b, a in VARIANTS]
+assert len(set(BEFORES + AFTERS)) == 2 * len(VARIANTS)
 REPL = PAGE_ROW['replace']
 assert 14 <= len(REPL) <= 16 and all(c == 1 for a, b, c in REPL), 'unexpected replacements'
 for a, b, c in REPL:
@@ -68,7 +76,7 @@ def target(rel, new=False):
 
 
 def result(row, old):
-    if row['before'] is None:
+    if row is not PAGE_ROW:
         return base64.b64decode(row['content_b64'].encode('ascii'))
     text = old.decode('utf-8')
     assert '<?php' not in text and '<?=' not in text, row['file']
@@ -91,8 +99,12 @@ def write(p, data, mode):
 
 
 def current(row):
-    p = target(row['file'], new=row['before'] is None)
+    p = target(row['file'], new=row is not PAGE_ROW)
     return sha(p.read_bytes()) if p.exists() else None
+
+
+def published(row):
+    return current(row) in (AFTERS if row is PAGE_ROW else [row['after']])
 
 
 if MODE == '--rollback':
@@ -103,7 +115,7 @@ if MODE == '--rollback':
         if row['file'] not in names:
             continue
         p = target(row['file'], new=True)
-        if row['before'] is None:
+        if row is not PAGE_ROW:
             if p.exists():
                 # Never delete a file changed by another deployment.
                 assert sha(p.read_bytes()) == row['after'], 'CHANGED BY ANOTHER DEPLOYMENT: ' + row['file']
@@ -111,35 +123,38 @@ if MODE == '--rollback':
                 done += 1
             continue
         b = (BACKUP / row['file']).read_bytes()
-        assert sha(b) == row['before']
+        assert sha(b) in BEFORES
+        pair = VARIANTS[BEFORES.index(sha(b))]
         # Never overwrite an unrelated version changed by another deployment.
-        assert sha(p.read_bytes()) in (row['before'], row['after']), 'CHANGED BY ANOTHER DEPLOYMENT: ' + row['file']
+        assert sha(p.read_bytes()) in pair, 'CHANGED BY ANOTHER DEPLOYMENT: ' + row['file']
         write(p, b, (BACKUP / row['file']).stat().st_mode & 0o777)
         done += 1
     STATUS.write_text(json.dumps({'status': 'rolled_back_by_command', 'promoted': []}), encoding='utf-8')
     print('ROLLED BACK: %d files' % done)
     sys.exit(0)
 
-if all(current(r) == r['after'] for r in ROWS):
+if all(published(r) for r in ROWS):
     print('ALREADY PUBLISHED: %d/%d checksums match' % (N, N))
     sys.exit(0)
 
 plan = []
+variant = None
 for row in ROWS:
-    new_file = row['before'] is None
+    new_file = row is not PAGE_ROW
     p = target(row['file'], new=new_file)
     if new_file:
         assert not p.exists(), 'FILE ALREADY EXISTS: ' + row['file']
-        old, mode = None, 0o644
+        old, mode, want = None, 0o644, row['after']
     else:
         old = p.read_bytes()
-        assert sha(old) == row['before'], 'CURRENT FILE CHANGED: ' + row['file'] + ' ' + sha(old)[:12]
-        mode = p.stat().st_mode & 0o777
+        assert sha(old) in BEFORES, 'CURRENT FILE CHANGED: ' + row['file'] + ' ' + sha(old)[:12]
+        variant = BEFORES.index(sha(old))
+        mode, want = p.stat().st_mode & 0o777, AFTERS[variant]
     new = result(row, old)
-    assert sha(new) == row['after'], 'PACKAGE MISMATCH: ' + row['file']
+    assert sha(new) == want, 'PACKAGE MISMATCH: ' + row['file']
     plan.append((row, p, old, new, mode))
-print('PRECHECK OK: %d/%d original and resulting checksums verified (9 new images, 1 page, %d replacements)'
-      % (N, N, len(REPL)))
+print('PRECHECK OK: %d/%d original and resulting checksums verified (9 new images, 1 page, %d replacements, page variant %d: %s)'
+      % (N, N, len(REPL), variant + 1, ('as built', 'after zagolovok-2026-11-13')[variant]))
 if MODE == '--check':
     sys.exit(0)
 
@@ -148,7 +163,7 @@ BACKUP.mkdir()
 b = BACKUP / PAGE
 b.parent.mkdir(parents=True, exist_ok=True)
 shutil.copy2(str(target(PAGE)), str(b))
-assert sha(b.read_bytes()) == PAGE_ROW['before']
+assert sha(b.read_bytes()) == BEFORES[variant]
 print('BACKUP OK: 1/1 page outside public_html')
 
 promoted = []
@@ -157,11 +172,11 @@ try:
         if old is None:
             assert not p.exists(), 'CONCURRENT CHANGE: ' + row['file']
         else:
-            assert sha(p.read_bytes()) == row['before'], 'CONCURRENT CHANGE: ' + row['file']
+            assert sha(p.read_bytes()) == BEFORES[variant], 'CONCURRENT CHANGE: ' + row['file']
         write(p, new, mode)
         promoted.append(row['file'])
-        assert sha(p.read_bytes()) == row['after']
-    assert all(current(r) == r['after'] for r in ROWS)
+        assert sha(p.read_bytes()) == sha(new)
+    assert all(published(r) for r in ROWS)
     STATUS.write_text(json.dumps({'status': 'published', 'promoted': promoted}, indent=1), encoding='utf-8')
     print('PUBLISHED: %d/%d checksums verified (9 images, 1 page)' % (N, N))
     print('BACKUP: ' + str(BACKUP))

@@ -58,8 +58,12 @@
   },
   {
    "file": "ochistka-dezinfektsiya-ventilyatsii/index.php",
-   "before": "772935629538b344dd4599b248a088055067fdb04678d63c9f63d7d1091cf103",
-   "after": "be93d816d1d23745954afba78fd7acdedf2a96100e900e63657633da38f6aa0e",
+   "variants": [
+    [
+     "6052cac21db2f55a705b7abbe279ae36f88c7d712a68851cc57ed5a0c1cc46f0",
+     "644b9e3efb1bbcfba833f4f3285dc0adcebb7590097b498ae15f1869adabd49f"
+    ]
+   ],
    "replace": [
     [
      "<span class=\"v-duct-k\">Схема · что видит камера в коробе</span>",

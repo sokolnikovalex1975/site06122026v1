@@ -7,4 +7,4 @@
 ----------------------------------------------------------------  fe30f6a95d1d4d7f407c95338216661d7381b920aef15b518c50366593bb1b43  img/vent-kadr-3-dezinfektsiya-720.webp
 ----------------------------------------------------------------  7ca37eb3c5af6d25b06cebab2f9fb1f6f40968497297d08596c4c04131ed064c  img/vent-kadr-3-dezinfektsiya-1080.webp
 ----------------------------------------------------------------  4ca341bdc52627801e96036122d556d49332b7efe75dfc2239ae2b9215258f47  img/vent-kadr-3-dezinfektsiya.webp
-772935629538b344dd4599b248a088055067fdb04678d63c9f63d7d1091cf103  be93d816d1d23745954afba78fd7acdedf2a96100e900e63657633da38f6aa0e  ochistka-dezinfektsiya-ventilyatsii/index.php
+6052cac21db2f55a705b7abbe279ae36f88c7d712a68851cc57ed5a0c1cc46f0  644b9e3efb1bbcfba833f4f3285dc0adcebb7590097b498ae15f1869adabd49f  ochistka-dezinfektsiya-ventilyatsii/index.php

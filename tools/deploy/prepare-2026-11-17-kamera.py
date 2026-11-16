@@ -14,6 +14,10 @@ SVG-схема блока «Что видит камера в коробе» →
 те же строки, в том же числе; вне блока страница не меняется. 9 кадров img/vent-kadr-*.webp — из репозитория, на сайте
 их ещё нет (HTTP 404).
 
+Вторая задача 17.11.2026 выкладывает пакет zagolovok-2026-11-13 (на этой странице — только ?v= у style.css и app.min.js).
+Если он ещё не выложен, пакет принимает страницу в обоих видах: как сейчас на сайте и после той выкладки (её замены берутся
+из tools/deploy/zagolovok-2026-11-13/deploy_payload.json и сверяются по суммам) — выкладки не мешают друг другу.
+
 В папке пакета: backup/ и pkg/ (страница до и после, кадры), MANIFEST.txt, deploy_payload.json, publish_kamera.py, run_once.sh.
 """
 import base64
@@ -83,18 +87,43 @@ bad = tracking_laws.check_page(old, counters=True)
 assert not bad, 'исходная страница: %s' % bad
 assert independence_law.violations(old) == [], 'закон независимости (до)'
 
-expected = kam.apply(old)
 reps = pairs(old)
-new = old
-for a, b in reps:
-    assert new.count(a) == 1, '«%s…» найдено %d раз' % (a[:60], new.count(a))
-    new = new.replace(a, b)
-assert new == expected, 'замены не совпали с apply.py'
-bad = tracking_laws.check_page(new, counters=True)
-assert not bad, 'результат: %s' % bad
-assert independence_law.violations(new) == [], 'закон независимости (после)'
-for k in ('113675622', 'mc.yandex.ru', 'uiscom', 'radist', 'tel:', 'mailto:', '<script', '</script>', '<form', 'send.php'):
-    assert old.count(k) == new.count(k), 'изменилось число «%s»' % k
+
+
+def patched(src):
+    out = src
+    for a, b in reps:
+        assert out.count(a) == 1, '«%s…» найдено %d раз' % (a[:60], out.count(a))
+        out = out.replace(a, b)
+    assert out == kam.apply(src), 'замены не совпали с apply.py'
+    bad = tracking_laws.check_page(out, counters=True)
+    assert not bad, 'результат: %s' % bad
+    assert independence_law.violations(out) == [], 'закон независимости (после)'
+    for k in ('113675622', 'mc.yandex.ru', 'uiscom', 'radist', 'tel:', 'mailto:', '<script', '</script>', '<form', 'send.php', '?v='):
+        assert src.count(k) == out.count(k), 'изменилось число «%s»' % k
+    return out
+
+
+new = patched(old)
+variants = [[sha(body), sha(new.encode('utf-8'))]]
+# пакет другой задачи, который ещё может выйти раньше этого: страница после него — второй исходный вид
+zp = ROOT / 'tools/deploy/zagolovok-2026-11-13/deploy_payload.json'
+zrow = [r for r in json.loads(zp.read_text(encoding='utf-8'))['files'] if r['file'] == PAGE] if zp.exists() else []
+if zrow and zrow[0]['before'] == sha(body):
+    zold = old
+    for a, b, c in zrow[0]['replace']:
+        assert zold.count(a) == c and '?v=' in a, 'zagolovok: ' + a
+        zold = zold.replace(a, b)
+    assert sha(zold.encode('utf-8')) == zrow[0]['after'], 'zagolovok: сумма после не совпала'
+    znew = patched(zold)
+    variants.append([zrow[0]['after'], sha(znew.encode('utf-8'))])
+    for folder, content in (('backup-after-zagolovok', zold), ('pkg-after-zagolovok', znew)):
+        f = OUT / folder / PAGE
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_bytes(content.encode('utf-8'))
+    print('zagolovok-2026-11-13 ещё не выложен: второй исходный вид страницы %s… → %s…' % (variants[1][0][:8], variants[1][1][:8]))
+elif zrow:
+    print('zagolovok-2026-11-13: страница на сайте уже не в виде «до» этого пакета (%s…) — второй вид не нужен' % sha(body)[:8])
 # вне блока (figure, стили страницы, скрипт страницы) — байт в байт
 fo = re.search(r'<figure class="v-duct" id="vduct".*?</figure>', old, re.S)
 fn = re.search(r'<figure class="v-duct" id="vduct".*?</figure>', new, re.S)
@@ -121,12 +150,12 @@ for folder, content in (('backup', body), ('pkg', result)):
     f = OUT / folder / PAGE
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_bytes(content)
-rows.append({'file': PAGE, 'before': sha(body), 'after': sha(result), 'replace': [[a, b, 1] for a, b in reps]})
+rows.append({'file': PAGE, 'variants': variants, 'replace': [[a, b, 1] for a, b in reps]})
 
 payload = {'name': NAME, 'images': len(IMAGES), 'files': rows}
 (OUT / 'deploy_payload.json').write_text(json.dumps(payload, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
-(OUT / 'MANIFEST.txt').write_text(''.join('%s  %s  %s\n' % (r['before'] or '-' * 64, r['after'], r['file']) for r in rows),
-                                  encoding='utf-8')
+(OUT / 'MANIFEST.txt').write_text(''.join('%s  %s  %s\n' % (b, a, r['file']) for r in rows
+                                          for b, a in (r.get('variants') or [['-' * 64, r['after']]])), encoding='utf-8')
 shutil.copy2(str(ROOT / 'tools/deploy/publish_kamera.py'), str(OUT / 'publish_kamera.py'))
 # Разовый запуск заданием «Crontab» панели Timeweb (SSH-консоль из облака недоступна, как 15–17.11.2026).
 RUN_ONCE = """#!/bin/sh
@@ -151,6 +180,7 @@ date '+%%Y-%%m-%%d %%H:%%M:%%S %%Z' > run_once.done
 (OUT / 'run_once.sh').write_text(RUN_ONCE, encoding='utf-8')
 (OUT / 'run_once.sh').chmod(0o755)
 for r in rows:
-    print('OK %s: %s → %s…' % (r['file'], (r['before'] or 'новый')[:8], r['after'][:8]))
+    for b, a in (r.get('variants') or [['новый', r['after']]]):
+        print('OK %s: %s → %s…' % (r['file'], b[:8], a[:8]))
 print('Готово: 9 кадров и страница (%d замен, %d → %d байт); счётчики и контакты — без нарушений, независимость — '
       'без нарушений. Пакет: %s' % (len(reps), len(body), len(result), OUT))
