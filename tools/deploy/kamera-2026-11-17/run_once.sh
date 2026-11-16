@@ -7,8 +7,8 @@ date '+%Y-%m-%d %H:%M:%S %Z' > run_once.done
 {
   echo "start: $(date '+%Y-%m-%d %H:%M:%S %Z')"
   printf '%s  %s\n%s  %s\n' \
-    b4fba44b75899f601c24dee225ded8fcc0acdb90e6d0bb49df9983836975fab8 publish_kamera.py \
-    0eea92294de13871fb12c1038263e926c2f76180a6807b7a703ee88711e1b24b deploy_payload.json | sha256sum -c - &&
+    503bd6b6b1aaadc512fcfa8cdb33342e67ab47dbe9f46609a06b11944e7acd02 publish_kamera.py \
+    19da98246cc1e5a5722e9767566cf82e9bea1f4847c8cc2ae0bc0cdb0219c316 deploy_payload.json | sha256sum -c - &&
   python3 --version &&
   python3 publish_kamera.py --check &&
   python3 publish_kamera.py --publish &&

@@ -14,9 +14,10 @@ SVG-схема блока «Что видит камера в коробе» →
 те же строки, в том же числе; вне блока страница не меняется. 9 кадров img/vent-kadr-*.webp — из репозитория, на сайте
 их ещё нет (HTTP 404).
 
-Вторая задача 17.11.2026 выкладывает пакет zagolovok-2026-11-13 (на этой странице — только ?v= у style.css и app.min.js).
-Если он ещё не выложен, пакет принимает страницу в обоих видах: как сейчас на сайте и после той выкладки (её замены берутся
-из tools/deploy/zagolovok-2026-11-13/deploy_payload.json и сверяются по суммам) — выкладки не мешают друг другу.
+Другие задачи 17.11.2026 выкладывают пакеты zagolovok-2026-11-13 (выложен в 01:39 МСК) и shapka-2026-11-17 (на этой
+странице у обоих — только ?v= у style.css и app.min.js). Если такой пакет ещё не выложен, пакет принимает страницу в обоих
+видах: как сейчас на сайте и после той выкладки (её замены — из tools/deploy/zagolovok-2026-11-13/deploy_payload.json или
+SHAPKA_ROW ниже, сверяются по суммам) — выкладки не мешают друг другу, если эта идёт второй.
 
 В папке пакета: backup/ и pkg/ (страница до и после, кадры), MANIFEST.txt, deploy_payload.json, publish_kamera.py, run_once.sh.
 """
@@ -106,24 +107,45 @@ def patched(src):
 
 new = patched(old)
 variants = [[sha(body), sha(new.encode('utf-8'))]]
-# пакет другой задачи, который ещё может выйти раньше этого: страница после него — второй исходный вид
+vnames = ['as built']
+# Пакеты других задач, которые ещё могут выйти раньше этого (на этой странице у них — только ?v= у style.css
+# и app.min.js): страница после такого пакета — второй исходный вид. zagolovok-2026-11-13 лежит в репозитории;
+# shapka-2026-11-17 к 02:05 МСК 17.11.2026 был только на сервере (Home/pestcontrol-shapka-2026-11-17/deploy_payload.json,
+# загружен 01:55 МСК) — его строка этой страницы переписана оттуда, «до» и «после» сверяются по суммам.
+SHAPKA_ROW = {
+    'file': PAGE,
+    'before': '6052cac21db2f55a705b7abbe279ae36f88c7d712a68851cc57ed5a0c1cc46f0',
+    'after': '2ecd5bc7a682ae19aaddf8e81bb7c7cc4bcbb5fb85260bb1badfb1ab6203272f',
+    'replace': [['app.min.js?v=20261117zagolovok', 'app.min.js?v=20261117shapka', 1],
+                ['style.css?v=20261117zagolovok', 'style.css?v=20261117shapka', 1]],
+}
+OTHERS = []
 zp = ROOT / 'tools/deploy/zagolovok-2026-11-13/deploy_payload.json'
-zrow = [r for r in json.loads(zp.read_text(encoding='utf-8'))['files'] if r['file'] == PAGE] if zp.exists() else []
-if zrow and zrow[0]['before'] == sha(body):
-    zold = old
-    for a, b, c in zrow[0]['replace']:
-        assert zold.count(a) == c and '?v=' in a, 'zagolovok: ' + a
-        zold = zold.replace(a, b)
-    assert sha(zold.encode('utf-8')) == zrow[0]['after'], 'zagolovok: сумма после не совпала'
-    znew = patched(zold)
-    variants.append([zrow[0]['after'], sha(znew.encode('utf-8'))])
-    for folder, content in (('backup-after-zagolovok', zold), ('pkg-after-zagolovok', znew)):
+if zp.exists():
+    OTHERS += [('zagolovok-2026-11-13', r) for r in json.loads(zp.read_text(encoding='utf-8'))['files'] if r['file'] == PAGE]
+sp = ROOT / 'tools/deploy/shapka-2026-11-17/deploy_payload.json'
+srow = [r for r in json.loads(sp.read_text(encoding='utf-8'))['files'] if r['file'] == PAGE] if sp.exists() else []
+assert not srow or {k: srow[0][k] for k in SHAPKA_ROW} == SHAPKA_ROW, 'shapka: строка в репозитории не та, что на сервере'
+OTHERS.append(('shapka-2026-11-17', SHAPKA_ROW))
+for oname, orow in OTHERS:
+    if orow['before'] != sha(body):
+        print('%s: страница на сайте не в виде «до» этого пакета (%s…) — второй вид от него не нужен' % (oname, sha(body)[:8]))
+        continue
+    assert len(variants) == 1, 'второй исходный вид уже есть'
+    oold = old
+    for a, b, c in orow['replace']:
+        assert oold.count(a) == c and '?v=' in a and '?v=' in b, '%s: %s' % (oname, a)
+        oold = oold.replace(a, b)
+    assert sha(oold.encode('utf-8')) == orow['after'], '%s: сумма после не совпала' % oname
+    onew = patched(oold)
+    variants.append([orow['after'], sha(onew.encode('utf-8'))])
+    vnames.append('after ' + oname)
+    short = oname.split('-')[0]
+    for folder, content in (('backup-after-' + short, oold), ('pkg-after-' + short, onew)):
         f = OUT / folder / PAGE
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_bytes(content.encode('utf-8'))
-    print('zagolovok-2026-11-13 ещё не выложен: второй исходный вид страницы %s… → %s…' % (variants[1][0][:8], variants[1][1][:8]))
-elif zrow:
-    print('zagolovok-2026-11-13: страница на сайте уже не в виде «до» этого пакета (%s…) — второй вид не нужен' % sha(body)[:8])
+    print('%s ещё не выложен: второй исходный вид страницы %s… → %s…' % (oname, variants[1][0][:8], variants[1][1][:8]))
 # вне блока (figure, стили страницы, скрипт страницы) — байт в байт
 fo = re.search(r'<figure class="v-duct" id="vduct".*?</figure>', old, re.S)
 fn = re.search(r'<figure class="v-duct" id="vduct".*?</figure>', new, re.S)
@@ -150,7 +172,7 @@ for folder, content in (('backup', body), ('pkg', result)):
     f = OUT / folder / PAGE
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_bytes(content)
-rows.append({'file': PAGE, 'variants': variants, 'replace': [[a, b, 1] for a, b in reps]})
+rows.append({'file': PAGE, 'variants': variants, 'variant_names': vnames, 'replace': [[a, b, 1] for a, b in reps]})
 
 payload = {'name': NAME, 'images': len(IMAGES), 'files': rows}
 (OUT / 'deploy_payload.json').write_text(json.dumps(payload, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')

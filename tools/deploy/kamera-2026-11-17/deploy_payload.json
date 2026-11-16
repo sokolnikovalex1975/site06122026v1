@@ -62,7 +62,15 @@
     [
      "6052cac21db2f55a705b7abbe279ae36f88c7d712a68851cc57ed5a0c1cc46f0",
      "06285a2b82601c08470775fc9010b4241fdd77ae322ca56a8ad64a68ebe144b1"
+    ],
+    [
+     "2ecd5bc7a682ae19aaddf8e81bb7c7cc4bcbb5fb85260bb1badfb1ab6203272f",
+     "45fc00f13e1eaf4756a8bd1478c2c0382a9dbc54efff9b5aef6ba1c4b9febeff"
     ]
+   ],
+   "variant_names": [
+    "as built",
+    "after shapka-2026-11-17"
    ],
    "replace": [
     [

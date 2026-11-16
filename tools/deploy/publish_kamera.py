@@ -9,8 +9,9 @@
 три фото, холст WebGL и кнопка паузы), «Что видно на кадре», стили схемы -> стили блока, скрипт схемы -> скрипт блока.
 Счётчики Метрики, UIS и Radist, телефон и почта заменами не затрагиваются (проверяется ниже и при подготовке пакета).
 Страница принимается в одном из двух исходных видов (variants): как на сайте при сборке пакета или после выкладки
-пакета zagolovok-2026-11-13 другой задачи (там на странице меняется только ?v= у style.css и app.min.js); для каждого
-вида свой итоговый SHA-256 — выкладки не мешают друг другу, если эта идёт второй.
+пакета другой задачи (zagolovok-2026-11-13, shapka-2026-11-17: там на странице меняется только ?v= у style.css
+и app.min.js; какой именно — variant_names в пакете); для каждого вида свой итоговый SHA-256 — выкладки не мешают
+друг другу, если эта идёт второй.
 До и после сверяется SHA-256 каждого файла, резервная копия страницы сохраняется вне public_html и не перезаписывается,
 при любой ошибке уже заменённое возвращается, добавленные кадры убираются. Повторный запуск после успешной выкладки только
 сверяет суммы. Без f-строк (на сервере Python 3.6), загрузок, паролей и сторонних пакетов; сообщения — ASCII (LANG=C).
@@ -50,6 +51,8 @@ assert 'before' not in PAGE_ROW and 'after' not in PAGE_ROW and 'content_b64' no
 VARIANTS = [tuple(v) for v in PAGE_ROW['variants']]
 assert 1 <= len(VARIANTS) <= 2 and all(len(b) == 64 and len(a) == 64 and a != b for b, a in VARIANTS)
 BEFORES = [b for b, a in VARIANTS]
+NAMES = PAGE_ROW.get('variant_names') or ['as built', 'after another package'][:len(VARIANTS)]
+assert len(NAMES) == len(VARIANTS) and all(n and all(ord(ch) < 128 for ch in n) for n in NAMES), 'variant names'
 AFTERS = [a for b, a in VARIANTS]
 assert len(set(BEFORES + AFTERS)) == 2 * len(VARIANTS)
 REPL = PAGE_ROW['replace']
@@ -154,7 +157,7 @@ for row in ROWS:
     assert sha(new) == want, 'PACKAGE MISMATCH: ' + row['file']
     plan.append((row, p, old, new, mode))
 print('PRECHECK OK: %d/%d original and resulting checksums verified (9 new images, 1 page, %d replacements, page variant %d: %s)'
-      % (N, N, len(REPL), variant + 1, ('as built', 'after zagolovok-2026-11-13')[variant]))
+      % (N, N, len(REPL), variant + 1, NAMES[variant]))
 if MODE == '--check':
     sys.exit(0)
 
