@@ -1,0 +1,29 @@
+/* Прототип: общие мобильные правки (варианты A и B). Только до 760 px — компьютер не меняется. */
+@media (max-width:760px){
+  /* 1. Отступы секций 80 → 56 px */
+  .s{padding:56px 0!important}
+  .head{margin-bottom:28px!important}
+  .head .sub,.s .sub{margin-top:14px!important;font-size:15.5px!important;line-height:1.55!important}
+
+
+  /* 2. Схема: все 4 типа объекта видны сразу (2×2 вместо прокрутки вбок) */
+  #shema .hz-tabs{display:grid!important;grid-template-columns:1fr 1fr;gap:8px;overflow:visible}
+  #shema .hz-tab{padding:11px 12px!important;align-items:center;text-align:center}
+  #shema .hz-tab b{font-size:14px}
+
+  /* 3. Вопросы: первые 5, остальные по кнопке */
+  #voprosy .qa.mc-hide{display:none}
+  .mc-more-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:52px;margin-top:12px;border-radius:999px;border:1.4px solid var(--line2);background:rgba(255,255,255,.03);color:var(--t1);font:500 15px/1 Inter,system-ui,sans-serif}
+
+  /* 4. Подвал: колонки ссылок — раскрывающиеся списки */
+  footer .ft{grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+  footer .ft>div{grid-column:1/-1!important}
+  footer .ft>div.mc-acc{border-top:1px solid var(--line)}
+  footer .ft>div.mc-acc h4{display:flex;justify-content:space-between;align-items:center;min-height:56px;margin:0!important;cursor:pointer}
+  footer .ft>div.mc-acc h4::after{content:"";width:9px;height:9px;margin-right:6px;border-right:1.5px solid var(--t2);border-bottom:1.5px solid var(--t2);transform:rotate(45deg) translateY(-3px);transition:transform .3s}
+  footer .ft>div.mc-acc.open h4::after{transform:rotate(-135deg)}
+  footer .ft>div.mc-acc ul{display:none!important}
+  footer .ft>div.mc-acc.open ul{display:flex!important;padding-bottom:14px}
+  footer .ft>div:first-child{padding-bottom:28px}
+  footer .ft>div:last-child{padding-top:24px;border-top:1px solid var(--line)}
+}

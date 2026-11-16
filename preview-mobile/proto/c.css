@@ -1,0 +1,29 @@
+/* Прототип варианта C «Короткая мобильная главная» = вариант B + второстепенные блоки свёрнуты в один раздел «Подробнее о работе».
+   Порядок блоков меняется только на телефоне (CSS order), код страницы и порядок для роботов — прежние. */
+@media (max-width:760px){
+  main{display:flex!important;flex-direction:column}
+  #hero{order:1} main>.strip{order:2} #zadachi{order:3} #tseny{order:4} #etapy{order:5} #shema{order:6} #otrasli{order:7}
+  .mc-fold-h{order:8} #podhod{order:9} #dokumenty{order:10} #vrediteli{order:11} #usloviya{order:12} #vse-uslugi{order:13}
+  #voprosy{order:14} #zayavka{order:15}
+
+  .mc-fold-h{padding:56px 0 6px;border-top:1px solid var(--line)}
+  .mc-fold-h p{margin-top:12px;font-size:15px;line-height:1.55;color:var(--t3)}
+
+  .mc-fold:not(.open){padding:0!important;border-top:1px solid var(--line)!important}
+  .mc-fold:not(.open) .pests-bg{display:none!important}
+  .mc-fold:not(.open):not(#podhod) .wrap>*:not(.head):not(.vu-head){display:none!important}
+  #podhod.mc-fold:not(.open) .appr>*:not(div:first-child){display:none!important}
+  #podhod.mc-fold:not(.open) .appr>div:first-child>*:not(:first-child){display:none!important}
+  .mc-fold:not(.open) .eyebrow,.mc-fold:not(.open) .sub,.mc-fold:not(.open) .vu-lead{display:none!important}
+  .mc-fold .mc-fh{position:relative;cursor:pointer}
+  .mc-fold:not(.open) .mc-fh{margin:0!important;padding:20px 48px 20px 0!important}
+  .mc-fold:not(.open) .mc-fh h2{font-size:20px!important;line-height:1.3!important;letter-spacing:-.02em!important;margin:0!important}
+  .mc-fold:not(.open) .mc-fh h2 em{font-style:normal}
+  .mc-fold .mc-fh::after{content:"+";position:absolute;right:0;top:50%;width:32px;height:32px;margin-top:-16px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;font:300 22px/1 Inter,system-ui,sans-serif;color:var(--t2)}
+  .mc-fold.open .mc-fh::after{content:"–";top:28px;margin-top:0}
+  #usloviya.mc-fold:not(.open),#vse-uslugi.mc-fold:not(.open){border-bottom:1px solid var(--line)}
+}
+
+@media (max-width:760px){.mc-fold:not(.open) .mc-fh h2 em,.mc-fold:not(.open) .mc-fh h2 em *{font-weight:inherit!important;font-style:normal!important;color:inherit!important}}
+
+@media (max-width:760px){.mc-fold.open .mc-fh{padding-right:48px!important}.mc-fold.open .mc-fh::after{top:2px!important}}

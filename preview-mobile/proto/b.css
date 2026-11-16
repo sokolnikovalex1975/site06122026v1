@@ -1,0 +1,125 @@
+/* Прототип варианта B «Мобильная перекомпоновка». Только до 760 px — компьютер не меняется. */
+@media (max-width:760px){
+  /* ---- Лента карточек (свайп) ---- */
+  .mc-track{display:flex!important;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;gap:12px!important;margin-left:-20px!important;margin-right:-20px!important;padding:0 20px 2px!important;scroll-padding:0 20px;scrollbar-width:none;position:relative;align-items:stretch}
+  .mc-track::-webkit-scrollbar{display:none}
+  .mc-track>*{flex:0 0 84%!important;scroll-snap-align:center;min-width:0;margin:0!important}
+  .mc-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}
+  .mc-count{font:500 13px/1 Inter,system-ui,sans-serif;color:var(--t3);letter-spacing:.06em;min-width:44px}
+  .mc-count b{color:var(--t1);font-weight:500}
+  .mc-dots{display:flex;gap:6px;align-items:center}
+  .mc-dots i{width:6px;height:6px;border-radius:3px;background:var(--line2);transition:width .3s,background .3s}
+  .mc-dots i.on{width:18px;background:var(--acc)}
+  .mc-arr{display:flex;gap:8px}
+  .mc-arr button{width:40px;height:40px;border-radius:50%;border:1.4px solid var(--line2);background:transparent;color:var(--t1);display:grid;place-items:center;padding:0}
+  .mc-arr button svg{width:16px;height:16px}
+  .mc-arr button:disabled{opacity:.35}
+
+  /* ---- Первый экран: панель «Что покажет аудит» без пояснений ---- */
+  #panel li{padding:9px 0!important;align-items:center}
+  #panel li div>span{display:none}
+  #panel li strong{margin:0!important}
+
+  /* ---- Ситуации: лента ---- */
+  #zadachi .task{padding:22px!important;gap:16px!important}
+  #zadachi .tasks-foot{padding:18px!important;gap:10px!important}
+  #zadachi .tasks-foot .ico{display:none}
+  #zadachi .tasks-foot p{font-size:15px}
+
+  /* ---- Цены: компактные строки ---- */
+  #tseny .pr-cards{gap:10px!important}
+  #tseny .pr-card{display:grid!important;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"n n" "t pr" "d pr";column-gap:14px;padding:16px 18px!important;min-height:0!important}
+  #tseny .pr-card .pr-num{grid-area:n;margin-bottom:10px!important;font-size:11px}
+  #tseny .pr-card h3{grid-area:t;font-size:17px!important;margin:0 0 4px!important}
+  #tseny .pr-card p{grid-area:d;font-size:13px!important;margin:0!important;line-height:1.45!important}
+  #tseny .pr-card .pr-price{grid-area:pr;align-self:center;text-align:right;margin:0!important}
+  #tseny .pr-card .pr-amt{font-size:22px!important}
+  #tseny .pr-card .pr-from{font-size:12px;margin-right:4px}
+  #tseny .pr-card .pr-unit{font-size:11.5px;margin-top:2px}
+  #tseny .pr-more-t{margin-top:26px!important}
+  #tseny .pr-mini{flex-direction:row!important;align-items:center!important;padding:14px 0!important;gap:12px!important}
+  #tseny .pr-mini .pr-d{display:none!important}
+  #tseny .pr-mini b{margin:0!important;font-size:15px}
+  #tseny .pr-mini .pr-price{text-align:right!important;flex:0 0 auto}
+  #tseny .pr-mini .pr-amt{font-size:19px!important}
+  #tseny .pr-mini .pr-unit{display:block!important;margin:2px 0 0!important;font-size:11.5px!important}
+  #tseny .pr-cta{padding:20px!important}
+
+  /* ---- Этапы: лента из 4 шагов (фото сверху, текст снизу) ---- */
+  #etapy .tl-line,#etapy .tl-dot{display:none!important}
+  #etapy .tl-row{display:flex!important;flex-direction:column;align-items:stretch!important;gap:0!important;padding:0!important;border:1.4px solid var(--line2);border-radius:var(--r);background:var(--card);overflow:hidden}
+  #etapy .tl-row .tl-img{order:-1!important;border-radius:0!important;aspect-ratio:777/360!important}
+  #etapy .tl-row .tl-txt{padding:18px!important}
+  #etapy .tl-txt h3{font-size:19px!important;margin-bottom:10px!important}
+  #etapy .tl-txt p{font-size:14.5px!important}
+
+  /* ---- Цифры: компактнее ---- */
+  #usloviya .kpi{padding:16px 10px!important}
+  #usloviya .kpi b{font-size:34px!important;margin-bottom:6px!important}
+
+  /* ---- Метод IPM: круг сверху, шаги — лента под ним, связаны ---- */
+  #podhod .appr{display:flex!important;flex-direction:column;align-items:stretch!important;gap:0!important}
+  #podhod .appr>div:first-child{display:contents}
+  #podhod .appr>div:first-child>div:first-child{order:1}
+  #podhod #cycle{order:2;width:250px!important;max-width:250px!important;margin:18px auto 4px!important}
+  #podhod .steps{order:3;margin-top:16px!important;flex-direction:row!important}
+  #podhod .mc-nav{order:4}
+  #podhod .appr>.more{order:5;margin-top:22px!important}
+  #podhod .step{transform:none!important;padding:18px!important;gap:14px!important}
+  #podhod .node>i{width:46px!important;height:46px!important;border-radius:13px!important}
+  #podhod .node b{font-size:12px!important}
+  #podhod .node{gap:6px!important;cursor:pointer}
+  #podhod .cycle-c b{font-size:30px!important}
+  #podhod .cycle-c span{font-size:10.5px!important}
+  #podhod .cycle-step{margin-top:6px!important}
+
+  /* ---- Схема объекта: план + карточка зоны в одном экране ---- */
+  #shema .hz-pan:not([hidden]){display:block!important}
+  #shema .f-legend{display:grid!important;grid-template-columns:1fr 1fr;gap:6px 10px!important;margin:10px 2px 0!important;font-size:11.5px!important}
+  #shema .hz-tab{padding:10px 8px!important}
+  #shema .hz-tab b{font-size:13px!important;white-space:nowrap}
+  #shema .hz-side{margin-top:10px;gap:8px!important}
+  #shema .hz-zl li{align-items:start!important;min-height:100px}
+  #shema .mc-nav{margin:0 0 8px}
+  #shema .mc-arr button{width:36px;height:36px}
+  #shema .hz-pan>.f-legend{margin:14px 2px 0!important}
+  #shema .hz-zl li .hz-d{display:block!important}
+  #shema .hz-more{margin-top:6px!important}
+
+  /* ---- Документы: компактные строки ---- */
+  #dokumenty .docs{gap:10px!important}
+  #dokumenty .doc{display:grid!important;grid-template-columns:40px minmax(0,1fr);column-gap:14px;padding:16px!important;min-height:0!important}
+  #dokumenty .doc .num{display:none}
+  #dokumenty .doc .ico{grid-row:1/span 3;margin:0!important;width:40px;height:40px}
+  #dokumenty .doc h3{margin:0 0 4px!important;font-size:16px!important}
+  #dokumenty .doc p{margin:0!important;font-size:13.5px!important;line-height:1.45!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  #dokumenty .doc .doc-go{padding-top:8px!important}
+
+  /* ---- Отрасли: лента ---- */
+  #otrasli .ind-b{padding:18px!important;gap:10px!important}
+
+  /* ---- Вредители: компактные строки, подробности по нажатию ---- */
+  #vrediteli .pests{gap:10px!important}
+  #vrediteli .pest{padding:14px!important;gap:14px!important;cursor:pointer;position:relative}
+  #vrediteli .pest-img{width:60px!important;height:60px!important}
+  #vrediteli .pest-t{padding-right:34px}
+  #vrediteli .pest .lat{margin:4px 0 0!important}
+  #vrediteli .pest-b p,#vrediteli .pest-b .bar{display:none}
+  #vrediteli .pest.open .pest-b p{display:block;margin-top:10px}
+  #vrediteli .pest.open .pest-b .bar{display:block}
+  #vrediteli .pest .mc-pm{position:absolute;right:14px;top:14px;width:28px;height:28px;border-radius:50%;border:1px solid var(--line2)}
+  #vrediteli .pest .mc-pm::before,#vrediteli .pest .mc-pm::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;background:var(--t2);transform:translate(-50%,-50%)}
+  #vrediteli .pest .mc-pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+  #vrediteli .pest.open .mc-pm::after{transform:translate(-50%,-50%) rotate(0)}
+
+  /* ---- Типовые задачи: лента ---- */
+  #usloviya .case-b{padding:18px!important}
+
+  /* ---- Все услуги: группы свёрнуты ---- */
+  #vse-uslugi .vu-g .vu-i{display:none!important}
+  #vse-uslugi .vu-g.open .vu-i{display:grid!important}
+  #vse-uslugi .vu-gt{min-height:52px;padding:0 14px!important;cursor:pointer}
+  #vse-uslugi .vu-gt span{display:flex;align-items:center;gap:12px}
+  #vse-uslugi .vu-gt span::after{content:"";width:8px;height:8px;border-right:1.5px solid var(--t2);border-bottom:1.5px solid var(--t2);transform:rotate(45deg) translateY(-2px);transition:transform .3s}
+  #vse-uslugi .vu-g.open .vu-gt span::after{transform:rotate(-135deg)}
+}
