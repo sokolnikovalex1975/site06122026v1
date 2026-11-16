@@ -17,10 +17,10 @@ const SIZES = [[360, 800], [375, 667], [390, 844], [430, 932], [768, 1024], [820
 const browser = await chromium.launch(process.env.CHROME ? { executablePath: process.env.CHROME } : {});
 let bad = 0;
 
-// Timeweb иногда отвечает облаку ложным 502 на vendor/gsap.min.js — тогда страница открывается заново (до 4 раз)
+// Timeweb иногда отвечает облаку ложным 502 на саму страницу или vendor/gsap.min.js — тогда она открывается заново (до 4 раз)
 async function open(w, h, tries = 4) {
   const r = await open1(w, h);
-  if (tries > 1 && !(await r.page.evaluate(() => !!window.gsap && !!window.ScrollTrigger))) {
+  if (tries > 1 && (r.failed || !(await r.page.evaluate(() => !!window.gsap && !!window.ScrollTrigger)))) {
     await r.ctx.close();
     return open(w, h, tries - 1);
   }
@@ -40,13 +40,16 @@ async function open1(w, h) {
   });
   const errors = [];
   page.on('pageerror', e => errors.push(String(e)));
-  await page.goto(BASE + '/', { waitUntil: 'load' });
+  try { await page.goto(BASE + '/', { waitUntil: 'load' }); } catch (e) { return { ctx, page, errors: [String(e).split('\n')[0]], failed: true }; }
   await page.waitForFunction(() => !!window.gsap && !!window.ScrollTrigger, null, { timeout: 10000 }).catch(() => {});
   // заставка: пока она идёт, Lenis остановлен и прокрутки нет — ждём, пока её уберут, и вход первого экрана
   await page.waitForFunction(() => !document.getElementById('intro'), null, { timeout: 15000 }).catch(() => {});
   await page.waitForTimeout(2500);
   return { ctx, page, errors };
 }
+
+// «стоит»: нет трансформации или нулевая матрица (после смены ширины «лёгкая лупа» сбрасывает сдвиг фото в 0, 15.11.2026)
+const fixed = t => t === 'none' || t === 'matrix(1, 0, 0, 1, 0, 0)';
 
 const probe = page => page.evaluate(() => {
   const w = getComputedStyle(document.querySelector('#hero .wrap'));
@@ -67,15 +70,15 @@ for (const [w, h] of SIZES) {
   const rows = [];
   for (const y of [0, Math.round(h * 0.5), Math.round(h * 0.9)]) rows.push(await scrollTo(page, y));
   const wide = w > 1280, phone = w <= 760;
-  const still = rows.every(r => r.op === 1 && r.tr === 'none' && r.media === 'none');
+  const still = rows.every(r => r.op === 1 && fixed(r.tr) && fixed(r.media));
   const gapsSame = rows.every(r => r.gap === rows[0].gap);
   let ok = !errors.length && rows.every(r => !r.hscroll);
-  if (wide) ok = ok && rows[0].op === 1 && rows[1].op < 0.9 && rows[1].tr !== 'none' && rows[2].op < rows[1].op;
+  if (wide) ok = ok && rows[0].op === 1 && rows[1].op < 0.9 && !fixed(rows[1].tr) && rows[2].op < rows[1].op;
   else ok = ok && still && gapsSame && (!phone || rows[0].gap === 32);
   if (VERSION) ok = ok && rows[0].js.length > 0 && rows[0].js.every(s => s.endsWith('app.min.js?v=' + VERSION));
   if (!ok) bad++;
   console.log((ok ? 'OK  ' : 'BAD ') + `${w}x${h}`.padEnd(10) + (wide ? ' эффект ' : ' без эффекта ') +
-    rows.map(r => `y${r.y}: яркость ${r.op}, сдвиг ${r.tr === 'none' ? 0 : r.tr.split(',')[5].trim().replace(')', '')}, фото ${r.media === 'none' ? 'стоит' : 'движется'}, отступ ${r.gap}`).join(' | ') +
+    rows.map(r => `y${r.y}: яркость ${r.op}, сдвиг ${r.tr === 'none' ? 0 : r.tr.split(',')[5].trim().replace(')', '')}, фото ${fixed(r.media) ? 'стоит' : 'движется'}, отступ ${r.gap}`).join(' | ') +
     (errors.length ? ' ОШИБКИ JS: ' + errors.join('; ') : ''));
   await ctx.close();
 }
@@ -88,9 +91,10 @@ for (const [w, h] of SIZES) {
   const b = await scrollTo(page, 450);
   await page.setViewportSize({ width: 1440, height: 900 }); await page.waitForTimeout(900);
   const c = await scrollTo(page, 451);
-  const ok = !errors.length && a.op < 0.9 && b.op === 1 && b.tr === 'none' && b.media === 'none' && c.op < 0.9;
+  const ok = !errors.length && a.op < 0.9 && b.op === 1 && fixed(b.tr) && fixed(b.media) && c.op < 0.9;
   if (!ok) bad++;
-  console.log((ok ? 'OK  ' : 'BAD ') + 'смена ширины 1440 → 1200 → 1440: яркость ' + [a.op, b.op, c.op].join(' → ') + (errors.length ? ' ОШИБКИ JS: ' + errors.join('; ') : ''));
+  console.log((ok ? 'OK  ' : 'BAD ') + 'смена ширины 1440 → 1200 → 1440: яркость ' + [a.op, b.op, c.op].join(' → ') +
+    ', на 1200 сдвиг текста ' + (fixed(b.tr) ? 0 : b.tr) + ', фото ' + (fixed(b.media) ? 'стоит' : b.media) + (errors.length ? ' ОШИБКИ JS: ' + errors.join('; ') : ''));
   await ctx.close();
 }
 
