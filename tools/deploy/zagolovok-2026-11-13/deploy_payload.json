@@ -1,14 +1,14 @@
 {
  "name": "zagolovok-2026-11-13",
- "old_version": "20261113ekran",
- "new_version": "20261113zagolovok",
+ "old_version": "20261115lupa",
+ "new_version": "20261117zagolovok",
  "legal_old_version": "20261108",
  "pages": 42,
  "files": [
   {
    "file": "style.css",
-   "before": "113094cf65ee322fd14653101b2c2e68f63003d60235a42c46146f74579acf24",
-   "after": "9cc36567052613dd21046d37f977c013c0608223c38cb66a857de38497aec92e",
+   "before": "d98468a4ac0c39df96254709d9b763e0f397a0fc394f5754b3b4bea9168a7e85",
+   "after": "ca715e1fcbb72cacb638f32265eea201ddc4a2e9322c8e97bfcb92df5f26cc89",
    "replace": [
     [
      "html{scroll-behavior:smooth;scroll-padding-top:96px}\n/* переход по ссылке с якорем с другой страницы (/#tseny, ../#podhod): браузер сразу ставит страницу на блок, а не плывёт\n   к нему от верха — плавную прокрутку обрывали запуск скриптов и пересчёт анимаций (app.js, раздел «переход по ссылке\n   с якорем», 13.11.2026) */\nhtml:has(:target){scroll-behavior:auto}\n",
@@ -36,8 +36,8 @@
   },
   {
    "file": "app.min.js",
-   "before": "5ed13b2fa3271aed2a0c29b3030eb1d897a66375644d75d42e475e78afe294ad",
-   "after": "febdc8ded9eb16181848c174377ba5dd207373dbb2f8f5a4cdc03109d48c8549",
+   "before": "04ef7102fb1cc0d165b6b5b3d2661c493353269cfcaf359f0b842b45cfe394a2",
+   "after": "c4e8291c7d2f706b0baeabf160af87a8264d3e3e91c1c90497833436f87ff69a",
    "replace": [
     [
      "var te=function(t,e){d?d.scrollTo(e?0:t,{offset:e?0:-80,duration:1.5,",
@@ -58,132 +58,132 @@
   },
   {
    "file": "biznes-tsentry-torgovye-tsentry-predpriyatiya/index.php",
-   "before": "9f55770e8ea4d56a6b877950f45aef86fdd7f88f6242915bdaf6ff2ad5a12b0e",
-   "after": "ddd9f4ae2ad8a0a74093552ff079a1bb2ad461f0e590ceb70c5b029c93f795b3",
+   "before": "8ce69ba25f8f2652021b76904b4e6ef6854424b1a9b531f35518089ad41f052d",
+   "after": "99db74688c72fc7822a799cd28b2ca984b1b23ff1abb40f213a87e6eb0f114dc",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "deratizatsiya-i-dezinsektsiya/index.php",
-   "before": "03a611a41b5c91efc357cf4359765beece353b9a485941d9fc577add59243840",
-   "after": "bbe99330467818ce790a2d717c93127994a21f8d970c4b0f022298349b0e1b25",
+   "before": "31c4101d0a323696a735a72630cc8fbf629af5bb056eb9fa7bc9c23ba34a5eb6",
+   "after": "94ec5243898958d248e8d3f6be48ca5461c5398a539fd225318a34652ecc0455",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "deratizatsiya/index.php",
-   "before": "973b9ab69f6cb7b1852f185ccc5b730d09c26d5e1d80caa14c3291b5775b43e9",
-   "after": "3d7ea74a9e59fc3dfbe2e89d1ef028040353dc03e27d41de7071f0deaab2e1b0",
+   "before": "90cbb5566848ba38d2ddf71557626e649c4cc621684bee4df13124286151c932",
+   "after": "6f754d8f590563223bbdfc8606fa4e221f5fcee87ac27c0ba50ea9e937dfa29a",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "deratizatsiya/restorany-i-kafe/index.php",
-   "before": "a6788af339c88246583c7c15642849100d1e1666bca81d4c48c5a47c4e363e19",
-   "after": "5cc3b4e580d1df1e692888134f3ffcff34a26854e72124f7c5f4b81f8cb9a21e",
+   "before": "b3b6ca69c95a599ac1937c99fb57dbe376cb1879ee6df9ecdb86d109f9bcc70c",
+   "after": "97b55823ce3fcd78368f079af1f4f46f1dd187507c2d1c05668716d663545a88",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "dezinfektsiya/index.php",
-   "before": "d292c92b367318104007b01b58242d849b39d7789c9cce34f060cde70ff6843b",
-   "after": "dc9aac8495112951f737c29f63f8a9ebaf958058b061048216a2a0872e27cc57",
+   "before": "0461dc627b7017f5e0a33dbeaa82bc89eedce6bd1f0158d6e308c3e35d546682",
+   "after": "49e398e20d0e3d363d598f149a2801464c0de99c44cc9c3d06e00d6aceae06df",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "dezinsektsiya/index.php",
-   "before": "f90977fa5673e95711ea7c881a14986c35d4b99c73b3c4929ace3543f9f23be0",
-   "after": "ca0798544dc5a51cf2d570646dcd66e4a202551af83506f41d9de8d481abd2d1",
+   "before": "580b6a956d842b15c7a99c042cf556c9cfaaf3774b3d8aeb901913483aa62711",
+   "after": "fc2767b3a310d1b4e870206c20856eb8c17520352693f1f10080310dc07e0781",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "dezinsektsiya/restorany-i-kafe/index.php",
-   "before": "e681e5ab5d8d97b3d304ec39346edfcfd6c88b0ffb5b6758889a922566f55ac1",
-   "after": "4ce05880ad558b60c3bb1ea8d8c81eec4729cba669203ce9fcafe4a69f26248f",
+   "before": "6b62487d22ba0bb4294459ca652ac50d91432457fc896ec42d5ca42495936520",
+   "after": "50b87cdf9a6a21bc7e4a1350d4954b0816ef733c434789737251392b894fed7a",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "dogovor-deratizatsiya-dezinsektsiya/index.php",
-   "before": "6c91ffa2803e25d0d25598ac8d85b6e175e5caa74eb89f935a9e5dcbe8116c3f",
-   "after": "49e40eb20efb5aa0cdefa87678682aa3f2c66b2ab27151bbda2776e2659be707",
+   "before": "84cd261ada1c2ad47c4cfede97ff51c1958b938c7d8db84dbc7f6541c6264294",
+   "after": "136a5d93db02906b1b5719a83d30ff19119c94b40641a4aa379019e436db863f",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "farmatsevticheskie-proizvodstva/index.php",
-   "before": "992d837fcaedc69962dfc3273c7d59a22f803c91250bdf585e7ced91f8531bae",
-   "after": "a0632a11c7b52e2506dc99c7effdc50b1a6a71f08597c0647ea2d34711949ee3",
+   "before": "dbae28dc36511e1417f9b759fb9424676b4eec4c7cdd1836567f851f7c0be85d",
+   "after": "24ef04af82b3e1a3a0441a0ca777d1f06b941b3c7cda9fa3d6a7bf41256ebec5",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "gostinitsy/index.php",
-   "before": "a23c98798b8f50dd67ff7a569270d365ccfd82a97079142b932bd25ca758fd7d",
-   "after": "1a1d7229262ab00cf9bc21d864b5657f21385a293ccf4668c498010493454425",
+   "before": "6cd53f6d7a89a1579f2d5633111826212407d15b48c59a53fff438f459d52ee8",
+   "after": "be8c47698aa86c223d78d1fc4ceab05255b4b1f27ec3961942a416e3a2504680",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "index.php",
-   "before": "05e3ddd323d78e062310778e918cbaa3f56f9567c76611e403562a12c280ee0e",
-   "after": "2f8acda75de3f0397351a4e0f2adbec4f9bdb60cd824b9a73c82484b8cad995c",
+   "before": "0fcff63c50815a89a5f2295a168084fcd3524678bb38441a5e2392c595da08b0",
+   "after": "65cb22646005c5bc8c9edd0151a065e8b928d6eefd24b9ec27a51d1ea4070e71",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      1
     ],
     [
@@ -195,382 +195,382 @@
   },
   {
    "file": "laboratornye-issledovaniya/analiz-pishchevykh-produktov/index.php",
-   "before": "d97600101c4ccd342f9c66521ee7efb340b27da9eed158e6a45209e690516ead",
-   "after": "b6b64e8517059a5d0248511c916d47c5768cac3e7d8fee6277447ec407c0ee16",
+   "before": "01af241dea1eab6e4d8d4cc3231627356ad9f1c548d1df775bf4666e5f316657",
+   "after": "a69409c55d8d74febe2d2de46669dd25988aadab8d081abb013f6d599fbd4149",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "laboratornye-issledovaniya/analiz-smyvov/index.php",
-   "before": "932a470d878cb8077da9e32a35b1adf2e50571713d44d32e891ee2c7cd8a6916",
-   "after": "e69bfc8f96056ff79a1bfb023d2e8adc7fd10e8159f721213969e1a90bcdad82",
+   "before": "60fdf12052ca158c3b83ed77e1aaec10003e6618d1b28dabb503ff7e0d0ad93d",
+   "after": "1c3aadb5647b47c9730c88e226f3572fcf421dd12a0ad9862dccd7a0ba6b622e",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "laboratornye-issledovaniya/analiz-vody/index.php",
-   "before": "da21699910d9131ecd54a69c014b2147cdaa02cb8f11780388d4d7f00df64c7e",
-   "after": "9e827aafb16607ce947766decb1ebd6392075f305ee0578bf1019b960e34abaa",
+   "before": "1186fbed1d55059643264d8955186afc013966ebb99bca85e6ff09ad55e249af",
+   "after": "265cce41cf2d6133ca097f93dcb4e5d78f6fffbb6b8da89b9a98696b60cd36eb",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "laboratornye-issledovaniya/analiz-vozdukha-rabochey-zony/index.php",
-   "before": "f84fe90dc8773921f92c1526494424c0406ee2b3a813826eab91f21d2e0c9802",
-   "after": "aa94eb3d13cf92ae1a95ac609929e822c60b964b54d2c8a918787a7d41e84ae9",
+   "before": "ce2ef8430a0dc104a01e1c8d7e658f58c17e07bc449b20f7ada2b17f073bd6f7",
+   "after": "fd5a6d4e2500f11ca4949c1eca52f83901b2e2b425a60b79d5bd7b65bc762e95",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "laboratornye-issledovaniya/index.php",
-   "before": "5982dbb6c2703540bfab49e7f2e956b4f0b7ecc5270eb55377408425b23eafe5",
-   "after": "7ecfc1e41a9a5ed24b4caf653017ce4949ec497e360a7b23a9a954891b13b7ed",
+   "before": "7facbad6a12aed9de1e5f46f18bfc34a6978c57258935f161a727514530f6a6f",
+   "after": "8cc81422693c2fcfee9a8ef7553a841ff3d272566bdccd213137b4056dbf5a55",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "laboratornye-issledovaniya/izmerenie-mikroklimata/index.php",
-   "before": "e26877604a41936ff9449aa273b23df95ac7b9769061d8a8565644a68d73a39b",
-   "after": "3343889061b53b84b2290fcd8fe1f34bf5e52cdd4ceb11fc8796ff76a51639d8",
+   "before": "c154d00363f46e1e85f6f275103e971779ce9530d87824e02f9f9553df8a46d4",
+   "after": "5a455a5c603c943cbe9c255143c73a923e02bf1423cdb47c767df0e6cb15407a",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "laboratornye-issledovaniya/kontrol-sterilizatorov/index.php",
-   "before": "b8a1fd2bc03fae8ffdc8694d48921a1cc08c60176647d95831b9dccc7917e989",
-   "after": "ed10ec934283eb3fd616065c0ec28664047e4f613efbd3427a75ae6a40b67527",
+   "before": "017732dccae29b685b76ca746a5295ef0b4592c42fd62e37fbd30ced19a08624",
+   "after": "ca7819157ddecb24863be9b9c98100bddf3207da175698e9ccffe1600b7cc7f1",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "laboratornye-issledovaniya/zamer-osveshchennosti/index.php",
-   "before": "86b1d1ccaf5b6a31b9a7a6a376f19920d524a11e58a9b93bff3297d61d96a5b7",
-   "after": "d34d3e72f3222ddf1fc06084f8a7a00bdf888398e55b0118d1b6519af1931e9c",
+   "before": "f1854be2066c1a7c72747e02d573ef130aabeb9b3e3db3217709b4ebcb0eda3c",
+   "after": "25cbe28dcb3114ec309588d4d3899ed4a6702193ec3d9d03812e968ca496c001",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "magaziny-i-torgovye-seti/index.php",
-   "before": "67f0531cba58b5c8030bf62dd3afa27ef56c1f513319905d911917513fbbd5c6",
-   "after": "cb61f756e6138095e7e77aea73a32b8aab7a6d23bef6798f74fc606f9ba6fe0a",
+   "before": "e37971294d3ca87ef17a0611c9d65c7c8e0208d71c7ea218eb8f5c5db12f008f",
+   "after": "ae04b54a8251e01a9c31f8448c19167e98a84aeb8c6b01befefbdcc7e88e996e",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/akt-deratizatsii-i-dezinsektsii/index.php",
-   "before": "caff9a3ec559bf8b589712768799cbd2fa121ce87c1e063d468890be6f89bd45",
-   "after": "37a249ad429412664a6f8769b02208093fcffe69403828f2c6621c93f86cca2c",
+   "before": "88e08ea433ef7418c71ecac6ad99c96878b02edade8fe51d447869de0aa1baa6",
+   "after": "68ac64baf69612b514dc6ee60b550672141e239c55938a4d1d1794e2d375f0b0",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/index.php",
-   "before": "e98b88fdeb4a07438811a88402195543556e6f32391881df718fa1fcb10b0179",
-   "after": "e9a32afa54a351f9dd15ceead83c9d6c57149ffa25afd6029cceecd086d091ce",
+   "before": "7dfe6148c175597c5fea0ce7d9fdaa6e62c077a1340e8c7c5ddad5cffc99604c",
+   "after": "eeed069cb39ef4fdbaa564a1d3ad1c80011a2cff5d3ea958ac8ca5277d3179d3",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/kak-berut-smyvy/index.php",
-   "before": "a884f74edc0f898f9ddd8a034da39099a0b07d30a40557a336fc53d2cfaeb7d5",
-   "after": "ff5449d60616d77eb89fd08bc8f65bbf70de19a05974414fbc152c015e237bfc",
+   "before": "0954586974ab6ab041e09e5ebab9595d32a022b948ef7ed424ce2e1dbdbc4593",
+   "after": "77c03e6f546fdc45b4a40f6d8617690da165215001207fc1c8d0a93091509eb4",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/kontrol-raboty-sterilizatorov/index.php",
-   "before": "a8ca24a97522875f8726354fa83665e97009d5db7dac5539873669d712331aa6",
-   "after": "fb324a01c3ec93ba676988f33ff517917621180530be1381c64354d988c09087",
+   "before": "24a1c8d030f48d25bc772150e94c29e6c65a0d8c8afb4ed2736e2664c7c1d2d4",
+   "after": "28af3b7b7b93e6b53eb224c10ae8257239d3ebae76eb3f994e462c5e07ac4b50",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/pest-menedzhment-ili-razovaya-obrabotka/index.php",
-   "before": "4f395e371d5c7561367c52b77885fca71c07e5ac61098ea3deda34cd46935d88",
-   "after": "8f11423e90308a35a5ac0971532474254eafa15e8a7953e53e0f1e28cd1bb626",
+   "before": "42088835020ee792bd352475138471f98660854320be8cb8612228ccd7e3a8e7",
+   "after": "62c36a56b93dd210667ef1ebf7b791509dcc4f0c257523ab235215b794bac78c",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/programma-pest-kontrolya/index.php",
-   "before": "6aa81f5654c0b6156fbf6d51677becbd90472a0416575d05e1f25dab9b6d3f49",
-   "after": "cc4d71629717575e6a2de223a9ad32ccb65d1aa80b4292e42b2001451e8abb0b",
+   "before": "5ebe8d20b9a4bc63214ce3d5716dd8853613ee1045221d010b0e5a041bd2437a",
+   "after": "127529595cb38ef0dd955f95e0325686023a03cde6b36d4f1d19feb74934a1fc",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/programma-proizvodstvennogo-kontrolya-haccp/index.php",
-   "before": "d1d2e7f7b2d6eacad3ba92d13e21190eb8b1e99c043b677378509de7e31d6e4d",
-   "after": "7e33ce4462051bf21cf0c2b9264e729df70e567bf4863fdca8e30f6f0477be1f",
+   "before": "461b42a326e764600085ac79b23c194727fd6fe966caa09555d83a969656b630",
+   "after": "1cd4eb6bf1fdf2d03a84e7e48dc6c9e60247b09826f5f7a99063d483d84d4577",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/skhema-tochek-pest-kontrolya/index.php",
-   "before": "cc0993ad81fbf9f33a23139519f7c50519a837c7e57e8193f46cab1b43401235",
-   "after": "e50db033721729b5c353a6ad03a8afba65e4e07cf205efa54229c1ae5be1bbe4",
+   "before": "5f79df0407b1fb6c11e5144dab9a62a8e3fe715213c7d67666993b89b3a4eacf",
+   "after": "67bccc14cf088bf8d11c27dc12c8ada3758cab1f4f9ff43fbbeb2733a561f8c3",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/zamer-osveshchennosti-i-mikroklimata/index.php",
-   "before": "f2bce57a3e029018f26a7b0a8d182946cf5c73ce75566f5ead422c4581270588",
-   "after": "6ac0e335497ec94a4896c5987ee20d128bd12beb78ae00575f1da7504df2c8b6",
+   "before": "1c9a7a3e4766ad282cb994de29bc7d961320dd95aaa490777cc2bd99e9ee1a13",
+   "after": "b342a77df31ef0e3a805fe6af1edd0659d54143cdb14d187d3736e98aa3f96d8",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "materialy/zhurnal-pest-kontrolya/index.php",
-   "before": "c32e5f33837f76790e6cc85592cdd90a5067c62d120e470f2e93b65dffed1912",
-   "after": "9d63a3887ba0f45932fce50fe7e8f1aa0559a5d06d206ac2cc58fbcc5ccb2b2c",
+   "before": "3502b9af7b553f12de784980b12a5f2862406e8f968fe293ef83d5685d1cbd21",
+   "after": "a4bf3de68d8543525160ba3fc97d7673282dfe7131ba689dea5c521361a8a60b",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.php",
-   "before": "69b2b3fe88a73a8c02d2de8c0c2505cfe661c103a5c39b4a92653090c0ec36d4",
-   "after": "b95e9c5bcebc8dfbb00edae2cb68108a40b9314b0f8622db112eda532c51677f",
+   "before": "6179398965f94f4e795e44723ca37dd9b8973bfb78d2c6475d7ee0488876be15",
+   "after": "68ac6f9905808e6fee8c942c400a8dc19232cf8bf56e58165c59dbaf69acf142",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.php",
-   "before": "6eec748a3039b50ec01dae3b238de07e70794839fa062ad299a96f5f9fae7eba",
-   "after": "98d5cb858912ffa77c8a519832f618f3999d8db6ea46dd1a09cb84462ac139c7",
+   "before": "df790fc40058a848436c72c71a3d769e6e3ad65454e19e9a4c7a669dc9f737e4",
+   "after": "3d9ff361c56a8cd19befc304831aabf52f43265786b2a0bd70520b4501bb1b18",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "normativnaya-baza/index.php",
-   "before": "465accabe96707cd06d857de0d78b9db471852c59d26c56c56e6c3341c208e36",
-   "after": "97b14ded32c74b7315711c21c5f89ff0930876a45a7691af043160a5e39a91ad",
+   "before": "32c7bcc32f088c0d3dd6bbc77709263da97f3728d2cd9e5f5cbcf02c9148973a",
+   "after": "09b3003d27997968cc0dfa4a9bb8fd0738f0485bca5cd52eb317e7c57931d726",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "normativnaya-baza/proverochnye-listy/index.php",
-   "before": "75f7d2098cd2135adc6cddd7526705d577b4b05324cf6474b508f154e1db4c3f",
-   "after": "9e9cae0abab3cc5dac4f14410f7b7a4e6f3c0d283059b501fc7ca48f07dde2b9",
+   "before": "2ac38eef707dc60fc857bce663f69db9b99bfddaa183d08bf94e54225f93beac",
+   "after": "76d47904c154bb78ffa324a33eae7c84c67715166a2cdea49c8ea42dae662d7f",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "ochistka-dezinfektsiya-ventilyatsii/index.php",
-   "before": "b107ad2c36f01986e5a3376772612abdd70d7b902efa68125632197ec1b30cdd",
-   "after": "afe5e6be495a2561b3314f37f3965a0cf83dbe15e1afe6a8071e93f3a394019f",
+   "before": "772935629538b344dd4599b248a088055067fdb04678d63c9f63d7d1091cf103",
+   "after": "6052cac21db2f55a705b7abbe279ae36f88c7d712a68851cc57ed5a0c1cc46f0",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "pishchevoe-proizvodstvo/index.php",
-   "before": "9ebfa1f7e517aa0ecc543d8c0e6b518796e429f6ca7f896fd0981bec94dbaecb",
-   "after": "18c1a245af7bf3045c13ce0da7e10576cee5a12b2e1df205f41ea810d10dd286",
+   "before": "8013c4566f1a0c243348ae7d59485f06f1e1a96ce098cfbfd6a74fccd66b6704",
+   "after": "b87ad6802caf521825a809b9a8ec07b285817c2b7bdf578c21c8cac3cfd3a7df",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "privacy/index.php",
-   "before": "89b2403c722050bd5846589460bfe6e9b16f23844d7ac9b24c591cc131219961",
-   "after": "79f7b708d4c4e989684e2f1d9caa1c2a6364d551a369c272437d8a2a357df080",
+   "before": "700ddf875c87bb41f62600aa251d6381082a874deaed6185776b74db62ae61fa",
+   "after": "d6c4c29828f7b663904204c4b8d990d5969e7d9d3e160b9bd3bfbea182c358d4",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ],
     [
      "legal.css?v=20261108\"",
-     "legal.css?v=20261113zagolovok\"",
+     "legal.css?v=20261117zagolovok\"",
      1
     ]
    ]
   },
   {
    "file": "razrabotka-ppk/index.php",
-   "before": "ff7fe88b5b1bfedbc02080853dec3e939a3a97d762b7667d71dace91d6ee79ca",
-   "after": "2f5e8f79fed51d44e002baa97ffb09ffd5f9afbd90c195f770940fa155d73f88",
+   "before": "23fc607beaa2594181f31aa4ee27d434d14ffda3304a082c398a2cf713757f71",
+   "after": "df3d013a63500a55e068009fd3b20a5b198b589ae0e3edcde34f8bec35aab3cb",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "restorany-i-kafe/index.php",
-   "before": "8d7d77e40b43b3bd91f2748892c80a5d492c8501fb1d2412268f01eabce9d0df",
-   "after": "3a032db9fdfe5b6ff33a85015ee6736360508460ebbbff99a90a051d558fa794",
+   "before": "dfbf7fe8061450bd2d228b30551df1e921e5d661d7c131932e1b9476f1195bae",
+   "after": "6a665f748f74a8b40d6e0711e75846ed84833963e18151305f89710ee80f33d0",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "sanitarnyy-audit/index.php",
-   "before": "36cb44cb4c5249ad35aaef96ca43331f2b079b3cc4dc754a150de42bdabab4fc",
-   "after": "07e48837394255587aee27880c2f431d03f8685c8a7e94ca248c3441ebbd1983",
+   "before": "24e5ecd4a72113ce4184cfd501024819309b3aabc1327c9c6c832409e762d8cc",
+   "after": "277eb6f5bfc92e326dcf108a238aefd3d4bd9bb87cbeaa0fa5d647adea5d89d0",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "sklady-i-logistika/index.php",
-   "before": "e5f7ddc1d1fcb07e7ea543ba40b3dc9a01c99ea7deed71811fae99415c798326",
-   "after": "8d2953cbeeec65a5b34b053630856d19d11d2505a2ce14e5b3c6f833edcdee08",
+   "before": "c313b0bd30ab0e0c54be05a4a8387ef943a8e847e20bfd2ed5f77a34643e37d6",
+   "after": "51e7a3ec1c8bb0835eb48ede1688373908df72b195004223ee97b5a90775a2d9",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ]
    ]
   },
   {
    "file": "soglasie/index.php",
-   "before": "f1f0ddcc1fb69d4602229521935fea524e69186d4371689b4caba305aa4b6011",
-   "after": "21c0374f726cde7a2b097690f28ec97c72f7cc2b9abdcfc43820437a049dcac4",
+   "before": "da4725937919dc8223e9aaab7d89e5bd90393d9b76a9e4e9c8cfcaa14846d791",
+   "after": "ada25e5d9c3583b31eba3da521bf3edc8de756c968121b06e4955b0cc980aa8a",
    "replace": [
     [
-     "?v=20261113ekran",
-     "?v=20261113zagolovok",
+     "?v=20261115lupa",
+     "?v=20261117zagolovok",
      2
     ],
     [
      "legal.css?v=20261108\"",
-     "legal.css?v=20261113zagolovok\"",
+     "legal.css?v=20261117zagolovok\"",
      1
     ]
    ]

@@ -5,7 +5,8 @@
   --check    (по умолчанию) сверить суммы SHA-256 всех файлов до и после, ничего не меняя;
   --publish  резервная копия вне public_html, затем style.css, legal.css, app.min.js и страницы с проверкой каждого файла;
   --rollback вернуть файлы из резервной копии.
-Пакет готовит tools/deploy/prepare-2026-11-13-zagolovok.py из актуальных файлов рабочего сайта.
+Пакет готовит tools/deploy/prepare-2026-11-13-zagolovok.py из актуальных файлов рабочего сайта (пересобран 17.11.2026
+от версии 20261115lupa: style.css?v= и app.min.js?v= → 20261117zagolovok, legal.css?v=20261108 → 20261117zagolovok).
 
 Скрипт сам применяет к файлам public_html точные замены из пакета: style.css (scroll-padding-top и scroll-margin-top
 разделов), legal.css (scroll-margin-top разделов политики и согласия), app.min.js (две замены в сжатом коде и новый
@@ -32,7 +33,7 @@ assert ROOT.is_dir() and str(ROOT).endswith('/pestcontrol-center/public_html'), 
 assert ROOT not in WORK.parents and ROOT != WORK, 'keep the package outside the public site'
 assert PAYLOAD['name'] == 'zagolovok-2026-11-13'
 OLD_V, NEW_V, LEGAL_V = PAYLOAD['old_version'], PAYLOAD['new_version'], PAYLOAD['legal_old_version']
-assert (OLD_V, NEW_V, LEGAL_V) == ('20261113ekran', '20261113zagolovok', '20261108')
+assert (OLD_V, NEW_V, LEGAL_V) == ('20261115lupa', '20261117zagolovok', '20261108')
 ROWS = PAYLOAD['files']
 N = len(ROWS)
 assert N == PAYLOAD['pages'] + 3 and 30 <= PAYLOAD['pages'] <= 60, 'unexpected number of files: %d' % N

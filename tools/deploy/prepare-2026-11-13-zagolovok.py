@@ -20,8 +20,12 @@
   * style.css — scroll-padding-top 96 px → высота шапки + 20…32 px и scroll-margin-top разделов (.s, .cta) с
     пояснением, ровно как в style.css репозитория; главная (стили встроены) — те же правила, сжатые esbuild;
   * legal.css — scroll-margin-top разделов политики и согласия (заголовок раздела по оглавлению — под шапкой);
-  * все страницы — style.css?v= и app.min.js?v= 20261113ekran → 20261113zagolovok, на политике и согласии ещё
-    legal.css?v=20261108 → 20261113zagolovok (у файлов кэш на год).
+  * все страницы — style.css?v= и app.min.js?v= 20261115lupa → 20261117zagolovok, на политике и согласии ещё
+    legal.css?v=20261108 → 20261117zagolovok (у файлов кэш на год).
+Пакет собран впервые 13–15.11.2026 от версии сайта 20261113ekran; после выкладок 15–17.11.2026 («лёгкая лупа»,
+вёрстка телефона, «мухи и мелкие мушки», вид объекта без звёздочки; на сайте 20261115lupa) пересобран 17.11.2026 —
+правка та же, меняются только исходные файлы и версии. Прежние и новые участки берутся из коммита правки в GitHub
+(«переход к блоку по якорю», d08510f) и его родителя, а не из рабочей копии: в ней есть правки других задач.
 Счётчики — по закону владельца (tracking_laws) до и после: Метрика, UIS и Radist не меняются. После обратной замены
 каждый файл совпадает со снимком байт в байт; app.min.js проходит node --check.
 """
@@ -42,8 +46,8 @@ sys.path.insert(0, str(ROOT / 'tools/site'))
 import tracking_laws  # noqa: E402
 
 NAME = 'zagolovok-2026-11-13'
-BASE = 'HEAD'  # версия репозитория до правки — задаёт main() через base_rev()
-OLD_V, NEW_V = '20261113ekran', '20261113zagolovok'
+BASE, FIX = 'HEAD~1', 'HEAD'  # коммит правки и его родитель — задаёт main() через fix_rev()
+OLD_V, NEW_V = '20261115lupa', '20261117zagolovok'  # на сайте с 15.11.2026 → после этой выкладки
 LEGAL_OLD_V = '20261108'
 LEGAL = ('privacy/', 'soglasie/')
 JS = 'app.min.js'
@@ -79,37 +83,46 @@ def esbuild(text, loader):
     return subprocess.run(ESBUILD + args, input=text, capture_output=True, text=True, cwd=ROOT, check=True).stdout
 
 
-def base_rev():
-    """Версия репозитория до этой правки: родитель коммита, где в app.js появился раздел NEW_MARK (до коммита — HEAD).
-    BASE_REV=<коммит> — указать явно."""
-    if os.environ.get('BASE_REV'):
-        return os.environ['BASE_REV']
+def fix_rev():
+    """Коммит правки — первый, где в app.js появился раздел NEW_MARK (d08510f). FIX_REV=<коммит> — указать явно."""
+    if os.environ.get('FIX_REV'):
+        return os.environ['FIX_REV']
     found = subprocess.run(['git', 'log', '--format=%H', '-S', NEW_MARK, '--', 'app.js'],
                            capture_output=True, text=True, cwd=ROOT, check=True).stdout.split()
-    return found[-1] + '~1' if found else 'HEAD'
+    assert found, 'в истории GitHub нет коммита с разделом «переход к блоку по якорю»'
+    return found[-1]
+
+
+def git_show(rev, rel):
+    return subprocess.run(['git', 'show', rev + ':' + rel], capture_output=True, text=True, cwd=ROOT, check=True).stdout
 
 
 def git_head(rel):
-    """Файл репозитория до этой правки (прежние правила и прежний раздел app.js)."""
-    return subprocess.run(['git', 'show', BASE + ':' + rel], capture_output=True, text=True, cwd=ROOT, check=True).stdout
+    """Файл репозитория до этой правки (прежние правила и прежний раздел app.js) — родитель коммита правки."""
+    return git_show(BASE, rel)
+
+
+def git_fix(rel):
+    """Файл репозитория в коммите правки (новые правила и новый раздел app.js)."""
+    return git_show(FIX, rel)
 
 
 def css_blocks():
-    """Прежний и новый участок style.css (от html{scroll-behavior…} до html:has(:target)…) — из GitHub и рабочей копии."""
-    head, work = git_head('style.css'), (ROOT / 'style.css').read_text(encoding='utf-8')
+    """Прежний и новый участок style.css (от html{scroll-behavior…} до html:has(:target)…) — из коммита правки и его родителя."""
+    head, work = git_head('style.css'), git_fix('style.css')
     i = head.index(CSS_FROM)
     old = head[i:head.index(CSS_TO, i) + len(CSS_TO)]
     k = work.index('/* переход к блоку по якорю (13.11.2026)')
     new = work[k:work.index(CSS_TO, k) + len(CSS_TO)]
-    assert work[:k] == head[:i] and work[k + len(new):] == head[i + len(old):], 'style.css: другие отличия от GitHub'
+    assert work[:k] == head[:i] and work[k + len(new):] == head[i + len(old):], 'style.css: в коммите правки другие отличия'
+    assert (ROOT / 'style.css').read_text(encoding='utf-8').count(new) == 1, 'style.css в GitHub: правки нет'
     assert old.startswith(CSS_FROM) and old.endswith(CSS_TO) and 'scroll-margin-top' not in old, old
     assert 'scroll-padding-top:96px' not in new and new.count('scroll-margin-top') == 2 and new.endswith(CSS_TO), new
     return old, new
 
 
 def legal_blocks():
-    old = git_head('legal.css')
-    new = (ROOT / 'legal.css').read_text(encoding='utf-8')
+    old, new = git_head('legal.css'), git_fix('legal.css')
     r = []
     a = '.l-sec{padding-top:8px}\n'
     i = new.index(a) + len(a)
@@ -121,14 +134,15 @@ def legal_blocks():
     for x, y, n in r:
         assert out.count(x) == n, x
         out = out.replace(x, y)
-    assert out == new, 'legal.css: кроме двух правил есть другие отличия от GitHub'
+    assert out == new, 'legal.css: в коммите правки кроме двух правил есть другие отличия'
     return r
 
 
 def main():
-    global BASE
-    BASE = base_rev()
-    print('исходные файлы репозитория до правки:', BASE)
+    global BASE, FIX
+    FIX = fix_rev()
+    BASE = FIX + '~1'
+    print('правка — коммит %s, прежние участки — %s~1' % (FIX[:7], FIX[:7]))
     out_dir = pathlib.Path(sys.argv[1]).resolve()
     check = '--check' in sys.argv[2:]
     src = os.environ.get('SRC', '')
@@ -175,7 +189,9 @@ def main():
     parts = tracking_laws.counter_parts()
 
     # app.min.js: прежний последний раздел (как на сайте) и новый — из app.js, сжатые esbuild
-    app_head, app_new = git_head('app.js'), (ROOT / 'app.js').read_text(encoding='utf-8')
+    app_head, app_new = git_head('app.js'), git_fix('app.js')
+    assert (ROOT / 'app.js').read_text(encoding='utf-8').endswith(app_new[app_new.index(NEW_MARK):]), \
+        'app.js в GitHub: раздел «переход к блоку по якорю» изменился после коммита правки'
     sec_old = esbuild(app_head[app_head.index(OLD_MARK):], 'js')
     sec_new = esbuild(app_new[app_new.index(NEW_MARK):], 'js')
     assert sec_old.endswith('})();\n') and sec_new.endswith('})();\n') and 'pcAnchor' in sec_new and 'pcAnchor' not in sec_old
@@ -196,7 +212,8 @@ def main():
             assert text.count(a) == 1, path + ': legal.css'
             replace.append([a, 'legal.css?v=' + NEW_V + '"', 1])
         if path == '':
-            assert 'style.css' not in text and text.count(INLINE_OLD) == 1, 'главная: стили встроены, правила прежние'
+            # стили главной встроены: ссылки на style.css нет (слово есть в пояснении скрипта pcFx с 15.11.2026)
+            assert not re.search(r'href="[^"]*style\.css', text) and text.count(INLINE_OLD) == 1, 'главная: стили встроены, правила прежние'
             assert text.index(INLINE_OLD) < text.index('<!-- style:end -->') < text.index('</head>')
             replace.append([INLINE_OLD, inline_new, 1])
         result = text
