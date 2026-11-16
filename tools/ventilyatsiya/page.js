@@ -34,6 +34,8 @@
       art=vd.querySelector('.v-duct-art'),bs=vd.querySelectorAll('.v-seg button'),caps=vd.querySelectorAll('[data-cap]'),
       im=vd.querySelectorAll('.vk-f'),cv=vd.querySelector('.vk-gl'),pb=vd.querySelector('.vk-play'),mm=window.matchMedia,
       calm=!!(mm&&mm('(prefers-reduced-motion: reduce)').matches),
+      /* закон владельца с 17.11.2026: на телефоне ничего не затемнять — к началу не через затемнение, а плавной сменой */
+      phone=function(){return !!(mm&&mm('(max-width:760px)').matches)},
       cur=0,stopd=calm,vis=false,held=false,busy=false,R=null,tId=0,tFn=null,tLeft=0,tAt=0;
     if(!art||im.length<3||!pb)return;
     var ui=function(i){
@@ -64,7 +66,7 @@
       if(stopd)return;
       if(fresh)bar(cur,HOLD[cur]);
       later(HOLD[cur],function(){
-        var nx=(cur+1)%3,mode=calm?2:(cur===2?3:cur),ms=R?(calm?600:FX[cur]):900;
+        var nx=(cur+1)%3,mode=calm?2:(cur===2?(phone()?2:3):cur),ms=R?(calm?600:FX[cur]):900;
         bar(nx,ms+HOLD[nx]);
         go(nx,mode,ms,function(){auto(false)});
       });
@@ -91,7 +93,7 @@
       var to=ST.indexOf(this.getAttribute('data-s'));if(to<0)return;
       setStop(true);
       if(to===cur&&!busy)return;
-      var fwd=to===cur+1&&!busy,mode=calm?2:(fwd?cur:3),ms=calm?400:(fwd?FX[cur]:900);
+      var fwd=to===cur+1&&!busy,mode=calm?2:(fwd?cur:(phone()?2:3)),ms=calm?400:(fwd?FX[cur]:900);
       go(to,mode,ms,null);
     });
     if('IntersectionObserver' in window){

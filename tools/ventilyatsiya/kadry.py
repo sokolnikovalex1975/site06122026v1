@@ -32,7 +32,11 @@ MARK_BOX = None
 
 
 def stamp(im):
-    """Метка «ИЛЛЮСТРАЦИЯ»: светлый текст на тёмной полупрозрачной плашке, правый верхний угол."""
+    """Метка «ИЛЛЮСТРАЦИЯ»: тёмный текст на светлой плашке, правый верхний угол.
+
+    С 17.11.2026 плашка светлая (была тёмная полупрозрачная): закон владельца «на телефоне ничего не затемнять» —
+    без тёмных заливок поверх фото (README.md). Размер и место метки прежние.
+    """
     global MARK_BOX
     W, H = im.size
     k = W / 2752
@@ -47,11 +51,11 @@ def stamp(im):
     y1 = y0 + ph
     layer = Image.new('RGBA', im.size, (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
-    d.rounded_rectangle((x0, y0, x1, y1), radius=ph // 2, fill=(8, 9, 12, 150), outline=(255, 255, 255, 46), width=max(1, round(2 * k)))
+    d.rounded_rectangle((x0, y0, x1, y1), radius=ph // 2, fill=(244, 246, 250, 224), outline=(0, 0, 0, 40), width=max(1, round(2 * k)))
     x = x0 + px
     ty = y0 + (ph - (asc + desc)) / 2 + round(1 * k)
     for ch, w in zip(MARK, widths):
-        d.text((x, ty), ch, font=font, fill=(255, 255, 255, 228))
+        d.text((x, ty), ch, font=font, fill=(16, 18, 24, 240))
         x += w + track
     MARK_BOX = (x0 / W, y0 / H, x1 / W, y1 / H)
     return Image.alpha_composite(im.convert('RGBA'), layer).convert('RGB')

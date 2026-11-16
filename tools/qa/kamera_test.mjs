@@ -166,9 +166,27 @@ for (const [vpName, w, h, mobile, dpr] of VPS) {
   if (mistMs < 0 || s2.cap.join() !== 'dez' || s2.on.join() !== 'dez') fail(`${where}: «После дезинфекции» ${JSON.stringify(s2)}`);
   await shot(page, `${w}-4-dez`);
   const cycle = ((Date.now() - t0) / 1000).toFixed(1);
-  // щелчок по «До работ» — остановка
+  // закон «на телефоне ничего не затемнять»: кнопка паузы и убранное в «Что видно на кадре» (до 760 px)
+  const law = await page.evaluate(() => {
+    const lum = (c) => { const m = c.match(/[\d.]+/g).map(Number); return (0.2126 * m[0] + 0.7152 * m[1] + 0.0722 * m[2]) / 255; };
+    const pb = getComputedStyle(document.querySelector('#vduct .vk-play')).backgroundColor;
+    const gone = getComputedStyle(document.querySelector('#vduct .v-legend li>span')).color;
+    const t2 = getComputedStyle(document.querySelector('#vduct figcaption')).color;
+    return { pb: lum(pb), gone, t2, phone: matchMedia('(max-width:760px)').matches };
+  });
+  if (law.phone && law.pb < 0.6) fail(`${where}: на телефоне тёмная кнопка паузы поверх фото (${law.pb.toFixed(2)})`);
+  if (law.phone && law.gone !== law.t2) fail(`${where}: на телефоне убранное приглушено (${law.gone} ≠ ${law.t2})`);
+  // щелчок по «До работ» — остановка; переход назад снимаем, чтобы сверить яркость (на телефоне — без затемнения)
+  const art = page.locator('#vduct .v-duct-art');
+  await art.screenshot({ path: path.join(OUT, `${w}-art-dez.png`) }).catch(() => null);
   await page.locator('#vduct .v-seg button[data-s="do"]').click();
+  for (const [i, ms] of [[1, 200], [2, 200], [3, 200]]) {
+    await page.waitForTimeout(ms);
+    await art.screenshot({ path: path.join(OUT, `${w}-art-back-${i}.png`) }).catch(() => null);
+  }
   const backMs = await waitPic(page, 'do');
+  await page.waitForTimeout(400);
+  await art.screenshot({ path: path.join(OUT, `${w}-art-do.png`) }).catch(() => null);
   const s3 = await state(page);
   if (backMs < 0 || s3.s !== 'do' || !s3.paused || s3.on.join() !== 'do') fail(`${where}: щелчок «До работ» ${JSON.stringify(s3)}`);
   await page.waitForTimeout(3200);
