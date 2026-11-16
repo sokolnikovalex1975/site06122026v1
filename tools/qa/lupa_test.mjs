@@ -183,7 +183,8 @@ for (const path of PAGES) {
     if (st.cursor) bad(name + ' телефон', 'нарисованный курсор на телефоне');
     if (st.lens && st.lens.display !== 'none') bad(name + ' телефон', 'лупа на телефоне: ' + JSON.stringify(st.lens));
     if (st.lens && st.lens.id !== 'heroLens' && st.baseFilter !== 'none') bad(name + ' телефон', 'фото приглушено без лупы: ' + st.baseFilter);
-    if (st.heroBg && st.heroBg !== 'hero-m-dim.webp') bad(name + ' телефон', 'фото главной ' + st.heroBg);
+    /* на телефоне фото главной светлое (закон владельца 17.11.2026: на телефоне ничего не затемнять) */
+    if (st.heroBg && st.heroBg !== 'hero-m.webp') bad(name + ' телефон', 'фото главной ' + st.heroBg);
     await ctx.close();
   }
   result.pages.push(row);

@@ -736,8 +736,11 @@
   $$('[data-fade]').forEach(function (el) {
     gsap.fromTo(el, fx({ opacity: 0, y: 34 }, 8), fx({ opacity: 1, y: 0, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true } }, 0));
   });
+  /* на телефоне текст не приглушаем (закон владельца 17.11.2026: на телефоне ничего не затемнять) */
+  var noDim = matchMedia('(max-width: 760px)').matches;
   $$('[data-scrub]').forEach(function (p) {
     splitWords(p, true);
+    if (noDim) return;
     gsap.fromTo($$('.sw', p), { opacity: 0.14 }, { opacity: 1, stagger: 0.1, ease: 'none', scrollTrigger: { trigger: p, start: 'top 86%', end: 'bottom 52%', scrub: 0.6 } });
   });
   });

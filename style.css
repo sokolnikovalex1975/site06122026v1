@@ -621,8 +621,18 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,4.3vw,82px) 0 36px;ba
   .phone i{width:44px;height:44px}
   .logo-sub{margin-left:4px;font-size:10px}
   .hero{min-height:auto;padding-top:110px;align-items:flex-start}
-  .hero-bg{background-image:url(img/hero-m-dim.webp)}
-  .hero::before{background:linear-gradient(180deg,rgba(9,9,11,.5),rgba(9,9,11,.82) 60%,#000)}
+  /* Закон владельца (17.11.2026): на телефоне ничего не затемнять — ни фото, ни текст. Фото первого экрана главной —
+     светлое, полосой над текстом, как на страницах отраслей (снизу — тот же переход в чёрный фон); тёмной заливки
+     поверх фото нет. Затемнённый фон блока заявки и тёмная заливка фото этапов на телефоне не показываются. */
+  .hero-bg{background-image:url(img/hero-m.webp);background-position:50% 42%}
+  .hero::before{display:none}
+  #hero.hero:not(.f-hero){display:block}
+  html #hero.hero:not(.f-hero){padding-top:68px}
+  #hero.hero:not(.f-hero) .hero-media{position:relative;inset:auto;width:100%;height:clamp(104px,calc(100vh - 480px),62vw);height:clamp(104px,calc(100svh - 480px),62vw);overflow:hidden}
+  #hero.hero:not(.f-hero) .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 62%,#000 100%);pointer-events:none}
+  #hero.hero:not(.f-hero) .wrap{margin-top:-24px}
+  .tl-img::after{display:none}
+  [data-scrub] .sw{opacity:1!important}
   .hero h1{margin:26px 0 20px;font-size:clamp(36px,10vw,46px)}
   .hero-ctas{flex-direction:column;margin-top:30px}.hero-ctas .btn{width:100%}
   .badge{min-height:0;padding:9px 14px;font-size:11px;letter-spacing:.08em}
@@ -637,7 +647,7 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,4.3vw,82px) 0 36px;ba
   .tl-row .tl-txt,.tl-row.flip .tl-txt{order:1!important;text-align:left!important}
   .tl-row .tl-img,.tl-row.flip .tl-img{order:2!important}
   .tl-txt p{margin-left:0!important}
-  .cta-bg{background-image:url(img/cta-m.webp)}
+  .cta-bg{display:none}
   .msg a{width:44px;height:44px}
   .ft{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 20px}.ft>div:first-child,.ft>div:nth-child(4),.ft>div:last-child{grid-column:1/-1}
   .ft ul{gap:0}
@@ -791,6 +801,8 @@ html.js.hero-in #hero [data-hin]{opacity:1}
    при прокрутке теперь только шире 1280 px (app.js), а на телефоне нижний отступ героя 32 px — как промежуток между
    текстом первого экрана и панелью. Только главная: у внутренних страниц .f-hero / .d-hero / .p-hero свои отступы. */
 @media (max-width:760px){#hero.hero:not(.f-hero){padding-bottom:32px}}
+/* очень низкий экран телефона (до 520 px по высоте): полосы фото нет, как на страницах отраслей */
+@media (max-width:760px) and (max-height:520px){#hero.hero:not(.f-hero) .hero-media{display:none}html #hero.hero:not(.f-hero){padding-top:92px}#hero.hero:not(.f-hero) .wrap{margin-top:0}}
 
 /* ===== Облегчённый режим для слабых компьютеров (15.11.2026) =====
    Класс lowfx на <html> ставит скрипт в <head> (?fx=lite или решение, уже принятое на этом визите) или app.js: через 3 с
