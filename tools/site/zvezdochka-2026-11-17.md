@@ -42,4 +42,29 @@
 
 ## Публикация на рабочем сайте
 
-Запись добавляется после выкладки.
+Опубликовано 17.11.2026 в 00:55:02 МСК: разовая задача Crontab «Сценарий SH»
+(`/bin/sh /home/c/cd59839/pestcontrol-zvezdochka-2026-11-17/run_once.sh`), после запуска задача удалена;
+в Crontab остались только 2 задачи «Агерис Скрипты».
+
+Журнал `run_once.log` на сервере:
+
+```
+start: 2026-11-17 00:55:02 MSK
+publish_zvezdochka.py: OK
+deploy_payload.json: OK
+Python 3.6.9
+PRECHECK OK: 5/5 original and resulting checksums verified
+PRECHECK OK: 5/5 original and resulting checksums verified
+BACKUP OK: 5/5 outside public_html
+PUBLISHED: 5/5 checksums verified
+BACKUP: /home/c/cd59839/pestcontrol-zvezdochka-2026-11-17/backup
+ALREADY PUBLISHED: 5/5 checksums match
+exit: 0
+end: 2026-11-17 00:55:02 MSK
+```
+
+- HTTPS после выкладки: 5/5 страниц HTTP 200, суммы «после» (gostinitsy 6cd53f6d, magaziny-i-torgovye-seti 5c744205,
+  pishchevoe-proizvodstvo bb71d8d9, sklady-i-logistika c313b0bd, farmatsevticheskie-proizvodstva dbae28dc);
+  `tracking_laws` (счётчики, колл-трекинг) и закон независимости — без нарушений.
+- `node tools/qa/zvezdochka_test.mjs` на рабочем сайте (8 страниц, 1440 и 390 px) — «Нарушений нет».
+- Откат: `python3 "$HOME/pestcontrol-zvezdochka-2026-11-17/publish_zvezdochka.py" --rollback`.
