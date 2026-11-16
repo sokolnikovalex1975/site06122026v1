@@ -1,0 +1,47 @@
+{
+ "name": "mushki2-2026-11-17",
+ "count": 3,
+ "files": [
+  {
+   "file": "magaziny-i-torgovye-seti/index.php",
+   "before": "5c744205278eb3f102e0d9771806b253779b33a20064c28ba17e7a304c7887d1",
+   "after": "e37971294d3ca87ef17a0611c9d65c7c8e0208d71c7ea218eb8f5c5db12f008f",
+   "replace": [
+    [
+     "Дрозофилы и&nbsp;мухи",
+     "Мухи и&nbsp;мелкие мушки",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "biznes-tsentry-torgovye-tsentry-predpriyatiya/index.php",
+   "before": "bd4b223d7cc06dad516cc94d95dfa03a0a2a2f1d23fd6eb2960451142e5010dc",
+   "after": "8ce69ba25f8f2652021b76904b4e6ef6854424b1a9b531f35518089ad41f052d",
+   "replace": [
+    [
+     "<h3>Мухи, дрозофилы, бабочницы</h3>",
+     "<h3>Мухи и мелкие мушки</h3>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "search-index.json",
+   "before": "8efd128f795c162c93c71b3d8b1abb573ec2e5a108d94d96ce6365a41bba92b8",
+   "after": "77512d11988f13bae692e284ff21db66b3a69f4012284722279d70fd6375f7cb",
+   "replace": [
+    [
+     " · Дрозофилы и мухи · ",
+     " · Мухи и мелкие мушки · ",
+     1
+    ],
+    [
+     " · Мухи, дрозофилы, бабочницы · ",
+     " · Мухи и мелкие мушки · ",
+     1
+    ]
+   ]
+  }
+ ]
+}
