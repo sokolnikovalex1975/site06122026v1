@@ -86,4 +86,49 @@ PKG=<папка пакета>/pkg node tools/qa/anchor_heading_test.mjs
 
 ## Публикация на рабочем сайте
 
-Решение владельца 17.11.2026: «Выкладывай на Timeweb пакет zagolovok-2026-11-13 и проверь HTTPS». Запись — после выкладки.
+Решение владельца 17.11.2026: «Выкладывай на Timeweb пакет zagolovok-2026-11-13 и проверь HTTPS».
+
+**Опубликовано 17.11.2026 в 01:39:01 МСК** тем же способом, что и прошлые выкладки (SSH-консоль из облака недоступна):
+
+1. «Файловый менеджер» — папка `~/pestcontrol-zagolovok-2026-11-13/` (вне `public_html`), загружены файлы коммита `03a72b3`:
+   `publish_zagolovok.py` (`bc1b04b9…`), `deploy_payload.json` (`dca5abdf…`), `run_once.sh` (`ce52de35…`).
+2. «Crontab» — задание «Центр: разовая выкладка zagolovok-2026-11-13 (удалить после запуска)», «Сценарий SH»,
+   `/pestcontrol-zagolovok-2026-11-13/run_once.sh`, раз в минуту, UTC+0. Задание отработало в 01:39 МСК и сразу
+   удалено; две прежние задачи Crontab не менялись.
+
+Журнал `run_once.log` на сервере (открыт в «Файловом менеджере» только для чтения):
+
+```
+start: 2026-11-17 01:39:01 MSK
+publish_zagolovok.py: OK
+deploy_payload.json: OK
+Python 3.6.9
+PRECHECK OK: 45/45 original and resulting checksums verified (style.css, legal.css, app.min.js, 42 pages, 83 version links)
+PRECHECK OK: 45/45 original and resulting checksums verified (style.css, legal.css, app.min.js, 42 pages, 83 version links)
+BACKUP OK: 45/45 outside public_html
+PUBLISHED: 45/45 checksums verified
+BACKUP: /home/c/cd59839/pestcontrol-zagolovok-2026-11-13/backup
+ALREADY PUBLISHED: 45/45 checksums match
+exit: 0
+end: 2026-11-17 01:39:02 MSK
+```
+
+Проверка после выкладки (17.11.2026, 01:39–01:50 МСК):
+
+- **HTTPS:** новая версия на главной видна с 01:39:03 МСК. Все 45 файлов с сайта (`style.css`, `legal.css`, `app.min.js`
+  с `?v=20261117zagolovok` и 42 страницы) совпали с суммами «после» из `MANIFEST.txt` — 45/45 (`style.css` `ca715e1f…`,
+  `legal.css` `39acaf9f…`, `app.min.js` `c4e8291c…`, главная `65cb2264…`).
+- **Что изменилось на страницах:** 41 страница отличается от прежней (копия `backup/` пакета) только строками `?v=`;
+  главная — ещё правилами `scroll-padding-top` и `scroll-margin-top` во встроенных стилях. Счётчики, колл-трекинг,
+  телефон и почта — байт в байт прежние.
+- **Законы:** `tracking_laws.py --check-prod` (42 страницы с сайта) — OK; `independence_law.py --check-prod` (45 файлов
+  с сайта) и `--check` репозитория — соблюдён (предупреждения прежние: общий ключ UIS и адрес ждут решения владельца).
+- **Браузер на рабочем сайте:** `anchor_heading_test.mjs` — 37 проверок, 0 нарушений (компьютер 1440 — 32 px под шапкой,
+  телефон 390 — 20 px; переходы с других страниц через 1/2/3 с, без скриптов, «уменьшение движения», оглавление
+  политики). Обычные визиты со счётчиками («Дезинсекция» и главная, компьютер 1440): Метрика `tag.js?id=113675622` — 200,
+  `watch/113675622` — 200, Radist `tracker.min.js` и `track` — 200, код UIS на месте; ошибок JavaScript нет. Подмену
+  номера UIS из облака не проверить: сервер UIS отдаёт облаку `cs.min.js` очень медленно (не догрузился и `curl` за 30 с);
+  код UIS, разметка телефона и почты при этой выкладке не менялись.
+
+**Откат:** `python3 ~/pestcontrol-zagolovok-2026-11-13/publish_zagolovok.py --rollback` — разовым заданием «Crontab»
+(или из SSH-консоли панели): вернёт 45 файлов из `backup/` с проверкой сумм.
