@@ -46,7 +46,42 @@
 
 ## Публикация на рабочем сайте
 
-Заполняется после выкладки.
+**Опубликовано 17.11.2026 в 19:47:55 МСК** через SSH-консоль панели Timeweb (`hosting.timeweb.ru/console`, сохранённый вход
+«Timeweb: основной аккаунт cd59839»): папка `~/pestcontrol-samoproverka-2026-11-17/` (вне `public_html`), четыре файла
+скачаны с GitHub по коммиту `910b6b1` и сверены (`publish_samoproverka.py` `5fe01305…`, `deploy_payload.json` `d7743154…`,
+`run_once.sh` `d5a2885a…`, `MANIFEST.txt` `023c2632…`); `--check` до запуска — PRECHECK OK 13/13. Запуск `LANG=C sh
+run_once.sh`. Задания «Crontab» не создавались и не менялись.
+
+Журнал `run_once.log` на сервере:
+
+```
+start: 2026-11-17 19:47:55 MSK
+publish_samoproverka.py: OK
+deploy_payload.json: OK
+Python 3.6.9
+PRECHECK OK: 13/13 original and resulting checksums verified
+PRECHECK OK: 13/13 original and resulting checksums verified
+BACKUP OK: 13/13 outside public_html
+PUBLISHED: 13/13 checksums verified
+BACKUP: /home/c/cd59839/pestcontrol-samoproverka-2026-11-17/backup
+ALREADY PUBLISHED: 13/13 checksums match
+exit: 0
+end: 2026-11-17 19:47:56 MSK
+```
+
+Временных файлов `*-stage` в `public_html` нет.
+
+- **HTTPS**: все 13 страниц (`/<страница>/` и `/<страница>/?utm_source=check`) — HTTP 200, SHA-256 как в пакете;
+  `tracking_laws.check_page` — без нарушений (Метрика 113675622, UIS и Radist — по одному, код тот же; телефон и почта —
+  по закону), закон независимости — без нарушений, `samoproverka.py --check-prod` — без нарушений.
+- **`samoproverka_test.mjs` на рабочем сайте** (запросы к счётчикам в проверке отменяются): 13 страниц × 15 ширин —
+  нарушений 0 (ложные 502 Timeweb при открытии из облака — повтор, со второго раза 0); предупреждения только прежние
+  (601 px: вентиляция и дезинсекция — таблицы норм).
+- Снимок «Рестораны и кафе», 375×812: после отметки 3 пунктов — «3 из 5», три отрезка полоски, кнопка «Заказать
+  обследование» под подсказкой, нижняя панель убрана (`html.f-check-on`).
+
+Пакеты других задач, собранные от прежних версий этих 13 страниц, больше не применятся (скрипты остановятся, ничего не
+меняя) — их нужно пересобрать от текущих страниц сайта.
 
 ## Откат
 
