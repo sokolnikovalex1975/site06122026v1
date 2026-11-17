@@ -803,6 +803,8 @@ html.js.hero-in #hero [data-hin]{opacity:1}
 @media (max-width:760px){#hero.hero:not(.f-hero){padding-bottom:32px}}
 /* очень низкий экран телефона (до 520 px по высоте): полосы фото нет, как на страницах отраслей */
 @media (max-width:760px) and (max-height:520px){#hero.hero:not(.f-hero) .hero-media{display:none}html #hero.hero:not(.f-hero){padding-top:92px}#hero.hero:not(.f-hero) .wrap{margin-top:0}}
+/* зона нажатия ссылок «Подробнее…» на телефоне — не меньше 44 px (было 18 и 31 px), вид и раскладка прежние (17.11.2026) */
+@media (max-width:760px){.pest-more,.hz-more{position:relative}.pest-more::after,.hz-more::after{content:"";position:absolute;inset:-13px -8px}.hz-more::after{inset:-7px -8px}}
 
 /* ===== Облегчённый режим для слабых компьютеров (15.11.2026) =====
    Класс lowfx на <html> ставит скрипт в <head> (?fx=lite или решение, уже принятое на этом визите) или app.js: через 3 с

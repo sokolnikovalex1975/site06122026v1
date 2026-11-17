@@ -215,6 +215,22 @@
   /* превью на GitHub Pages: заявки никуда не отправляются, форма показывает успешную отправку */
   var DEMO = /\.github\.io$/i.test(location.hostname);
   var sending = false, FAIL_MSG = 'Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам: +7 (495) 104-35-70.';
+  /* после отправки — подтверждение на экране (17.11.2026): поля формы скрываются, форма становится короче, и без прокрутки
+     «Заявка отправлена» уезжала выше края экрана — на компьютере целиком, посетитель видел только подвал */
+  var sentOk = function () {
+    form.classList.add('sent');
+    refreshLater();
+    var ok = $('.ok', form);
+    if (!ok) return;
+    var r = ok.getBoundingClientRect(), vh = innerHeight, top = (hdr ? hdr.getBoundingClientRect().height : 0) + 16;
+    if (r.top < top || r.bottom > vh - 16) {
+      var y = Math.max(0, Math.round(pageYOffset + r.top - Math.max(top, (vh - r.height) / 2)));
+      if (lenis) lenis.scrollTo(y, { duration: reduce ? 0 : 0.9, immediate: reduce, force: true });
+      else window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+    }
+    ok.setAttribute('tabindex', '-1');
+    try { ok.focus({ preventScroll: true }); } catch (err) { /* старый браузер */ }
+  };
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (sending) return;
@@ -229,7 +245,7 @@
     sending = true;
     submitBtn.disabled = true;
     submitBtn.classList.add('is-loading');
-    if (DEMO) { setTimeout(function () { form.classList.add('sent'); refreshLater(); }, 700); return; }
+    if (DEMO) { setTimeout(sentOk, 700); return; }
     /* вид объекта: если подпись пункта отличается от значения для send.php («Медицинская организация» уходит
        как «Другое»), подпись попадает в комментарий заявки — если страница не добавила её сама */
     var fd = new FormData(form), ts = form.elements.type, to = ts && ts.options ? ts.options[ts.selectedIndex] : null;
@@ -257,8 +273,7 @@
             Comagic.addOfflineRequest({ name: form.elements.name.value.trim(), phone: form.elements.phone.value.trim() });
           }
         } catch (err) { console.error('UIS:', err); }
-        form.classList.add('sent');
-        refreshLater();
+        sentOk();
       })
       .catch(function (err) {
         console.error('Ошибка отправки формы:', err);
@@ -987,6 +1002,24 @@
    (tools/deploy/prepare-2026-11-13-zagolovok.py). */
 (function () {
   var w = window, d = document, root = d.documentElement, hdr = d.getElementById('hdr'), holdT = 0, seq = 0;
+  /* блок на месте прибытия — сразу целиком (17.11.2026): анимации появления, которые запустились по дороге, доводятся до
+     конца. Раньше после «Бесплатный аудит» поля заявки 1,5–2 с были невидимы, после пункта меню карточки блока
+     проявлялись уже на месте. Только одиночные анимации верхнего уровня на экране: циклы, анимации от прокрутки (scrub)
+     и шкалы времени (вход первого экрана, заставка) не трогаются */
+  var finish = function () {
+    var g = w.gsap;
+    if (!g || !g.globalTimeline) return;
+    var vh = w.innerHeight;
+    g.globalTimeline.getChildren(false, true, false).forEach(function (tw) {
+      if (tw.progress() >= 1 || tw.repeat() || (tw.scrollTrigger && tw.scrollTrigger.vars && tw.scrollTrigger.vars.scrub)) return;
+      var near = tw.targets().some(function (el) {
+        if (!el || !el.getBoundingClientRect) return false;
+        var r = el.getBoundingClientRect();
+        return r.bottom > 0 && r.top < vh;
+      });
+      if (near) tw.progress(1);
+    });
+  };
   /* куда прокрутить страницу, чтобы начало блока t встало сразу под шапкой. У раздела (section) начало — верх первого
      дочернего блока в потоке (.wrap с подписью и заголовком; у разделов политики — заголовок с его отступом сверху),
      фон и украшения (position: absolute) не в счёт; у карточки, строки таблицы, заголовка — их верх */
@@ -1026,6 +1059,8 @@
       fin = true;
       var y = anchorY(t);
       if (Math.abs(w.pageYOffset - y) >= 2) { if (lenis) lenis.scrollTo(y, { immediate: true }); else jump(y, false); }
+      finish();
+      setTimeout(finish, 300); /* анимации, запущенные сверкой положения и пересчётом ScrollTrigger */
       setTimeout(function () { if (my === seq) hold(false); }, 150);
     };
     if (lenis) { lenis.scrollTo(anchorY(t), { duration: 1.5, easing: ease, onComplete: end }); return; }
@@ -1060,6 +1095,7 @@
   var settle = function () {
     land();
     [300, 1000, 2000].forEach(function (ms) { setTimeout(land, ms); });
+    [300, 1000].forEach(function (ms) { setTimeout(function () { if (!done) finish(); }, ms); }); /* блок — сразу целиком */
     setTimeout(stop, 2500);
   };
   hold(true);
