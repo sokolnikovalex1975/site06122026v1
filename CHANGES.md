@@ -16,7 +16,8 @@
 - **Сборка:** `tools/site/samoproverka.py` — шаг `build_site.py` после `mob_fit.py`, `--check` и `--check-prod`; проверка
   в браузере — `tools/qa/samoproverka_test.mjs` (14 страниц × 15 ширин, 0 нарушений), `mob_fit_test.mjs` — без новых
   замечаний, Lighthouse — без изменений, CLS 0. Подробности — `tools/site/samoproverka-2026-11-17.md`.
-- **Timeweb:** не выкладывалось — ждёт команды владельца.
+- **Timeweb:** команда владельца 17.11.2026 «Вноси изменения на timeweb» — пакет `samoproverka-2026-11-17` (13 страниц, страницы защиты
+  от грызунов на рабочем сайте нет), журнал — `tools/site/samoproverka-timeweb-2026-11-17.md`.
 
 ## 17.11.2026: вентиляция — «Что видит камера в коробе»: реалистичные кадры вместо схемы (GitHub и Timeweb, выкладка 17.11.2026)
 

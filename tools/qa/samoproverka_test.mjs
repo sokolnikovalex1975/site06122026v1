@@ -104,7 +104,7 @@ for (const w of WIDTHS) {
         const s = document.getElementById('samoproverka'); const q = c => s.querySelector(c);
         const R = el => { const r = el.getBoundingClientRect(); return { x: r.left + scrollX, y: r.top + scrollY, w: r.width, h: r.height }; };
         return { sec: R(s), panel: R(q('.f-check')), t: R(q('.f-check-t')), res: R(q('.f-check-res')), list: R(q('.f-check-list')),
-          note: R(q('.f-check-note')), btn: R(q('.f-check .btn')), label: q('.f-check .btn-t').getAttribute('data-t') };
+          note: R(q('.f-check-note')), btn: R(q('.f-check .btn')), label: (e => e.getAttribute('data-t') || e.textContent.trim())(q('.f-check .btn-t')) };
       });
       row.oldH = Math.round(o.sec.h); row.oldPanelH = Math.round(o.panel.h);
       if (w > 1100) {
