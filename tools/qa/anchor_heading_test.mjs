@@ -4,9 +4,12 @@
 // Ожидание: шапка видна, верх подписи над заголовком (у формы заявки — верх содержимого) ниже шапки на 20…32 px
 // (min(32, max(20, 2,2 % ширины окна)), допуск 3 px). Было: шапка уезжала, подпись на 240–280 px от верха окна.
 // 1. Щелчки на странице: меню шапки и выпадающие списки (компьютер), мобильное меню (телефон), подвал вверх по странице,
-//    ссылка на форму. Во время прокрутки шапка не прячется; после первого колеса посетителя прячется как обычно.
+//    ссылка на форму. Во время прокрутки шапка не прячется; после первого колеса посетителя на компьютере она остаётся
+//    на месте (компактная шапка с 17.11.2026 не уезжает на экранах шире 760 px; на телефоне уходит при чтении вниз).
 // 2. Переход с другой страницы (/#podhod, /#tseny, /#etapy, /#vrediteli, /#voprosy): положение через 1, 2 и 3 с.
-// 3. Без app.min.js (браузер сам, по style.css) — то же место, что со скриптом (нет скачка при запуске скриптов).
+// 3. Без app.min.js (браузер сам, по style.css) — то же место, что со скриптом (нет скачка при запуске скриптов): подпись
+//    на высоте компактной шапки (--hdr-c и линия 1 px) и ещё 20…32 px от верха окна; шапка без скрипта — в полный рост,
+//    подпись не под ней.
 // 4. «Уменьшение движения» — сразу на место. 5. Политика: оглавление — заголовок раздела под шапкой (со скриптом и без).
 // Счётчики не загружаются (запросы к Метрике, UIS и Radist обрываются). Итог — число нарушений; код выхода 1, если есть.
 import { chromium } from 'playwright';
@@ -67,11 +70,16 @@ const where = (page, id) => page.evaluate((id) => {
   if (t.classList.contains('cta')) top = Math.min(...[...t.querySelector('.wrap').children].map((c) => c.getBoundingClientRect().top));
   else if (t.classList.contains('l-sec')) top = t.querySelector('h2').getBoundingClientRect().top;
   else top = (t.querySelector('.eyebrow, h1, h2') || t).getBoundingClientRect().top;
-  return { shown, gap: Math.round(top - hr.bottom), exp: Math.round(Math.min(32, Math.max(20, innerWidth * 0.022))), y: Math.round(scrollY),
+  const hc = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdr-c')) || 0; // компактная шапка (17.11.2026)
+  return { shown, gap: Math.round(top - hr.bottom), gapC: Math.round(top - hc - 1), compact: Math.round(hr.height) === Math.round(hc + 1),
+    exp: Math.round(Math.min(32, Math.max(20, innerWidth * 0.022))), y: Math.round(scrollY),
     docW: document.documentElement.scrollWidth, iw: innerWidth };
 }, id);
 const okPos = (m) => m && m.shown && Math.abs(m.gap - m.exp) <= TOL && m.docW <= m.iw;
-const fmt = (m) => m ? `${m.shown ? 'шапка видна' : 'ШАПКА СКРЫТА'}, под шапкой ${m.gap} px (нужно ${m.exp})` : 'блок не найден';
+const fmt = (m) => m ? `${m.shown ? 'шапка видна' : 'ШАПКА СКРЫТА'}${m.compact ? ' (компактная)' : ''}, под шапкой ${m.gap} px (нужно ${m.exp})` : 'блок не найден';
+// без app.min.js шапка в полный рост: подпись — под компактной высотой шапки + 20…32 px, но не под самой шапкой
+const okNoJs = (m) => m && Math.abs(m.gapC - m.exp) <= 4 && m.gap >= 0;
+const fmtNoJs = (m) => m ? `от компактной шапки ${m.gapC} px (нужно ${m.exp}), от шапки в полный рост ${m.gap} px` : 'блок не найден';
 
 const tapOrClick = async (page, mob, a) => {
   const b = await a.boundingBox();
@@ -132,11 +140,12 @@ for (const [vn, w, h, mob] of VP) {
       await page.waitForTimeout(2000);
       const m = await where(page, id);
       let restored = 'не проверялось';
-      if (!mob) { // первое колесо посетителя — шапка снова прячется при прокрутке вниз
+      if (!mob) { // первое колесо посетителя: на компьютере компактная шапка остаётся на месте (17.11.2026)
         await page.mouse.move(w / 2, h / 2); await page.mouse.wheel(0, 500); await page.waitForTimeout(900);
-        restored = (await where(page, id)).shown ? 'НЕ спряталась' : 'спряталась';
+        const r = await where(page, id);
+        restored = r.shown && r.compact ? 'осталась (компактная)' : (r.shown ? 'осталась, НЕ компактная' : 'СПРЯТАЛАСЬ');
       }
-      const ok = okPos(m) && during.every(Boolean) && (mob || restored === 'спряталась') && !errs.length && new URL(page.url()).pathname === from;
+      const ok = okPos(m) && during.every(Boolean) && (mob || restored === 'осталась (компактная)') && !errs.length && new URL(page.url()).pathname === from;
       line(ok, `${vn} ${from} ${kind} «${text || 'заявка'}» → #${id}: ${fmt(m)}; во время прокрутки шапка ${during.every(Boolean) ? 'видна' : 'ПРЯТАЛАСЬ'}` +
         `${mob ? '' : '; колесо вниз — шапка ' + restored}${errs.length ? '; JS: ' + errs.join(' | ') : ''}`);
     } catch (e) { line(false, `${vn} ${from} «${text}»: ${String(e).slice(0, 200)}`); }
@@ -184,7 +193,7 @@ for (const [vn, w, h, mob] of VP) {
     try {
       await open(page, BASE + '/#' + id); await page.waitForTimeout(1500);
       const m = await where(page, id);
-      line(m && Math.abs(m.gap - m.exp) <= 4, `${vn} без скриптов /#${id}: ${fmt(m)}`);
+      line(okNoJs(m), `${vn} без скриптов /#${id}: ${fmtNoJs(m)}`);
     } catch (e) { line(false, `${vn} без скриптов /#${id}: ${String(e).slice(0, 200)}`); }
     await page.close();
   }
@@ -198,7 +207,7 @@ for (const [vn, w, h, mob] of VP) {
       await a.scrollIntoViewIfNeeded(); await page.waitForTimeout(400);
       await tapOrClick(page, mob, a); await page.waitForTimeout(1800);
       const m = await where(page, id);
-      line(m && Math.abs(m.gap - m.exp) <= 4, `${vn} политика, оглавление → #${id}: ${fmt(m)}`);
+      line(okNoJs(m), `${vn} политика без скрипта, оглавление → #${id}: ${fmtNoJs(m)}`);
     } catch (e) { line(false, `${vn} политика, оглавление: ${String(e).slice(0, 200)}`); }
     await page.close();
   }

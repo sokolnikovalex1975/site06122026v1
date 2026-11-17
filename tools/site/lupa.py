@@ -37,6 +37,9 @@ import unify  # noqa: E402
 
 OLD_COMMIT = 'd08510f'  # репозиторий до выпуска (прежние фонарь, скрипт в <head>, вход первого экрана)
 REPO_OLD_V, NEW_V = '20261113zagolovok', '20261115lupa'
+# Версии после выпуска лупы (17.11.2026 «шапка» — 20261117shapka, tools/site/unify.py): разметка лупы та же,
+# поэтому --check принимает и общую версию из unify.py, а не только 20261115lupa.
+LATER_V = tuple(v for v in (unify.VERSION,) if v != NEW_V)
 ESBUILD = ['npx', '--yes', 'esbuild@0.24.2']
 SKIP = ('preview-', 'tools/', 'dist/', 'server/', 'vendor/', 'node_modules/')
 
@@ -240,6 +243,10 @@ def pages():
             yield p, rel
 
 
+def has_v(s):
+    return any('?v=' + v in s for v in (NEW_V,) + LATER_V)
+
+
 def main(argv):
     check = '--check' in argv
     bad = changed = 0
@@ -247,13 +254,13 @@ def main(argv):
         s = p.read_text(encoding='utf-8')
         if check:
             errs = problems(s)
-            if '?v=' + NEW_V not in s:
-                errs.append('версия не ' + NEW_V)
+            if not has_v(s):
+                errs.append('версия не ' + ' и не '.join((NEW_V,) + LATER_V))
             for e in errs:
                 print('НАРУШЕНИЕ %s: %s' % (rel, e))
             bad += bool(errs)
             continue
-        if '?v=' + NEW_V in s and not problems(s):
+        if has_v(s) and not problems(s):
             continue  # уже по-новому
         edits = page_edits(s, REPO_OLD_V, home_css=home_css_hunks() if 'id="heroLit"' in s else None)
         new = apply(s, edits)

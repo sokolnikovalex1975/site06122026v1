@@ -40,7 +40,7 @@
   var scrollToEl = function (target, isTop) {
     /* начало блока — сразу под шапкой: раздел «переход к блоку по якорю» в конце файла (13.11.2026) */
     if (window.pcAnchor) return window.pcAnchor.go(target, isTop, lenis, reduce);
-    if (lenis) lenis.scrollTo(isTop ? 0 : target, { offset: isTop ? 0 : -80, duration: 1.5, easing: function (t) { return 1 - Math.pow(1 - t, 4); } });
+    if (lenis) lenis.scrollTo(isTop ? 0 : target, { offset: isTop ? 0 : -80, duration: 0.8, easing: function (t) { return 1 - Math.pow(1 - t, 4); } });
     else if (isTop) window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
     else target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
   };
@@ -102,25 +102,38 @@
     });
   });
 
-  /* ---------- шапка, прогресс, мобильная панель ---------- */
-  var prog = $('#progress'), mbar = $('#mbar'), cta = $('#zayavka'), lastY = 0;
+  /* ---------- шапка, прогресс, мобильная панель ----------
+     Шапка (17.11.2026, решение владельца после разбора удобства 13.11). На компьютере и планшете она всегда на месте,
+     после 30 px прокрутки — компактная (класс scrolled, style.css «компактная шапка»). На телефоне (до 760 px) и в низком
+     окне (до 500 px) уходит после 48 px прокрутки вниз подряд, если страница прокручена дальше 400 px, и возвращается
+     после 24 px прокрутки вверх с любой скоростью; в первых 120 px видна всегда. Счёт начинается заново при каждой смене
+     направления — дрожание пальца шапку не дёргает. Было: на всех экранах шапка уезжала после 500 px и возвращалась,
+     только если между двумя событиями прокрутки больше 4 px вверх, — при медленной прокрутке не возвращалась вовсе */
+  var prog = $('#progress'), mbar = $('#mbar'), cta = $('#zayavka'), lastY = scrollY, run = 0;
+  var awayMq = matchMedia('(max-width: 760px), (max-height: 500px)');
   var onScroll = function (y) {
+    var d = y - lastY;
+    lastY = y;
     hdr.classList.toggle('scrolled', y > 30);
     /* пока страница едет к блоку по якорю, шапка не прячется (класс hold — раздел «переход к блоку» в конце файла) */
-    if (hdr.classList.contains('hold')) hdr.classList.remove('hide');
-    else if (!menuOpen) {
-      if (y > lastY + 4 && y > 500) hdr.classList.add('hide');
-      else if (y < lastY - 4 || y < 200) hdr.classList.remove('hide');
+    if (menuOpen || y < 120 || !awayMq.matches || hdr.classList.contains('hold')) { hdr.classList.remove('hide'); run = 0; }
+    else if (d) {
+      if ((d > 0) !== (run > 0)) run = 0;
+      run += d;
+      if (run > 48 && y > 400) hdr.classList.add('hide');
+      else if (run < -24) hdr.classList.remove('hide');
     }
-    lastY = y;
     var max = document.documentElement.scrollHeight - innerHeight;
     if (prog) prog.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
     if (mbar) mbar.classList.toggle('show', y > innerHeight * 0.6 && (!cta || cta.getBoundingClientRect().top > innerHeight * 0.5));
   };
   addEventListener('scroll', function () { onScroll(scrollY); }, { passive: true });
   onScroll(scrollY);
+  /* телефон повернули или окно стало шире 760 px — шапка снова на месте */
+  var awayChange = function () { onScroll(scrollY); };
+  if (awayMq.addEventListener) awayMq.addEventListener('change', awayChange); else if (awayMq.addListener) awayMq.addListener(awayChange);
   /* клавиатурный фокус внутри шапки — показать шапку */
-  hdr.addEventListener('focusin', function () { hdr.classList.remove('hide'); });
+  hdr.addEventListener('focusin', function () { hdr.classList.remove('hide'); run = 0; });
 
   /* ---------- плавающие мессенджеры: если UIS показал свою кнопку в том же углу, поднимаем наши над ней ----------
      Кнопку UIS (блок .comagic-c-buttons, скрытый — с классом comagic-widget--hidden) скрипт UIS добавляет после первого
@@ -990,8 +1003,11 @@
    20…32 px (так же scroll-padding-top и scroll-margin-top разделов в style.css и legal.css, чтобы браузер до запуска
    скриптов ставил страницу туда же). Пока страница едет к блоку, шапка не прячется: класс hold у #hdr читает раздел
    «шапка, прогресс…» выше; первое колесо, касание или клавиша посетителя возвращают обычное поведение шапки.
-   - Щелчок по ссылке на этой же странице — window.pcAnchor.go (его вызывает раздел «якоря» выше): Lenis за 1,5 с,
-     в конце — сверка положения; без Lenis — плавная прокрутка браузера, при «уменьшении движения» — сразу.
+   - Щелчок по ссылке на этой же странице — window.pcAnchor.go (его вызывает раздел «якоря» выше): Lenis за 0,8 с
+     (до 17.11.2026 — за 1,5 с), в конце — сверка положения; без Lenis — плавная прокрутка браузера, при «уменьшении
+     движения» — сразу.
+   - Шапка на месте прихода — компактная (style.css: --hdr-c и линия 1 px, 17.11.2026); в первых 30 px страницы —
+     в полный рост (clamp(68px, 6vw, 115px) и линия 1 px).
    - Переход по ссылке с якорем с другой страницы (/#tseny, ../#podhod, ../#etapy, ../#vrediteli, ../#voprosy):
      браузер сразу ставит страницу на блок (style.css: html:has(:target) — без плавной прокрутки), а здесь положение
      держится, пока страница догружается: после загрузки страницы и шрифтов, после каждого пересчёта ScrollTrigger
@@ -1020,6 +1036,13 @@
       if (near) tw.progress(1);
     });
   };
+  /* высота шапки с линией 1 px: компактной (после 30 px прокрутки, style.css: --hdr-c) или в полный рост */
+  var hdrH = function (compact) {
+    if (!hdr) return 0;
+    var c = parseFloat(getComputedStyle(root).getPropertyValue('--hdr-c'));
+    if (compact && c) return c + 1;
+    return Math.min(115, Math.max(68, w.innerWidth * 0.06)) + 1;
+  };
   /* куда прокрутить страницу, чтобы начало блока t встало сразу под шапкой. У раздела (section) начало — верх первого
      дочернего блока в потоке (.wrap с подписью и заголовком; у разделов политики — заголовок с его отступом сверху),
      фон и украшения (position: absolute) не в счёт; у карточки, строки таблицы, заголовка — их верх */
@@ -1033,8 +1056,10 @@
         if (k !== 'absolute' && k !== 'fixed' && r.height) { top = r.top; break; }
       }
     }
-    var off = (hdr ? hdr.getBoundingClientRect().height : 0) + Math.min(32, Math.max(20, w.innerWidth * 0.022));
-    return Math.max(0, Math.min(Math.round(top + w.pageYOffset - off), root.scrollHeight - w.innerHeight));
+    var gap = Math.min(32, Math.max(20, w.innerWidth * 0.022)), abs = top + w.pageYOffset;
+    var y = abs - hdrH(true) - gap;
+    if (y <= 30) y = abs - hdrH(false) - gap; /* у самого начала страницы шапка в полный рост */
+    return Math.max(0, Math.min(Math.round(y), root.scrollHeight - w.innerHeight));
   };
   /* шапка не прячется, пока страница едет к блоку (ms — страховка: снять удержание не позже) */
   var hold = function (on, ms) {
@@ -1051,7 +1076,7 @@
   });
   var ease = function (k) { return 1 - Math.pow(1 - k, 4); };
   var go = function (t, isTop, lenis, reduce) {
-    if (isTop) { if (lenis) lenis.scrollTo(0, { duration: 1.5, easing: ease }); else jump(0, !reduce); return; }
+    if (isTop) { if (lenis) lenis.scrollTo(0, { duration: 0.8, easing: ease }); else jump(0, !reduce); return; }
     var my = ++seq, fin = false;
     hold(true, 3000);
     var end = function () { /* сверка в конце: картинки и шрифты могли сдвинуть блок за время прокрутки */
@@ -1063,7 +1088,7 @@
       setTimeout(finish, 300); /* анимации, запущенные сверкой положения и пересчётом ScrollTrigger */
       setTimeout(function () { if (my === seq) hold(false); }, 150);
     };
-    if (lenis) { lenis.scrollTo(anchorY(t), { duration: 1.5, easing: ease, onComplete: end }); return; }
+    if (lenis) { lenis.scrollTo(anchorY(t), { duration: 0.8, easing: ease, onComplete: end }); return; }
     jump(anchorY(t), !reduce);
     if (!reduce && 'onscrollend' in w) w.addEventListener('scrollend', end, { once: true });
     setTimeout(end, reduce ? 60 : 1600);

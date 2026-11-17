@@ -3,12 +3,16 @@
 // Страницы — PAGES='/ /dezinsektsiya/'. Итог: JSON по каждой странице и экрану, в конце — число нарушений.
 // Норма: адрес страницы не меняется (кроме политики и согласия — они ведут на прайс главной), верх блока после
 // прокрутки — под шапкой (0…200 px от верха окна; на главной 176 px), мобильное меню закрывается, нет горизонтальной прокрутки и ошибок JS.
+// 17.11.2026 (компактная шапка 56–65 px, tools/site/shapka-2026-11-17.md): заголовок блока встаёт сразу под шапкой,
+// поэтому верхний внутренний отступ блока может уйти за край окна на несколько px (за шапкой его не видно). Тогда
+// норма — начало содержимого блока (верх + padding-top) не выше низа шапки; верх блока — не дальше 200 px от верха
+// окна, как раньше.
 import { chromium } from 'playwright';
 const BASE = process.env.BASE || 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai';
 const PAGES = (process.env.PAGES || `/ /dezinsektsiya/ /deratizatsiya-i-dezinsektsiya/ /laboratornye-issledovaniya/analiz-vody/
 /materialy/zhurnal-pest-kontrolya/ /materialy/ /restorany-i-kafe/ /privacy/`).trim().split(/\s+/);
 const VP = [['компьютер 1440×900', 1440, 900, false], ['телефон 390×844', 390, 844, true]];
-const WAIT = 2300; // плавная прокрутка Lenis — 1,5 с
+const WAIT = 2300; // плавная прокрутка Lenis — 0,8 с (до 17.11.2026 — 1,5 с)
 
 const browser = await chromium.launch();
 const out = [];
@@ -26,7 +30,9 @@ for (const [vn, w, h, mob] of VP) {
       const frag = href.split('#')[1];
       const el = document.getElementById(frag);
       const cena = [...document.querySelectorAll('.nav > a')].find(a => a.textContent.trim() === 'Цена');
+      const hd = document.getElementById('hdr');
       return { path: location.pathname, hash: location.hash, top: el ? Math.round(el.getBoundingClientRect().top) : null,
+        pad: el ? Math.round(parseFloat(getComputedStyle(el).paddingTop) || 0) : 0, hh: hd ? hd.offsetHeight : 0,
         active: cena ? cena.classList.contains('active') : null, docW: document.documentElement.scrollWidth, iw: innerWidth,
         menu: document.getElementById('burger')?.getAttribute('aria-expanded') };
     }, href);
@@ -56,7 +62,7 @@ for (const [vn, w, h, mob] of VP) {
       const r = await where(href);
       const samePage = !href.split('#')[0];
       const ok = (samePage ? r.path === new URL(BASE + p).pathname : r.path !== new URL(BASE + p).pathname)
-        && r.top !== null && r.top >= 0 && r.top <= 200 && r.docW <= r.iw && (r.menu === null || r.menu === 'false');
+        && r.top !== null && (r.top >= 0 || r.top + r.pad >= r.hh) && r.top <= 200 && r.docW <= r.iw && (r.menu === null || r.menu === 'false');
       if (!ok) bad++;
       res.steps.push({ name, href, ok, ...r });
       if (!samePage) { await page.goto(BASE + p, { waitUntil: 'load' }); await page.waitForTimeout(1200); }
@@ -80,7 +86,7 @@ for (const [vn, w, h, mob] of VP) {
 await browser.close();
 for (const r of out) {
   console.log(`${r.vn} ${r.p}${r.err ? ' ОШИБКА ' + r.err : ''}${r.errs ? ' JS: ' + r.errs.join(' | ') : ''}`);
-  for (const s of r.steps) console.log(`  ${s.ok ? 'OK ' : 'НЕТ'} ${s.name}: ${s.href} → ${s.path}${s.hash}, верх блока ${s.top} px` +
+  for (const s of r.steps) console.log(`  ${s.ok ? 'OK ' : 'НЕТ'} ${s.name}: ${s.href} → ${s.path}${s.hash}, верх блока ${s.top} px${s.top < 0 ? ` (содержимое с ${s.top + s.pad} px, шапка ${s.hh} px)` : ''}` +
     `${s.active !== null ? ', «Цена» подсвечена: ' + (s.active ? 'да' : 'нет') : ''}${s.menu !== null && s.menu !== undefined ? ', меню открыто: ' + s.menu : ''}`);
 }
 console.log(`Нарушений: ${bad}`);

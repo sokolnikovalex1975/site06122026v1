@@ -28,11 +28,12 @@
   --ease:cubic-bezier(.16,1,.3,1);--ease-io:cubic-bezier(.65,0,.35,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-/* переход к блоку по якорю (13.11.2026): начало блока — сразу под шапкой. Отступ сверху — высота шапки (.hdr .wrap
-   и линия 1 px) и ещё 20…32 px; у разделов вычитается их собственный верхний отступ (и линия-разделитель), поэтому
-   под шапку встаёт подпись над заголовком. Так же считает app.js (раздел «переход к блоку по якорю»). Было: верх
+/* переход к блоку по якорю (13.11.2026): начало блока — сразу под шапкой. Отступ сверху — высота компактной шапки
+   (--hdr-c и линия 1 px; после прокрутки шапка компактная, 17.11.2026) и ещё 20…32 px; у разделов вычитается их
+   собственный верхний отступ (и линия-разделитель), поэтому под шапку встаёт подпись над заголовком. Тот же отступ
+   держит фокус клавиатуры ниже шапки. Так же считает app.js (раздел «переход к блоку по якорю»). Было: верх
    раздела на 96 px от верха окна, и над подписью оставалось 180–200 px пустого тёмного поля */
-html{scroll-behavior:smooth;scroll-padding-top:calc(clamp(68px,6vw,115px) + 1px + clamp(20px,2.2vw,32px))}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr-c) + 1px + clamp(20px,2.2vw,32px))}
 section.s[id]{scroll-margin-top:calc(-1px - clamp(80px,7vw,130px))}
 section.cta[id]{scroll-margin-top:calc(-1px - clamp(90px,8vw,150px))}
 /* переход по ссылке с якорем с другой страницы (/#tseny, ../#podhod): браузер сразу ставит страницу на блок, а не плывёт
@@ -114,10 +115,36 @@ html:not(.js) .intro,html.anim-fail .intro,html.no-intro .intro{display:none}
 @media (prefers-reduced-motion:reduce){.cursor-dot,.cursor-lbl,.cursor-ring::before,.cursor-ring::after{transition:none!important}}
 
 /* ===== header ===== */
-.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s,transform .5s var(--ease);border-bottom:1px solid transparent}
-.hdr.scrolled{background:rgba(0,0,0,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--line)}
+.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s,transform .35s var(--ease);border-bottom:1px solid transparent}
+.hdr.scrolled{background:rgba(9,9,11,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--line)}
 .hdr.hide{transform:translateY(-100%)}
-.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:clamp(68px,6vw,115px);gap:24px}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:clamp(68px,6vw,115px);gap:24px;transition:height .3s var(--ease)}
+/* компактная шапка (17.11.2026, решение владельца после разбора удобства 13.11): после 30 px прокрутки (класс scrolled,
+   app.js) шапка 64 px на компьютере, 60 px до 1280 px и 56 px на телефоне (--hdr-c), фон плотнее — текст страницы
+   под ней не просвечивает. На компьютере и планшете шапка больше не уезжает; на телефоне и в низком окне (до 500 px)
+   уходит при чтении вниз и возвращается при прокрутке вверх (app.js, раздел «шапка, прогресс…»). Кнопки на телефоне
+   и планшете не уменьшаются: их размер — для пальца. Было: шапка в полный рост (до 116 px) уезжала на всех экранах */
+:root{--hdr-c:64px}
+.hdr .logo-mark{transition:border-color .4s,transform .6s var(--ease),width .3s var(--ease),height .3s var(--ease)}
+.hdr .logo-name,.hdr .logo-sub,.hdr .phone{transition:font-size .3s var(--ease)}
+.hdr .nav>a,.hdr .nav-dd-btn{transition:color .25s,font-size .3s var(--ease)}
+.hdr .phone::before{transition:transform .4s var(--ease),width .3s var(--ease),height .3s var(--ease)}
+.hdr .phone::after{transition:width .3s var(--ease),height .3s var(--ease),margin-top .3s var(--ease)}
+.hdr .btn-sm{transition:color .45s var(--ease),border-color .45s var(--ease),box-shadow .45s var(--ease),height .3s var(--ease),padding .3s var(--ease),font-size .3s var(--ease)}
+.hdr.scrolled .wrap{height:var(--hdr-c)}
+@media (min-width:761px){
+  .hdr.scrolled .logo-mark{width:36px;height:36px}
+  .hdr.scrolled .logo-name{font-size:clamp(17px,1.45vw,19px)}
+  .hdr.scrolled .logo-sub{font-size:clamp(10px,.75vw,11px)}
+  .hdr.scrolled .nav>a,.hdr.scrolled .nav-dd-btn{font-size:clamp(14px,1.05vw,15px)}
+  .hdr.scrolled .phone{font-size:clamp(14px,1vw,15px)}
+  .hdr.scrolled .phone::before,.hdr.scrolled .phone::after{width:32px;height:32px}
+  .hdr.scrolled .phone::after{margin-top:-16px}
+  .hdr.scrolled .btn-sm{height:40px;padding:0 20px;font-size:clamp(14px,1.05vw,15px)}
+  .hdr.scrolled .nav-dd-panel{margin-top:10px}
+}
+@media (max-width:1280px){:root{--hdr-c:60px}}
+@media (max-width:760px){:root{--hdr-c:56px}.hdr.scrolled .logo-mark{width:34px;height:34px}}
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .logo-mark{width:clamp(40px,3vw,57px);height:clamp(40px,3vw,57px);border-radius:50%;border:1.5px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);display:grid;place-items:center;transition:border-color .4s,transform .6s var(--ease)}
 .logo:hover .logo-mark{border-color:var(--acc);transform:rotate(-12deg)}
@@ -139,7 +166,8 @@ html:not(.js) .intro,html.anim-fail .intro,html.no-intro .intro{display:none}
 .nav-dd-panel::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:18px}
 .nav-dd.open .nav-dd-panel{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .2s linear,transform .45s var(--ease)}
 @media (hover:hover){
-  .nav-dd:not(.nohover):hover .nav-dd-panel{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .2s linear,transform .45s var(--ease)}
+  /* наведение открывает список через 0,15 с: мышь по пути к вкладкам браузера не раскрывает его случайно (17.11.2026) */
+  .nav-dd:not(.nohover):hover .nav-dd-panel{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .2s linear .15s,transform .45s var(--ease) .15s,visibility 0s .15s}
   .nav-dd:not(.nohover):hover .nav-dd-btn{color:#fff}
   .nav-dd:not(.nohover):hover .nav-dd-btn svg{transform:rotate(180deg)}
 }
