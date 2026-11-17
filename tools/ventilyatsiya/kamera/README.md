@@ -3,7 +3,8 @@
 Страница: `/ochistka-dezinfektsiya-ventilyatsii/`, раздел «Видеоинспекция», блок `#vduct`.
 Превью (только GitHub Pages, noindex, без счётчиков): `/preview-kamera-ventilyatsii/#video`.
 **Решение владельца 17.11.2026: «Выкладывай на сайт».** Блок перенесён в исходники страницы (`main.html`, `extra.css`,
-`page.js` — `apply_sources.py`) и в готовую страницу; выкладка на Timeweb, журнал и проверки — `tools/site/kamera-2026-11-17.md`.
+`page.js` — `apply_sources.py`) и в готовую страницу; **на Timeweb опубликовано 17.11.2026 в 02:11 МСК**, журнал, проверки
+и откат — `tools/site/kamera-2026-11-17.md`.
 
 ## Что меняется
 
