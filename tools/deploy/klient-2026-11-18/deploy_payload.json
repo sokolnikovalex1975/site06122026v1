@@ -1,0 +1,787 @@
+{
+ "name": "klient-2026-11-18",
+ "old_version": "20261117shapka",
+ "new_version": "20261118klient",
+ "count": 44,
+ "pages": 42,
+ "files": [
+  {
+   "file": "style.css",
+   "before": "054dd23ea25613c05d8a9abc13e42e065886933d649d3ccccd36040633c695ae",
+   "after": "2ae9bc4f6a68635579f6b72431a3a6497af1acbd5199fa85c27788b9d425a282",
+   "replace": [
+    [
+     "  .hero-bg{background-image:url(img/hero-m-dim.webp)}\n  .hero::before{background:linear-gradient(180deg,rgba(9,9,11,.5),rgba(9,9,11,.82) 60%,#000)}\n",
+     "  /* Закон владельца (17.11.2026): на телефоне ничего не затемнять — ни фото, ни текст. Фото первого экрана главной —\n     светлое, полосой над текстом, как на страницах отраслей (снизу — тот же переход в чёрный фон); тёмной заливки\n     поверх фото нет. Затемнённый фон блока заявки и тёмная заливка фото этапов на телефоне не показываются. */\n  .hero-bg{background-image:url(img/hero-m.webp);background-position:50% 42%}\n  .hero::before{display:none}\n  #hero.hero:not(.f-hero){display:block}\n  html #hero.hero:not(.f-hero){padding-top:68px}\n  #hero.hero:not(.f-hero) .hero-media{position:relative;inset:auto;width:100%;height:clamp(104px,calc(100vh - 480px),62vw);height:clamp(104px,calc(100svh - 480px),62vw);overflow:hidden}\n  #hero.hero:not(.f-hero) .hero-media::after{content:\"\";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 62%,#000 100%);pointer-events:none}\n  #hero.hero:not(.f-hero) .wrap{margin-top:-24px}\n  .tl-img::after{display:none}\n  [data-scrub] .sw{opacity:1!important}\n",
+     1
+    ],
+    [
+     "  .cta-bg{background-image:url(img/cta-m.webp)}\n",
+     "  .cta-bg{display:none}\n",
+     1
+    ],
+    [
+     "@media (max-width:760px){#hero.hero:not(.f-hero){padding-bottom:32px}}\n",
+     "@media (max-width:760px){#hero.hero:not(.f-hero){padding-bottom:32px}}\n/* очень низкий экран телефона (до 520 px по высоте): полосы фото нет, как на страницах отраслей */\n@media (max-width:760px) and (max-height:520px){#hero.hero:not(.f-hero) .hero-media{display:none}html #hero.hero:not(.f-hero){padding-top:92px}#hero.hero:not(.f-hero) .wrap{margin-top:0}}\n/* зона нажатия ссылок «Подробнее…» на телефоне — не меньше 44 px (было 18 и 31 px), вид и раскладка прежние (17.11.2026) */\n@media (max-width:760px){.pest-more,.hz-more{position:relative}.pest-more::after,.hz-more::after{content:\"\";position:absolute;inset:-13px -8px}.hz-more::after{inset:-7px -8px}}\n",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "app.min.js",
+   "before": "c3bc053d6e7a7b64edd9941302982296430b37ff85441a3b1255d2b10c45a0d4",
+   "after": "47153e99c3e5c2843ec93cfcbf50bb79f1a3960a3eb260f6960c3b325017e9e1",
+   "replace": [
+    [
+     ";T.addEventListener(\"submit\",function(t){",
+     ";var __pcok=function(){T.classList.add(\"sent\"),tt();var e=a(\".ok\",T);if(e){var o=e.getBoundingClientRect(),r=innerHeight,n=(S?S.getBoundingClientRect().height:0)+16;if(o.top<n||o.bottom>r-16){var f=Math.max(0,Math.round(pageYOffset+o.top-Math.max(n,(r-o.height)/2)));d?d.scrollTo(f,{duration:D?0:.9,immediate:D,force:!0}):window.scrollTo({top:f,behavior:D?\"auto\":\"smooth\"})}e.setAttribute(\"tabindex\",\"-1\");try{e.focus({preventScroll:!0})}catch(s){}}};T.addEventListener(\"submit\",function(t){",
+     1
+    ],
+    [
+     "setTimeout(function(){T.classList.add(\"sent\"),tt()},700)",
+     "setTimeout(__pcok,700)",
+     1
+    ],
+    [
+     "T.classList.add(\"sent\"),tt()}).catch(",
+     "__pcok()}).catch(",
+     1
+    ],
+    [
+     "i(\"[data-scrub]\").forEach(function(t){Yt(t,!0),gsap.fromTo(",
+     "i(\"[data-scrub]\").forEach(function(t){if(Yt(t,!0),matchMedia(\"(max-width: 760px)\").matches)return;gsap.fromTo(",
+     1
+    ],
+    [
+     "(function(){var t=window,i=document,B=i.documentElement,a=i.getElementById(\"hdr\"),E=0,p=0,",
+     "(function(){var t=window,i=document,B=i.documentElement,a=i.getElementById(\"hdr\"),E=0,p=0,__pcfin=function(){var e=t.gsap;if(e&&e.globalTimeline){var n=t.innerHeight;e.globalTimeline.getChildren(!1,!0,!1).forEach(function(r){r.progress()>=1||r.repeat()||r.scrollTrigger&&r.scrollTrigger.vars&&r.scrollTrigger.vars.scrub||r.targets().some(function(o){if(!o||!o.getBoundingClientRect)return!1;var f=o.getBoundingClientRect();return f.bottom>0&&f.top<n})&&r.progress(1)})}},",
+     1
+    ],
+    [
+     "(r?r.scrollTo(y,{immediate:!0}):g(y,!1)),setTimeout(function(){f===p&&s(!1)},150)",
+     "(r?r.scrollTo(y,{immediate:!0}):g(y,!1)),__pcfin(),setTimeout(__pcfin,300),setTimeout(function(){f===p&&s(!1)},150)",
+     1
+    ],
+    [
+     "[300,1e3,2e3].forEach(function(e){setTimeout(l,e)}),setTimeout(C,2500)",
+     "[300,1e3,2e3].forEach(function(e){setTimeout(l,e)}),[300,1e3].forEach(function(e){setTimeout(function(){T||__pcfin()},e)}),setTimeout(C,2500)",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "index.php",
+   "before": "4b54d1b81182071840a932c15db74c7f0a6df37fa99ed687a163819283fa71b2",
+   "after": "497f87f005db938e2ae6a6dd382ede5a583a2c639ec0af7a39c0a7c5f79756e2",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "@media (max-width:760px) and (max-height:520px){#hero.hero:not(.f-hero) .hero-media{display:none}html #hero.hero:not(.f-hero){padding-top:92px}#hero.hero:not(.f-hero) .wrap{margin-top:0}}",
+     "@media (max-width:760px) and (max-height:520px){#hero.hero:not(.f-hero) .hero-media{display:none}html #hero.hero:not(.f-hero){padding-top:92px}#hero.hero:not(.f-hero) .wrap{margin-top:0}}@media (max-width:760px){.pest-more,.hz-more{position:relative}.pest-more:after,.hz-more:after{content:\"\";position:absolute;inset:-13px -8px}.hz-more:after{inset:-7px -8px}}",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "biznes-tsentry-torgovye-tsentry-predpriyatiya/index.php",
+   "before": "3004f977434d16776e5463307418cdbc31b1a0e309cff115de05f7dafd84b483",
+   "after": "2ecc3fd1dfdb6a82839587fc7ec719296b8084f459ec5d040d1736cbd2b5325d",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya-i-dezinsektsiya/index.php",
+   "before": "11aa1c164a2da247beb91dff7d2808fcf1fb5e44d1af3cc37a4c1b27db80eb93",
+   "after": "b65f58f40ba9bc0b22223f738abec98187860f96ac3572a3ef118bb627a135d1",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya/index.php",
+   "before": "29a216237d41b6c0e41b936dfaff02367ca6f468fe6f5b22b823825887dbe5de",
+   "after": "6340132e149521791940584af1702f8fac3bd4ac0488cfa801d0c56fcf9b043b",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya/restorany-i-kafe/index.php",
+   "before": "8967faf184c3685c51a3d166f5482eba3cc0f7e2dc3e1e956502033d217243cd",
+   "after": "38a12b2f8b8feacd1a327760b3149386be41f0e080e5edf49f7113d43910d9e9",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinfektsiya/index.php",
+   "before": "fed38bb25bb100a22a1b6507c7dee6b2c38dc404caa6d7d0d7955295d9e80995",
+   "after": "52fd95182b039dbc39ce17a4559d76a2bcf67c1e90a4d41d2fc49cc351d8b8dc",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/index.php",
+   "before": "c30d97b6ff1cf33505b1c7272310ec109dfb3bfbf9ce0cfa41ce1169824eef8e",
+   "after": "2705a61fb012817933293ed4f4b9fce3a44c78cfc3889702f576ad270769e926",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/restorany-i-kafe/index.php",
+   "before": "92876254193e36dde9d8af99cdb777073b3c454c60519a60f8c43e4c1e436ff2",
+   "after": "759d05ca40e6dd34fb6358ffd67635972cc4129ab7a6994b677ac333e5d1b510",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dogovor-deratizatsiya-dezinsektsiya/index.php",
+   "before": "d414f6f679582a2de5fe7c0ba27a60881d3e30bfe2c5c5fbf14067fc4a6a9eb8",
+   "after": "19ee03f85a93600f22a402d81f9be89d58d5b958c48fd027663587c1fd7c8698",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "farmatsevticheskie-proizvodstva/index.php",
+   "before": "3c08960af0c1a711ef5420bb967ae48b6382fb42096727c7d68b7e8a177feb5e",
+   "after": "b4a3316a61aeec189dfb323491c6dfbfa65b2ce2f44a1260ec5dd685c2b14483",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "gostinitsy/index.php",
+   "before": "935e6e2bbf8a2d898a12cd316a66a19c57d38986d5729a54b46831330d7e79e6",
+   "after": "0c8729261a5d135ba2110fe78f2a0a10611e18d9a48d88c57195c2d316ff46c5",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-pishchevykh-produktov/index.php",
+   "before": "43743a74a48b7abe6e16f40d50bcfb606465c315b7bfdabb7c6b7eadd32c7834",
+   "after": "1ba482d3a3a3722a13c7ee11fa2b0992a9e05b692beee0719202529e7e5f330e",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-smyvov/index.php",
+   "before": "efacceab83ab7392b7a129f5d60b6a5633fd9208539bebbfcda07744f7bf241b",
+   "after": "bb288f276e49e669a31524f3774bed2508f0739095df2d41ef66b4ede79835ea",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-vody/index.php",
+   "before": "9c29fc54ec118f0cc0d4737b6bdbbab0cada2601f6cf52ca4548a2faca986d1e",
+   "after": "9ec79c5bb86b764589340ee4141b66a2678c01df0676da4da5241431a7a40539",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-vozdukha-rabochey-zony/index.php",
+   "before": "b6194d46cea4403aa8e891f79de115b072712deac4e26b813f9f910888a99450",
+   "after": "f941b83e41bf5dbd57a3221d09fab0d10aa17a72097ba1eb645b760629e86385",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/index.php",
+   "before": "6cb660581fc0d0c0a7a67ca2eebb5b33970cc03b6656cb4e2c3d4b26fc15f3ec",
+   "after": "c343272e745527195a5417a258bb1a7628540e6516a3a69ad53ee340b747cda0",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/izmerenie-mikroklimata/index.php",
+   "before": "d3c081fbc51afbdde2e9a0076813caa84af3e6a5815cc45173f91eac7f987559",
+   "after": "8709f903809c65e332c675581ccc220befe642640dee9ae8bb5cd49f15f17bd6",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/kontrol-sterilizatorov/index.php",
+   "before": "b205a9ca3e1e536216272d8135ef4f426040a5009447c90fff80a4284355b064",
+   "after": "c5eec4aebe1f776f12d145ea95704804b531ae6ad6a0185c512a1474c3012f9c",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/zamer-osveshchennosti/index.php",
+   "before": "a85ae3a94642db0c0289cd3e8c16cb33a278019f45f2aba8cb0075af5d96bef4",
+   "after": "783a80082e5ad2d373b973c4fb3ecf0ede20f2d609ab3a41d76aaa62de959b38",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "magaziny-i-torgovye-seti/index.php",
+   "before": "2fc1aac35902cc01db1294e92eed45ea824b3e795e5efb2f5db59e08f5064beb",
+   "after": "ca6c2c93dc00e2689e86c47ac9e2d5354b4a052484823bf75e3770e56c031d33",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/akt-deratizatsii-i-dezinsektsii/index.php",
+   "before": "f70e44c6e531800b5e32e4cee13e582e990b98ea5a8e8cd7f4ef975962da012e",
+   "after": "02ce07c1ba99e537bc1fdcfdd4c91b8855b5ce93e33f92a26b04548319df9949",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/index.php",
+   "before": "bb54fbe58528aebab3dc403307b682fe9b395773902bb51acca2f87921fd9b23",
+   "after": "7b5e5ecc2b33e27104c7b362776149e04f6bcefebfa186eb3c5251e5340964ab",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/kak-berut-smyvy/index.php",
+   "before": "f35db680d67e671529fee72a5dafcfe3308df7ba2d24c506979a979c3dc41789",
+   "after": "c3d2562df50f2c4ce5cfcb88dafb8657e82d49f75017f5565ee5527bfff820d3",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/kontrol-raboty-sterilizatorov/index.php",
+   "before": "569a2d0c13a848909599fca3f9b8addda7be8d66941310eb9ac30df55abf8818",
+   "after": "c2c70bb34f7dadaf9fdd0dea53357b22fcab783a6e8cf1671cb9743bd03cba30",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/pest-menedzhment-ili-razovaya-obrabotka/index.php",
+   "before": "913598effdf6f42702d3eb037c4c7fec86cd13a2b2d43e831b7c61a7623ea063",
+   "after": "06b027aad0e22e19bbf046dc9a59cc222697b86b544630bc29eb12f139530fd2",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-pest-kontrolya/index.php",
+   "before": "2eee44882cca07aa4f4ddeb1c448a47bf5c384f25a4f94cbaa87c3ad01f9ba25",
+   "after": "d6acf51808bdc3de4070879b7b74b055cfc0a1091edc445bf6b72eaf4e27c8e7",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-proizvodstvennogo-kontrolya-haccp/index.php",
+   "before": "47b949cefad1edbb236fb79bf6e8435e9b16e695371d7774133d8c1d4b8456a3",
+   "after": "64ecb04f3a9aeae5e2248ba4506bf37143f460954d66419101384103b112dfe7",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/skhema-tochek-pest-kontrolya/index.php",
+   "before": "7a7072b0f414295ca88f215279b5517afb71d155e909618abcc9cd4a832ab1e0",
+   "after": "6c775223031925494ea016cd2f3a7fb737637a97c51594ef6a0fa7411cd9dde9",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/zamer-osveshchennosti-i-mikroklimata/index.php",
+   "before": "1e6578c4ff622fd405230a008316510e6f55616076ea31100d697090e9f23d17",
+   "after": "0068e6c3a9b1e0c7951f9ea955a80dd77a068bc8bca7e78afca08912520ccc68",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/zhurnal-pest-kontrolya/index.php",
+   "before": "2fe6d94ab812796721f5ff1b3b4e8e11c5340adc0714c11165ff4d93417ea7e2",
+   "after": "1c685d89d924d499c08864c9179af3d6c59c5471978dd47c4e7cb5c83f04b9cf",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.php",
+   "before": "dc782404afe9b4d61bc35c94d6f6811357ce32c4dd1016a8d5c22aaa918f1e23",
+   "after": "f774ea7c81e7ac6c5c3efe09056e2ecee65519820363f5aa0c2b1e92cf1d86df",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.php",
+   "before": "2df6cb227efc6ef470b4a1f3f9614ef05d9d589b6287297ea6a06a02a4e55081",
+   "after": "7f1c82be2827425d8901fa17edb31416044fecbe0e4abf634b579515247d1c5b",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/index.php",
+   "before": "fe02560c375e4692f3c5ad22c6abf3530a9696e59dc7ecf3f5987634cb02a90d",
+   "after": "5f88f8f1c4b873e13403f9edeb29357aba1ddc24a4c3b59996b6080358ea7252",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/proverochnye-listy/index.php",
+   "before": "755ece651d715741fa78a0d84c394c1f63b57d739c9450e3f5ee5027d98b8037",
+   "after": "4fd1d12139656e73a106cd008ecac1baf878ad894e16b1312cd807c616c702d6",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "ochistka-dezinfektsiya-ventilyatsii/index.php",
+   "before": "1f1eff3b9ff59a27b6dc86e5730ded75f0828338d92e7f22d8143ceccaed07dc",
+   "after": "74498008aef3b5556a4509dc3eea869e7e448dc374f5571024567f11c6d5c5ff",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "pishchevoe-proizvodstvo/index.php",
+   "before": "e18c082cc449f5da0f7271fc27d631accc3f988314599ee6d282ae5e7e6f9505",
+   "after": "af986ba2dd9fd370240bc1ca1d70c4da1d96e78d50014fb2b57ba47008a564ca",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "privacy/index.php",
+   "before": "a47ea4c414900568c73221bd6ad03b6910ca672bb28fa59bb3ba5a38d83454a7",
+   "after": "f30a2491614e68f302f1b870baad2573ffe0786b2df7e1ff900634e6144d4ceb",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "razrabotka-ppk/index.php",
+   "before": "2eb75d7abb751f7b4dae4eca998ad72582e6690884c55e14cda8d9ce59f124ce",
+   "after": "3f223713d6e19647ba91af3d3e0ab0b31bb829d02c5e6e911467f8a4c59983e6",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "restorany-i-kafe/index.php",
+   "before": "c99cc891b032afe3aea67c6e03df8e02f67453d927ee82a95a4323f51130d1c4",
+   "after": "38244d70bc86fac4964f2e1dc961bf35a4d2dd0e162975abd723221670498c7d",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "sanitarnyy-audit/index.php",
+   "before": "ac79649915162dbc5c9d42b29e942ece88dc9b054ef4b07f83b23a670d3fc934",
+   "after": "bbf8994724ab1c05cba632077f23d9d048b1e3a0374aa4fd609dc7957906f59c",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "sklady-i-logistika/index.php",
+   "before": "a716e077c8dd5494300f28c328a776b38d6c4f9c37a6fcb3c286f5e16df01303",
+   "after": "55f16cb4c4c2295f33d88135089af995847eaaea322a4ad2e51ba24bd1e088af",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "soglasie/index.php",
+   "before": "055e4d99895df3a9fa7d4ef4d0d3080196e4a52b18700224d1ca843c0ab68184",
+   "after": "1bb74dc740e36e29705e28f0fda785424dc4c622fe966eee8705805441656bcb",
+   "replace": [
+    [
+     "app.min.js?v=20261117shapka",
+     "app.min.js?v=20261118klient",
+     1
+    ],
+    [
+     "style.css?v=20261117shapka",
+     "style.css?v=20261118klient",
+     1
+    ]
+   ]
+  }
+ ]
+}
