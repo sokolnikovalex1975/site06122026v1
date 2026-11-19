@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Главная, блок «Пест-менеджмент по системе IPM» (#podhod): круг «IPM — цикл визита» замирает, пока прокручиваются шаги.
+"""Круг «IPM — цикл визита» (#podhod) замирает, пока прокручиваются шаги: главная («Пест-менеджмент по системе IPM»)
+и «Дератизация» («Четыре шага инженера на каждом визите»).
 
-    python3 tools/site/ipm_pin.py            # правит index.html
+    python3 tools/site/ipm_pin.py            # правит index.html и deratizatsiya/index.html
     python3 tools/site/ipm_pin.py --check    # только проверка, код 1 — нужно поправить
 
 Запрос владельца 19.11.2026: «Схема справа от него, с кругом… Она прокручивается, когда скроллишь страницу. Нужно сделать
 так, чтобы эта сама схема замирала, пока прокручивается контент слева, чтобы показывалась динамика перехода от пункта
-к пункту».
+к пункту». 19.11.2026: «Сделай на „Дератизации“ такое же закрепление круга, как на главной» (значки Ревизия → Барьер →
+Учёт → Защита).
 
 Компьютер (от 1025 px, две колонки):
   * круг закреплён (position: sticky) по центру экрана под шапкой и не больше высоты экрана; шаги слева прокручиваются;
@@ -19,8 +21,8 @@
 автосмена значков каждые 1,8 с, пока круг на экране) — тот же код, без GSAP.
 
 Как устроено: прежний код круга в app.js ищет #cycleStep; здесь номер шага получает id="cycleNum", поэтому app.js блок
-пропускает, и круг главной ведёт только <script id="ipm-pin-js"> сразу после секции. app.min.js и другие страницы
-(круг на «Дератизации») не меняются. Стиль — строка <style id="ipm-pin"> перед <style id="tel-plain">
+пропускает, и круг ведёт только <script id="ipm-pin-js"> сразу после секции. app.min.js, style.css и другие страницы
+не меняются. Стиль — строка <style id="ipm-pin"> перед <style id="tel-plain">
 (не перед </head>: там по закону владельца стоит UIS). Счётчики, телефон и почту скрипт не трогает.
 Повторный запуск ничего не меняет. Проверка в браузере: node tools/qa/ipm_pin_test.mjs.
 """
@@ -29,7 +31,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-PAGE = ROOT / 'index.html'
+PAGES = [ROOT / 'index.html', ROOT / 'deratizatsiya' / 'index.html']
 ANCHOR = '<style id="tel-plain">'
 
 CSS = (
@@ -154,15 +156,18 @@ def fix(text):
 
 def main():
     check = '--check' in sys.argv[1:]
-    s = PAGE.read_text(encoding='utf-8')
-    if ANCHOR not in s:
-        sys.exit('ipm_pin: в index.html нет ' + ANCHOR)
-    t = fix(s)
-    if t != s and not check:
-        PAGE.write_text(t, encoding='utf-8')
-    print('ipm_pin: index.html ' + ('нужно поправить' if (check and t != s) else ('исправлено' if t != s else 'без изменений')))
-    return 1 if (check and t != s) else 0
-
+    bad = 0
+    for page in PAGES:
+        s = page.read_text(encoding='utf-8')
+        if ANCHOR not in s:
+            sys.exit('ipm_pin: в %s нет %s' % (page.relative_to(ROOT), ANCHOR))
+        t = fix(s)
+        if t != s:
+            bad += 1
+            if not check:
+                page.write_text(t, encoding='utf-8')
+    print('ipm_pin: %s страниц: %d' % ('нужно поправить' if check else 'исправлено', bad))
+    return 1 if (check and bad) else 0
 
 if __name__ == '__main__':
     sys.exit(main())

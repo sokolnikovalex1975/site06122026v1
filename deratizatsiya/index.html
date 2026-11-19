@@ -380,6 +380,7 @@ main{overflow-x:clip}
 <style id="f-check-m">/* самопроверка: на телефоне и планшете пункты → подсказка → кнопка, компактно; на компьютере — как раньше (tools/site/samoproverka.py, решение владельца 17.11.2026) */#samoproverka .f-check-bar,#samoproverka .f-bt-m{display:none}html.f-check-on .mbar{transform:translateY(160%)}#samoproverka .f-check-in{grid-template-rows:auto 1fr;row-gap:0}#samoproverka .f-check-l{grid-column:1;grid-row:1}#samoproverka .f-check-list{grid-column:2;grid-row:1/span 2}#samoproverka .f-check-f{grid-column:1;grid-row:2}#samoproverka .f-check-list label>span span{font-size:inherit;line-height:inherit;color:inherit}@media (max-width:1100px){#samoproverka .f-check-in{grid-template-rows:none}#samoproverka .f-check-l,#samoproverka .f-check-list,#samoproverka .f-check-f{grid-column:auto;grid-row:auto}#samoproverka .f-check-score{display:flex;align-items:center;gap:16px;margin:22px 0 10px}#samoproverka .f-check-res{display:block;flex:none;margin:0;line-height:1;white-space:nowrap}#samoproverka .f-check-res b{vertical-align:middle}#samoproverka .f-check-bar{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;flex:1;max-width:360px}#samoproverka .f-check-bar i{display:block;height:4px;border-radius:2px;background:rgba(255,255,255,.1);transition:background-color .3s}#samoproverka .f-check-bar i.on{background:var(--acc)}#samoproverka .f-check-res.warn+.f-check-bar i.on{background:var(--yel)}#samoproverka .f-check-res.full+.f-check-bar i.on{background:var(--grn)}#samoproverka .f-check-list{padding:0;margin-top:24px}#samoproverka .f-check-list li{display:block;padding:0}#samoproverka .f-check-note{margin:24px 0 20px;max-width:none}#samoproverka .f-check-f .btn{vertical-align:top}}@media (max-width:600px){#samoproverka.f-checks{padding:20px 0 48px}#samoproverka .f-check-in{padding:22px 18px 20px}#samoproverka .badge{margin-bottom:2px}#samoproverka .f-check-t{font-size:26px;line-height:1.1}#samoproverka .f-check-score{margin:12px 0 0}#samoproverka .f-check-res{font-size:14px;color:var(--t2)}#samoproverka .f-check-res b{font-size:26px;margin-right:5px}#samoproverka .f-check-list{margin-top:16px}#samoproverka .f-check-list label{padding:12px 0;gap:13px}#samoproverka .f-check-list input{width:22px;height:22px;border-radius:7px;background-size:12px}#samoproverka .f-check-list label>span{font-size:14px;line-height:1.4;color:var(--t2)}#samoproverka .f-check-list label>span strong{display:inline;margin:0;font-size:inherit;font-weight:500;color:var(--t1)}#samoproverka .f-check-list input:checked+span{color:var(--t1)}#samoproverka .f-check-note{font-size:14px;line-height:1.45;margin:16px 0 14px}#samoproverka .f-check-f .btn{display:flex;width:100%;min-height:52px;font-size:16px;padding-left:16px;padding-right:16px}#samoproverka .f-bt-d{display:none}#samoproverka .f-bt-m{display:inline-block}}@media (max-width:370px){#samoproverka .f-check-f .btn{font-size:15px;padding-left:14px;padding-right:14px}}@media (max-width:340px){#samoproverka .f-check-f .btn{font-size:13.5px;padding-left:10px;padding-right:10px}}</style>
 <style id="mob-fit">span.fxt.fxt,span.fxt.fxt span{display:inline}.kpi .u{display:block;font-style:normal;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0 0 12px}@media (max-width:600px){:root .btn:not([href^="tel:"]){white-space:normal;max-width:100%;min-width:0;text-align:center;line-height:1.25}:root .btn-lg:not([href^="tel:"]){height:auto;min-height:56px;padding-top:10px;padding-bottom:10px}:root .btn-sm:not([href^="tel:"]){height:auto;min-height:44px;padding-top:8px;padding-bottom:8px}:root .btn:not([href^="tel:"]) .btn-t{white-space:normal;min-width:0;max-width:100%;flex:0 1 auto;text-align:center}:root .btn:not([href^="tel:"]) .btn-t>span{white-space:normal}:root .rk-page .rk-nl a{white-space:normal}:root .pest-b .lvl{max-width:100%;letter-spacing:.04em;-webkit-hyphens:auto;hyphens:auto;overflow-wrap:anywhere}.card,.d-card,.panel,.d-obj-b,.d-kind-b,.nb-obj-t,.f-check-l{min-width:0}.card h3,.card h4,.card p,.card li,.card b,.card span,.d-card h3,.d-card p{overflow-wrap:break-word}.kpi span,.nb-obj-t,.d-obj-b h3{-webkit-hyphens:auto;hyphens:auto}}@media (max-width:400px){.card h3 .nw,.d-card h3 .nw{white-space:normal}}.menu-open .hdr{background:#000;transition:background .25s ease .3s,transform .35s var(--ease)}</style>
 <style id="ig">/* инфографика в стиле лаборатории: предметные иконки без фона (tools/site/infografika.py, 19.11.2026) */.s-pr .pr-card{min-height:0}.s-pr .pr-num{margin-bottom:6px}.s-pr .ig-pr{display:block;width:112px;height:112px;margin:0 0 10px -10px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}.s-pr .pr-card:hover .ig-pr{transform:scale(1.06)}.s-pr .pr-mini{display:grid;grid-template-columns:60px minmax(0,1fr) auto;column-gap:18px;align-items:center}.s-pr .ig-prm{width:60px;height:60px;display:block}@media (max-width:900px){.s-pr .pr-card{position:relative}.s-pr .ig-pr{position:absolute;right:14px;top:40px;width:84px;height:84px;margin:0}.s-pr .pr-card h3,.s-pr .pr-card p{padding-right:92px}.s-pr .pr-mini{grid-template-columns:52px minmax(0,1fr);row-gap:6px}.s-pr .ig-prm{grid-row:1/3;width:52px;height:52px}.s-pr .pr-mini .pr-price{grid-column:2}}.docs .doc .ico{width:100px;height:100px;border-radius:0;background:none!important;border:0!important;box-shadow:none!important;margin:-12px 0 12px -12px}.docs .doc .ico img{width:100px;height:100px;display:block;transition:transform .35s cubic-bezier(.2,.7,.2,1)}.docs .doc:hover .ico{transform:none}.docs .doc:hover .ico img{transform:scale(1.06)}@media (max-width:900px){.docs .doc{display:grid;grid-template-columns:72px minmax(0,1fr);column-gap:14px;align-items:center}.docs .doc .ico{grid-row:1;width:72px;height:72px;margin:0}.docs .doc .ico img{width:72px;height:72px}.docs .doc h3{grid-column:2;margin:0;padding-right:24px}.docs .doc p,.docs .doc .doc-go{grid-column:1/3}.docs .doc p{margin-top:10px}}.cycle .node>i{width:clamp(72px,6vw,104px)!important;height:clamp(72px,6vw,104px)!important;background:radial-gradient(circle,var(--bg) 58%,transparent 72%)!important;border:0!important;box-shadow:none!important;border-radius:50%!important}.cycle .node>i img{width:100%;height:100%;display:block}.cycle .node.on>i{transform:scale(1.12);filter:drop-shadow(0 0 22px rgba(124,134,255,.6))}@media (max-width:600px){.cycle .node>i{width:64px!important;height:64px!important}}.pest-img.ig-pi{background:none;overflow:visible;border-radius:0}.pest-img.ig-pi img{object-fit:contain;transform:none!important}.pest-img.ig-pi .scan{display:none}</style>
+<style id="ipm-pin">.cycle-dot{display:none}.cycle-step.flip{animation:cyNum .5s cubic-bezier(.2,.8,.2,1)}@keyframes cyNum{from{opacity:0;transform:translateY(6px)}}@media (min-width:1025px){.appr-pin{align-items:start}.appr-pin>.cycle{position:sticky;top:var(--pin-top,calc(var(--hdr-c,64px) + 24px));max-width:min(620px,calc(100vh - var(--hdr-c,64px) - 64px))}.appr-pin .steps{gap:clamp(24px,16vh,170px);padding-bottom:var(--pin-pad,0px)}.appr-pin .cycle-arc{transition:none}.appr-pin .cycle-dot{display:block;position:absolute;inset:12%;pointer-events:none;will-change:transform}.appr-pin .cycle-dot::after{content:"";position:absolute;left:50%;top:0;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(124,134,255,.28),0 0 22px 6px rgba(124,134,255,.75)}.appr-pin .node{z-index:1}.appr-pin .node.done b{color:var(--t1)}}</style>
 <style id="tel-plain">/* Закон владельца 11.11.2026 (tools/site/tracking_laws.py): в ссылке телефона только номер — значок шапки рисуется здесь, номер не разрывается */.phone{position:relative}.phone::before{content:"";flex:none;box-sizing:border-box;width:36px;height:36px;border-radius:50%;background:var(--acc2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cpath d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z'/%3E%3C/svg%3E") 50%/15px 15px no-repeat;transition:transform .4s var(--ease)}.phone::after{content:"";position:absolute;left:0;top:50%;box-sizing:border-box;width:36px;height:36px;margin-top:-18px;border-radius:50%;border:1px solid var(--acc);animation:ring 2.4s var(--ease) infinite;pointer-events:none}.phone:hover::before{transform:rotate(-14deg) scale(1.06)}@media (max-width:760px){.phone{font-size:0;gap:0}.phone::before,.phone::after{width:44px;height:44px}.phone::after{margin-top:-22px}}@media (max-width:400px){.phone::before,.phone::after{width:40px;height:40px}.phone::after{margin-top:-20px}}@media (max-width:360px){.phone::before,.phone::after{width:38px;height:38px}.phone::after{margin-top:-19px}}a[href^="tel:"]{white-space:nowrap!important}</style>
 <style id="ft-company-st">footer .ft-company{--ft-company-size:.5625rem;margin-top:16px;font-size:var(--ft-company-size);font-weight:400;line-height:1.5;letter-spacing:0;color:#858589;overflow-wrap:anywhere}footer .ft-company p{margin:0;font:inherit;color:inherit}footer .ft-company p+p{margin-top:4px}</style>
 </head>
@@ -719,7 +720,7 @@ main{overflow-x:clip}
 
 <!-- ============ 6. МЕТОД IPM НА КАЖДОМ ВИЗИТЕ (ЦИКЛ IPM) ============ -->
 <section class="s" id="podhod">
-  <div class="wrap appr">
+  <div class="wrap appr appr-pin">
     <div>
       <div>
         <div class="eyebrow" data-eyebrow>Цикл IPM-дератизации</div>
@@ -736,8 +737,8 @@ main{overflow-x:clip}
     <div class="cycle" id="cycle" aria-hidden="true">
       <div class="cycle-glow"></div><div class="cycle-ring"></div>
       <svg class="cycle-svg" viewBox="0 0 100 100"><circle class="cycle-track" cx="50" cy="50" r="38"/><circle class="cycle-prog" id="cycleProg" cx="50" cy="50" r="38" pathLength="100"/></svg>
-      <div class="cycle-arc" id="cycleArc"></div>
-      <div class="cycle-c"><div><b>IPM</b><span>цикл визита</span><em class="cycle-step" id="cycleStep">01 / 04</em></div></div>
+      <div class="cycle-arc" id="cycleArc"></div><div class="cycle-dot" id="cycleDot"></div>
+      <div class="cycle-c"><div><b>IPM</b><span>цикл визита</span><em class="cycle-step" id="cycleNum">01 / 04</em></div></div>
       <div class="node n1" data-i="0"><i><img src="../img/ig-osmotr-240.webp" width="104" height="104" alt="" loading="lazy" decoding="async"></i><b>Ревизия</b></div>
       <div class="node n2" data-i="1"><i><img src="../img/ig-zashchita-240.webp" width="104" height="104" alt="" loading="lazy" decoding="async"></i><b>Барьер</b></div>
       <div class="node n3" data-i="2"><i><img src="../img/ig-doc-otchet-240.webp" width="104" height="104" alt="" loading="lazy" decoding="async"></i><b>Учёт</b></div>
@@ -745,6 +746,83 @@ main{overflow-x:clip}
     </div>
   </div>
 </section>
+<script id="ipm-pin-js">(function () {
+  var cy = document.getElementById('cycle'), root = cy && cy.parentNode;
+  var prog = document.getElementById('cycleProg'), arc = document.getElementById('cycleArc'), lbl = document.getElementById('cycleNum');
+  if (!cy || !prog || !arc || !lbl) return;
+  var box = root.querySelector('.steps'), steps = [].slice.call(root.querySelectorAll('.step')), nodes = [].slice.call(cy.querySelectorAll('.node'));
+  var dot = document.getElementById('cycleDot'), N = steps.length;
+  var mq = matchMedia('(min-width: 1025px)'), fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var desk = mq.matches, cur = -1, shown = 0, target = 0, loop = 0, tick = 0, auto = 0, pinTop = 0, H = 0, tail = 0;
+  var setOn = function (i) {
+    if (i === cur) return; cur = i;
+    steps.forEach(function (s, j) { s.classList.toggle('on', j === i); });
+    nodes.forEach(function (n, j) { n.classList.toggle('on', j === i); n.classList.toggle('done', desk && j < i); });
+    lbl.textContent = '0' + (i + 1) + '\u00a0/ 0' + N;
+    if (!reduce) { lbl.classList.remove('flip'); void lbl.offsetWidth; lbl.classList.add('flip'); }
+  };
+  var draw = function (p) {
+    prog.style.strokeDashoffset = (100 - p * 100).toFixed(2);
+    if (desk) { var a = p * 360; if (dot) dot.style.transform = 'rotate(' + a.toFixed(2) + 'deg)'; arc.style.transform = 'rotate(' + (a - 90).toFixed(2) + 'deg)'; }
+    else arc.style.transform = 'rotate(' + (p * 540).toFixed(1) + 'deg)';
+  };
+  var ease = function () {
+    loop = 0;
+    var d = target - shown;
+    shown = reduce || Math.abs(d) < 0.0008 ? target : shown + d * 0.16;
+    draw(shown);
+    if (shown !== target) loop = requestAnimationFrame(ease);
+  };
+  var layout = function () {
+    desk = mq.matches;
+    root.style.removeProperty('--pin-pad');
+    if (!desk) { root.style.removeProperty('--pin-top'); return; }
+    var hdr = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdr-c')) || 64, vh = innerHeight;
+    H = cy.offsetHeight;
+    pinTop = Math.max(hdr + 16, hdr + (vh - hdr - H) / 2);
+    root.style.setProperty('--pin-top', pinTop.toFixed(1) + 'px');
+    var r = root.getBoundingClientRect(), a = steps[0].getBoundingClientRect(), z = steps[N - 1].getBoundingClientRect();
+    var pitch = N > 1 ? (z.top - a.top) / (N - 1) : z.height;
+    tail = pitch * 0.6;
+    /* круг откреплится, когда низ сетки поднимется к низу круга: к этому моменту середина последнего шага
+       должна уйти выше центра круга на «хвост» — тогда кольцо успевает замкнуться, пока круг закреплён */
+    var need = (z.top + z.height / 2 - r.top) + H / 2 + tail - (r.bottom - r.top);
+    if (need > 0) root.style.setProperty('--pin-pad', Math.ceil(need) + 'px');
+  };
+  var calc = function () {
+    tick = 0;
+    var vh = innerHeight, p = 0, i;
+    if (desk) {
+      var L = pinTop + H / 2, c = steps.map(function (s) { var b = s.getBoundingClientRect(); return b.top + b.height / 2; }), k = -1;
+      for (i = 0; i < N; i++) if (c[i] <= L) k = i;
+      if (k < 0) { p = 0; k = 0; }
+      else if (k < N - 1) p = (k + Math.min(1, (L - c[k]) / (c[k + 1] - c[k]))) / N;
+      else p = (k + Math.min(1, (L - c[k]) / tail)) / N;
+      setOn(k);
+    } else {
+      var b = cy.getBoundingClientRect(), s0 = vh * 0.85 - b.top, span = s0 + b.bottom - vh * 0.3;
+      p = Math.max(0, Math.min(1, span > 0 ? s0 / span : 0));
+      steps.forEach(function (s, j) { var r = s.getBoundingClientRect(); if (r.top <= vh * 0.62 && r.bottom >= vh * 0.62) setOn(j); });
+      var vis = b.top <= vh * 0.8 && b.bottom >= vh * 0.2;
+      if (vis && !auto && !reduce) auto = setInterval(function () { setOn((cur + 1) % N); }, 1800);
+      else if (!vis && auto) { clearInterval(auto); auto = 0; }
+    }
+    target = p;
+    if (!loop) loop = requestAnimationFrame(ease);
+  };
+  var onScroll = function () { if (!tick) tick = requestAnimationFrame(calc); };
+  var refresh = function () { if (auto) { clearInterval(auto); auto = 0; } layout(); calc(); };
+  setOn(0);
+  layout(); calc();
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', refresh);
+  addEventListener('load', refresh);
+  if (mq.addEventListener) mq.addEventListener('change', function () { cur = -1; nodes.forEach(function (n) { n.classList.remove('done'); }); refresh(); });
+  if (window.ResizeObserver) new ResizeObserver(function () { if (!tick) tick = requestAnimationFrame(function () { tick = 0; layout(); calc(); }); }).observe(box);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+  steps.forEach(function (s, i) { s.addEventListener('pointerenter', function () { if (fine) setOn(i); }); });
+})();</script>
 
 <!-- ============ 7. КАК ПРОХОДИТ РАБОТА ПО ДОГОВОРУ (ТАЙМЛАЙН + СРАВНЕНИЕ) ============ -->
 <section class="s" id="reglament">
