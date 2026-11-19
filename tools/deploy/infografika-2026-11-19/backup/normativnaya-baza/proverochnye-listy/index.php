@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113675622', 'ym');
+
+    ym(113675622, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<!-- /Yandex.Metrika counter -->
+<title>Проверочные листы Роспотребнадзора 2026: дезинсекция и дератизация</title>
+<meta name="description" content="Вопросы о насекомых и грызунах в проверочных листах (чек-листах) Роспотребнадзора по приказам № 578 и № 580: где они есть, нормы СанПиН и документы для ответа.">
+<link rel="canonical" href="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ПЕСТКОНТРОЛЬ Центр">
+<meta property="og:url" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/">
+<meta property="og:title" content="Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации">
+<meta property="og:description" content="Вопросы о насекомых и грызунах в проверочных листах (чек-листах) Роспотребнадзора по приказам № 578 и № 580: где они есть, нормы СанПиН и документы для ответа.">
+<meta property="og:image" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/pl-og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2309090b' stroke='%237c86ff' stroke-width='2'/%3E%3Cpath d='M16 7l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10v-5z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" href="../../fonts/inter-ru-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" media="(min-width:861px)" imagesrcset="../../img/pl-hero-1440.webp 1440w, ../../img/pl-hero.webp 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(max-width:860px)" imagesrcset="../../img/pl-hero-mob-760.webp 760w, ../../img/pl-hero-mob.webp 1024w" imagesizes="100vw" fetchpriority="high">
+<script>
+  /* начальные состояния анимаций — только при работающем JS; страховка — через 4 с всё показывается.
+     Заставка — один раз за посещение: при переходе по ссылке с якорем и между страницами сайта её нет */
+  (function (d) {
+    d.classList.add('js');
+    /* облегчённый режим для слабых компьютеров (15.11.2026): pcFx.set ставит класс lowfx (style.css) и вызывает pcFx.hooks;
+       замер кадров — в app.js и в лупе первого экрана. Решение помнится до конца визита. Вручную: ?fx=lite — облегчённый,
+       ?fx=full — полный, ?fx=auto — определить заново */
+    var fx = window.pcFx = { mode: '', lite: false, hooks: [], set: function (keep) {
+      if (fx.lite) return;
+      fx.lite = true; d.classList.add('lowfx');
+      if (keep) { try { sessionStorage.setItem('pc-lowfx', '1'); } catch (e) { } }
+      for (var i = 0; i < fx.hooks.length; i++) { try { fx.hooks[i](); } catch (e) { } }
+      try { document.dispatchEvent(new CustomEvent('pc:fx')); } catch (e) { }
+    } };
+    try {
+      fx.mode = (location.search.match(/[?&]fx=(lite|full|auto)\b/) || [])[1] || '';
+      if (fx.mode && fx.mode !== 'lite') sessionStorage.removeItem('pc-lowfx');
+      if (fx.mode === 'lite' || (!fx.mode && sessionStorage.getItem('pc-lowfx') === '1')) fx.set();
+    } catch (e) { }
+    try { if (location.hash || sessionStorage.getItem('pc-intro')) d.classList.add('no-intro'); else sessionStorage.setItem('pc-intro', '1'); }
+    catch (e) { if (location.hash) d.classList.add('no-intro'); }
+    setTimeout(function () { if (!d.classList.contains('anim-ready')) d.classList.add('anim-fail'); }, 4000);
+  })(document.documentElement);
+</script>
+<link rel="stylesheet" href="../../style.css?v=20261118klient">
+<style>.d-page .s{padding:clamp(64px,7vw,128px) 0;border-top:1px solid var(--line)}.d-crumbs{padding-top:calc(clamp(68px,6vw,115px) + 20px);font-size:14px;color:var(--t3);display:flex;flex-wrap:wrap;gap:8px}.d-crumbs a{color:var(--t2)}.d-crumbs a:hover{color:var(--t1)}.d-hero{padding:clamp(28px,3vw,56px) 0 clamp(64px,7vw,128px)}.d-hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,4vw,80px);align-items:center}.d-hero h1{font-size:clamp(34px,4.2vw,80px);line-height:1.05;letter-spacing:-.045em;font-weight:300;margin:18px 0 0}.d-ticks{list-style:none;padding:0;margin:28px 0 34px;display:grid;gap:12px}.d-ticks li{position:relative;padding-left:30px;line-height:1.5}.d-ticks li::before{content:"";position:absolute;left:2px;top:.42em;width:13px;height:7px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}.d-btns{display:flex;flex-wrap:wrap;gap:12px}.ph-img{aspect-ratio:4/3;border:1.5px dashed var(--line2);border-radius:var(--r);display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;color:var(--t3);font-size:14px;line-height:1.5;background:rgba(255,255,255,.02)}.ph-doc{aspect-ratio:3/4;max-width:340px}.d-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.d-card{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(22px,2vw,34px)}.d-card h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;margin:0 0 12px}.d-card p{color:var(--t2);line-height:1.6;margin:0}.d-note{color:var(--t2);margin:24px 0 0;line-height:1.6}.d-strong{color:var(--t1);font-size:clamp(18px,1.3vw,22px)}.d-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:clamp(28px,4vw,80px);align-items:start}.d-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,80px);align-items:start}.d-two .head{margin-bottom:0}.d-two .d-ticks{margin:0}.d-terms{list-style:none;counter-reset:t;padding:0;margin:0;border-top:1px solid var(--line2)}.d-terms li{display:grid;grid-template-columns:44px minmax(0,.42fr) minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line2);line-height:1.55}.d-terms li::before{counter-increment:t;content:counter(t,decimal-leading-zero);color:var(--t3)}.d-terms b{font-weight:500}.d-terms span{color:var(--t2)}.d-doc{display:grid;gap:16px;justify-items:start}.d-small{font-size:14px;color:var(--t3);margin:0}.d-steps{list-style:none;counter-reset:st;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}.d-steps li{border-top:2px solid var(--line2);padding-top:18px;line-height:1.55}.d-steps li::before{counter-increment:st;content:"0" counter(st);display:block;color:var(--acc);font-size:14px;margin-bottom:12px}.d-steps b{display:block;font-weight:500;margin-bottom:8px}.d-steps span{color:var(--t2)}.d-table{width:100%;border-collapse:collapse;line-height:1.5}.d-table th,.d-table td{text-align:left;vertical-align:top;padding:16px 20px 16px 0;border-bottom:1px solid var(--line2)}.d-table th{color:var(--t3);font-weight:400;font-size:14px}.d-table td{color:var(--t2)}.d-table td:first-child{color:var(--t1)}.d-vs td:first-child{color:var(--t2)}.d-vs th:last-child,.d-vs td:last-child{color:var(--t1);background:rgba(124,134,255,.07);padding-left:20px}.d-cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}.d-chips{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}.d-chips a{display:inline-block;padding:12px 18px;border:1px solid var(--line2);border-radius:999px;color:var(--t1);transition:border-color .2s}.d-chips a:hover{border-color:var(--acc)}.tbd{background:rgba(255,209,102,.14);color:#ffd166;border-radius:4px;padding:0 .2em}.d-page .cta .sub{margin-bottom:30px}@media (max-width:1100px){.d-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:860px){.d-hero .wrap,.d-split,.d-two,.d-cols2,.d-cards{grid-template-columns:minmax(0,1fr)}.d-terms li{grid-template-columns:36px minmax(0,1fr);gap:6px 12px}.d-terms span{grid-column:2}.ph-doc{display:none}}@media (max-width:600px){.d-steps{grid-template-columns:minmax(0,1fr)}.d-table thead{display:none}.d-table,.d-table tbody,.d-table tr,.d-table td{display:block;width:100%}.d-table tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.d-table td{border:0;padding:10px 0}.d-table td+td{border-top:1px solid var(--line)}.d-table td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}.d-vs td:last-child{background:none;padding-left:0}.d-page .form .btn-lg{padding:0 16px}}.hdr .nav a{white-space:nowrap}.f-lazy:not(.bg-in){background-image:none!important}
+.f-hero .hero-media{overflow:hidden}.f-hero .hero-media::after{content:"";position:absolute;inset:0 0 auto;height:200px;background:linear-gradient(180deg,rgba(9,9,11,.72),rgba(9,9,11,0));pointer-events:none}.f-hero .f-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:64% 50%;filter:saturate(.95)}.f-hero::before{background:linear-gradient(90deg,rgba(9,9,11,.92) 0%,rgba(9,9,11,.84) 40%,rgba(9,9,11,.32) 58%,rgba(9,9,11,0) 74%)}.f-hero::after{height:22%}.f-hero p.lead{max-width:600px}.f-crumbs{display:flex;flex-wrap:wrap;gap:8px;font-size:14px;color:var(--t3);margin:0 0 26px}.f-crumbs a{color:var(--t2)}.f-crumbs a:hover{color:var(--t1)}.f-urgent{margin:22px 0 0;color:var(--t2);font-size:15px}.f-urgent::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--grn);margin-right:10px;vertical-align:middle}
+.f-checks{position:relative;padding:clamp(28px,3vw,56px) 0 clamp(56px,6vw,110px)}.f-check.panel{max-width:none}.f-check-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,80px);padding:clamp(24px,3vw,52px)}.f-check-t{font-size:clamp(28px,2.6vw,48px);line-height:1.08;letter-spacing:-.04em;font-weight:300;margin:0}.f-check-res{margin:22px 0 10px;color:var(--t2);font-size:15px}.f-check-res b{font-size:clamp(40px,3.4vw,64px);font-weight:300;letter-spacing:-.04em;color:var(--acc);margin-right:6px;line-height:1;transition:color .3s}.f-check-res.full b{color:var(--grn)}.f-check-note{color:var(--t2);line-height:1.6;margin:0 0 28px;max-width:440px}.f-check-list{list-style:none;margin:0;padding:0;display:grid;align-content:center;border-top:1px solid var(--line)}.f-check-list li{border-bottom:1px solid var(--line)}.f-check-list label{display:flex;gap:18px;align-items:center;padding:18px 4px;cursor:pointer;font-size:clamp(16px,1.15vw,20px);line-height:1.4;color:var(--t2);transition:color .25s}.f-check-list label:hover{color:var(--t1)}.f-check-list input{appearance:none;-webkit-appearance:none;flex:none;width:26px;height:26px;margin:0;border-radius:8px;border:1.4px solid var(--line2);background:rgba(255,255,255,.03) center/14px no-repeat;cursor:pointer;transition:background-color .25s,border-color .25s}.f-check-list input:checked{background-color:var(--acc2);border-color:var(--acc);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}.f-check-list input:focus-visible{outline:2px solid var(--acc);outline-offset:3px}.f-check-list input:checked+span{color:var(--t1)}
+.d-card .f-num{font-size:clamp(28px,2.4vw,44px);line-height:1.05;letter-spacing:-.035em;font-weight:300;color:var(--acc);margin:0 0 16px}.f-req .d-card{border-top:2px solid rgba(124,134,255,.45)}
+.f-zmap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(20px,2.4vw,44px);align-items:start}.f-plan{margin:0;padding:clamp(14px,1.4vw,26px)}.f-plan svg{display:block;width:100%;height:auto}.f-plan svg *{pointer-events:none}.f-plan .zf,.f-plan .bdg{pointer-events:all}.f-plan .zf{fill:transparent;transition:fill .3s,stroke .3s}.f-plan .z.on .zf{fill:rgba(124,134,255,.14)}.f-plan .z6.on .zf{fill:rgba(124,134,255,.05);stroke:#7c86ff}.f-plan .bdg circle{fill:#09090b;stroke:#7c86ff;stroke-width:2;transition:fill .3s}.f-plan .bdg text{fill:#7c86ff;font:500 22px Inter,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central;transition:fill .3s}.f-plan .bdg.on circle{fill:#7c86ff}.f-plan .bdg.on text{fill:#fff}.f-plan .lbl text{fill:#84848e;font:400 15px Inter,system-ui,sans-serif}.f-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 4px 2px;font-size:13px;color:var(--t3)}.f-legend span{display:inline-flex;align-items:center;gap:9px}.f-legend i{flex:none;display:inline-block}.lg-st{width:11px;height:11px;border-radius:2px;background:var(--yel)}.lg-tr{width:11px;height:11px;border-radius:50%;background:var(--acc)}.lg-uv{width:20px;height:7px;border-radius:4px;background:#c4b5fd;box-shadow:0 0 8px rgba(167,139,250,.9)}.lg-fl{width:24px;border-top:2px dashed var(--acc)}.f-zlist{list-style:none;padding:0;margin:0;display:grid;gap:10px;counter-reset:zl}.f-zlist li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:2px 14px;align-items:start;padding:15px 18px;border:1.4px solid var(--line);border-radius:var(--r);background:var(--card);transition:border-color .3s,background .3s;outline:none;cursor:default}.f-zlist li::before{counter-increment:zl;content:counter(zl);grid-row:1/span 2;width:34px;height:34px;border-radius:50%;border:1.4px solid var(--acc);color:var(--acc);display:flex;align-items:center;justify-content:center;font-size:15px;transition:background .3s,color .3s}.f-zlist b{font-weight:500;font-size:clamp(16px,1.05vw,19px);line-height:1.3}.f-zlist span{color:var(--t2);font-size:clamp(14px,.9vw,16px);line-height:1.5}.f-zlist li.on,.f-zlist li:hover,.f-zlist li:focus-visible{border-color:rgba(124,134,255,.6);background:rgba(124,134,255,.08)}.f-zlist li.on::before{background:var(--acc);color:#fff}
+.f-steps4{grid-template-columns:repeat(4,minmax(0,1fr))}.d-steps li.f-alert{border-top-color:var(--yel)}.d-steps li.f-alert::before{color:var(--yel)}
+.inds.f-inds{grid-template-columns:repeat(6,minmax(0,1fr))}.inds.f-inds>*{grid-column:span 2}.inds.f-inds>:nth-child(n+4){grid-column:span 3}.inds.f-inds>:nth-child(n+4) .ind-img{aspect-ratio:834/275}
+.f-lbl{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:4px 0 8px}.f-mb{margin:0 0 4px}.f-pricecard .f-price{margin:22px 0 26px;color:var(--t2);line-height:1.6}.f-pricecard .f-price b{display:block;color:var(--t1);font-weight:400;font-size:clamp(20px,1.6vw,28px);letter-spacing:-.02em;line-height:1.25;margin-bottom:6px}.d-card .btn{max-width:100%;white-space:normal;text-align:center;line-height:1.25}
+@media (max-width:1100px){.f-steps4{grid-template-columns:repeat(2,minmax(0,1fr))}.f-zmap,.f-check-in{grid-template-columns:minmax(0,1fr)}.inds.f-inds{grid-template-columns:repeat(2,minmax(0,1fr))}.inds.f-inds>*,.inds.f-inds>:nth-child(n+4){grid-column:auto}.inds.f-inds>:nth-child(n+4) .ind-img{aspect-ratio:556/275}.inds.f-inds>:last-child{grid-column:1/-1}.inds.f-inds>:last-child .ind-img{aspect-ratio:834/275}}
+@media (max-width:900px){.hdr{background:rgba(0,0,0,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--line)}.f-hero{display:block;min-height:0;padding:68px 0 clamp(44px,8vw,72px)}.f-hero::before,.f-hero::after{display:none}.f-hero .hero-media{position:relative;inset:auto;width:100%;aspect-ratio:16/9}.f-hero .hero-media::after{height:100%;background:linear-gradient(180deg,rgba(0,0,0,0) 62%,#000 100%)}.f-hero .f-hero-img{object-position:70% 50%;filter:none}.f-hero .wrap{margin-top:-24px}.f-hero p.lead{max-width:760px}}@media (max-width:760px){.f-hero .hero-media{aspect-ratio:4/3}.f-hero .f-hero-img{object-position:50% 50%}.f-crumbs{font-size:13px;margin-bottom:18px}.inds.f-inds{grid-template-columns:minmax(0,1fr)}.inds.f-inds>:last-child{grid-column:auto}.inds.f-inds>:last-child .ind-img{aspect-ratio:556/275}}
+@media (max-width:600px){.f-steps4{grid-template-columns:minmax(0,1fr)}.d-btns .btn,.d-card .btn,.f-check .btn{width:100%;white-space:normal;text-align:center;line-height:1.25}.d-page .btn-lg{padding:0 16px}.f-plan .lbl{display:none}.f-check-in{padding:24px 20px}.f-check-list label{padding:15px 2px;gap:14px}.f-zlist li{padding:14px}}
+@media (max-width:400px){.hdr .wrap{gap:10px}.hdr-right{gap:8px}.logo{gap:8px}.logo-mark{width:34px;height:34px}.logo-name{font-size:15px}.phone i,.burger{width:40px;height:40px}}@media (max-width:340px){.logo-sub{display:none}}
+/* Раздел «Нормативная база»: /normativnaya-baza/ и /normativnaya-baza/proverochnye-listy/ (класс nb-page) */
+/* первый экран: фото на всю ширину и текст слева на градиенте — как у «Программы пест-контроля» в разделе «Материалы».
+   На телефоне (до 860 px) порядок: заголовок → фото → текст → кнопки; надзаголовок не показывается, крошки скрыты правилом m-crumbs */
+.d-hero.nb-hero{position:relative;overflow:hidden;display:flex;align-items:flex-end;min-height:clamp(680px,54vw,940px);padding:calc(clamp(68px,6vw,115px) + 28px) 0 clamp(40px,4vw,64px);background:#000}
+.nb-hero .wrap{width:100%;display:grid;grid-template-columns:minmax(0,1.28fr) minmax(0,.72fr);gap:0 clamp(28px,4vw,80px);align-items:end}
+.nb-hero .d-hero-copy{grid-column:1;min-width:0}
+.nb-hero .d-hero-copy>*:not(.d-hero-media),.nb-hero .nb-toc{position:relative;z-index:1}
+.nb-hero .d-hero-media{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;margin:0}
+.nb-hero .d-hero-media::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.86) 40%,rgba(0,0,0,.3) 58%,rgba(0,0,0,0) 70%),linear-gradient(180deg,#000 0,rgba(0,0,0,.55) 90px,rgba(0,0,0,0) 260px),linear-gradient(0deg,#000 0,rgba(0,0,0,.65) 110px,rgba(0,0,0,0) 300px)}
+.nb-hero .d-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 50%}
+.nb-hero .f-crumbs{margin:0 0 22px}
+.nb-hero .eyebrow{margin:0}
+.d-hero.nb-hero h1{font-size:clamp(36px,3.6vw,66px);line-height:1.08;letter-spacing:-.055em;font-weight:300;margin:18px 0 0}
+.nb-hero h1 .ln{display:block;padding:0 .08em .08em 0;margin-bottom:-.08em}
+.nb-hero h1 .ln>span{display:inline-block}
+.nb-hero p.lead{font-size:clamp(15px,1.02vw,18px);line-height:1.62;color:#c4c4cc;max-width:720px;margin:22px 0 0}
+.nb-hero .d-btns{margin-top:26px}
+.nb-byline{font-size:13px;line-height:1.5;color:var(--t3);margin:16px 0 0;max-width:720px}
+.nb-hero .nb-toc{grid-column:1/-1;margin-top:clamp(28px,2.6vw,44px)}
+.nb-toc{display:flex;flex-wrap:wrap;gap:8px}
+.nb-toc a{display:inline-block;padding:9px 16px;border:1px solid var(--line2);border-radius:999px;font-size:14px;color:var(--t2);background:rgba(0,0,0,.45);transition:border-color .2s,color .2s}
+.nb-toc a:hover,.nb-toc a:focus-visible{border-color:var(--acc);color:var(--t1)}
+@media (min-width:1600px){.nb-hero p.lead,.nb-byline{max-width:820px}}
+/* планшет и телефон (до 1180 px): заголовок → фото → кнопки → абзац-ответ (решение владельца 08–09.11.2026, «вариант 1»):
+   обе кнопки на первом экране телефона. При наложении текста на фото на этих ширинах люди на снимке уходили бы под текст.
+   В HTML порядок прежний (абзац сразу после фото) — меняется только показ */
+@media (max-width:1180px){
+  .d-hero.nb-hero{display:block;min-height:0;padding:calc(clamp(68px,6vw,115px) + 18px) 0 clamp(32px,6vw,48px)}
+  .nb-hero .wrap{display:block}
+  .nb-hero .d-hero-copy{display:flex;flex-direction:column}
+  .nb-hero .eyebrow{display:none}
+  .d-hero.nb-hero h1{order:1;margin:0}
+  .nb-hero h1 .ln{display:inline}
+  .nb-hero .d-hero-media{order:2;position:relative;inset:auto;aspect-ratio:16/9;max-height:min(560px,52vh);margin:22px calc(var(--pad) * -1) 0}
+  .nb-hero .d-hero-media::before{background:linear-gradient(0deg,#000 0,rgba(0,0,0,0) 24%)}
+  .nb-hero .d-hero-img{object-position:50% 15%}
+  .nb-hero .d-btns{order:3;margin-top:24px}
+  .nb-hero p.lead{order:5;margin:26px 0 0;max-width:820px}
+  .nb-hero .nb-byline{order:6;max-width:820px}
+  .nb-hero .f-crumbs{margin:0 0 18px}
+  .nb-hero .nb-toc{margin-top:28px}
+}
+@media (max-width:860px){
+  .d-hero.nb-hero h1{font-size:clamp(28px,7.8vw,36px);line-height:1.08}
+  /* фото 16:9, на низких экранах (iPhone SE, встроенные браузеры) ниже — чтобы обе кнопки были на первом экране;
+     --nb-hero-rsv — место под шапку, заголовок и кнопки (у страниц с длинным заголовком больше) */
+  .nb-hero .d-hero-media{aspect-ratio:auto;height:min(56.25vw,calc(100vh - var(--nb-hero-rsv,400px)));min-height:140px;max-height:none;margin-top:18px}
+  @supports (height:100svh){.nb-hero .d-hero-media{height:min(56.25vw,calc(100svh - var(--nb-hero-rsv,400px)))}}
+  .nb-hub-hero{--nb-hero-rsv:430px}  /* заголовок хаба на 360–375 px — в 5 строк */
+  .nb-hero .d-hero-img{object-position:50% 40%}
+  .nb-listy-hero .d-hero-img{object-position:50% 12%}  /* на низком фото не срезать головы */
+  .nb-hero p.lead{margin:24px 0 0;font-size:15px;line-height:1.55;max-width:none}
+  .nb-hero .d-btns{margin-top:18px;gap:10px}
+  .nb-hero .nb-byline{margin-top:14px}
+  .nb-hero .nb-toc{margin-top:26px}
+}
+
+/* ссылки в тексте */
+.nb-page .nb-tbl td a,.nb-after a,.nb-dl a,.nb-fact a,.nb-errs a,.nb-q-note a,.nb-food a,.nb-base a,.nb-five a,.nb-lic a,.nb-page .cta .sub a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+.nb-page .nb-tbl td a:hover,.nb-after a:hover,.nb-dl a:hover,.nb-fact a:hover,.nb-errs a:hover,.nb-q-note a:hover,.nb-food a:hover,.nb-base a:hover,.nb-five a:hover,.nb-lic a:hover,.nb-page .cta .sub a:hover{border-color:var(--t1)}
+.nb-lic{margin-top:8px}
+.nb-lic a{text-decoration:none}
+
+/* пять главных пунктов */
+.nb-five{list-style:none;counter-reset:nb;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.nb-five li{counter-increment:nb;position:relative;padding:clamp(24px,2.2vw,34px) clamp(22px,2vw,32px) clamp(24px,2.2vw,34px) clamp(60px,4.4vw,82px);color:var(--t2);line-height:1.62}
+.nb-five li{padding-left:clamp(80px,5.8vw,104px)}
+.nb-five .nb-ic{position:absolute;left:clamp(22px,2vw,32px);top:clamp(24px,2.2vw,34px)}
+.nb-five li b{display:block;color:var(--t1);font-weight:500;font-size:clamp(17px,1.2vw,21px);line-height:1.35;margin-bottom:10px}
+.nb-five li:last-child:nth-child(odd){grid-column:1/-1}
+
+/* таблицы: до 900 px — карточки */
+.nb-h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;line-height:1.3;color:var(--t1);margin:clamp(48px,4vw,72px) 0 6px}
+.nb-h3:first-of-type{margin-top:0}
+.nb-doc{color:var(--acc);font-weight:500}
+.nb-date{color:var(--t1)}
+.nb-val{color:var(--t1);font-weight:500}
+.nb-old s{text-decoration-color:rgba(255,100,103,.75);text-decoration-thickness:1.5px}
+.nb-after{margin:22px 0 0;color:var(--t2);line-height:1.62;max-width:1000px}
+@media (min-width:901px){
+  .nb-docs td:nth-child(1){width:30%}
+  .nb-docs td:nth-child(3){width:15%}
+  .nb-docs td:nth-child(4){width:15%}
+  .nb-docs.nb-3 td:nth-child(3){width:22%}
+  .nb-freq td:nth-child(2){width:24%}
+  .nb-freq td:nth-child(3),.nb-freq td:nth-child(3){width:9%;white-space:nowrap}
+  .nb-freq2 td:nth-child(2){width:28%}
+  .nb-old td:nth-child(1){width:46%}
+  .nb-old td:nth-child(3){width:26%}
+  .nb-obj td:nth-child(1){width:22%}
+  .nb-obj td:nth-child(3){width:30%}
+  .nb-forms td:nth-child(1){width:20%}
+  .nb-forms td:nth-child(2){width:13%;white-space:nowrap}
+  .nb-forms td:nth-child(3){width:16%}
+  .nb-answers td:nth-child(1){width:28%}
+  .nb-answers td:nth-child(3){width:22%}
+}
+@media (max-width:900px){
+  .nb-tbl thead{display:none}
+  .nb-tbl,.nb-tbl tbody,.nb-tbl tr,.nb-tbl td{display:block;width:100%}
+  .nb-tbl tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}
+  .nb-tbl td{border:0;padding:10px 0}
+  .nb-tbl td+td{border-top:1px solid var(--line)}
+  .nb-tbl td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}
+}
+
+/* хроника изменений */
+.nb-tl{list-style:none;padding:0;margin:0;position:relative;max-width:1240px}
+.nb-tl::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:var(--line2)}
+.nb-tl li{position:relative;display:grid;grid-template-columns:minmax(120px,.2fr) minmax(0,1fr) minmax(0,.78fr);gap:clamp(14px,2vw,40px);padding:0 0 clamp(28px,2.4vw,40px) 42px}
+.nb-tl li:last-child{padding-bottom:0}
+.nb-tl li::before{content:"";position:absolute;left:0;top:5px;width:15px;height:15px;border-radius:50%;border:2px solid var(--acc);background:#09090b;box-sizing:border-box}
+.nb-tl-d{color:var(--acc);font-weight:500;font-size:clamp(16px,1.12vw,20px);line-height:1.3;white-space:nowrap}
+.nb-tl-w{color:var(--t1);line-height:1.6}
+.nb-tl-a{color:var(--t2);line-height:1.6;font-size:15px}
+.nb-tl-k{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:4px}
+.nb-tl li.is-past::before{border-color:#52525b;background:#52525b}
+.nb-tl li.is-past .nb-tl-d{color:var(--t3)}
+.nb-tl li.is-past .nb-tl-w{color:var(--t2)}
+.nb-tl a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45)}
+@media (max-width:760px){.nb-tl li{grid-template-columns:minmax(0,1fr);gap:6px;padding-left:34px}}
+
+/* разборы и образцы */
+.nb-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.nb-link{display:flex;flex-direction:column;gap:12px;padding:0 0 clamp(22px,2vw,30px);min-height:190px;color:var(--t1);overflow:hidden}
+.nb-link>:not(.nb-link-img){margin:0 clamp(22px,2vw,32px)}
+.nb-link-img{display:block;aspect-ratio:16/9;overflow:hidden;background:#18181b;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.nb-link-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.nb-link-img.is-doc{background:#f4f4f5}
+.nb-link-img.is-doc img{object-position:50% 0}
+.nb-link:hover .nb-link-img img,.nb-link:focus-visible .nb-link-img img{transform:scale(1.04)}
+.nb-link-k{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.nb-link b{font-weight:400;font-size:clamp(18px,1.3vw,23px);line-height:1.32;letter-spacing:-.01em}
+.nb-link-go{margin-top:auto;color:var(--t2);font-size:15px;transition:color .25s}
+.nb-link:hover .nb-link-go,.nb-link:focus-visible .nb-link-go{color:var(--t1)}
+
+/* автор */
+.nb-author-wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(24px,3vw,56px);align-items:center}
+.nb-author{display:flex;gap:20px;align-items:center;padding:clamp(24px,2.4vw,36px)}
+.nb-avatar{flex:none;display:block;width:112px;height:112px;border-radius:50%;object-fit:cover;background:#18181b;border:1px solid rgba(124,134,255,.4)}
+.nb-author p{margin:0}
+.nb-author-name{font-size:clamp(20px,1.5vw,26px);color:var(--t1);letter-spacing:-.02em;margin-bottom:4px!important}
+.nb-author-role{color:var(--t2);margin-bottom:4px!important}
+.nb-author-date{color:var(--t3);font-size:14px}
+.nb-author-note{color:var(--t3);font-size:13px;margin-top:6px!important}
+.nb-author-text{color:#c4c4cc;font-size:clamp(16px,1.08vw,19px);line-height:1.65;margin:0;max-width:760px}
+
+/* источники — свёрнутый список */
+.nb-page #istochniki{padding:clamp(48px,4.6vw,84px) 0}
+.nb-src{border:1.4px solid var(--line);border-radius:var(--r);background:var(--card)}
+.nb-src summary{list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:clamp(22px,2vw,32px) calc(clamp(22px,2vw,32px) + 48px) clamp(22px,2vw,32px) clamp(22px,2vw,32px);position:relative;border-radius:var(--r)}
+.nb-src summary::-webkit-details-marker{display:none}
+.nb-src summary .eyebrow{margin:0}
+.nb-src-t{font-size:clamp(20px,1.5vw,26px);font-weight:300;letter-spacing:-.02em;line-height:1.3;color:var(--t1)}
+.nb-src summary::after{content:"+";position:absolute;right:clamp(22px,2vw,32px);top:50%;width:32px;height:32px;margin-top:-16px;border:1px solid var(--line2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--t2);font-size:18px;line-height:1;transition:border-color .25s}
+.nb-src summary:hover::after{border-color:var(--acc)}
+.nb-src[open] summary::after{content:"−"}
+.nb-base{list-style:none;padding:0 clamp(22px,2vw,32px) clamp(18px,1.6vw,26px);margin:0}
+.nb-base li{position:relative;padding:13px 0 13px 28px;border-top:1px solid var(--line2);color:var(--t2);line-height:1.6;font-size:15px}
+.nb-base li::before{content:"§";position:absolute;left:3px;top:13px;color:var(--acc)}
+
+/* проверочные листы: изменения, пять вопросов, пищевые производства, шаги, ошибки */
+.nb-grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.nb-fact{padding:clamp(22px,2.2vw,34px);color:var(--t2);line-height:1.65}
+.nb-fact b{display:block;color:var(--t1);font-weight:500;font-size:clamp(17px,1.2vw,21px);margin-bottom:8px}
+.nb-qs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.nb-q{padding:clamp(24px,2.4vw,40px)}
+.nb-q-wide{grid-column:1/-1}
+.nb-q h3{display:flex;gap:16px;align-items:baseline;font-size:clamp(21px,1.6vw,28px);font-weight:400;letter-spacing:-.02em;line-height:1.25;margin:0 0 20px;color:var(--t1)}
+.nb-q-n{font-size:14px;font-weight:500;letter-spacing:0;color:var(--acc);flex-shrink:0}
+.nb-quote{margin:0 0 22px;padding:18px 20px;border-left:2px solid var(--acc);background:rgba(124,134,255,.06);border-radius:0 10px 10px 0;color:var(--t1);line-height:1.6;font-size:clamp(15px,1.02vw,17px)}
+.nb-quote-k{display:block;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-bottom:8px}
+.nb-dl{display:grid;grid-template-columns:minmax(120px,.3fr) minmax(0,1fr);margin:0}
+.nb-dl dt{color:var(--t3);font-size:14px;line-height:1.5;padding:12px 16px 12px 0;border-top:1px solid var(--line2)}
+.nb-dl dd{margin:0;color:var(--t2);line-height:1.6;padding:12px 0;border-top:1px solid var(--line2)}
+.nb-q-wide .nb-dl{grid-template-columns:minmax(140px,.16fr) minmax(0,1fr)}
+.nb-q .nb-tbl{margin:12px 0 18px}
+.nb-q-note{color:var(--t2);line-height:1.62;margin:0 0 8px;max-width:1160px}
+.nb-food{margin-top:clamp(28px,2.6vw,44px);padding:clamp(24px,2.4vw,40px)}
+.nb-food h3{font-size:clamp(20px,1.5vw,26px);font-weight:400;letter-spacing:-.02em;line-height:1.3;margin:0 0 12px;color:var(--t1)}
+.nb-food p{margin:0;color:var(--t2);line-height:1.65;max-width:1200px}
+.nb-page .nb-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 18px}
+.nb-errs{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,3vw,56px);max-width:1440px}
+.nb-errs li{position:relative;padding:16px 0 16px 34px;border-top:1px solid var(--line2);color:var(--t2);line-height:1.6}
+.nb-errs li::before,.nb-errs li::after{content:"";position:absolute;left:3px;top:27px;width:14px;height:2px;background:var(--red);transform:rotate(45deg)}
+.nb-errs li::after{transform:rotate(-45deg)}
+.nb-errs-wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(24px,3.4vw,64px);align-items:start}
+.nb-errs-wrap .nb-errs{grid-template-columns:minmax(0,1fr)}
+.nb-errs-ph{margin:0;position:sticky;top:110px}
+.nb-errs-ph img{display:block;width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line2);background:#18181b}
+.nb-errs-ph figcaption{margin-top:10px;color:var(--t3);font-size:13px;line-height:1.5}
+
+@media (max-width:1100px){
+  .nb-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .nb-qs,.nb-author-wrap,.nb-errs-wrap{grid-template-columns:minmax(0,1fr)}
+  .nb-errs-ph{position:static;max-width:640px}
+  .nb-page .nb-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .nb-five,.nb-grid2,.nb-errs{grid-template-columns:minmax(0,1fr)}
+  .nb-toc{gap:6px}
+  .nb-toc a{padding:8px 13px;font-size:13px}
+}
+@media (max-width:600px){
+  .nb-links{grid-template-columns:minmax(0,1fr)}
+  .nb-link{min-height:0}
+  .nb-page .nb-steps{grid-template-columns:minmax(0,1fr)}
+  .nb-dl,.nb-q-wide .nb-dl{grid-template-columns:minmax(0,1fr)}
+  .nb-dl dt{padding-bottom:2px}
+  .nb-dl dd{border-top:0;padding-top:2px}
+  .nb-avatar{width:80px;height:80px}
+  .nb-author{align-items:flex-start}
+  .nb-five li{padding-left:22px;padding-top:82px}
+  .nb-five .nb-ic{top:24px;left:22px}
+  .nb-q h3{flex-direction:column;gap:6px}
+}
+
+/* ---------- инфографика раздела: свёрстана кодом, текст остаётся текстом ---------- */
+.nb-fig{margin:0 0 clamp(32px,3vw,52px)}
+.nb-fig-head{display:flex;flex-direction:column;gap:6px;margin:0 0 18px}
+.nb-fig-t{font-size:clamp(21px,1.6vw,28px);font-weight:300;letter-spacing:-.025em;line-height:1.22;color:var(--t1)}
+.nb-fig-t em{font-style:italic;font-weight:500}
+.nb-fig-d{color:var(--t2);font-size:15px;line-height:1.55;max-width:860px}
+.nb-fig-note{color:var(--t3);font-size:13px;line-height:1.5;margin:14px 0 0}
+.nb-ic{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:12px;background:rgba(124,134,255,.1);border:1px solid rgba(124,134,255,.28);color:var(--acc)}
+.nb-ic svg{width:20px;height:20px}
+
+/* месяц на объекте особого значения */
+.nb-cal{display:grid;grid-template-columns:minmax(170px,.9fr) repeat(4,minmax(0,1fr));border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:var(--card)}
+.nb-cal-row{display:contents}
+.nb-cal-r,.nb-cal-c,.nb-cal-h{display:flex;align-items:center;min-height:66px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.nb-cal-c,.nb-cal-h{border-left:1px solid var(--line)}
+.nb-cal-hd>*{min-height:46px;background:rgba(255,255,255,.03)}
+.nb-cal-h{color:var(--t3);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.nb-cal-r{flex-direction:column;align-items:flex-start;justify-content:center;gap:2px}
+.nb-cal-r b{color:var(--t1);font-weight:500;font-size:15px;line-height:1.3}
+.nb-cal-r small{color:var(--t3);font-size:12px;line-height:1.35}
+.nb-cal-row:last-child>*{border-bottom:0}
+.nb-dot{display:inline-flex;align-items:center;gap:8px;font-size:13px;line-height:1.3;color:var(--t2);border:1px solid;border-radius:99px;padding:6px 12px 6px 7px}
+.nb-dot>b{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;color:#000;font-size:12px;font-weight:700}
+.nb-dot-w{display:none}
+.nb-dot.is-ins{border-color:rgba(124,134,255,.45)}.nb-dot.is-ins>b{background:var(--acc)}
+.nb-dot.is-rod{border-color:rgba(255,137,4,.45)}.nb-dot.is-rod>b{background:var(--org)}
+.nb-dot.is-bin{border-color:rgba(5,223,114,.4)}.nb-dot.is-bin>b{background:var(--grn)}
+.nb-dot.is-tr{border-style:dashed;border-color:var(--t4);color:var(--t3)}.nb-dot.is-tr>b{background:none;border:1px dashed var(--t3);color:var(--t3)}
+/* до 900 px (телефон и планшет) — карточка на каждую строку: что проверяют, норма и отметки «Неделя N · …» */
+@media (max-width:900px){
+  .nb-cal{display:flex;flex-direction:column;gap:10px;border:0;border-radius:0;background:none;overflow:visible}
+  .nb-cal-row{display:flex;flex-wrap:wrap;gap:8px;padding:16px;border:1px solid var(--line2);border-radius:var(--r);background:var(--card)}
+  .nb-cal-hd{display:none}
+  .nb-cal-r,.nb-cal-c,.nb-cal-row:last-child>*{min-height:0;padding:0;border:0}
+  .nb-cal-r{flex:1 1 100%;margin-bottom:4px}
+  .nb-cal-c:empty{display:none}
+  .nb-dot-w{display:inline}
+}
+
+/* дорожная карта норм: на компьютере ось слева направо, на телефоне — сверху вниз */
+.nb-road{list-style:none;margin:0;padding:0;position:relative;height:300px}
+.nb-road-axis{position:absolute;left:0;right:0;top:150px;height:2px;background:rgba(124,134,255,.55)}
+.nb-road-fill{position:absolute;left:0;top:0;bottom:0;background:var(--t4)}
+.nb-road-pt{position:absolute;top:0;left:var(--x);width:clamp(132px,12.5vw,200px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-align:center}
+.nb-road-pt::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;border:2px solid var(--acc);background:var(--bg2);box-shadow:0 0 0 6px rgba(124,134,255,.12);box-sizing:border-box}
+.nb-road-pt time{font-weight:600;font-size:15px;line-height:1.3;color:var(--acc);margin-bottom:6px}
+.nb-road-pt span{color:var(--t2);font-size:13px;line-height:1.4}
+.nb-road-pt.is-up{height:159px;justify-content:flex-end}
+.nb-road-pt.is-up::before{order:3;margin-top:14px}
+.nb-road-pt.is-down{top:141px}
+.nb-road-pt.is-down::before{margin-bottom:14px}
+.nb-road-pt.is-past time,.nb-road-pt.is-past span{color:var(--t3)}
+.nb-road-pt.is-past::before{border-color:var(--t4);background:var(--t4);box-shadow:none}
+.nb-road-now{position:absolute;left:var(--x);top:151px;transform:translate(-50%,-50%);z-index:2}
+.nb-road-now span{display:block;white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#000;background:var(--yel);border-radius:99px;padding:4px 10px;box-shadow:0 0 0 5px rgba(253,199,0,.16)}
+@media (max-width:760px){
+  .nb-road{height:auto;display:flex;flex-direction:column;gap:20px;padding:2px 0 2px 34px}
+  .nb-road-axis{left:8px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:var(--line2)}
+  .nb-road-fill{display:none}
+  .nb-road-pt,.nb-road-pt.is-up,.nb-road-pt.is-down{position:relative;left:auto;top:auto;width:auto;height:auto;transform:none;align-items:flex-start;justify-content:flex-start;text-align:left;order:var(--o)}
+  .nb-road-pt::before,.nb-road-pt.is-up::before,.nb-road-pt.is-down::before{position:absolute;left:-34px;top:1px;margin:0}
+  .nb-road-pt time{margin-bottom:2px}
+  .nb-road-pt span{font-size:14px}
+  .nb-road-now{position:relative;left:auto;top:auto;transform:none;order:var(--o);margin-left:-34px;align-self:flex-start}
+}
+
+/* от закона до журнала */
+.nb-tier-list{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.nb-tier{position:relative;display:grid;grid-template-columns:minmax(190px,.26fr) minmax(0,1fr);border:1px solid var(--line2);border-radius:var(--r);background:var(--card)}
+.nb-tier+.nb-tier::before{content:"";position:absolute;left:clamp(40px,4vw,64px);top:-15px;width:8px;height:8px;border-right:1.5px solid var(--t4);border-bottom:1.5px solid var(--t4);transform:rotate(45deg)}
+.nb-tier-n{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:18px 20px;border-right:1px solid var(--line2)}
+.nb-tier-n b{font-size:15px;font-weight:600;color:var(--t1)}
+.nb-tier-n small{font-size:12px;line-height:1.35;color:var(--t3)}
+.nb-tier-ch{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px 18px}
+.nb-chip{display:inline-block;font-size:13px;line-height:1.3;color:var(--t1);border:1px solid var(--line2);border-radius:99px;padding:6px 12px;background:rgba(255,255,255,.02);transition:border-color .2s,background .2s}
+span.nb-chip{color:var(--t2)}
+a.nb-chip:hover,a.nb-chip:focus-visible{border-color:var(--acc);background:rgba(124,134,255,.08)}
+.nb-chip.is-key{border-color:rgba(124,134,255,.55);background:rgba(124,134,255,.12)}
+.nb-tier.is-own{border-color:rgba(124,134,255,.45);background:rgba(124,134,255,.06)}
+@media (max-width:760px){
+  .nb-tier{grid-template-columns:minmax(0,1fr)}
+  .nb-tier-n{border-right:0;border-bottom:1px solid var(--line2);padding:14px 16px}
+  .nb-tier-ch{padding:12px 16px 14px}
+}
+
+/* выберите вид объекта */
+.nb-objs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.nb-obj{display:flex;flex-direction:column;overflow:hidden;color:var(--t1)}
+.nb-obj-img{display:block;aspect-ratio:16/10;overflow:hidden;background:#18181b}
+.nb-obj-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.nb-obj:hover .nb-obj-img img,.nb-obj:focus-visible .nb-obj-img img{transform:scale(1.05)}
+.nb-obj-t{display:flex;flex-direction:column;gap:3px;padding:12px 14px 14px}
+.nb-obj-t b{font-size:14px;font-weight:600;line-height:1.3}
+.nb-obj-t small{font-size:12px;line-height:1.35;color:var(--t3)}
+@media (max-width:1100px){.nb-objs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.nb-objs{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+
+/* было → стало */
+.nb-bs{display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(0,1.3fr);align-items:center;gap:10px}
+.nb-bs-col{display:grid;gap:12px}
+.nb-ord{border:1px solid var(--line2);border-radius:var(--r);padding:18px 20px;background:var(--card)}
+.nb-ord b{display:block;font-size:17px;font-weight:600;color:var(--t1);margin-bottom:4px}
+.nb-ord>span:not(.nb-ord-n){color:var(--t2);font-size:14px;line-height:1.5}
+.nb-ord.is-old{background:none;border-style:dashed}
+.nb-ord.is-old b{color:#c4c4cc;text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:2px}
+.nb-ord.is-old>span{color:#a1a1aa}
+.nb-ord.is-new{border-color:rgba(124,134,255,.5)}
+.nb-ord-n{float:right;margin:0 0 6px 14px;font-size:34px;font-weight:300;line-height:1;color:var(--acc)}
+.nb-bs-arrow{display:grid;place-items:center;color:var(--acc)}
+.nb-bs-arrow svg{width:34px;height:34px}
+.nb-bs-tot{margin:2px 0 0;color:var(--t3);font-size:14px}
+@media (max-width:760px){
+  .nb-bs{grid-template-columns:minmax(0,1fr)}
+  .nb-bs-arrow svg{transform:rotate(90deg)}
+}
+
+/* фрагмент формы проверочного листа */
+.nb-sheet{max-width:1120px;background:#f4f4f5;color:#18181b;border-radius:8px;padding:clamp(16px,2vw,28px);box-shadow:0 30px 60px rgba(0,0,0,.5);transform:rotate(-.5deg)}
+.nb-sheet-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin:0 0 14px;font-size:12px;color:#52525c}
+.nb-sheet table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.45}
+.nb-sheet th{text-align:left;font-weight:600;font-size:12px;color:#18181b;background:#e4e4e7;border:1px solid #a1a1aa;padding:8px}
+.nb-sheet td{vertical-align:top;border:1px solid #a1a1aa;padding:8px;background:rgba(124,134,255,.09)}
+.nb-sheet-n{width:40px;font-weight:600}
+.nb-sheet-norm{width:200px;color:#52525c;font-size:12px}
+.nb-sheet-c{width:58px;text-align:center}
+.nb-box{display:inline-block;position:relative;vertical-align:middle;width:16px;height:16px;border:1.5px solid #3f3f46;border-radius:2px}
+.nb-box.is-on::after{content:"";position:absolute;left:4px;top:0;width:5px;height:10px;border:solid var(--acc2);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+@media (max-width:760px){
+  .nb-sheet{transform:none;padding:14px}
+  .nb-sheet thead{display:none}
+  .nb-sheet table,.nb-sheet tbody{display:block}
+  .nb-sheet tr{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-bottom:10px;padding:12px;border:1px solid #a1a1aa;border-radius:6px;background:rgba(124,134,255,.09)}
+  .nb-sheet tr:last-child{margin-bottom:0}
+  .nb-sheet td{display:block;border:0;padding:0;background:none}
+  .nb-sheet-n{flex:0 0 26px;align-self:flex-start}
+  .nb-sheet-q{flex:1 1 calc(100% - 42px)}
+  .nb-sheet-norm{flex:1 1 100%;width:auto;padding-left:42px!important}
+  .nb-sheet-c{flex:0 0 auto;width:auto;display:inline-flex!important;align-items:center;gap:6px}
+  .nb-sheet-c:nth-child(4){margin-left:42px}
+  .nb-sheet-c::after{content:attr(data-l);font-size:12px;color:#52525c}
+}
+
+/* папка к проверке */
+.nb-folder{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.nb-fdoc{display:flex;flex-direction:column;gap:6px;padding:12px 12px 18px;color:var(--t1)}
+.nb-fdoc-img{display:block;aspect-ratio:3/4;overflow:hidden;border-radius:8px;background:#fff;margin-bottom:8px}
+.nb-fdoc-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.nb-fdoc-img.is-photo img{object-position:50% 50%}
+.nb-fdoc:hover .nb-fdoc-img img,.nb-fdoc:focus-visible .nb-fdoc-img img{transform:scale(1.03)}
+.nb-fdoc b{font-size:15px;font-weight:600;line-height:1.3;padding:0 4px}
+.nb-fdoc small{font-size:13px;line-height:1.4;color:var(--t3);padding:0 4px}
+@media (max-width:1100px){.nb-folder{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.nb-folder{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+
+/* иконки: виды объектов в таблице, шаги подготовки */
+.nb-obj-ic{display:inline-flex;align-items:center;gap:12px;color:var(--t1)}
+.nb-obj-ic .nb-ic{width:34px;height:34px;border-radius:10px}
+.nb-obj-ic .nb-ic svg{width:17px;height:17px}
+.nb-page .nb-steps li::before{display:inline-block;vertical-align:middle;margin:0 12px 14px 0}
+.nb-steps .nb-ic{display:inline-grid;vertical-align:middle;width:36px;height:36px;border-radius:10px;margin:0 0 14px}
+.nb-steps .nb-ic svg{width:18px;height:18px}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org", "name": "ПЕСТКОНТРОЛЬ Центр", "legalName": "ООО «Центр дезинфекционных услуг»", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/", "telephone": "+7 495 104-35-70", "email": "b2b@pestcontrol-center.ru"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"}, {"@type": "ListItem", "position": 2, "name": "Нормативная база", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/"}, {"@type": "ListItem", "position": 3, "name": "Проверочные листы 2026", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/"}]}, {"@type": "Article", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/#article", "headline": "Проверочные листы Роспотребнадзора 2026: вопросы о дезинсекции и дератизации", "description": "Вопросы о насекомых и грызунах в проверочных листах (чек-листах) Роспотребнадзора по приказам № 578 и № 580: где они есть, нормы СанПиН и документы для ответа.", "inLanguage": "ru", "datePublished": "2026-11-06", "dateModified": "2026-11-09", "author": {"@type": "Person", "name": "Марианна Семерина", "jobTitle": "Санитарный врач"}, "publisher": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org"}, "mainEntityOfPage": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/", "image": [{"@type": "ImageObject", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/pl-hero.webp", "width": 1920, "height": 1072, "caption": "Менеджер по качеству отмечает пункты проверочного листа, специалист по пест-контролю показывает на пронумерованный контейнер для мониторинга грызунов на складе"}, {"@type": "ImageObject", "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/pl-og.jpg", "width": 1200, "height": 630}], "about": [{"@type": "Legislation", "legislationIdentifier": "Приказ Роспотребнадзора № 578", "legislationDate": "2026-07-20", "legislationLegalForce": "https://schema.org/InForce", "url": "https://base.garant.ru/414956074/"}, {"@type": "Legislation", "legislationIdentifier": "Приказ Роспотребнадзора № 580", "legislationDate": "2026-07-20", "legislationLegalForce": "https://schema.org/InForce", "url": "http://publication.pravo.gov.ru/document/0001202609240001"}], "isPartOf": {"@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/#webpage"}}, {"@type": "FAQPage", "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/normativnaya-baza/proverochnye-listy/#faq", "mainEntity": [{"@type": "Question", "name": "С какого числа действуют новые проверочные листы Роспотребнадзора?", "acceptedAnswer": {"@type": "Answer", "text": "Приказ № 578 — с 4 октября 2026 года, приказ № 580 — с 5 октября 2026 года. Они заменили приказы № 18 от 20.01.2022 и № 808 от 24.12.2021."}}, {"@type": "Question", "name": "Может ли инспектор проверять то, чего нет в проверочном листе?", "acceptedAnswer": {"@type": "Answer", "text": "Да. В п. 2 обоих приказов сказано, что плановый рейдовый осмотр и выездная проверка не ограничиваются вопросами из форм."}}, {"@type": "Question", "name": "Как часто нужно обследовать объект на насекомых?", "acceptedAnswer": {"@type": "Answer", "text": "Объекты особого эпидемиологического значения — не реже 2 раз в месяц, другие объекты — раз в месяц, очаги инфекционных заболеваний — раз в неделю (п. 101 СанПиН 3.3686-21)."}}, {"@type": "Question", "name": "Нужно ли проводить дератизацию каждый месяц?", "acceptedAnswer": {"@type": "Answer", "text": "На объектах особого эпидемиологического значения раз в месяц обязательна оценка заселённости грызунами. Истребительные мероприятия проводят по её результатам (п. 110 СанПиН 3.3686-21)."}}, {"@type": "Question", "name": "Можно ли проводить дезинсекцию и дератизацию своими силами?", "acceptedAnswer": {"@type": "Answer", "text": "Лицензия не нужна, если работы выполняют для собственных нужд. Но в листах для гостиниц, аптек, магазинов непродовольственных товаров, спортивных объектов и бань спрашивают, проводит ли обработки «организация, осуществляющая дезинфекционную деятельность». Для мест массового пребывания людей это прямо установлено п. 130 СанПиН 3.3686-21."}}, {"@type": "Question", "name": "Что спрашивают о вредителях при проверке общепита?", "acceptedAnswer": {"@type": "Answer", "text": "В листе для общепита (приказ № 580, приложение 2) четыре таких вопроса: дезинсекция и дератизация в составе производственного контроля на принципах ХАССП (вопрос 11), отсутствие насекомых, грызунов, синантропных птиц и животных (58), запрет хранить и готовить продукцию во время обработок (108) и запрет распыляемых и рассыпаемых средств при посетителях и персонале (109)."}}, {"@type": "Question", "name": "Что спрашивают о вредителях при проверке магазина продуктов?", "acceptedAnswer": {"@type": "Answer", "text": "В листе для торговли пищевой продукцией (приказ № 580, приложение 1) пять таких вопросов: защита продукции от грызунов и насекомых при перевозке (58), хранение сыпучих продуктов в помещениях, не заражённых амбарными вредителями (89), дератизация площадки накопления отходов (138), запрет присутствия насекомых и грызунов (153) и дезинсекция, дератизация и инженерная защита зданий (155)."}}, {"@type": "Question", "name": "Есть ли проверочный лист для пищевого производства?", "acceptedAnswer": {"@type": "Answer", "text": "В приказах № 578 и № 580 отдельной формы нет. На производстве оценивают процедуры ХАССП по ТР ТС 021/2011, в том числе периодичность и проведение дезинсекции и дератизации (ст. 10 ч. 3 п. 10)."}}, {"@type": "Question", "name": "Применяют ли проверочные листы при профилактическом визите?", "acceptedAnswer": {"@type": "Answer", "text": "Приказы утверждают формы для плановых рейдовых осмотров и выездных проверок. О профилактическом визите — на странице санитарного аудита."}}, {"@type": "Question", "name": "Где взять полный текст проверочных листов?", "acceptedAnswer": {"@type": "Answer", "text": "Официальная публикация приказа № 580 — на publication.pravo.gov.ru. Тексты всех форм обоих приказов есть в системе «Гарант», ссылки — в таблице «Какие вопросы зададут на вашем объекте» и в источниках."}}]}]}</script>
+<style id="vu-st">/* блок «Все услуги» (tools/site/services_block.py) */.s-vu{content-visibility:auto;contain-intrinsic-size:auto 1000px}.s-vu .vu-head{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:20px 64px;align-items:end;margin-bottom:clamp(32px,3vw,52px)}.s-vu .vu-head .head{margin:0}.s-vu .vu-head h2{margin:0}.vu-lead{font-size:17px;line-height:1.6;color:var(--t3);margin:0;max-width:480px}.vu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.1vw,20px);align-items:start}.vu-col{display:flex;flex-direction:column;gap:clamp(12px,1.1vw,20px)}.vu-g{padding:8px;border-radius:20px}.vu-gt{display:flex;justify-content:space-between;align-items:center;padding:16px 16px 8px;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}.vu-gt span{color:var(--t3);letter-spacing:.04em}.vu-i{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:14px;align-items:start;padding:16px;border-radius:14px;color:var(--t2);text-decoration:none;transition:background .3s}a.vu-i:hover,a.vu-i:focus-visible{background:rgba(255,255,255,.05)}.vu-i+.vu-i::before{content:"";position:absolute;left:70px;right:16px;top:0;height:1px;background:var(--line)}.vu-ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(99,102,241,.12);color:#a5abff}.vu-ic svg{width:22px;height:22px}.vu-b{display:flex;flex-direction:column;gap:4px;min-width:0}.vu-t{font-size:16px;line-height:1.3;color:var(--t1);letter-spacing:-.01em}.vu-d{font-size:14px;line-height:1.45;color:var(--t3)}.vu-p{margin-top:4px;font-size:13px;line-height:1.3;color:var(--t2);font-weight:500}.vu-a{align-self:center;width:32px;height:32px;border-radius:50%;border:1.4px solid var(--line2);display:grid;place-items:center;color:var(--t1);transition:background .3s,border-color .3s,color .3s,transform .4s var(--ease)}.vu-a svg{width:13px;height:13px}a.vu-i:hover .vu-a,a.vu-i:focus-visible .vu-a{background:var(--t1);border-color:var(--t1);color:#000;transform:translateX(3px)}.vu-i.is-cur{background:rgba(99,102,241,.1);box-shadow:inset 0 0 0 1px rgba(124,134,255,.35)}.vu-i.is-cur+.vu-i::before,.vu-i+.vu-i.is-cur::before{display:none}.vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}.vu-cta{padding:clamp(24px,1.8vw,32px);border-radius:20px;display:flex;flex-direction:column;gap:12px;background:radial-gradient(120% 140% at 100% 0%,rgba(99,102,241,.32),rgba(99,102,241,0) 60%),var(--bg2)}.vu-cta b{font-size:clamp(19px,1.3vw,24px);font-weight:400;line-height:1.25;letter-spacing:-.02em;color:var(--t1)}.vu-cta p{margin:0;font-size:15px;line-height:1.55;color:var(--t3)}.vu-cta .btn{align-self:flex-start;margin-top:10px}@media (max-width:1180px){.vu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vu-col:nth-child(3){grid-column:1/-1}.vu-col:nth-child(3) .vu-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.vu-col:nth-child(3) .vu-gt{grid-column:1/-1}.vu-col:nth-child(3) .vu-i:nth-child(3)::before{display:none}}@media (max-width:900px){.s-vu .vu-head{grid-template-columns:1fr}}@media (max-width:760px){.vu-grid{display:flex;flex-direction:column;gap:12px}.vu-col{display:contents}.vu-g,.vu-cta{width:100%;box-sizing:border-box}.vu-cta{order:9}.vu-col:nth-child(3) .vu-g{grid-template-columns:1fr}.vu-col:nth-child(3) .vu-i:nth-child(3)::before{display:block}.vu-g{padding:4px}.vu-gt{padding:14px 12px 6px}.vu-i{grid-template-columns:36px minmax(0,1fr) auto;gap:12px;padding:12px;align-items:center}.vu-i+.vu-i::before{left:60px;right:12px}.vu-ic{width:36px;height:36px;border-radius:10px}.vu-ic svg{width:20px;height:20px}.vu-b{gap:2px}.vu-t{font-size:15px}.vu-d{display:none}.vu-p{margin:0;font-weight:400;color:var(--t3)}.vu-lead{font-size:16px}.vu-cta .btn{align-self:stretch}.s-vu{contain-intrinsic-size:auto 1700px}}</style><style id="m-crumbs">/* крошки на телефоне не показываем: для SEO хватает BreadcrumbList и ссылок в HTML */@media (max-width:900px){.d-crumbs,.f-crumbs{display:none!important}}</style>
+<style id="t-inset">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>
+<style id="srch-st">/* лупа поиска в шапке и раскладка шапки с ней (tools/menu/apply_menu.py) */.srch-btn{flex:none;width:44px;height:44px;padding:0;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff;cursor:pointer;transition:color .25s,border-color .3s,background .3s,transform .35s cubic-bezier(.16,1,.3,1)}.srch-btn:hover{border-color:#7c86ff;background:rgba(97,95,255,.2);transform:translateY(-2px)}.srch-btn:focus-visible{outline:2px solid #7c86ff;outline-offset:2px}.srch-btn svg{width:18px;height:18px;display:block}@media (min-width:761px){.hdr .wrap{gap:16px}.hdr .msg{display:none}.srch-btn{width:38px;height:38px;background:none;border-color:transparent;color:var(--t2);margin-right:calc(4px - clamp(14px,2vw,40px))}.srch-btn svg{width:20px;height:20px}.srch-btn:hover{color:#fff;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);transform:none}}@media (min-width:761px) and (max-width:1440px){.hdr-right{gap:18px}.srch-btn{margin-right:-14px}}@media (min-width:761px) and (max-width:1000px){.hdr-right{gap:12px}.srch-btn{margin-right:-8px}}@media (max-width:900px){.logo-txt{display:flex;flex-direction:column;align-items:flex-start}.logo-sub{margin:0}}@media (max-width:760px){.hdr .wrap{gap:12px}.hdr-right{gap:8px}}@media (max-width:400px){.hdr .wrap{gap:10px}.srch-btn{width:40px;height:40px}}@media (max-width:360px){.hdr .wrap{gap:8px}.hdr-right{gap:6px}.srch-btn,.phone i,.burger{width:38px;height:38px}}@media (max-width:340px){.logo-mark{display:none}.logo-sub{display:block}}.nav-dd-panel a.nav-sub{padding:8px 14px 8px 30px;font-size:14px;color:var(--t3)}.nav-dd-panel a.nav-sub::before{content:"";position:absolute;left:16px;top:50%;width:7px;height:1px;background:var(--line2)}.nav-dd-panel a.nav-sub{position:relative}.nav-dd-panel a.nav-sub:hover,.nav-dd-panel a.nav-sub[aria-current]{color:#fff}.mm-sub a.nav-sub{padding-left:40px;font-size:16px;color:var(--t3)}.ft li.ft-sub{padding-left:14px;font-size:14px;position:relative}.ft li.ft-sub::before{content:"";position:absolute;left:0;top:50%;width:7px;height:1px;background:var(--line2)}</style><script id="srch-js">/* поиск по сайту: движок и индекс загружаются по первому нажатию на лупу или «/» (tools/search) */(function(r,v){var d=document,ld=0,w=null;function go(o){if(window.PCSearch)return window.PCSearch.open(r,v,o);w=o;if(ld)return;ld=1;var s=d.createElement("script");s.src=r+"search.min.js?v="+v;s.async=true;s.onload=function(){window.PCSearch&&window.PCSearch.open(r,v,w)};s.onerror=function(){ld=0};d.head.appendChild(s)}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-srch]");if(b){e.preventDefault();go({btn:b})}});d.addEventListener("keydown",function(e){if(e.key!=="/"||e.ctrlKey||e.metaKey||e.altKey)return;var t=e.target,n=t&&t.tagName;if(n==="INPUT"||n==="TEXTAREA"||n==="SELECT"||t.isContentEditable)return;e.preventDefault();go({})});if(/^#q\d+$/.test(location.hash)){var c=0,t=setInterval(function(){var b=d.getElementById(location.hash.slice(1));if(b&&d.documentElement.classList.contains("anim-ready")){clearInterval(t);if(b.getAttribute("aria-expanded")==="false")b.click()}else if(++c>60)clearInterval(t)},150)}})("../../","20261108");</script>
+<style data-fx>
+/* подсветка рамки карточек за курсором — как у .card на главной (tools/site/fx.py) */
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev){position:relative}
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev)::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;pointer-events:none;background:radial-gradient(360px circle at var(--mx,-999px) var(--my,-999px),rgba(124,134,255,.85),rgba(124,134,255,.15) 35%,transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .4s;z-index:2}
+@media (hover:hover) and (pointer:fine){:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev):hover::after{opacity:1}}
+/* лупа на фото первого экрана — как на главной (tools/site/fx.py, с 15.11.2026): светлая копия фото в неподвижной
+   круглой маске; скрипт только сдвигает круг и фото внутри него (transform), фильтры и маска не пересчитываются.
+   Только компьютер с мышью шире 860 px; на телефонах, планшетах и в облегчённом режиме (lowfx) — обычное фото */
+.fx-lit{position:absolute;left:0;top:0;width:0;height:0;opacity:0;pointer-events:none;contain:strict;will-change:transform,opacity;-webkit-mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;transition:opacity 1.8s cubic-bezier(.16,1,.3,1)}
+.fx-lit-in{position:absolute;left:0;top:0;will-change:transform}
+.fx-lit img{filter:brightness(1.08) contrast(1.06) saturate(1.06)}
+#hero :is(.d-hero-media,.hero-media)>picture>img{transition:filter 1.8s cubic-bezier(.16,1,.3,1)}
+#hero.fx-lit-on :is(.d-hero-media,.hero-media)>picture>img{filter:grayscale(.3) brightness(.56)}
+#hero.fx-lit-on .fx-lit{opacity:1}
+.lowfx #hero :is(.d-hero-media,.hero-media)>picture>img{transition:none}
+@media (max-width:860px),(hover:none),(pointer:coarse){.fx-lit{display:none}}
+</style>
+<style id="hero-fold">/* кнопки первого экрана видны целиком на любом экране (tools/site/hero_fold.py) */@media (max-width:760px){#hero.hero:not(.f-hero) .hero-copy{display:flex;flex-direction:column}#hero.hero:not(.f-hero) .hero-copy>*{order:6}#hero.hero:not(.f-hero) .hero-copy>.badge{order:1;align-self:flex-start}#hero.hero:not(.f-hero) .hero-copy>h1{order:2;margin-bottom:0}#hero.hero:not(.f-hero) .hero-copy>.hero-ctas{order:3;margin-top:22px}#hero.hero:not(.f-hero) .hero-copy>.lead{order:4;margin-top:24px}}@media (max-width:760px) and (max-height:620px){#hero.hero:not(.f-hero){padding-top:92px}#hero.hero:not(.f-hero) h1{margin-top:18px}}@media (max-width:900px){#hero.f-hero .hero-copy{display:flex;flex-direction:column}#hero.f-hero .hero-copy>*{order:6}#hero.f-hero .hero-copy>.f-crumbs{order:0}#hero.f-hero .hero-copy>.badge{order:1;align-self:flex-start}#hero.f-hero .hero-copy>h1{order:2;margin-bottom:0}#hero.f-hero .hero-copy>.hero-ctas{order:3;margin-top:22px}#hero.f-hero .hero-copy>.lead{order:4;margin-top:24px}#hero.f-hero .hero-media{aspect-ratio:auto;height:clamp(104px,calc(100vh - 440px),56.25vw);height:clamp(104px,calc(100svh - 440px),56.25vw)}}@media (max-width:760px){#hero.f-hero .hero-media{height:clamp(104px,calc(100vh - 440px),75vw);height:clamp(104px,calc(100svh - 440px),75vw)}.rp-page #hero.f-hero .hero-media,.lb-page #hero.f-hero .hero-media{height:clamp(104px,calc(100vh - 480px),75vw);height:clamp(104px,calc(100svh - 480px),75vw)}}@media (max-width:900px) and (max-height:620px){#hero.f-hero .hero-copy>.badge{display:none}#hero.f-hero .hero-media{height:clamp(96px,calc(100vh - 400px),75vw);height:clamp(96px,calc(100svh - 400px),75vw)}.rp-page #hero.f-hero .hero-copy>h1{font-size:clamp(26px,7.6vw,34px)}#hero.f-hero .hero-copy>h1{margin-top:30px}}@media (max-width:860px){#hero.d-hero .d-hero-media{aspect-ratio:auto;height:clamp(104px,calc(100vh - 380px),56.25vw);height:clamp(104px,calc(100svh - 380px),56.25vw)}}@media (max-width:860px) and (max-height:620px){#hero.d-hero{padding-top:84px}#hero.d-hero .d-hero-media{margin-top:14px}#hero.d-hero .d-btns{margin-top:16px}}@media (max-width:860px) and (max-height:520px){#hero.d-hero .d-hero-media{display:none}#hero.d-hero h1{margin-bottom:0}}@media (max-width:900px) and (max-height:520px){#hero.f-hero{padding-top:76px}#hero.f-hero .hero-media{display:none}#hero.f-hero .wrap{margin-top:0}#hero.f-hero .hero-copy>h1{margin-top:0}}@media (max-width:400px){#hero .hero-copy{min-width:0}#hero .hero-ctas .btn{min-width:0;max-width:100%;white-space:normal;padding:0 14px}#hero .hero-ctas .btn-t{white-space:normal;text-align:center}}@media (max-width:860px) and (max-height:620px){#hero.d-hero .d-hero-media{height:clamp(104px,calc(100vh - 410px),56.25vw);height:clamp(104px,calc(100svh - 410px),56.25vw)}}@media (max-height:520px){#hero.p-hero .p-hero-copy>.d-btns{order:3;margin-top:18px}#hero.p-hero .p-hero-copy>.p-def{order:4;margin-top:18px}}@media (max-width:760px) and (max-height:620px){#hero.p-hero .p-hero-copy>.d-btns{order:3;margin-top:18px}#hero.p-hero .p-hero-copy>.p-def{order:4;margin-top:18px}}@media (min-width:761px) and (max-height:520px){#hero.hero:not(.f-hero){padding-top:84px;min-height:0}#hero.hero:not(.f-hero) .hero-copy{display:flex;flex-direction:column}#hero.hero:not(.f-hero) .hero-copy>*{order:6}#hero.hero:not(.f-hero) .hero-copy>.badge{order:1;align-self:flex-start}#hero.hero:not(.f-hero) .hero-copy>h1{order:2;margin:14px 0 0}#hero.hero:not(.f-hero) .hero-copy>.hero-ctas{order:3;margin-top:18px}#hero.hero:not(.f-hero) .hero-copy>.lead{order:4;margin-top:18px}}@media (min-width:861px){#hero.d-hero .d-hero-copy{display:flex;flex-direction:column}#hero.d-hero .d-hero-copy>*{order:6}#hero.d-hero .d-hero-copy>:is(.d-crumbs,.f-crumbs){order:0}#hero.d-hero .d-hero-copy>.eyebrow{order:1}#hero.d-hero .d-hero-copy>h1{order:2}#hero.d-hero .d-hero-copy>:is(.lead,.sub,.p-def):not(:is(.lead,.sub,.p-def)~*){order:3}#hero.d-hero .d-hero-copy>.d-btns:not(.d-btns~*){order:4}#hero.d-hero .d-hero-copy>.d-ticks{margin-bottom:0}}@media (min-width:901px){#hero.f-hero .hero-copy{display:flex;flex-direction:column}#hero.f-hero .hero-copy>*{order:6}#hero.f-hero .hero-copy>.f-crumbs{order:0}#hero.f-hero .hero-copy>.badge{order:1;align-self:flex-start}#hero.f-hero .hero-copy>h1{order:2}#hero.f-hero .hero-copy>.lead{order:3}#hero.f-hero .hero-copy>.hero-ctas{order:4}#hero.f-hero .hero-copy>.rp-hero-list{margin-top:26px}}@media (min-width:861px) and (max-height:820px){#hero.d-hero{padding-top:calc(clamp(68px,6vw,115px) + 8px)}#hero.d-hero .d-hero-copy>.d-crumbs{margin-bottom:0}#hero.d-hero .d-hero-copy>.eyebrow{margin:16px 0 0}#hero.d-hero .d-hero-copy>h1{margin-top:14px;line-height:1.02}#hero.d-hero .d-hero-copy>:is(.lead,.sub,.p-def){margin-top:16px}#hero.d-hero .d-btns{margin-top:20px}}@media (min-width:901px) and (max-height:820px){#hero.f-hero{padding-top:80px}#hero.f-hero .hero-copy>.f-crumbs{margin-bottom:10px}#hero.f-hero .hero-copy>h1{font-size:min(8.2vh,4.4vw);margin:16px 0 14px}.rp-page #hero.f-hero .hero-copy>h1,.lb-page #hero.f-hero .hero-copy>h1{font-size:min(8vh,3.4vw)}#hero.f-hero .hero-copy>.lead{line-height:1.5}#hero.f-hero .hero-copy>.hero-ctas{margin-top:26px}}@media (min-width:761px) and (max-height:820px){#hero.p-hero h1{font-size:min(8.4vh,4.4vw)}#hero.p-hero .p-hero-copy>.d-btns{margin-top:20px}}@media (min-width:761px) and (max-height:820px){#hero.hero:not(.f-hero) h1{font-size:min(8.4vh,4.4vw);margin:22px 0 18px}#hero.hero:not(.f-hero) .hero-ctas{margin-top:28px}}</style>
+<style id="mob-fit">span.fxt.fxt,span.fxt.fxt span{display:inline}.kpi .u{display:block;font-style:normal;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0 0 12px}@media (max-width:600px){:root .btn:not([href^="tel:"]){white-space:normal;max-width:100%;min-width:0;text-align:center;line-height:1.25}:root .btn-lg:not([href^="tel:"]){height:auto;min-height:56px;padding-top:10px;padding-bottom:10px}:root .btn-sm:not([href^="tel:"]){height:auto;min-height:44px;padding-top:8px;padding-bottom:8px}:root .btn:not([href^="tel:"]) .btn-t{white-space:normal;min-width:0;max-width:100%;flex:0 1 auto;text-align:center}:root .btn:not([href^="tel:"]) .btn-t>span{white-space:normal}:root .rk-page .rk-nl a{white-space:normal}:root .pest-b .lvl{max-width:100%;letter-spacing:.04em;-webkit-hyphens:auto;hyphens:auto;overflow-wrap:anywhere}.card,.d-card,.panel,.d-obj-b,.d-kind-b,.nb-obj-t,.f-check-l{min-width:0}.card h3,.card h4,.card p,.card li,.card b,.card span,.d-card h3,.d-card p{overflow-wrap:break-word}.kpi span,.nb-obj-t,.d-obj-b h3{-webkit-hyphens:auto;hyphens:auto}}</style>
+<style id="tel-plain">/* Закон владельца 11.11.2026 (tools/site/tracking_laws.py): в ссылке телефона только номер — значок шапки рисуется здесь, номер не разрывается */.phone{position:relative}.phone::before{content:"";flex:none;box-sizing:border-box;width:36px;height:36px;border-radius:50%;background:var(--acc2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cpath d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z'/%3E%3C/svg%3E") 50%/15px 15px no-repeat;transition:transform .4s var(--ease)}.phone::after{content:"";position:absolute;left:0;top:50%;box-sizing:border-box;width:36px;height:36px;margin-top:-18px;border-radius:50%;border:1px solid var(--acc);animation:ring 2.4s var(--ease) infinite;pointer-events:none}.phone:hover::before{transform:rotate(-14deg) scale(1.06)}@media (max-width:760px){.phone{font-size:0;gap:0}.phone::before,.phone::after{width:44px;height:44px}.phone::after{margin-top:-22px}}@media (max-width:400px){.phone::before,.phone::after{width:40px;height:40px}.phone::after{margin-top:-20px}}@media (max-width:360px){.phone::before,.phone::after{width:38px;height:38px}.phone::after{margin-top:-19px}}a[href^="tel:"]{white-space:nowrap!important}</style>
+<style id="ft-company-st">footer .ft-company{--ft-company-size:.5625rem;margin-top:16px;font-size:var(--ft-company-size);font-weight:400;line-height:1.5;letter-spacing:0;color:#858589;overflow-wrap:anywhere}footer .ft-company p{margin:0;font:inherit;color:inherit}footer .ft-company p+p{margin-top:4px}</style>
+<!-- UIS -->
+    <script type="text/javascript" async src="https://app.uiscom.ru/static/cs.min.js?k=ICWycQx6m3NSBe3WlCeDAdAKMTmNhMHC"></script>
+<!-- UIS -->
+</head>
+<body class="d-page nb-page">
+<!-- Yandex.Metrika counter: noscript -->
+<noscript><div><img src="https://mc.yandex.ru/watch/113675622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<!-- ============ INTRO ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-in">
+    <svg class="intro-mark" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linejoin="round"><path class="im-shield" pathLength="100" d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z" stroke="#fff"/><circle class="im-c" pathLength="100" cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path class="im-x" pathLength="100" d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg>
+    <div class="intro-word"><span>ПЕСТКОНТРОЛЬ</span><b>Центр</b></div>
+    <div class="intro-bar"><i></i></div>
+  </div>
+</div>
+
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+<div class="cursor" aria-hidden="true"><i class="cursor-dot"></i><i class="cursor-ring"></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="../../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span>
+      <span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-uslugi">Услуги<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-uslugi"><a href="../../"><span><span class="nw">Пест-контроль</span> для бизнеса</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../dezinfektsiya/">Дезинфекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../deratizatsiya/">Дератизация для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../dezinsektsiya/">Дезинсекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../deratizatsiya-i-dezinsektsiya/">Дератизация и дезинсекция<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../laboratornye-issledovaniya/">Лабораторные исследования<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../razrabotka-ppk/">Разработка ППК<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#vse-uslugi" class="nav-dd-all">Все услуги<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-otrasli">Отрасли<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-otrasli"><a href="../../pishchevoe-proizvodstvo/">Пищевые производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../magaziny-i-torgovye-seti/">Магазины и торговые сети<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../restorany-i-kafe/">Рестораны и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../dezinsektsiya/restorany-i-kafe/" class="nav-sub">Дезинсекция кафе и ресторанов<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../deratizatsiya/restorany-i-kafe/" class="nav-sub">Дератизация ресторанов и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../sklady-i-logistika/">Склады и логистика<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../farmatsevticheskie-proizvodstva/">Фармацевтические производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../gostinitsy/">Гостиницы и отели<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../biznes-tsentry-torgovye-tsentry-predpriyatiya/">Бизнес-центры, ТЦ и предприятия<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../#otrasli" class="nav-dd-all">Все отрасли<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор</a><a href="../../#podhod">Метод IPM</a><a href="#vse-uslugi">Цена</a><div class="nav-dd"><button class="nav-dd-btn active" type="button" aria-expanded="false" aria-controls="nav-materialy">Материалы<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-materialy"><a href="../../normativnaya-baza/">Нормативная база<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/">Оценка эффективности дератизации и дезинсекции<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/skhema-tochek-pest-kontrolya/"><span>Схема точек <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/akt-deratizatsii-i-dezinsektsii/">Акт дератизации и дезинсекции<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../../materialy/" class="nav-dd-all">Все материалы<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+    </nav>
+    <div class="hdr-right">
+      <button class="srch-btn" type="button" data-srch aria-label="Поиск по сайту" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.6-3.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <a class="phone" href="tel:+74951043570">+7 (495) 104-35-70</a>
+      <a href="#zayavka" class="btn btn-w btn-sm" data-magnet><span class="btn-t">Бесплатный выезд</span></a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">
+  <div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-uslugi">Услуги<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-uslugi"><div><a href="../../"><span><span class="nw">Пест-контроль</span> для бизнеса</span></a><a href="../../dezinfektsiya/">Дезинфекция для организаций</a><a href="../../deratizatsiya/">Дератизация для организаций</a><a href="../../dezinsektsiya/">Дезинсекция для организаций</a><a href="../../deratizatsiya-i-dezinsektsiya/">Дератизация и дезинсекция</a><a href="../../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a><a href="../../laboratornye-issledovaniya/">Лабораторные исследования</a><a href="../../razrabotka-ppk/">Разработка ППК</a><a href="../../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора</a><a href="../../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание</a><a href="#vse-uslugi">Все услуги</a></div></div></div><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-otrasli">Отрасли<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-otrasli"><div><a href="../../pishchevoe-proizvodstvo/">Пищевые производства</a><a href="../../magaziny-i-torgovye-seti/">Магазины и торговые сети</a><a href="../../restorany-i-kafe/">Рестораны и кафе</a><a href="../../dezinsektsiya/restorany-i-kafe/" class="nav-sub">Дезинсекция кафе и ресторанов</a><a href="../../deratizatsiya/restorany-i-kafe/" class="nav-sub">Дератизация ресторанов и кафе</a><a href="../../sklady-i-logistika/">Склады и логистика</a><a href="../../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a><a href="../../gostinitsy/">Гостиницы и отели</a><a href="../../biznes-tsentry-torgovye-tsentry-predpriyatiya/">Бизнес-центры, ТЦ и предприятия</a><a href="../../#otrasli">Все отрасли</a></div></div></div><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор <small>на дератизацию и дезинсекцию</small></a><a href="../../#podhod">Метод IPM</a><a href="#vse-uslugi">Цена</a><div class="mm-group open" data-open><button class="mm-toggle" type="button" aria-expanded="true" aria-controls="mm-materialy">Материалы<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-materialy"><div><a href="../../normativnaya-baza/">Нормативная база</a><a href="../../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора</a><a href="../../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/">Оценка эффективности дератизации и дезинсекции</a><a href="../../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a><a href="../../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a><a href="../../materialy/skhema-tochek-pest-kontrolya/"><span>Схема точек <span class="nw">пест-контроля</span></span></a><a href="../../materialy/akt-deratizatsii-i-dezinsektsii/">Акт дератизации и дезинсекции</a><a href="../../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a><a href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a><a href="../../materialy/">Все материалы</a></div></div></div>
+  <a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Заказать бесплатное обследование</span></a>
+</nav>
+
+<main id="main" tabindex="-1">
+<section class="d-hero nb-hero nb-listy-hero" id="hero">
+  <div class="wrap">
+    <div class="d-hero-copy">
+      <nav class="f-crumbs" aria-label="Навигационная цепочка" data-h><a href="../../">Главная</a><span aria-hidden="true">→</span><a href="../../normativnaya-baza/">Нормативная база</a><span aria-hidden="true">→</span><span aria-current="page">Проверочные листы 2026</span></nav>
+      <div class="eyebrow">Нормативная база · Проверено 06.11.2026</div>
+      <h1><span class="ln"><span>Проверочные листы</span></span> <span class="ln"><span><em>Роспотребнадзора 2026:</em></span></span> <span class="ln"><span>вопросы о дезинсекции</span></span> <span class="ln"><span>и дератизации</span></span></h1>
+      <div class="d-hero-media"><picture><source media="(max-width:860px)" srcset="../../img/pl-hero-mob-760.webp 760w, ../../img/pl-hero-mob.webp 1024w" sizes="100vw" width="1024" height="768"><img class="d-hero-img" src="../../img/pl-hero.webp" srcset="../../img/pl-hero-1440.webp 1440w, ../../img/pl-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="Менеджер по качеству отмечает пункты проверочного листа, специалист по пест-контролю показывает на пронумерованный контейнер для мониторинга грызунов на складе" fetchpriority="high" decoding="async"></picture><div class="fx-lit" aria-hidden="true"><div class="fx-lit-in"><picture><source media="(max-width:860px)" srcset="../../img/pl-hero-mob-760.webp 760w, ../../img/pl-hero-mob.webp 1024w" sizes="100vw" width="1024" height="768"><img class="d-hero-img fx-lit-img" src="../../img/pl-hero.webp" srcset="../../img/pl-hero-1440.webp 1440w, ../../img/pl-hero.webp 1920w" sizes="100vw" width="1920" height="1072" alt="" decoding="async"></picture></div></div></div>
+      <p class="lead" data-h>С 4 и 5 октября 2026 года Роспотребнадзор проводит плановые рейдовые осмотры и выездные проверки по новым проверочным листам (<span class="nw">чек-листам</span>) — приказы № 578 и № 580 от 20 июля 2026 года. Вопросы о насекомых и грызунах есть в 20 из 37 форм. Чаще всего спрашивают, нет ли вредителей, кто проводит обработки и соблюдается ли кратность обследований. Отвечают на них договором, графиком, актами и журналом.</p>
+      <div class="d-btns" data-h>
+        <a href="#po-obektam" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Найти вопросы для моего объекта</span></a>
+        <a href="#zayavka" class="btn btn-o btn-lg" data-magnet><span class="btn-t">Проверить объект по листу</span></a>
+      </div>
+      <p class="nb-byline p-hero-note" data-h>Подготовила Марианна Семерина, санитарный врач · сверено с текстами приказов 06.11.2026</p>
+    </div>
+    <nav class="p-toc nb-toc" aria-label="Разделы страницы" data-h><a href="#chto-izmenilos">Что изменилось</a><a href="#pyat-voprosov">Пять вопросов</a><a href="#po-obektam">По видам объектов</a><a href="#dokumenty">Документы для ответа</a><a href="#podgotovka">Подготовка</a><a href="#oshibki">Ошибки</a><a href="#voprosy">Вопросы</a></nav>
+  </div>
+</section>
+<script id="hero-in">(function(d,m){var p=d.documentElement;if(!p.classList.contains("js")||p.classList.contains("anim-fail")||!p.animate||m.matchMedia("(prefers-reduced-motion: reduce)").matches)return;var e=function(t,r){return(r||d).querySelector(t)},u=function(t,r){return[].slice.call((r||d).querySelectorAll(t))},h=e("#hero"),c=e(".d-hero")||e(".p-hero")||e(".f-hero");if(!h)return;var b=m.matchMedia("(hover: hover) and (pointer: fine)").matches,H=b&&!m.matchMedia("(max-width: 760px)").matches&&!p.classList.contains("lowfx"),E="cubic-bezier(.19,1,.22,1)",S="cubic-bezier(.87,0,.13,1)",o=.01,y=m.pcHero={t0:null},g=[];function n(t,r,a,i,l){t&&g.push(t.animate([r,a],{duration:i*1e3,delay:l*1e3,easing:E,fill:"backwards"}))}function s(t,r){return H&&(t.filter="blur("+r+"px)"),t}function L(t){var r=d.createEvent("Event");r.initEvent(t,!1,!1),d.dispatchEvent(r)}var M=!1,T=c&&e(".eyebrow",c);function w(){if(!M)if(M=!0,p.classList.add("hero-in"),c)u(".d-hero-img, .f-hero-img",c).forEach(function(a){n(a,{transform:"scale(1.12)"},{transform:"scale(1)"},2.2,0)}),u("h1 .ln>span",c).forEach(function(a,i){var l=.12+i*.1;getComputedStyle(a.parentNode).display!=="inline"?n(a,{transform:"translate(0,110%) rotate(3deg)"},{transform:"translate(0,0) rotate(0deg)"},1.3,l):n(a,{opacity:o,transform:"translate(0,22px)"},{opacity:1,transform:"translate(0,0)"},1.1,l)}),u("[data-h]",c).forEach(function(a,i){n(a,s({opacity:o,transform:"translate(0,18px)"},6),s({opacity:1,transform:"translate(0,0)"},0),1,.26+i*.06)}),u(".p-stack > a",c).forEach(function(a,i){n(a,s({opacity:o,translate:"0 70px"},8),s({opacity:1,translate:"0 0"},0),1.5,.3+i*.14)});else{u(".hero-bg, .hero-lit",h).forEach(function(a){n(a,{transform:"scale(1.18)"},{transform:"scale(1)"},2.6,0)}),n(e(".badge",h),s({opacity:o,transform:"translate(0,20px)"},8),s({opacity:1,transform:"translate(0,0)"},0),1.1,.1),u("h1 .ln>span",h).forEach(function(a,i){n(a,{transform:"translate(0,110%) rotate(3deg)"},{transform:"translate(0,0) rotate(0deg)"},1.4,.15+i*.11)}),n(e(".lead",h),s({opacity:o,transform:"translate(0,24px)"},8),s({opacity:1,transform:"translate(0,0)"},0),1.2,.4),n(e(".hero-ctas",h),{opacity:o,transform:"translate(0,24px)"},{opacity:1,transform:"translate(0,0)"},1.1,.5);var t=e("#panel");if(t){var r=b?"perspective(1200px) ":"";n(t,s({opacity:o,transform:r+"translate(70px,0) rotateY(-14deg)"},10),s({opacity:1,transform:r+"translate(0,0) rotateY(0deg)"},0),1.6,.3),u("li",t).forEach(function(a,i){n(a,{opacity:o,transform:"translate(24px,0)"},{opacity:1,transform:"translate(0,0)"},.9,.6+i*.08)})}n(e(".scroll-cue",h),{opacity:o},{opacity:1},1,1.1)}}function A(){if(c){var t=m.innerHeight||p.clientHeight;u('[data-group="cards"]',c).forEach(function(r){var a=[].slice.call(r.children);if(a.length){var i=Math.max(1,Math.round(r.offsetWidth/Math.max(1,a[0].offsetWidth)));a.forEach(function(l,I){l.getBoundingClientRect().top>t*.9||e(".ind-img, .d-obj-img, .d-kind-img, .d-swap-img, .pm-img, [data-reveal]",l)||(l.setAttribute("data-hin",""),l.animate([{opacity:o,transform:"translate(0,60px)"},{opacity:1,transform:"translate(0,0)"}],{duration:1300,delay:I%i*100,easing:E,fill:"backwards"}))})}})}}function N(){y.t0===null&&(w(),y.t0=m.performance.now(),T&&T.classList.add("in"),g.forEach(function(t){t.playState==="paused"&&t.play()}),L("pc:hero"))}var f=e("#intro");if(!f||m.location.hash||p.classList.contains("no-intro")){f&&f.parentNode.removeChild(f),N(),A();return}w(),g.forEach(function(t){t.pause()}),A();var k=!1,v=function(){if(!k){k=!0;var t=f.animate([{clipPath:"inset(0% 0% 0% 0%)"},{clipPath:"inset(0% 0% 100% 0%)"}],{duration:750,easing:S,fill:"forwards"}),r=function(){f.parentNode&&(f.parentNode.removeChild(f),y.introDone=!0,L("pc:intro"))};t.onfinish=r,setTimeout(N,300),setTimeout(r,2500)}},x=e(".intro-bar i",f),C=x&&x.getAnimations?x.getAnimations():[];C.length?Promise.all(C.map(function(t){return t.finished})).then(v,v):setTimeout(v,900),setTimeout(v,1500)})(document,window);</script>
+
+<div class="strip" role="group" aria-label="Коротко о проверочных листах">
+  <div class="strip-track" id="stripTrack">
+    <div class="strip-set">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clipboard-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="m9 14 2 2 4-4" /> </svg><b>37 форм</b> — приказы № 578 и № 580</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-list-checks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 5h8" /> <path d="M13 12h8" /> <path d="M13 19h8" /> <path d="m3 17 2 2 4-4" /> <path d="m3 7 2 2 4-4" /> </svg><b>20 форм</b> — с вопросами о вредителях</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>С 4–5 октября</b> 2026 года</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-scan-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 7V5a2 2 0 0 1 2-2h2" /> <path d="M17 3h2a2 2 0 0 1 2 2v2" /> <path d="M21 17v2a2 2 0 0 1-2 2h-2" /> <path d="M7 21H5a2 2 0 0 1-2-2v-2" /> <circle cx="12" cy="12" r="3" /> <path d="m16 16-1.9-1.9" /> </svg><b>Обследования</b> — не реже 2 раз в месяц</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-activity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /> </svg><b>Грызуны</b> — ежемесячная оценка</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg><b>Исполнитель</b> — организация с лицензией</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /> </svg><b>Ответ</b> — договор, акты, журнал</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /> </svg><b>Проверка шире листа</b> — п. 2 приказов</div>
+    </div>
+    <div class="strip-set" aria-hidden="true">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clipboard-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="m9 14 2 2 4-4" /> </svg><b>37 форм</b> — приказы № 578 и № 580</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-list-checks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 5h8" /> <path d="M13 12h8" /> <path d="M13 19h8" /> <path d="m3 17 2 2 4-4" /> <path d="m3 7 2 2 4-4" /> </svg><b>20 форм</b> — с вопросами о вредителях</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>С 4–5 октября</b> 2026 года</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-scan-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 7V5a2 2 0 0 1 2-2h2" /> <path d="M17 3h2a2 2 0 0 1 2 2v2" /> <path d="M21 17v2a2 2 0 0 1-2 2h-2" /> <path d="M7 21H5a2 2 0 0 1-2-2v-2" /> <circle cx="12" cy="12" r="3" /> <path d="m16 16-1.9-1.9" /> </svg><b>Обследования</b> — не реже 2 раз в месяц</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-activity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /> </svg><b>Грызуны</b> — ежемесячная оценка</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg><b>Исполнитель</b> — организация с лицензией</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /> </svg><b>Ответ</b> — договор, акты, журнал</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /> </svg><b>Проверка шире листа</b> — п. 2 приказов</div>
+    </div>
+  </div>
+</div>
+
+<section class="s" id="chto-izmenilos">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Что изменилось</div><h2 data-split>Приказы № 578 и № 580: <em>что изменилось в проверочных листах</em></h2></div>
+    <figure class="nb-fig nb-bs-fig" data-fade>
+      <figcaption class="nb-fig-head"><span class="nb-fig-t">Было <em>→ стало</em></span></figcaption>
+      <div class="nb-bs">
+        <div class="nb-bs-col">
+          <div class="nb-ord is-old"><b>Приказ № 18</b><span>от 20.01.2022 — утратил силу</span></div>
+          <div class="nb-ord is-old"><b>Приказ № 808</b><span>от 24.12.2021 — утратил силу</span></div>
+        </div>
+        <div class="nb-bs-arrow" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></div>
+        <div class="nb-bs-col">
+          <div class="nb-ord is-new"><span class="nb-ord-n">31</span><b>Приказ № 578</b><span>от 20.07.2026 · применяется с 04.10.2026 · 31 форма: торговля непродовольственными товарами, гостиницы, медицинские организации, аптеки, образовательные организации и другие объекты</span></div>
+          <div class="nb-ord is-new"><span class="nb-ord-n">6</span><b>Приказ № 580</b><span>от 20.07.2026 · применяется с 05.10.2026 · 6 форм: торговля пищевой продукцией, общепит, спорт, прачечные, салоны красоты, бани</span></div>
+          <p class="nb-bs-tot">Всего 37 форм. Вопросы о насекомых и грызунах есть в 20 из них.</p>
+        </div>
+      </div>
+    </figure>
+    <div class="nb-grid2" data-group="cards">
+      <div class="card nb-fact"><b>Новые приказы.</b> Приказ № 578 утвердил 31 форму: торговля непродовольственными товарами, гостиницы, медицинские организации, аптеки, образовательные организации и другие объекты. Приказ № 580 утвердил 6 форм: торговля пищевой продукцией, общепит, спорт, прачечные, салоны красоты, бани. Они действуют с 4 и 5 октября 2026 года и заменили приказы № 18 от 20.01.2022 и № 808 от 24.12.2021.</div>
+      <div class="card nb-fact"><b>Новые ссылки на нормы.</b> Вопросы теперь ссылаются на правила 2026 года. Например, вопрос о дезинсекции и дератизации при появлении вредителей раньше ссылался на п. 2.12 СП <span class="nw">2.1.3678-20</span>, теперь — на п. 14 СП <span class="nw">2.1.4284-26</span>.</div>
+      <div class="card nb-fact"><b>Проверка шире листа.</b> В п. 2 обоих приказов сказано, что плановый рейдовый осмотр и выездная проверка «не ограничиваются оценкой соблюдения обязательных требований», по которым в формах есть вопросы.</div>
+      <div class="card nb-fact"><b>Когда применяются.</b> Листы утверждены для плановых рейдовых осмотров и выездных проверок. Чем они отличаются от профилактического визита и внеплановой проверки — на <a href="../../sanitarnyy-audit/">странице санитарного аудита</a>.</div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="pyat-voprosov">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Пять вопросов</div><h2 data-split>Пять вопросов о вредителях, <em>которые встречаются чаще всего</em></h2><p class="sub" data-fade>Формулировки вопросов взяты из форм дословно. Под каждым — что он значит на практике и чем на него ответить.</p></div>
+    <figure class="nb-fig nb-sheet-fig" data-fade>
+      <figcaption class="nb-fig-head"><span class="nb-fig-t">Как это выглядит <em>в форме для гостиниц</em></span><span class="nb-fig-d">В листе для гостиниц все пять вопросов идут подряд — № 39–43. Инспектор отмечает «да», «нет» или «неприменимо».</span></figcaption>
+      <div class="nb-sheet">
+        <p class="nb-sheet-h"><span>Приказ Роспотребнадзора от 20.07.2026 № 578, приложение № 2</span><span>фрагмент · вопросы 39–43</span></p>
+        <table>
+          <thead><tr><th scope="col">№</th><th scope="col">Контрольный вопрос</th><th scope="col">Реквизиты норм</th><th scope="col">Да</th><th scope="col">Нет</th><th scope="col">Неприм.</th></tr></thead>
+          <tbody>
+          <tr><td class="nb-sheet-n">39</td><td class="nb-sheet-q">Обеспечивает ли контролируемое лицо отсутствие в используемых им помещениях насекомых, грызунов и следов их жизнедеятельности?</td><td class="nb-sheet-norm">п. 14 СП <span class="nw">2.1.4284-26</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box is-on" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          <tr><td class="nb-sheet-n">40</td><td class="nb-sheet-q">Проводится ли контролируемым лицом при появлении синантропных насекомых и грызунов дезинсекция и дератизация силами организации, осуществляющей дезинфекционную деятельность (в отсутствие работников и потребителей)?</td><td class="nb-sheet-norm">п. 14 СП <span class="nw">2.1.4284-26</span>; п. 130 СанПиН <span class="nw">3.3686-21</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box is-on" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          <tr><td class="nb-sheet-n">41</td><td class="nb-sheet-q">Обеспечивается ли контролируемым лицом установленная нормативами кратность плановых обследований на заселенность членистоногими эксплуатируемых им объектов, имеющих особое эпидемиологическое значение, силами организации, осуществляющей дезинфекционную деятельность?</td><td class="nb-sheet-norm">пп. 88, 98, 101, 130 СанПиН <span class="nw">3.3686-21</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          <tr><td class="nb-sheet-n">42</td><td class="nb-sheet-q">Обеспечивается ли контролируемым лицом проведение ежемесячной оценки заселенности грызунами эксплуатируемых им объектов, имеющих особое эпидемиологическое значение, силами организации, осуществляющей дезинфекционную деятельность?</td><td class="nb-sheet-norm">пп. 88, 98, 108, 110, 130 СанПиН <span class="nw">3.3686-21</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          <tr><td class="nb-sheet-n">43</td><td class="nb-sheet-q">Обследуются ли контролируемым лицом системы мусороудаления, включая мусоросборные камеры (при их наличии), с периодичностью не реже 1 раза в месяц, на предмет наличия синантропных членистоногих и грызунов?</td><td class="nb-sheet-norm">п. 133 СанПиН <span class="nw">3.3686-21</span></td><td class="nb-sheet-c" data-l="Да"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Нет"><span class="nb-box" aria-hidden="true"></span></td><td class="nb-sheet-c" data-l="Неприменимо"><span class="nb-box" aria-hidden="true"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="nb-fig-note">Формулировки — из приказа, оформление наше: это иллюстрация, а не бланк. Отметки «да» поставлены для примера.</p>
+    </figure>
+    <div class="nb-qs" data-group="cards">
+      <article class="card nb-q" id="vopros-1">
+        <h3><span class="nb-q-n">01</span>Нет ли на объекте насекомых и грызунов</h3>
+        <blockquote class="nb-quote"><span class="nb-quote-k">Вопрос в листе</span>«Отсутствуют ли в помещениях контролируемого лица насекомые, грызуны и следы их жизнедеятельности?»</blockquote>
+        <dl class="nb-dl">
+          <dt>Где встречается</dt><dd>Гостиницы, медицинские организации, аптеки, организации социального обслуживания, спорт, прачечные, салоны, бани, общественные туалеты. В листе для торговли продуктами это запрет присутствия насекомых и грызунов, в листе для общепита — вместе с синантропными птицами и животными.</dd>
+          <dt>Нормы</dt><dd>П. 14 СП <span class="nw">2.1.4284-26</span>; для торговли продуктами — п. 78 СП <span class="nw">2.3.6.4281-26</span> и п. 128 СанПиН <span class="nw">3.3686-21</span>; для общепита — п. 26 СанПиН <span class="nw">2.3/2.4.4282-26</span>.</dd>
+          <dt>Что это значит</dt><dd>Инспектор оценивает по факту. Следы — помёт, погрызы, шкурки после линьки, живые и мёртвые особи — уже нарушение, даже если договор в порядке.</dd>
+          <dt>Чем ответить</dt><dd>Акты обследований с результатами по каждой точке контроля, журнал, рекомендации исполнителя по закрытию проёмов и отметки о том, что они выполнены.</dd>
+        </dl>
+      </article>
+      <article class="card nb-q" id="vopros-2">
+        <h3><span class="nb-q-n">02</span>Кто проводит обработки</h3>
+        <blockquote class="nb-quote"><span class="nb-quote-k">Вопрос в листе</span>«Проводится ли контролируемым лицом при появлении синантропных насекомых и грызунов дезинсекция и дератизация силами организации, осуществляющей дезинфекционную деятельность (в отсутствие работников и потребителей)?»</blockquote>
+        <dl class="nb-dl">
+          <dt>Где встречается</dt><dd>Гостиницы, аптеки, магазины непродовольственных товаров, спорт, бани. В листе для медицинских организаций — без указания исполнителя.</dd>
+          <dt>Нормы</dt><dd>П. 14 СП <span class="nw">2.1.4284-26</span>; в разных формах — пп. 98, 108 или 130 СанПиН <span class="nw">3.3686-21</span>.</dd>
+          <dt>Что это значит</dt><dd>Обработки выполняет специализированная организация, а с 1 марта 2025 года у неё должна быть лицензия. Работают, когда на объекте нет персонала и посетителей.</dd>
+          <dt>Чем ответить</dt><dd>Договор, номер лицензии исполнителя (его проверяют в <a href="https://fp.rospotrebnadzor.ru/licen/" target="_blank" rel="noopener">реестре Роспотребнадзора</a>), акты выполненных работ с датой и временем, заявки на внеплановые выезды.</dd>
+        </dl>
+      </article>
+      <article class="card nb-q nb-q-wide" id="vopros-3">
+        <h3><span class="nb-q-n">03</span>Как часто объект обследуют на насекомых</h3>
+        <blockquote class="nb-quote"><span class="nb-quote-k">Вопрос в листе</span>«Обеспечивается ли контролируемым лицом установленная нормативами кратность плановых обследований на заселенность объекта членистоногими (силами организации, осуществляющей дезинфекционную деятельность)?»</blockquote>
+        <dl class="nb-dl">
+          <dt>Где встречается</dt><dd>Гостиницы, аптеки, организации социального обслуживания, спорт, салоны, бани.</dd>
+          <dt>Нормы</dt><dd>Пп. 88, 98, 101, 130 СанПиН <span class="nw">3.3686-21</span>.</dd>
+          <dt>Что это значит</dt><dd>Кратность установлена п. 101 СанПиН <span class="nw">3.3686-21</span>.</dd>
+        </dl>
+        <table class="d-table nb-tbl nb-freq2">
+          <thead><tr><th scope="col">Объект</th><th scope="col">Обследования на насекомых</th></tr></thead>
+          <tbody>
+            <tr><td data-l="Объект">Объекты особого эпидемиологического значения (перечень — п. 98): пищевые производства, общепит, хранение и торговля пищевой продукцией, гостиницы и общежития, медицинские, <span class="nw">санаторно-курортные</span> и детские организации, вокзалы, аэропорты и другие</td><td data-l="Обследования на насекомых"><b class="nb-val">Не реже 2 раз в месяц</b></td></tr>
+            <tr><td data-l="Объект">Другие объекты; в п. 101 в скобках названы места общего пользования многоквартирных домов и общежитий</td><td data-l="Обследования на насекомых"><b class="nb-val">1 раз в месяц</b></td></tr>
+            <tr><td data-l="Объект">Открытые территории</td><td data-l="Обследования на насекомых"><b class="nb-val">1 раз в месяц</b></td></tr>
+            <tr><td data-l="Объект">Очаги инфекционных и паразитарных заболеваний, анофелогенные водоёмы</td><td data-l="Обследования на насекомых"><b class="nb-val">1 раз в неделю</b></td></tr>
+          </tbody>
+        </table>
+        <p class="nb-q-note">Речь именно об обследованиях — осмотре, учёте и проверке точек контроля. Обработку назначают по их результатам. В листах для общепита и торговли продуктами такого вопроса нет, но норма п. 101 действует и там: эти объекты прямо названы в п. 98, а проверка не ограничивается вопросами листа.</p>
+        <dl class="nb-dl">
+          <dt>Чем ответить</dt><dd>График обследований в договоре или программе <span class="nw">пест-контроля</span>, акты с датами — для объектов особого эпидемиологического значения не меньше двух в месяц, журнал.</dd>
+        </dl>
+      </article>
+      <article class="card nb-q" id="vopros-4">
+        <h3><span class="nb-q-n">04</span>Проводится ли ежемесячная оценка заселённости грызунами</h3>
+        <blockquote class="nb-quote"><span class="nb-quote-k">Вопрос в листе</span>«Обеспечивается ли контролируемым лицом проведение ежемесячной оценки заселенности объекта грызунами силами организации, осуществляющей дезинфекционную деятельность (для объектов, имеющих особое эпидемиологическое значение)?»</blockquote>
+        <dl class="nb-dl">
+          <dt>Где встречается</dt><dd>Гостиницы, аптеки, организации социального обслуживания, спорт, салоны, бани.</dd>
+          <dt>Нормы</dt><dd>Пп. 88, 98, 108, 110, 130 СанПиН <span class="nw">3.3686-21</span>.</dd>
+          <dt>Что это значит</dt><dd>На объектах особого эпидемиологического значения заселённость грызунами оценивают раз в месяц, а дератизацию проводят по результатам этой оценки (п. 110). Ежемесячная обработка «на всякий случай» оценку не заменяет.</dd>
+          <dt>Чем ответить</dt><dd>Ежемесячный отчёт по точкам контроля с выводом о заселённости, схема размещения точек, решения о дератизации по результатам оценки.</dd>
+        </dl>
+      </article>
+      <article class="card nb-q" id="vopros-5">
+        <h3><span class="nb-q-n">05</span>Мусорокамеры и контейнерные площадки</h3>
+        <blockquote class="nb-quote"><span class="nb-quote-k">Вопросы в листах</span>«Обследуются ли контролируемым лицом системы мусороудаления, включая мусоросборные камеры (при их наличии), с периодичностью не реже 1 раза в месяц, на предмет наличия синантропных членистоногих и грызунов?» — п. 133 СанПиН <span class="nw">3.3686-21</span>.<br><br>«Обеспечивается ли контролируемым лицом проведение уборки, дезинсекции и дератизации контейнерной площадки в зависимости от температуры наружного воздуха, количества контейнеров на площадке, расстояния до нормируемых объектов…?» — п. 8 СанПиН <span class="nw">2.1.3684-21</span> и приложение № 1 к нему; в торговле продуктами — п. 72 СП <span class="nw">2.3.6.4281-26</span>.</blockquote>
+        <dl class="nb-dl">
+          <dt>Где встречаются</dt><dd>Гостиницы, аптеки, спорт, прачечные, салоны, бани, торговля пищевой продукцией.</dd>
+          <dt>Что это значит</dt><dd>Мусорокамеры и площадки — отдельные зоны контроля. Их нужно прямо назвать в договоре и графике, иначе они выпадают из обследований.</dd>
+          <dt>Чем ответить</dt><dd>Акты обследования мусорокамер раз в месяц, отметки об обработке площадки, договор с перечнем этих зон.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="po-obektam">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>По видам объектов</div><h2 data-split>Какие вопросы зададут <em>на вашем объекте</em></h2><p class="sub" data-fade>Номера вопросов о вредителях в каждой форме. Ссылка в столбце «Форма» ведёт на полный текст листа.</p></div>
+    <table class="d-table nb-tbl nb-forms" data-fade>
+      <thead><tr><th scope="col">Объект</th><th scope="col">Форма</th><th scope="col">Вопросы о вредителях</th><th scope="col">На что обратить внимание</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" /> <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" /> <circle cx="18" cy="20" r="2" /> <circle cx="8" cy="20" r="2" /> </svg></span>Торговля пищевой продукцией, рынки</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener">№ 580, прил. 1</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">58, 89, 138, 153, 155</b></td><td data-l="На что обратить внимание">Сыпучие продукты — в помещениях, не заражённых амбарными вредителями (п. 46 СП <span class="nw">2.3.6.4281-26</span>). Защита продукции при перевозке. Дезинсекция, дератизация и инженерная защита зданий — с периодичностью «с учётом требований <span class="nw">санитарно-эпидемиологических</span> правил» (п. 78)</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-utensils" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /> <path d="M7 2v20" /> <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" /> </svg></span>Общепит, кроме питания детей</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/f7ee959fd36b5699076b35abf4f52c5c/" target="_blank" rel="noopener">№ 580, прил. 2</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">11, 58, 108, 109</b></td><td data-l="На что обратить внимание">Дезинсекция и дератизация — часть производственного контроля на принципах ХАССП (вопрос 11). Нельзя хранить и готовить продукцию во время обработки (108) и применять распыляемые и рассыпаемые средства при посетителях и персонале (109)</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-bed-double" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" /> <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" /> <path d="M12 4v6" /> <path d="M2 18h20" /> </svg></span>Гостиницы</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/f7ee959fd36b5699076b35abf4f52c5c/" target="_blank" rel="noopener">№ 578, прил. 2</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">28, 39–43</b></td><td data-l="На что обратить внимание">Полный набор: отсутствие вредителей, исполнитель, кратность обследований, ежемесячная оценка грызунов, мусорокамеры, контейнерная площадка</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-stethoscope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M11 2v2" /> <path d="M5 2v2" /> <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" /> <path d="M8 15a6 6 0 0 0 12 0v-3" /> <circle cx="20" cy="10" r="2" /> </svg></span>Медицинские организации</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/b89690251be5277812a78962f6302560/" target="_blank" rel="noopener">№ 578, прил. 10</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">8, 9, 10, 67, 144, 198</b></td><td data-l="На что обратить внимание">Грызунонепроницаемость перекрытий, перегородок и мест прохода коммуникаций (9); защита продухов чердаков и подвалов от грызунов, птиц и насекомых (67); дератизация по п. 110 СанПиН <span class="nw">3.3686-21</span> (198)</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-pill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" /> <path d="m8.5 8.5 7 7" /> </svg></span>Аптеки</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/10ed0f917186039eb157d3ba4f962ee5/" target="_blank" rel="noopener">№ 578, прил. 11</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">19, 24–27</b></td><td data-l="На что обратить внимание">Полный набор, кроме мусорокамер</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-shopping-bag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /> <path d="M3 6h18" /> <path d="M16 10a4 4 0 0 1-8 0" /> </svg></span>Магазины непродовольственных товаров</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/53f89421bbdaf741eb2d1ecc4ddb4c33/" target="_blank" rel="noopener">№ 578, прил. 1</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">28</b></td><td data-l="На что обратить внимание">Исполнитель — организация, осуществляющая дезинфекционную деятельность</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-dumbbell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.4 14.4 9.6 9.6" /> <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" /> <path d="m21.5 21.5-1.4-1.4" /> <path d="M3.9 3.9 2.5 2.5" /> <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z" /> </svg></span>Спорт, бассейны, аквапарки</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/3e22e51c74db8e0b182fad67b502e640/" target="_blank" rel="noopener">№ 580, прил. 3</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">27, 51–55</b></td><td data-l="На что обратить внимание">Кратность обследований прямо расписана в вопросе 53</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-washing-machine" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 6h3" /> <path d="M17 6h.01" /> <rect width="18" height="20" x="3" y="2" rx="2" /> <circle cx="12" cy="13" r="5" /> <path d="M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5" /> </svg></span>Прачечные и химчистки</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/172a6d689833ce3e42dc0a8a7b3cddf9/" target="_blank" rel="noopener">№ 580, прил. 4</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">28, 49, 50, 68, 69</b></td><td data-l="На что обратить внимание">Дезинсекция и дератизация по санитарным правилам — отдельными вопросами</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-scissors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="6" cy="6" r="3" /> <path d="M8.12 8.12 12 12" /> <path d="M20 4 8.12 15.88" /> <circle cx="6" cy="18" r="3" /> <path d="M14.8 14.8 20 20" /> </svg></span>Салоны красоты</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/c9c989f1e999992b41b30686f0032f7d/" target="_blank" rel="noopener">№ 580, прил. 5</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">20, 28–33, 89, 90</b></td><td data-l="На что обратить внимание">Насекомые и грызуны — отдельными вопросами</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-bath" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 4 8 6" /> <path d="M17 19v2" /> <path d="M2 12h20" /> <path d="M7 19v2" /> <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" /> </svg></span>Бани и сауны</span></td><td data-l="Форма"><a href="https://base.garant.ru/414962758/7dede6ac8f25be619ed07c17ed1c62c9/" target="_blank" rel="noopener">№ 580, прил. 6</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">25, 35–39</b></td><td data-l="На что обратить внимание">Полный набор</td></tr>
+        <tr><td data-l="Объект"><span class="nb-obj-ic"><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-school" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14 22v-4a2 2 0 1 0-4 0v4" /> <path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10" /> <path d="M18 5v17" /> <path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6" /> <path d="M6 5v17" /> <circle cx="12" cy="9" r="2" /> </svg></span>Школы</span></td><td data-l="Форма"><a href="https://base.garant.ru/414956074/8599a70d26e5983585d90ff6adf82e89/" target="_blank" rel="noopener">№ 578, прил. 14</a></td><td data-l="Вопросы о вредителях"><b class="nb-val">64</b></td><td data-l="На что обратить внимание">Организация и контроль дезинфекции, дезинсекции, дератизации и противоклещевых обработок</td></tr>
+      </tbody>
+    </table>
+    <div class="card nb-food" data-fade>
+      <h3>Пищевые производства и склады продуктов</h3>
+      <p>Отдельной формы для них в приказах № 578 и № 580 нет. На производстве проверяют процедуры ХАССП по <span class="nw">ТР ТС 021/2011</span>. Одна из них — выбрать способы, установить периодичность и проводить дезинсекцию и дератизацию производственных помещений (ст. 10 ч. 3 п. 10). По методическим рекомендациям МР <span class="nw">5.1.0098-14</span> инспектор запрашивает инструкции, договоры, акты <span class="nw">сдачи-приёмки</span>, журналы, графики и осматривает объект. Пищевые производства и склады продуктов входят в перечень объектов особого эпидемиологического значения (п. 98 СанПиН <span class="nw">3.3686-21</span>), поэтому для них действует кратность из вопроса 3. На пищевых производствах, кроме того, наличие грызунов и насекомых не допускается (п. 128).</p>
+    </div>
+    <p class="nb-after" data-fade>Если на объекте несколько видов деятельности, применяют несколько форм — например, в гостинице с рестораном. Подробнее о вашей отрасли: <a href="../../restorany-i-kafe/">рестораны и кафе</a> · <a href="../../magaziny-i-torgovye-seti/">магазины и сети</a> · <a href="../../gostinitsy/">гостиницы</a> · <a href="../../pishchevoe-proizvodstvo/">пищевые производства</a> · <a href="../../sklady-i-logistika/">склады</a>.</p>
+  </div>
+</section>
+
+<section class="s" id="dokumenty">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Документы для ответа</div><h2 data-split>Какими документами <em>ответить на вопросы</em></h2></div>
+    <figure class="nb-fig nb-folder-fig">
+      <figcaption class="nb-fig-head"><span class="nb-fig-t">Папка <em>к проверке</em></span><span class="nb-fig-d">Пять документов, которыми отвечают на вопросы о вредителях. Нажмите, чтобы открыть образец.</span></figcaption>
+      <div class="nb-folder" data-group="cards">
+        <a class="card nb-fdoc" href="../../dogovor-deratizatsiya-dezinsektsiya/"><span class="nb-fdoc-img"><img src="../../img/dogovor-sample-p1-360.webp" width="360" height="509" loading="lazy" decoding="async" alt="Первая страница образца договора на дератизацию и дезинсекцию"></span><b>Договор</b><small>кто проводит обработки и номер лицензии</small></a>
+        <a class="card nb-fdoc" href="../../materialy/programma-pest-kontrolya/"><span class="nb-fdoc-img"><img src="../../img/programma-sample-p1-360.webp" width="360" height="509" loading="lazy" decoding="async" alt="Первая страница образца программы пест-контроля"></span><b>Программа <span class="nw">пест-контроля</span></b><small>кратность обследований</small></a>
+        <a class="card nb-fdoc" href="../../materialy/programma-pest-kontrolya/"><span class="nb-fdoc-img is-photo"><img src="../../img/programma-plan-skhema-720.webp" width="720" height="480" loading="lazy" decoding="async" alt="План-схема пронумерованных точек контроля на столе"></span><b>Схема точек контроля</b><small>совпадает с тем, что видит инспектор</small></a>
+        <a class="card nb-fdoc" href="../../materialy/zhurnal-pest-kontrolya/"><span class="nb-fdoc-img"><img src="../../img/zhurnal-obrazets-p1-360.webp" width="360" height="509" loading="lazy" decoding="async" alt="Первая страница образца журнала пест-контроля"></span><b>Журнал</b><small>осмотры и ежемесячная оценка грызунов</small></a>
+        <a class="card nb-fdoc" href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/"><span class="nb-fdoc-img"><img src="../../img/ppk-sample-p1-360.webp" width="360" height="509" loading="lazy" decoding="async" alt="Титульный лист образца программы производственного контроля"></span><b>ППК по ХАССП</b><small>раздел о дезинсекции и дератизации</small></a>
+      </div>
+    </figure>
+    <table class="d-table nb-tbl nb-answers" data-fade>
+      <thead><tr><th scope="col">Что спросят</th><th scope="col">Что показать</th><th scope="col">Образец</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Что спросят">Кто проводит обработки</td><td data-l="Что показать">Договор с исполнителем и номер его лицензии</td><td data-l="Образец"><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Образец договора</a></td></tr>
+        <tr><td data-l="Что спросят">Кратность обследований</td><td data-l="Что показать">График в договоре или программе, акты обследований с датами</td><td data-l="Образец"><a href="../../materialy/programma-pest-kontrolya/">Программа <span class="nw">пест-контроля</span></a></td></tr>
+        <tr><td data-l="Что спросят">Ежемесячная оценка грызунов</td><td data-l="Что показать">Отчёт по точкам контроля, схема размещения точек</td><td data-l="Образец"><a href="../../materialy/zhurnal-pest-kontrolya/">Журнал <span class="nw">пест-контроля</span></a></td></tr>
+        <tr><td data-l="Что спросят">Нет ли вредителей</td><td data-l="Что показать">Журнал, акты, рекомендации и отметки о выполнении</td><td data-l="Образец"><a href="../../materialy/zhurnal-pest-kontrolya/">Журнал <span class="nw">пест-контроля</span></a></td></tr>
+        <tr><td data-l="Что спросят">Обработки без персонала и посетителей; запреты в общепите</td><td data-l="Что показать">Акты с датой и временем. Перед дезинсекцией руководитель сообщает сотрудникам дату, время и меры предосторожности (п. 102 СанПиН <span class="nw">3.3686-21</span>)</td><td data-l="Образец"><a href="../../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/#obrazets-akta">Образец акта</a></td></tr>
+        <tr><td data-l="Что спросят">Производственный контроль на принципах ХАССП</td><td data-l="Что показать">Программа производственного контроля с разделом о дезинсекции и дератизации</td><td data-l="Образец"><a href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/">ППК по ХАССП</a></td></tr>
+        <tr><td data-l="Что спросят">Эффективность обработок</td><td data-l="Что показать">Результаты повторных обследований. Если дезинсекция не дала эффекта, проверяют качество препарата и повторяют обработку инсектицидами другой химической группы (п. 99 СанПиН <span class="nw">3.3686-21</span>). <a href="../../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/">Как оценивают эффективность →</a></td><td data-l="Образец"><a href="../../materialy/programma-pest-kontrolya/">Программа <span class="nw">пест-контроля</span></a></td></tr>
+      </tbody>
+    </table>
+    <p class="nb-after" data-fade>Инспектор смотрит не только документы о вредителях. Полный перечень для папки объекта — 41 общий документ, дополнения по видам объектов, конструктор <span class="nw">и чек-лист</span> PDF — на странице <a href="../../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">«Документы для Роспотребнадзора»</a>.</p>
+  </div>
+</section>
+
+<section class="s" id="podgotovka">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Подготовка</div><h2 data-split>Как подготовиться к проверке: <em>шесть шагов</em></h2></div>
+    <ol class="d-steps nb-steps" data-group="steps">
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /> </svg></span><b>Найдите свои формы</b><span>в таблице выше. На одном объекте их может быть несколько.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-list-checks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 5h8" /> <path d="M13 12h8" /> <path d="M13 19h8" /> <path d="m3 17 2 2 4-4" /> <path d="m3 7 2 2 4-4" /> </svg></span><b>Пройдите вопросы о насекомых и грызунах.</b><span>Отметьте, где ответ «нет» или подтвердить нечем.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-signature" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z" /> <path d="M14.487 7.858A1 1 0 0 1 14 7V2" /> <path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516" /> <path d="M8 18h1" /> </svg></span><b>Сверьте договор.</b><span>У исполнителя есть лицензия. В договоре указаны кратность обследований на насекомых (для объектов особого эпидемиологического значения — не реже 2 раз в месяц), ежемесячная оценка грызунов, мусорокамеры и контейнерная площадка, сроки внеплановых выездов.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-folder-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /> </svg></span><b>Соберите папку:</b><span>договор, лицензия исполнителя, программа, схема точек контроля, акты за последние месяцы, журнал. Проверьте, что программы ссылаются на действующие документы.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-map-pinned" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 01-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0112 0" /> <path d="M4.474 15h-.197a1 1 0 00-.969.753l-1.097 4.35a1.5 1.5 0 001.444 1.898L20.344 22a1.5 1.5 0 001.446-1.897l-1.098-4.35a1 1 0 00-.969-.753h-.197" /> <circle cx="12" cy="8" r="2" /> </svg></span><b>Пройдите объект.</b><span>Точки контроля на месте и совпадают со схемой, следов вредителей нет, сетки, уплотнители и доводчики дверей исправны.</span></li>
+      <li><span class="nb-ic" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="lucide lucide-user-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <polyline points="16 11 18 13 22 9" /> </svg></span><b>Назначьте ответственного</b><span>и порядок действий при обнаружении вредителей: кому сообщить, в какой срок вызвать исполнителя, где отметить.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="oshibki">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Ошибки</div><h2 data-split>Ошибки, которые <em>видны на проверке</em></h2></div>
+    <div class="nb-errs-wrap" data-fade>
+      <ul class="nb-errs">
+        <li>В договоре «обработка раз в месяц», но нет обследований. Для объекта особого эпидемиологического значения обследования на насекомых нужны не реже 2 раз в месяц, а оценка заселённости грызунами — ежемесячно.</li>
+        <li>Акты без даты и времени, без результатов по точкам и подписи ответственного.</li>
+        <li>Обработки своими силами там, где лист прямо спрашивает об организации, осуществляющей дезинфекционную деятельность.</li>
+        <li>В общепите распыляют средства при персонале или оставляют продукцию в цехе во время обработки.</li>
+        <li>Мусорокамеры и контейнерная площадка не включены в договор и график.</li>
+        <li>Схема точек контроля не совпадает с тем, что инспектор видит на объекте.</li>
+        <li>В программах остались ссылки на отменённые документы — например, СП <span class="nw">3.5.3.3223-14</span> или СП <span class="nw">2.1.3678-20</span>. Полный список — в <a href="../../normativnaya-baza/#otmenennye">нормативной базе</a>.</li>
+      </ul>
+      <figure class="nb-errs-ph"><img src="../../img/dez-ipm-kontrol-720.webp" srcset="../../img/dez-ipm-kontrol-720.webp 720w, ../../img/dez-ipm-kontrol.webp 1200w" sizes="(max-width:900px) 100vw, 40vw" width="720" height="538" loading="lazy" decoding="async" alt="Специалист в перчатке проверяет клеевую ловушку у стены под табличкой точки контроля КЛТ-08, рядом журнал осмотра"><figcaption>Номер точки на стене, ловушка и запись в журнале — инспектор сверяет их со схемой.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="avtor">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Автор и сверка</div><h2 data-split>Кто подготовил <em>разбор</em></h2></div>
+    <div class="nb-author-wrap" data-fade>
+      <div class="card nb-author">
+        <img class="nb-avatar" src="../../img/san-author-photo-240.webp" srcset="../../img/san-author-photo-240.webp 240w, ../../img/san-author-photo-480.webp 480w" sizes="(max-width:600px) 80px, 112px" width="240" height="240" loading="lazy" decoding="async" alt="Иллюстративное фото санитарного врача, изображение сгенерировано">
+        <div><p class="nb-author-name">Марианна Семерина</p><p class="nb-author-role">Санитарный врач, автор материала</p><p class="nb-author-date">Сверено с текстами приказов — 06.11.2026</p><p class="nb-author-note">Фото иллюстративное</p></div>
+      </div>
+      <p class="nb-author-text">Материал подготовила Марианна Семерина, санитарный врач. Формулировки вопросов сверены с текстами приказов № 578 и № 580 06.11.2026. Если Роспотребнадзор изменит формы, мы обновим страницу.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="istochniki">
+  <div class="wrap">
+    <details class="nb-src">
+      <summary><span class="eyebrow" data-eyebrow>Источники</span><span class="nb-src-t">Официальные тексты (проверено 06.11.2026)</span></summary>
+      <ul class="nb-base" data-fade>
+        <li>Приказ Роспотребнадзора от 20.07.2026 № 578 — <a href="https://base.garant.ru/414956074/" target="_blank" rel="noopener">Гарант</a></li>
+        <li>Приказ Роспотребнадзора от 20.07.2026 № 580 — <a href="http://publication.pravo.gov.ru/document/0001202609240001" target="_blank" rel="noopener">официальная публикация</a>, <a href="https://base.garant.ru/414962758/" target="_blank" rel="noopener">Гарант</a></li>
+        <li>Даты вступления в силу — <a href="https://ppt.ru/obzory/vstupaet-v-silu/prikaz-rospotrebnadzora-20-07-2026-578" target="_blank" rel="noopener">ppt.ru: № 578</a>, <a href="https://ppt.ru/obzory/vstupaet-v-silu/prikaz-rospotrebnadzora-20-07-2026-580" target="_blank" rel="noopener">ppt.ru: № 580</a></li>
+        <li>Формы по видам объектов — ссылки в таблице «Какие вопросы зададут на вашем объекте»</li>
+        <li>Прежняя формулировка вопроса со ссылкой на п. 2.12 СП <span class="nw">2.1.3678-20</span> — <a href="https://www.consultant.ru/document/cons_doc_LAW_410430/bec215effd2a0ca8c626c8eebada9d1745e65fb0/" target="_blank" rel="noopener">КонсультантПлюс</a></li>
+        <li>СанПиН <span class="nw">3.3686-21</span>, пп. 88, 98, 99, 101, 102, 108–110, 128, 130, 133 — <a href="http://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=602107773" target="_blank" rel="noopener">pravo.gov.ru</a></li>
+        <li>МР <span class="nw">5.1.0098-14</span> — <a href="http://79.rospotrebnadzor.ru/upload/iblock_content/028bdce347a503c6ca4b9b2ce907161a.pdf" target="_blank" rel="noopener">Роспотребнадзор, PDF</a></li>
+        <li><span class="nw">ТР ТС 021/2011</span>, ст. 10 — <a href="http://78.rospotrebnadzor.ru/dlya-predprinimateley/svedeniya-ob-isklyuchenii-iz-plana-planovykh-proverok/8075/?print=Y" target="_blank" rel="noopener">Роспотребнадзор <span class="nw">по Санкт-Петербургу</span></a></li>
+        <li>Лицензирование и реестр — <a href="https://cgon.rospotrebnadzor.ru/biznesu/profilaktika-nadzor-uslsugi/nadzornie-meropriatiya/litsenzirovanie-dezinfektsionnoy-deyatelnosti/" target="_blank" rel="noopener">ЦГОН Роспотребнадзора</a>, <a href="https://fp.rospotrebnadzor.ru/licen/" target="_blank" rel="noopener">реестр лицензий</a></li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+
+<!-- ============ СМОТРИТЕ ТАКЖЕ (перелинковка) ============ -->
+<section class="s s-rel" id="smotrite-takzhe">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Смотрите также</div>
+      <h2 data-split>Связанные услуги <em>и материалы</em></h2>
+    </div>
+    <div class="rel-grid" data-group="cards">
+      <a class="card rel-card" href="../../normativnaya-baza/"><span class="rel-k">Нормативная база</span><span class="rel-t">СанПиН и требования к дезинсекции и дератизации</span><span class="rel-d">Действующие документы 2026 года, периодичность обследований, лицензия исполнителя и отменённые СП и СанПиН.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../../sanitarnyy-audit/"><span class="rel-k">Услуга</span><span class="rel-t">Санитарный аудит (<span class="nw">СЭС-аудит</span>)</span><span class="rel-d">Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../../materialy/zhurnal-pest-kontrolya/"><span class="rel-k">Материал</span><span class="rel-t">Журнал <span class="nw">пест-контроля</span></span><span class="rel-d">Образец заполнения и шаблон в PDF: 9 разделов на 10 листах — точки контроля, ловушки, предписания.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../../dogovor-deratizatsiya-dezinsektsiya/"><span class="rel-k">Обслуживание</span><span class="rel-t">Договор на дератизацию и дезинсекцию</span><span class="rel-d">Одно или оба направления в одном договоре: график визитов, акт после выезда, цена до подписания.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="voprosy">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Вопросы</div><h2 data-split>Вопросы <em>о проверочных листах</em></h2></div>
+    <div class="faq">
+      <div class="faq-col" data-group="faq">
+        <div class="card qa"><button aria-expanded="false" aria-controls="a1" id="q1"><span>С какого числа действуют новые проверочные листы Роспотребнадзора?</span><span class="pm"></span></button><div class="ans" id="a1" role="region" aria-labelledby="q1"><div><p>Приказ № 578 — с 4 октября 2026 года, приказ № 580 — с 5 октября 2026 года. Они заменили приказы № 18 от 20.01.2022 и № 808 от 24.12.2021.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a2" id="q2"><span>Может ли инспектор проверять то, чего нет в проверочном листе?</span><span class="pm"></span></button><div class="ans" id="a2" role="region" aria-labelledby="q2"><div><p>Да. В п. 2 обоих приказов сказано, что плановый рейдовый осмотр и выездная проверка не ограничиваются вопросами из форм.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a3" id="q3"><span>Как часто нужно обследовать объект на насекомых?</span><span class="pm"></span></button><div class="ans" id="a3" role="region" aria-labelledby="q3"><div><p>Объекты особого эпидемиологического значения — не реже 2 раз в месяц, другие объекты — раз в месяц, очаги инфекционных заболеваний — раз в неделю (п. 101 СанПиН <span class="nw">3.3686-21</span>).</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a4" id="q4"><span>Нужно ли проводить дератизацию каждый месяц?</span><span class="pm"></span></button><div class="ans" id="a4" role="region" aria-labelledby="q4"><div><p>На объектах особого эпидемиологического значения раз в месяц обязательна оценка заселённости грызунами. Истребительные мероприятия проводят по её результатам (п. 110 СанПиН <span class="nw">3.3686-21</span>).</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a5" id="q5"><span>Можно ли проводить дезинсекцию и дератизацию своими силами?</span><span class="pm"></span></button><div class="ans" id="a5" role="region" aria-labelledby="q5"><div><p>Лицензия не нужна, если работы выполняют для собственных нужд. Но в листах для гостиниц, аптек, магазинов непродовольственных товаров, спортивных объектов и бань спрашивают, проводит ли обработки «организация, осуществляющая дезинфекционную деятельность». Для мест массового пребывания людей это прямо установлено п. 130 СанПиН <span class="nw">3.3686-21</span>.</p></div></div></div>
+      </div>
+      <div class="faq-col" data-group="faq">
+        <div class="card qa"><button aria-expanded="false" aria-controls="a6" id="q6"><span>Что спрашивают о вредителях при проверке общепита?</span><span class="pm"></span></button><div class="ans" id="a6" role="region" aria-labelledby="q6"><div><p>В листе для общепита (приказ № 580, приложение 2) четыре таких вопроса: дезинсекция и дератизация в составе производственного контроля на принципах ХАССП (вопрос 11), отсутствие насекомых, грызунов, синантропных птиц и животных (58), запрет хранить и готовить продукцию во время обработок (108) и запрет распыляемых и рассыпаемых средств при посетителях и персонале (109).</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a7" id="q7"><span>Что спрашивают о вредителях при проверке магазина продуктов?</span><span class="pm"></span></button><div class="ans" id="a7" role="region" aria-labelledby="q7"><div><p>В листе для торговли пищевой продукцией (приказ № 580, приложение 1) пять таких вопросов: защита продукции от грызунов и насекомых при перевозке (58), хранение сыпучих продуктов в помещениях, не заражённых амбарными вредителями (89), дератизация площадки накопления отходов (138), запрет присутствия насекомых и грызунов (153) и дезинсекция, дератизация и инженерная защита зданий (155).</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a8" id="q8"><span>Есть ли проверочный лист для пищевого производства?</span><span class="pm"></span></button><div class="ans" id="a8" role="region" aria-labelledby="q8"><div><p>В приказах № 578 и № 580 отдельной формы нет. На производстве оценивают процедуры ХАССП по <span class="nw">ТР ТС 021/2011</span>, в том числе периодичность и проведение дезинсекции и дератизации (ст. 10 ч. 3 п. 10).</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a9" id="q9"><span>Применяют ли проверочные листы при профилактическом визите?</span><span class="pm"></span></button><div class="ans" id="a9" role="region" aria-labelledby="q9"><div><p>Приказы утверждают формы для плановых рейдовых осмотров и выездных проверок. О профилактическом визите — на <a href="../../sanitarnyy-audit/">странице санитарного аудита</a>.</p></div></div></div>
+        <div class="card qa"><button aria-expanded="false" aria-controls="a10" id="q10"><span>Где взять полный текст проверочных листов?</span><span class="pm"></span></button><div class="ans" id="a10" role="region" aria-labelledby="q10"><div><p>Официальная публикация приказа № 580 — на publication.pravo.gov.ru. Тексты всех форм обоих приказов есть в системе «Гарант», ссылки — в таблице «Какие вопросы зададут на вашем объекте» и в источниках.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s s-vu" id="vse-uslugi" aria-labelledby="vu-h">
+  <div class="wrap">
+    <div class="vu-head"><div class="head"><div class="eyebrow" data-eyebrow>Все услуги Центра</div><h2 id="vu-h" data-split>Один подрядчик — <em>все санитарные задачи</em></h2></div><p class="vu-lead">Пест-контроль, санитарная обработка, лабораторный контроль и документы к проверке Роспотребнадзора для организаций Москвы и области.</p></div>
+    <div class="vu-grid" data-group="cards"><div class="vu-col"><div class="card vu-g"><div class="vu-gt">Пест-контроль<span>4</span></div><a class="vu-i" href="../../"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Пест-контроль для бизнеса</span><span class="vu-d">Постоянное обслуживание по IPM: мониторинг, программа, отчёты</span><span class="vu-p">договор от 3 900 ₽/мес</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="vu-i" href="../../deratizatsiya/"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="7" width="17" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 18v-3.5a3.5 3.5 0 0 1 7 0V18M7 10.5h2M15 10.5h2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Дератизация</span><span class="vu-d">Крысы и мыши: три контура защиты, точки контроля, акты</span><span class="vu-p">от 3 500 ₽</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="vu-i" href="../../dezinsektsiya/"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="13.5" rx="4.5" ry="6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7.5v12M9.5 5 8 3M14.5 5 16 3M7.5 11 4 9.5M7.5 15 4 16.5M16.5 11 20 9.5M16.5 15 20 16.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Дезинсекция</span><span class="vu-d">Тараканы, мухи, моль — без остановки работы объекта</span><span class="vu-p">от 3 500 ₽</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="vu-i" href="../../deratizatsiya-i-dezinsektsiya/"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="13" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 7h4a2 2 0 0 1 2 2v2M11 17H7a2 2 0 0 1-2-2v-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Дератизация и дезинсекция</span><span class="vu-d">Комплекс по одному договору и общему графику</span><span class="vu-p">от 4 900 ₽/мес</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div><div class="vu-col"><div class="card vu-g"><div class="vu-gt">Санитарная обработка<span>2</span></div><a class="vu-i" href="../../dezinfektsiya/"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5s6 6.6 6 10.8a6 6 0 0 1-12 0C6 10.1 12 3.5 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Дезинфекция</span><span class="vu-d">Плановая и внеплановая обработка помещений</span><span class="vu-p">от 3 500 ₽</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="vu-i" href="../../ochistka-dezinfektsiya-ventilyatsii/"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12c0-3 1-5.5 3.5-5.5S18 9 12 12Zm0 0c3 0 5.5 1 5.5 3.5S15 18 12 12Zm0 0c0 3-1 5.5-3.5 5.5S6 15 12 12Zm0 0c-3 0-5.5-1-5.5-3.5S9 6 12 12Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Очистка и дезинфекция вентиляции</span><span class="vu-d">Воздуховоды и кухонные вытяжки, видео до и после</span><span class="vu-p">от 25 000 ₽</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div><div class="card vu-cta"><b>Нужно несколько услуг?</b><p>Осмотрим объект за один выезд и рассчитаем всё вместе — с общим графиком работ и комплектом документов.</p><a class="btn btn-w btn-sm" href="#zayavka"><span class="btn-t">Рассчитать комплекс</span></a></div></div><div class="vu-col"><div class="card vu-g"><div class="vu-gt">Контроль и документы<span>4</span></div><a class="vu-i" href="../../sanitarnyy-audit/"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 4V3h6v1M8.5 12.5l2 2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Санитарный аудит (СЭС-аудит)</span><span class="vu-d">По проверочным листам: акт с реестром нарушений</span><span class="vu-p">от 9 000 ₽</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="vu-i" href="../../laboratornye-issledovaniya/"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.5 3h5M10.5 3v6L5 18.5A1.7 1.7 0 0 0 6.5 21h11a1.7 1.7 0 0 0 1.5-2.5L13.5 9V3M7.5 15h9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Лабораторные исследования</span><span class="vu-d">Смывы, воздух, вода, микроклимат по ППК</span><span class="vu-p">от 2 600 ₽</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="vu-i" href="../../razrabotka-ppk/"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 3v5h5M9 13h6M9 17h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Разработка ППК</span><span class="vu-d">Программа производственного контроля, в том числе по ХАССП</span><span class="vu-p">от 5 900 ₽</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="vu-i" href="../../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/"><span class="vu-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 7a2 2 0 0 1 2-2h4l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 13l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vu-b"><span class="vu-t">Документы для Роспотребнадзора</span><span class="vu-d">Перечень к проверке и чек-лист в PDF</span><span class="vu-p">бесплатно</span></span><span class="vu-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div></div>
+  </div>
+</section>
+<section class="cta" id="zayavka"><div class="cta-bg f-lazy" aria-hidden="true" data-parallax-bg></div><div class="cta-orb" id="orb" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-eyebrow>Заявка</div>
+      <h2 data-split>Пройдём вопросы листа <em>на вашем объекте</em></h2>
+      <p class="sub" data-fade>Санитарный врач возьмёт форму для вашего вида деятельности, пройдёт с вами вопросы о насекомых и грызунах и покажет, каких документов не хватает. Если нужна проверка по всем вопросам листа, а не только о вредителях, — расскажем о <a href="../../sanitarnyy-audit/">санитарном аудите</a>.</p>
+      <ul class="cta-list" data-group="ctalist">
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Форма проверочного листа для вашего вида деятельности</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Ответы на вопросы о насекомых и грызунах — с документами</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg>Список того, что нужно исправить до проверки</li>
+      </ul>
+      <div class="cta-contacts" data-fade>
+        <a class="ph" href="tel:+74951043570">+7 (495) 104-35-70</a>
+      </div>
+    </div>
+    <form class="form" id="form" novalidate data-form>
+      <div class="fbody">
+        <h3>Проверить объект по листу</h3>
+        <p class="fs">Заполнение займёт меньше минуты</p>
+        <div class="fg">
+<div class="field"><label class="sr-only" for="f-name">Ваше имя</label><input id="f-name" name="name" placeholder="Ваше имя *" required autocomplete="name"><small class="ferr">Укажите имя</small></div>
+<div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__ *" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>
+<div class="field full"><label class="sr-only" for="f-company">Компания</label><input id="f-company" name="company" placeholder="Компания (необязательно)" autocomplete="organization"></div>
+<div class="field full"><label class="sr-only" for="f-type">Вид объекта</label><select id="f-type" name="type" required><option value="" selected>Вид объекта *</option><option>Ресторан или кафе</option><option value="Магазин или торговая сеть">Магазин продуктов</option><option value="Склад, логистика">Склад</option><option>Пищевое производство</option><option>Гостиница</option><option value="Другое">Медицинская организация</option><option value="Другое">Аптека</option><option>Другое</option></select><small class="ferr">Выберите вид объекта</small></div>
+<div class="field full"><label class="sr-only" for="f-msg">Комментарий</label><textarea id="f-msg" name="comment" placeholder="Комментарий: вид деятельности, дата проверки, что смущает"></textarea></div>
+<input type="hidden" name="msg" value="">
+<div class="field" hidden><input type="hidden" name="email" value=""></div>
+<input type="hidden" name="page" value="Проверочные листы 2026">
+</div>
+        <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Проверить объект по листу</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>
+        <p class="legal">Нажимая кнопку, вы даёте <a href="../../soglasie/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаете, что ознакомились с <a href="../../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+        <p class="legal nb-lic">Работы выполняет ООО «Центр дезинфекционных услуг», лицензия на дезинфекционную деятельность <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211" target="_blank" rel="noopener">№ Л064-00111-77/01942445</a></p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg class="ok-ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M15 27l7 7 15-16"/></svg>
+        <h3>Заявка отправлена</h3><p>Перезвоним в ближайшее рабочее время и договоримся, когда пройти вопросы листа.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="../../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span><span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span></a>
+        <p class="d"><span class="nw">Пест-контроль</span> и <span class="nw">пест-менеджмент</span> по системе IPM для бизнеса в Москве и Московской области: бесплатный аудит, оценка <span class="nw">пест-риска</span>, мониторинг вредителей и отчётность.</p>
+      </div>
+      <div><h4>Услуги</h4><ul><li><a href="../../"><span><span class="nw">Пест-контроль</span> для бизнеса</span></a></li><li><a href="../../dezinfektsiya/">Дезинфекция для организаций</a></li><li><a href="../../deratizatsiya/">Дератизация для организаций</a></li><li><a href="../../dezinsektsiya/">Дезинсекция для организаций</a></li><li><a href="../../deratizatsiya-i-dezinsektsiya/">Дератизация и дезинсекция</a></li><li><a href="../../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a></li><li><a href="../../laboratornye-issledovaniya/">Лабораторные исследования</a></li><li><a href="../../razrabotka-ppk/">Разработка ППК</a></li><li><a href="../../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора</a></li><li><a href="../../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a></li><li><a href="../../dogovor-deratizatsiya-dezinsektsiya/">Договор на дератизацию и дезинсекцию</a></li><li><a href="../../#etapy">Этапы работы</a></li><li><a href="../../#vrediteli">Вредители</a></li><li><a href="#vse-uslugi">Цена</a></li><li><a href="#voprosy">Вопросы</a></li></ul></div>
+      <div><h4>Отрасли</h4><ul><li><a href="../../pishchevoe-proizvodstvo/">Пищевые производства</a></li><li><a href="../../magaziny-i-torgovye-seti/">Магазины и торговые сети</a></li><li><a href="../../restorany-i-kafe/">Рестораны и кафе</a></li><li class="ft-sub"><a href="../../dezinsektsiya/restorany-i-kafe/">Дезинсекция кафе и ресторанов</a></li><li class="ft-sub"><a href="../../deratizatsiya/restorany-i-kafe/">Дератизация ресторанов и кафе</a></li><li><a href="../../sklady-i-logistika/">Склады и логистика</a></li><li><a href="../../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a></li><li><a href="../../gostinitsy/">Гостиницы и отели</a></li><li><a href="../../biznes-tsentry-torgovye-tsentry-predpriyatiya/">Бизнес-центры, ТЦ и предприятия</a></li></ul></div>
+      <div><h4>Материалы</h4><ul><li><a href="../../normativnaya-baza/">Нормативная база</a></li><li><a href="./" aria-current="page">Проверочные листы 2026</a></li><li><a href="../../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора</a></li><li><a href="../../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/">Оценка эффективности дератизации и дезинсекции</a></li><li><a href="../../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a></li><li><a href="../../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a></li><li><a href="../../materialy/skhema-tochek-pest-kontrolya/"><span>Схема точек <span class="nw">пест-контроля</span></span></a></li><li><a href="../../materialy/akt-deratizatsii-i-dezinsektsii/">Акт дератизации и дезинсекции</a></li><li><a href="../../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a></li><li><a href="../../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a></li><li><a href="../../materialy/">Все материалы</a></li></ul></div>
+      <div><h4>Контакты</h4><ul><li><a href="tel:+74951043570">+7 (495) 104-35-70</a></li><li><a href="mailto:b2b@pestcontrol-center.ru">b2b@pestcontrol-center.ru</a></li><li>Пн–Пт: 8:00–20:00</li><li>Срочные выезды: 24/7</li></ul>
+      </div>
+    </div>
+    <div class="fb"><span>© 2026 ПЕСТКОНТРОЛЬ Центр</span><a href="../../privacy/">Политика конфиденциальности</a><a href="../../soglasie/">Согласие на обработку данных</a><span>Информация на сайте не является публичной офертой</span></div>
+  </div>
+  <div class="wrap ft-company" id="requisites"><p>ООО «Центр дезинфекционных услуг» · ИНН 7714462211 · КПП 771401001 · ОГРН 1207700257775</p></div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+74951043570" class="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Позвонить</a>
+  <a href="#zayavka" class="c2"><span>Обследование</span></a>
+</div>
+
+<script>
+/* Предпросмотр: вне рабочего домена заявка не отправляется (на пестконтроль-центр.рф этот блок не срабатывает) */
+(function(){if(/^(www\.)?xn----itbbsflddbfpfdodg9d0f\.xn--p1ai$/i.test(location.hostname))return;var f=window.fetch;window.fetch=function(u){if(typeof u==='string'&&u.indexOf('send.php')>-1)return new Promise(function(r){setTimeout(function(){r(new Response('{"success":true}',{status:200,headers:{'Content-Type':'application/json'}}))},500)});return f.apply(this,arguments)};document.addEventListener('DOMContentLoaded',function(){var p=document.querySelector('.form .fs');if(p)p.textContent='Предпросмотр: заявка никуда не отправляется'})})();
+</script>
+<script data-fx>
+/* Эффекты под курсором, как на главной (tools/site/fx.py) */
+(function(){
+  var mm=window.matchMedia;if(!mm)return;
+  var fine=mm('(hover: hover) and (pointer: fine)').matches;
+  /* лупа: светлая копия фото в круглой маске; сдвигаются только круг и фото внутри него (transform) — без перерисовки фото.
+     Кадры — только пока круг догоняет мышь; без мыши круг стоит на открытой части фото и сам не ходит, мышь ушла с первого
+     экрана — плавно возвращается. Только компьютер с мышью шире 860 px; без лупы — при «уменьшить движение» и в облегчённом
+     режиме (window.pcFx, скрипт в <head>): если, пока круг догоняет мышь, кадров меньше 40 в секунду, режим включается сам */
+  var hero=document.getElementById('hero'),lit=hero&&hero.querySelector('.fx-lit'),F=window.pcFx||{mode:'',lite:false,hooks:[],set:function(){}};
+  if(lit&&lit.firstElementChild&&fine&&!F.lite&&!mm('(prefers-reduced-motion: reduce)').matches&&!mm('(max-width:860px)').matches){
+    var media=lit.parentNode,box=lit.firstElementChild,full=hero.classList.contains('f-hero');
+    var W=0,H=0,r=0,x=0,y=0,tx=0,ty=0,hx=0,hy=0,raf=0,last=0,vis=true,on=false,follow=false,off=false,dts=[];
+    var place=function(){ /* круг и копия фото — ровно навстречу: копия стоит на месте фото до долей пикселя */
+      var X=Math.round((x-r)*10)/10,Y=Math.round((y-r)*10)/10;
+      lit.style.transform='translate3d('+X+'px,'+Y+'px,0)';box.style.transform='translate3d('+(-X)+'px,'+(-Y)+'px,0)';
+    };
+    var size=function(){
+      if(off)return;var cs=getComputedStyle(media);W=parseFloat(cs.width)||media.offsetWidth;H=parseFloat(cs.height)||media.offsetHeight; /* точный размер: копия совпадает с фото */
+      r=Math.round(Math.max(240,Math.min(400,innerWidth*.21))*.72);
+      lit.style.width=lit.style.height=2*r+'px';box.style.width=W+'px';box.style.height=H+'px';
+      hx=W*(full?.68:.74);hy=H*.47;if(!follow){tx=hx;ty=hy;if(!raf){x=hx;y=hy;}}place();
+    };
+    var frame=function(now){
+      raf=0;if(off||!vis||document.hidden)return;
+      var dt=last?Math.min(Math.max(now-last,0),100):16.67;
+      if(last&&F.mode!=='full'){dts.push(now-last);if(dts.length>=40){dts.sort(function(a,b){return a-b;});var med=dts[20];dts=[];
+        if(med>25){document.documentElement.setAttribute('data-fps',Math.round(1000/med));F.set(true);return;}}}
+      last=now;var k=1-Math.pow(.94,dt/16.67);x+=(tx-x)*k;y+=(ty-y)*k;
+      if(Math.abs(tx-x)<.3&&Math.abs(ty-y)<.3){x=tx;y=ty;place();return;}
+      place();raf=requestAnimationFrame(frame);
+    };
+    var kick=function(){if(!raf&&!off&&vis&&!document.hidden){last=0;raf=requestAnimationFrame(frame);}};
+    hero.addEventListener('pointermove',function(e){
+      if(e.pointerType!=='mouse'||off)return;var b=media.getBoundingClientRect();if(!b.width||!b.height)return;
+      tx=(e.clientX-b.left)/b.width*W;ty=(e.clientY-b.top)/b.height*H;follow=true;kick();
+    },{passive:true});
+    hero.addEventListener('pointerleave',function(){if(off)return;follow=false;tx=hx;ty=hy;kick();});
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;kick();}).observe(hero);
+    document.addEventListener('visibilitychange',kick);
+    if(window.ResizeObserver)new ResizeObserver(function(){size();}).observe(media);
+    addEventListener('resize',size);size();
+    var start=function(){if(on||off)return;on=true;hero.classList.add('fx-lit-on');};
+    F.hooks.push(function(){off=true;if(raf)cancelAnimationFrame(raf);raf=0;hero.classList.remove('fx-lit-on');});
+    var eb=hero.querySelector('.eyebrow');
+    if(eb&&'MutationObserver' in window){
+      if(eb.classList.contains('in'))start();
+      else{var mo=new MutationObserver(function(){if(eb.classList.contains('in')){mo.disconnect();start();}});mo.observe(eb,{attributes:true,attributeFilter:['class']});}
+    }
+    setTimeout(start,eb?5000:2500);
+  }
+  /* подсветка рамки карточек за курсором — как у .card на главной; в облегчённом режиме (window.pcFx) — нет */
+  if(fine)document.addEventListener('pointermove',function(e){
+    if(window.pcFx&&pcFx.lite)return;var c=e.target.closest&&e.target.closest('.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev');if(!c)return;
+    var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  },{passive:true});
+})();
+</script>
+<script>
+  /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */
+  (function (r, l) {
+    var go = function () { var u = l; l = null; if (u) u.forEach(function (s) { var e = document.createElement('script'); e.src = r + s; e.async = false; document.body.appendChild(e); }); };
+    var raf = function () { requestAnimationFrame(function () { setTimeout(go, 0); }); }, P = window.PerformanceObserver, t = P && P.supportedEntryTypes;
+    if (document.visibilityState === 'hidden' || !window.requestAnimationFrame) setTimeout(go, 0);
+    else if (t && t.indexOf('paint') > -1) { /* после того как браузер показал первую отрисовку (FCP); страховка — 3 с */
+      try { new P(function (x, o) { o.disconnect(); setTimeout(go, 0); }).observe({ type: 'paint', buffered: true }); } catch (e) { raf(); }
+      setTimeout(go, 3000);
+    } else raf();
+  })('../../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261118klient']);
+</script>
+<script>/* Форма: вид объекта, комментарий и страница — в поле msg, которое читает send.php */
+document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,s=e.type,o=s&&s.selectedIndex>0?s.options[s.selectedIndex].text:'не выбран',c=e.comment.value.trim();e.msg.value='Вид объекта: '+o+(c?'\nКомментарий: '+c:'')+'\nСтраница: Проверочные листы 2026 (/normativnaya-baza/proverochnye-listy/)';},true);</script>
+<!-- Radist -->
+<script>
+!function(r,t,e,s,a,n,c){r[a]=r[a]||function(){(r[a].a=r[a].a||[]).push(arguments)},r[a].l=1*new Date;for(var i=0;i<document.scripts.length;i++)if(document.scripts[i].src===s)return;n=t.createElement(e),c=t.getElementsByTagName(e)[0],n.async=1,n.src=s,c.parentNode.insertBefore(n,c)}(window,document,"script","https://track.radist.me/tracker.min.js","radist_tracker");
+radist_tracker({
+      message: "Здравствуйте! Пишу с сайта пестконтроль-центр.рф. Номер заявки: {radist_tracker}",
+      whatsapp_enabled: true,
+      tgbot_enabled: true,
+      tg_enabled: true,
+      max_enabled: true,
+      vk_enabled: true
+});
+</script>
+<script>
+    // Radist: код заявки в ссылках Telegram и MAX сразу, ещё до ответа track.radist.me (с 29.10.2026)
+    (function (d) {
+        var rmsg = 'Здравствуйте! Пишу с сайта пестконтроль-центр.рф. Номер заявки: {radist_tracker}';
+        var id = null, abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', s = 'ro', i, txt;
+        try {
+            id = sessionStorage.getItem('radistVisit');
+            if (!id || id.length !== 12) {
+                for (i = 0; i < 10; i++) s += abc.charAt(Math.floor(Math.random() * abc.length));
+                sessionStorage.setItem('radistVisit', s);
+                id = sessionStorage.getItem('radistVisit');
+            }
+        } catch (e) { id = null; }
+        if (!id || id.length !== 12) return;
+        txt = encodeURIComponent(rmsg.replace(/{radist_tracker}/g, id));
+        [].forEach.call(d.querySelectorAll('a[href*="//t.me/"], a[href*="//max.ru/"]'), function (a) {
+            try {
+                var u = new URL(a.href), n = u.pathname.split('/')[1] || '';
+                if (u.host === 'max.ru') a.href = 'https://max.ru/' + u.pathname.substring(1) + '?start=' + id;
+                else if (u.host === 't.me' && !/bot$/i.test(n)) a.href = 'https://t.me' + u.pathname + '?text=' + txt;
+            } catch (e) {}
+        });
+    })(document);
+</script>
+<!-- /Radist -->
+</body>
+</html>
