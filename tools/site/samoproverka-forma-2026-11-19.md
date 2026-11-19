@@ -71,3 +71,31 @@
 
 **Другим пакетам:** пакеты, собранные от сайта до этой выкладки и меняющие эти 13 страниц (`klient-2026-11-18`,
 `title-h1-2026-11-19`), проверку исходных сумм не пройдут — собирать заново от рабочего сайта.
+
+## Публикация на рабочем сайте
+
+**Опубликовано 19.11.2026 в 15:44:26 МСК** через SSH-консоль панели Timeweb (`hosting.timeweb.ru/console`, сохранённый
+вход): папка `~/pestcontrol-samoproverka-forma-2026-11-19/` (вне `public_html`), четыре файла скачаны с GitHub по коммиту
+`6eaca07` и сверены (`publish_samoproverka_forma.py` `4e979b4d…`, `deploy_payload.json` `f268194e…`, `run_once.sh`
+`6fe0265b…`, `MANIFEST.txt` `2e425e96…`); `--check` до запуска — PRECHECK OK 14/14. Запуск `LANG=C nohup sh run_once.sh`.
+Задания «Crontab» не создавались и не менялись.
+
+```
+start: 2026-11-19 15:44:26 MSK
+publish_samoproverka_forma.py: OK
+deploy_payload.json: OK
+Python 3.6.9
+PRECHECK OK: 14/14 original and resulting checksums verified (samoproverka-forma.min.js, 13 pages)
+PRECHECK OK: 14/14 original and resulting checksums verified (samoproverka-forma.min.js, 13 pages)
+BACKUP OK: 13/13 outside public_html
+PUBLISHED: 14/14 checksums verified
+BACKUP: /home/c/cd59839/pestcontrol-samoproverka-forma-2026-11-19/backup
+ALREADY PUBLISHED: 14/14 checksums match
+exit: 0
+end: 2026-11-19 15:44:26 MSK
+```
+
+- HTTPS после выкладки: 14/14 файлов совпали с суммами «после» (`MANIFEST.txt`); на 13 страницах `tracking_laws.check_page`
+  (Метрика 113675622, UIS, Radist, телефон, почта), закон независимости и `samoproverka_forma.problems` — без нарушений.
+- Откат: `python3 "$HOME/pestcontrol-samoproverka-forma-2026-11-19/publish_samoproverka_forma.py" --rollback` (вернёт 13 страниц
+  из резервной копии и уберёт `samoproverka-forma.min.js`; файл, изменённый другой выкладкой, не тронет).
