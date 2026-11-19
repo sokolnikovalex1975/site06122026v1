@@ -19,6 +19,9 @@
   * тексты карточек не бледнеют: активная лишь подсвечена рамкой, как раньше.
 Планшет и телефон (до 1024 px, одна колонка): поведение прежнее (кольцо по прокрутке, шаг по линии 62 % экрана,
 автосмена значков каждые 1,8 с, пока круг на экране) — тот же код, без GSAP.
+Телефон до 760 px (решение владельца 19.11.2026, вариант A превью preview-mobile/): круг «прилипает» над шагами (стили —
+tools/home-mobile/mobile.css); тогда шаг — по линии 62 % экрана, кольцо — по номеру шага, без автосмены; нажатие на значок
+круга прокручивает к этому шагу под кругом.
 
 Как устроено: прежний код круга в app.js ищет #cycleStep; здесь номер шага получает id="cycleNum", поэтому app.js блок
 пропускает, и круг ведёт только <script id="ipm-pin-js"> сразу после секции. app.min.js, style.css и другие страницы
@@ -108,6 +111,11 @@ JS = r"""(function () {
       else if (k < N - 1) p = (k + Math.min(1, (L - c[k]) / (c[k + 1] - c[k]))) / N;
       else p = (k + Math.min(1, (L - c[k]) / tail)) / N;
       setOn(k);
+    } else if (stick()) {
+      /* телефон, главная: круг «прилипает» над шагами (стили — tools/home-mobile) — показывает шаг на экране */
+      if (auto) { clearInterval(auto); auto = 0; }
+      steps.forEach(function (s, j) { var r = s.getBoundingClientRect(); if (r.top <= vh * 0.62 && r.bottom >= vh * 0.62) setOn(j); });
+      p = (Math.max(cur, 0) + 1) / N;
     } else {
       var b = cy.getBoundingClientRect(), s0 = vh * 0.85 - b.top, span = s0 + b.bottom - vh * 0.3;
       p = Math.max(0, Math.min(1, span > 0 ? s0 / span : 0));
@@ -119,6 +127,20 @@ JS = r"""(function () {
     target = p;
     if (!loop) loop = requestAnimationFrame(ease);
   };
+  /* телефон (до 760 px), вариант A (решение владельца 19.11.2026): круг «прилипает» — без автосмены шагов, кольцо по номеру
+     шага, нажатие на значок круга прокручивает к этому шагу под кругом (вверх — шапка вернётся, вниз — уйдёт) */
+  var stick = function () { return !desk && getComputedStyle(cy).position === 'sticky'; };
+  nodes.forEach(function (n, i) {
+    n.addEventListener('click', function () {
+      if (!stick()) return;
+      var hd = document.getElementById('hdr'), hc = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdr-c')) || 56;
+      var r = steps[i].getBoundingClientRect(), c = cy.getBoundingClientRect(), d = r.top - c.bottom - 26;
+      if (d < -24 || (d < 0 && hd && !hd.classList.contains('hide'))) d = r.top - (hc + 23 + c.height) - 26;
+      else if (d > 0) d = r.top - (30 + c.height) - 26;
+      setOn(i); target = (i + 1) / N; if (!loop) loop = requestAnimationFrame(ease);
+      if (Math.abs(d) > 2) window.scrollBy({ top: d, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  });
   var onScroll = function () { if (!tick) tick = requestAnimationFrame(calc); };
   var refresh = function () { if (auto) { clearInterval(auto); auto = 0; } layout(); calc(); };
   setOn(0);
