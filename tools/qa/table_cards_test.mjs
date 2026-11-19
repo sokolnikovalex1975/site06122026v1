@@ -7,7 +7,9 @@
 import { chromium } from 'playwright';
 const BASE = process.env.BASE || 'http://127.0.0.1:8833';
 const OLD = process.env.OLD || '';
-const PAGES = { '/ochistka-dezinfektsiya-ventilyatsii/': ['.v-freq'], '/dezinsektsiya/': ['.dz-methods', '#sanpin .d-table'] };
+const ALL = { '/ochistka-dezinfektsiya-ventilyatsii/': ['.v-freq'], '/dezinsektsiya/': ['.dz-methods', '#sanpin .d-table'] };
+// ONLY=/dezinsektsiya/ — одна страница (например, повтор после ложного 502 Timeweb)
+const PAGES = process.env.ONLY ? { [process.env.ONLY]: ALL[process.env.ONLY] } : ALL;
 const WIDTHS = (process.env.WIDTHS || '320 375 430 560 600 601 620 640 660 670 690 700 720 744 760 761 768 800 820 900 1024 1280 1440 1920').split(' ').map(Number);
 const b = await chromium.launch();
 const errors = [];

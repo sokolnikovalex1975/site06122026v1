@@ -34,7 +34,34 @@
 
 ## Публикация на рабочем сайте
 
-Заполняется после выкладки.
+**Опубликовано 19.11.2026 в 15:48:22 МСК** через SSH-консоль панели Timeweb (`hosting.timeweb.ru/console`, сохранённый вход
+«Timeweb: основной аккаунт cd59839»): папка `~/pestcontrol-table-cards-2026-11-19/` (вне `public_html`), четыре файла
+скачаны с GitHub по коммиту `914577d` и сверены (`publish_table_cards.py` `7d9336b4…`, `deploy_payload.json` `51b337d7…`,
+`run_once.sh` `c46b4075…`, `MANIFEST.txt` `5bc80061…`); `--check` до запуска — PRECHECK OK 2/2. Запуск `LANG=C sh
+run_once.sh`. Задания «Crontab» не создавались и не менялись.
+
+```
+start: 2026-11-19 15:48:22 MSK
+publish_table_cards.py: OK
+deploy_payload.json: OK
+Python 3.6.9
+PRECHECK OK: 2/2 original and resulting checksums verified
+PRECHECK OK: 2/2 original and resulting checksums verified
+BACKUP OK: 2/2 outside public_html
+PUBLISHED: 2/2 checksums verified
+BACKUP: /home/c/cd59839/pestcontrol-table-cards-2026-11-19/backup
+ALREADY PUBLISHED: 2/2 checksums match
+exit: 0
+end: 2026-11-19 15:48:22 MSK
+```
+
+Временных файлов `*-stage` в `public_html` нет.
+
+- **HTTPS**: обе страницы (`/<страница>/` и `?utm_source=check`) — HTTP 200, SHA-256 как в пакете; `tracking_laws` — без
+  нарушений (Метрика 113675622, UIS, Radist, телефон и почта), закон независимости — без нарушений.
+- **`table_cards_test.mjs` на рабочем сайте** (запросы к счётчикам отменяются): 2 страницы × 24 ширины — прокрутки вбок
+  нет, на 601–760 px карточки, шире — таблица; нарушений 0 (ложные 502 Timeweb из облака — повтор по одной странице и
+  ширине, `ONLY=…`, со 2–5-й попытки — 0).
 
 ## Откат
 
