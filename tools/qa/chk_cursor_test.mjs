@@ -4,6 +4,7 @@
 // скрыт (cursor:none), фирменное кольцо видно (opacity 1); над текстом пункта — то же; квадрат подсвечен (box-shadow).
 // В облегчённом режиме (?fx=lite) — обычная рука. Поля для текста по-прежнему с курсором text. Телефон 390×844 (касание): класса has-cursor нет, у пунктов нет подсветки,
 // размеры блока самопроверки — как без строки chk-cur. Запросы к сторонним адресам (счётчики) отменяются.
+// Пакет Timeweb: PREVIEW=0 PKG=tools/deploy/chk-cursor-2026-11-20/pkg node tools/qa/chk_cursor_test.mjs https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai
 import { chromium } from 'playwright';
 const BASE = (process.argv[2] || 'http://localhost:8765').replace(/\/$/, '');
 const PAGES = ['biznes-tsentry-torgovye-tsentry-predpriyatiya', 'deratizatsiya', 'dezinsektsiya', 'farmatsevticheskie-proizvodstva',
@@ -18,14 +19,26 @@ const bad = []; let n = 0;
 async function open(ctx, slug, q = '?fx=full') {
   const p = await ctx.newPage();
   await p.route(r => new URL(r).host !== host, r => r.abort());
+  if (process.env.PKG) { // страницы пакета Timeweb вместо страниц сайта: PKG=<папка pkg>, база — рабочий сайт
+    const fs = await import('fs');
+    await p.route(r => { const u = new URL(r); return u.host === host && /\/$/.test(u.pathname); }, async r => {
+      const f = process.env.PKG + decodeURI(new URL(r.request().url()).pathname) + 'index.php';
+      if (!fs.existsSync(f)) return r.continue();
+      await r.fulfill({ status: 200, contentType: 'text/html; charset=utf-8', body: fs.readFileSync(f) });
+    });
+  }
   const [path, hash] = slug.split('#');
   for (let i = 0; i < 6; i++) {
     const r = await p.goto(BASE + '/' + path + '/' + q + (hash ? '#' + hash : ''), { waitUntil: 'domcontentloaded', timeout: 90000 }).catch(() => null);
-    if (r && r.status() === 200) break;
+    if (r && r.status() === 200) {
+      await p.waitForTimeout(2500);
+      // ложные 502 Timeweb из облака бывают и на app.min.js — тогда курсор не включается: открыть заново
+      const ok = q !== '?fx=full' || ctx._mobile || await p.evaluate(() => document.documentElement.classList.contains('has-cursor'));
+      if (ok) break;
+    }
     if (i === 5) throw new Error(slug + ': не открылась');
     await p.waitForTimeout(3000);
   }
-  await p.waitForTimeout(2500);
   await p.addStyleTag({ content: '[data-fade],.panel{opacity:1!important;transform:none!important}' });
   return p;
 }
@@ -35,7 +48,7 @@ const state = (p, x, y) => p.evaluate(([x, y]) => {
   return { tag: t && t.tagName, native: t && getComputedStyle(t).cursor, ring: ring && getComputedStyle(ring).opacity,
     shadow: inp && getComputedStyle(inp).boxShadow };
 }, [x, y]);
-for (const slug of only) {
+for (const slug of only) try {
   // компьютер
   const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
   const p = await open(ctx, slug);
@@ -75,7 +88,7 @@ for (const slug of only) {
   await lc.close();
   // телефон
   if (slug.indexOf('razrabotka') < 0) {
-    const m = await b.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
+    const m = await b.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 }); m._mobile = true;
     const q = await open(m, slug);
     const r = await q.evaluate(() => {
       const box = () => { const e = document.querySelector('.f-check'); const r = e.getBoundingClientRect(); return [Math.round(r.width), Math.round(r.height)]; };
@@ -86,7 +99,7 @@ for (const slug of only) {
     if (r.cur || r.a.join() !== r.z.join() || r.sh !== 'none') bad.push(`${slug}: телефон ${JSON.stringify(r)}`);
     await m.close();
   }
-}
+} catch (e) { bad.push(slug + ': ' + e.message.split('\n')[0]); }
 await b.close();
 console.log(`проверок: ${n}, нарушений: ${bad.length}`);
 bad.forEach(x => console.log('  ' + x));

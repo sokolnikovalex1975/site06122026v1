@@ -1,0 +1,186 @@
+{
+ "name": "chk-cursor-2026-11-20",
+ "count": 15,
+ "files": [
+  {
+   "file": "biznes-tsentry-torgovye-tsentry-predpriyatiya/index.php",
+   "before": "c9365647bbea578ba6988094f00be592d40e73eed263da2f859c40d62a13e91c",
+   "after": "860c100de8391520130fc85f0dcc3d7468f515695a38612393c16fa7987cb748",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "deratizatsiya/index.php",
+   "before": "3612a6d181c1319b68a552a405738bb387db803e2cb445a1dec277899bc2d1d2",
+   "after": "c550883ed6f99b79d3fa684f575f55fdd90d7ee6deae62c5fa73b82aa35aa156",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/index.php",
+   "before": "d13087edebde45f7a52758718fdeef8b5da1e83326e504f8ce49c88594d37a92",
+   "after": "0d87f0c28f8a07852965114ed9067a9d13cfd88fae82ed01e6c17a60028e2f04",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "farmatsevticheskie-proizvodstva/index.php",
+   "before": "6c8279ae9c20afe072d56b935d122bb7def4de0d2b7fb94eef0f111bfb811ae1",
+   "after": "50cfb8bf154525503406d79a29f97575b642758a9d7a204087283491ffeb69ff",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "gostinitsy/index.php",
+   "before": "9c66b502e69083676144a32ede602e6224eedb30171360ae7d82aa30aa3e0f85",
+   "after": "e7d79b2a40a853dd2d15c775a199745f1e73a9bd295eeb7b01cf4f71ae9a8ef0",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "magaziny-i-torgovye-seti/index.php",
+   "before": "d6bdb66c86b25b17585b5e58c9ab06f544e98b60b56ee2eb6593b8dd6647172e",
+   "after": "223f9ebdbf0f5bbe56655a3795cb30c48750b64cb3cb10a960fe0d593e5be3da",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/pest-menedzhment-ili-razovaya-obrabotka/index.php",
+   "before": "52458fd24815f2b57f21f31f9645f57a9ea4dc3691a6f4253e5947dbb11e46f3",
+   "after": "76594f23972f13fceff4d082729617f2efbf5cd37614e7435f3a26df2c9636dc",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-pest-kontrolya/index.php",
+   "before": "767a62ec8162b5674da68250b0a147e474db137d54e11df6464567bd3180e017",
+   "after": "cb1820fcbaecf1290a83d5e1af620e2338c118b7af74f1a3f2af009137f0b272",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/zhurnal-pest-kontrolya/index.php",
+   "before": "ce8e1568ee0e44ec39339dfe0e709f01616af34033eb482fefe8e0e868038c85",
+   "after": "68547accbe322e763087a56fa547331b87c3a2bcfd5169ad38d4c543ab6cb326",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "ochistka-dezinfektsiya-ventilyatsii/index.php",
+   "before": "27222e5b05e12591be6a4b4381479a656821f2b721f0ee5091102203ab073a64",
+   "after": "00326da6dbc71244982aaddf851dfd0b1cdb72272b89af08268cd23cd1fdb98c",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "pishchevoe-proizvodstvo/index.php",
+   "before": "5f9506960c99b37da986642a6a07bc869dade99651f20da17f4591b8dcca8dac",
+   "after": "a69c96f6786711c6fbf435366d1d0ffdd47765c4f97df638ae87046d14fd5929",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "razrabotka-ppk/index.php",
+   "before": "a38f80fc52f747e84e9bd8b8dd960c83c2fe1fdafc55b53f16269995c27db4e7",
+   "after": "9c33db1459fdf800b0e02da953118e54cf97d7e02694f54e0298012c6561744d",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "restorany-i-kafe/index.php",
+   "before": "6a9e9358475a0436d195cf455ecf5637fbccba9c668bbbb9abe88abdeba30375",
+   "after": "5a76efaed9c9b9e344428446b26d8b529061eb8166abddfa3d1b6fd321795a87",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "sklady-i-logistika/index.php",
+   "before": "74b1366b836577ba6ac3e82d9a18c889e5d4bb7f196f7118ddf5a25d93407ef2",
+   "after": "e81a97c62e46a3a57cf1e5c52de0312532f616537dabf12fbec5601d1d1161de",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "zashchita-ot-proniknoveniya-gryzunov/index.php",
+   "before": "1650a2a297cce954aff8133e0c3855c8260a59bf7098ea72021a5a1392827651",
+   "after": "5884a2a5d402a38e344386b6f91317c21585d76dc816c7347acfe1d405ab13e8",
+   "replace": [
+    [
+     "</style>\n<!-- UIS -->",
+     "</style>\n<style id=\"chk-cur\">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>\n<!-- UIS -->",
+     1
+    ]
+   ]
+  }
+ ]
+}
