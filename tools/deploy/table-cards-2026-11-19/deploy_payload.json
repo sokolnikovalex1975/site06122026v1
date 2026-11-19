@@ -1,0 +1,30 @@
+{
+ "name": "table-cards-2026-11-19",
+ "count": 2,
+ "files": [
+  {
+   "file": "ochistka-dezinfektsiya-ventilyatsii/index.php",
+   "before": "634babbca0c998eda96d55574c1a051fee0ab94d702f3ed2a34b950391b0212e",
+   "after": "999ebe99ad216a75a747a9de565213a3d0b2269f4b405939d2bbb4ecc03fd985",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы на 601–760 px — карточками, как на телефоне, без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:601px) and (max-width:760px){.v-freq thead{display:none}.v-freq,.v-freq tbody,.v-freq tr,.v-freq td{display:block;width:100%}.v-freq tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.v-freq td{border:0;padding:10px 0;min-width:0}.v-freq td+td{border-top:1px solid var(--line)}.v-freq td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}}</style>\n",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "dezinsektsiya/index.php",
+   "before": "e767c2b2f32f283e53e80f609663ede1709afac8314fd89ad8d086ec34d00f71",
+   "after": "851ee7004053f76b8744bcf7e28f0d64e9356b2515f8a59d883b5fab139c975e",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы на 601–760 px — карточками, как на телефоне, без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:601px) and (max-width:760px){.dz-methods thead,#sanpin .d-table thead{display:none}.dz-methods,.dz-methods tbody,.dz-methods tr,.dz-methods td,#sanpin .d-table,#sanpin .d-table tbody,#sanpin .d-table tr,#sanpin .d-table td{display:block;width:100%}.dz-methods tr,#sanpin .d-table tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.dz-methods td,#sanpin .d-table td{border:0;padding:10px 0;min-width:0}.dz-methods td+td,#sanpin .d-table td+td{border-top:1px solid var(--line)}.dz-methods td::before,#sanpin .d-table td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}}</style>\n",
+     1
+    ]
+   ]
+  }
+ ]
+}
