@@ -1,7 +1,7 @@
 # Курсор над чекбоксами — фирменное кольцо (вариант А): GitHub и пакет Timeweb (20.11.2026)
 
 Замечание владельца 19.11.2026: при наведении мыши на чекбокс появляется курсор-«палочка» для ввода текста — непонятно, что
-пункт можно нажать. Решение 20.11.2026: «Делай вариант А». **На Timeweb не выложено — ждёт отдельного разрешения.**
+пункт можно нажать. Решение 20.11.2026: «Делай вариант А». Команда владельца на выкладку 20.11.2026: «выкладывай». **Опубликовано на Timeweb 20.11.2026 в 02:13:49 МСК.**
 
 ## Что было и что стало
 
@@ -33,6 +33,36 @@
   `PREVIEW=0 PKG=tools/deploy/chk-cursor-2026-11-20/pkg node tools/qa/chk_cursor_test.mjs https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai`
   — 15 страниц, 188 проверок, нарушений 0.
 - Ложные 502 Timeweb из облака 19–20.11.2026: из браузера владельца 21/21 запрос — 200 за 0,1–0,2 с.
+
+## Публикация на рабочем сайте
+
+**Опубликовано 20.11.2026 в 02:13:49 МСК** через SSH-консоль панели Timeweb (сохранённый вход «Timeweb: основной аккаунт
+cd59839»): папка `~/pestcontrol-chk-cursor-2026-11-20/` (вне `public_html`), четыре файла скачаны с GitHub по коммиту
+`8215fc1` и сверены (`publish_chk_cursor.py` `5d72be6f…`, `deploy_payload.json` `9b72627e…`, `run_once.sh` `960eae4e…`,
+`MANIFEST.txt` `9a3dd9c3…`); `--check` до запуска — PRECHECK OK 15/15. Запуск `LANG=C sh run_once.sh`. Задания «Crontab» не
+создавались и не менялись.
+
+```
+start: 2026-11-20 02:13:49 MSK
+publish_chk_cursor.py: OK
+deploy_payload.json: OK
+Python 3.6.9
+PRECHECK OK: 15/15 original and resulting checksums verified
+PRECHECK OK: 15/15 original and resulting checksums verified
+BACKUP OK: 15/15 outside public_html
+PUBLISHED: 15/15 checksums verified
+BACKUP: /home/c/cd59839/pestcontrol-chk-cursor-2026-11-20/backup
+ALREADY PUBLISHED: 15/15 checksums match
+exit: 0
+end: 2026-11-20 02:13:49 MSK
+```
+
+Временных файлов `*-stage` в `public_html` нет.
+
+- **HTTPS**: 15 страниц (`/<страница>/` и `?utm_source=check`) — 30/30 HTTP 200, SHA-256 как в пакете; `tracking_laws` (Метрика
+  113675622, UIS, Radist, телефон и почта) и закон независимости — без нарушений.
+- **`chk_cursor_test.mjs` на рабочем сайте** (счётчики отменены): дератизация, гостиницы, «Разработка ППК» — нарушений 0
+  (разовое расхождение подсветки при плавной прокрутке Lenis — повтор без нарушений).
 
 ## Откат
 
