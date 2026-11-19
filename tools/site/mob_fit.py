@@ -13,7 +13,8 @@
   * перед <style id="tel-plain"> ставит одну строку <style id="mob-fit"> (STYLE ниже). До 600 px: текст кнопок
     (.btn, кроме ссылок tel:) переносится на вторую строку вместо обрезки, высота кнопки растёт по тексту; длинные
     ссылки списка норм (.rk-nl), плашка «Непродовольственные» (.pest-b .lvl) и длинные слова в карточках не выходят
-    за край. Стиль .fxt для flex_text.py — в этой же строке (не перед </head>: там по закону владельца стоит UIS);
+    за край; до 400 px слово с дефисом в заголовке карточки (span.nw, «производственно-складские») переносится по дефису
+    (19.11.2026). Стиль .fxt для flex_text.py — в этой же строке (не перед </head>: там по закону владельца стоит UIS);
   * «Дератизация», раздел «Документы»: «12 раз/год», «3 контура», «7 документов» — 40 px не помещались в карточку
     на телефоне; число остаётся крупным, единица — подписью под ним (как на «Складах и логистике»).
 Ссылки телефона и почты не трогает (ЗАКОН ВЛАДЕЛЬЦА). Проверка в браузере: node tools/qa/mob_fit_test.mjs.
@@ -41,6 +42,7 @@ CSS = (
     '.card h3,.card h4,.card p,.card li,.card b,.card span,.d-card h3,.d-card p{overflow-wrap:break-word}'
     '.kpi span,.nb-obj-t,.d-obj-b h3{-webkit-hyphens:auto;hyphens:auto}'
     '}'
+    '@media (max-width:400px){.card h3 .nw,.d-card h3 .nw{white-space:normal}}'
 )
 STYLE = '<style id="mob-fit">' + CSS + '</style>\n'
 STYLE_RE = re.compile(r'<style id="mob-fit">.*?</style>\n?', re.S)
@@ -53,9 +55,12 @@ KPI = [
 
 
 def fix(text):
-    t = STYLE_RE.sub('', text)
-    if ANCHOR in t:
-        t = t.replace(ANCHOR, STYLE + ANCHOR, 1)
+    if STYLE_RE.search(text):  # уже есть — обновить на месте, не двигая относительно других стилей
+        t = STYLE_RE.sub(lambda m: STYLE, text, count=1)
+    elif ANCHOR in text:
+        t = text.replace(ANCHOR, STYLE + ANCHOR, 1)
+    else:
+        t = text
     for num, suf, unit in KPI:
         t = re.sub(r'<b data-count="%s" data-suf="%s">%s[ \u00a0]%s</b>' % (num, re.escape(suf), num, re.escape(suf.strip())),
                    '<b data-count="%s">%s</b><i class="u">%s</i>' % (num, num, unit), t)
