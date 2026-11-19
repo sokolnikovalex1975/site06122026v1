@@ -138,6 +138,16 @@
   13.11.2026 из `META`), H1 — `tools/site/h1_core.py` (меняются только слова, разметка строк `.ln` и `<em>` прежняя).
   Оба — шаги `build_site.py` после генераторов; проверка — `--check` у каждого.
 
+## Самопроверка → заявка (решение владельца с 19.11.2026)
+
+- Кнопка блока самопроверки (`#samoproverka`, 13 страниц; раскладка — `tools/site/samoproverka.py`) открывает короткую
+  форму: имя, телефон, тип объекта; в заявку (`msg`) уходят отмеченные и пропущенные пункты и адрес страницы. На телефоне
+  форма — шторка снизу, страница за ней **не затемняется**. Шаг — `tools/site/samoproverka_forma.py` (после
+  `samoproverka.py`; настройки страниц — название формы для UIS, заголовок и текст окна), скрипт — `samoproverka-forma.js`
+  → `samoproverka-forma.min.js`. Отправка — тот же `/send.php`; цель `audit` (параметр `form: samoproverka`) и
+  `Comagic.addOfflineRequest` с `message` и `form_name` «Самопроверка: …» — после ответа сервера.
+- Проверка: `BASE=… node tools/qa/samoproverka_forma_test.mjs`. Журнал — `tools/site/samoproverka-forma-2026-11-19.md`.
+
 ## Страницы
 
 | Адрес | Страница |
