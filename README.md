@@ -160,6 +160,8 @@
 - Разметку и стили ставит `tools/site/infografika.py` (шаг `build_site.py` перед `tracking_laws.py`, `--check`); стили —
   строка `<style id="ig">` сразу после `mob-fit`. Новая иконка или блок — сначала макет на согласование, затем соответствие
   в `infografika.py`. Проверка в браузере — `tools/qa/infografika_test.mjs`.
+- На рабочем сайте — с 19.11.2026 17:05 МСК: 40 страниц и 70 картинок, пакет `tools/deploy/infografika-2026-11-19`
+  (откат — `publish_infografika.py --rollback`). Страница защиты от грызунов — только в превью GitHub.
 
 ## Страницы
 

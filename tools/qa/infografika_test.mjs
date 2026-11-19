@@ -1,5 +1,7 @@
 // Инфографика в стиле лаборатории (tools/site/infografika.py, команда владельца 19.11.2026).
-//   BASE=http://127.0.0.1:8080 [SHOTS=папка] [WIDTHS="390 700 1440"] node tools/qa/infografika_test.mjs [/путь/ ...]
+//   BASE=http://127.0.0.1:8080 [SHOTS=папка] [WIDTHS="390 700 1440"] [TRIES=3] node tools/qa/infografika_test.mjs [/путь/ ...]
+// TRIES — попыток открыть страницу: рабочий сайт отвечает облачным адресам ложным 502 примерно на половину запросов
+// (из Москвы и Германии в это время 200 — check-host.net, 19.11.2026), для рабочего сайта ставить TRIES=8.
 // На каждой странице и ширине: страница не шире экрана; строка <style id="ig"> на месте; каждая иконка ig-*.webp и
 // lab-*.webp в блоках загрузилась (naturalWidth > 0), видна, размер на экране не больше файла (без размытия ×1);
 // на телефоне (до 760 px) у иконок и их блоков нет затемнения (opacity 1, без brightness/фильтров затемнения) —
@@ -11,6 +13,7 @@ import fs from 'fs';
 const BASE = process.env.BASE || 'http://127.0.0.1:8080';
 const SHOTS = process.env.SHOTS || '';
 const WIDTHS = (process.env.WIDTHS || '390 700 1440').split(' ').map(Number);
+const TRIES = Number(process.env.TRIES || 3);
 const ALL = ['/', '/dezinfektsiya/', '/deratizatsiya/', '/zashchita-ot-proniknoveniya-gryzunov/', '/dezinsektsiya/',
   '/deratizatsiya-i-dezinsektsiya/', '/dogovor-deratizatsiya-dezinsektsiya/', '/sanitarnyy-audit/', '/razrabotka-ppk/',
   '/laboratornye-issledovaniya/', '/ochistka-dezinfektsiya-ventilyatsii/', '/pishchevoe-proizvodstvo/', '/restorany-i-kafe/',
@@ -42,7 +45,7 @@ for (const pg of PAGES) for (const w of WIDTHS) {
   const p = await ctx.newPage();
   await p.addInitScript(() => { window.__cls = 0; new PerformanceObserver(l => { for (const e of l.getEntries()) if (!e.hadRecentInput) window.__cls += e.value; }).observe({ type: 'layout-shift', buffered: true }); });
   let ok = false;
-  for (let i = 0; i < 3 && !ok; i++) { const r = await p.goto(BASE + pg, { waitUntil: 'load', timeout: 45000 }).catch(() => null); ok = !!r && r.status() === 200; }
+  for (let i = 0; i < TRIES && !ok; i++) { const r = await p.goto(BASE + pg, { waitUntil: 'load', timeout: 45000 }).catch(() => null); ok = !!r && r.status() === 200; }
   if (!ok) { errors.push(`${w} ${pg}: страница не открылась`); await ctx.close(); continue; }
   const H = await p.evaluate(() => document.documentElement.scrollHeight);
   for (let y = 0; y < H; y += 600) { await p.evaluate(yy => window.scrollTo(0, yy), y); await p.waitForTimeout(40); }
