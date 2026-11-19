@@ -1,0 +1,195 @@
+{
+ "name": "title-h1-2026-11-19",
+ "count": 12,
+ "files": [
+  {
+   "file": "deratizatsiya-i-dezinsektsiya/index.php",
+   "before": "11aa1c164a2da247beb91dff7d2808fcf1fb5e44d1af3cc37a4c1b27db80eb93",
+   "after": "7b48cb1d90cf3e0d57bfc9e9ac51a59b9b136d05e6a7ab0fe90f7121eee5c3ed",
+   "replace": [
+    [
+     "Дератизация и дезинсекция для организаций: цены — ПЕСТКОНТРОЛЬ Центр",
+     "Дератизация и дезинсекция в Москве: цены для организаций",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "dezinfektsiya/index.php",
+   "before": "fed38bb25bb100a22a1b6507c7dee6b2c38dc404caa6d7d0d7955295d9e80995",
+   "after": "e53f12e97ee60a743da6c9160d51f64800d7c8dca09763038964cb9f13c3bbcb",
+   "replace": [
+    [
+     "Дезинфекция для организаций в Москве и области — ПЕСТКОНТРОЛЬ Центр",
+     "Дезинфекция помещений для организаций в Москве и области",
+     2
+    ],
+    [
+     "<h1><span class=\"ln d-ln1\"><span>Дезинфекция</span></span> <span class=\"ln\"><span><em>для организаций</em></span></span></h1>",
+     "<h1><span class=\"ln d-ln1\"><span>Дезинфекция помещений</span></span> <span class=\"ln\"><span><em>для организаций</em></span></span></h1>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/index.php",
+   "before": "6cb660581fc0d0c0a7a67ca2eebb5b33970cc03b6656cb4e2c3d4b26fc15f3ec",
+   "after": "b442bdd88667d062ed40429afad34a1d7880d54f18816d5f9b8ea9e9728301c9",
+   "replace": [
+    [
+     "Лабораторный контроль по ППК: смывы, воздух, вода — цены в Москве",
+     "Лабораторные исследования по ППК: смывы, воздух, вода — цены в Москве",
+     2
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-pishchevykh-produktov/index.php",
+   "before": "43743a74a48b7abe6e16f40d50bcfb606465c315b7bfdabb7c6b7eadd32c7834",
+   "after": "50bf8c834e4bff7fc048f27fce5a7a0a817d9f99e75fe2a45e6809a1093a1df3",
+   "replace": [
+    [
+     "Анализ продуктов и готовых блюд — от 194 ₽ за показатель, Москва",
+     "Испытания пищевой продукции и блюд — от 194 ₽ за показатель, Москва",
+     2
+    ],
+    [
+     "<h1><span class=\"ln\"><span>Анализ пищевых продуктов</span></span> <span class=\"ln\"><span><em>и готовых блюд</em></span></span></h1>",
+     "<h1><span class=\"ln\"><span>Испытания пищевой продукции</span></span> <span class=\"ln\"><span><em>и готовых блюд</em></span></span></h1>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-smyvov/index.php",
+   "before": "efacceab83ab7392b7a129f5d60b6a5633fd9208539bebbfcda07744f7bf241b",
+   "after": "95b3462dc3147ce4faa55f62926e16742a39f2c323cf6c7cba30f4e904da0118",
+   "replace": [
+    [
+     "Анализ смывов с поверхностей и рук — от 310 ₽ за точку, Москва",
+     "Анализ смывов на БГКП с поверхностей и рук — от 310 ₽ за точку",
+     2
+    ],
+    [
+     "<h1><span class=\"ln\"><span>Анализ смывов</span></span> <span class=\"ln\"><span><em>с поверхностей, оборудования и рук</em></span></span></h1>",
+     "<h1><span class=\"ln\"><span>Анализ смывов</span></span> <span class=\"ln\"><span><em>на БГКП с поверхностей и рук</em></span></span></h1>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/kontrol-sterilizatorov/index.php",
+   "before": "b205a9ca3e1e536216272d8135ef4f426040a5009447c90fff80a4284355b064",
+   "after": "8bf17f799c16397153a5f077910d93fd245bd3117a50d666742ac36d46f9da9f",
+   "replace": [
+    [
+     "Контроль стерилизаторов биоиндикаторами — от 1 600 ₽, Москва",
+     "Контроль стерилизаторов и анализ на стерильность — от 1 003 ₽, Москва",
+     2
+    ],
+    [
+     "<h1><span class=\"ln\"><span>Контроль работы стерилизаторов</span></span> <span class=\"ln\"><span><em>и стерильности инструментов</em></span></span></h1>",
+     "<h1><span class=\"ln\"><span>Контроль работы стерилизаторов</span></span> <span class=\"ln\"><span><em>и анализ на стерильность</em></span></span></h1>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/zamer-osveshchennosti/index.php",
+   "before": "a85ae3a94642db0c0289cd3e8c16cb33a278019f45f2aba8cb0075af5d96bef4",
+   "after": "7d558809dda57fd91c8fdea04672e3c53af853c717582c726b407e0f70651cfc",
+   "replace": [
+    [
+     "Замер освещённости на рабочих местах — от 350 ₽ за точку, Москва",
+     "Измерение освещённости на рабочих местах — от 350 ₽ за точку, Москва",
+     2
+    ],
+    [
+     "<h1><span class=\"ln\"><span>Замер освещённости</span></span> <span class=\"ln\"><span><em>на рабочих местах</em></span></span></h1>",
+     "<h1><span class=\"ln\"><span>Измерение освещённости</span></span> <span class=\"ln\"><span><em>на рабочих местах</em></span></span></h1>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/kak-berut-smyvy/index.php",
+   "before": "f35db680d67e671529fee72a5dafcfe3308df7ba2d24c506979a979c3dc41789",
+   "after": "e2b8cc44ea51e1a91b5353c0aa68256f3808a9b1cb240ea53e95e7aad9451b4e",
+   "replace": [
+    [
+     "Как берут смывы с поверхностей и рук: порядок по МР 4.2.0220-20",
+     "Метод смывов с поверхности и рук: порядок по МР 4.2.0220-20",
+     1
+    ],
+    [
+     "<h1><span class=\"ln\"><span>Как берут смывы</span></span> <span class=\"ln\"><span><em>с поверхностей и рук</em></span></span></h1>",
+     "<h1><span class=\"ln\"><span>Метод смывов</span></span> <span class=\"ln\"><span><em>с поверхности и рук</em></span></span></h1>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-pest-kontrolya/index.php",
+   "before": "2eee44882cca07aa4f4ddeb1c448a47bf5c384f25a4f94cbaa87c3ad01f9ba25",
+   "after": "d4e8fb7fb895b9928814249441d9a79aa3ea058a398c1dad84e10a00fa7b9731",
+   "replace": [
+    [
+     "Программа пест-контроля: образец для предприятия — ПЕСТКОНТРОЛЬ Центр",
+     "Программа пест-контроля пищевого предприятия: образец",
+     1
+    ],
+    [
+     "<h1><span class=\"ln\"><span>Программа</span></span> <span class=\"ln\"><span><span class=\"nw\">пест-контроля</span></span></span> <span class=\"ln\"><span><em>на предприятии</em></span></span></h1>",
+     "<h1><span class=\"ln\"><span>Образец программы</span></span> <span class=\"ln\"><span><span class=\"nw\">пест-контроля</span></span></span> <span class=\"ln\"><span><em>пищевого предприятия</em></span></span></h1>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-proizvodstvennogo-kontrolya-haccp/index.php",
+   "before": "47b949cefad1edbb236fb79bf6e8435e9b16e695371d7774133d8c1d4b8456a3",
+   "after": "25d1840cfa5da2fdbcdef99a266490c4f0688fb586fea9aba48474e118203577",
+   "replace": [
+    [
+     "<h1><span class=\"ln\"><span>Программа</span></span> <span class=\"ln\"><span>производственного</span></span> <span class=\"ln\"><span>контроля по ХАССП:</span></span> <span class=\"ln\"><span><em>раздел <span class=\"nw\">пест-контроля</span></em></span></span></h1>",
+     "<h1><span class=\"ln\"><span>Образец программы</span></span> <span class=\"ln\"><span>производственного</span></span> <span class=\"ln\"><span>контроля по ХАССП:</span></span> <span class=\"ln\"><span><em>раздел <span class=\"nw\">пест-контроля</span></em></span></span></h1>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/skhema-tochek-pest-kontrolya/index.php",
+   "before": "7a7072b0f414295ca88f215279b5517afb71d155e909618abcc9cd4a832ab1e0",
+   "after": "8fcb55af7119f36cd5b38ad5fb994a4c0979e188654f4e83a195307692ff1fc5",
+   "replace": [
+    [
+     "Схема точек пест-контроля: образец план-схемы ТПК в PDF",
+     "Схема точек пест-контроля: точки контроля грызунов, образец в PDF",
+     1
+    ],
+    [
+     "<h1><span class=\"ln\"><span>Схема точек</span></span> <span class=\"ln\"><span><span class=\"nw\">пест-контроля</span>:</span></span> <span class=\"ln\"><span><em>образец и правила</em></span></span></h1>",
+     "<h1><span class=\"ln\"><span>Схема точек</span></span> <span class=\"ln\"><span>контроля грызунов</span></span> <span class=\"ln\"><span><em>и насекомых: образец</em></span></span></h1>",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/zamer-osveshchennosti-i-mikroklimata/index.php",
+   "before": "1e6578c4ff622fd405230a008316510e6f55616076ea31100d697090e9f23d17",
+   "after": "e61198eed196be2b633f9cf904c00bbdd9308889f31c45770940290d3ab85fc7",
+   "replace": [
+    [
+     "Замер освещённости и микроклимата: подготовка, точки, периодичность",
+     "Методика измерения освещённости на рабочих местах и микроклимата",
+     1
+    ],
+    [
+     "<h1><span class=\"ln\"><span>Как проходит замер</span></span> <span class=\"ln\"><span><em>освещённости и микроклимата</em></span></span></h1>",
+     "<h1><span class=\"ln\"><span>Методика измерения</span></span> <span class=\"ln\"><span>освещённости на рабочих местах</span></span> <span class=\"ln\"><span><em>и микроклимата</em></span></span></h1>",
+     1
+    ]
+   ]
+  }
+ ]
+}
