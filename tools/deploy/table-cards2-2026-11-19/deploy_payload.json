@@ -1,0 +1,102 @@
+{
+ "name": "table-cards2-2026-11-19",
+ "count": 8,
+ "files": [
+  {
+   "file": "dezinfektsiya/index.php",
+   "before": "7503bf28f6a0d70607a4af7e5f82b4b49df979fdbecdb941bc11ad736deff02f",
+   "after": "8e55384d30045348d38c79fb7369b7a1a72a21f0ad9bc8ff4c76a3800212587d",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы на 601–760 px — карточками, как на телефоне, без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:601px) and (max-width:760px){.dzf-kinds thead,.dzf-freq thead{display:none}.dzf-kinds,.dzf-kinds tbody,.dzf-kinds tr,.dzf-kinds td,.dzf-freq,.dzf-freq tbody,.dzf-freq tr,.dzf-freq td{display:block;width:100%}.dzf-kinds tr,.dzf-freq tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.dzf-kinds td,.dzf-freq td{border:0;padding:10px 0;min-width:0}.dzf-kinds td+td,.dzf-freq td+td{border-top:1px solid var(--line)}.dzf-kinds td::before,.dzf-freq td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}}@media (min-width:441px) and (max-width:520px){#dokumenty h2{font-size:8.4vw}}</style>\n",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/analiz-pishchevykh-produktov/index.php",
+   "before": "5d9f82e0414a93866847abb2965486cb10f807f1e3bcda6d1503b152fce0d5d8",
+   "after": "55d472a78f800e47e827f9a756f58588e568f23e51445aa3542f442cd49e4971",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы на 601–760 px — карточками, как на телефоне, без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:601px) and (max-width:760px){.lbs-t thead{display:none}.lbs-t,.lbs-t tbody,.lbs-t tr,.lbs-t td{display:block;width:100%}.lbs-t tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.lbs-t td{border:0;padding:10px 0;min-width:0}.lbs-t td+td{border-top:1px solid var(--line)}.lbs-t td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}}</style>\n",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/kontrol-sterilizatorov/index.php",
+   "before": "d03c5aa38fd8eaeac853f1f5bbd4fa6d84da9d6657b4101448e999ddc5d85629",
+   "after": "ea9e0758eeaf55a79b9aed2bdbe2f679fedb3042cae839bd596e693b4957ccc4",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы на 601–760 px — карточками, как на телефоне, без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:601px) and (max-width:760px){.lbs-t thead{display:none}.lbs-t,.lbs-t tbody,.lbs-t tr,.lbs-t td{display:block;width:100%}.lbs-t tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.lbs-t td{border:0;padding:10px 0;min-width:0}.lbs-t td+td{border-top:1px solid var(--line)}.lbs-t td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}}</style>\n",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "laboratornye-issledovaniya/zamer-osveshchennosti/index.php",
+   "before": "d70cd842263b61e1aa033e5b651261e85ad652c4741d5a160ed106996739b3e6",
+   "after": "eb342d23f67f010320f4c14311559a62ec13545b875a38ae3186c91f4d57394d",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы на 601–760 px — карточками, как на телефоне, без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:601px) and (max-width:760px){.lbs-t thead{display:none}.lbs-t,.lbs-t tbody,.lbs-t tr,.lbs-t td{display:block;width:100%}.lbs-t tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.lbs-t td{border:0;padding:10px 0;min-width:0}.lbs-t td+td{border-top:1px solid var(--line)}.lbs-t td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}}</style>\n",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/kontrol-raboty-sterilizatorov/index.php",
+   "before": "a6eb0a7a2a104834437ef132d1a0206dcb086b850dccaf71f6ac20c6cbfc0a38",
+   "after": "23f7ddf3aa71d4c41ccea1d1480e6eb39a06621449d27e3a5701b91e23340702",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы на 601–760 px — карточками, как на телефоне, без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:601px) and (max-width:760px){.lbs-t thead{display:none}.lbs-t,.lbs-t tbody,.lbs-t tr,.lbs-t td{display:block;width:100%}.lbs-t tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.lbs-t td{border:0;padding:10px 0;min-width:0}.lbs-t td+td{border-top:1px solid var(--line)}.lbs-t td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}}</style>\n",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "materialy/programma-pest-kontrolya/index.php",
+   "before": "7705f85d83892d75ce0bfa2968cd0d96493f1649f2dba8a6ef9b9e2671590c4c",
+   "after": "707099fb91f370806236ac160130a017c2eae28d7ae1ace72743a97732f568ae",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы и заголовки без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:861px) and (max-width:980px){.d-table:where(.p-plan-table),.d-table:where(.p-plan-table) tbody,.d-table:where(.p-plan-table) tr,.d-table:where(.p-plan-table) td{display:block;width:100%}.d-table:where(.p-plan-table) thead{display:none}.d-table:where(.p-plan-table) tr{padding:16px 18px;border-bottom:1px solid var(--line)}.d-table:where(.p-plan-table) td{padding:6px 0;border:0}.d-table:where(.p-plan-table) td::before{content:attr(data-l);display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:2px}.p-plan-table.p-plan-table.p-plan-table td:nth-child(n){width:100%}.d-table:where(.p-plan-table) tr>td:first-child{padding-left:0}.d-table:where(.p-plan-table) tr>td:last-child{padding-right:0}}</style>\n",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/index.php",
+   "before": "cd7aaf41cc562cdf41aa56c835d245ca7a74ccd3a4bfbd3067ccce4339037a0b",
+   "after": "0c3fe5c3242a0f9ff86e4306eb833e3e038914fe72bf99e96a616b257c13dcc4",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы и заголовки без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:901px) and (max-width:1000px){.nb-tbl:where(.nb-docs) thead{display:none}.nb-tbl:where(.nb-docs),.nb-tbl:where(.nb-docs) tbody,.nb-tbl:where(.nb-docs) tr,.nb-tbl:where(.nb-docs) td{display:block;width:100%}.nb-tbl:where(.nb-docs) tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.nb-tbl:where(.nb-docs) td{border:0;padding:10px 0}.nb-tbl:where(.nb-docs) td+td{border-top:1px solid var(--line)}.nb-tbl:where(.nb-docs) td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}.nb-docs.nb-docs.nb-docs td:nth-child(n){width:100%}.nb-tbl:where(.nb-docs) tr>td:first-child{padding-left:0}.nb-tbl:where(.nb-docs) tr>td:last-child{padding-right:0}}</style>\n",
+     1
+    ]
+   ]
+  },
+  {
+   "file": "normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.php",
+   "before": "0fb788d11c53374e02cb992f08eca138b196d6a57619da53e0b4059d88f2b883",
+   "after": "66084d6cbf52690ad688433c6a2b723e75e8dcc2dab84b45427cc2dc11847fbf",
+   "replace": [
+    [
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n",
+     "<style id=\"t-inset\">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>\n<style id=\"t-cards\">/* широкие таблицы и заголовки без прокрутки вбок (tools/site/table_cards.py, 19.11.2026) */@media (min-width:901px) and (max-width:1040px){.nb-tbl:where(.dk-tbl) thead{display:none}.nb-tbl:where(.dk-tbl),.nb-tbl:where(.dk-tbl) tbody,.nb-tbl:where(.dk-tbl) tr,.nb-tbl:where(.dk-tbl) td{display:block;width:100%}.nb-tbl:where(.dk-tbl) tr{border:1px solid var(--line2);border-radius:var(--r);padding:6px 16px;margin-bottom:12px}.nb-tbl:where(.dk-tbl) td{border:0;padding:10px 0}.nb-tbl:where(.dk-tbl) td+td{border-top:1px solid var(--line)}.nb-tbl:where(.dk-tbl) td::before{content:attr(data-l);display:block;font-size:13px;color:var(--t3);margin-bottom:4px}.dk-tbl tr{padding:6px 16px 10px}.dk-tbl td.dk-n{font-size:16px;padding-bottom:4px}.dk-tbl td.dk-n::before{display:none}.dk-tbl td.dk-n+td{border-top:0;padding-top:0;padding-bottom:12px}.dk-tbl td.dk-n+td::before{display:none}.dk-tbl td:nth-child(n+3){position:relative;padding:6px 0 6px 116px;font-size:14px;line-height:1.5}.dk-tbl td:nth-child(n+4){border-top:0}.dk-tbl td:nth-child(n+3)::before{position:absolute;left:0;top:6px;width:104px;margin:0;font-size:12.5px;line-height:1.6}.dk-tbl td:nth-child(3){padding-top:10px}.dk-tbl td:nth-child(3)::before{top:10px}.dk-tbl td.dk-0{display:none}.dk-tbl.dk-tbl.dk-tbl td:nth-child(n){width:100%}.nb-tbl:where(.dk-tbl) tr>td:first-child{padding-left:0}.nb-tbl:where(.dk-tbl) tr>td:last-child{padding-right:0}}@media (min-width:441px) and (max-width:520px){#dogovory h2{font-size:8.4vw}}</style>\n",
+     1
+    ]
+   ]
+  }
+ ]
+}
