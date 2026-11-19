@@ -14,6 +14,10 @@
 WebPage), прежний description — везде, где он стоит целиком (<meta name="description">, og:description,
 description в разметке). og:title, H1 и тексты не меняются. Генераторы страниц пока содержат прежние строки —
 этот шаг идёт после них, поэтому сборка даёт новые. Повторный запуск ничего не меняет.
+
+15.11.2026 владелец утвердил: главный запрос семантического ядра страницы — в Title и H1, где его нет. Title 12 страниц
+уточнены в TITLE_CORE (было — title 13.11.2026 из META или, если страницы в META нет, title генератора; стало — с запросом
+ядра); применяются после META тем же способом (<title>, name в разметке WebPage). H1 — tools/site/h1_core.py.
 """
 import pathlib
 import sys
@@ -122,22 +126,66 @@ META = {  # адрес страницы: {'title': (было, стало), 'desc
     },
 }
 
+# Запрос ядра в Title — утверждено владельцем 15.11.2026. Адрес: (было, стало); «было» — title 13.11.2026 из META
+# или title генератора, если страницы в META нет. Запрос ядра — в комментарии.
+TITLE_CORE = {
+    'dezinfektsiya/': ('Дезинфекция для организаций в Москве и области — ПЕСТКОНТРОЛЬ Центр',
+                       'Дезинфекция помещений для организаций в Москве и области'),  # дезинфекция помещений
+    'deratizatsiya-i-dezinsektsiya/': ('Дератизация и дезинсекция для организаций: цены — ПЕСТКОНТРОЛЬ Центр',
+                                       'Дератизация и дезинсекция в Москве: цены для организаций'),  # … в Москве
+    'materialy/kak-berut-smyvy/': ('Как берут смывы с поверхностей и рук: порядок по МР 4.2.0220-20',
+                                   'Метод смывов с поверхности и рук: порядок по МР 4.2.0220-20'),  # метод смывов с поверхности
+    'laboratornye-issledovaniya/': ('Лабораторный контроль по ППК: смывы, воздух, вода — цены в Москве',
+                                    'Лабораторные исследования по ППК: смывы, воздух, вода — цены в Москве'),  # лабораторные исследования
+    'laboratornye-issledovaniya/analiz-pishchevykh-produktov/': (
+        'Анализ продуктов и готовых блюд — от 194 ₽ за показатель, Москва',
+        'Испытания пищевой продукции и блюд — от 194 ₽ за показатель, Москва'),  # испытания пищевой продукции
+    'laboratornye-issledovaniya/zamer-osveshchennosti/': (
+        'Замер освещённости на рабочих местах — от 350 ₽ за точку, Москва',
+        'Измерение освещённости на рабочих местах — от 350 ₽ за точку, Москва'),  # измерение освещённости
+    'materialy/skhema-tochek-pest-kontrolya/': ('Схема точек пест-контроля: образец план-схемы ТПК в PDF',
+                                                'Схема точек пест-контроля: точки контроля грызунов, образец в PDF'),  # точки контроля грызунов
+    'laboratornye-issledovaniya/analiz-smyvov/': ('Анализ смывов с поверхностей и рук — от 310 ₽ за точку, Москва',
+                                                  'Анализ смывов на БГКП с поверхностей и рук — от 310 ₽ за точку'),  # смывы на БГКП
+    'materialy/zamer-osveshchennosti-i-mikroklimata/': (
+        'Замер освещённости и микроклимата: подготовка, точки, периодичность',
+        'Методика измерения освещённости на рабочих местах и микроклимата'),  # методика измерения освещённости на рабочих местах
+    'laboratornye-issledovaniya/kontrol-sterilizatorov/': (
+        'Контроль стерилизаторов биоиндикаторами — от 1 600 ₽, Москва',
+        'Контроль стерилизаторов и анализ на стерильность — от 1 003 ₽, Москва'),  # анализ на стерильность
+    'materialy/programma-pest-kontrolya/': ('Программа пест-контроля: образец для предприятия — ПЕСТКОНТРОЛЬ Центр',
+                                            'Программа пест-контроля пищевого предприятия: образец'),  # … пищевого предприятия: образец
+}
+
+
+def pairs(path):
+    """Замены страницы по порядку: META (13.11.2026), затем TITLE_CORE (15.11.2026)."""
+    items = list(META.get(path, {}).items())
+    if path in TITLE_CORE:
+        items.append(('title-core', TITLE_CORE[path]))
+    return items
+
 
 def patch(path, s):
     """path — адрес страницы от корня сайта ('razrabotka-ppk/'), s — HTML страницы."""
-    for old, new in META.get(path, {}).values():
+    for _, (old, new) in pairs(path):
         s = s.replace(old, new)
     return s
 
 
 def left(path, s):
-    return [kind for kind, (old, new) in META.get(path, {}).items() if old in s or new not in s]
+    final = {}
+    for kind, (old, new) in pairs(path):
+        final[kind.replace('-core', '')] = new
+    olds = [(kind, old) for kind, (old, new) in pairs(path)]
+    return sorted({kind.replace('-core', '') for kind, old in olds if old in s} |
+                  {kind for kind, new in final.items() if new not in s})
 
 
 def main():
     check = '--check' in sys.argv[1:]
     changed, bad = [], []
-    for path in sorted(META):
+    for path in sorted(set(META) | set(TITLE_CORE)):
         f = ROOT / path / 'index.html'
         s = f.read_text(encoding='utf-8')
         new = patch(path, s)
@@ -155,7 +203,7 @@ def main():
             print('meta_titles:', path, '—', ', '.join(what))
         print('meta_titles: страниц с прежними title или description:', len(bad))
         sys.exit(1 if bad else 0)
-    print('meta_titles: новые title и description — изменено страниц:', len(changed))
+    print('meta_titles: новые title и description (и запрос ядра в title, 15.11.2026) — изменено страниц:', len(changed))
 
 
 if __name__ == '__main__':
