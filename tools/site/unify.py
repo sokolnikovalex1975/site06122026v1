@@ -240,7 +240,7 @@ CARD['avto'] = ('Услуга', 'Дезинфекция автотранспор
 
 STRIP_LABELS = {}
 PAGES = {
-    'dezinfektsiya/avtotransport/index.html': dict(key='avto', root='../../', related=['dezinf', 'lab-smyvy', 'sklady', 'dezins'], strip=(
+    'dezinfektsiya/avtotransport/index.html': dict(key='avto', root='../../', related=['dezinf', 'lab-smyvy', 'sklady', 'rppk'], strip=(
         'Коротко о дезинфекции транспорта', [
             ('lucide-clock', '15 минут', 'на машину'),
             ('lucide-file-badge', 'Акт с госномером', 'на каждую машину'),

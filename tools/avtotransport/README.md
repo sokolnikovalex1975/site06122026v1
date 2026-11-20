@@ -51,7 +51,7 @@
 - `main.html` — содержимое `<main>`: метки `@/` (корень сайта), `{{a:ключ|текст}}` (ссылки на нормы), `{{ico:…}}` (иконки),
   `{{faq:…}}` (вопросы из `build_page.py`);
 - `build_page.py` — страница из оболочки `dezinsektsiya/index.html`: title, description, canonical, Open Graph, JSON-LD
-  (BreadcrumbList, WebPage с автором, Service, 2 DigitalDocument, FAQPage на 13 вопросов), стили и скрипт страницы;
+  (BreadcrumbList, WebPage с автором, Service, 2 DigitalDocument, FAQPage на 12 вопросов), стили и скрипт страницы;
 - `extra.css`, `page.js` — стили и поведение (схема зон, самопроверка, цели Метрики `avto_akt_obrazets` и `avto_akt_blank`);
 - `build_akt.py` — образец и бланк акта АДТ-01 в PDF (`dezinfektsiya/avtotransport/*.pdf`) и превью `img/avto-akt-obrazets-*.webp`;
 - `make_images.py` — фото первого экрана и картинка Open Graph из мастер-файла (файлы проекта «Страница Дезинфекция
