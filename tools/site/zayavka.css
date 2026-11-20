@@ -126,4 +126,15 @@
   footer .ft.mb-ft>div.mb-fa.open>ul{display:flex!important;padding-bottom:14px}
   footer .ft.mb-ft>div:last-child{padding-top:24px;border-top:1px solid var(--line)}
 }
+/* «Заявка отправлена»: крупная зелёная галочка в круге — видна всегда, в том числе при «Уменьшении движения» на телефоне
+   (раньше галочка только прорисовывалась анимацией и в этом режиме не появлялась; решение владельца 20.11.2026) */
+.chk-dlg .chk-ok .ok-ic,form.form .ok .ok-ic{display:block;width:76px;height:76px;margin:6px auto 22px;border-radius:50%;background:rgba(5,223,114,.12);
+  box-shadow:0 0 0 1.5px rgba(5,223,114,.55),0 0 44px rgba(5,223,114,.22);stroke:#05df72;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.chk-dlg .chk-ok .ok-ic circle,form.form .ok .ok-ic circle{display:none}
+.chk-dlg .chk-ok .ok-ic path,form.form .ok .ok-ic path{stroke-dasharray:36;stroke-dashoffset:0}
+.chk-dlg .chk-ok .ok-ic,form.form.sent .ok .ok-ic{animation:zvOkPop .5s var(--ease) both}
+.chk-dlg .chk-ok .ok-ic path,form.form.sent .ok .ok-ic path{animation:zvOkDraw .45s .2s var(--ease) both}
+.chk-dlg .chk-ok h3,form.form .ok h3{color:#fff}
+@keyframes zvOkPop{from{transform:scale(.6);opacity:0}}
+@keyframes zvOkDraw{from{stroke-dashoffset:36}}
 @media (prefers-reduced-motion:reduce){.zv-bar,.zv-toast{transition:none}}
