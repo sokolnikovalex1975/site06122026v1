@@ -42,7 +42,8 @@ DK = json.loads((ROOT / 'tools' / 'normativnaya-baza' / 'data' / 'dokumenty.json
 AKT_PDF = 'obrazets-akta-dezinsektsii-i-deratizatsii.pdf'  # tools/akt/build_akt.py
 AKT_BLANK = 'blank-akta-dezinsektsii-i-deratizatsii.pdf'
 CHECKLIST_PDF = 'chek-list-dokumentov-dlya-rospotrebnadzora.pdf'  # чек-лист страницы (собирается в файлах проекта)
-SKIP_SECTIONS = {'hero', 'zayavka', 'smotrite-takzhe', 'vse-uslugi', 'tseny', 'avtor', 'istochniki', 'main', 'korotko'}
+# 'klienty' — общий блок логотипов «Наши клиенты» (tools/site/clients_block.py, с 19.11.2026): в поиске он не нужен, как и «Все услуги»
+SKIP_SECTIONS = {'hero', 'zayavka', 'smotrite-takzhe', 'vse-uslugi', 'tseny', 'avtor', 'istochniki', 'main', 'korotko', 'klienty'}
 SN = 190   # длина описания в индексе
 KWN = 320  # длина ключевых слов раздела
 

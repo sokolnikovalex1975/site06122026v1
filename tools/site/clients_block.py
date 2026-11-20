@@ -120,6 +120,7 @@ ONLY = {
 LAB = ['food', 'rest', 'pharma']
 MIX = {
     'dezinfektsiya': ['pharma', 'fit', 'rest', 'hotel'], 'deratizatsiya': ['food', 'rest', 'retail', 'wh'],
+    'dezinfektsiya/avtotransport': ['wh', 'food', 'retail'],  # перевозчики и автопарки складов, производств и сетей (20.11.2026)
     'dezinsektsiya': ['rest', 'food', 'hotel'], 'deratizatsiya-i-dezinsektsiya': ['rest', 'food', 'retail'],
     'zashchita-ot-proniknoveniya-gryzunov': ['food', 'wh', 'retail'], 'sanitarnyy-audit': ['rest', 'food', 'retail'],
     'razrabotka-ppk': ['food', 'rest', 'pharma'], 'dogovor-deratizatsiya-dezinsektsiya': [],

@@ -1,0 +1,153 @@
+/* ===== Дезинфекция автотранспорта: блоки страницы (tools/avtotransport) ===== */
+.avt-price-line{margin:18px 0 0;font-size:15px;line-height:1.5;color:var(--t2)}
+.avt-price-line b{color:var(--t1);font-weight:500}
+.avt-page :is(.avt-def-t,.avt-tc-k,.avt-freq,.avt-docs,.avt-keep,.avt-spec,.d-note,.s .sub,.qa .ans,.avt-prices) a:not(.btn){color:var(--t1);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}
+.avt-page :is(.avt-def-t,.avt-tc-k,.avt-freq,.avt-docs,.avt-keep,.avt-spec,.d-note,.s .sub,.qa .ans,.avt-prices) a:not(.btn):hover{color:var(--acc)}
+
+/* что такое */
+.avt-def{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,72px);align-items:end}
+.avt-def .head{margin-bottom:0}
+.avt-def-t p{color:var(--t2);line-height:1.65;margin:0 0 16px;font-size:clamp(16px,1.05vw,18px)}
+.avt-def-t p:last-child{margin-bottom:0}
+.avt-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:clamp(36px,4vw,60px)}
+.avt-stat{padding:clamp(20px,1.8vw,28px);border-top:2px solid rgba(124,134,255,.45)}
+.avt-stat p{margin:0;color:var(--t2);line-height:1.5;font-size:15px}
+.avt-stat .avt-stat-n{font-size:clamp(22px,1.7vw,30px);line-height:1.15;letter-spacing:-.03em;font-weight:300;color:var(--acc);margin:0 0 10px}
+
+/* транспорт */
+.avt-tr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.avt-tc{display:flex;flex-direction:column;gap:10px;padding:clamp(20px,1.8vw,28px)}
+.avt-tc>svg{width:26px;height:26px;color:var(--acc)}
+.avt-tc h3{font-size:clamp(17px,1.15vw,20px);font-weight:500;letter-spacing:-.01em;margin:6px 0 0;line-height:1.3}
+.avt-tc p{margin:0;color:var(--t2);line-height:1.55;font-size:15px}
+.avt-tc-k{margin-top:auto;padding-top:8px;font-size:13.5px;line-height:1.45;color:var(--t1)}
+.avt-tc-q{border-color:rgba(124,134,255,.35)}
+.avt-tc-q .avt-tc-k{color:#a5abff}
+
+/* схема кузова: восемь зон */
+.avt-zmap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);gap:clamp(20px,2.4vw,40px);align-items:start}
+.avt-plan{margin:0;padding:clamp(14px,1.6vw,24px)}
+.avt-plan svg{display:block;width:100%;height:auto}
+.avt-plan .gr{stroke:rgba(255,255,255,.18);stroke-width:2}
+.avt-plan .fr{fill:#1c1c22;stroke:rgba(255,255,255,.18)}
+.avt-plan .wh circle{fill:#141418;stroke:rgba(255,255,255,.3);stroke-width:2}
+.avt-plan .cab,.avt-plan .bx{fill:#141418;stroke:rgba(255,255,255,.32);stroke-width:2}
+.avt-plan .win{fill:rgba(124,134,255,.08);stroke:rgba(255,255,255,.24);stroke-width:1.5}
+.avt-plan .in{fill:#0c0c0f;stroke:rgba(255,255,255,.16);stroke-width:1.5}
+.avt-plan .sm{fill:none;stroke:rgba(255,255,255,.12);stroke-width:1.5;stroke-dasharray:4 6}
+.avt-plan .ln2{fill:none;stroke:rgba(255,255,255,.36);stroke-width:2}
+.avt-plan .z{cursor:pointer}
+.avt-plan .z .zf{fill:rgba(124,134,255,.07);stroke:rgba(124,134,255,.24);stroke-width:1;transition:fill .3s,stroke .3s}
+.avt-plan .z:hover .zf,.avt-plan .z.on .zf{fill:rgba(124,134,255,.32);stroke:#7c86ff;stroke-width:1.5}
+.avt-plan .z.on .ln2{stroke:#d4d7ff}
+.avt-plan .bdg{cursor:pointer}
+.avt-plan .bdg circle{fill:#18181d;stroke:#7c86ff;stroke-width:2;transition:fill .3s}
+.avt-plan .bdg text{fill:#fff;font-size:16px;font-weight:600;text-anchor:middle;dominant-baseline:middle;font-family:inherit}
+.avt-plan .bdg.on circle{fill:#7c86ff}
+.avt-plan-cap{margin:12px 4px 0;font-size:13px;line-height:1.5;color:var(--t3)}
+/* компьютер: схема остаётся на экране, пока прокручивается список зон справа */
+@media (min-width:1181px){.avt-plan{position:sticky;top:calc(var(--hdr-c,72px) + 24px)}}
+.avt-zlist{list-style:none;counter-reset:z;margin:0;padding:0;display:grid;gap:8px}
+.avt-zlist li{counter-increment:z;position:relative;padding:14px 16px 14px 56px;border:1px solid var(--line2);border-radius:14px;background:var(--card);cursor:pointer;transition:border-color .3s,background .3s;outline:none}
+.avt-zlist li::before{content:counter(z);position:absolute;left:14px;top:12px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:600;color:#fff;border:1.5px solid #7c86ff;background:#18181d;transition:background .3s}
+.avt-zlist li.on,.avt-zlist li:hover,.avt-zlist li:focus-visible{border-color:rgba(124,134,255,.6);background:rgba(124,134,255,.08)}
+.avt-zlist li.on::before{background:#7c86ff}
+.avt-zlist b{display:block;font-weight:500;color:var(--t1);margin-bottom:4px;line-height:1.35}
+.avt-zlist span{display:block;color:var(--t2);font-size:14.5px;line-height:1.5}
+
+/* периодичность и нормы */
+.avt-freq td:first-child{min-width:190px}
+.avt-freq td:last-child{font-size:14.5px;color:var(--t3);min-width:170px}
+.avt-docs td:first-child{min-width:260px}
+
+/* мусоровозы и медицинские отходы */
+.avt-spec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.avt-spec-c{padding:clamp(22px,2vw,34px)}
+.avt-spec-c h3{display:flex;align-items:center;gap:12px;font-size:clamp(19px,1.4vw,24px);font-weight:400;letter-spacing:-.02em;margin:0 0 18px;line-height:1.25}
+.avt-spec-c h3 svg{flex:none;width:26px;height:26px;color:var(--acc)}
+.avt-spec-c .d-ticks{margin:0;gap:12px;font-size:15.5px;color:var(--t2)}
+.avt-spec-n{margin:18px 0 0;font-size:14px;color:var(--t3);line-height:1.5}
+
+/* санпаспорт: заголовок и карточка рядом */
+.avt-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:start}
+.avt-two .head{margin-bottom:0}
+.avt-warn{margin:20px 0 0;padding:16px 18px;border-left:2px solid var(--acc);background:rgba(124,134,255,.06);border-radius:0 12px 12px 0;color:var(--t2);line-height:1.6;font-size:15.5px}
+.avt-keep{padding:clamp(22px,2vw,34px)}
+.avt-keep-t{margin:0 0 16px;font-size:clamp(19px,1.4vw,24px);letter-spacing:-.02em;color:var(--t1)}
+.avt-keep .d-ticks{margin:0;gap:12px;font-size:15.5px;color:var(--t2)}
+.avt-keep .d-ticks b{color:var(--t1);font-weight:500}
+
+/* порядок работ и рефрижератор зимой */
+.avt-steps{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}
+.avt-cold{display:flex;gap:18px;align-items:flex-start;margin-top:clamp(32px,3.4vw,52px);padding:clamp(22px,2vw,32px);border-color:rgba(124,134,255,.35);scroll-margin-top:96px}
+.avt-cold>svg{flex:none;width:30px;height:30px;color:var(--acc);margin-top:2px}
+.avt-cold h3{font-size:clamp(19px,1.4vw,24px);font-weight:400;letter-spacing:-.02em;margin:0 0 10px}
+.avt-cold p{margin:0;color:var(--t2);line-height:1.62;max-width:980px}
+
+/* документы: карточка образца — как на странице «Акт дератизации и дезинсекции» */
+.md-doc{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:clamp(28px,4vw,72px);align-items:start}
+.md-doc-cover{display:block;border-radius:6px;overflow:hidden;box-shadow:0 22px 50px -18px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.1);transform:rotate(-2deg);transition:transform .4s var(--ease)}
+.md-doc:hover .md-doc-cover{transform:rotate(0) translateY(-2px)}
+.md-doc-cover img{display:block;width:100%;height:auto;background:#fff}
+.md-doc-k{margin:0 0 16px;font-size:clamp(19px,1.4vw,24px);font-weight:400;letter-spacing:-.02em;line-height:1.3;color:var(--t1)}
+.md-ol{margin:0;padding:0;list-style:none;counter-reset:md;display:grid;gap:12px}
+.md-ol li{counter-increment:md;position:relative;padding-left:40px;color:var(--t2);line-height:1.6}
+.md-ol li::before{content:counter(md);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:13px;font-weight:600;color:var(--t1);background:rgba(97,95,255,.18)}
+.md-ol b{color:var(--t1);font-weight:500}
+.md-doc-b{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.md-doc-n{margin:16px 0 0;color:var(--t3);font-size:13px;line-height:1.5}
+.avt-kit{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:clamp(36px,4vw,60px)}
+.avt-kit-c{display:flex;flex-direction:column;gap:8px;padding:clamp(18px,1.6vw,24px)}
+.avt-kit-c>svg{width:24px;height:24px;color:var(--acc);margin-bottom:4px}
+.avt-kit-c b{font-weight:500;color:var(--t1);line-height:1.3}
+.avt-kit-c span{color:var(--t2);font-size:14.5px;line-height:1.5}
+
+/* автор — как на страницах «Материалы» и «Нормативная база» */
+.nb-author-wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(24px,3vw,56px);align-items:center}
+.nb-author{display:flex;gap:20px;align-items:center;padding:clamp(24px,2.4vw,36px)}
+.nb-avatar{flex:none;display:block;width:112px;height:112px;border-radius:50%;object-fit:cover;background:#18181b;border:1px solid rgba(124,134,255,.4)}
+.nb-author p{margin:0}
+.nb-author-name{font-size:clamp(20px,1.5vw,26px);color:var(--t1);letter-spacing:-.02em;margin-bottom:4px!important}
+.nb-author-role{color:var(--t2);margin-bottom:4px!important}
+.nb-author-date{color:var(--t3);font-size:14px}
+.nb-author-note{color:var(--t3);font-size:13px;margin-top:6px!important}
+.nb-author-text{color:#c4c4cc;font-size:clamp(16px,1.08vw,19px);line-height:1.65;margin:0;max-width:760px}
+
+/* заявка: почта рядом с телефоном */
+.cta-contacts .avt-mail{font-size:clamp(16px,1.1vw,19px);color:var(--t2);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:4px}
+.cta-contacts .avt-mail:hover{color:var(--t1)}
+
+@media (max-width:1180px){
+.avt-tr,.avt-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.avt-kit{grid-template-columns:repeat(3,minmax(0,1fr))}
+.avt-zmap{grid-template-columns:minmax(0,1fr)}
+.avt-zlist{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+.avt-def,.avt-two,.avt-spec,.nb-author-wrap{grid-template-columns:minmax(0,1fr)}
+.avt-def{align-items:start}
+.avt-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+.avt-hero .avt-price-line{order:3;margin:14px 0 0;font-size:14px}
+.md-doc{grid-template-columns:minmax(0,1fr)}
+.md-doc-cover{max-width:300px;margin:0 auto}
+.avt-freq td:first-child,.avt-freq td:last-child,.avt-docs td:first-child{min-width:0}
+}
+@media (max-width:600px){
+.avt-tr,.avt-stats,.avt-zlist,.avt-steps{grid-template-columns:minmax(0,1fr)}
+.avt-kit{grid-template-columns:repeat(2,minmax(0,1fr))}
+.avt-plan{padding:10px}
+.avt-plan .bdg{transform:scale(1.5);transform-box:fill-box;transform-origin:center}
+.md-doc-b .btn{width:100%;justify-content:center}
+.avt-cold{flex-direction:column;gap:12px}
+.nb-author{align-items:flex-start}
+.nb-avatar{width:80px;height:80px}
+}
+@media (max-width:420px){
+.avt-kit{grid-template-columns:minmax(0,1fr)}
+}
+/* узкие телефоны: цена — под названием работы */
+@media (max-width:380px){
+.avt-prices tr{grid-template-columns:minmax(0,1fr)}
+.avt-prices td.d-price{grid-column:1;grid-row:2;text-align:left}
+.avt-prices td:nth-child(2){grid-row:3}
+}

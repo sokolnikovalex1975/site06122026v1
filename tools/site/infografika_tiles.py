@@ -27,6 +27,7 @@ KEYS = [
     # услуги и этапы работы
     'ipm', 'deratizatsiya', 'dezinsektsiya', 'kompleks', 'dezinfektsiya', 'ventilyatsiya', 'sanaudit',
     'razrabotka-ppk', 'dokumenty-rpn', 'obsledovanie', 'osmotr', 'zashchita', 'dogovor',
+    'avtotransport',  # «Дезинфекция автотранспорта» (20.11.2026, мастер — в той же папке файлов проекта)
     # документы
     'doc-akt', 'doc-otchet', 'doc-personal', 'doc-sgr', 'doc-skhema', 'doc-zhurnal', 'doc-produkciya',
     # отрасли

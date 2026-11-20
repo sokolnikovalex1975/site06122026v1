@@ -5,7 +5,7 @@
     python3 tools/site/zayavka.py --check    # только проверка страниц репозитория
 
 Решение — «Мобильная версия — блоки с выбором и состав заявки» (16.11.2026, листы на согласование в файлах проекта).
-На всех 42 страницах сайта (кроме политики и согласия) перед <style id="tel-plain"> в <head> ставятся:
+На всех 42 страницах сайта (кроме политики и согласия; с 20.11.2026 и на «Дезинфекции автотранспорта») перед <style id="tel-plain"> в <head> ставятся:
   * <style id="zv-css"> — стили состава, шторки, панели блока и длинных блоков (tools/site/zayavka.css);
   * <style id="chk-css"> — стили окна заявки, как у самопроверки (tools/site/samoproverka_forma.py), если их нет;
   * <script src="…zayavka.min.js?v=…" defer> — «Состав заявки»: выбор в блоках, шторка заявки на телефоне, состав в
@@ -30,7 +30,7 @@ VERSION = '20261120zv'
 ANCHOR = '<style id="tel-plain">'
 HOME = 'index.html'
 PAGES = [
-    'index.html', 'dezinfektsiya/index.html', 'deratizatsiya/index.html', 'zashchita-ot-proniknoveniya-gryzunov/index.html',
+    'index.html', 'dezinfektsiya/index.html', 'dezinfektsiya/avtotransport/index.html', 'deratizatsiya/index.html', 'zashchita-ot-proniknoveniya-gryzunov/index.html',
     'dezinsektsiya/index.html', 'deratizatsiya-i-dezinsektsiya/index.html', 'dogovor-deratizatsiya-dezinsektsiya/index.html',
     'sanitarnyy-audit/index.html', 'razrabotka-ppk/index.html', 'laboratornye-issledovaniya/index.html',
     'ochistka-dezinfektsiya-ventilyatsii/index.html', 'pishchevoe-proizvodstvo/index.html', 'restorany-i-kafe/index.html',

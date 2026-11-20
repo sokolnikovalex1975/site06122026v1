@@ -147,6 +147,7 @@ URL = {
     'dzr': 'dezinsektsiya/restorany-i-kafe/', 'drr': 'deratizatsiya/restorany-i-kafe/',
     'ppkobr': 'materialy/programma-proizvodstvennogo-kontrolya-haccp/',  # та же страница, что 'ppk', — карточка «Образец ППК» для страницы услуги
     'dezinf': 'dezinfektsiya/',
+    'avto': 'dezinfektsiya/avtotransport/',  # дезинфекция автотранспорта (tools/avtotransport), с 20.11.2026
     'nb': 'normativnaya-baza/', 'pl': 'normativnaya-baza/proverochnye-listy/',
     'dok': 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/',
     'ef': 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/',  # с 11.11.2026 — превью
@@ -234,9 +235,23 @@ CARD = {
                'Три контура защиты, нумерация и обозначения точек, реестр и редакции схемы. Интерактивный план и PDF.'),
 }
 
+CARD['avto'] = ('Услуга', 'Дезинфекция автотранспорта',
+                'Кузова фургонов и рефрижераторов, фуры, автобусы и такси: 15 минут на машину, акт с госномером. От 900\u00a0₽.')
+
 STRIP_LABELS = {}
 PAGES = {
-    'dezinfektsiya/index.html': dict(key='dezinf', root='../', related=['vent', 'san', 'dezins', 'derat'], strip=(
+    'dezinfektsiya/avtotransport/index.html': dict(key='avto', root='../../', related=['dezinf', 'lab-smyvy', 'sklady', 'dezins'], strip=(
+        'Коротко о дезинфекции транспорта', [
+            ('lucide-clock', '15 минут', 'на машину'),
+            ('lucide-file-badge', 'Акт с госномером', 'на каждую машину'),
+            ('lucide-shield-check', 'Лицензия', 'Роспотребнадзора'),
+            ('lucide-notebook-pen', 'Журнал и наклейка', 'в кабину — бесплатно'),
+            ('lucide-spray-can', 'Средства', 'III–IV класса опасности'),
+            ('lucide-map-pinned', 'На вашей стоянке', 'в Москве и области'),
+            ('lucide-flask-conical', 'Смывы', 'через аккредитованную лабораторию'),
+            ('lucide-badge-check', 'Без наценки', 'ночью и в выходные'),
+        ])),
+    'dezinfektsiya/index.html': dict(key='dezinf', root='../', related=['avto', 'vent', 'san', 'dezins'], strip=(
         'Коротко о дезинфекции', [
             ('lucide-spray-can', 'Плановая', 'и внеплановая дезинфекция'),
             ('lucide-file-badge', 'СанПиН 3.3686-21', 'и правила 2026 года'),
@@ -294,7 +309,7 @@ PAGES = {
             ('lucide-clock', 'Срочные выезды', '24/7'),
         ])),
     # своя бегущая строка — в tools/sklady/main.html
-    'sklady-i-logistika/index.html': dict(key='sklady', root='../', related=['derat', 'dezins', 'dogovor', 'prog']),
+    'sklady-i-logistika/index.html': dict(key='sklady', root='../', related=['derat', 'dezins', 'avto', 'dogovor']),
     'magaziny-i-torgovye-seti/index.html': dict(key='seti', root='../', related=['derat', 'dezins', 'dogovor', 'zhur'], strip=(
         'Коротко о пест-контроле магазинов', [
             ('lucide-shopping-cart', 'Магазины и сети', 'Москва и область'),

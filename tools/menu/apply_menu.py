@@ -54,6 +54,11 @@ INDUSTRY_SUB = {
     'restorany-i-kafe': [('dezinsektsiya/restorany-i-kafe', 'Дезинсекция кафе и ресторанов'),
                          ('deratizatsiya/restorany-i-kafe', 'Дератизация ресторанов и кафе')],
 }
+# Подпункты услуги (с 20.11.2026, решение владельца «меню и ссылки — в этом же пакете»): отдельная страница направления
+# стоит под своей услугой — в шапке, мобильном меню и подвале, с тем же отступом, что и подпункты отрасли
+USLUGI_SUB = {
+    'dezinfektsiya': [('dezinfektsiya/avtotransport', 'Дезинфекция автотранспорта')],
+}
 DOGOVOR = 'dogovor-deratizatsiya-dezinsektsiya'
 DERAT = 'deratizatsiya'
 VENT = 'ochistka-dezinfektsiya-ventilyatsii'
@@ -87,6 +92,7 @@ PAGES = [
     # файл, путь к корню, текущая страница
     ('index.html', '', ''),
     ('dezinfektsiya/index.html', '../', 'dezinfektsiya'),
+    ('dezinfektsiya/avtotransport/index.html', '../../', 'dezinfektsiya/avtotransport'),  # с 20.11.2026 (tools/avtotransport)
     (DERAT + '/index.html', '../', DERAT),
     ('dezinsektsiya/index.html', '../', 'dezinsektsiya'),
     (DD + '/index.html', '../', DD),
@@ -170,11 +176,12 @@ def one(t):
 
 def build(root, cur, cta_mobile):
     home = root == ''
-    in_usl = cur != '' and cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', DD, VENT, SAN, RPPK, LAB) or cur.startswith(LAB + '/') or cur.startswith('dezinsektsiya/') or cur.startswith(DERAT + '/')
+    in_usl = cur != '' and cur in ('dezinfektsiya', DERAT, 'dezinsektsiya', DD, VENT, SAN, RPPK, LAB) or cur.startswith(LAB + '/') or cur.startswith('dezinsektsiya/') or cur.startswith(DERAT + '/') or cur.startswith('dezinfektsiya/')
     in_ind = any(s == cur for s, _ in INDUSTRIES)
     in_mat = cur.startswith('materialy') or cur.startswith('normativnaya-baza')
     # шапка: Услуги ▾ · Отрасли ▾ · Договор · Метод IPM · Цена · Материалы ▾
-    usl_items = ''.join(page_link(root, cur, s, one(t) + ARR) for s, t in USLUGI)
+    usl_items = ''.join(page_link(root, cur, s, one(t) + ARR) + ''.join(page_link(root, cur, s2, t2 + ARR, 'nav-sub') for s2, t2 in USLUGI_SUB.get(s, []))
+                        for s, t in USLUGI)
     # «Все услуги» (с 11.11.2026) — блок #vse-uslugi перед заявкой (tools/site/services_block.py) на этой же странице;
     # на политике и согласии блока нет — ссылка ведёт к блоку на главной
     vu = (root + '#vse-uslugi') if cur in ('privacy', 'soglasie') else '#vse-uslugi'
@@ -194,7 +201,8 @@ def build(root, cur, cta_mobile):
         + dropdown('materialy', 'Материалы', mat_items, in_mat) + '\n    </nav>'
     )
     # мобильное меню
-    sub_usl = ''.join(page_link(root, cur, s, one(t)) for s, t in USLUGI) + f'<a href="{vu}">Все услуги</a>'
+    sub_usl = ''.join(page_link(root, cur, s, one(t)) + ''.join(page_link(root, cur, s2, t2, 'nav-sub') for s2, t2 in USLUGI_SUB.get(s, []))
+                      for s, t in USLUGI) + f'<a href="{vu}">Все услуги</a>'
     sub_ind = ''.join(page_link(root, cur, s, t) + ''.join(page_link(root, cur, s2, t2, 'nav-sub') for s2, t2 in INDUSTRY_SUB.get(s, []))
                       for s, t in INDUSTRIES) + anchor(root, 'otrasli', 'Все отрасли')
     sub_mat = ''.join(page_link(root, cur, s, one(t)) for s, t in MATERIALS) + page_link(root, cur, 'materialy', 'Все материалы')
@@ -213,7 +221,9 @@ def build(root, cur, cta_mobile):
     # подпись с вложенным <span class="nw"> оборачиваем в один <span>: на телефоне ссылки подвала — inline-flex,
     # и без обёртки пробел перед вложенным тегом пропал бы
     wrap = lambda t: f'<span>{t}</span>' if '<' in t else t
-    ft_srv = (''.join(li(page_link(root, cur, s, wrap(t) if s != DOGOVOR else 'Договор на дератизацию и дезинсекцию')) for s, t in USLUGI)
+    ft_srv = (''.join(li(page_link(root, cur, s, wrap(t) if s != DOGOVOR else 'Договор на дератизацию и дезинсекцию'))
+                      + ''.join(f'<li class="ft-sub">{page_link(root, cur, s2, t2)}</li>' for s2, t2 in USLUGI_SUB.get(s, []))
+                      for s, t in USLUGI)
               + ''.join(li(anchor(root, s, t)) for s, t in SERVICE))
     ft_ind = ''.join(li(page_link(root, cur, s, t)) + ''.join(f'<li class="ft-sub">{page_link(root, cur, s2, t2)}</li>' for s2, t2 in INDUSTRY_SUB.get(s, []))
                      for s, t in INDUSTRIES)
