@@ -1,0 +1,28 @@
+{
+ "name": "ppk-knopka-2026-11-20",
+ "count": 1,
+ "files": [
+  {
+   "file": "razrabotka-ppk/index.php",
+   "before": "5f0ec41c673dc1a9551b3964e12f87971cacd3a286fb5f9d2d54c492e805ddb6",
+   "after": "31eef5e7258c118d29a9aeb70f1e02526484a3a0bc11f534cc61e441f36514c6",
+   "replace": [
+    [
+     "<a href=\"#zayavka\" class=\"btn btn-w btn-sm\" data-magnet><span class=\"btn-t\">Бесплатный выезд</span></a>",
+     "<a href=\"#zayavka\" class=\"btn btn-w btn-sm\" data-magnet><span class=\"btn-t\">Рассчитать ППК</span></a>",
+     1
+    ],
+    [
+     "<a href=\"#zayavka\" class=\"btn btn-w btn-lg\"><span class=\"btn-t\">Заказать бесплатное обследование</span></a>",
+     "<a href=\"#zayavka\" class=\"btn btn-w btn-lg\"><span class=\"btn-t\">Рассчитать стоимость ППК</span></a>",
+     1
+    ],
+    [
+     "<a href=\"#zayavka\" class=\"c2\"><span>Обследование</span></a>",
+     "<a href=\"#zayavka\" class=\"c2\"><span>Рассчитать ППК</span></a>",
+     1
+    ]
+   ]
+  }
+ ]
+}

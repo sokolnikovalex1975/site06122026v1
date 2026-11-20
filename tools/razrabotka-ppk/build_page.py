@@ -316,6 +316,10 @@ def main():
 
     html = (head + '<style>' + css + '</style>\n' + json_ld() + '\n' + top + main + bottom + page_js + '\n'
             + loader + form_js + '</body>\n</html>\n')
+    # кнопки заявки без обещания выезда: «Рассчитать ППК» / «Рассчитать стоимость ППК» (решение владельца 20.11.2026)
+    sys.path.insert(0, str(ROOT / 'tools' / 'site'))
+    import ppk_knopka  # noqa: E402
+    html = ppk_knopka.fix(html)
     out = ROOT / 'razrabotka-ppk' / 'index.html'
     out.parent.mkdir(exist_ok=True)
     out.write_text(html, encoding='utf-8')
