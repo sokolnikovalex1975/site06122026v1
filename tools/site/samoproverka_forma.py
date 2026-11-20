@@ -32,7 +32,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / 'tools/legal'))
 from typo import typo  # noqa: E402
 
-VERSION = '20261119forma'
+VERSION = '20261120zv'  # 20.11.2026: в окне и в заявке — весь «Состав заявки» (tools/site/zayavka.py)
 JS_NAME = 'samoproverka-forma'
 TIP = 'Откроется короткая форма. Ваши отметки уйдут вместе с заявкой.'
 VISIT = 'Приедем на объект в Москве или области, '
@@ -202,6 +202,9 @@ def transform(s, page):
         reps.append([link, link + '\n' + CSS + script_tag(page), 1])
     elif css_m.group(0) != CSS:  # стили обновлены — заменить прежний блок
         reps.append([css_m.group(0), CSS, 1])
+    tag_m = re.search(r'<script src="(?:\.\./)*' + JS_NAME + r'\.min\.js\?v=[0-9a-z]+" defer></script>', s)
+    if tag_m and tag_m.group(0) != script_tag(page):  # новая версия скрипта — новая метка ?v=
+        reps.append([tag_m.group(0), script_tag(page), 1])
     out = s
     for a, b, c in reps:
         assert out.count(a) == c, page + ': ' + a[:60]

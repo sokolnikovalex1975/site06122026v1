@@ -57,6 +57,7 @@ PAGES = [
 ]
 LEGAL = ['privacy/index.html', 'soglasie/index.html']
 STATIC = ['style.css', 'legal.css', 'app.min.js', 'search.min.js', 'search-index.json', 'vendor', 'fonts', 'img']
+STATIC += ['samoproverka-forma.min.js', 'zayavka.min.js', 'mob-bloki.min.js']  # окно самопроверки (19.11), состав заявки и длинные блоки (20.11.2026)
 STATIC += ['zashchita-ot-proniknoveniya-gryzunov/contours.js',
            'zashchita-ot-proniknoveniya-gryzunov/contours.svg']  # только подготовка пакета; не выгрузка
 FILES = ['*.pdf', '*.docx']  # образцы документов рядом со страницами

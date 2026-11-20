@@ -6,7 +6,9 @@
    отмечены и какие нет. Отправка — тот же /send.php, что у основной формы (имя, телефон, тип объекта, комментарий msg);
    цель Метрики «audit» и заявка в UIS — только после ответа сервера. Без скрипта или в очень старом браузере кнопка —
    обычная ссылка на основную форму внизу страницы. Основная форма и app.js не меняются: щелчок по кнопке перехватывается
-   на этапе погружения, до прокрутки к #zayavka. */
+   на этапе погружения, до прокрутки к #zayavka.
+   С 20.11.2026 — вместе с «Составом заявки» (zayavka.js): в окне виден и остальной выбор посетителя (лабораторный
+   расчёт, папка документов и т. п.), он уходит в той же заявке, после ответа сервера состав очищается. */
 (function () {
   'use strict';
   var d = document, w = window, html = d.documentElement;
@@ -47,6 +49,7 @@
           '<p class="chk-miss-t" id="chk-dlg-miss-t"></p>' +
           '<ul class="chk-miss" id="chk-dlg-miss"></ul>' +
         '</div>' +
+        '<div class="zv-sw zv-also" hidden><p class="zv-lbl">Также в заявке</p><ul class="zv-sost" id="chk-dlg-also"></ul></div>' +
         '<h3 id="chk-dlg-t">' + esc(sec.getAttribute('data-chk-title') || 'Бесплатное обследование объекта') + '</h3>' +
         '<p class="chk-lead">' + esc(sec.getAttribute('data-chk-lead') || '') + '</p>' +
         '<div class="chk-fg">' +
@@ -104,6 +107,13 @@
       list.forEach(function (x) { var li = d.createElement('li'); li.textContent = x.t; ml.appendChild(li); });
     }
     ml.hidden = !ml.children.length;
+    /* остальной «Состав заявки» (zayavka.js) — без самой самопроверки этой страницы */
+    var Z = w.PCZ, also = $('.zv-also', dlg), ex = ['chk:' + location.pathname];
+    if (Z && also) {
+      var n = Z.list(ex).length;
+      also.hidden = !n;
+      $('#chk-dlg-also', dlg).innerHTML = n ? Z.html(2, ex) : '';
+    }
     return { it: it, on: on, off: off };
   };
   var message = function (s) {
@@ -121,7 +131,13 @@
     /* как у основной формы: если подпись пункта отличается от значения для send.php, подпись — в комментарий */
     var o = type.options[type.selectedIndex], ot = o ? norm(o.text).replace(/\s*\*$/, '') : '';
     if (o && o.value && ot !== o.value) lines.push('Вид объекта: ' + ot);
-    lines.push('Страница: ' + pageUrl);
+    var page = 'Страница: ' + pageUrl, Z = w.PCZ;
+    if (Z) {
+      var room = 2880 - lines.join('\n').length - page.length;
+      var more = room > 160 ? Z.text(room, ['chk:' + location.pathname]) : '';
+      if (more) lines.push(more);
+    }
+    lines.push(page);
     return lines.join('\n').slice(0, 2900);
   };
 
@@ -162,8 +178,10 @@
   });
 
   var close = function () { if (dlg.open) dlg.close(); };
+  var zvOn = false;
   var open = function (btn) {
     opener = btn;
+    if (w.PCZ && !zvOn) { zvOn = true; w.PCZ.on(function () { if (dlg.open && !form.classList.contains('sent')) fill(); }); }
     fill();
     if (!type.value && mainType && mainType.value) type.value = mainType.value;
     dlg.showModal();
@@ -221,6 +239,7 @@
     send.classList.add('is-loading');
     err.hidden = true;
     var done = function () {
+      try { if (w.PCZ) w.PCZ.clear(); } catch (x) { /* состав недоступен */ }
       form.classList.add('sent');
       $('.chk-ok', dlg).hidden = false;
       form.scrollTop = 0;
