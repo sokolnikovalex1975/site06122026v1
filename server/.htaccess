@@ -10,4 +10,16 @@
   # Служебные файлы почтовой библиотеки не открываются из браузера
   RewriteRule ^vendor/(composer|phpmailer)(/|$) - [F,L]
   RewriteRule ^vendor/autoload\.php$ - [F,L]
+
+  # Адрес папки без слеша: сразу https и слеш — один переход вместо двух (решение владельца 18.11.2026)
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.+)$ https://%{HTTP_HOST}/$1/ [R=301,L]
+
+  # /index.php и /раздел/index.php — на адрес со слешем (только прямой запрос, не внутренняя подстановка index.php)
+  RewriteCond %{THE_REQUEST} ^[A-Z]+\s/(.*/)?index\.php[\s?] [NC]
+  RewriteRule ^(.*/)?index\.php$ https://%{HTTP_HOST}/$1 [R=301,L,NC]
 </IfModule>
+
+# Своя страница «Страница не найдена» (tools/site/page_404.py); код ответа остаётся 404 (решение владельца 18.11.2026)
+ErrorDocument 404 /404.html

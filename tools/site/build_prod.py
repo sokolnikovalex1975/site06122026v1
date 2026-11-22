@@ -12,6 +12,7 @@
   * убирается <meta name="robots" content="noindex, nofollow"> — он нужен только превью;
     страницы политики и согласия остаются «noindex, follow», как на рабочем сайте, и без счётчиков (как сейчас);
   * рядом кладутся .htaccess, robots.txt, sitemap.xml и файл ключа IndexNow (<ключ>.txt, с 11.11.2026) из server/.
+  * 404.html — своя страница «Страница не найдена» (tools/site/page_404.py, с 22.11.2026), со счётчиками и noindex.
 
 send.php и composer.json в пакет НЕ входят: на сервере уже стоит send.php с настоящим паролем почты,
 его нельзя перезаписывать версией из репозитория (в ней пароль заменён заглушкой).
@@ -56,6 +57,7 @@ PAGES = [
     'materialy/kontrol-raboty-sterilizatorov/index.html',
 ]
 LEGAL = ['privacy/index.html', 'soglasie/index.html']
+NOT_FOUND = '404.html'  # своя страница 404 (с 22.11.2026)
 STATIC = ['style.css', 'legal.css', 'app.min.js', 'search.min.js', 'search-index.json', 'vendor', 'fonts', 'img']
 STATIC += ['samoproverka-forma.min.js', 'zayavka.min.js', 'mob-bloki.min.js']  # окно самопроверки (19.11), состав заявки и длинные блоки (20.11.2026)
 STATIC += ['zashchita-ot-proniknoveniya-gryzunov/contours.js',
@@ -92,6 +94,15 @@ def main():
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_text(s, encoding='utf-8')
         print('страница', dst.relative_to(OUT), '(со счётчиками)' if rel not in LEGAL else '(документ, без счётчиков)')
+    # своя страница 404 (tools/site/page_404.py, разрешена владельцем 18.11.2026): счётчики — как на остальных страницах,
+    # noindex; в sitemap.xml и поиск по сайту не входит. Сервер отдаёт её с кодом 404 (ErrorDocument в server/.htaccess)
+    s = tracking_laws.normalize_contacts((ROOT / NOT_FOUND).read_text(encoding='utf-8'))
+    assert '<meta name="robots" content="noindex">' in s and not ROBOTS_RE.search(s), NOT_FOUND + ': метка robots'
+    s = tracking_laws.install_counters(s, parts)
+    bad = tracking_laws.check_page(s, counters=True, parts=parts) + independence_law.violations(s)
+    assert not bad, NOT_FOUND + ': ' + '; '.join(bad)
+    (OUT / NOT_FOUND).write_text(s, encoding='utf-8')
+    print('страница', NOT_FOUND, '(со счётчиками, noindex)')
     for name in STATIC:
         src = ROOT / name
         if src.is_dir():

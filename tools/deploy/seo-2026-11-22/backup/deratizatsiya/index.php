@@ -1,0 +1,1405 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113675622', 'ym');
+
+    ym(113675622, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<!-- /Yandex.Metrika counter -->
+<title>Дератизация для организаций в Москве и МО — ПЕСТКОНТРОЛЬ Центр</title>
+<meta name="description" content="Дератизация для организаций Москвы и Подмосковья по СанПиН 3.3686-21: три контура защиты, ловушки без яда в цехах, схема точек, журнал и акты. Бесплатный выезд.">
+<link rel="canonical" href="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/deratizatsiya/">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ПЕСТКОНТРОЛЬ Центр">
+<meta property="og:url" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/deratizatsiya/">
+<meta property="og:title" content="Дератизация для организаций и предприятий в Москве и области — ПЕСТКОНТРОЛЬ Центр">
+<meta property="og:description" content="Дератизация юрлиц по системе IPM: внешний и внутренний контуры защиты от крыс и мышей, схема точек, объектовый журнал и акты для Роспотребнадзора, ХАССП и торговых сетей. Выезд — 0 ₽.">
+<meta property="og:image" content="https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/img/deratizatsiya-og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Специалист ПЕСТКОНТРОЛЬ Центр проверяет пронумерованную станцию контроля грызунов № 12 у погрузочных ворот склада">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2309090b' stroke='%237c86ff' stroke-width='2'/%3E%3Cpath d='M16 7l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10v-5z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" href="../fonts/inter-ru-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" media="(min-width:861px)" imagesrcset="../img/derat-hero-v1-1440.webp 1440w, ../img/derat-hero-v1.webp 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(max-width:860px)" imagesrcset="../img/derat-hero-v1-mob-760.webp 760w, ../img/derat-hero-v1-mob.webp 1024w" imagesizes="100vw" fetchpriority="high">
+<script>
+  /* начальные состояния анимаций — только при работающем JS; страховка — через 4 с всё показывается.
+     Заставка — один раз за посещение: при переходе по ссылке с якорем и между страницами сайта её нет */
+  (function (d) {
+    d.classList.add('js');
+    /* облегчённый режим для слабых компьютеров (15.11.2026): pcFx.set ставит класс lowfx (style.css) и вызывает pcFx.hooks;
+       замер кадров — в app.js и в лупе первого экрана. Решение помнится до конца визита. Вручную: ?fx=lite — облегчённый,
+       ?fx=full — полный, ?fx=auto — определить заново */
+    var fx = window.pcFx = { mode: '', lite: false, hooks: [], set: function (keep) {
+      if (fx.lite) return;
+      fx.lite = true; d.classList.add('lowfx');
+      if (keep) { try { sessionStorage.setItem('pc-lowfx', '1'); } catch (e) { } }
+      for (var i = 0; i < fx.hooks.length; i++) { try { fx.hooks[i](); } catch (e) { } }
+      try { document.dispatchEvent(new CustomEvent('pc:fx')); } catch (e) { }
+    } };
+    try {
+      fx.mode = (location.search.match(/[?&]fx=(lite|full|auto)\b/) || [])[1] || '';
+      if (fx.mode && fx.mode !== 'lite') sessionStorage.removeItem('pc-lowfx');
+      if (fx.mode === 'lite' || (!fx.mode && sessionStorage.getItem('pc-lowfx') === '1')) fx.set();
+    } catch (e) { }
+    try { if (location.hash || sessionStorage.getItem('pc-intro')) d.classList.add('no-intro'); else sessionStorage.setItem('pc-intro', '1'); }
+    catch (e) { if (location.hash) d.classList.add('no-intro'); }
+    setTimeout(function () { if (!d.classList.contains('anim-ready')) d.classList.add('anim-fail'); }, 4000);
+  })(document.documentElement);
+</script>
+<link rel="stylesheet" href="../style.css?v=20261118klient">
+<style id="chk-css">
+/* самопроверка → заявка (19.11.2026, tools/site/samoproverka_forma.py): кнопка открывает форму, отметки — в заявке */
+#samoproverka .f-check-tip{margin:12px 0 0;font-size:13px;line-height:1.5;color:var(--t2);max-width:420px}
+@media (max-width:600px){#samoproverka .f-check-tip{text-align:center;margin-left:auto;margin-right:auto}}
+.chk-dlg{padding:0;border:0;margin:auto;width:min(560px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 48px);background:transparent;color:var(--t1);overflow:visible}
+.chk-dlg::backdrop{background:rgba(3,3,5,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.chk-dlg[open]{animation:chkIn .45s var(--ease)}
+html.chk-lock,html.chk-lock body{overflow:hidden}
+html.chk-lock{scrollbar-gutter:stable}
+.chk-box{position:relative;max-height:calc(100dvh - 48px);overflow-y:auto;overscroll-behavior:contain;border-radius:24px;background:#0f0f12;border:1.4px solid var(--line2);box-shadow:0 40px 120px -30px rgba(0,0,0,.95);padding:clamp(24px,3vw,36px);outline:none}
+.chk-box::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(420px circle at 85% -10%,rgba(124,134,255,.14),transparent 60%)}
+.chk-x{position:absolute;top:14px;right:14px;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--line2);background:rgba(255,255,255,.04);color:var(--t2);display:grid;place-items:center;cursor:pointer;transition:color .3s,border-color .3s}
+.chk-x:hover,.chk-x:focus-visible{color:#fff;border-color:var(--acc3)}
+.chk-x svg{width:18px;height:18px}
+.chk-body,.chk-ok{position:relative;z-index:1}
+.chk-kicker{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:4px 56px 12px 0}
+.chk-sum{padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--line2)}
+.chk-score{margin:0;font-size:15px;color:var(--t2)}
+.chk-score b{font-size:34px;font-weight:300;letter-spacing:-.04em;color:var(--acc);margin-right:4px;line-height:1}
+.chk-score.full b{color:var(--grn)}
+.chk-score.risk b{color:var(--yel)}
+.chk-bar{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;margin:12px 0 0}
+.chk-bar i{height:6px;border-radius:3px;background:rgba(255,255,255,.09)}
+.chk-bar i.on{background:var(--acc2)}
+.chk-score.full~.chk-bar i.on{background:var(--grn)}
+.chk-score.risk~.chk-bar i.on{background:var(--yel)}
+.chk-score.risk~.chk-miss li::before{border-color:var(--yel)}
+.chk-miss-t{margin:14px 0 6px;font-size:13.5px;font-weight:500;line-height:1.45;color:var(--t1)}
+.chk-miss{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.chk-miss li{position:relative;padding-left:20px;font-size:14px;line-height:1.45;color:var(--t2)}
+.chk-miss li::before{content:"";position:absolute;left:2px;top:.35em;width:10px;height:10px;border-radius:3px;border:1.4px solid var(--red)}
+.chk-miss[hidden],.chk-err[hidden],.chk-ok[hidden]{display:none}
+.chk-body h3{font-size:clamp(21px,1.5vw,26px);font-weight:400;line-height:1.2;letter-spacing:-.02em;margin:22px 0 8px}
+.chk-lead{margin:0 0 18px;color:var(--t2);font-size:15px;line-height:1.55}
+.chk-fg{display:grid;gap:12px}
+.chk-fg .field input,.chk-fg .field select{height:56px}
+.chk-send{width:100%;margin-top:16px}
+.chk-err{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:rgba(255,100,103,.08);border:1px solid rgba(255,100,103,.35);color:#ffd5d6;font-size:14px;line-height:1.5}
+.chk-err a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.chk-body .legal{margin-top:12px}
+.chk-ok{text-align:center;padding:28px 6px 6px}
+.chk-ok h3{font-size:24px;font-weight:400;margin:0 0 10px}
+.chk-ok p{color:var(--t2);line-height:1.6;margin:0 auto;max-width:420px}
+.chk-ok .ok-ic circle,.chk-ok .ok-ic path{animation:draw .6s var(--ease) forwards}
+.chk-ok .ok-ic path{animation-delay:.45s}
+.chk-back{margin-top:22px;height:52px;padding:0 26px;font-size:15px}
+.chk-box.sent .chk-body{display:none}
+@keyframes chkIn{from{opacity:0;transform:translateY(18px) scale(.98)}}
+@keyframes chkUp{from{transform:translateY(100%)}}
+/* телефон: шторка снизу; страница за шторкой не затемняется и не размывается (ЗАКОН ВЛАДЕЛЬЦА 17.11.2026) */
+@media (max-width:760px){
+  .chk-dlg{margin:auto 0 0;width:100%;max-height:calc(100dvh - 10px)}
+  .chk-dlg::backdrop{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .chk-box{max-height:calc(100dvh - 10px);border-radius:22px 22px 0 0;border-bottom:0;box-shadow:none;padding:26px 18px calc(18px + env(safe-area-inset-bottom))}
+  .chk-box::before{content:"";position:absolute;top:8px;left:50%;width:40px;height:4px;margin-left:-20px;border-radius:2px;background:rgba(255,255,255,.18)}
+  .chk-x{top:12px;right:10px}
+  .chk-dlg[open]{animation:chkUp .5s var(--ease)}
+  .chk-body h3{margin-top:18px}
+  .chk-lead{font-size:14px;margin-bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){.chk-dlg[open]{animation:none}}
+</style>
+<script src="../samoproverka-forma.min.js?v=20261120zv" defer></script>
+<style>
+html{scroll-behavior:auto}
+.d-page .s{padding:clamp(64px,7vw,128px) 0;border-top:1px solid var(--line)}
+.d-crumbs{font-size:14px;color:var(--t3);display:flex;flex-wrap:wrap;gap:8px;margin:0 0 clamp(22px,2.4vw,36px)}
+.d-crumbs a{color:var(--t2)}
+.d-crumbs a:hover{color:var(--t1)}
+
+/* Полноэкранный Hero с фото-фоном и переключателем 4 вариантов */
+.d-hero{position:relative;overflow:hidden;padding:calc(clamp(68px,6vw,115px) + 20px) 0 clamp(64px,7vw,116px);min-height:clamp(680px,56vw,900px);display:flex;align-items:center}
+.d-hero .wrap{width:100%;display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);gap:clamp(28px,4vw,80px);align-items:center}
+.d-hero-copy>*:not(.d-hero-media){position:relative;z-index:1}
+.d-hero-media{position:absolute;inset:-4% -3%;z-index:0;pointer-events:none;overflow:hidden;will-change:transform}
+.d-hero-media::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.85) 38%,rgba(0,0,0,.28) 54%,rgba(0,0,0,0) 66%),linear-gradient(180deg,#000 0,rgba(0,0,0,.55) 90px,rgba(0,0,0,0) 260px),linear-gradient(0deg,#000 0,rgba(0,0,0,0) 22%)}
+.d-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 50%;transition:opacity .28s ease}
+.d-hero h1{font-size:clamp(42px,4.4vw,84px);line-height:1.06;letter-spacing:-.055em;font-weight:300;margin:16px 0 0}
+.d-hero h1 .ln{display:block;overflow:hidden;padding:0 .08em .08em 0;margin-bottom:-.08em}
+.d-hero h1 .ln>span{display:inline-block;will-change:transform}
+.d-ticks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
+.d-ticks li{position:relative;padding-left:30px;line-height:1.48;color:var(--t1)}
+.d-ticks li::before{content:"";position:absolute;left:2px;top:.42em;width:13px;height:7px;border-left:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(-45deg)}
+.d-hero .sub{margin:20px 0 0;max-width:56ch}
+.d-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.d-hero .btn-lg{height:54px;padding:0 22px;font-size:15.5px}
+
+
+/* Блок самопроверки */
+.f-checks{position:relative;padding:clamp(36px,4vw,68px) 0 clamp(56px,6vw,110px)}
+.f-check.panel{max-width:none}
+.f-check-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(24px,4vw,80px);padding:clamp(24px,3vw,52px)}
+.f-check-t{font-size:clamp(28px,2.6vw,48px);line-height:1.08;letter-spacing:-.04em;font-weight:300;margin:0}
+.f-check-res{margin:22px 0 10px;color:var(--t2);font-size:15px}
+.f-check-res b{font-size:clamp(40px,3.4vw,64px);font-weight:300;letter-spacing:-.04em;color:var(--acc);margin-right:6px;line-height:1;transition:color .3s}
+.f-check-res.full b{color:var(--grn)}
+.f-check-note{color:var(--t2);line-height:1.6;margin:0 0 28px;max-width:440px}
+.f-check-list{list-style:none;margin:0;padding:0;display:grid;align-content:center;border-top:1px solid var(--line)}
+.f-check-list li{border-bottom:1px solid var(--line)}
+.f-check-list label{display:flex;gap:18px;align-items:center;padding:18px 4px;cursor:pointer;font-size:clamp(15px,1.1vw,19px);line-height:1.42;color:var(--t2);transition:color .25s}
+.f-check-list label:hover{color:var(--t1)}
+.f-check-list input{appearance:none;-webkit-appearance:none;flex:none;width:26px;height:26px;margin:0;border-radius:8px;border:1.4px solid var(--line2);background:rgba(255,255,255,.03) center/14px no-repeat;cursor:pointer;transition:background-color .25s,border-color .25s}
+.f-check-list input:checked{background-color:var(--acc2);border-color:var(--acc);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.f-check-list input:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.f-check-list input:checked+span{color:var(--t1)}
+
+/* Интерактивная схема 3 контуров */
+.f-zmap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(20px,2.4vw,44px);align-items:start}
+.f-plan{margin:0;padding:clamp(14px,1.4vw,26px)}
+.f-plan svg{display:block;width:100%;height:auto}
+.f-plan svg *{pointer-events:none}
+.f-plan .zf,.f-plan .bdg{pointer-events:all;cursor:pointer}
+.f-plan .zf{fill:transparent;transition:fill .3s,stroke .3s}
+.f-plan .z.on .zf{fill:rgba(124,134,255,.15);stroke:#7c86ff}
+.f-plan .bdg circle{fill:#09090b;stroke:#7c86ff;stroke-width:2;transition:fill .3s}
+.f-plan .bdg text{fill:#7c86ff;font:600 20px Inter,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central;transition:fill .3s}
+.f-plan .bdg.on circle{fill:#7c86ff}
+.f-plan .bdg.on text{fill:#fff}
+.f-plan .lbl text{fill:#9f9fa9;font:400 14px Inter,system-ui,sans-serif}
+.f-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:16px 4px 2px;font-size:13px;color:var(--t3)}
+.f-legend span{display:inline-flex;align-items:center;gap:9px}
+.f-legend i{flex:none;display:inline-block}
+.lg-st{width:12px;height:12px;border-radius:3px;background:var(--yel)}
+.lg-rm{width:12px;height:12px;border-radius:3px;background:#38bdf8}
+.lg-tr{width:12px;height:12px;border-radius:50%;background:var(--acc)}
+.lg-br{width:22px;border-top:2px dashed var(--grn)}
+.f-zlist{list-style:none;padding:0;margin:0;display:grid;gap:12px;counter-reset:zl}
+.f-zlist li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:4px 14px;align-items:start;padding:18px 20px;border:1.4px solid var(--line);border-radius:var(--r);background:var(--card);transition:border-color .3s,background .3s;outline:none;cursor:pointer}
+.f-zlist li::before{counter-increment:zl;content:counter(zl);grid-row:1/span 3;width:36px;height:36px;border-radius:50%;border:1.4px solid var(--acc);color:var(--acc);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;transition:background .3s,color .3s}
+.f-zlist b{font-weight:500;font-size:clamp(16px,1.08vw,19px);letter-spacing:-.015em;color:var(--t1)}
+.f-zlist span{grid-column:2;color:var(--t2);font-size:14.5px;line-height:1.52}
+.f-zlist small{grid-column:2;color:var(--acc);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;margin-top:4px}
+.f-zlist li.on,.f-zlist li:hover,.f-zlist li:focus-visible{border-color:var(--acc);background:rgba(124,134,255,.08)}
+.f-zlist li.on::before,.f-zlist li:hover::before,.f-zlist li:focus-visible::before{background:var(--acc);color:#fff}
+
+/* Сетка карточек вида оборудования и коммерческих условий */
+.d-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.d-card{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:clamp(22px,2vw,34px);position:relative;overflow:hidden}
+.d-card h3{font-size:clamp(20px,1.45vw,25px);font-weight:400;letter-spacing:-.02em;margin:0 0 12px}
+.d-card p{color:var(--t2);line-height:1.58;margin:0}
+.d-card ul{margin:12px 0 0;padding-left:18px;color:var(--t2);display:grid;gap:8px;line-height:1.5}
+.d-card li strong,.d-card p strong{color:var(--t1);font-weight:500}
+.d-kind{padding:0;display:flex;flex-direction:column}
+.d-kind-img{aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--line);background:#0c0c10;position:relative}
+.d-kind-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--ease)}
+.d-kind:hover .d-kind-img img{transform:scale(1.05)}
+.d-kind-b{padding:clamp(22px,2vw,32px);display:flex;flex-direction:column;flex:1}
+.f-lbl{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0 0 8px}
+.d-note{color:var(--t2);margin:24px 0 0;line-height:1.6}
+
+/* 3 карточки грызунов в блоке pests и z-index обёртки */
+main{overflow-x:clip}
+.d-wrap{position:relative;z-index:1}
+.pests.d-pests3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pests.d-pests3 .pest{flex-direction:column;gap:18px;align-items:flex-start}
+.pests.d-pests3 .pest-img{width:112px;height:112px;border-radius:14px}
+.pests.d-pests3 .pest-b{width:100%}
+@media(max-width:960px){.pests.d-pests3{grid-template-columns:1fr}}
+
+/* Таблицы (сравнение, документы, цены) */
+.d-table{width:100%;border-collapse:collapse;border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:var(--card)}
+.d-table th,.d-table td{padding:18px 22px;text-align:left;border-bottom:1px solid var(--line);line-height:1.5}
+.d-table th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);font-weight:500;background:rgba(255,255,255,.02)}
+.d-table tr:last-child td{border-bottom:0}
+.d-table td:first-child{color:var(--t1);font-weight:500}
+.d-table td:not(:first-child){color:var(--t2)}
+.d-price td:last-child{color:var(--t1);font-weight:500;white-space:nowrap}
+.d-vs{margin-top:42px}
+.d-vs td:first-child{color:var(--t2);font-weight:400}
+.d-vs td:last-child,.d-vs th:last-child{background:rgba(124,134,255,.07);color:var(--t1)}
+.d-cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.d-cols3 .d-card b{color:var(--t1);font-weight:500}
+.d-chips{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.d-chips a{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.02);color:var(--t2);font-size:14px;transition:border-color .25s,color .25s,background .25s}
+.d-chips a:hover{border-color:var(--acc);color:#fff;background:rgba(124,134,255,.1)}
+.ind-link{color:inherit;text-decoration:none}
+.ind-link:hover{color:var(--acc)}
+
+@media (max-width:1100px){
+  .f-zmap,.f-check-in{grid-template-columns:minmax(0,1fr)}
+  .d-cards,.d-cols3,.d-pests3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .d-cards,.d-cols3,.d-pests3{grid-template-columns:minmax(0,1fr)}
+  .hdr{background:rgba(0,0,0,.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:var(--line)}
+  .d-hero{min-height:0;display:block;padding:calc(clamp(68px,6vw,115px) + 12px) 0 36px}
+  .d-hero .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+  .d-hero-copy{display:flex;flex-direction:column}
+  .d-hero .eyebrow,.d-hero .d-tel-btn{display:none}
+  .d-hero h1{order:1;font-size:clamp(31px,8.6vw,44px);line-height:1.08;letter-spacing:-.045em;margin:0}
+  .d-hero h1 .ln{display:inline;padding:0;margin:0}
+  .d-hero h1 .d-ln1::after{content:" "; display:block}
+  .d-hero-media{order:2;position:relative;inset:auto;width:calc(100% + 40px);margin:14px -20px 0;aspect-ratio:16/9}
+  .d-hero-media::before{background:linear-gradient(180deg,#000 0,rgba(0,0,0,0) 16%),linear-gradient(0deg,#000 0,rgba(0,0,0,0) 20%)}
+  .d-hero-img{object-position:76% 50%}
+  .d-btns{order:4;margin-top:14px}
+  .d-btns .btn{width:100%}
+  .d-hero .d-ticks{order:5;margin:16px 0 0;gap:8px;font-size:14px}
+  .d-hero .d-ticks li{line-height:1.38;padding-left:24px}
+  .d-hero .sub{order:6;margin:12px 0 0;font-size:14px;line-height:1.5}
+  .d-crumbs{order:7;margin:14px 0 0;font-size:11px;gap:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.75}
+  .d-table,.d-table tbody,.d-table tr,.d-table td{display:block;width:100%}
+  .d-table thead{display:none}
+  .d-table tr{padding:16px 20px;border-bottom:1px solid var(--line)}
+  .d-table tr:last-child{border-bottom:0}
+  .d-table td{padding:4px 0;border:0;white-space:normal!important}
+  .d-table td::before{content:attr(data-l);display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:2px;font-weight:400}
+  .d-table td+td{margin-top:10px}
+  .d-vs tr{padding:0;border-bottom:2px solid var(--line2)}
+  .d-vs td{padding:12px 18px}
+  .d-vs td+td{margin-top:0;border-top:1px solid var(--line)}
+}
+@media (max-width:600px){
+  .d-btns .btn,.d-card .btn,.f-check .btn{width:100%;white-space:normal;text-align:center;line-height:1.25}
+  .d-page .btn-lg{padding:0 16px}
+  .f-plan .lbl{display:none}
+  .f-check-in{padding:24px 20px}
+  .f-check-list label{padding:15px 2px;gap:14px}
+  .f-zlist li{padding:14px}
+}
+@media (max-width:440px){
+  .head h2,.cta-l h2,.f-check-t{font-size:clamp(25px,7.6vw,34px)}
+  .d-hero h1{font-size:clamp(28px,8.5vw,38px)}
+  .tl-txt h3{font-size:19px;overflow-wrap:anywhere}
+}
+@media (max-width:400px){
+  .hdr .wrap{gap:10px}.hdr-right{gap:8px}.logo{gap:8px}.logo-mark{width:34px;height:34px}.logo-name{font-size:15px}.phone i,.burger{width:40px;height:40px}
+}
+@media (max-width:340px){.logo-sub{display:none}}
+/* Первый экран: пока он не загружен целиком (после него ещё нет следующего блока), содержимое скрыто — как на главной: иначе при постепенной загрузке текст, выровненный по центру высоты экрана, сдвигается (CLS) */
+.d-hero:not(:has(~ *)) .wrap{visibility:hidden}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/"},
+        {"@type": "ListItem", "position": 2, "name": "Дератизация для организаций", "item": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/deratizatsiya/"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/deratizatsiya/#service",
+      "name": "Дератизация для организаций и предприятий",
+      "serviceType": "Барьерная и истребительная дератизация предприятий по системе IPM и СанПиН 3.3686-21",
+      "description": "Договорная и разовая дератизация для юридических лиц в Москве и Московской области: три контура защиты от крыс и мышей, контейнеры КИК и ловушки без яда в цехах, план-схема точек, журнал учёта и акты для Роспотребнадзора, ХАССП и торговых сетей.",
+      "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/deratizatsiya/",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/#org",
+        "name": "ПЕСТКОНТРОЛЬ Центр",
+        "legalName": "ООО «Центр дезинфекционных услуг»",
+        "url": "https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/",
+        "telephone": "+7 495 104-35-70",
+        "email": "b2b@pestcontrol-center.ru"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Москва"},
+        {"@type": "AdministrativeArea", "name": "Московская область"}
+      ],
+      "audience": {"@type": "BusinessAudience", "audienceType": "Юридические лица, предприятия и организации"},
+      "offers": {"@type": "AggregateOffer", "priceCurrency": "RUB", "lowPrice": 3500, "offerCount": 5},
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Тарифы на дератизацию организаций",
+        "itemListElement": [
+          {"@type": "Offer", "name": "Кафе, ресторан, общепит: барьерная дератизация по договору", "priceCurrency": "RUB", "price": 3500},
+          {"@type": "Offer", "name": "Магазин, супермаркет: дератизация по договору", "priceCurrency": "RUB", "price": 3500},
+          {"@type": "Offer", "name": "Склад до 1 000 м²: двухконтурная защита от грызунов", "priceCurrency": "RUB", "price": 4500},
+          {"@type": "Offer", "name": "Разовая истребительная дератизация предприятий", "priceCurrency": "RUB", "price": 3500},
+          {"@type": "Offer", "name": "Контейнеры КИК и механические ловушки (первичное оснащение)", "priceCurrency": "RUB", "price": 600}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как часто нужно проводить дератизацию на предприятии по закону?",
+          "acceptedAnswer": {"@type": "Answer", "text": "По п. 110 СанПиН 3.3686-21 на объектах особого эпидемиологического значения (пищевые производства, склады продовольствия, магазины, общепит, гостиницы, медорганизации) дератизация проводится по результатам ежемесячной оценки. Специалист выезжает от 1–2 раз в месяц, проверяет все точки контроля и фиксирует результаты в журнале."}
+        },
+        {
+          "@type": "Question",
+          "name": "Чем дератизация по системе IPM отличается от обычной раскладки отравы?",
+          "acceptedAnswer": {"@type": "Answer", "text": "В системе IPM сначала перекрываются пути проникновения грызунов (щели, ворота, вводы коммуникаций), выстраиваются три контура пронумерованных точек контроля, ведётся учёт динамики активности и ротация действующих веществ."}
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли использовать ядовитые приманки внутри пищевого цеха или продуктового склада?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Нет, в производственных цехах и зонах открытого продукта токсичные родентициды запрещены стандартами ХАССП и FSSC 22000. Приманочные контейнеры КИК размещаются снаружи и по внешнему периметру, а внутри цехов применяются механические и клеевые ловушки без яда."}
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоят контейнеры КИК и ловушки и что делать со станциями прежнего подрядчика?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Новые антивандальные контейнеры КИК и механические ловушки при первичном оснащении стоят от 600 ₽ за точку, а все расходники при плановых визитах входят в абонентскую плату. Исправные станции от прежнего подрядчика мы осматриваем, маркируем и принимаем на обслуживание бесплатно."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style id="vu-st">/* блок «Все услуги» (tools/site/services_block.py) */.s-vu{content-visibility:auto;contain-intrinsic-size:auto 1000px}.s-vu .vu-head{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:20px 64px;align-items:end;margin-bottom:clamp(32px,3vw,52px)}.s-vu .vu-head .head{margin:0}.s-vu .vu-head h2{margin:0}.vu-lead{font-size:17px;line-height:1.6;color:var(--t3);margin:0;max-width:480px}.vu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.1vw,20px);align-items:start}.vu-col{display:flex;flex-direction:column;gap:clamp(12px,1.1vw,20px)}.vu-g{padding:8px;border-radius:20px}.vu-gt{display:flex;justify-content:space-between;align-items:center;padding:16px 16px 8px;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}.vu-gt span{color:var(--t3);letter-spacing:.04em}.vu-i{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:14px;align-items:start;padding:16px;border-radius:14px;color:var(--t2);text-decoration:none;transition:background .3s}a.vu-i:hover,a.vu-i:focus-visible{background:rgba(255,255,255,.05)}.vu-i+.vu-i::before{content:"";position:absolute;left:70px;right:16px;top:0;height:1px;background:var(--line)}.vu-ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(99,102,241,.12);color:#a5abff}.vu-ic svg{width:22px;height:22px}.vu-b{display:flex;flex-direction:column;gap:4px;min-width:0}.vu-t{font-size:16px;line-height:1.3;color:var(--t1);letter-spacing:-.01em}.vu-d{font-size:14px;line-height:1.45;color:var(--t3)}.vu-p{margin-top:4px;font-size:13px;line-height:1.3;color:var(--t2);font-weight:500}.vu-a{align-self:center;width:32px;height:32px;border-radius:50%;border:1.4px solid var(--line2);display:grid;place-items:center;color:var(--t1);transition:background .3s,border-color .3s,color .3s,transform .4s var(--ease)}.vu-a svg{width:13px;height:13px}a.vu-i:hover .vu-a,a.vu-i:focus-visible .vu-a{background:var(--t1);border-color:var(--t1);color:#000;transform:translateX(3px)}.vu-i.is-cur{background:rgba(99,102,241,.1);box-shadow:inset 0 0 0 1px rgba(124,134,255,.35)}.vu-i.is-cur+.vu-i::before,.vu-i+.vu-i.is-cur::before{display:none}.vu-here{align-self:center;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.vu-here::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}.vu-cta{padding:clamp(24px,1.8vw,32px);border-radius:20px;display:flex;flex-direction:column;gap:12px;background:radial-gradient(120% 140% at 100% 0%,rgba(99,102,241,.32),rgba(99,102,241,0) 60%),var(--bg2)}.vu-cta b{font-size:clamp(19px,1.3vw,24px);font-weight:400;line-height:1.25;letter-spacing:-.02em;color:var(--t1)}.vu-cta p{margin:0;font-size:15px;line-height:1.55;color:var(--t3)}.vu-cta .btn{align-self:flex-start;margin-top:10px}@media (max-width:1180px){.vu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vu-col:nth-child(3){grid-column:1/-1}.vu-col:nth-child(3) .vu-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.vu-col:nth-child(3) .vu-gt{grid-column:1/-1}.vu-col:nth-child(3) .vu-i:nth-child(3)::before{display:none}}@media (max-width:900px){.s-vu .vu-head{grid-template-columns:1fr}}@media (max-width:760px){.vu-grid{display:flex;flex-direction:column;gap:12px}.vu-col{display:contents}.vu-g,.vu-cta{width:100%;box-sizing:border-box}.vu-cta{order:9}.vu-col:nth-child(3) .vu-g{grid-template-columns:1fr}.vu-col:nth-child(3) .vu-i:nth-child(3)::before{display:block}.vu-g{padding:4px}.vu-gt{padding:14px 12px 6px}.vu-i{grid-template-columns:36px minmax(0,1fr) auto;gap:12px;padding:12px;align-items:center}.vu-i+.vu-i::before{left:60px;right:12px}.vu-ic{width:36px;height:36px;border-radius:10px}.vu-ic svg{width:20px;height:20px}.vu-b{gap:2px}.vu-t{font-size:15px}.vu-d{display:none}.vu-p{margin:0;font-weight:400;color:var(--t3)}.vu-lead{font-size:16px}.vu-cta .btn{align-self:stretch}.s-vu{contain-intrinsic-size:auto 1700px}}</style><style id="pr-st">/* общий прайс на услуги (tools/site/price_block.py) */.s-pr .head{max-width:820px}.pr-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.pr-card{display:flex;flex-direction:column;min-height:300px;padding:clamp(22px,1.8vw,30px);color:inherit;text-decoration:none;transition:border-color .3s,transform .3s}a.pr-card:hover,a.pr-card:focus-visible{border-color:rgba(124,134,255,.5)}.pr-card.pr-main{border-color:rgba(124,134,255,.55);background:linear-gradient(180deg,rgba(124,134,255,.09),rgba(124,134,255,.02)),var(--card)}.pr-num{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);margin-bottom:26px}.pr-go{flex:none;width:28px;height:28px;border:1px solid var(--line2);border-radius:50%;display:grid;place-items:center;color:var(--acc)}.pr-go svg{width:14px;height:14px}.pr-here{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#05df72;border:1px solid rgba(5,223,114,.45);background:rgba(5,223,114,.1);border-radius:20px;padding:4px 10px 4px 8px;white-space:nowrap}.pr-here::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:#05df72;box-shadow:0 0 0 3px rgba(5,223,114,.2)}.pr-card h3{font-size:clamp(20px,1.5vw,24px);font-weight:500;letter-spacing:-.03em;line-height:1.25;margin:0 0 12px}.pr-card p{margin:0 0 26px;color:var(--t2);font-size:15px;line-height:1.55}.pr-price{margin-top:auto}.pr-amt{font-size:clamp(34px,2.6vw,42px);font-weight:400;letter-spacing:-.05em;white-space:nowrap;color:var(--t1)}.pr-main .pr-amt{color:#b5bcff}.pr-from{font-size:16px;color:var(--t2);margin-right:6px;letter-spacing:0}.pr-unit{display:block;margin-top:6px;font-size:13px;color:var(--t3)}.pr-more-t{font-size:clamp(18px,1.3vw,22px);font-weight:400;letter-spacing:-.02em;margin:clamp(36px,3vw,52px) 0 6px}.pr-more{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}.pr-mini{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 0;border-top:1px solid var(--line2);color:inherit;text-decoration:none;transition:color .25s}a.pr-mini:hover b,a.pr-mini:focus-visible b{color:#b5bcff}.pr-mini b{display:block;font-weight:500;font-size:16px;letter-spacing:-.01em;margin-bottom:5px;transition:color .25s}.pr-mini .pr-d{display:block;font-size:14px;color:var(--t3)}.pr-mini .pr-here{margin-left:8px;vertical-align:2px}.pr-mini .pr-amt{font-size:26px}.pr-mini .pr-from{font-size:13px}.pr-mini .pr-price{text-align:right;margin:0}.pr-fine{display:flex;justify-content:space-between;gap:32px;margin-top:22px;font-size:13.5px;line-height:1.6;color:var(--t3)}.pr-fine p{margin:0;max-width:760px}.pr-fine b{color:var(--t1);font-weight:500;white-space:nowrap}.pr-also{margin:12px 0 0;font-size:13.5px;color:var(--t3)}.pr-also a{color:var(--t2);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px}.pr-also a:hover{color:var(--t1)}.pr-cta{margin-top:28px;padding:clamp(22px,2vw,30px);display:flex;justify-content:space-between;align-items:center;gap:28px;border-color:rgba(124,134,255,.35)}.pr-cta h3{font-size:clamp(20px,1.5vw,24px);font-weight:400;letter-spacing:-.03em;margin:0 0 6px}.pr-cta p{margin:0;color:var(--t2);font-size:15px}.pr-cta .btn{flex:none}.s-pr.pr-low{content-visibility:auto;contain-intrinsic-size:auto 1250px}@media (max-width:1100px){.pr-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:700px){.pr-cards{grid-template-columns:minmax(0,1fr);gap:12px}.pr-card{min-height:0;padding:22px}.pr-num{margin-bottom:16px}.pr-card p{margin-bottom:16px;font-size:14px}.pr-amt{font-size:32px}.pr-more{grid-template-columns:minmax(0,1fr)}.pr-mini{flex-direction:column;align-items:flex-start;gap:10px}.pr-mini .pr-price{text-align:left}.pr-mini .pr-amt{font-size:24px}.pr-mini .pr-unit{display:inline;margin-left:8px;font-size:12px}.pr-fine{display:block;font-size:13px}.pr-fine b{display:block;margin-top:8px}.pr-cta{display:block}.pr-cta .btn{margin-top:18px;width:100%;justify-content:center}.s-pr.pr-low{contain-intrinsic-size:auto 2500px}}</style><style id="kl-st">/* блок «Наши клиенты» (tools/site/clients_block.py) */.s-kl .head{max-width:860px}.kl-wall{list-style:none;position:relative;display:grid;grid-template-columns:repeat(var(--c1,8),minmax(0,1fr));gap:1px;background:var(--line2);border:1.4px solid var(--line);border-radius:var(--r);overflow:hidden}.kl-wall::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .45s;background:radial-gradient(240px circle at var(--mx,-999px) var(--my,-999px),rgba(124,134,255,.13),transparent 70%)}.kl-wall.kl-lit::after{opacity:1}.kl-c{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:12px;min-height:clamp(132px,9.4vw,170px);padding:clamp(20px,1.6vw,28px) 12px clamp(14px,1.1vw,18px);background:var(--bg);transition:background .35s}.kl-lw{flex:1;display:flex;align-items:center;justify-content:center;width:100%;min-height:58px}.kl-logo{width:calc(var(--w)*1px);max-width:100%;height:auto;opacity:.6;transition:opacity .35s,transform .6s var(--ease)}.kl-t{font-size:11px;font-weight:500;line-height:1.3;letter-spacing:.07em;text-transform:uppercase;text-align:center;color:var(--t4);transition:color .35s}.kl-c:hover{background:#060608}.kl-c:hover .kl-logo{opacity:1;transform:translateY(-2px)}.kl-c:hover .kl-t{color:var(--t2)}.kl-c.kl-cta{grid-column:span var(--s1,1);padding:0;background:linear-gradient(180deg,rgba(124,134,255,.13),rgba(124,134,255,.03)),var(--bg)}.kl-cta a{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:10px;width:100%;padding:clamp(15px,1.2vw,20px);color:inherit}.kl-cta:hover{background:linear-gradient(180deg,rgba(124,134,255,.22),rgba(124,134,255,.06)),var(--bg)}.kl-cta-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.kl-cta-k{padding-top:3px;font-size:10.5px;font-weight:500;line-height:1.3;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}.kl-cta b{display:block;font-size:clamp(15px,1.1vw,18px);font-weight:500;line-height:1.25;letter-spacing:-.02em;color:var(--t1)}.kl-go{flex:none;width:28px;height:28px;border:1px solid rgba(124,134,255,.45);border-radius:50%;display:grid;place-items:center;color:var(--acc);transition:background .35s,color .35s,border-color .35s}.kl-go svg{width:13px;height:13px}.kl-cta:hover .kl-go{background:var(--acc3);color:#fff;border-color:var(--acc3)}.kl-more{display:none;margin:18px auto 0}@media (max-width:1279px){.kl-wall{grid-template-columns:repeat(var(--c2,6),minmax(0,1fr))}.kl-c.kl-cta{grid-column:span var(--s2,1)}}@media (max-width:899px){.kl-wall{grid-template-columns:repeat(var(--c3,4),minmax(0,1fr))}.kl-c.kl-cta{grid-column:span var(--s3o,1)}.js .kl-wall:not(.kl-open)>.kl-c.kl-cta{grid-column:span var(--s3,1)}.js .kl-wall:not(.kl-open)>.kl-c:not(.kl-cta):nth-child(n+12){display:none}.js .kl-m3+.kl-more{display:flex}}@media (max-width:599px){.kl-wall{grid-template-columns:repeat(2,minmax(0,1fr))}.kl-c.kl-cta{grid-column:span var(--s4o,1)}.js .kl-wall:not(.kl-open)>.kl-c.kl-cta{grid-column:span var(--s4,1)}.js .kl-wall:not(.kl-open)>.kl-c:not(.kl-cta):nth-child(n+8){display:none}.js .kl-m4+.kl-more{display:flex}.js .kl-wall:not(.kl-m4)+.kl-more{display:none}.kl-c{min-height:116px;padding:18px 10px 13px;gap:10px}.kl-lw{min-height:50px}.kl-logo{width:calc(var(--w)*.84px)}.kl-t{font-size:10.5px;letter-spacing:.05em}.kl-more{width:100%}.kl-cta a{padding:14px;gap:8px}.kl-cta-k{font-size:10px;letter-spacing:.05em}.kl-cta b{font-size:15px}.kl-go{width:26px;height:26px}}@media (hover:none){.kl-logo{opacity:.74}.kl-wall::after{display:none}}</style><style id="m-crumbs">/* крошки на телефоне не показываем: для SEO хватает BreadcrumbList и ссылок в HTML */@media (max-width:900px){.d-crumbs,.f-crumbs{display:none!important}}</style>
+<style id="t-inset">/* таблицы: текст не прижимается к краю — отступ первой и последней колонки */@media (min-width:901px){.d-table tr>:first-child{padding-left:clamp(16px,1.5vw,24px)}.d-table tr>:last-child{padding-right:clamp(16px,1.5vw,24px)}}</style>
+<style id="srch-st">/* лупа поиска в шапке и раскладка шапки с ней (tools/menu/apply_menu.py) */.srch-btn{flex:none;width:44px;height:44px;padding:0;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff;cursor:pointer;transition:color .25s,border-color .3s,background .3s,transform .35s cubic-bezier(.16,1,.3,1)}.srch-btn:hover{border-color:#7c86ff;background:rgba(97,95,255,.2);transform:translateY(-2px)}.srch-btn:focus-visible{outline:2px solid #7c86ff;outline-offset:2px}.srch-btn svg{width:18px;height:18px;display:block}@media (min-width:761px){.hdr .wrap{gap:16px}.hdr .msg{display:none}.srch-btn{width:38px;height:38px;background:none;border-color:transparent;color:var(--t2);margin-right:calc(4px - clamp(14px,2vw,40px))}.srch-btn svg{width:20px;height:20px}.srch-btn:hover{color:#fff;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);transform:none}}@media (min-width:761px) and (max-width:1440px){.hdr-right{gap:18px}.srch-btn{margin-right:-14px}}@media (min-width:761px) and (max-width:1000px){.hdr-right{gap:12px}.srch-btn{margin-right:-8px}}@media (max-width:900px){.logo-txt{display:flex;flex-direction:column;align-items:flex-start}.logo-sub{margin:0}}@media (max-width:760px){.hdr .wrap{gap:12px}.hdr-right{gap:8px}}@media (max-width:400px){.hdr .wrap{gap:10px}.srch-btn{width:40px;height:40px}}@media (max-width:360px){.hdr .wrap{gap:8px}.hdr-right{gap:6px}.srch-btn,.phone i,.burger{width:38px;height:38px}}@media (max-width:340px){.logo-mark{display:none}.logo-sub{display:block}}.nav-dd-panel a.nav-sub{padding:8px 14px 8px 30px;font-size:14px;color:var(--t3)}.nav-dd-panel a.nav-sub::before{content:"";position:absolute;left:16px;top:50%;width:7px;height:1px;background:var(--line2)}.nav-dd-panel a.nav-sub{position:relative}.nav-dd-panel a.nav-sub:hover,.nav-dd-panel a.nav-sub[aria-current]{color:#fff}.mm-sub a.nav-sub{padding-left:40px;font-size:16px;color:var(--t3)}.ft li.ft-sub{padding-left:14px;font-size:14px;position:relative}.ft li.ft-sub::before{content:"";position:absolute;left:0;top:50%;width:7px;height:1px;background:var(--line2)}</style><script id="srch-js">/* поиск по сайту: движок и индекс загружаются по первому нажатию на лупу или «/» (tools/search) */(function(r,v){var d=document,ld=0,w=null;function go(o){if(window.PCSearch)return window.PCSearch.open(r,v,o);w=o;if(ld)return;ld=1;var s=d.createElement("script");s.src=r+"search.min.js?v="+v;s.async=true;s.onload=function(){window.PCSearch&&window.PCSearch.open(r,v,w)};s.onerror=function(){ld=0};d.head.appendChild(s)}d.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-srch]");if(b){e.preventDefault();go({btn:b})}});d.addEventListener("keydown",function(e){if(e.key!=="/"||e.ctrlKey||e.metaKey||e.altKey)return;var t=e.target,n=t&&t.tagName;if(n==="INPUT"||n==="TEXTAREA"||n==="SELECT"||t.isContentEditable)return;e.preventDefault();go({})});if(/^#q\d+$/.test(location.hash)){var c=0,t=setInterval(function(){var b=d.getElementById(location.hash.slice(1));if(b&&d.documentElement.classList.contains("anim-ready")){clearInterval(t);if(b.getAttribute("aria-expanded")==="false")b.click()}else if(++c>60)clearInterval(t)},150)}})("../","20261108");</script>
+<style data-fx>
+/* подсветка рамки карточек за курсором — как у .card на главной (tools/site/fx.py) */
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev){position:relative}
+:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev)::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;pointer-events:none;background:radial-gradient(360px circle at var(--mx,-999px) var(--my,-999px),rgba(124,134,255,.85),rgba(124,134,255,.15) 35%,transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:0;transition:opacity .4s;z-index:2}
+@media (hover:hover) and (pointer:fine){:where(.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev):hover::after{opacity:1}}
+/* лупа на фото первого экрана — как на главной (tools/site/fx.py, с 15.11.2026): светлая копия фото в неподвижной
+   круглой маске; скрипт только сдвигает круг и фото внутри него (transform), фильтры и маска не пересчитываются.
+   Только компьютер с мышью шире 860 px; на телефонах, планшетах и в облегчённом режиме (lowfx) — обычное фото */
+.fx-lit{position:absolute;left:0;top:0;width:0;height:0;opacity:0;pointer-events:none;contain:strict;will-change:transform,opacity;-webkit-mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);mask-image:radial-gradient(circle closest-side,#000 0%,rgba(0,0,0,.55) 62.5%,transparent 100%);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;transition:opacity 1.8s cubic-bezier(.16,1,.3,1)}
+.fx-lit-in{position:absolute;left:0;top:0;will-change:transform}
+.fx-lit img{filter:brightness(1.08) contrast(1.06) saturate(1.06)}
+#hero :is(.d-hero-media,.hero-media)>picture>img{transition:filter 1.8s cubic-bezier(.16,1,.3,1)}
+#hero.fx-lit-on :is(.d-hero-media,.hero-media)>picture>img{filter:grayscale(.3) brightness(.56)}
+#hero.fx-lit-on .fx-lit{opacity:1}
+.lowfx #hero :is(.d-hero-media,.hero-media)>picture>img{transition:none}
+@media (max-width:860px),(hover:none),(pointer:coarse){.fx-lit{display:none}}
+</style>
+<style id="hero-fold">/* кнопки первого экрана видны целиком на любом экране (tools/site/hero_fold.py) */@media (max-width:760px){#hero.hero:not(.f-hero) .hero-copy{display:flex;flex-direction:column}#hero.hero:not(.f-hero) .hero-copy>*{order:6}#hero.hero:not(.f-hero) .hero-copy>.badge{order:1;align-self:flex-start}#hero.hero:not(.f-hero) .hero-copy>h1{order:2;margin-bottom:0}#hero.hero:not(.f-hero) .hero-copy>.hero-ctas{order:3;margin-top:22px}#hero.hero:not(.f-hero) .hero-copy>.lead{order:4;margin-top:24px}}@media (max-width:760px) and (max-height:620px){#hero.hero:not(.f-hero){padding-top:92px}#hero.hero:not(.f-hero) h1{margin-top:18px}}@media (max-width:900px){#hero.f-hero .hero-copy{display:flex;flex-direction:column}#hero.f-hero .hero-copy>*{order:6}#hero.f-hero .hero-copy>.f-crumbs{order:0}#hero.f-hero .hero-copy>.badge{order:1;align-self:flex-start}#hero.f-hero .hero-copy>h1{order:2;margin-bottom:0}#hero.f-hero .hero-copy>.hero-ctas{order:3;margin-top:22px}#hero.f-hero .hero-copy>.lead{order:4;margin-top:24px}#hero.f-hero .hero-media{aspect-ratio:auto;height:clamp(104px,calc(100vh - 440px),56.25vw);height:clamp(104px,calc(100svh - 440px),56.25vw)}}@media (max-width:760px){#hero.f-hero .hero-media{height:clamp(104px,calc(100vh - 440px),75vw);height:clamp(104px,calc(100svh - 440px),75vw)}.rp-page #hero.f-hero .hero-media,.lb-page #hero.f-hero .hero-media{height:clamp(104px,calc(100vh - 480px),75vw);height:clamp(104px,calc(100svh - 480px),75vw)}}@media (max-width:900px) and (max-height:620px){#hero.f-hero .hero-copy>.badge{display:none}#hero.f-hero .hero-media{height:clamp(96px,calc(100vh - 400px),75vw);height:clamp(96px,calc(100svh - 400px),75vw)}.rp-page #hero.f-hero .hero-copy>h1{font-size:clamp(26px,7.6vw,34px)}#hero.f-hero .hero-copy>h1{margin-top:30px}}@media (max-width:860px){#hero.d-hero .d-hero-media{aspect-ratio:auto;height:clamp(104px,calc(100vh - 380px),56.25vw);height:clamp(104px,calc(100svh - 380px),56.25vw)}}@media (max-width:860px) and (max-height:620px){#hero.d-hero{padding-top:84px}#hero.d-hero .d-hero-media{margin-top:14px}#hero.d-hero .d-btns{margin-top:16px}}@media (max-width:860px) and (max-height:520px){#hero.d-hero .d-hero-media{display:none}#hero.d-hero h1{margin-bottom:0}}@media (max-width:900px) and (max-height:520px){#hero.f-hero{padding-top:76px}#hero.f-hero .hero-media{display:none}#hero.f-hero .wrap{margin-top:0}#hero.f-hero .hero-copy>h1{margin-top:0}}@media (max-width:400px){#hero .hero-copy{min-width:0}#hero .hero-ctas .btn{min-width:0;max-width:100%;white-space:normal;padding:0 14px}#hero .hero-ctas .btn-t{white-space:normal;text-align:center}}@media (max-width:860px) and (max-height:620px){#hero.d-hero .d-hero-media{height:clamp(104px,calc(100vh - 410px),56.25vw);height:clamp(104px,calc(100svh - 410px),56.25vw)}}@media (max-height:520px){#hero.p-hero .p-hero-copy>.d-btns{order:3;margin-top:18px}#hero.p-hero .p-hero-copy>.p-def{order:4;margin-top:18px}}@media (max-width:760px) and (max-height:620px){#hero.p-hero .p-hero-copy>.d-btns{order:3;margin-top:18px}#hero.p-hero .p-hero-copy>.p-def{order:4;margin-top:18px}}@media (min-width:761px) and (max-height:520px){#hero.hero:not(.f-hero){padding-top:84px;min-height:0}#hero.hero:not(.f-hero) .hero-copy{display:flex;flex-direction:column}#hero.hero:not(.f-hero) .hero-copy>*{order:6}#hero.hero:not(.f-hero) .hero-copy>.badge{order:1;align-self:flex-start}#hero.hero:not(.f-hero) .hero-copy>h1{order:2;margin:14px 0 0}#hero.hero:not(.f-hero) .hero-copy>.hero-ctas{order:3;margin-top:18px}#hero.hero:not(.f-hero) .hero-copy>.lead{order:4;margin-top:18px}}@media (min-width:861px){#hero.d-hero .d-hero-copy{display:flex;flex-direction:column}#hero.d-hero .d-hero-copy>*{order:6}#hero.d-hero .d-hero-copy>:is(.d-crumbs,.f-crumbs){order:0}#hero.d-hero .d-hero-copy>.eyebrow{order:1}#hero.d-hero .d-hero-copy>h1{order:2}#hero.d-hero .d-hero-copy>:is(.lead,.sub,.p-def):not(:is(.lead,.sub,.p-def)~*){order:3}#hero.d-hero .d-hero-copy>.d-btns:not(.d-btns~*){order:4}#hero.d-hero .d-hero-copy>.d-ticks{margin-bottom:0}}@media (min-width:901px){#hero.f-hero .hero-copy{display:flex;flex-direction:column}#hero.f-hero .hero-copy>*{order:6}#hero.f-hero .hero-copy>.f-crumbs{order:0}#hero.f-hero .hero-copy>.badge{order:1;align-self:flex-start}#hero.f-hero .hero-copy>h1{order:2}#hero.f-hero .hero-copy>.lead{order:3}#hero.f-hero .hero-copy>.hero-ctas{order:4}#hero.f-hero .hero-copy>.rp-hero-list{margin-top:26px}}@media (min-width:861px) and (max-height:820px){#hero.d-hero{padding-top:calc(clamp(68px,6vw,115px) + 8px)}#hero.d-hero .d-hero-copy>.d-crumbs{margin-bottom:0}#hero.d-hero .d-hero-copy>.eyebrow{margin:16px 0 0}#hero.d-hero .d-hero-copy>h1{margin-top:14px;line-height:1.02}#hero.d-hero .d-hero-copy>:is(.lead,.sub,.p-def){margin-top:16px}#hero.d-hero .d-btns{margin-top:20px}}@media (min-width:901px) and (max-height:820px){#hero.f-hero{padding-top:80px}#hero.f-hero .hero-copy>.f-crumbs{margin-bottom:10px}#hero.f-hero .hero-copy>h1{font-size:min(8.2vh,4.4vw);margin:16px 0 14px}.rp-page #hero.f-hero .hero-copy>h1,.lb-page #hero.f-hero .hero-copy>h1{font-size:min(8vh,3.4vw)}#hero.f-hero .hero-copy>.lead{line-height:1.5}#hero.f-hero .hero-copy>.hero-ctas{margin-top:26px}}@media (min-width:761px) and (max-height:820px){#hero.p-hero h1{font-size:min(8.4vh,4.4vw)}#hero.p-hero .p-hero-copy>.d-btns{margin-top:20px}}@media (min-width:761px) and (max-height:820px){#hero.hero:not(.f-hero) h1{font-size:min(8.4vh,4.4vw);margin:22px 0 18px}#hero.hero:not(.f-hero) .hero-ctas{margin-top:28px}}</style>
+<style id="ind-links">.ind .ind-more::after,.ind .ind-link::after{content:"";position:absolute;inset:0;z-index:3;transform:translateZ(1px)}.ind:has(.ind-more,.ind-link){cursor:pointer}.ind:hover .ind-more{color:var(--acc);border-color:var(--acc)}.ind:hover .ind-link{color:var(--acc)}.ind:has(.ind-more:focus-visible,.ind-link:focus-visible){outline:2px solid var(--acc);outline-offset:3px}.ind .ind-more:focus-visible,.ind .ind-link:focus-visible{outline:none}</style>
+<style id="f-check-m">/* самопроверка: на телефоне и планшете пункты → подсказка → кнопка, компактно; на компьютере — как раньше (tools/site/samoproverka.py, решение владельца 17.11.2026) */#samoproverka .f-check-bar,#samoproverka .f-bt-m{display:none}html.f-check-on .mbar{transform:translateY(160%)}#samoproverka .f-check-in{grid-template-rows:auto 1fr;row-gap:0}#samoproverka .f-check-l{grid-column:1;grid-row:1}#samoproverka .f-check-list{grid-column:2;grid-row:1/span 2}#samoproverka .f-check-f{grid-column:1;grid-row:2}#samoproverka .f-check-list label>span span{font-size:inherit;line-height:inherit;color:inherit}@media (max-width:1100px){#samoproverka .f-check-in{grid-template-rows:none}#samoproverka .f-check-l,#samoproverka .f-check-list,#samoproverka .f-check-f{grid-column:auto;grid-row:auto}#samoproverka .f-check-score{display:flex;align-items:center;gap:16px;margin:22px 0 10px}#samoproverka .f-check-res{display:block;flex:none;margin:0;line-height:1;white-space:nowrap}#samoproverka .f-check-res b{vertical-align:middle}#samoproverka .f-check-bar{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;flex:1;max-width:360px}#samoproverka .f-check-bar i{display:block;height:4px;border-radius:2px;background:rgba(255,255,255,.1);transition:background-color .3s}#samoproverka .f-check-bar i.on{background:var(--acc)}#samoproverka .f-check-res.warn+.f-check-bar i.on{background:var(--yel)}#samoproverka .f-check-res.full+.f-check-bar i.on{background:var(--grn)}#samoproverka .f-check-list{padding:0;margin-top:24px}#samoproverka .f-check-list li{display:block;padding:0}#samoproverka .f-check-note{margin:24px 0 20px;max-width:none}#samoproverka .f-check-f .btn{vertical-align:top}}@media (max-width:600px){#samoproverka.f-checks{padding:20px 0 48px}#samoproverka .f-check-in{padding:22px 18px 20px}#samoproverka .badge{margin-bottom:2px}#samoproverka .f-check-t{font-size:26px;line-height:1.1}#samoproverka .f-check-score{margin:12px 0 0}#samoproverka .f-check-res{font-size:14px;color:var(--t2)}#samoproverka .f-check-res b{font-size:26px;margin-right:5px}#samoproverka .f-check-list{margin-top:16px}#samoproverka .f-check-list label{padding:12px 0;gap:13px}#samoproverka .f-check-list input{width:22px;height:22px;border-radius:7px;background-size:12px}#samoproverka .f-check-list label>span{font-size:14px;line-height:1.4;color:var(--t2)}#samoproverka .f-check-list label>span strong{display:inline;margin:0;font-size:inherit;font-weight:500;color:var(--t1)}#samoproverka .f-check-list input:checked+span{color:var(--t1)}#samoproverka .f-check-note{font-size:14px;line-height:1.45;margin:16px 0 14px}#samoproverka .f-check-f .btn{display:flex;width:100%;min-height:52px;font-size:16px;padding-left:16px;padding-right:16px}#samoproverka .f-bt-d{display:none}#samoproverka .f-bt-m{display:inline-block}}@media (max-width:370px){#samoproverka .f-check-f .btn{font-size:15px;padding-left:14px;padding-right:14px}}@media (max-width:340px){#samoproverka .f-check-f .btn{font-size:13.5px;padding-left:10px;padding-right:10px}}</style>
+<style id="mob-fit">span.fxt.fxt,span.fxt.fxt span{display:inline}.kpi .u{display:block;font-style:normal;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0 0 12px}@media (max-width:600px){:root .btn:not([href^="tel:"]){white-space:normal;max-width:100%;min-width:0;text-align:center;line-height:1.25}:root .btn-lg:not([href^="tel:"]){height:auto;min-height:56px;padding-top:10px;padding-bottom:10px}:root .btn-sm:not([href^="tel:"]){height:auto;min-height:44px;padding-top:8px;padding-bottom:8px}:root .btn:not([href^="tel:"]) .btn-t{white-space:normal;min-width:0;max-width:100%;flex:0 1 auto;text-align:center}:root .btn:not([href^="tel:"]) .btn-t>span{white-space:normal}:root .rk-page .rk-nl a{white-space:normal}:root .pest-b .lvl{max-width:100%;letter-spacing:.04em;-webkit-hyphens:auto;hyphens:auto;overflow-wrap:anywhere}.card,.d-card,.panel,.d-obj-b,.d-kind-b,.nb-obj-t,.f-check-l{min-width:0}.card h3,.card h4,.card p,.card li,.card b,.card span,.d-card h3,.d-card p{overflow-wrap:break-word}.kpi span,.nb-obj-t,.d-obj-b h3{-webkit-hyphens:auto;hyphens:auto}}@media (max-width:400px){.card h3 .nw,.d-card h3 .nw{white-space:normal}}.menu-open .hdr{background:#000;transition:background .25s ease .3s,transform .35s var(--ease)}</style>
+<style id="ig">/* инфографика в стиле лаборатории: предметные иконки без фона (tools/site/infografika.py, 19.11.2026) */.s-pr .pr-card{min-height:0}.s-pr .pr-num{margin-bottom:6px}.s-pr .ig-pr{display:block;width:112px;height:112px;margin:0 0 10px -10px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}.s-pr .pr-card:hover .ig-pr{transform:scale(1.06)}.s-pr .pr-mini{display:grid;grid-template-columns:60px minmax(0,1fr) auto;column-gap:18px;align-items:center}.s-pr .ig-prm{width:60px;height:60px;display:block}@media (max-width:900px){.s-pr .pr-card{position:relative}.s-pr .ig-pr{position:absolute;right:14px;top:40px;width:84px;height:84px;margin:0}.s-pr .pr-card h3,.s-pr .pr-card p{padding-right:92px}.s-pr .pr-mini{grid-template-columns:52px minmax(0,1fr);row-gap:6px}.s-pr .ig-prm{grid-row:1/3;width:52px;height:52px}.s-pr .pr-mini .pr-price{grid-column:2}}.docs .doc .ico{width:100px;height:100px;border-radius:0;background:none!important;border:0!important;box-shadow:none!important;margin:-12px 0 12px -12px}.docs .doc .ico img{width:100px;height:100px;display:block;transition:transform .35s cubic-bezier(.2,.7,.2,1)}.docs .doc:hover .ico{transform:none}.docs .doc:hover .ico img{transform:scale(1.06)}@media (max-width:900px){.docs .doc{display:grid;grid-template-columns:72px minmax(0,1fr);column-gap:14px;align-items:center}.docs .doc .ico{grid-row:1;width:72px;height:72px;margin:0}.docs .doc .ico img{width:72px;height:72px}.docs .doc h3{grid-column:2;margin:0;padding-right:24px}.docs .doc p,.docs .doc .doc-go{grid-column:1/3}.docs .doc p{margin-top:10px}}.cycle .node>i{width:clamp(72px,6vw,104px)!important;height:clamp(72px,6vw,104px)!important;background:radial-gradient(circle,var(--bg) 58%,transparent 72%)!important;border:0!important;box-shadow:none!important;border-radius:50%!important}.cycle .node>i img{width:100%;height:100%;display:block}.cycle .node.on>i{transform:scale(1.12);filter:drop-shadow(0 0 22px rgba(124,134,255,.6))}@media (max-width:600px){.cycle .node>i{width:64px!important;height:64px!important}}.pest-img.ig-pi{background:none;overflow:visible;border-radius:0}.pest-img.ig-pi img{object-fit:contain;transform:none!important}.pest-img.ig-pi .scan{display:none}</style>
+<style id="ipm-pin">.cycle-dot{display:none}.cycle-step.flip{animation:cyNum .5s cubic-bezier(.2,.8,.2,1)}@keyframes cyNum{from{opacity:0;transform:translateY(6px)}}@media (min-width:1025px){.appr-pin{align-items:start}.appr-pin>.cycle{position:sticky;top:var(--pin-top,calc(var(--hdr-c,64px) + 24px));max-width:min(620px,calc(100vh - var(--hdr-c,64px) - 64px))}.appr-pin .steps{gap:clamp(24px,16vh,170px);padding-bottom:var(--pin-pad,0px)}.appr-pin .cycle-arc{transition:none}.appr-pin .cycle-dot{display:block;position:absolute;inset:12%;pointer-events:none;will-change:transform}.appr-pin .cycle-dot::after{content:"";position:absolute;left:50%;top:0;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(124,134,255,.28),0 0 22px 6px rgba(124,134,255,.75)}.appr-pin .node{z-index:1}.appr-pin .node.done b{color:var(--t1)}}</style>
+<style id="zv-css">/* состав заявки и длинные блоки на телефоне (tools/site/zayavka.py) */.zv-lbl{margin:0 0 8px;font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}.zv-sost{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}.zv-e{position:relative;margin:0;padding:12px 48px 12px 14px;border-radius:14px;background:rgba(124,134,255,.07);border:1px solid rgba(124,134,255,.28);text-align:left}.zv-e::before{display:none}.zv-e-t{display:flex;align-items:flex-start;gap:8px;margin:0;font-size:14.5px;line-height:1.35;font-weight:500;color:var(--t1)}.zv-e-t i{flex:none;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:rgba(124,134,255,.18);color:#b5bcff;font-style:normal}.zv-e-t i svg{width:13px;height:13px}.zv-e-s{margin:4px 0 0 30px;font-size:13.5px;line-height:1.45;color:var(--t2)}.zv-e-p{margin:4px 0 0 30px;font-size:12px;line-height:1.4;color:var(--t3)}.zv-e-l{list-style:none;margin:4px 0 0 30px;padding:0;font-size:12.5px;line-height:1.45;color:var(--t3)}.zv-e-l li{position:relative;margin:0;padding:0 0 0 12px;border:0;background:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.zv-e-l li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--t4)}.zv-e-l li.n::before{background:var(--red)}.zv-e-l li.zv-more::before{display:none}.zv-e-x{position:absolute;right:6px;top:6px;width:36px;height:36px;padding:0;border-radius:50%;border:0;background:rgba(255,255,255,.06);color:var(--t2);display:grid;place-items:center;cursor:pointer;transition:color .25s,background .25s}.zv-e-x:hover,.zv-e-x:focus-visible{color:#fff;background:rgba(255,255,255,.12)}.zv-e-x svg{width:15px;height:15px}.zv-sw{margin:0 0 4px}.zv-sw[hidden],.zv-f[hidden]{display:none}.zv-dlg .zv-sw{margin:2px 0 0}.chk-dlg .zv-also{margin-top:14px}.zv-f{margin:0 0 18px}.zv-f-n{margin:8px 0 0;font-size:12.5px;line-height:1.45;color:var(--t3)}.mbar .c2 .zv-badge{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:var(--acc3);color:#fff;font-size:12.5px;font-weight:600;line-height:1}.zv-bar{display:none}.zv-toast{display:none}@media (max-width:760px){.mbar.zv-hide{transform:translateY(160%)!important}.zv-bar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:41;align-items:center;gap:10px;padding:8px 8px 8px 18px;border-radius:999px;background:rgba(18,18,20,.94);border:1px solid rgba(124,134,255,.45);transform:translateY(160%);transition:transform .45s var(--ease)}.zv-bar.show{transform:none}.zv-bar-t{flex:1;min-width:0;margin:0;line-height:1.2}.zv-bar-t b{display:block;font-size:15px;font-weight:500;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.zv-bar-t span{display:block;margin-top:2px;font-size:12.5px;color:var(--t3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.zv-bar .btn{flex:none;height:48px;padding:0 20px;font-size:15px}.zv-toast{display:block;position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));z-index:60;max-width:calc(100vw - 32px);transform:translate(-50%,16px);opacity:0;pointer-events:none;padding:10px 16px;border-radius:999px;background:#17171c;border:1px solid rgba(5,223,114,.45);color:#d1fae5;font-size:13.5px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .35s,transform .35s var(--ease)}.zv-toast.on{opacity:1;transform:translate(-50%,0)}.zv-dlg .chk-kicker{margin-bottom:10px}.zv-dlg .chk-body h3{margin-top:18px}#konstruktor .dk-picks.zv-fold>.dk-pick:not([aria-pressed="true"]){display:none}#konstruktor .zv-picks-ed{display:none}#konstruktor .dk-picks.zv-fold .zv-picks-ed{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1px dashed rgba(255,255,255,.25);background:none;color:var(--t2);font:inherit;font-size:14px;cursor:pointer}#konstruktor .dk-lg{border:1px solid var(--line2);border-radius:16px;padding:0 12px;margin:0 0 8px;background:rgba(255,255,255,.02)}#konstruktor .dk-lg>h3{display:flex;align-items:center;gap:10px;margin:0!important;padding:14px 0;min-height:48px;box-sizing:border-box;font-size:15.5px!important;line-height:1.3;cursor:pointer}#konstruktor .dk-lg>h3 .zv-gc{margin-left:auto;flex:none;font-size:12.5px;font-weight:400;color:var(--t3);white-space:nowrap}#konstruktor .dk-lg>h3 .zv-gc b{color:#fca5a5;font-weight:500}#konstruktor .dk-lg>h3::after{content:"";flex:none;width:8px;height:8px;border-right:1.6px solid var(--t2);border-bottom:1.6px solid var(--t2);transform:rotate(45deg);margin:-4px 4px 0 2px;transition:transform .25s}#konstruktor .dk-lg.zv-open>h3::after{transform:rotate(-135deg);margin-top:4px}#konstruktor .dk-lg:not(.zv-open)>.dk-row{display:none}#konstruktor .dk-lg.zv-open{padding-bottom:6px}#konstruktor .dk-mini{display:none!important}html.zv-lab .lb-bar{display:none!important}.lb-sets.zv-setpick{display:block!important}.lb-sets.zv-setpick>.lb-set{display:none}.lb-sets.zv-setpick>.lb-set.zv-cur{display:block}.zv-chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--pad)) 14px;padding:2px var(--pad) 4px;scroll-padding:0 var(--pad);scroll-snap-type:x proximity}.zv-chips::-webkit-scrollbar{display:none}.zv-chips button{flex:none;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);color:var(--t2);font:inherit;font-size:14px;white-space:nowrap;scroll-snap-align:start;cursor:pointer}.zv-chips button[aria-pressed="true"]{background:#fff;color:#09090b;border-color:#fff;font-weight:500}.mb-lane{display:flex!important;flex-wrap:nowrap!important;gap:12px!important;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin-left:calc(-1 * var(--pad))!important;margin-right:calc(-1 * var(--pad))!important;padding:2px var(--pad) 4px!important;scroll-padding:0 var(--pad);grid-template-columns:none!important;align-items:stretch;outline:none}.mb-lane::-webkit-scrollbar{display:none}.mb-lane>*{flex:0 0 84%!important;max-width:84%!important;width:auto!important;min-width:0;scroll-snap-align:start;margin:0!important;box-sizing:border-box}.mb-lane.mb-lane-s>*{flex-basis:70%!important;max-width:70%!important}.mb-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}.mb-count{font:500 13px/1 Inter,system-ui,sans-serif;color:var(--t3);letter-spacing:.06em;min-width:44px;font-variant-numeric:tabular-nums}.mb-count b{color:var(--t1);font-weight:500}.mb-dots{display:flex;gap:6px;align-items:center}.mb-dots i{width:6px;height:6px;border-radius:3px;background:var(--line2);transition:width .3s,background .3s}.mb-dots i.on{width:18px;background:var(--acc)}.mb-arr{display:flex;gap:8px}.mb-arr button{width:44px;height:44px;border-radius:50%;border:1.4px solid var(--line2);background:transparent;color:var(--t1);display:grid;place-items:center;padding:0;cursor:pointer}.mb-arr button svg{width:16px;height:16px}.mb-arr button:disabled{opacity:.35;cursor:default}.mb-acc>.mb-acc-i>:first-child{position:relative;padding-right:32px!important;cursor:pointer}.mb-acc>.mb-acc-i>:first-child::after{content:"";position:absolute;right:6px;top:.55em;width:8px;height:8px;border-right:1.6px solid var(--t2);border-bottom:1.6px solid var(--t2);transform:rotate(45deg);transition:transform .25s}.mb-acc>.mb-acc-i.mb-open>:first-child::after{transform:rotate(-135deg);top:.8em}.mb-acc>.mb-acc-i:not(.mb-open)>:not(:first-child){display:none!important}.mb-acc>.mb-acc-i:not(.mb-open)>:first-child{margin-bottom:0!important}ol.d-terms.mb-acc>li{padding-top:14px!important;padding-bottom:14px!important}.nb-qs.mb-acc>*{padding-top:18px!important;padding-bottom:18px!important}.mb-more>.mb-more-h{display:none!important}.mb-more-b{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin-top:12px;border-radius:999px;border:1.4px solid var(--line2);background:transparent;color:var(--t1);font:inherit;font-size:15px;cursor:pointer}table.mb-tbl{display:table!important;width:100%;border-collapse:collapse;font-size:14px}table.mb-tbl thead{display:table-header-group!important;position:static!important;width:auto!important;height:auto!important;clip:auto!important;overflow:visible!important}table.mb-tbl tbody{display:table-row-group!important}table.mb-tbl tr{display:table-row!important;border:0!important;background:none!important;padding:0!important;margin:0!important;border-radius:0!important;box-shadow:none!important}table.mb-tbl th,table.mb-tbl td{display:table-cell!important;padding:11px 6px!important;border:0!important;border-bottom:1px solid var(--line2)!important;text-align:left;vertical-align:top;font-size:14px!important;line-height:1.35;white-space:normal!important;overflow-wrap:break-word}table.mb-tbl th{font-size:12.5px!important;font-weight:500;letter-spacing:0;text-transform:none;color:var(--t3)}table.mb-tbl td::before{display:none!important;content:none!important}table.mb-tbl td:first-child,table.mb-tbl th:first-child{padding-left:0!important}table.mb-tbl td:first-child{color:var(--t1)}table.mb-tbl td:not(:first-child){color:var(--t2)}table.mb-tbl td.mb-nw{white-space:nowrap!important;overflow-wrap:normal}table.mb-tbl tr.zv-cur td{color:#fff;background:rgba(124,134,255,.1)!important}table.mb-tbl tr.zv-cur td:first-child{box-shadow:inset 3px 0 0 var(--acc);padding-left:8px!important}table.mb-tacc tr:not(.mb-open) td:not(.mb-keep){display:none!important}table.mb-tacc td.mb-keep-l{position:relative;padding-right:30px!important;cursor:pointer}table.mb-tacc td.mb-keep-l::after{content:"";position:absolute;right:6px;top:22px;width:8px;height:8px;border-right:1.6px solid var(--t2);border-bottom:1.6px solid var(--t2);transform:translateY(-70%) rotate(45deg);transition:transform .25s}table.mb-tacc tr.mb-open td.mb-keep-l::after{transform:translateY(-30%) rotate(-135deg)}footer .ft.mb-ft{grid-template-columns:minmax(0,1fr)!important;gap:0!important}footer .ft.mb-ft>div{grid-column:1/-1!important}footer .ft.mb-ft>div:first-child{padding-bottom:28px}footer .ft.mb-ft>div.mb-fa{border-top:1px solid var(--line)}footer .ft.mb-ft>div.mb-fa>h4{margin:0!important}footer .mb-fa-b{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:56px;padding:0;border:0;background:none;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;text-align:left;cursor:pointer}footer .mb-fa-b::after{content:"";width:9px;height:9px;margin-right:6px;border-right:1.5px solid var(--t2);border-bottom:1.5px solid var(--t2);transform:rotate(45deg) translateY(-3px);transition:transform .3s}footer .mb-fa.open .mb-fa-b::after{transform:rotate(-135deg)}footer .ft.mb-ft>div.mb-fa>ul{display:none!important}footer .ft.mb-ft>div.mb-fa.open>ul{display:flex!important;padding-bottom:14px}footer .ft.mb-ft>div:last-child{padding-top:24px;border-top:1px solid var(--line)}}.chk-dlg .chk-ok .ok-ic,form.form .ok .ok-ic{display:block;width:76px;height:76px;margin:6px auto 22px;border-radius:50%;background:rgba(5,223,114,.12);box-shadow:0 0 0 1.5px rgba(5,223,114,.55),0 0 44px rgba(5,223,114,.22);stroke:#05df72;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}.chk-dlg .chk-ok .ok-ic circle,form.form .ok .ok-ic circle{display:none}.chk-dlg .chk-ok .ok-ic path,form.form .ok .ok-ic path{stroke-dasharray:36;stroke-dashoffset:0}.chk-dlg .chk-ok .ok-ic,form.form.sent .ok .ok-ic{animation:zvOkPop .5s var(--ease) both}.chk-dlg .chk-ok .ok-ic path,form.form.sent .ok .ok-ic path{animation:zvOkDraw .45s .2s var(--ease) both}.chk-dlg .chk-ok h3,form.form .ok h3{color:#fff}@keyframes zvOkPop{from{transform:scale(.6);opacity:0}}@keyframes zvOkDraw{from{stroke-dashoffset:36}}@media (prefers-reduced-motion:reduce){.zv-bar,.zv-toast{transition:none}}</style>
+<script src="../zayavka.min.js?v=20261120zv" defer></script>
+<script src="../mob-bloki.min.js?v=20261120zv" defer></script>
+<style id="tel-plain">/* Закон владельца 11.11.2026 (tools/site/tracking_laws.py): в ссылке телефона только номер — значок шапки рисуется здесь, номер не разрывается */.phone{position:relative}.phone::before{content:"";flex:none;box-sizing:border-box;width:36px;height:36px;border-radius:50%;background:var(--acc2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cpath d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z'/%3E%3C/svg%3E") 50%/15px 15px no-repeat;transition:transform .4s var(--ease)}.phone::after{content:"";position:absolute;left:0;top:50%;box-sizing:border-box;width:36px;height:36px;margin-top:-18px;border-radius:50%;border:1px solid var(--acc);animation:ring 2.4s var(--ease) infinite;pointer-events:none}.phone:hover::before{transform:rotate(-14deg) scale(1.06)}@media (max-width:760px){.phone{font-size:0;gap:0}.phone::before,.phone::after{width:44px;height:44px}.phone::after{margin-top:-22px}}@media (max-width:400px){.phone::before,.phone::after{width:40px;height:40px}.phone::after{margin-top:-20px}}@media (max-width:360px){.phone::before,.phone::after{width:38px;height:38px}.phone::after{margin-top:-19px}}a[href^="tel:"]{white-space:nowrap!important}</style>
+<style id="ft-company-st">footer .ft-company{--ft-company-size:.5625rem;margin-top:16px;font-size:var(--ft-company-size);font-weight:400;line-height:1.5;letter-spacing:0;color:#858589;overflow-wrap:anywhere}footer .ft-company p{margin:0;font:inherit;color:inherit}footer .ft-company p+p{margin-top:4px}</style>
+<style id="chk-cur">/* курсор над чекбоксами и вариантами ответа — фирменное кольцо и подсветка квадрата (tools/site/chk_cursor.py, вариант А, 20.11.2026) */html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:none}html.has-cursor:has(.f-check-list input:hover,.rp-chip>input:hover) .cursor.text .cursor-ring{opacity:1}@supports not selector(:has(*)){html.has-cursor .f-check-list input,html.has-cursor .f-check-list label,html.has-cursor .rp-chip>input{cursor:pointer}}@media (hover:hover) and (pointer:fine){.f-check-list label:hover input{box-shadow:0 0 0 4px rgba(124,134,255,.14)}.f-check-list label:hover input:not(:checked){border-color:rgba(124,134,255,.8);background-color:rgba(124,134,255,.12);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%23a5abff' stroke-opacity='.6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}.f-check-list label:hover input:checked{border-color:#a5abff;box-shadow:0 0 0 4px rgba(124,134,255,.18)}.f-check-list label:hover>span{color:var(--t1)}.rp-chip:hover>span::before{border-color:var(--acc);background:rgba(124,134,255,.22)}}</style>
+<!-- UIS -->
+    <script type="text/javascript" async src="https://app.uiscom.ru/static/cs.min.js?k=ICWycQx6m3NSBe3WlCeDAdAKMTmNhMHC"></script>
+<!-- UIS -->
+</head>
+<body class="d-page">
+<!-- Yandex.Metrika counter: noscript -->
+<noscript><div><img src="https://mc.yandex.ru/watch/113675622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<!-- ============ INTRO ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-in">
+    <svg class="intro-mark" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linejoin="round"><path class="im-shield" pathLength="100" d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z" stroke="#fff"/><circle class="im-c" pathLength="100" cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path class="im-x" pathLength="100" d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg>
+    <div class="intro-word"><span>ПЕСТКОНТРОЛЬ</span><b>Центр</b></div>
+    <div class="intro-bar"><i></i></div>
+  </div>
+</div>
+
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+<div class="cursor" aria-hidden="true"><i class="cursor-dot"></i><i class="cursor-ring"></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span>
+      <span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <div class="nav-dd"><button class="nav-dd-btn active" type="button" aria-expanded="false" aria-controls="nav-uslugi">Услуги<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-uslugi"><a href="../"><span><span class="nw">Пест-контроль</span> для бизнеса</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dezinfektsiya/">Дезинфекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="./" aria-current="page">Дератизация для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dezinsektsiya/">Дезинсекция для организаций<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../deratizatsiya-i-dezinsektsiya/">Дератизация и дезинсекция<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../laboratornye-issledovaniya/">Лабораторные исследования<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../razrabotka-ppk/">Разработка ППК<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#vse-uslugi" class="nav-dd-all">Все услуги<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-otrasli">Отрасли<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-otrasli"><a href="../pishchevoe-proizvodstvo/">Пищевые производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../restorany-i-kafe/">Рестораны и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../dezinsektsiya/restorany-i-kafe/" class="nav-sub">Дезинсекция кафе и ресторанов<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../deratizatsiya/restorany-i-kafe/" class="nav-sub">Дератизация ресторанов и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../sklady-i-logistika/">Склады и логистика<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../gostinitsy/">Гостиницы и отели<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../biznes-tsentry-torgovye-tsentry-predpriyatiya/">Бизнес-центры, ТЦ и предприятия<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../#otrasli" class="nav-dd-all">Все отрасли<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор</a><a href="../#podhod">Метод IPM</a><a href="#stoimost">Цена</a><div class="nav-dd"><button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="nav-materialy">Материалы<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-panel" id="nav-materialy"><a href="../normativnaya-baza/">Нормативная база<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/">Оценка эффективности дератизации и дезинсекции<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/skhema-tochek-pest-kontrolya/"><span>Схема точек <span class="nw">пест-контроля</span></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/akt-deratizatsii-i-dezinsektsii/">Акт дератизации и дезинсекции<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="../materialy/" class="nav-dd-all">Все материалы<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+    </nav>
+    <div class="hdr-right">
+      <button class="srch-btn" type="button" data-srch aria-label="Поиск по сайту" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.6-3.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <a class="phone" href="tel:+74951043570">+7 (495) 104-35-70</a>
+      <a href="#zayavka" class="btn btn-w btn-sm" data-magnet><span class="btn-t">Бесплатный выезд</span></a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mmenu" id="mmenu" aria-label="Мобильное меню">
+  <div class="mm-group open" data-open><button class="mm-toggle" type="button" aria-expanded="true" aria-controls="mm-uslugi">Услуги<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-uslugi"><div><a href="../"><span><span class="nw">Пест-контроль</span> для бизнеса</span></a><a href="../dezinfektsiya/">Дезинфекция для организаций</a><a href="./" aria-current="page">Дератизация для организаций</a><a href="../dezinsektsiya/">Дезинсекция для организаций</a><a href="../deratizatsiya-i-dezinsektsiya/">Дератизация и дезинсекция</a><a href="../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a><a href="../laboratornye-issledovaniya/">Лабораторные исследования</a><a href="../razrabotka-ppk/">Разработка ППК</a><a href="../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора</a><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на обслуживание</a><a href="#vse-uslugi">Все услуги</a></div></div></div><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-otrasli">Отрасли<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-otrasli"><div><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети</a><a href="../restorany-i-kafe/">Рестораны и кафе</a><a href="../dezinsektsiya/restorany-i-kafe/" class="nav-sub">Дезинсекция кафе и ресторанов</a><a href="../deratizatsiya/restorany-i-kafe/" class="nav-sub">Дератизация ресторанов и кафе</a><a href="../sklady-i-logistika/">Склады и логистика</a><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a><a href="../gostinitsy/">Гостиницы и отели</a><a href="../biznes-tsentry-torgovye-tsentry-predpriyatiya/">Бизнес-центры, ТЦ и предприятия</a><a href="../#otrasli">Все отрасли</a></div></div></div><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор <small>на дератизацию и дезинсекцию</small></a><a href="../#podhod">Метод IPM</a><a href="#stoimost">Цена</a><div class="mm-group"><button class="mm-toggle" type="button" aria-expanded="false" aria-controls="mm-materialy">Материалы<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="mm-sub" id="mm-materialy"><div><a href="../normativnaya-baza/">Нормативная база</a><a href="../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора</a><a href="../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/">Оценка эффективности дератизации и дезинсекции</a><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a><a href="../materialy/skhema-tochek-pest-kontrolya/"><span>Схема точек <span class="nw">пест-контроля</span></span></a><a href="../materialy/akt-deratizatsii-i-dezinsektsii/">Акт дератизации и дезинсекции</a><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a><a href="../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a><a href="../materialy/">Все материалы</a></div></div></div>
+  <a href="#zayavka" class="btn btn-w btn-lg"><span class="btn-t">Заказать бесплатное обследование</span></a>
+</nav>
+
+<main id="main" tabindex="-1">
+<span id="top"></span>
+
+<!-- ============ 1. ПЕРВЫЙ ЭКРАН (HERO) ============ -->
+<section class="d-hero" id="hero">
+  <div class="wrap">
+    <div class="d-hero-copy">
+      <nav class="d-crumbs" aria-label="Навигационная цепочка" data-h>
+        <a href="../">Главная</a><span aria-hidden="true">→</span><span aria-current="page">Дератизация для организаций</span>
+      </nav>
+      <div class="eyebrow" data-eyebrow>Система IPM · Только для юридических лиц</div>
+      <h1><span class="ln d-ln1"><span>Дератизация</span></span> <span class="ln d-ln2"><span><em>для&nbsp;организаций</em></span></span></h1>
+
+      <div class="d-hero-media" id="heroMedia">
+        <picture>
+          <source id="hero-src-mob" media="(max-width:860px)" srcset="../img/derat-hero-v1-mob-760.webp 760w, ../img/derat-hero-v1-mob.webp 1024w" sizes="100vw" width="1024" height="576">
+          <img id="hero-img" class="d-hero-img" src="../img/derat-hero-v1.webp" srcset="../img/derat-hero-v1-1440.webp 1440w, ../img/derat-hero-v1.webp 1920w" sizes="100vw" width="1920" height="1072" alt="Специалист ПЕСТКОНТРОЛЬ Центра проверяет пронумерованную станцию контроля грызунов № 12 у погрузочных ворот склада" fetchpriority="high" decoding="async">
+        </picture><div class="fx-lit" aria-hidden="true"><div class="fx-lit-in"><picture>
+          <source media="(max-width:860px)" srcset="../img/derat-hero-v1-mob-760.webp 760w, ../img/derat-hero-v1-mob.webp 1024w" sizes="100vw" width="1024" height="576">
+          <img class="d-hero-img fx-lit-img" src="../img/derat-hero-v1.webp" srcset="../img/derat-hero-v1-1440.webp 1440w, ../img/derat-hero-v1.webp 1920w" sizes="100vw" width="1920" height="1072" alt="" decoding="async">
+        </picture></div></div>
+      </div>
+
+      <ul class="d-ticks">
+        <li data-h>Три контура защиты: улица и площадка ТКО, ворота и рампы, внутренние зоны</li>
+        <li data-h>В цехах и на складах продукции — ловушки без токсичных приманок</li>
+        <li data-h>Схема точек, журнал и акты для Роспотребнадзора, ХАССП и торговых сетей</li>
+      </ul>
+      <p class="sub" data-h>Защищаем предприятия Москвы и области от крыс и мышей: перекрываем пути захода, ставим пронумерованные станции и ведём ежемесячный учёт. Выезд и расчёт схемы — бесплатно.</p>
+      <div class="d-btns" data-h>
+        <a href="#zayavka" class="btn btn-w btn-lg" data-magnet><span class="btn-t">Заказать бесплатное обследование</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:+74951043570" class="btn btn-o btn-lg d-tel-btn" data-magnet>+7 (495) 104-35-70</a>
+      </div>
+    </div>
+    <div aria-hidden="true"></div>
+  </div>
+</section>
+<script id="hero-in">(function(d,m){var p=d.documentElement;if(!p.classList.contains("js")||p.classList.contains("anim-fail")||!p.animate||m.matchMedia("(prefers-reduced-motion: reduce)").matches)return;var e=function(t,r){return(r||d).querySelector(t)},u=function(t,r){return[].slice.call((r||d).querySelectorAll(t))},h=e("#hero"),c=e(".d-hero")||e(".p-hero")||e(".f-hero");if(!h)return;var b=m.matchMedia("(hover: hover) and (pointer: fine)").matches,H=b&&!m.matchMedia("(max-width: 760px)").matches&&!p.classList.contains("lowfx"),E="cubic-bezier(.19,1,.22,1)",S="cubic-bezier(.87,0,.13,1)",o=.01,y=m.pcHero={t0:null},g=[];function n(t,r,a,i,l){t&&g.push(t.animate([r,a],{duration:i*1e3,delay:l*1e3,easing:E,fill:"backwards"}))}function s(t,r){return H&&(t.filter="blur("+r+"px)"),t}function L(t){var r=d.createEvent("Event");r.initEvent(t,!1,!1),d.dispatchEvent(r)}var M=!1,T=c&&e(".eyebrow",c);function w(){if(!M)if(M=!0,p.classList.add("hero-in"),c)u(".d-hero-img, .f-hero-img",c).forEach(function(a){n(a,{transform:"scale(1.12)"},{transform:"scale(1)"},2.2,0)}),u("h1 .ln>span",c).forEach(function(a,i){var l=.12+i*.1;getComputedStyle(a.parentNode).display!=="inline"?n(a,{transform:"translate(0,110%) rotate(3deg)"},{transform:"translate(0,0) rotate(0deg)"},1.3,l):n(a,{opacity:o,transform:"translate(0,22px)"},{opacity:1,transform:"translate(0,0)"},1.1,l)}),u("[data-h]",c).forEach(function(a,i){n(a,s({opacity:o,transform:"translate(0,18px)"},6),s({opacity:1,transform:"translate(0,0)"},0),1,.26+i*.06)}),u(".p-stack > a",c).forEach(function(a,i){n(a,s({opacity:o,translate:"0 70px"},8),s({opacity:1,translate:"0 0"},0),1.5,.3+i*.14)});else{u(".hero-bg, .hero-lit",h).forEach(function(a){n(a,{transform:"scale(1.18)"},{transform:"scale(1)"},2.6,0)}),n(e(".badge",h),s({opacity:o,transform:"translate(0,20px)"},8),s({opacity:1,transform:"translate(0,0)"},0),1.1,.1),u("h1 .ln>span",h).forEach(function(a,i){n(a,{transform:"translate(0,110%) rotate(3deg)"},{transform:"translate(0,0) rotate(0deg)"},1.4,.15+i*.11)}),n(e(".lead",h),s({opacity:o,transform:"translate(0,24px)"},8),s({opacity:1,transform:"translate(0,0)"},0),1.2,.4),n(e(".hero-ctas",h),{opacity:o,transform:"translate(0,24px)"},{opacity:1,transform:"translate(0,0)"},1.1,.5);var t=e("#panel");if(t){var r=b?"perspective(1200px) ":"";n(t,s({opacity:o,transform:r+"translate(70px,0) rotateY(-14deg)"},10),s({opacity:1,transform:r+"translate(0,0) rotateY(0deg)"},0),1.6,.3),u("li",t).forEach(function(a,i){n(a,{opacity:o,transform:"translate(24px,0)"},{opacity:1,transform:"translate(0,0)"},.9,.6+i*.08)})}n(e(".scroll-cue",h),{opacity:o},{opacity:1},1,1.1)}}function A(){if(c){var t=m.innerHeight||p.clientHeight;u('[data-group="cards"]',c).forEach(function(r){var a=[].slice.call(r.children);if(a.length){var i=Math.max(1,Math.round(r.offsetWidth/Math.max(1,a[0].offsetWidth)));a.forEach(function(l,I){l.getBoundingClientRect().top>t*.9||e(".ind-img, .d-obj-img, .d-kind-img, .d-swap-img, .pm-img, [data-reveal]",l)||(l.setAttribute("data-hin",""),l.animate([{opacity:o,transform:"translate(0,60px)"},{opacity:1,transform:"translate(0,0)"}],{duration:1300,delay:I%i*100,easing:E,fill:"backwards"}))})}})}}function N(){y.t0===null&&(w(),y.t0=m.performance.now(),T&&T.classList.add("in"),g.forEach(function(t){t.playState==="paused"&&t.play()}),L("pc:hero"))}var f=e("#intro");if(!f||m.location.hash||p.classList.contains("no-intro")){f&&f.parentNode.removeChild(f),N(),A();return}w(),g.forEach(function(t){t.pause()}),A();var k=!1,v=function(){if(!k){k=!0;var t=f.animate([{clipPath:"inset(0% 0% 0% 0%)"},{clipPath:"inset(0% 0% 100% 0%)"}],{duration:750,easing:S,fill:"forwards"}),r=function(){f.parentNode&&(f.parentNode.removeChild(f),y.introDone=!0,L("pc:intro"))};t.onfinish=r,setTimeout(N,300),setTimeout(r,2500)}},x=e(".intro-bar i",f),C=x&&x.getAnimations?x.getAnimations():[];C.length?Promise.all(C.map(function(t){return t.finished})).then(v,v):setTimeout(v,900),setTimeout(v,1500)})(document,window);</script>
+
+<!-- ============ БЕГУЩАЯ СТРОКА СТАНДАРТА ДЕРАТИЗАЦИИ ============ -->
+<div class="strip" aria-label="Стандарт барьерной дератизации">
+  <div class="strip-track" id="stripTrack">
+    <div class="strip-set">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><b>3 контура</b> барьерной защиты</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-scan-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg><b>Бесплатный выезд</b> и расчёт за 1 час</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><b>Контейнеры КИК</b> на ключ по периметру</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-ban" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg><b>Без ядов</b> в цехах и складах продукции</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-map-pinned" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 01-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0112 0"/><path d="M4.474 15h-.197a1 1 0 00-.969.753l-1.097 4.35a1.5 1.5 0 001.444 1.898L20.344 22a1.5 1.5 0 001.446-1.897l-1.098-4.35a1 1 0 00-.969-.753h-.197"/><circle cx="12" cy="8" r="2"/></svg><b>План-схема точек</b> с нумерацией</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4"/><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg><b>Журнал и акт</b> после каждого визита</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88"/><circle cx="6" cy="14" r="3"/></svg><b>СанПиН 3.3686-21</b> и МР 3.5.3.0374-25</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Выезд за 3 часа</b> по сигналу 24/7</div>
+    </div>
+    <div class="strip-set" aria-hidden="true">
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><b>3 контура</b> барьерной защиты</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-scan-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg><b>Бесплатный выезд</b> и расчёт за 1 час</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><b>Контейнеры КИК</b> на ключ по периметру</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-ban" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg><b>Без ядов</b> в цехах и складах продукции</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-map-pinned" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 01-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0112 0"/><path d="M4.474 15h-.197a1 1 0 00-.969.753l-1.097 4.35a1.5 1.5 0 001.444 1.898L20.344 22a1.5 1.5 0 001.446-1.897l-1.098-4.35a1 1 0 00-.969-.753h-.197"/><circle cx="12" cy="8" r="2"/></svg><b>План-схема точек</b> с нумерацией</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-notebook-pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4"/><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg><b>Журнал и акт</b> после каждого визита</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88"/><circle cx="6" cy="14" r="3"/></svg><b>СанПиН 3.3686-21</b> и МР 3.5.3.0374-25</div>
+      <div class="strip-item"><svg aria-hidden="true" focusable="false" class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Выезд за 3 часа</b> по сигналу 24/7</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 2. БЫСТРАЯ САМОПРОВЕРКА ОБЪЕКТА ============ -->
+<section class="f-checks" id="samoproverka" aria-labelledby="chk-t" data-chk-name="дератизация" data-chk-title="Бесплатное обследование объекта" data-chk-lead="Приедем на объект в Москве или области, проверим защиту от грызунов, точки контроля и журнал и покажем, что поправить.">
+  <div class="wrap">
+    <div class="panel f-check" data-fade>
+      <div class="panel-scan" aria-hidden="true"></div>
+      <div class="panel-glare" aria-hidden="true"></div>
+      <div class="f-check-in">
+        <div class="f-check-l">
+          <div class="eyebrow" data-eyebrow>Самопроверка объекта</div>
+          <h2 id="chk-t" class="f-check-t" data-split>Проверьте защиту объекта <em>от&nbsp;грызунов</em></h2>
+          <div class="f-check-score"><p class="f-check-res"><b id="chk-n">0</b> из 5</p><span class="f-check-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
+        </div>
+        <ul class="f-check-list">
+          <li><label><input type="checkbox"><span>Контейнеры с приманкой стоят снаружи здания и закреплены к основанию</span></label></li>
+          <li><label><input type="checkbox"><span>В цехах и на складах продуктов нет ядов — только механические и клеевые ловушки</span></label></li>
+          <li><label><input type="checkbox"><span>Каждая точка пронумерована на стене и нанесена на план-схему объекта</span></label></li>
+          <li><label><input type="checkbox"><span>В журнале записан осмотр каждой точки: поедаемость, следы, отлов и замена пластин</span></label></li>
+          <li><label><input type="checkbox"><span>Техслужба получает список щелей, проёмов и вводов, через которые идут грызуны</span></label></li>
+        </ul>
+        <div class="f-check-f">
+          <p class="f-check-note" id="chk-note" aria-live="polite">Если хотя бы одного пункта нет — грызуны будут заходить снова, а у инспектора или аудитора появятся замечания. На бесплатном выезде покажем, что поправить.</p>
+          <a href="#zayavka" data-chk-open aria-haspopup="dialog" class="btn btn-w btn-lg" data-magnet><span class="btn-t f-bt-d">Заказать бесплатное обследование</span><span class="btn-t f-bt-m">Заказать обследование</span></a>
+          <p class="f-check-tip">Откроется короткая форма. Ваши отметки уйдут вместе с заявкой.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script id="f-check-js">/* самопроверка (tools/site/samoproverka.py): отрезков полоски столько, сколько показывает цифра счёта; пока блок в средней половине экрана — класс f-check-on у <html>, нижняя панель «Позвонить / Обследование» уезжает вниз */(function(){var s=document.getElementById("samoproverka");if(!s)return;var p=s.querySelector(".f-check")||s,b=s.querySelector(".f-check-bar"),r=s.querySelector(".f-check-res");if(b&&r){var g=b.children,u=function(){var k=r.querySelector("b"),n=k?parseInt(k.textContent,10):NaN,i,c;if(isNaN(n)){n=0;c=s.querySelectorAll(".f-check-list input[type=checkbox]");for(i=0;i<c.length;i++)if(c[i].checked)n++}for(i=0;i<g.length;i++)g[i].classList.toggle("on",i<n)};s.addEventListener("change",function(){setTimeout(u,0)});u()}if("IntersectionObserver" in window){var h=document.documentElement;new IntersectionObserver(function(e){h.classList.toggle("f-check-on",e[e.length-1].isIntersecting)},{rootMargin:"-25% 0px -25% 0px"}).observe(p)}})();</script>
+
+<!-- ============ 3. ТРИ КОНТУРА БАРЬЕРНОЙ ЗАЩИТЫ (ИНТЕРАКТИВНАЯ СХЕМА) ============ -->
+<section class="s" id="kontury">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Барьерная дератизация</div>
+      <h2 data-split>Три контура защиты предприятия <em>от&nbsp;крыс и&nbsp;мышей</em></h2>
+      <p class="sub" data-fade>Грызуны идут снаружи — с площадок ТКО, соседних участков, из теплотрасс и с паллетами поставщиков. Система IPM перехватывает их на подходах к зданию.</p>
+    </div>
+    <div class="f-zmap" data-fade>
+      <figure class="card f-plan">
+        <svg viewBox="0 0 920 560" role="img" aria-labelledby="plan-derat-t">
+          <title id="plan-derat-t">Схема трёх контуров дератизации на объекте: внешний периметр, контур здания с рампами и внутренние зоны без яда</title>
+          <g class="z" data-z="1">
+            <rect class="zf" x="14" y="14" width="892" height="532" rx="22" stroke="rgba(253,199,0,.45)" stroke-width="2" stroke-dasharray="8 8"/>
+          </g>
+          <rect x="44" y="42" width="136" height="76" rx="8" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+          <g class="lbl"><text x="60" y="85">Площадка ТКО</text><text x="690" y="528">Контур 1 · Периметр территории</text></g>
+          <g class="z" data-z="2">
+            <rect class="zf" x="126" y="144" width="668" height="324" rx="10" stroke="rgba(56,189,248,.48)" stroke-width="2.5"/>
+          </g>
+          <g class="z" data-z="3">
+            <rect class="zf" x="142" y="160" width="636" height="292" rx="6" fill="#0d0d11"/>
+          </g>
+          <g fill="none" stroke="rgba(255,255,255,.24)" stroke-width="2" stroke-linecap="round">
+            <path d="M142 160H778V452H142Z"/>
+            <path d="M312 160V452M564 160V452M312 316H564"/>
+          </g>
+          <g stroke="#38bdf8" stroke-width="5" stroke-linecap="round">
+            <path d="M142 228V282M142 346V400M778 268V332"/>
+          </g>
+          <g fill="rgba(255,255,255,.035)" stroke="rgba(255,255,255,.15)" stroke-width="1.5">
+            <rect x="176" y="196" width="102" height="56" rx="4"/>
+            <rect x="176" y="352" width="102" height="62" rx="4"/>
+            <rect x="348" y="192" width="180" height="34" rx="6"/>
+            <rect x="348" y="250" width="180" height="34" rx="6"/>
+            <rect x="348" y="346" width="82" height="72" rx="5"/>
+            <rect x="448" y="346" width="80" height="72" rx="5"/>
+            <rect x="600" y="196" width="56" height="218" rx="4"/>
+            <rect x="682" y="196" width="56" height="218" rx="4"/>
+          </g>
+          <g class="lbl">
+            <text x="178" y="314">Рампа и приёмка</text>
+            <text x="366" y="182">Производственный цех</text>
+            <text x="358" y="438">Техпомещения и щитовая</text>
+            <text x="602" y="438">Склад сырья и продукции</text>
+          </g>
+          <g fill="#fdc700" stroke="#09090b" stroke-width="2">
+            <rect x="32" y="128" width="14" height="14" rx="3"/>
+            <rect x="190" y="54" width="14" height="14" rx="3"/>
+            <rect x="450" y="32" width="14" height="14" rx="3"/>
+            <rect x="740" y="32" width="14" height="14" rx="3"/>
+            <rect x="868" y="220" width="14" height="14" rx="3"/>
+            <rect x="868" y="420" width="14" height="14" rx="3"/>
+            <rect x="450" y="514" width="14" height="14" rx="3"/>
+            <rect x="120" y="514" width="14" height="14" rx="3"/>
+          </g>
+          <g fill="#38bdf8" stroke="#09090b" stroke-width="2">
+            <rect x="118" y="206" width="13" height="13" rx="2"/>
+            <rect x="118" y="290" width="13" height="13" rx="2"/>
+            <rect x="118" y="408" width="13" height="13" rx="2"/>
+            <rect x="270" y="136" width="13" height="13" rx="2"/>
+            <rect x="510" y="136" width="13" height="13" rx="2"/>
+            <rect x="710" y="136" width="13" height="13" rx="2"/>
+            <rect x="786" y="246" width="13" height="13" rx="2"/>
+            <rect x="786" y="342" width="13" height="13" rx="2"/>
+            <rect x="270" y="458" width="13" height="13" rx="2"/>
+            <rect x="520" y="458" width="13" height="13" rx="2"/>
+            <rect x="710" y="458" width="13" height="13" rx="2"/>
+          </g>
+          <g fill="#7c86ff">
+            <circle cx="160" cy="180" r="6"/><circle cx="160" cy="322" r="6"/><circle cx="296" cy="240" r="6"/><circle cx="296" cy="428" r="6"/>
+            <circle cx="332" cy="180" r="6"/><circle cx="546" cy="180" r="6"/><circle cx="332" cy="298" r="6"/><circle cx="546" cy="298" r="6"/>
+            <circle cx="332" cy="340" r="6"/><circle cx="546" cy="432" r="6"/>
+            <circle cx="582" cy="180" r="6"/><circle cx="758" cy="180" r="6"/><circle cx="582" cy="432" r="6"/><circle cx="758" cy="432" r="6"/>
+          </g>
+          <g class="bdgs">
+            <g class="bdg" data-z="1"><circle cx="236" cy="62" r="22"/><text x="236" y="63">1</text></g>
+            <g class="bdg" data-z="2"><circle cx="102" cy="172" r="22"/><text x="102" y="173">2</text></g>
+            <g class="bdg" data-z="3"><circle cx="438" cy="304" r="22"/><text x="438" y="305">3</text></g>
+          </g>
+        </svg>
+        <figcaption class="f-legend">
+          <span><i class="lg-st"></i>Контур 1: станции КИК с приманкой по территории и у ТКО</span>
+          <span><i class="lg-rm"></i>Контур 2: станции КИК у цоколя, ворот и рамп</span>
+          <span><i class="lg-tr"></i>Контур 3: ловушки без яда внутри помещений</span>
+        </figcaption>
+      </figure>
+      <ol class="f-zlist" data-group="steps">
+        <li data-z="1" tabindex="0">
+          <b>Внешний периметр и площадка ТКО</b>
+          <span>Вдоль забора, у контейнерной площадки, хоздвора и ливневых колодцев крепим закрытые контейнеры КИК с влагостойкими блоками и тампонируем жилые норы.</span>
+          <small>Останавливает миграцию крыс с соседних участков</small>
+        </li>
+        <li data-z="2" tabindex="0">
+          <b>Периметр здания, ворота и рампы</b>
+          <span>Вдоль цоколя, у погрузочных доков, дебаркадеров и вводов коммуникаций ставим станции КИК на ключ и выдаём список щелей и проёмов под герметизацию.</span>
+          <small>Перехватывает грызунов при попытке зайти в корпус</small>
+        </li>
+        <li data-z="3" tabindex="0">
+          <b>Внутренние помещения (без яда в цехах)</b>
+          <span>В производственных цехах, на складах сырья и в залах ставим механические живоловки и клеевые туннели. Родентициды рядом с продукцией не применяются.</span>
+          <small>Соответствует ХАССП, FSSC 22000 и СанПиН 3.3686-21</small>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. КОГО УНИЧТОЖАЕМ И КОНТРОЛИРУЕМ ============ -->
+<section class="s pests-s" id="vidy">
+  <div class="pests-bg f-lazy" data-parallax-bg aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Целевые виды</div>
+      <h2 data-split>Против каких грызунов <em>строим защиту</em></h2>
+      <p class="sub" data-fade>На промплощадках, складах и в общепите обитают три синантропных вида. У каждого свои маршруты и повадки — учитываем их при выборе станций и приманок.</p>
+    </div>
+    <div class="pests d-pests3" data-group="pests">
+      <article class="card pest c">
+        <div class="pest-img ig-pi"><img width="240" height="240" decoding="async" loading="lazy" src="../img/ig-pest-krysa-240.webp" alt="Серая крыса (пасюк)"><i class="scan" aria-hidden="true"></i></div>
+        <div class="pest-b">
+          <div class="pest-t"><h3>Серая крыса (пасюк)</h3><span class="lvl z">Подвалы · ТКО · рампы</span></div>
+          <div class="lat">Rattus norvegicus · норы в грунте, теплотрассы, приямки</div>
+          <p>Прогрызает бетон слабых марок, монтажную пену и изоляцию силовых кабелей — вплоть до короткого замыкания и остановки холодильников. Осторожна к новым предметам, поэтому применяем антикоагулянты отсроченного действия в стационарных КИК и тампонирование нор.</p>
+          <div class="bar"><div class="bar-l"><span>Угроза инженерным сетям и сырью</span><span>Критическая</span></div><div class="bar-t"><div class="bar-f" data-w="95" style="--w:95%"></div></div></div>
+        </div>
+      </article>
+      <article class="card pest h">
+        <div class="pest-img ig-pi"><img width="240" height="240" decoding="async" loading="lazy" src="../img/ig-pest-krysa-chernaya-240.webp" alt="Чёрная крыса"><i class="scan" aria-hidden="true"></i></div>
+        <div class="pest-b">
+          <div class="pest-t"><h3>Чёрная крыса</h3><span class="lvl z">Стеллажи · лотки · чердаки</span></div>
+          <div class="lat">Rattus rattus · верхние ярусы складов, балки, вентшахты</div>
+          <p>Передвигается по кабельным эстакадам, трубам и верхним ярусам паллетных стеллажей, гнездится под кровлей и в межпотолочных пространствах. Напольных станций против неё недостаточно — контролируем высотные трассы, антресоли и кабельные вводы.</p>
+          <div class="bar"><div class="bar-l"><span>Угроза высотным складам и кровле</span><span>Высокая</span></div><div class="bar-t"><div class="bar-f" data-w="84" style="--w:84%"></div></div></div>
+        </div>
+      </article>
+      <article class="card pest m">
+        <div class="pest-img ig-pi"><img width="240" height="240" decoding="async" loading="lazy" src="../img/ig-pest-mysh-240.webp" alt="Домовая мышь"><i class="scan" aria-hidden="true"></i></div>
+        <div class="pest-b">
+          <div class="pest-t"><h3>Домовая мышь</h3><span class="lvl z">Паллеты · тара · цеха</span></div>
+          <div class="lat">Mus musculus · заходит с поставками и через щели от 6–8 мм</div>
+          <p>Регулярно завозится внутрь с паллетами сырья и гофротарой, селится внутри термоизоляции сэндвич-панелей и под фальшполами. Портит упаковку и оставляет помёт в продуктовых зонах, из-за чего бракуется вся партия; шаг установки ловушек сокращаем до 3–6 м.</p>
+          <div class="bar"><div class="bar-l"><span>Риск забраковки партий и возврата</span><span>Высокий</span></div><div class="bar-t"><div class="bar-f" data-w="88" style="--w:88%"></div></div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. ОБОРУДОВАНИЕ И МЕТОДЫ ДЕРАТИЗАЦИИ ============ -->
+<section class="s" id="oborudovanie">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Оборудование и препараты</div>
+      <h2 data-split>Чем оснащаем контуры <em>защиты объекта</em></h2>
+      <p class="sub" data-fade>На предприятиях не раскладывают приманку в открытых лотках или кульках. Каждая точка закрыта на ключ, закреплена к стене или полу и отмечена номерной биркой.</p>
+    </div>
+    <div class="d-cards" data-group="tasks">
+      <article class="d-card d-kind" data-tilt>
+        <div class="d-kind-img"><img src="../img/programma-kik-rampa.webp" srcset="../img/programma-kik-rampa-720.webp 720w, ../img/programma-kik-rampa.webp 1200w" sizes="(max-width:600px) calc(100vw - 40px), (max-width:860px) 42vw, (max-width:1900px) 30vw, 570px" width="1200" height="670" loading="lazy" decoding="async" alt="Антивандальный приманочный контейнер КИК с номерной табличкой у погрузочной рампы" data-parallax></div>
+        <div class="d-kind-b">
+          <span class="f-lbl">Контур 1 и 2 · Улица и периметр</span>
+          <h3>Контейнеры КИК и родентициды</h3>
+          <ul>
+            <li><strong>Антивандальные станции КИК:</strong> ударопрочный пластик или металл, замок со спецключом, анкерное крепление к основанию.</li>
+            <li><strong>Фиксация приманки:</strong> парафинированные брикеты и тесто-брикеты на металлическом стержне — грызун не может растащить яд по территории.</li>
+            <li><strong>Маркировка:</strong> на крышке и стене — номер точки по схеме, предупреждающий знак и дата ревизии.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="d-card d-kind" data-tilt>
+        <div class="d-kind-img"><img src="../img/derat-hero-v3-1440.webp" srcset="../img/derat-hero-v3-mob-760.webp 760w, ../img/derat-hero-v3-1440.webp 1440w" sizes="(max-width:600px) calc(100vw - 40px), (max-width:860px) 42vw, (max-width:1900px) 30vw, 570px" width="1440" height="804" loading="lazy" decoding="async" alt="Специалист проверяет механическую живоловку без яда № 08 внутри склада" data-parallax></div>
+        <div class="d-kind-b">
+          <span class="f-lbl">Контур 3 · Внутри цехов и складов</span>
+          <h3>Механические живоловки и клеевые туннели</h3>
+          <ul>
+            <li><strong>Многоместные живоловки:</strong> стальные станции с прозрачным окном ревизии для отлова без применения токсичных веществ.</li>
+            <li><strong>Закрытые клеевые туннели:</strong> пластины с пищевым аттрактантом в корпусах, защищённых от пыли, влаги и случайного наступания.</li>
+            <li><strong>Безопасность для продукта:</strong> исключают попадание родентицида в сырьё и гибель грызунов в труднодоступных полостях цеха.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="d-card d-kind" data-tilt>
+        <div class="d-kind-img"><img src="../img/dogovor-vid-deratizatsiya.webp" srcset="../img/dogovor-vid-deratizatsiya-720.webp 720w, ../img/dogovor-vid-deratizatsiya.webp 1200w" sizes="(max-width:600px) calc(100vw - 40px), (max-width:860px) 42vw, (max-width:1900px) 30vw, 570px" width="1200" height="670" loading="lazy" decoding="async" alt="Инженер пест-контроля проверяет приманочную станцию с фонарём у ворот склада" data-parallax></div>
+        <div class="d-kind-b">
+          <span class="f-lbl">Мониторинг и ликвидация очагов</span>
+          <h3>Нетоксичные индикаторы и тампонирование нор</h3>
+          <ul>
+            <li><strong>Следовые площадки и УФ-маркеры:</strong> выявляют маршруты крыс вдоль стен и за фальшпанелями при низкой плотности популяции.</li>
+            <li><strong>Нетоксичные блоки-индикаторы:</strong> показывают факт захода грызуна в станцию там, где постоянное хранение ядов не требуется.</li>
+            <li><strong>Истребление и ротация ДВ:</strong> глубинное тампонирование жилых нор и чередование бродифакума, бромадиолона, флокумафена, дифенакума и холекальциферола.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <p class="d-note" data-fade>Применяем средства, зарегистрированные в РФ: передаём копии СГР, паспорта безопасности и инструкции с расчётом дозировок для папки ХАССП и производственного контроля.</p>
+  </div>
+</section>
+
+<!-- ============ 6. МЕТОД IPM НА КАЖДОМ ВИЗИТЕ (ЦИКЛ IPM) ============ -->
+<section class="s" id="podhod">
+  <div class="wrap appr appr-pin">
+    <div>
+      <div>
+        <div class="eyebrow" data-eyebrow>Цикл IPM-дератизации</div>
+        <h2 data-split>Четыре шага инженера <em>на&nbsp;каждом визите</em></h2>
+        <p class="sub" data-scrub>Дератизация по системе IPM — это не просто замена брикетов по календарю. На каждом выезде специалист проверяет станции по схеме, контролирует герметичность контура, считает поедаемость и корректирует защиту до появления вспышки.</p>
+      </div>
+      <div class="steps" data-group="steps">
+        <div class="card step" data-i="0"><span class="n">01</span><div><h3>Ревизия всех точек КИК и ловушек</h3><p>Открываем каждый контейнер и ловушку по номерному списку, очищаем от пыли, меняем клеевые подложки и приманочные блоки, отмечаем нетронутые и сработавшие точки.</p></div></div>
+        <div class="card step" data-i="1"><span class="n">02</span><div><h3>Проверка инженерного барьера</h3><p>Осматриваем уплотнители секционных ворот, продухи, кабельные проходки и отмостку. Новые щели от 5 мм и следы подкопов фотографируем для техслужбы объекта.</p></div></div>
+        <div class="card step" data-i="2"><span class="n">03</span><div><h3>Учёт поедаемости и анализ трендов</h3><p>Сводим активность по контурам и зонам риска, сравниваем с прошлыми месяцами и сезонной миграцией грызунов, заполняем журнал и ежемесячную оценку по п. 110 СанПиН 3.3686-21.</p></div></div>
+        <div class="card step" data-i="3"><span class="n">04</span><div><h3>Уплотнение контура и ротация ДВ</h3><p>В зонах, где зафиксированы погрызы или отлов, ставим дополнительные точки перехвата, тампонируем норы и меняем действующее вещество против резистентности.</p></div></div>
+      </div>
+    </div>
+    <div class="cycle" id="cycle" aria-hidden="true">
+      <div class="cycle-glow"></div><div class="cycle-ring"></div>
+      <svg class="cycle-svg" viewBox="0 0 100 100"><circle class="cycle-track" cx="50" cy="50" r="38"/><circle class="cycle-prog" id="cycleProg" cx="50" cy="50" r="38" pathLength="100"/></svg>
+      <div class="cycle-arc" id="cycleArc"></div><div class="cycle-dot" id="cycleDot"></div>
+      <div class="cycle-c"><div><b>IPM</b><span>цикл визита</span><em class="cycle-step" id="cycleNum">01 / 04</em></div></div>
+      <div class="node n1" data-i="0"><i><img src="../img/ig-osmotr-240.webp" width="104" height="104" alt="" loading="lazy" decoding="async"></i><b>Ревизия</b></div>
+      <div class="node n2" data-i="1"><i><img src="../img/ig-zashchita-240.webp" width="104" height="104" alt="" loading="lazy" decoding="async"></i><b>Барьер</b></div>
+      <div class="node n3" data-i="2"><i><img src="../img/ig-doc-otchet-240.webp" width="104" height="104" alt="" loading="lazy" decoding="async"></i><b>Учёт</b></div>
+      <div class="node n4" data-i="3"><i><img src="../img/ig-deratizatsiya-240.webp" width="104" height="104" alt="" loading="lazy" decoding="async"></i><b>Защита</b></div>
+    </div>
+  </div>
+</section>
+<script id="ipm-pin-js">(function () {
+  var cy = document.getElementById('cycle'), root = cy && cy.parentNode;
+  var prog = document.getElementById('cycleProg'), arc = document.getElementById('cycleArc'), lbl = document.getElementById('cycleNum');
+  if (!cy || !prog || !arc || !lbl) return;
+  var box = root.querySelector('.steps'), steps = [].slice.call(root.querySelectorAll('.step')), nodes = [].slice.call(cy.querySelectorAll('.node'));
+  var dot = document.getElementById('cycleDot'), N = steps.length;
+  var mq = matchMedia('(min-width: 1025px)'), fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var desk = mq.matches, cur = -1, shown = 0, target = 0, loop = 0, tick = 0, auto = 0, pinTop = 0, H = 0, tail = 0;
+  var setOn = function (i) {
+    if (i === cur) return; cur = i;
+    steps.forEach(function (s, j) { s.classList.toggle('on', j === i); });
+    nodes.forEach(function (n, j) { n.classList.toggle('on', j === i); n.classList.toggle('done', desk && j < i); });
+    lbl.textContent = '0' + (i + 1) + '\u00a0/ 0' + N;
+    if (!reduce) { lbl.classList.remove('flip'); void lbl.offsetWidth; lbl.classList.add('flip'); }
+  };
+  var draw = function (p) {
+    prog.style.strokeDashoffset = (100 - p * 100).toFixed(2);
+    if (desk) { var a = p * 360; if (dot) dot.style.transform = 'rotate(' + a.toFixed(2) + 'deg)'; arc.style.transform = 'rotate(' + (a - 90).toFixed(2) + 'deg)'; }
+    else arc.style.transform = 'rotate(' + (p * 540).toFixed(1) + 'deg)';
+  };
+  var ease = function () {
+    loop = 0;
+    var d = target - shown;
+    shown = reduce || Math.abs(d) < 0.0008 ? target : shown + d * 0.16;
+    draw(shown);
+    if (shown !== target) loop = requestAnimationFrame(ease);
+  };
+  var layout = function () {
+    desk = mq.matches;
+    root.style.removeProperty('--pin-pad');
+    if (!desk) { root.style.removeProperty('--pin-top'); return; }
+    var hdr = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdr-c')) || 64, vh = innerHeight;
+    H = cy.offsetHeight;
+    pinTop = Math.max(hdr + 16, hdr + (vh - hdr - H) / 2);
+    root.style.setProperty('--pin-top', pinTop.toFixed(1) + 'px');
+    var r = root.getBoundingClientRect(), a = steps[0].getBoundingClientRect(), z = steps[N - 1].getBoundingClientRect();
+    var pitch = N > 1 ? (z.top - a.top) / (N - 1) : z.height;
+    tail = pitch * 0.6;
+    /* круг откреплится, когда низ сетки поднимется к низу круга: к этому моменту середина последнего шага
+       должна уйти выше центра круга на «хвост» — тогда кольцо успевает замкнуться, пока круг закреплён */
+    var need = (z.top + z.height / 2 - r.top) + H / 2 + tail - (r.bottom - r.top);
+    if (need > 0) root.style.setProperty('--pin-pad', Math.ceil(need) + 'px');
+  };
+  var calc = function () {
+    tick = 0;
+    var vh = innerHeight, p = 0, i;
+    if (desk) {
+      var L = pinTop + H / 2, c = steps.map(function (s) { var b = s.getBoundingClientRect(); return b.top + b.height / 2; }), k = -1;
+      for (i = 0; i < N; i++) if (c[i] <= L) k = i;
+      if (k < 0) { p = 0; k = 0; }
+      else if (k < N - 1) p = (k + Math.min(1, (L - c[k]) / (c[k + 1] - c[k]))) / N;
+      else p = (k + Math.min(1, (L - c[k]) / tail)) / N;
+      setOn(k);
+    } else {
+      var b = cy.getBoundingClientRect(), s0 = vh * 0.85 - b.top, span = s0 + b.bottom - vh * 0.3;
+      p = Math.max(0, Math.min(1, span > 0 ? s0 / span : 0));
+      steps.forEach(function (s, j) { var r = s.getBoundingClientRect(); if (r.top <= vh * 0.62 && r.bottom >= vh * 0.62) setOn(j); });
+      var vis = b.top <= vh * 0.8 && b.bottom >= vh * 0.2;
+      if (vis && !auto && !reduce) auto = setInterval(function () { setOn((cur + 1) % N); }, 1800);
+      else if (!vis && auto) { clearInterval(auto); auto = 0; }
+    }
+    target = p;
+    if (!loop) loop = requestAnimationFrame(ease);
+  };
+  var onScroll = function () { if (!tick) tick = requestAnimationFrame(calc); };
+  var refresh = function () { if (auto) { clearInterval(auto); auto = 0; } layout(); calc(); };
+  setOn(0);
+  layout(); calc();
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', refresh);
+  addEventListener('load', refresh);
+  if (mq.addEventListener) mq.addEventListener('change', function () { cur = -1; nodes.forEach(function (n) { n.classList.remove('done'); }); refresh(); });
+  if (window.ResizeObserver) new ResizeObserver(function () { if (!tick) tick = requestAnimationFrame(function () { tick = 0; layout(); calc(); }); }).observe(box);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+  steps.forEach(function (s, i) { s.addEventListener('pointerenter', function () { if (fine) setOn(i); }); });
+})();</script>
+
+<!-- ============ 7. КАК ПРОХОДИТ РАБОТА ПО ДОГОВОРУ (ТАЙМЛАЙН + СРАВНЕНИЕ) ============ -->
+<section class="s" id="reglament">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Регламент работы</div>
+      <h2 data-split>От бесплатного выезда <em>до&nbsp;защищённого контура</em></h2>
+      <p class="sub" data-fade>Запускаем дератизацию на объекте от 3 часов после согласования. Все работы в цехах, торговых залах и на складах подстраиваем под график смен и отгрузок.</p>
+    </div>
+    <div class="tl" id="tl">
+      <div class="tl-line"><div class="tl-prog" id="tlprog"></div><i class="tl-head" id="tlhead"></i></div>
+      <div class="tl-row">
+        <div class="tl-txt"><div class="wk">Шаг 1 · 0 ₽</div><h3>Бесплатное обследование и проект договора за 1 час</h3><p>Инженер осматривает корпуса и прилегающую территорию, находит норы, тропы, погрызы и пути проникновения. В течение 1 часа после осмотра направляем проект договора с расчётом точек контроля и план-схемой.</p></div>
+        <div class="tl-img"><img width="1100" height="660" decoding="async" src="../img/step1.webp" srcset="../img/step1-720.webp 720w, ../img/step1.webp 1100w" sizes="(max-width:760px) calc(100vw - 112px), (max-width:1930px) 43vw, 830px" alt="Специалист осматривает помещения и инженерные вводы предприятия" loading="lazy" data-parallax></div>
+        <span class="tl-dot">01</span>
+      </div>
+      <div class="tl-row flip">
+        <div class="tl-txt"><div class="wk">Шаг 2 · Инженерный барьер</div><h3>Предписания по грызунонепроницаемости здания</h3><p>Передаём технической службе фотоотчёт по п. 111 СанПиН 3.3686-21: какие кабельные и трубные проходки заделать металлом или бетоном, где поставить стальные сетки (ячейка до 5×5 мм) и щёточные уплотнители ворот. <span id="proof-service-link">Инженерные работы можно обсудить отдельно: <a href="../zashchita-ot-proniknoveniya-gryzunov/" style="color:var(--acc);text-decoration:underline;text-underline-offset:4px">защита от проникновения грызунов</a>.</span></p></div>
+        <div class="tl-img"><img width="1200" height="670" decoding="async" src="../img/programma-plan-skhema.webp" srcset="../img/programma-plan-skhema-720.webp 720w, ../img/programma-plan-skhema.webp 1200w" sizes="(max-width:760px) calc(100vw - 112px), (max-width:1930px) 43vw, 830px" alt="План-схема размещения точек контроля грызунов и чек-лист" loading="lazy" data-parallax></div>
+        <span class="tl-dot">02</span>
+      </div>
+      <div class="tl-row">
+        <div class="tl-txt"><div class="wk">Шаг 3 · Запуск от 3 часов</div><h3>Установка и нумерация станций по трём контурам</h3><p>Закрепляем контейнеры КИК и механические ловушки к основанию, клеим на стены водостойкие номерные таблички и передаём ответственному сотруднику план-схему, журнал учёта и папку документов с СГР.</p></div>
+        <div class="tl-img"><img width="500" height="300" decoding="async" src="../img/step3.webp" alt="Установка и крепление станции контроля грызунов" loading="lazy" data-parallax></div>
+        <span class="tl-dot">03</span>
+      </div>
+      <div class="tl-row flip">
+        <div class="tl-txt"><div class="wk">Шаг 4 · По графику + 3 ч по сигналу</div><h3>Плановые визиты, ежемесячная оценка и срочные выезды</h3><p>Проверяем все точки по графику, ведём учёт поедаемости и отлова, раз в месяц проводим мойку и дезинфекцию станций. Если между визитами заметили грызуна — специалист выезжает на объект в течение 3 часов.</p></div>
+        <div class="tl-img"><img width="1100" height="660" decoding="async" src="../img/step4.webp" srcset="../img/step4-720.webp 720w, ../img/step4.webp 1100w" sizes="(max-width:760px) calc(100vw - 112px), (max-width:1930px) 43vw, 830px" alt="Специалист проверяет станцию контроля и вносит данные в журнал" loading="lazy" data-parallax></div>
+        <span class="tl-dot">04</span>
+      </div>
+    </div>
+
+    <table class="d-table d-vs" data-fade aria-label="Сравнение разовой раскладки яда и системной дератизации по системе IPM">
+      <thead>
+        <tr>
+          <th scope="col">Разовая раскладка яда</th>
+          <th scope="col">Системная дератизация по IPM (наш стандарт)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-l="Разовая раскладка яда">Открытые пакетики или лотки по углам — риск для продукции и штраф при проверке</td>
+          <td data-l="Системная дератизация по IPM">Закрытые станции КИК на ключ снаружи, механические и клеевые ловушки без яда внутри цехов</td>
+        </tr>
+        <tr>
+          <td data-l="Разовая раскладка яда">Щели и ворота остаются открытыми — через 2–4 недели заходят новые крысы с улицы</td>
+          <td data-l="Системная дератизация по IPM">Фотоотчёт для инженерной службы по герметизации вводов, продухов и погрузочных доков</td>
+        </tr>
+        <tr>
+          <td data-l="Разовая раскладка яда">Только формальный акт об обработке без схемы и учёта численности</td>
+          <td data-l="Системная дератизация по IPM">Пронумерованные точки на плане, объектовый журнал и ежемесячная оценка по п. 110 СанПиН 3.3686-21</td>
+        </tr>
+        <tr>
+          <td data-l="Разовая раскладка яда">При появлении крыс нужно заново искать исполнителя и платить за вызов</td>
+          <td data-l="Системная дератизация по IPM">Внеплановый выезд специалиста в течение 3 часов уже закреплён в договоре</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 8. ОБЪЕКТЫ И ОТРАСЛИ B2B ============ -->
+<section class="s" id="otrasli-b2b">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Объекты обслуживания</div>
+      <h2 data-split>Подстраиваем схему защиты <em>под&nbsp;тип вашего объекта</em></h2>
+      <p class="sub" data-fade>Работаем только с юридическими лицами и ИП. Тип станций, частота ревизий и форма отчётности зависят от отрасли и требований ваших проверяющих.</p>
+    </div>
+    <div class="inds" data-group="inds">
+      <article class="card ind" data-tilt>
+        <div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-bakery.webp" srcset="../img/ind-bakery-720.webp 720w, ../img/ind-bakery.webp 900w" sizes="(max-width:760px) calc(100vw - 56px), (max-width:1024px) 45vw, (max-width:1900px) 30vw, 570px" alt="Цех пищевого производства со станцией контроля" data-parallax></div>
+        <div class="ind-b">
+          <h3><svg aria-hidden="true" focusable="false" class="lucide lucide-factory" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg><a href="../pishchevoe-proizvodstvo/" class="ind-link">Пищевые производства</a></h3>
+          <p>Родентициды — строго на улице по периметру; в цехах и на складах сырья — механические и клеевые ловушки. Полная папка к аудиту торговой сети.</p>
+          <div class="tags"><span class="tag">ХАССП</span><span class="tag">FSSC 22000</span><span class="tag">ISO 22000</span></div><a class="ind-more" href="../pishchevoe-proizvodstvo/">Пест-контроль пищевых производств<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      <article class="card ind" data-tilt>
+        <div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-warehouse.webp" srcset="../img/ind-warehouse-720.webp 720w, ../img/ind-warehouse.webp 900w" sizes="(max-width:760px) calc(100vw - 56px), (max-width:1024px) 45vw, (max-width:1900px) 30vw, 570px" alt="Складской комплекс и логистический центр" data-parallax></div>
+        <div class="ind-b">
+          <h3><svg aria-hidden="true" focusable="false" class="lucide lucide-warehouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11"/><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z"/><path d="M6 13h12"/><path d="M6 17h12"/></svg>Склады, РЦ и логистика</h3>
+          <p>Барьер у погрузочных доков и ворот, защита высотных стеллажей и зон комплектации, регламент входного осмотра паллет от поставщиков.</p>
+          <div class="tags"><span class="tag">IFS Logistics</span><span class="tag">Доки и рампы</span></div><a class="ind-more" href="../sklady-i-logistika/">Пест-контроль складов и логистики<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      <article class="card ind" data-tilt>
+        <div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-retail.webp" srcset="../img/ind-retail-720.webp 720w, ../img/ind-retail.webp 900w" sizes="(max-width:760px) calc(100vw - 56px), (max-width:1024px) 45vw, (max-width:1900px) 30vw, 570px" alt="Магазин и торговая сеть" data-parallax></div>
+        <div class="ind-b">
+          <h3><svg aria-hidden="true" focusable="false" class="lucide lucide-shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/><path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></svg>Магазины и торговые сети</h3>
+          <p>Контроль дебаркадеров, подсобных складов, фасовочных и зон за холодильными горками. Один договор и общий график по всем точкам сети.</p>
+          <div class="tags"><span class="tag">Сети</span><span class="tag">Сводный отчёт</span></div><a class="ind-more" href="../magaziny-i-torgovye-seti/">Пест-контроль магазинов и сетей<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      <article class="card ind" data-tilt>
+        <div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-kitchen.webp" srcset="../img/ind-kitchen-720.webp 720w, ../img/ind-kitchen.webp 900w" sizes="(max-width:760px) calc(100vw - 56px), (max-width:1024px) 45vw, (max-width:1900px) 30vw, 570px" alt="Кухня ресторана и общепита" data-parallax></div>
+        <div class="ind-b">
+          <h3><svg aria-hidden="true" focusable="false" class="lucide lucide-utensils" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>Рестораны, кафе и пищеблоки</h3>
+          <p>Защита кухни, цехов, продуктовых кладовых и мусорных камер. Плановые и срочные выезды после закрытия — без запаха и остановки зала.</p>
+          <div class="tags"><span class="tag">Ночные окна</span><span class="tag">СанПиН</span></div><a class="ind-more" href="restorany-i-kafe/">Дератизация ресторанов и кафе<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      <article class="card ind" data-tilt>
+        <div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-bc-tc.webp" srcset="../img/ind-bc-tc-720.webp 720w, ../img/ind-bc-tc.webp 900w" sizes="(max-width:760px) calc(100vw - 56px), (max-width:1024px) 45vw, (max-width:1900px) 30vw, 570px" alt="Технический этаж и паркинг бизнес-центра: кабельные трассы, щитовая и станция контроля грызунов у стены" data-parallax></div>
+        <div class="ind-b">
+          <h3><svg aria-hidden="true" focusable="false" class="lucide lucide-building-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>Промпредприятия, БЦ и ТЦ</h3>
+          <p>Защита серверных, щитовых, подземных паркингов, технических этажей и подвалов от повреждения изоляции кабелей серыми и чёрными крысами.</p>
+          <div class="tags"><span class="tag">Щитовые</span><span class="tag">Паркинги и подвалы</span></div><a class="ind-more" href="../biznes-tsentry-torgovye-tsentry-predpriyatiya/">Пест-контроль бизнес-центров, ТЦ и предприятий<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      <article class="card ind" data-tilt>
+        <div class="ind-img"><img width="900" height="542" decoding="async" loading="lazy" src="../img/ind-pharma.webp" srcset="../img/ind-pharma-720.webp 720w, ../img/ind-pharma.webp 900w" sizes="(max-width:760px) calc(100vw - 56px), (max-width:1024px) 45vw, (max-width:1900px) 30vw, 570px" alt="Фармацевтический склад и чистые помещения" data-parallax></div>
+        <div class="ind-b">
+          <h3><svg aria-hidden="true" focusable="false" class="lucide lucide-pill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>Фармацевтические склады и заводы</h3>
+          <p>Закрытые ловушки-мониторы без пылящих и токсичных составов, валидируемая схема точек и регистрация каждого обхода по чек-листу.</p>
+          <div class="tags"><span class="tag">GDP · GMP</span><span class="tag">Чистые зоны</span></div><a class="ind-more" href="../farmatsevticheskie-proizvodstva/">Пест-контроль фармпредприятий<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. НОРМАТИВЫ И ПАПКА ДОКУМЕНТОВ ============ -->
+<section class="s" id="dokumenty">
+  <div class="wrap">
+    <div class="head head-row">
+      <div>
+        <div class="eyebrow" data-eyebrow>Нормативы и отчётность</div>
+        <h2 data-split>Документы по дератизации <em>для&nbsp;Роспотребнадзора и&nbsp;ХАССП</em></h2>
+      </div>
+      <p class="sub sub-side" data-fade>На проверках смотрят не только наличие договора, но и план-схему точек, объектовый журнал, расчёт средств и реестровую запись лицензии.</p>
+    </div>
+
+    <div class="kpis" data-group="kpis">
+      <div class="card kpi"><b data-count="12">12</b><i class="u">раз в год</i><span>Ежемесячная оценка по п. 110 СанПиН 3.3686-21</span></div>
+      <div class="card kpi"><b data-count="3">3</b><i class="u">контура</i><span>Барьерная схема КИК и ловушек по МР 3.5.3.0374-25</span></div>
+      <div class="card kpi"><b data-count="7">7</b><i class="u">документов</i><span>Полный комплект для РПН, ХАССП и аудита сети</span></div>
+      <div class="card kpi"><b data-count="100" data-suf="%">100%</b><span>Средств с СГР и действующая лицензия РПН</span></div>
+    </div>
+
+    <div class="docs" data-group="docs" style="margin-bottom:36px">
+      <article class="card doc"><span class="num">01</span><span class="ico"><img src="../img/ig-dogovor-240.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></span><h3>Договор и программа</h3><p>Площади, контуры защиты, целевые виды грызунов, график ревизий и время реагирования 3 часа по сигналу.</p></article>
+      <article class="card doc"><span class="num">02</span><span class="ico"><img src="../img/ig-doc-skhema-240.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></span><h3>План-схема точек</h3><p>Чертёж территории и помещений со сквозной нумерацией всех контейнеров КИК, живоловок и клеевых туннелей.</p></article>
+      <article class="card doc"><span class="num">03</span><span class="ico"><img src="../img/ig-doc-zhurnal-240.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></span><h3>Журнал дератизации</h3><p>Поточечный учёт после каждого обхода: дата, состояние станции, поедаемость приманки, отлов и замена пластин.</p></article>
+      <article class="card doc"><span class="num">04</span><span class="ico"><img src="../img/ig-doc-akt-240.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></span><h3>Акты и УПД</h3><p>Акты санитарно-эпидемиологического обследования и выполненных работ на бумаге или по ЭДО (с НДС и без НДС).</p></article>
+      <article class="card doc"><span class="num">05</span><span class="ico"><img src="../img/ig-doc-sgr-240.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></span><h3>СГР и лицензия</h3><p>Выписка из реестра лицензий № Л064-00111-77/01942445, удостоверения дезинфекторов, СГР и паспорта безопасности.</p></article>
+      <article class="card doc"><span class="num">06</span><span class="ico"><img src="../img/ig-doc-otchet-240.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></span><h3>Ежемесячный отчёт</h3><p>Оценка заселённости по зонам, анализ трендов и фотолист инженерно-технических предписаний для службы эксплуатации.</p></article>
+    </div>
+
+    <table class="d-table" data-fade>
+      <thead>
+        <tr>
+          <th scope="col">Норматив / документ</th>
+          <th scope="col">Что проверяют на объекте</th>
+          <th scope="col">Кто запрашивает</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-l="Норматив / документ">СанПиН 3.3686-21 (п. 97–131)</td>
+          <td data-l="Что проверяют на объекте">Объекты особого эпидемиологического значения (п. 98), защита зданий от проникновения грызунов (п. 111), ежемесячная оценка и проведение дератизации по её результатам (п. 110)</td>
+          <td data-l="Кто запрашивает">Роспотребнадзор, СЭС-аудит</td>
+        </tr>
+        <tr>
+          <td data-l="Норматив / документ">МР 3.5.3.0374-25 (взамен МУ 3.5.3.2949-11)</td>
+          <td data-l="Что проверяют на объекте">Актуальные с сентября 2025 г. методические рекомендации по организации, проведению и оценке эффективности дератизационных мероприятий. <a href="../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/" style="color:var(--acc);text-decoration:underline;text-underline-offset:3px">Как оценивают эффективность →</a></td>
+          <td data-l="Кто запрашивает">Служба качества, эксперты РПН</td>
+        </tr>
+        <tr>
+          <td data-l="Норматив / документ">ТР ТС 021/2011 (ст. 14) и ГОСТ Р 54762-2011 (разд. 12)</td>
+          <td data-l="Что проверяют на объекте">Документированная <a href="../materialy/programma-pest-kontrolya/" style="color:var(--acc);text-decoration:underline;text-underline-offset:3px">программа пест-контроля</a>, план-схема точек с запретом токсичных приманок в цехах, анализ трендов и корректирующие меры</td>
+          <td data-l="Кто запрашивает">Аудиторы ХАССП, FSSC 22000, торговые сети</td>
+        </tr>
+        <tr>
+          <td data-l="Норматив / документ">Лицензия № Л064-00111-77/01942445 (с 01.03.2025)</td>
+          <td data-l="Что проверяют на объекте">Действующая реестровая лицензия ООО «Центр дезинфекционных услуг» на дезинфекцию, дезинсекцию и дератизацию в <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211" target="_blank" rel="noopener" style="color:var(--acc);text-decoration:underline;text-underline-offset:3px">реестре Роспотребнадзора</a></td>
+          <td data-l="Кто запрашивает">Все проверяющие и служба безопасности</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 10. ТИПОВЫЕ ЗАДАЧИ КЛИЕНТОВ ============ -->
+<section class="s" id="zadachi">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Типовые задачи</div>
+      <h2 data-split>С какими задачами по грызунам <em>к&nbsp;нам обращаются</em></h2>
+    </div>
+    <div class="tasks" data-group="tasks">
+      <article class="card task">
+        <span class="chip-y">Аудит торговой сети</span>
+        <q>Через две недели аудит федеральной сети. Старый подрядчик оставлял только формальные акты — нет ни схемы точек КИК, ни поточечного журнала, а в цехе стоят приманочные лотки.</q>
+        <div class="who"><span class="ava"><svg aria-hidden="true" focusable="false" class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Руководитель службы качества</b><span>Пищевое производство · убираем яды из цеха на улицу, ставим номерные ловушки и собираем папку ХАССП за 1–2 дня</span></div></div>
+      </article>
+      <article class="card task">
+        <span class="chip-y">Миграция крыс на рампе</span>
+        <q>Осенью с соседней площадки и контейнеров ТКО к погрузочным докам пошли крысы. На приёмке нашли погрызенную паллету, опасаемся захода внутрь склада и повреждения проводки.</q>
+        <div class="who"><span class="ava"><svg aria-hidden="true" focusable="false" class="lucide lucide-warehouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11"/><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z"/><path d="M6 13h12"/><path d="M6 17h12"/></svg></span><div><b>Начальник складского комплекса</b><span>Логистика · тампонируем норы, выстраиваем плотный контур КИК у доков и закрываем зазоры ворот</span></div></div>
+      </article>
+      <article class="card task">
+        <span class="chip-y">Предписание или жалоба</span>
+        <q>В ресторане на первом этаже жилого дома грызуны выходят из подвала по стоякам в кладовую. Нужен ночной выезд без закрытия зала и пакет документов для ответа Роспотребнадзору.</q>
+        <div class="who"><span class="ava"><svg aria-hidden="true" focusable="false" class="lucide lucide-utensils" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span><div><b>Управляющий рестораном</b><span>Общепит · выезжаем после закрытия, перекрываем вводы стояков, ставим закрытые туннели и оформляем акты</span></div></div>
+      </article>
+    </div>
+    <div class="tasks-foot" data-fade>
+      <span class="ico"><svg aria-hidden="true" focusable="false" class="lucide lucide-lightbulb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span>
+      <p>Типовые рабочие ситуации на предприятиях. На бесплатном выезде инженер осмотрит ваш объект и покажет решение до подписания договора.</p>
+      <a href="#zayavka" class="link-arrow">Заказать обследование <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. СТОИМОСТЬ И УСЛОВИЯ ============ -->
+<section class="s" id="stoimost">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Стоимость и условия</div>
+      <h2 data-split>Сколько стоит дератизация <em>для&nbsp;предприятий</em></h2>
+      <p class="sub" data-fade>Стоимость зависит от площади зданий и территории, числа контуров защиты и кратности визитов. Точный расчёт со схемой точек присылаем в течение 1 часа после бесплатного осмотра.</p>
+    </div>
+    <table class="d-table d-price" data-fade>
+      <thead>
+        <tr>
+          <th scope="col">Объект / работа</th>
+          <th scope="col">Что входит в обслуживание</th>
+          <th scope="col">Ориентир</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-l="Объект / работа">Кафе, ресторан, общепит</td>
+          <td data-l="Что входит в обслуживание">Барьерная дератизация по договору, 1–2 визита в месяц, схема точек, журнал и акты</td>
+          <td data-l="Ориентир">от 3 500 ₽/мес</td>
+        </tr>
+        <tr>
+          <td data-l="Объект / работа">Магазин, супермаркет</td>
+          <td data-l="Что входит в обслуживание">Контроль торгового зала, склада и зоны разгрузки, 1–2 визита в месяц, журнал и акты</td>
+          <td data-l="Ориентир">от 3 500 ₽/мес</td>
+        </tr>
+        <tr>
+          <td data-l="Объект / работа">Склад до 1 000 м²</td>
+          <td data-l="Что входит в обслуживание">Внешний и внутренний контуры защиты, контроль ворот и рамп, 1–2 визита в месяц</td>
+          <td data-l="Ориентир">от 4 500 ₽/мес</td>
+        </tr>
+        <tr>
+          <td data-l="Объект / работа">Пищевое производство, завод, РЦ</td>
+          <td data-l="Что входит в обслуживание">Трёхконтурная защита по зонам ХАССП / FSSC 22000, ежемесячная оценка и отчёт по трендам</td>
+          <td data-l="Ориентир">после бесплатного выезда</td>
+        </tr>
+        <tr>
+          <td data-l="Объект / работа">Разовая истребительная дератизация</td>
+          <td data-l="Что входит в обслуживание">Подавление активного очага крыс или мышей в производственных и складских зданиях</td>
+          <td data-l="Ориентир">от 3 500 ₽</td>
+        </tr>
+        <tr>
+          <td data-l="Объект / работа">Контейнеры КИК и ловушки</td>
+          <td data-l="Что входит в обслуживание">Первичное оснащение объекта антивандальными станциями контроля и механическими ловушками</td>
+          <td data-l="Ориентир">от 600 ₽ за точку</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-cols3" data-group="tasks">
+      <div class="d-card" data-tilt>
+        <h3>Входит в абонентскую плату</h3>
+        <p>Плановые визиты по графику, проверка всех точек, родентицидные блоки, клеевые пластины и расходники при обходах, ведение журнала, план-схема, акты, ежемесячный отчёт и внеплановые выезды в течение 3 часов.</p>
+      </div>
+      <div class="d-card" data-tilt>
+        <h3>Оснащение точками на старте</h3>
+        <p>Стационарные контейнеры КИК и механические ловушки — <b>от 600 ₽ за единицу</b>. Если на объекте остались исправные станции от прежнего подрядчика, проводим их ревизию, маркируем и принимаем на обслуживание бесплатно.</p>
+      </div>
+      <div class="d-card" data-tilt>
+        <h3>Сроки и документооборот</h3>
+        <p>Проект договора с расчётом — <b>за 1 час</b> после осмотра. Старт работ — <b>от 3 часов</b>. Работаем <b>с НДС и без НДС (УСН)</b>, подписываем договор и закрывающие акты <b>через ЭДО</b> или на бумаге. Срок договора — 12 месяцев с пролонгацией.</p>
+      </div>
+    </div>
+
+    <ul class="d-chips" data-fade>
+      <li><a href="../dogovor-deratizatsiya-dezinsektsiya/">Образец и условия договора на дератизацию →</a></li>
+      <li><a href="../pishchevoe-proizvodstvo/">Пест-контроль на пищевом производстве →</a></li>
+      <li><a href="../materialy/programma-pest-kontrolya/">Образец и шаблон программы пест-контроля (PDF) →</a></li>
+      <li><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/">Пест-менеджмент или разовая обработка →</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ============ СМОТРИТЕ ТАКЖЕ (перелинковка) ============ -->
+<section class="s s-rel" id="smotrite-takzhe">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Смотрите также</div>
+      <h2 data-split>Связанные услуги <em>и материалы</em></h2>
+    </div>
+    <div class="rel-grid" data-group="cards">
+      <a class="card rel-card" href="../deratizatsiya-i-dezinsektsiya/"><span class="rel-k">Услуга</span><span class="rel-t">Дератизация и дезинсекция комплексом</span><span class="rel-d">Грызуны и насекомые по одному договору: общий график визитов и один комплект документов. От 4 900 ₽/мес.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../dezinsektsiya/"><span class="rel-k">Услуга</span><span class="rel-t">Дезинсекция для организаций</span><span class="rel-d">Контроль насекомых по IPM без остановки работы, ротация средств, журнал и акты по СанПиН.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../dogovor-deratizatsiya-dezinsektsiya/"><span class="rel-k">Обслуживание</span><span class="rel-t">Договор на дератизацию и дезинсекцию</span><span class="rel-d">Одно или оба направления в одном договоре: график визитов, акт после выезда, цена до подписания.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="card rel-card" href="../sanitarnyy-audit/"><span class="rel-k">Услуга</span><span class="rel-t">Санитарный аудит (<span class="nw">СЭС-аудит</span>)</span><span class="rel-d">Проверка по проверочным листам и СанПиН 2026 года, смывы и пробы воздуха, акт с реестром нарушений.</span><span class="rel-a" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. ВОПРОСЫ О ДЕРАТИЗАЦИИ ПРЕДПРИЯТИЙ (FAQ) ============ -->
+<section class="s" id="voprosy">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-eyebrow>Частые вопросы</div>
+      <h2 data-split>Вопросы о дератизации <em>для&nbsp;организаций</em></h2>
+    </div>
+    <div class="faq">
+      <div class="faq-col" data-group="faq">
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a1" id="q1">Как часто нужно проводить дератизацию на предприятии по закону?<span class="pm"></span></button>
+          <div class="ans" id="a1" role="region" aria-labelledby="q1"><div><p>По п. 110 СанПиН 3.3686-21 на объектах особого эпидемиологического значения — пищевых производствах, складах продовольствия, в магазинах, ресторанах, кафе, гостиницах и медицинских организациях — дератизация проводится по результатам ежемесячной оценки. На практике специалист выезжает от 1–2 раз в месяц (или чаще на крупных пищевых заводах и РЦ), проверяет все точки контроля и фиксирует результаты в журнале.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a2" id="q2">Чем дератизация по системе IPM отличается от обычной раскладки отравы?<span class="pm"></span></button>
+          <div class="ans" id="a2" role="region" aria-labelledby="q2"><div><p>Обычная обработка сводится к раскладке приманки без учёта того, откуда грызуны заходят в здание. В системе IPM (интегрированного пест-менеджмента) мы сначала перекрываем пути проникновения (щели, ворота, вводы труб), строим три контура пронумерованных точек контроля, считаем динамику активности по каждой точке и применяем родентициды только там, где это безопасно и обосновано мониторингом.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a3" id="q3">Можно ли использовать ядовитые приманки внутри пищевого цеха или продуктового склада?<span class="pm"></span></button>
+          <div class="ans" id="a3" role="region" aria-labelledby="q3"><div><p>В производственных цехах и зонах открытого продукта токсичные приманки не применяются — это прямое нарушение принципов ХАССП, FSSC 22000 и пищевой безопасности. Родентицидные блоки в закрытых антивандальных контейнерах мы ставим только по внешнему периметру здания и на улице, а внутри помещений используем механические живоловки, клеевые ловушки в туннелях и нетоксичные следовые площадки.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a4" id="q4">Сколько стоят контейнеры КИК и ловушки и что делать, если у нас уже стоят станции от прошлого подрядчика?<span class="pm"></span></button>
+          <div class="ans" id="a4" role="region" aria-labelledby="q4"><div><p>Новые антивандальные контейнеры КИК и механические ловушки при первичном оснащении объекта стоят от 600 ₽ за точку, а все сменные приманки и клеевые подложки при плановых визитах уже включены в ежемесячный договор. Если на объекте остались исправные контейнеры и ловушки от прежнего исполнителя, покупать их заново не нужно — мы проведём ревизию, мойку, пронумеруем их и включим в новую план-схему.</p></div></div>
+        </div>
+      </div>
+      <div class="faq-col" data-group="faq">
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a5" id="q5">Что делать, если крысу заметили между плановыми визитами или погиб грызун?<span class="pm"></span></button>
+          <div class="ans" id="a5" role="region" aria-labelledby="q5"><div><p>В рамках договора специалист выезжает по сигналу заказчика в течение 3 часов. Мы осматриваем участок, извлекаем и утилизируем павших грызунов, проводим дезинфекцию и дезодорацию места обнаружения, тампонируем выявленные ходы и устанавливаем дополнительные точки перехвата.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a6" id="q6">Нужно ли останавливать работу склада, магазина или производства на время дератизации?<span class="pm"></span></button>
+          <div class="ans" id="a6" role="region" aria-labelledby="q6"><div><p>Нет. Ревизия контейнеров КИК, механических и клеевых ловушек проходит без запаха, пыли и остановки процессов. Если в технической зоне или подвале требуется истребительная обработка нор, график согласуем на ночное время, пересменку или санитарное окно.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a7" id="q7">Есть ли у вашей компании действующая лицензия Роспотребнадзора?<span class="pm"></span></button>
+          <div class="ans" id="a7" role="region" aria-labelledby="q7"><div><p>Да. С 1 марта 2025 года деятельность по дезинфекции, дезинсекции и дератизации подлежит обязательному лицензированию. У ООО «Центр дезинфекционных услуг» оформлена действующая лицензия № Л064-00111-77/01942445 — проверить запись можно в <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&amp;numb_history=&amp;numb=&amp;firmget_name=&amp;ogrn_inn_nza=7714462211" target="_blank" rel="noopener">Едином реестре лицензий Роспотребнадзора</a>.</p></div></div>
+        </div>
+        <div class="card qa">
+          <button aria-expanded="false" aria-controls="a8" id="q8">Выезжаете ли вы в частные квартиры, коттеджи или СНТ?<span class="pm"></span></button>
+          <div class="ans" id="a8" role="region" aria-labelledby="q8"><div><p>Нет, мы специализируемся исключительно на B2B-секторе и обслуживаем только юридических лиц и индивидуальных предпринимателей: пищевые и промышленные предприятия, склады, торговые сети, рестораны, бизнес-центры, гостиницы и социальные объекты в Москве и Московской области.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13. ЗАЯВКА НА БЕСПЛАТНОЕ ОБСЛЕДОВАНИЕ ============ -->
+<section class="s s-pr pr-low" id="vse-uslugi" aria-labelledby="pr-h">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Цены на услуги</div><h2 id="pr-h" data-split>Выберите услугу. <em>Узнайте стоимость.</em></h2><p class="sub" data-fade>Разовый выезд или регулярная защита объекта по договору. Начальные цены для организаций и ИП в Москве и Московской области.</p></div>
+    <div class="pr-cards" data-group="cards"><a class="card pr-card pr-main" href="../"><div class="pr-num">01 / Постоянная защита<span class="pr-go" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><img class="ig-pr" src="../img/ig-ipm-240.webp" width="112" height="112" alt="" loading="lazy" decoding="async"><h3>Пест-контроль<br>по системе IPM</h3><p>Мониторинг и защита объекта по графику, журнал и акты.</p><div class="pr-price"><span class="pr-amt"><span class="pr-from">от</span>3 900 ₽</span><span class="pr-unit">в месяц</span></div></a><a class="card pr-card" href="../dezinsektsiya/"><div class="pr-num">02 / Насекомые<span class="pr-go" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><img class="ig-pr" src="../img/ig-dezinsektsiya-240.webp" width="112" height="112" alt="" loading="lazy" decoding="async"><h3>Дезинсекция</h3><p>Тараканы, муравьи, мухи и другие насекомые.</p><div class="pr-price"><span class="pr-amt"><span class="pr-from">от</span>3 500 ₽</span><span class="pr-unit">за выезд</span></div></a><div class="card pr-card" aria-current="page"><div class="pr-num">03 / Грызуны<span class="pr-here">Вы здесь</span></div><img class="ig-pr" src="../img/ig-deratizatsiya-240.webp" width="112" height="112" alt="" loading="lazy" decoding="async"><h3>Дератизация</h3><p>Борьба с крысами и мышами на вашем объекте.</p><div class="pr-price"><span class="pr-amt"><span class="pr-from">от</span>3 500 ₽</span><span class="pr-unit">за обработку</span></div></div><a class="card pr-card" href="../deratizatsiya-i-dezinsektsiya/"><div class="pr-num">04 / Комплекс<span class="pr-go" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><img class="ig-pr" src="../img/ig-kompleks-240.webp" width="112" height="112" alt="" loading="lazy" decoding="async"><h3>Дератизация<br>+ дезинсекция</h3><p>Грызуны и насекомые по одному договору.</p><div class="pr-price"><span class="pr-amt"><span class="pr-from">от</span>4 900 ₽</span><span class="pr-unit">в месяц</span></div></a></div>
+    <h3 class="pr-more-t">Другие услуги</h3>
+    <div class="pr-more"><a class="pr-mini" href="../dezinfektsiya/"><img class="ig-prm" src="../img/ig-dezinfektsiya-128.webp" width="60" height="60" alt="" loading="lazy" decoding="async"><span><b>Дезинфекция помещений</b><span class="pr-d">Обеззараживание поверхностей и оборудования</span></span><div class="pr-price"><span class="pr-amt"><span class="pr-from">от</span>3 500 ₽</span><span class="pr-unit">за обработку</span></div></a><a class="pr-mini" href="../sanitarnyy-audit/"><img class="ig-prm" src="../img/ig-sanaudit-128.webp" width="60" height="60" alt="" loading="lazy" decoding="async"><span><b>Санитарный аудит</b><span class="pr-d">Обследование и оценка санитарных рисков</span></span><div class="pr-price"><span class="pr-amt"><span class="pr-from">от</span>9 000 ₽</span><span class="pr-unit">за обследование</span></div></a><a class="pr-mini" href="../ochistka-dezinfektsiya-ventilyatsii/"><img class="ig-prm" src="../img/ig-ventilyatsiya-128.webp" width="60" height="60" alt="" loading="lazy" decoding="async"><span><b>Очистка и дезинфекция вентиляции</b><span class="pr-d">Воздуховоды, вытяжки и вентсистемы</span></span><div class="pr-price"><span class="pr-amt"><span class="pr-from">от</span>25 000 ₽</span><span class="pr-unit">стоимость работ</span></div></a><a class="pr-mini" href="../laboratornye-issledovaniya/"><img class="ig-prm" src="../img/lab-i-ppk.webp" width="60" height="60" alt="" loading="lazy" decoding="async"><span><b>Лабораторный контроль по ППК</b><span class="pr-d">Исследования и замеры для вашего объекта</span></span><div class="pr-price"><span class="pr-amt"><span class="pr-from">от</span>2 600 ₽</span><span class="pr-unit">за комплекс исследований</span></div></a></div>
+    <div class="pr-fine"><p>Начальные цены на работы. Итоговую стоимость согласуем до начала работ после обследования: учтём площадь, состояние объекта, объём работ и периодичность обслуживания.</p><b>Обследование и расчёт — 0 ₽</b></div>
+    <p class="pr-also">Также: <a href="../razrabotka-ppk/">разработка ППК</a> · <a href="../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">документы для Роспотребнадзора</a> · <a href="../dogovor-deratizatsiya-dezinsektsiya/">договор на обслуживание</a></p>
+    <div class="card pr-cta"><div><h3>Не знаете, какая услуга нужна?</h3><p>Осмотрим объект и предложим подходящий состав работ, без лишних услуг.</p></div><a class="btn btn-w btn-lg" href="#zayavka"><span class="btn-t">Заказать бесплатный осмотр</span></a></div>
+  </div>
+</section>
+<section class="s s-kl" id="klienty" aria-labelledby="kl-h">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow" data-eyebrow>Наши клиенты</div><h2 id="kl-h" data-split>Нам доверяют <em>свои объекты</em></h2><p class="sub" data-fade>Рестораны и пищевые производства, магазины, отели, фармпроизводства, склады и офисы. Работаем с объектами любого типа и размера — от одного кафе до сети магазинов.</p></div>
+    <ul class="kl-wall kl-m3 kl-m4" id="kl-wall" data-group="cards" style="--c1:8;--s1:1;--c2:6;--s2:3;--c3:4;--s3:1;--s3o:1;--s4:1;--s4o:1"><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/konfael.webp" alt="Шоколадная фабрика «Конфаэль»" width="138" height="36" style="--w:138" loading="lazy" decoding="async"></span><span class="kl-t">Шоколадная фабрика</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/chibis.webp" alt="Пивоварня Chibis" width="67" height="66" style="--w:67" loading="lazy" decoding="async"></span><span class="kl-t">Пивоварня</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/dodo.webp" alt="Додо Пицца" width="107" height="36" style="--w:107" loading="lazy" decoding="async"></span><span class="kl-t">Сеть пиццерий</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/subway.webp" alt="Subway" width="140" height="28" style="--w:140" loading="lazy" decoding="async"></span><span class="kl-t">Сеть сэндвич-баров</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/lenta.webp" alt="Лента" width="140" height="32" style="--w:140" loading="lazy" decoding="async"></span><span class="kl-t">Гипермаркеты</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/selgros.webp" alt="Selgros" width="137" height="33" style="--w:137" loading="lazy" decoding="async"></span><span class="kl-t">Гипермаркеты</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/essilor.webp" alt="Essilor" width="123" height="39" style="--w:123" loading="lazy" decoding="async"></span><span class="kl-t">Склад</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/medintorg.webp" alt="Мединторг" width="88" height="57" style="--w:88" loading="lazy" decoding="async"></span><span class="kl-t">Склад</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/rrk.webp" alt="Русская рыбная компания" width="109" height="43" style="--w:109" loading="lazy" decoding="async"></span><span class="kl-t">Рыбная продукция</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/hlebnitsa.webp" alt="Пекарня «Хлебница»" width="79" height="57" style="--w:79" loading="lazy" decoding="async"></span><span class="kl-t">Сеть пекарен</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/labirint.webp" alt="Книжный магазин «Лабиринт»" width="140" height="28" style="--w:140" loading="lazy" decoding="async"></span><span class="kl-t">Книжные магазины</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/samolet.webp" alt="Самолёт" width="140" height="32" style="--w:140" loading="lazy" decoding="async"></span><span class="kl-t">Склад</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/yandex.webp" alt="Яндекс" width="102" height="40" style="--w:102" loading="lazy" decoding="async"></span><span class="kl-t">IT-компания</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/octapharma.webp" alt="Octapharma" width="140" height="22" style="--w:140" loading="lazy" decoding="async"></span><span class="kl-t">Фармпроизводство</span></li><li class="kl-c"><span class="kl-lw"><img class="kl-logo" src="../img/klienty/barvikha.webp" alt="Barvikha Hotel & Spa" width="140" height="23" style="--w:140" loading="lazy" decoding="async"></span><span class="kl-t">Отель</span></li><li class="kl-c kl-cta"><a href="#zayavka"><span class="kl-cta-top"><span class="kl-cta-k">Обследование 0 ₽</span><span class="kl-go" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><b>Станьте нашим клиентом</b></a></li></ul>
+    <button type="button" class="btn btn-o btn-sm kl-more" id="kl-more" aria-expanded="false" aria-controls="kl-wall"><span class="btn-t">Показать всех клиентов</span></button>
+  </div>
+</section>
+<script id="kl-js">(function(){var w=document.getElementById("kl-wall"),b=document.getElementById("kl-more");if(!w)return;if(matchMedia("(hover:hover) and (pointer:fine)").matches){w.addEventListener("pointermove",function(e){var r=w.getBoundingClientRect();w.style.setProperty("--mx",e.clientX-r.left+"px");w.style.setProperty("--my",e.clientY-r.top+"px");w.classList.add("kl-lit");},{passive:true});w.addEventListener("pointerleave",function(){w.classList.remove("kl-lit");});}if(b)b.addEventListener("click",function(){var o=w.classList.toggle("kl-open");b.setAttribute("aria-expanded",o);var t=b.querySelector(".btn-t");if(t){t.textContent=o?"Свернуть":"Показать всех клиентов";t.removeAttribute("data-t");}if(o){[].forEach.call(w.children,function(c){c.style.opacity=1;c.style.transform="none";});if(window.ScrollTrigger)ScrollTrigger.refresh();}else{w.scrollIntoView({block:"nearest"});}});})();</script>
+
+<section class="cta" id="zayavka">
+  <div class="cta-bg f-lazy" data-parallax-bg aria-hidden="true"></div><div class="cta-orb" id="orb" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-eyebrow>Заявка</div>
+      <h2 data-split>Начните с бесплатного <em>обследования объекта</em></h2>
+      <p class="sub" data-fade>Инженер-дезинфектолог приедет на ваше предприятие, осмотрит периметр, рампы, склады и инженерные вводы, определит пути проникновения грызунов и подготовит расчёт схемы точек контроля. Выезд ни к чему не обязывает.</p>
+      <ul class="cta-list" data-group="ctalist">
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg>Выезд по Москве и Московской области — 0 ₽</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg>Проект договора со схемой и ценой — за 1 час после осмотра</li>
+        <li><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg>Только для юридических лиц и ИП (с НДС и без НДС, ЭДО)</li>
+      </ul>
+      <div class="cta-contacts" data-fade>
+        <a class="ph" href="tel:+74951043570">+7 (495) 104-35-70</a>
+      </div>
+    </div>
+    <form class="form" id="form" novalidate data-form>
+      <div class="fbody">
+        <h3>Заявка на дератизацию объекта</h3>
+        <p class="fs">Заполнение займёт меньше минуты</p>
+        <div class="fg">
+          <div class="field"><label class="sr-only" for="f-name">Ваше имя</label><input id="f-name" name="name" placeholder="Ваше имя *" required autocomplete="name"><small class="ferr">Укажите имя</small></div>
+          <div class="field"><label class="sr-only" for="phone">Телефон</label><input name="phone" id="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__ *" required autocomplete="tel"><small class="ferr">Укажите телефон полностью</small></div>
+          <div class="field full"><label class="sr-only" for="f-type">Тип объекта</label><select id="f-type" name="type" required><option value="" disabled selected>Тип объекта *</option><option>Пищевое производство</option><option>Магазин или торговая сеть</option><option>Ресторан или кафе</option><option>Склад, логистика</option><option>Фармацевтическое производство</option><option>Гостиница</option><option>Другое</option></select><small class="ferr">Выберите тип объекта</small></div>
+          <div class="field full"><label class="sr-only" for="f-address">Адрес или район объекта</label><input id="f-address" name="address" placeholder="Адрес или район объекта и примерная площадь" autocomplete="street-address" maxlength="200"></div>
+          <div class="field full"><label class="sr-only" for="f-service">Какая задача стоит</label><select id="f-service" name="service"><option value="" selected>Какая задача стоит</option><option>Постоянная дератизация по договору</option><option>Подготовка к проверке Роспотребнадзора / аудиту ХАССП</option><option>Срочный выезд — на объекте замечены крысы или мыши</option><option>Смена подрядчика без перерыва в контроле</option></select></div>
+          <div class="field" hidden><input type="hidden" name="email" value=""></div>
+          <input type="hidden" name="msg" value="">
+        </div>
+        <button type="submit" class="btn btn-w btn-lg" id="submitBtn"><span class="btn-t">Заказать бесплатное обследование</span><svg class="btn-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><i class="spin" aria-hidden="true"></i></button>
+        <p class="legal">Нажимая кнопку, вы даёте <a href="../soglasie/" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаете, что ознакомились с <a href="../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg class="ok-ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M15 27l7 7 15-16"/></svg>
+        <h3>Заявка отправлена</h3><p>Перезвоним в ближайшее рабочее время, чтобы согласовать день бесплатного обследования объекта.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="../" class="logo" aria-label="ПЕСТКОНТРОЛЬ Центр — на главную"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6z"/><circle cx="12" cy="11.5" r="2.6" stroke="#7c86ff"/><path d="M12 6.2v2.7M12 14.1v2.7M6.8 11.5h2.6M14.6 11.5h2.6" stroke="#7c86ff"/></svg></span><span class="logo-txt"><span class="logo-name">ПЕСТКОНТРОЛЬ</span> <span class="logo-sub">Центр</span></span></a>
+        <p class="d"><span class="nw">Пест-контроль</span> и <span class="nw">пест-менеджмент</span> по системе IPM для бизнеса в Москве и Московской области: бесплатный аудит, оценка <span class="nw">пест-риска</span>, мониторинг вредителей и отчётность.</p>
+      </div>
+      <div><h4>Услуги</h4><ul><li><a href="../"><span><span class="nw">Пест-контроль</span> для бизнеса</span></a></li><li><a href="../dezinfektsiya/">Дезинфекция для организаций</a></li><li><a href="./" aria-current="page">Дератизация для организаций</a></li><li><a href="../dezinsektsiya/">Дезинсекция для организаций</a></li><li><a href="../deratizatsiya-i-dezinsektsiya/">Дератизация и дезинсекция</a></li><li><a href="../sanitarnyy-audit/"><span>Санитарный аудит <span class="nw">(СЭС-аудит)</span></span></a></li><li><a href="../laboratornye-issledovaniya/">Лабораторные исследования</a></li><li><a href="../razrabotka-ppk/">Разработка ППК</a></li><li><a href="../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора</a></li><li><a href="../ochistka-dezinfektsiya-ventilyatsii/">Очистка и дезинфекция вентиляции</a></li><li><a href="../dogovor-deratizatsiya-dezinsektsiya/">Договор на дератизацию и дезинсекцию</a></li><li><a href="../#etapy">Этапы работы</a></li><li><a href="../#vrediteli">Вредители</a></li><li><a href="#stoimost">Цена</a></li><li><a href="#voprosy">Вопросы</a></li></ul></div>
+      <div><h4>Отрасли</h4><ul><li><a href="../pishchevoe-proizvodstvo/">Пищевые производства</a></li><li><a href="../magaziny-i-torgovye-seti/">Магазины и торговые сети</a></li><li><a href="../restorany-i-kafe/">Рестораны и кафе</a></li><li class="ft-sub"><a href="../dezinsektsiya/restorany-i-kafe/">Дезинсекция кафе и ресторанов</a></li><li class="ft-sub"><a href="../deratizatsiya/restorany-i-kafe/">Дератизация ресторанов и кафе</a></li><li><a href="../sklady-i-logistika/">Склады и логистика</a></li><li><a href="../farmatsevticheskie-proizvodstva/">Фармацевтические производства</a></li><li><a href="../gostinitsy/">Гостиницы и отели</a></li><li><a href="../biznes-tsentry-torgovye-tsentry-predpriyatiya/">Бизнес-центры, ТЦ и предприятия</a></li></ul></div>
+      <div><h4>Материалы</h4><ul><li><a href="../normativnaya-baza/">Нормативная база</a></li><li><a href="../normativnaya-baza/proverochnye-listy/">Проверочные листы 2026</a></li><li><a href="../normativnaya-baza/dokumenty-dlya-rospotrebnadzora/">Документы для Роспотребнадзора</a></li><li><a href="../normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/">Оценка эффективности дератизации и дезинсекции</a></li><li><a href="../materialy/programma-pest-kontrolya/"><span>Программа <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/zhurnal-pest-kontrolya/"><span>Журнал <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/skhema-tochek-pest-kontrolya/"><span>Схема точек <span class="nw">пест-контроля</span></span></a></li><li><a href="../materialy/akt-deratizatsii-i-dezinsektsii/">Акт дератизации и дезинсекции</a></li><li><a href="../materialy/pest-menedzhment-ili-razovaya-obrabotka/"><span><span class="nw">Пест-менеджмент</span> или разовая обработка</span></a></li><li><a href="../materialy/programma-proizvodstvennogo-kontrolya-haccp/">Программа производственного контроля по ХАССП</a></li><li><a href="../materialy/">Все материалы</a></li></ul></div>
+      <div><h4>Контакты</h4><ul><li><a href="tel:+74951043570">+7 (495) 104-35-70</a></li><li><a href="mailto:b2b@pestcontrol-center.ru">b2b@pestcontrol-center.ru</a></li><li>Пн–Пт: 8:00–20:00</li><li>Срочные выезды: 24/7</li></ul>
+      </div>
+    </div>
+    <div class="fb"><span>© 2026 ПЕСТКОНТРОЛЬ Центр</span><a href="../privacy/">Политика конфиденциальности</a><a href="../soglasie/">Согласие на обработку данных</a><span>Информация на сайте не является публичной офертой</span></div>
+  </div>
+  <div class="wrap ft-company" id="requisites"><p>ООО «Центр дезинфекционных услуг» · ИНН 7714462211 · КПП 771401001 · ОГРН 1207700257775</p></div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+74951043570" class="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Позвонить</a>
+  <a href="#zayavka" class="c2"><span>Обследование</span></a>
+</div>
+
+<script>
+/* Предпросмотр: вне рабочего домена заявка не отправляется (на пестконтроль-центр.рф этот блок не срабатывает) */
+(function(){if(/^(www\.)?xn----itbbsflddbfpfdodg9d0f\.xn--p1ai$/i.test(location.hostname))return;var f=window.fetch;window.fetch=function(u){if(typeof u==='string'&&u.indexOf('send.php')>-1)return new Promise(function(r){setTimeout(function(){r(new Response('{"success":true}',{status:200,headers:{'Content-Type':'application/json'}}))},500)});return f.apply(this,arguments)};document.addEventListener('DOMContentLoaded',function(){var p=document.querySelector('.form .fs');if(p)p.textContent='Предпросмотр: заявка никуда не отправляется'})})();
+/* Самопроверка: счётчик отмеченных пунктов */
+document.addEventListener('change',function(e){if(!e.target.closest('.f-check-list'))return;var n=0;document.querySelectorAll('.f-check-list input').forEach(function(i){n+=i.checked?1:0});document.getElementById('chk-n').textContent=n;document.querySelector('.f-check-res').classList.toggle('full',n===5);document.getElementById('chk-note').textContent=n===5?'Все 5 контуров и документов отмечены — на бесплатном обследовании проверим, как система работает на объекте.':'Отмечено '+n+' из 5 — на бесплатном выезде покажем, какие контуры и документы доработать до проверки.'});
+/* Схема трёх контуров: подсветка контура по карточке и наоборот */
+(function(){var map=document.querySelector('.f-zmap');if(!map)return;var plan=map.querySelector('.f-plan'),items=map.querySelectorAll('.f-zlist li');function set(z){plan.querySelectorAll('[data-z]').forEach(function(g){g.classList.toggle('on',g.getAttribute('data-z')===z)});items.forEach(function(li){li.classList.toggle('on',li.getAttribute('data-z')===z)})}items.forEach(function(li){var z=li.getAttribute('data-z');li.addEventListener('mouseenter',function(){set(z)});li.addEventListener('focus',function(){set(z)});li.addEventListener('click',function(){set(z)})});plan.querySelectorAll('.zf,.bdg').forEach(function(el){var g=el.closest('[data-z]');el.addEventListener('mouseenter',function(){set(g.getAttribute('data-z'))});el.addEventListener('click',function(){set(g.getAttribute('data-z'))})});map.addEventListener('mouseleave',function(){set(null)})})();
+/* Форма: передача адреса, задачи и названия страницы в поле msg для send.php */
+(function(){var f=document.getElementById('form');if(!f)return;f.addEventListener('submit',function(){var e=f.elements,s=e.service.value||'не выбрано',a=e.address.value.trim()||'не указан';e.msg.value='Задача: '+s+'\nАдрес объекта: '+a+'\nСтраница: Дератизация для организаций (/deratizatsiya/)';});})();
+</script>
+<script data-fx>
+/* Эффекты под курсором, как на главной (tools/site/fx.py) */
+(function(){
+  var mm=window.matchMedia;if(!mm)return;
+  var fine=mm('(hover: hover) and (pointer: fine)').matches;
+  /* лупа: светлая копия фото в круглой маске; сдвигаются только круг и фото внутри него (transform) — без перерисовки фото.
+     Кадры — только пока круг догоняет мышь; без мыши круг стоит на открытой части фото и сам не ходит, мышь ушла с первого
+     экрана — плавно возвращается. Только компьютер с мышью шире 860 px; без лупы — при «уменьшить движение» и в облегчённом
+     режиме (window.pcFx, скрипт в <head>): если, пока круг догоняет мышь, кадров меньше 40 в секунду, режим включается сам */
+  var hero=document.getElementById('hero'),lit=hero&&hero.querySelector('.fx-lit'),F=window.pcFx||{mode:'',lite:false,hooks:[],set:function(){}};
+  if(lit&&lit.firstElementChild&&fine&&!F.lite&&!mm('(prefers-reduced-motion: reduce)').matches&&!mm('(max-width:860px)').matches){
+    var media=lit.parentNode,box=lit.firstElementChild,full=hero.classList.contains('f-hero');
+    var W=0,H=0,r=0,x=0,y=0,tx=0,ty=0,hx=0,hy=0,raf=0,last=0,vis=true,on=false,follow=false,off=false,dts=[];
+    var place=function(){ /* круг и копия фото — ровно навстречу: копия стоит на месте фото до долей пикселя */
+      var X=Math.round((x-r)*10)/10,Y=Math.round((y-r)*10)/10;
+      lit.style.transform='translate3d('+X+'px,'+Y+'px,0)';box.style.transform='translate3d('+(-X)+'px,'+(-Y)+'px,0)';
+    };
+    var size=function(){
+      if(off)return;var cs=getComputedStyle(media);W=parseFloat(cs.width)||media.offsetWidth;H=parseFloat(cs.height)||media.offsetHeight; /* точный размер: копия совпадает с фото */
+      r=Math.round(Math.max(240,Math.min(400,innerWidth*.21))*.72);
+      lit.style.width=lit.style.height=2*r+'px';box.style.width=W+'px';box.style.height=H+'px';
+      hx=W*(full?.68:.74);hy=H*.47;if(!follow){tx=hx;ty=hy;if(!raf){x=hx;y=hy;}}place();
+    };
+    var frame=function(now){
+      raf=0;if(off||!vis||document.hidden)return;
+      var dt=last?Math.min(Math.max(now-last,0),100):16.67;
+      if(last&&F.mode!=='full'){dts.push(now-last);if(dts.length>=40){dts.sort(function(a,b){return a-b;});var med=dts[20];dts=[];
+        if(med>25){document.documentElement.setAttribute('data-fps',Math.round(1000/med));F.set(true);return;}}}
+      last=now;var k=1-Math.pow(.94,dt/16.67);x+=(tx-x)*k;y+=(ty-y)*k;
+      if(Math.abs(tx-x)<.3&&Math.abs(ty-y)<.3){x=tx;y=ty;place();return;}
+      place();raf=requestAnimationFrame(frame);
+    };
+    var kick=function(){if(!raf&&!off&&vis&&!document.hidden){last=0;raf=requestAnimationFrame(frame);}};
+    hero.addEventListener('pointermove',function(e){
+      if(e.pointerType!=='mouse'||off)return;var b=media.getBoundingClientRect();if(!b.width||!b.height)return;
+      tx=(e.clientX-b.left)/b.width*W;ty=(e.clientY-b.top)/b.height*H;follow=true;kick();
+    },{passive:true});
+    hero.addEventListener('pointerleave',function(){if(off)return;follow=false;tx=hx;ty=hy;kick();});
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;kick();}).observe(hero);
+    document.addEventListener('visibilitychange',kick);
+    if(window.ResizeObserver)new ResizeObserver(function(){size();}).observe(media);
+    addEventListener('resize',size);size();
+    var start=function(){if(on||off)return;on=true;hero.classList.add('fx-lit-on');};
+    F.hooks.push(function(){off=true;if(raf)cancelAnimationFrame(raf);raf=0;hero.classList.remove('fx-lit-on');});
+    var eb=hero.querySelector('.eyebrow');
+    if(eb&&'MutationObserver' in window){
+      if(eb.classList.contains('in'))start();
+      else{var mo=new MutationObserver(function(){if(eb.classList.contains('in')){mo.disconnect();start();}});mo.observe(eb,{attributes:true,attributeFilter:['class']});}
+    }
+    setTimeout(start,eb?5000:2500);
+  }
+  /* подсветка рамки карточек за курсором — как у .card на главной; в облегчённом режиме (window.pcFx) — нет */
+  if(fine)document.addEventListener('pointermove',function(e){
+    if(window.pcFx&&pcFx.lite)return;var c=e.target.closest&&e.target.closest('.d-card,.p-sec,.p-fcard,.p-duty-box,.p-dl-card,.pm-step-card,.pm-scen,.pm-link-card,.k-err,.w-sample,.d-doc-prev');if(!c)return;
+    var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  },{passive:true});
+})();
+</script>
+<script>
+  /* скрипты анимаций подключаются сразу после первой отрисовки: фото и заголовок первого экрана не ждут их загрузки */
+  (function (r, l) {
+    var go = function () { var u = l; l = null; if (u) u.forEach(function (s) { var e = document.createElement('script'); e.src = r + s; e.async = false; document.body.appendChild(e); }); };
+    var raf = function () { requestAnimationFrame(function () { setTimeout(go, 0); }); }, P = window.PerformanceObserver, t = P && P.supportedEntryTypes;
+    if (document.visibilityState === 'hidden' || !window.requestAnimationFrame) setTimeout(go, 0);
+    else if (t && t.indexOf('paint') > -1) { /* после того как браузер показал первую отрисовку (FCP); страховка — 3 с */
+      try { new P(function (x, o) { o.disconnect(); setTimeout(go, 0); }).observe({ type: 'paint', buffered: true }); } catch (e) { raf(); }
+      setTimeout(go, 3000);
+    } else raf();
+  })('../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261118klient']);
+</script>
+<!-- Radist -->
+<script>
+!function(r,t,e,s,a,n,c){r[a]=r[a]||function(){(r[a].a=r[a].a||[]).push(arguments)},r[a].l=1*new Date;for(var i=0;i<document.scripts.length;i++)if(document.scripts[i].src===s)return;n=t.createElement(e),c=t.getElementsByTagName(e)[0],n.async=1,n.src=s,c.parentNode.insertBefore(n,c)}(window,document,"script","https://track.radist.me/tracker.min.js","radist_tracker");
+radist_tracker({
+      message: "Здравствуйте! Пишу с сайта пестконтроль-центр.рф. Номер заявки: {radist_tracker}",
+      whatsapp_enabled: true,
+      tgbot_enabled: true,
+      tg_enabled: true,
+      max_enabled: true,
+      vk_enabled: true
+});
+</script>
+<script>
+    // Radist: код заявки в ссылках Telegram и MAX сразу, ещё до ответа track.radist.me (с 29.10.2026)
+    (function (d) {
+        var rmsg = 'Здравствуйте! Пишу с сайта пестконтроль-центр.рф. Номер заявки: {radist_tracker}';
+        var id = null, abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', s = 'ro', i, txt;
+        try {
+            id = sessionStorage.getItem('radistVisit');
+            if (!id || id.length !== 12) {
+                for (i = 0; i < 10; i++) s += abc.charAt(Math.floor(Math.random() * abc.length));
+                sessionStorage.setItem('radistVisit', s);
+                id = sessionStorage.getItem('radistVisit');
+            }
+        } catch (e) { id = null; }
+        if (!id || id.length !== 12) return;
+        txt = encodeURIComponent(rmsg.replace(/{radist_tracker}/g, id));
+        [].forEach.call(d.querySelectorAll('a[href*="//t.me/"], a[href*="//max.ru/"]'), function (a) {
+            try {
+                var u = new URL(a.href), n = u.pathname.split('/')[1] || '';
+                if (u.host === 'max.ru') a.href = 'https://max.ru/' + u.pathname.substring(1) + '?start=' + id;
+                else if (u.host === 't.me' && !/bot$/i.test(n)) a.href = 'https://t.me' + u.pathname + '?text=' + txt;
+            } catch (e) {}
+        });
+    })(document);
+</script>
+<!-- /Radist -->
+</body>
+</html>
