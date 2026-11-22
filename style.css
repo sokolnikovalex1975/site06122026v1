@@ -283,9 +283,10 @@ html:not(.js) .intro,html.anim-fail .intro,html.no-intro .intro{display:none}
 .hero p.lead{font-size:clamp(16px,1.05vw,20px);line-height:1.6;color:#b4b4bd;max-width:825px}
 .hero-ctas{display:flex;gap:17px;margin-top:44px;flex-wrap:wrap}
 .panel{position:relative;border-radius:var(--r);background:rgba(24,24,27,.5);border:1.4px solid var(--line2);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);overflow:hidden;transform-style:preserve-3d;will-change:transform}
-.panel-scan{position:absolute;left:0;right:0;top:0;height:120px;z-index:0;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(124,134,255,.12) 85%,rgba(124,134,255,.55) 100%);transform:translateY(-130%);animation:scan 5.5s var(--ease-io) 2.4s infinite}
+/* линия сканирования проходит блок любой высоты до нижнего края (23.11.2026): слой во всю высоту блока, полоса 120 px — у его нижнего края */
+.panel-scan{position:absolute;left:0;right:0;top:0;bottom:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(124,134,255,.12) 85%,rgba(124,134,255,.55) 100%) 0 100%/100% 120px no-repeat;transform:translateY(calc(-100% - 40px));animation:scan 5.5s var(--ease-io) 2.4s infinite}
 .panel-scan::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--acc);box-shadow:0 0 18px 2px rgba(124,134,255,.7)}
-@keyframes scan{0%{transform:translateY(-130%)}55%{transform:translateY(520%)}100%{transform:translateY(520%)}}
+@keyframes scan{0%{transform:translateY(calc(-100% - 40px))}55%{transform:translateY(130px)}100%{transform:translateY(130px)}}
 .panel-glare{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;background:radial-gradient(500px circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.08),transparent 45%);transition:opacity .4s}
 .panel:hover .panel-glare{opacity:1}
 .panel-h,.panel ul{position:relative;z-index:1}
