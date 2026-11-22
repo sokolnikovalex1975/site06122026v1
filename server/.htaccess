@@ -17,7 +17,10 @@
   RewriteRule ^(.+)$ https://%{HTTP_HOST}/$1/ [R=301,L]
 
   # /index.php и /раздел/index.php — на адрес со слешем (только прямой запрос, не внутренняя подстановка index.php)
+  # и только если такая папка есть на сайте; адреса несуществующих папок отвечают 404
   RewriteCond %{THE_REQUEST} ^[A-Z]+\s/(.*/)?index\.php[\s?] [NC]
+  RewriteCond %{REQUEST_FILENAME} ^(.*/)index\.php$ [NC]
+  RewriteCond %1 -d
   RewriteRule ^(.*/)?index\.php$ https://%{HTTP_HOST}/$1 [R=301,L,NC]
 </IfModule>
 

@@ -11,7 +11,9 @@ lastmod, 404». Строка Clean-param для robots.txt (п. 8) в решен
   * адрес папки без слеша — сразу https и слеш, один переход 301 вместо двух (сейчас Apache за nginx отправляет
     на http://…/папка/, затем nginx — на https);
   * /index.php и /раздел/index.php — 301 на адрес со слешем; правило срабатывает только на прямой запрос (THE_REQUEST),
-    не на внутреннюю подстановку index.php; форма отправляется на /send.php — её правила не касаются;
+    не на внутреннюю подстановку index.php, и только если такая папка есть на сайте (уточнено 22.11.2026 пакетом
+    seo-2026-11-22-fix: адреса несуществующих папок снова отвечают 404, а не 301); форма отправляется на /send.php —
+    её правила не касаются;
   * ErrorDocument 404 /404.html — своя страница «Страница не найдена» (tools/site/page_404.py), код ответа остаётся 404.
   Правила ставятся после запретов vendor/ внутри <IfModule mod_rewrite.c>; правило www и запреты не меняются.
 
@@ -31,17 +33,31 @@ SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 
 # ---------- .htaccess ----------
 HT_ANCHOR = '  RewriteRule ^vendor/autoload\\.php$ - [F,L]\n'
-HT_RULES = (
+HT_DIR = (
     '\n'
     '  # Адрес папки без слеша: сразу https и слеш — один переход вместо двух (решение владельца 18.11.2026)\n'
     '  RewriteCond %{REQUEST_FILENAME} -d\n'
     '  RewriteCond %{REQUEST_URI} !/$\n'
     '  RewriteRule ^(.+)$ https://%{HTTP_HOST}/$1/ [R=301,L]\n'
     '\n'
+)
+# Выложено 22.11.2026 в 22:29 МСК (пакет seo-2026-11-22): правило срабатывало и для папок, которых нет на сайте
+# (/нет-такой-папки/index.php отвечал 301 на адрес, который отвечает 404).
+HT_INDEX_2211 = (
     '  # /index.php и /раздел/index.php — на адрес со слешем (только прямой запрос, не внутренняя подстановка index.php)\n'
     '  RewriteCond %{THE_REQUEST} ^[A-Z]+\\s/(.*/)?index\\.php[\\s?] [NC]\n'
     '  RewriteRule ^(.*/)?index\\.php$ https://%{HTTP_HOST}/$1 [R=301,L,NC]\n'
 )
+# Уточнено 22.11.2026 (пакет seo-2026-11-22-fix): 301 только если такая папка есть на сайте, иначе — 404.
+HT_INDEX = (
+    '  # /index.php и /раздел/index.php — на адрес со слешем (только прямой запрос, не внутренняя подстановка index.php)\n'
+    '  # и только если такая папка есть на сайте; адреса несуществующих папок отвечают 404\n'
+    '  RewriteCond %{THE_REQUEST} ^[A-Z]+\\s/(.*/)?index\\.php[\\s?] [NC]\n'
+    '  RewriteCond %{REQUEST_FILENAME} ^(.*/)index\\.php$ [NC]\n'
+    '  RewriteCond %1 -d\n'
+    '  RewriteRule ^(.*/)?index\\.php$ https://%{HTTP_HOST}/$1 [R=301,L,NC]\n'
+)
+HT_RULES = HT_DIR + HT_INDEX
 HT_END = '</IfModule>\n'
 HT_404 = ('\n# Своя страница «Страница не найдена» (tools/site/page_404.py); код ответа остаётся 404 (решение владельца 18.11.2026)\n'
           'ErrorDocument 404 /404.html\n')
@@ -50,6 +66,9 @@ HT_404 = ('\n# Своя страница «Страница не найдена�
 def htaccess(s):
     """Правила переадресации и ErrorDocument 404; если они уже есть — файл без изменений."""
     if 'ErrorDocument 404 /404.html' in s:
+        if HT_DIR + HT_INDEX_2211 in s:  # выложенная 22.11.2026 в 22:29 редакция — уточняем правило index.php
+            assert s.count(HT_DIR + HT_INDEX_2211) == 1
+            s = s.replace(HT_DIR + HT_INDEX_2211, HT_RULES)
         assert HT_RULES in s and s.count('ErrorDocument') == 1, '.htaccess: правила 22.11.2026 записаны иначе'
         return s
     assert 'ErrorDocument' not in s and 'index\\.php' not in s and 'REQUEST_FILENAME' not in s, '.htaccess: уже есть похожие правила'

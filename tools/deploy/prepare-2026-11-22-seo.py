@@ -22,6 +22,10 @@ Clean-param в robots.txt в решение не вошёл — robots.txt не 
     img/home-og.jpg, img/pishchevoe-og.jpg, img/pest-menedzhment-og.jpg (1200×630, из репозитория).
 Результат: backup/ (файлы сайта), pkg/ (результат), deploy_payload.json, MANIFEST.txt (до → после), publish_seo.py
 (в нём записываются суммы разрешённых пар замен — ALLOWED_PAIRS), run_once.sh. Прежние папки не перезаписываются.
+
+Пакет выложен на Timeweb 22.11.2026 в 22:29 МСК. В тот же вечер правило index.php в .htaccess уточнено пакетом
+seo-2026-11-22-fix (tools/deploy/seo-2026-11-22-fix/: 301 только для папок, которые есть на сайте) — повторная сборка
+этим скриптом даст уже уточнённый .htaccess, а не pkg/.htaccess пакета seo-2026-11-22.
 """
 import base64
 import hashlib
