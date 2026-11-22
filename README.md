@@ -169,7 +169,9 @@
   (дословно из согласованного файла проекта), разметка пищевого производства и ресторанов, og:image трёх страниц; шаг
   `build_site.py` перед `tracking_laws.py`. `changes()` применим и к живым страницам (пакеты выкладки).
 - `tools/site/seo_server.py` — `server/.htaccess` (адрес папки без слеша → 301 сразу на https и слеш; `/index.php` → 301
-  на адрес со слешем; `ErrorDocument 404 /404.html`) и lastmod в `server/sitemap.xml` (`LASTMOD`, `DEPLOY_PAGES`).
+  на адрес со слешем, только если такая папка есть на сайте, иначе 404; `ErrorDocument 404 /404.html`) и lastmod
+  в `server/sitemap.xml` (`LASTMOD`, `DEPLOY_PAGES`). На Timeweb — с 22.11.2026 (22:29 МСК, уточнение `.htaccess` —
+  22:40 МСК, пакеты `tools/deploy/seo-2026-11-22/` и `tools/deploy/seo-2026-11-22-fix/`).
 - `tools/site/page_404.py` — `404.html` в корне: шаблон — страница политики, адреса от корня сайта, noindex, в sitemap и
   поиск не входит; `build_prod.py` ставит счётчики. Проверка у всех трёх — `--check`. Журнал — `tools/site/seo-2026-11-22.md`.
 - lastmod: каждый пакет, который меняет текст, title, description, H1 или разметку страницы, обновляет и её lastmod;
