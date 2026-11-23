@@ -57,8 +57,14 @@ def _split(html):
     return (html[:i], html[i:]) if i >= 0 else (html, '')
 
 
-def _tokens(head):
-    return [(m.start(), m.end(), m.group(0)) for m in TOKEN.finditer(head)]
+def _tokens(head, with_newline=False):
+    """Блоки <head>. with_newline — вместе с переводом строки сразу после блока: при перестановке он едет с блоком
+    (иначе блоки слипаются в одну строку, и шаги, которые ищут «блок + перевод строки», вырезают лишнее)."""
+    out = []
+    for m in TOKEN.finditer(head):
+        end = m.end() + 1 if with_newline and head[m.end():m.end() + 1] == '\n' else m.end()
+        out.append((m.start(), end, head[m.start():end]))
+    return out
 
 
 def _blank(s):
@@ -96,7 +102,7 @@ def _reorder(old_head, new_head):
         k = _key(t)
         if k and k not in old_order:
             old_order[k] = len(old_order)
-    toks = _tokens(new_head)
+    toks = _tokens(new_head, with_newline=True)
     slots = [i for i, (_, _, t) in enumerate(toks) if _key(t) in old_order]
     keys = [_key(toks[i][2]) for i in slots]
     if len(set(keys)) != len(keys):  # повторяющиеся ключи — не трогаем

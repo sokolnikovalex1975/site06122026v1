@@ -11,7 +11,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from unify import VERSION  # noqa: E402
-LEGAL_V = '20261115lupa'  # версия legal.css в репозитории (меняйте при правке legal.css; на сайте свои ?v= от выкладок)
+LEGAL_V = '20261123sborka'  # версия legal.css в репозитории (меняйте при правке legal.css; на сайте свои ?v= от выкладок)
 
 TEMPLATE = 'materialy/index.html'  # та же глубина вложенности (../)
 LEGAL = ['privacy/index.html', 'soglasie/index.html']

@@ -49,7 +49,7 @@
     setTimeout(function () { if (!d.classList.contains('anim-ready')) d.classList.add('anim-fail'); }, 4000);
   })(document.documentElement);
 </script>
-<link rel="stylesheet" href="../style.css?v=20261117shapka">
+<link rel="stylesheet" href="../style.css?v=20261123sborka">
 <style id="chk-css">
 /* самопроверка → заявка (19.11.2026, tools/site/samoproverka_forma.py): кнопка открывает форму, отметки — в заявке */
 #samoproverka .f-check-tip{margin:12px 0 0;font-size:13px;line-height:1.5;color:var(--t2);max-width:420px}
@@ -653,7 +653,7 @@ document.addEventListener('change',function(e){if(!e.target.closest('.f-check-li
       try { new P(function (x, o) { o.disconnect(); setTimeout(go, 0); }).observe({ type: 'paint', buffered: true }); } catch (e) { raf(); }
       setTimeout(go, 3000);
     } else raf();
-  })('../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261117shapka']);
+  })('../', ['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=20261123sborka']);
 </script>
 <script>/* Форма: вид производства, ближайшая проверка, комментарий и страница — в поле msg, которое читает send.php */
 document.addEventListener('submit',function(ev){var f=ev.target;if(!f||f.id!=='form')return;var e=f.elements,p=e.production.value||'не выбран',i=e.inspection.value||'не выбрана',c=e.comment.value.trim();e.msg.value='Вид производства: '+p+'\nБлижайшая проверка: '+i+(c?'\nКомментарий: '+c:'')+'\nСтраница: Пест-контроль на пищевом производстве (/pishchevoe-proizvodstvo/)';(function(m){var t=m.form&&m.form.elements.type,o=t&&t.options?t.options[t.selectedIndex]:null;if(o&&o.value&&o.text!==o.value&&m.value.indexOf('Вид объекта: ')<0)m.value='Вид объекта: '+o.text.replace(/\u00a0/g,' ').replace(/\s*\*\s*$/,'')+(m.value?'\n'+m.value:'')})(e.msg);},true);</script>

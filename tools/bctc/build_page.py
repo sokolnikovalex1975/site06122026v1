@@ -27,6 +27,8 @@ sys.path.insert(0, str(ROOT / 'tools' / 'legal'))
 sys.path.insert(0, str(ROOT / 'tools' / 'menu'))
 from typo import typo  # noqa: E402  неразрывные пробелы после коротких слов, как на остальных страницах
 import apply_menu  # noqa: E402
+sys.path.insert(0, str(ROOT / 'tools' / 'site'))
+from unify import VERSION  # noqa: E402  версия style.css и app.min.js (unify.py эту страницу не обходит)
 
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 SLUG = 'biznes-tsentry-torgovye-tsentry-predpriyatiya'
@@ -238,6 +240,10 @@ def main():
     out = pathlib.Path(a[a.index('--out') + 1]) if '--out' in a else ROOT / SLUG / 'index.html'
     html = build(tpl.read_text(encoding='utf-8'))
     out.parent.mkdir(parents=True, exist_ok=True)
+    # версии style.css и app.min.js — как на остальных страницах (страница собирается из страницы складов до unify.py)
+    html = re.sub(r'(href="(?:\.\./)*style\.css)\?v=[^"]*"', lambda m: m.group(1) + '?v=' + VERSION + '"', html)
+    html = re.sub(r'(src="(?:\.\./)*app\.min\.js)\?v=[^"]*"', lambda m: m.group(1) + '?v=' + VERSION + '"', html)
+    html = re.sub(r"('(?:\.\./)*app\.min\.js\?v=)[^']*'", lambda m: m.group(1) + VERSION + "'", html)
     out.write_text(html, encoding='utf-8')
     print('ok', out, len(html.encode('utf-8')) // 1024, 'КБ')
 
