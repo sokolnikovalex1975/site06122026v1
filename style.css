@@ -845,3 +845,22 @@ html.js.hero-in #hero [data-hin]{opacity:1}
 .lowfx .scroll-cue i:after,.lowfx .chip-y:before,.lowfx .cycle-arc,.lowfx .cycle-glow{animation:none}
 .lowfx .hdr,.lowfx .nav-dd-panel,.lowfx .btn-o,.lowfx .badge,.lowfx .panel,.lowfx .form,.lowfx .mbar{-webkit-backdrop-filter:none;backdrop-filter:none}
 .lowfx .panel{background:#18181bf0}.lowfx .hdr.scrolled{background:#000000eb}.lowfx .form{background:#09090bf0}.lowfx .mbar{background:#121214f7}
+
+/* ===== Кнопки: ровный край без каймы (23.11.2026) =====
+   Замечание владельца (фото первого экрана главной на компьютере): у левой кнопки «Заказать бесплатный аудит» рваная
+   окантовка, «как черновик», а правая «Как мы работаем» нарисована аккуратно.
+   Причины: 1) кнопка постоянно держалась отдельным слоем видеокарты (will-change:transform) — Safari и Retina-экраны
+   рисуют скругление такого слоя с зазубринами; 2) под фиолетовой заливкой наведения оставался белый фон кнопки, и на
+   скруглениях он проступал светлой неровной каймой вокруг фиолетовой кнопки (у правой — тёмная щель между рамкой и
+   заливкой); 3) заливка была шире кнопки на 2 px и держалась только обрезкой по краю.
+   Теперь: отдельный слой — только на время движения (магнит); заливка целиком внутри кнопки и в конце наведения
+   принимает её форму; когда заливка дошла до верха, фон самой кнопки тоже становится фиолетовым — каймы нет.
+   Вид, размеры, цвета и анимация наведения прежние. */
+.btn{will-change:auto}
+.btn::before{left:0;right:0;bottom:0;height:100%}
+.btn:hover::before,.btn:focus-visible::before,.btn.is-loading::before,.btn:active::before{border-radius:inherit}
+.btn-w:hover,.btn-w:focus-visible,.btn-o:hover,.btn-o:focus-visible{animation:btn-fill 0s linear .55s forwards}
+.btn-w.is-loading,.btn-o.is-loading{background-color:var(--acc3)}
+@keyframes btn-fill{to{background-color:var(--acc3)}}
+@media (hover:none){ .btn-w:active,.btn-o:active{background-color:var(--acc3)} }
+@media (prefers-reduced-motion:reduce){ .btn-w:hover,.btn-w:focus-visible,.btn-o:hover,.btn-o:focus-visible{background-color:var(--acc3)} }
