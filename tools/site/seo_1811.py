@@ -278,6 +278,34 @@ def one(s, pattern, what):
 SP = '[ \u00a0]'
 
 
+# признак правки самой страницы (ссылки, текстовые блоки, разметка); подвал — отдельно, см. page_done()
+MARKS = {'razrabotka-ppk/': 'analiz-pishchevykh-produktov/">Сырьё', 'deratizatsiya/': 'id="unichtozhenie"',
+         'dezinfektsiya/': 'id="kak-vybrat"', 'dezinsektsiya/': 'id="kruglosutochno"',
+         'deratizatsiya-i-dezinsektsiya/': 'id="sanepidemstantsiya"', LAB + 'analiz-vody/': 'class="d-ticks lbs-ticks ctx-gap"',
+         'materialy/kak-berut-smyvy/': '«МУК 0220»', 'pishchevoe-proizvodstvo/': '"@graph"',
+         'sanitarnyy-audit/': 'kak-berut-smyvy/">отбор смывов', LAB + 'analiz-vozdukha-rabochey-zony/':
+         'zamer-osveshchennosti/">освещённость', 'materialy/programma-proizvodstvennogo-kontrolya-haccp/':
+         'analiz-vody/">вода', 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/': 'izmerenie-mikroklimata/">Измерение'}
+
+
+def page_done(path, s):
+    """Правки самой страницы (title главной, ссылки и блоки текста, разметка, og:image, стили) уже стоят.
+    Подвал проверяется отдельно: tools/menu/apply_menu.py в полной сборке пересобирает его без подпунктов
+    лаборатории, и до 23.11.2026 шаг из-за этого пытался заново применить и правки страницы (сборка падала)."""
+    checks = []
+    if path == '':
+        checks.append(HOME_TITLE[1] in s)
+    if path in MARKS:
+        checks.append(MARKS[path] in s)
+    if path == 'restorany-i-kafe/':
+        checks.append(all('&nbsp;' not in j for j in jsonld(s)))
+    if path in OG:
+        checks.append('og:image:alt' in s)
+    if style_block(path):
+        checks.append(('<style id="%s">' % MARK) in s)
+    return all(checks)
+
+
 def changes(path, s):
     """Замены страницы по порядку: [(было, стало, сколько раз)], посчитаны на тексте после предыдущих замен.
     Если правки уже есть — пустой список."""
@@ -290,20 +318,21 @@ def changes(path, s):
         s = s.replace(old, new)
         out.append((old, new, count))
 
-    done = ('<style id="%s">' % MARK) in s or 'class="ft-sub"><a href="%s">Анализ смывов</a>' % href(
+    footer_done = 'class="ft-sub"><a href="%s">Анализ смывов</a>' % href(
         path, LAB + 'analiz-smyvov/') in s or '<li class="ft-sub"><a href="./" aria-current="page">Анализ смывов</a>' in s
-    if done:
-        return []
+
+    # подвал
+    if not footer_done:
+        lab = '<li>%sЛабораторные исследования</a></li>' % ft_a(path, LAB)
+        rep(lab, lab + ''.join('<li class="ft-sub">%s%s</a></li>' % (ft_a(path, t), x) for t, x in FT_LAB))
+        allm = '<li>%sВсе материалы</a></li>' % ft_a(path, 'materialy/')
+        rep(allm, ''.join('<li>%s%s</a></li>' % (ft_a(path, t), x) for t, x in FT_MAT) + allm)
+    if page_done(path, s):
+        return out
 
     # title главной
     if path == '':
         rep(HOME_TITLE[0], HOME_TITLE[1], 2)
-
-    # подвал
-    lab = '<li>%sЛабораторные исследования</a></li>' % ft_a(path, LAB)
-    rep(lab, lab + ''.join('<li class="ft-sub">%s%s</a></li>' % (ft_a(path, t), x) for t, x in FT_LAB))
-    allm = '<li>%sВсе материалы</a></li>' % ft_a(path, 'materialy/')
-    rep(allm, ''.join('<li>%s%s</a></li>' % (ft_a(path, t), x) for t, x in FT_MAT) + allm)
 
     # ссылки в тексте и текстовые блоки
     if path == 'razrabotka-ppk/':
@@ -441,14 +470,7 @@ def missing(path, s):
         bad.append('title главной')
     if path in OG and 'og:image:alt' not in s:
         bad.append('og:image')
-    marks = {'razrabotka-ppk/': 'analiz-pishchevykh-produktov/">Сырьё', 'deratizatsiya/': 'id="unichtozhenie"',
-             'dezinfektsiya/': 'id="kak-vybrat"', 'dezinsektsiya/': 'id="kruglosutochno"',
-             'deratizatsiya-i-dezinsektsiya/': 'id="sanepidemstantsiya"', LAB + 'analiz-vody/': 'class="d-ticks lbs-ticks ctx-gap"',
-             'materialy/kak-berut-smyvy/': '«МУК 0220»', 'pishchevoe-proizvodstvo/': '"@graph"',
-             'sanitarnyy-audit/': 'kak-berut-smyvy/">отбор смывов', LAB + 'analiz-vozdukha-rabochey-zony/':
-             'zamer-osveshchennosti/">освещённость', 'materialy/programma-proizvodstvennogo-kontrolya-haccp/':
-             'analiz-vody/">вода', 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/': 'izmerenie-mikroklimata/">Измерение'}
-    if path in marks and marks[path] not in s:
+    if path in MARKS and MARKS[path] not in s:
         bad.append('правка страницы')
     return bad
 

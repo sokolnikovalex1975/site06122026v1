@@ -110,13 +110,15 @@ ld = {'@context': 'https://schema.org', '@graph': [
 ld_json = json.dumps(ld, ensure_ascii=False, separators=(',', ':'))
 s = sub1(r'<script type="application/ld\+json">.*?</script>', f'<script type="application/ld+json">{ld_json}</script>', s)
 
-# 4. Основное содержимое: иконки, мессенджеры из шаблона, типографика
-msg = re.search(r'<div class="cta-contacts"[^>]*>\s*<a class="ph"[^>]*>[^<]*</a>\s*(<div class="msg">.*?</div>)\s*</div>', s, re.S).group(1)
+# 4. Основное содержимое: иконки, типографика.
+# Мессенджеров у контактов перед формой нет (решение владельца 13.11.2026, tools/site/no_messengers.py),
+# поэтому блок <div class="msg"> из шаблона больше не берётся (до 20.11.2026 сборка на этом останавливалась).
 body = re.sub(r'\{\{i:([a-z0-9-]+)\}\}', lambda m: icons[m.group(1)], main)
-body = body.replace('{{msg}}', msg)
 assert '{{' not in body, 'не заменены метки'
 body = typo(body)
 s = sub1(r'<main id="main"[^>]*>.*?</main>', body.strip(), s)
+# круг IPM закрепляется только на главной и «Дератизации» (tools/site/ipm_pin.py) — его стиль из шаблона не нужен
+s = re.sub(r'<style id="ipm-pin">.*?</style>\n?', '', s, count=1, flags=re.S)
 
 # 5. Скрипт страницы вместо скрипта дератизации (переключатель Hero не нужен)
 s = sub1(r'<script>\n/\* Предпросмотр: вне рабочего домена.*?</script>', '<script>\n' + js + '\n</script>', s)

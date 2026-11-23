@@ -209,14 +209,13 @@ def build(tpl):
              f'<script type="application/ld+json">{json_ld()}</script>', s)
 
     # 4. содержимое
-    msg = re.search(r'<div class="cta-contacts"[^>]*>\s*<a class="ph"[^>]*>[^<]*</a>\s*(<div class="msg">.*?</div>)\s*</div>',
-                    s, re.S).group(1)
+    # мессенджеров у контактов перед формой нет (решение владельца 13.11.2026) — блок msg из шаблона не берётся
     main = (HERE / 'main.html').read_text(encoding='utf-8')
     strip = '\n'.join(f'      <div class="strip-item">{icons[i]}<b>{b}</b> {t}</div>' for i, b, t in STRIP)
     main = main.replace('{{strip}}', strip).replace('{{faq}}', faq_section())
     main = main.replace('{{zones}}', (HERE / 'zones.svg').read_text(encoding='utf-8').strip())
     main = re.sub(r'\{\{i:([a-z0-9-]+)\}\}', lambda mm: icons[mm.group(1)], main)
-    main = main.replace('{{arr}}', ARR).replace('{{arr0}}', ARR0).replace('{{a16}}', A16).replace('{{msg}}', msg)
+    main = main.replace('{{arr}}', ARR).replace('{{arr0}}', ARR0).replace('{{a16}}', A16)
     assert '{{' not in main, 'остались метки в main.html'
     main = typo(main)
     s = sub1(r'<main id="main"[^>]*>.*?</main>', main.strip(), s)

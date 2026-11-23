@@ -86,6 +86,9 @@ import re
 import subprocess
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import stable_build  # noqa: E402  повторная сборка не меняет готовые страницы (23.11.2026)
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 SITE = 'https://xn----itbbsflddbfpfdodg9d0f.xn--p1ai/'
 SITEMAP = [  # адрес, приоритет
@@ -121,6 +124,34 @@ def run(*args):
         sys.exit(f'ошибка: {" ".join(args)}')
 
 
+# Генераторы, которые отстали от своих страниц (23.11.2026): страницу после них правили прямо в HTML (точечные правки,
+# выкладки «патчем файла с сайта»), и запуск генератора откатил бы эти правки. Исходник таких страниц — сама страница
+# в репозитории; генератор запускается только явно: --gen=tools/<папка>/<скрипт>.py (или --all-generators) и только со
+# сверкой git diff. Перед тем как вернуть генератор в сборку, перенесите в его исходники правки страницы — так, чтобы
+# полная сборка не меняла страницу (python3 tools/qa/check_live.py --build).
+FROZEN = {
+    'tools/zashchita-ot-proniknoveniya-gryzunov/build_page.py',
+    'tools/gostinitsy/build_page.py',
+    'tools/sanitarnyy-audit/build_page.py',
+    'tools/razrabotka-ppk/build_page.py',
+    'tools/laboratornye-issledovaniya/build_page.py',
+    'tools/laboratornye-issledovaniya/build_subpages.py',
+    'tools/restorany-uslugi/build_pages.py',
+    'tools/deratizatsiya-i-dezinsektsiya/build_page.py',
+    'tools/dezinfektsiya/build_page.py',
+    'tools/normativnaya-baza/build_pages.py',
+    'tools/materialy-dokumenty/build_pages.py',
+}
+
+
+def gen(script):
+    args = sys.argv[1:]
+    if script in FROZEN and '--all-generators' not in args and ('--gen=' + script) not in args:
+        print('пропущен (страница — исходник):', script)
+        return
+    run(script)
+
+
 def page_hash(u):
     f = ROOT / u / 'index.html'
     return hashlib.sha256(f.read_bytes()).hexdigest() if f.exists() else None
@@ -137,20 +168,24 @@ def old_lastmod():
 def main():
     keep = '--keep-lastmod' in sys.argv[1:]
     before = {u: page_hash(u) for u, _ in SITEMAP}
-    run('tools/zashchita-ot-proniknoveniya-gryzunov/build_page.py')  # новая услуга инженерной защиты, GitHub-превью с 11.11.2026
-    run('tools/gostinitsy/build_page.py')  # страница гостиниц собирается из своих исходников (tools/gostinitsy)
-    run('tools/sanitarnyy-audit/build_page.py')  # санитарный аудит — из своих исходников (tools/sanitarnyy-audit)
-    run('tools/razrabotka-ppk/build_page.py')  # разработка ППК — из своих исходников (tools/razrabotka-ppk)
-    run('tools/laboratornye-issledovaniya/build_page.py')  # «Лабораторные исследования» — из своих исходников (с 10.11.2026)
-    run('tools/laboratornye-issledovaniya/build_subpages.py')  # страницы направлений и статьи раздела (с 11.11.2026)
-    run('tools/restorany-uslugi/build_pages.py')  # дезинсекция и дератизация общепита — «услуга + сфера» (с 11.11.2026)
-    run('tools/deratizatsiya-i-dezinsektsiya/build_page.py')  # «Дератизация и дезинсекция» — из своих исходников (с 11.11.2026)
-    run('tools/sklady/assemble.py')  # страница складов и логистики — из своих исходников (tools/sklady)
-    run('tools/bctc/build_page.py')  # «Бизнес-центры, ТЦ и предприятия» — из готовой страницы складов и tools/bctc (с 11.11.2026)
-    run('tools/dezinfektsiya/build_page.py')  # дезинфекция для организаций — из своих исходников (tools/dezinfektsiya)
-    run('tools/avtotransport/build_page.py')  # дезинфекция автотранспорта — из своих исходников (tools/avtotransport, 20.11.2026)
-    run('tools/normativnaya-baza/build_pages.py')  # нормативная база и проверочные листы (tools/normativnaya-baza)
-    run('tools/materialy-dokumenty/build_pages.py')  # «Акт дератизации и дезинсекции» и «Схема точек пест-контроля» (с 11.11.2026)
+    snap = stable_build.snapshot()  # страницы до сборки — для carry_head и stabilize (23.11.2026)
+    gen('tools/zashchita-ot-proniknoveniya-gryzunov/build_page.py')  # новая услуга инженерной защиты, GitHub-превью с 11.11.2026
+    gen('tools/gostinitsy/build_page.py')  # страница гостиниц собирается из своих исходников (tools/gostinitsy)
+    gen('tools/sanitarnyy-audit/build_page.py')  # санитарный аудит — из своих исходников (tools/sanitarnyy-audit)
+    gen('tools/razrabotka-ppk/build_page.py')  # разработка ППК — из своих исходников (tools/razrabotka-ppk)
+    gen('tools/laboratornye-issledovaniya/build_page.py')  # «Лабораторные исследования» — из своих исходников (с 10.11.2026)
+    gen('tools/laboratornye-issledovaniya/build_subpages.py')  # страницы направлений и статьи раздела (с 11.11.2026)
+    gen('tools/restorany-uslugi/build_pages.py')  # дезинсекция и дератизация общепита — «услуга + сфера» (с 11.11.2026)
+    gen('tools/deratizatsiya-i-dezinsektsiya/build_page.py')  # «Дератизация и дезинсекция» — из своих исходников (с 11.11.2026)
+    gen('tools/sklady/assemble.py')  # страница складов и логистики — из своих исходников (tools/sklady)
+    gen('tools/bctc/build_page.py')  # «Бизнес-центры, ТЦ и предприятия» — из готовой страницы складов и tools/bctc (с 11.11.2026)
+    gen('tools/dezinfektsiya/build_page.py')  # дезинфекция для организаций — из своих исходников (tools/dezinfektsiya)
+    gen('tools/avtotransport/build_page.py')  # дезинфекция автотранспорта — из своих исходников (tools/avtotransport, 20.11.2026)
+    gen('tools/normativnaya-baza/build_pages.py')  # нормативная база и проверочные листы (tools/normativnaya-baza)
+    gen('tools/materialy-dokumenty/build_pages.py')  # «Акт дератизации и дезинсекции» и «Схема точек пест-контроля» (с 11.11.2026)
+    carried = stable_build.carry_head(snap)  # блоки <head>, которые выбросили генераторы страниц, — обратно
+    if carried:
+        print('stable_build: возвращены блоки <head> на страницах:', len(carried))
     run('tools/site/unify.py')
     run('tools/site/legal_pages.py')
     run('tools/menu/apply_menu.py')
@@ -184,6 +219,8 @@ def main():
     run('tools/site/zayavka.py')  # «Состав заявки», шторка заявки и длинные блоки на телефоне (команда владельца 20.11.2026)
     run('tools/site/seo_1811.py')  # аудит 17.11: title главной, подвал лаборатории, ссылки в тексте, 6 текстовых блоков, разметка, og:image (разрешено 18.11.2026)
     run('tools/site/tracking_laws.py')  # ЗАКОН ВЛАДЕЛЬЦА 11.11.2026: телефон и почта в ссылках без лишних тегов и &nbsp; (для UIS)
+    kept, reordered = stable_build.stabilize(snap)  # без изменений по содержанию — страница байт в байт прежняя
+    print(f'stable_build: страниц без изменений по содержанию — {kept}, с прежним порядком блоков — {reordered}')
     run('tools/site/page_404.py')  # своя страница 404 из страницы политики (разрешено владельцем 18.11.2026)
     run('tools/site/seo_server.py')  # server/.htaccess: переадресации и ErrorDocument 404; server/sitemap.xml: lastmod (18.11.2026)
     run('tools/build.py')
