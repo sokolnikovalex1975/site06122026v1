@@ -42,6 +42,7 @@ PAGES = [
     'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html',
     'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.html',  # с 11.11.2026
     'materialy/akt-deratizatsii-i-dezinsektsii/index.html', 'materialy/skhema-tochek-pest-kontrolya/index.html',  # акт и схема точек, с 11.11.2026
+    'materialy/pest-kontrol-iso-22000-fssc-22000/index.html', 'materialy/litsenziya-na-dezinfektsiyu/index.html',  # статьи ISO 22000 и лицензия на дезинфекцию, с 24.11.2026
     # страницы направлений и статьи раздела «Лабораторные исследования» (с 11.11.2026)
     # страницы «услуга + сфера» для общепита (с 11.11.2026)
     'dezinsektsiya/restorany-i-kafe/index.html', 'deratizatsiya/restorany-i-kafe/index.html',

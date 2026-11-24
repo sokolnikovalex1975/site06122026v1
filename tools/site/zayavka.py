@@ -41,6 +41,7 @@ PAGES = [
     'normativnaya-baza/index.html', 'normativnaya-baza/proverochnye-listy/index.html',
     'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/index.html', 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/index.html',
     'materialy/akt-deratizatsii-i-dezinsektsii/index.html', 'materialy/skhema-tochek-pest-kontrolya/index.html',
+    'materialy/pest-kontrol-iso-22000-fssc-22000/index.html', 'materialy/litsenziya-na-dezinfektsiyu/index.html',  # статьи, с 24.11.2026
     'dezinsektsiya/restorany-i-kafe/index.html', 'deratizatsiya/restorany-i-kafe/index.html',
     'laboratornye-issledovaniya/analiz-smyvov/index.html', 'laboratornye-issledovaniya/izmerenie-mikroklimata/index.html',
     'laboratornye-issledovaniya/zamer-osveshchennosti/index.html', 'laboratornye-issledovaniya/analiz-vozdukha-rabochey-zony/index.html',

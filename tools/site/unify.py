@@ -152,6 +152,7 @@ URL = {
     'dok': 'normativnaya-baza/dokumenty-dlya-rospotrebnadzora/',
     'ef': 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/',  # с 11.11.2026 — превью
     'akt': 'materialy/akt-deratizatsii-i-dezinsektsii/', 'skhema': 'materialy/skhema-tochek-pest-kontrolya/',  # tools/materialy-dokumenty, с 11.11.2026 — превью
+    'iso': 'materialy/pest-kontrol-iso-22000-fssc-22000/', 'lic': 'materialy/litsenziya-na-dezinfektsiyu/',  # tools/materialy-stati, с 24.11.2026 — превью
 }
 # карточки «Смотрите также»: (вид, заголовок, описание)
 CARD = {
@@ -479,6 +480,10 @@ PAGES = {
             ('lucide-file-down', 'Образец и бланк', '— в PDF'),
             ('lucide-shield-check', '5 лет', '— срок хранения'),
         ])),
+    # статьи «ISO 22000 и FSSC 22000» и «Лицензия на дезинфекцию» (tools/materialy-stati), с 24.11.2026 — превью; без бегущей строки:
+    # в первом экране уже есть строка разделов
+    'materialy/pest-kontrol-iso-22000-fssc-22000/index.html': dict(key='iso', root='../../', related=['food', 'prog', 'zhur', 'san']),
+    'materialy/litsenziya-na-dezinfektsiyu/index.html': dict(key='lic', root='../../', related=['dogovor', 'akt', 'derat', 'dezinf']),
     'materialy/skhema-tochek-pest-kontrolya/index.html': dict(key='skhema', root='../../', related=['dd', 'proof', 'dok', 'dezins'], strip=(
         'Коротко о схеме точек пест-контроля', [
             ('lucide-map-pinned', '3 контура', '— территория, периметр, помещения'),
@@ -852,7 +857,7 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
             {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': SITE},
             {'@type': 'ListItem', 'position': 2, 'name': 'Материалы', 'item': SITE + 'materialy/'}]},
         {'@type': 'CollectionPage', 'name': 'Материалы о пест-контроле для предприятий', 'url': SITE + 'materialy/', 'inLanguage': 'ru-RU',
-         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, схема точек пест-контроля, акт дератизации и дезинсекции, пест-менеджмент или разовая обработка, образец программы производственного контроля по ХАССП (PDF) и её раздел пест-контроля, нормативная база дезинсекции и дератизации, разбор проверочных листов Роспотребнадзора 2026 года, перечень документов для Роспотребнадзора, а также порядок лабораторного контроля: как берут смывы, как проходят замеры освещённости и микроклимата, как контролируют работу стерилизаторов, как оценивают эффективность дератизации и дезинсекции.',
+         'description': 'Практические руководства и образцы документов по системе IPM и ХАССП для предприятий Москвы и области: программа пест-контроля, журнал пест-контроля, схема точек пест-контроля, акт дератизации и дезинсекции, пест-менеджмент или разовая обработка, образец программы производственного контроля по ХАССП (PDF) и её раздел пест-контроля, нормативная база дезинсекции и дератизации, разбор проверочных листов Роспотребнадзора 2026 года, перечень документов для Роспотребнадзора, а также порядок лабораторного контроля: как берут смывы, как проходят замеры освещённости и микроклимата, как контролируют работу стерилизаторов, как оценивают эффективность дератизации и дезинсекции, что проверяет аудитор по пест-контролю при сертификации по ISO 22000 и FSSC 22000 и как проверить лицензию подрядчика на дезинфекцию.',
          'isPartOf': {'@type': 'WebSite', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE},
          'mainEntity': {'@type': 'ItemList', 'itemListElement': [
              {'@type': 'ListItem', 'position': 1, 'url': SITE + 'materialy/programma-pest-kontrolya/', 'name': 'Программа пест-контроля на предприятии: образец и шаблон в PDF, пример заполнения'},
@@ -868,7 +873,10 @@ MAT_LD = '<script type="application/ld+json">' + json.dumps({
              # с 11.11.2026 (tools/materialy-dokumenty)
              {'@type': 'ListItem', 'position': 11, 'url': SITE + 'materialy/skhema-tochek-pest-kontrolya/', 'name': 'Схема точек пест-контроля: образец и правила'},
              {'@type': 'ListItem', 'position': 12, 'url': SITE + 'materialy/akt-deratizatsii-i-dezinsektsii/', 'name': 'Акт дератизации и дезинсекции: образец и что в нём указать'},
-             {'@type': 'ListItem', 'position': 13, 'url': SITE + 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/', 'name': 'Оценка эффективности дератизации и дезинсекции: сроки и критерии'}]},
+             {'@type': 'ListItem', 'position': 13, 'url': SITE + 'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/', 'name': 'Оценка эффективности дератизации и дезинсекции: сроки и критерии'},
+             # с 24.11.2026 (tools/materialy-stati)
+             {'@type': 'ListItem', 'position': 14, 'url': SITE + 'materialy/pest-kontrol-iso-22000-fssc-22000/', 'name': 'Пест-контроль по ISO 22000 и FSSC 22000: что проверяет аудитор'},
+             {'@type': 'ListItem', 'position': 15, 'url': SITE + 'materialy/litsenziya-na-dezinfektsiyu/', 'name': 'Лицензия на дезинфекцию и дератизацию: как проверить подрядчика'}]},
          'publisher': {'@type': 'Organization', 'name': 'ПЕСТКОНТРОЛЬ Центр', 'url': SITE, 'telephone': '+7-495-104-35-70', 'email': 'b2b@pestcontrol-center.ru'}},
     ]}, ensure_ascii=False) + '</script>'
 

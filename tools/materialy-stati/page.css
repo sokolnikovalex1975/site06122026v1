@@ -1,0 +1,21 @@
+.st-body{max-width:1000px}
+.st-body>*+*{margin-top:18px}
+.st-p{margin:0;color:var(--t2);line-height:1.66;font-size:clamp(16px,1.05vw,18px)}
+.st-p b{color:var(--t1);font-weight:500}
+.st-note{font-size:14.5px;line-height:1.6}
+.st-p a,.st-ul a,.st-ol a{color:var(--t1);border-bottom:1px solid rgba(124,134,255,.45);transition:border-color .25s}
+.st-p a:hover,.st-ul a:hover,.st-ol a:hover{border-color:var(--t1)}
+.st-ul{color:var(--t2);line-height:1.62;font-size:clamp(16px,1.05vw,18px)}
+.st-ol{font-size:clamp(16px,1.05vw,18px)}
+.st-body .st-h3{margin:40px 0 0}
+.st-body .st-h3:first-child{margin-top:0}
+.st-tbl-w{max-width:100%}
+.st-body .st-tbl{width:100%}
+.st-body .st-tbl td{vertical-align:top}
+.st-btns{margin-top:28px}
+@media (min-width:1101px){.st-body{max-width:1100px}}
+/* телефон и планшет: фото первого экрана без затемнения снизу — градиент не ложится на людей (правило владельца) */
+@media (max-width:860px){#hero.d-hero .d-hero-media::before{display:none}}
+
+/* цены в блоке услуг не разрываются по строкам */
+.vu-p{white-space:nowrap}

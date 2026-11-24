@@ -128,6 +128,9 @@ PAGES = [
     # акт и схема точек (tools/materialy-dokumenty), с 11.11.2026 — в «Материалах» шапки, мобильного меню и подвала (MATERIALS)
     ('materialy/akt-deratizatsii-i-dezinsektsii/index.html', '../../', 'materialy/akt-deratizatsii-i-dezinsektsii'),
     ('materialy/skhema-tochek-pest-kontrolya/index.html', '../../', 'materialy/skhema-tochek-pest-kontrolya'),
+    # статьи (tools/materialy-stati), с 24.11.2026 — в карточках раздела «Материалы», в списки меню не входят
+    ('materialy/pest-kontrol-iso-22000-fssc-22000/index.html', '../../', 'materialy/pest-kontrol-iso-22000-fssc-22000'),
+    ('materialy/litsenziya-na-dezinfektsiyu/index.html', '../../', 'materialy/litsenziya-na-dezinfektsiyu'),
     ('materialy/programma-proizvodstvennogo-kontrolya-haccp/index.html', '../../', 'materialy/programma-proizvodstvennogo-kontrolya-haccp'),
     # статьи о лабораторном контроле (с 11.11.2026)
     ('materialy/kak-berut-smyvy/index.html', '../../', 'materialy/kak-berut-smyvy'),

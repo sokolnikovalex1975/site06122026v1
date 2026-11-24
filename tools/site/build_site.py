@@ -112,6 +112,8 @@ SITEMAP = [  # адрес, приоритет
     ('laboratornye-issledovaniya/analiz-pishchevykh-produktov/', '0.8'),
     ('laboratornye-issledovaniya/analiz-vody/', '0.8'),
     ('laboratornye-issledovaniya/kontrol-sterilizatorov/', '0.8'),
+    ('materialy/pest-kontrol-iso-22000-fssc-22000/', '0.7'),  # статья ISO 22000 и FSSC 22000 (tools/materialy-stati), с 24.11.2026
+    ('materialy/litsenziya-na-dezinfektsiyu/', '0.7'),  # статья о лицензии на дезинфекцию (tools/materialy-stati), с 24.11.2026
     ('materialy/kak-berut-smyvy/', '0.7'),
     ('materialy/zamer-osveshchennosti-i-mikroklimata/', '0.7'),
     ('materialy/kontrol-raboty-sterilizatorov/', '0.7'),
@@ -182,6 +184,7 @@ def main():
     gen('tools/dezinfektsiya/build_page.py')  # дезинфекция для организаций — из своих исходников (tools/dezinfektsiya)
     gen('tools/avtotransport/build_page.py')  # дезинфекция автотранспорта — из своих исходников (tools/avtotransport, 20.11.2026)
     gen('tools/normativnaya-baza/build_pages.py')  # нормативная база и проверочные листы (tools/normativnaya-baza)
+    gen('tools/materialy-stati/build_pages.py')  # статьи «ISO 22000 и FSSC 22000» и «Лицензия на дезинфекцию» (с 24.11.2026)
     gen('tools/materialy-dokumenty/build_pages.py')  # «Акт дератизации и дезинсекции» и «Схема точек пест-контроля» (с 11.11.2026)
     carried = stable_build.carry_head(snap)  # блоки <head>, которые выбросили генераторы страниц, — обратно
     if carried:
