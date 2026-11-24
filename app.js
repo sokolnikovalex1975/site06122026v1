@@ -266,6 +266,19 @@
       var mv = String(fd.get('msg') || '');
       if (mv.indexOf('Вид объекта: ') < 0) fd.set('msg', 'Вид объекта: ' + to.text + (mv ? '\n' + mv : ''));
     }
+    /* серверная передача в UIS: передаём ID сессии UIS (если нет блокировщика), название формы и страницу */
+    var uisSid = '';
+    try {
+      var cm = window.Comagic;
+      if (cm && typeof cm.getSessionId === 'function') uisSid = cm.getSessionId() || '';
+      if (!uisSid && cm && typeof cm.getCredentials === 'function') { var cr = cm.getCredentials(); uisSid = cr && cr.session_id ? cr.session_id : ''; }
+      if (!/^\d+$/.test(String(uisSid))) uisSid = '';
+    } catch (err) { uisSid = ''; }
+    var h1 = $('h1'), fn = h1 ? h1.textContent.replace(/\s+/g, ' ').trim().replace(/\s*[.:]$/, '').slice(0, 100) : '';
+    var prod = /^(www\.)?xn----itbbsflddbfpfdodg9d0f\.xn--p1ai$/i.test(location.hostname);
+    fd.set('uis_session_id', String(uisSid));
+    fd.set('form_name', 'Основная форма' + (fn ? ': ' + fn : ''));
+    fd.set('page_url', (prod ? 'https://пестконтроль-центр.рф' : location.origin) + location.pathname);
     fetch('/send.php', { method: 'POST', body: fd, headers: { 'Accept': 'application/json' }, credentials: 'same-origin' })
       .then(function (res) {
         return res.text().then(function (txt) {
@@ -281,11 +294,7 @@
       })
       .then(function () {
         try { if (typeof ym === 'function') ym(113675622, 'reachGoal', 'audit'); } catch (err) { console.error('Яндекс Метрика:', err); }
-        try {
-          if (typeof Comagic !== 'undefined' && typeof Comagic.addOfflineRequest === 'function') {
-            Comagic.addOfflineRequest({ name: form.elements.name.value.trim(), phone: form.elements.phone.value.trim() });
-          }
-        } catch (err) { console.error('UIS:', err); }
+        /* заявка в UIS отправляется сервером в send.php — клиентский Comagic.addOfflineRequest убран во избежание дублей */
         sentOk();
       })
       .catch(function (err) {

@@ -271,12 +271,15 @@ function submit(e){
   if(first){var fi=q('input',first);first.scrollIntoView({block:'center'});if(fi)fi.focus({preventScroll:true});return;}
   var parts=compose(),key=parts.join('\u0001');if(key!==done.key)done={key:key,next:0};
   var co=q('#ol-1-1'),btn=q('#olSubmit');sending=true;btn.disabled=true;btn.classList.add('is-loading');
-  function fd(m){var d=new FormData();d.append('name',txt(nm.value));d.append('phone',txt(ph.value));d.append('email',txt(em.value));
+  function uisSid(){var id='';try{if(typeof Comagic!=='undefined'){if(typeof Comagic.getSessionId==='function')id=Comagic.getSessionId()||'';if(!id&&typeof Comagic.getCredentials==='function'){var cr=Comagic.getCredentials();id=cr&&cr.session_id?cr.session_id:'';}}if(!/^\d+$/.test(String(id)))id='';}catch(_){id='';}return String(id);}
+  function fd(m,skipUis){var d=new FormData(),prod=/^(www\.)?xn----itbbsflddbfpfdodg9d0f\.xn--p1ai$/i.test(location.hostname);d.append('name',txt(nm.value));d.append('phone',txt(ph.value));d.append('email',txt(em.value));
     d.append('company',txt(co?co.value:'').slice(0,250));d.append('type',ot.getAttribute('data-type'));d.append('msg',m);
-    d.append('page','Разработка ППК — опросный лист');return d;}
+    d.append('page','Разработка ППК — опросный лист');d.append('form_name','Разработка ППК — опросный лист');
+    d.append('page_url',(prod?'https://пестконтроль-центр.рф':location.origin)+location.pathname);d.append('uis_session_id',uisSid());
+    if(skipUis)d.append('uis_skip','1');return d;}
   function step(){
     if(done.next>=parts.length)return ok();
-    window.fetch('/send.php',{method:'POST',body:fd(parts[done.next]),headers:{'Accept':'application/json'},credentials:'same-origin'})
+    window.fetch('/send.php',{method:'POST',body:fd(parts[done.next],done.next>0),headers:{'Accept':'application/json'},credentials:'same-origin'})
       .then(function(res){return res.text().then(function(t){var j=null;try{j=JSON.parse(t)}catch(_){}
         if(!res.ok||!j||!j.success){var er=new Error('send failed: '+res.status);er.userMessage=j&&j.message?j.message:'';throw er;}})})
       .then(function(){done.next++;step();})
@@ -284,7 +287,6 @@ function submit(e){
         var m=err&&err.userMessage?err.userMessage:FAIL;if(done.next>0)m+=' Часть ответов уже у нас — при повторной отправке уйдут остальные.';alert(m);});}
   function ok(){
     try{if(typeof ym==='function'){ym(113675622,'reachGoal','audit');ym(113675622,'reachGoal','ppk_oprosnyy_send');}}catch(err){console.error('Яндекс Метрика:',err)}
-    try{if(typeof Comagic!=='undefined'&&typeof Comagic.addOfflineRequest==='function')Comagic.addOfflineRequest({name:txt(nm.value),phone:txt(ph.value)});}catch(err){console.error('UIS:',err)}
     try{localStorage.removeItem(KEY)}catch(_){}
     f.classList.add('sent');window.scrollTo(0,box.getBoundingClientRect().top+window.pageYOffset-90);refresh();}
   step();

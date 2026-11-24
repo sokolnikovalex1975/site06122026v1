@@ -247,7 +247,17 @@
       try { back.focus({ preventScroll: true }); } catch (x) { back.focus(); }
     };
     if (DEMO) { setTimeout(done, 700); return; }
-    fetch('/send.php', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }, credentials: 'same-origin' })
+    var fd = new FormData(form), uisSid = '';
+    try {
+      var cm = w.Comagic;
+      if (cm && typeof cm.getSessionId === 'function') uisSid = cm.getSessionId() || '';
+      if (!uisSid && cm && typeof cm.getCredentials === 'function') { var cr = cm.getCredentials(); uisSid = cr && cr.session_id ? cr.session_id : ''; }
+      if (!/^\d+$/.test(String(uisSid))) uisSid = '';
+    } catch (x) { uisSid = ''; }
+    fd.set('uis_session_id', String(uisSid));
+    fd.set('form_name', 'Самопроверка: ' + name);
+    fd.set('page_url', pageUrl);
+    fetch('/send.php', { method: 'POST', body: fd, headers: { 'Accept': 'application/json' }, credentials: 'same-origin' })
       .then(function (res) {
         return res.text().then(function (txt) {
           var json = null;
@@ -262,11 +272,7 @@
       })
       .then(function () {
         try { if (typeof w.ym === 'function') w.ym(113675622, 'reachGoal', 'audit', { form: 'samoproverka' }); } catch (x) { console.error('Яндекс Метрика:', x); }
-        try {
-          if (typeof w.Comagic !== 'undefined' && typeof w.Comagic.addOfflineRequest === 'function') {
-            w.Comagic.addOfflineRequest({ name: els.name.value.trim(), phone: els.phone.value.trim(), message: msg, form_name: 'Самопроверка: ' + name });
-          }
-        } catch (x) { console.error('UIS:', x); }
+        /* заявка в UIS отправляется сервером в send.php — клиентский Comagic.addOfflineRequest убран во избежание дублей */
         done();
       })
       .catch(function (x) {

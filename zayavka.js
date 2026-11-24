@@ -346,8 +346,17 @@
       try { back.focus({ preventScroll: true }); } catch (x) { back.focus(); }
     };
     if (DEMO) { setTimeout(done, 700); return; }
-    var name = els.name.value.trim(), phone = els.phone.value.trim();
-    fetch('/send.php', { method: 'POST', body: new FormData(sForm), headers: { 'Accept': 'application/json' }, credentials: 'same-origin' })
+    var fd = new FormData(sForm), uisSid = '';
+    try {
+      var cm = w.Comagic;
+      if (cm && typeof cm.getSessionId === 'function') uisSid = cm.getSessionId() || '';
+      if (!uisSid && cm && typeof cm.getCredentials === 'function') { var cr = cm.getCredentials(); uisSid = cr && cr.session_id ? cr.session_id : ''; }
+      if (!/^\d+$/.test(String(uisSid))) uisSid = '';
+    } catch (x) { uisSid = ''; }
+    fd.set('uis_session_id', String(uisSid));
+    fd.set('form_name', 'Заявка с телефона: ' + PAGE.n.slice(0, 80));
+    fd.set('page_url', pageUrl);
+    fetch('/send.php', { method: 'POST', body: fd, headers: { 'Accept': 'application/json' }, credentials: 'same-origin' })
       .then(function (res) {
         return res.text().then(function (t) {
           var json = null;
@@ -362,11 +371,7 @@
       })
       .then(function () {
         goal('audit', { form: 'zayavka' });
-        try {
-          if (typeof w.Comagic !== 'undefined' && typeof w.Comagic.addOfflineRequest === 'function') {
-            w.Comagic.addOfflineRequest({ name: name, phone: phone, message: msg, form_name: 'Заявка с телефона: ' + PAGE.n.slice(0, 80) });
-          }
-        } catch (x) { console.error('UIS:', x); }
+        /* заявка в UIS отправляется сервером в send.php — клиентский Comagic.addOfflineRequest убран во избежание дублей */
         done();
       })
       .catch(function (x) {
