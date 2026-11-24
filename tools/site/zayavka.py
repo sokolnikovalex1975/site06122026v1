@@ -26,7 +26,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / 'tools' / 'site'))
 import samoproverka_forma  # noqa: E402
 
-VERSION = '20261120zv'
+VERSION = '20261120zv'  # mob-bloki.min.js
+ZV_VERSION = '20261124uis'  # zayavka.min.js (24.11.2026, передача заявок в UIS через send.php)
 ANCHOR = '<style id="tel-plain">'
 HOME = 'index.html'
 PAGES = [
@@ -66,7 +67,7 @@ def rel_root(page):
 
 def tags(page):
     r = rel_root(page)
-    out = ['<script src="%szayavka.min.js?v=%s" defer></script>' % (r, VERSION)]
+    out = ['<script src="%szayavka.min.js?v=%s" defer></script>' % (r, ZV_VERSION)]
     if page != HOME:
         out.append('<script src="%smob-bloki.min.js?v=%s" defer></script>' % (r, VERSION))
     return out

@@ -10,7 +10,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from unify import VERSION  # noqa: E402
+from unify import VERSION, APP_VERSION  # noqa: E402
 LEGAL_V = '20261123sborka'  # версия legal.css в репозитории (меняйте при правке legal.css; на сайте свои ?v= от выкладок)
 
 TEMPLATE = 'materialy/index.html'  # та же глубина вложенности (../)
@@ -45,10 +45,10 @@ def main():
             op = re.search(r'<div class="wrap l-op" id="operator">.*?</div>', s, re.S).group(0)
             ft = footer.replace('\n</footer>', '\n  ' + op + '\n</footer>')
             s = re.sub(r'<footer class="l-ft">.*?</footer>', lambda m: ft, s, count=1, flags=re.S)
-            s = s.replace('</body>', f'<script src="../app.min.js?v={VERSION}" defer></script>\n</body>', 1)
+            s = s.replace('</body>', f'<script src="../app.min.js?v={APP_VERSION}" defer></script>\n</body>', 1)
         s = re.sub(r'(href="\.\./style\.css)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
         s = re.sub(r'(href="\.\./legal\.css)\?v=[^"]*"', rf'\1?v={LEGAL_V}"', s)
-        s = re.sub(r'(src="\.\./app\.min\.js)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
+        s = re.sub(r'(src="\.\./app\.min\.js)\?v=[^"]*"', rf'\1?v={APP_VERSION}"', s)
         # текущий документ отмечен в нижней строке подвала
         slug = rel.split('/')[0]
         s = re.sub(r'<div class="fb">.*?</div>', lambda m: m.group(0).replace(f'<a href="../{slug}/">', '<a href="./" aria-current="page">'), s, count=1, flags=re.S)

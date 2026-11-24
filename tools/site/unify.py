@@ -40,6 +40,7 @@ def nw(text):
 def tp(text):
     return typo(nw(text))
 
+APP_VERSION = '20261124uis'  # 24.11.2026: версия app.min.js (серверная передача заявок в UIS, коммит 76cd7bc); style.css — VERSION
 VERSION = '20261123sborka'  # (до 23.11.2026 — 20261117shapka) общая версия style.css и app.min.js для сброса кэша
 
 HEAD_SCRIPT = (
@@ -817,7 +818,7 @@ def fix_head(s, root):
     s, n = HEAD_SCRIPT_RE.subn(lambda m: HEAD_SCRIPT, s, count=1)
     assert n == 1, 'нет раннего скрипта в <head>'
     s = re.sub(r'(href="(?:\.\./)*style\.css)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
-    s = re.sub(r'(src="(?:\.\./)*app\.min\.js)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
+    s = re.sub(r'(src="(?:\.\./)*app\.min\.js)\?v=[^"]*"', rf'\1?v={APP_VERSION}"', s)
     # Страница уже на загрузчике (setTimeout(go, 0)) без GSAP, ScrollTrigger и Lenis — так задумано: с 08.11.2026
     # «Документы для Роспотребнадзора» (tools/normativnaya-baza/build_pages.py, p['dok']) грузят только app.min.js.
     # Библиотеки добавляются лишь страницам, где ещё стоят defer-подключения.
@@ -833,9 +834,9 @@ def fix_head(s, root):
 def use_loader(s):
     """defer-подключение GSAP, ScrollTrigger, Lenis и app.min.js → загрузчик после первой отрисовки (LOADER)"""
     if 'setTimeout(go, 0)' not in s:
-        s, n = SCRIPTS_RE.subn(lambda m: LOADER.replace('{root}', m.group(1)).replace('{version}', VERSION), s, count=1)
+        s, n = SCRIPTS_RE.subn(lambda m: LOADER.replace('{root}', m.group(1)).replace('{version}', APP_VERSION), s, count=1)
         assert n == 1, 'нет подключения скриптов анимаций'
-    s = re.sub(r"('(?:\.\./)*app\.min\.js\?v=)[^']*'", rf"\g<1>{VERSION}'", s)
+    s = re.sub(r"('(?:\.\./)*app\.min\.js\?v=)[^']*'", rf"\g<1>{APP_VERSION}'", s)
     return s
 
 
@@ -1069,9 +1070,9 @@ def proof_performance(s):
     marker = '<script>\n  /* начальные состояния анимаций'
     assert marker in s
     s = s.replace(marker, early + marker, 1)
-    desktop = "['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=" + VERSION + "']"
+    desktop = "['vendor/gsap.min.js', 'vendor/ScrollTrigger.min.js', 'vendor/lenis.min.js', 'app.min.js?v=" + APP_VERSION + "']"
     mobile = ('matchMedia("(max-width:860px), (prefers-reduced-motion:reduce)").matches'
-              " ? ['app.min.js?v=" + VERSION + "'] : " + desktop)
+              " ? ['app.min.js?v=" + APP_VERSION + "'] : " + desktop)
     s = s.replace(mobile, desktop)
     assert desktop in s
     s = s.replace(desktop, mobile, 1)
@@ -1143,7 +1144,7 @@ def process_home():
     s = f.read_text(encoding='utf-8')
     s, n = HEAD_SCRIPT_RE.subn(lambda m: HEAD_SCRIPT, s, count=1)
     assert n == 1
-    s = re.sub(r'(src="app\.min\.js)\?v=[^"]*"', rf'\1?v={VERSION}"', s)
+    s = re.sub(r'(src="app\.min\.js)\?v=[^"]*"', rf'\1?v={APP_VERSION}"', s)
     s = use_loader(s)
     # якоря карточек отраслей
     ed = htmldom.Editor(s)

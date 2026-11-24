@@ -9,6 +9,10 @@
   14 и 15; в верхнее меню не добавлены; вторая кнопка hero лицензии — «Договор с подрядчиком».
 - **Сборка:** `build_site.py`, `unify.py`, `apply_menu.py`, `zayavka.py`, `build_prod.py`; sitemap — 44 адреса.
   `seo_server.py` (LASTMOD) не менялся — добавить при публикации.
+- **Версии скриптов в генераторах:** после коммита `76cd7bc` (UIS через send.php, версии правились в страницах вручную)
+  в сборку внесены те же версии: `unify.APP_VERSION = 20261124uis` для app.min.js (style.css и legal.css — `20261123sborka`),
+  `zayavka.ZV_VERSION = 20261124uis` для zayavka.min.js (mob-bloki — `20261120zv`), `samoproverka_forma.VERSION = 20261124uis`;
+  то же в `legal_pages.py` и `tools/bctc/build_page.py`. Без этого полная сборка откатила бы версии на старые.
 - **Проверка:** `independence_law.py --check` — соблюдён, `tracking_laws.py --check` — OK; Метрика, UIS и Radist по одному разу.
 - **Не сделано:** на Timeweb не выложено — ждёт отдельного разрешения владельца.
 ## 24.11.2026: серверная передача заявок в UIS через `send.php` (опубликовано 24.11.2026 в 17:23 МСК)

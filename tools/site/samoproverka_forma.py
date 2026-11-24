@@ -32,7 +32,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / 'tools/legal'))
 from typo import typo  # noqa: E402
 
-VERSION = '20261120zv'  # 20.11.2026: в окне и в заявке — весь «Состав заявки» (tools/site/zayavka.py)
+VERSION = '20261124uis'  # 24.11.2026: передача заявок в UIS через send.php (до этого 20261120zv); 20.11.2026: в окне и в заявке — весь «Состав заявки» (tools/site/zayavka.py)
 JS_NAME = 'samoproverka-forma'
 TIP = 'Откроется короткая форма. Ваши отметки уйдут вместе с заявкой.'
 VISIT = 'Приедем на объект в Москве или области, '
