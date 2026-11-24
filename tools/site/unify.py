@@ -365,7 +365,7 @@ PAGES = {
             ('lucide-scan-search', 'Аудиты', 'ХАССП и торговых сетей'),
             ('lucide-crosshair', 'IPM', 'для предприятий'),
         ])),
-    'materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html': dict(key='pm', root='../../', related=['prog', 'zhur', 'derat', 'dezins'], strip=(
+    'materialy/pest-menedzhment-ili-razovaya-obrabotka/index.html': dict(key='pm', root='../../', related=['dd', 'prog', 'zhur', 'dok'], strip=(
         'Коротко о пест-менеджменте', [
             ('lucide-crosshair', 'IPM', 'вместо разовых обработок'),
             ('lucide-activity', 'Мониторинг', 'по пронумерованным точкам'),
@@ -376,7 +376,7 @@ PAGES = {
             ('lucide-file-badge', 'СанПиН 3.3686-21', 'и ХАССП'),
             ('lucide-map-pinned', 'Схема точек', 'на плане объекта'),
         ])),
-    'materialy/programma-pest-kontrolya/index.html': dict(key='prog', root='../../', related=['zhur', 'pm', 'derat', 'dezins'], strip=(
+    'materialy/programma-pest-kontrolya/index.html': dict(key='prog', root='../../', related=['zhur', 'skhema', 'akt', 'dd'], strip=(
         'Коротко о программе пест-контроля', [
             ('lucide-file-signature', 'Образец программы', '— PDF на 6 страниц'),
             ('lucide-notebook-pen', 'Шаблон', 'в PDF для заполнения'),
@@ -468,7 +468,7 @@ PAGES = {
             ('lucide-ban', 'Нет эффекта', '— другая группа инсектицидов'),
         ])),
     # «Акт дератизации и дезинсекции» и «Схема точек пест-контроля» (tools/materialy-dokumenty), с 11.11.2026 — превью
-    'materialy/akt-deratizatsii-i-dezinsektsii/index.html': dict(key='akt', root='../../', related=['zhur', 'skhema', 'dok', 'ef'], strip=(
+    'materialy/akt-deratizatsii-i-dezinsektsii/index.html': dict(key='akt', root='../../', related=['zhur', 'skhema', 'dd', 'dok'], strip=(
         'Коротко об акте дератизации и дезинсекции', [
             ('lucide-scan-search', '3 000 ₽', '— выезд, обследование и акт'),
             ('lucide-clipboard-check', 'Акт', '— по каждому визиту'),
@@ -479,7 +479,7 @@ PAGES = {
             ('lucide-file-down', 'Образец и бланк', '— в PDF'),
             ('lucide-shield-check', '5 лет', '— срок хранения'),
         ])),
-    'materialy/skhema-tochek-pest-kontrolya/index.html': dict(key='skhema', root='../../', related=['zhur', 'akt', 'prog', 'derat'], strip=(
+    'materialy/skhema-tochek-pest-kontrolya/index.html': dict(key='skhema', root='../../', related=['dd', 'proof', 'dok', 'dezins'], strip=(
         'Коротко о схеме точек пест-контроля', [
             ('lucide-map-pinned', '3 контура', '— территория, периметр, помещения'),
             ('lucide-crosshair', '30 точек', '— в образце на 1 850 м²'),
