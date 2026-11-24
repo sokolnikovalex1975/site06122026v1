@@ -108,10 +108,12 @@ LASTMOD = {  # дата последней правки текста до вык
     'laboratornye-issledovaniya/kontrol-sterilizatorov/': '2026-11-19',
     'laboratornye-issledovaniya/zamer-osveshchennosti/': '2026-11-19',
     'magaziny-i-torgovye-seti/': '2026-11-19',
-    'materialy/': '2026-11-11',
+    'materialy/': '2026-11-24',  # 24.11.2026: карточки материалов 14 и 15
     'materialy/akt-deratizatsii-i-dezinsektsii/': '2026-11-11',
     'materialy/kak-berut-smyvy/': '2026-11-19',
+    'materialy/litsenziya-na-dezinfektsiyu/': '2026-11-24',  # новая статья, выложена 24.11.2026
     'materialy/kontrol-raboty-sterilizatorov/': '2026-11-14',
+    'materialy/pest-kontrol-iso-22000-fssc-22000/': '2026-11-24',  # новая статья, выложена 24.11.2026
     'materialy/pest-menedzhment-ili-razovaya-obrabotka/': '2026-11-19',
     'materialy/programma-pest-kontrolya/': '2026-11-19',
     'materialy/programma-proizvodstvennogo-kontrolya-haccp/': '2026-11-19',
@@ -123,14 +125,14 @@ LASTMOD = {  # дата последней правки текста до вык
     'normativnaya-baza/effektivnost-deratizatsii-i-dezinsektsii/': '2026-11-11',
     'normativnaya-baza/proverochnye-listy/': '2026-11-11',
     'ochistka-dezinfektsiya-ventilyatsii/': '2026-11-19',
-    'pishchevoe-proizvodstvo/': '2026-11-19',
+    'pishchevoe-proizvodstvo/': '2026-11-24',  # 24.11.2026: строка про FSSC 22000 версии 7 и ISO 22002-100:2025
     'razrabotka-ppk/': '2026-11-20',
     'restorany-i-kafe/': '2026-11-19',
     'sanitarnyy-audit/': '2026-11-19',
     'sklady-i-logistika/': '2026-11-19',
     'zashchita-ot-proniknoveniya-gryzunov/': '2026-11-19',
 }
-assert len(LASTMOD) == 41 and all(p in LASTMOD for p in DEPLOY_PAGES)
+assert len(LASTMOD) == 43 and all(p in LASTMOD for p in DEPLOY_PAGES)
 
 
 def dates():
