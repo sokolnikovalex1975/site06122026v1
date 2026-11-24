@@ -387,7 +387,7 @@ PAGES = {
             ('lucide-file-badge', 'СанПиН 3.3686-21', 'и ТР ТС 021/2011'),
             ('lucide-scan-search', 'Разработка', 'под ваш объект'),
         ])),
-    'materialy/zhurnal-pest-kontrolya/index.html': dict(key='zhur', root='../../', related=['prog', 'pm', 'derat', 'dezins'], strip=(
+    'materialy/zhurnal-pest-kontrolya/index.html': dict(key='zhur', root='../../', related=['skhema', 'akt', 'dd', 'dok'], strip=(
         'Коротко о журнале пест-контроля', [
             ('lucide-notebook-pen', '9 разделов', 'на 10 листах'),
             ('lucide-file-signature', 'Образец и шаблон', '— в PDF, лист в лист'),
